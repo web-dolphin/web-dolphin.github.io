@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>MongoDB安装与配置 | English Chinese Poet And Math</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1. 安装1.1 下载：[mongodb 32bit] [Mongodb 64bit] 1.2 安装略 2. 配置2.1 创建 mongodb 数据库存放目录存放目录： D:\mongodb\data 创建配置文件： D:\mongodb\mongodb.config  mongodb.config文件内容： 12dbpath&#x3D;D:\mongodb\data\dblogpath&amp;#x3D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongoDB安装与配置">
+<meta property="og:url" content="https://yan-cem.github.io/2020/10/01/DataBase/MongoDB%20%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="English Chinese Poet And Math">
+<meta property="og:description" content="1. 安装1.1 下载：[mongodb 32bit] [Mongodb 64bit] 1.2 安装略 2. 配置2.1 创建 mongodb 数据库存放目录存放目录： D:\mongodb\data 创建配置文件： D:\mongodb\mongodb.config  mongodb.config文件内容： 12dbpath&#x3D;D:\mongodb\data\dblogpath&amp;#x3D">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/19/U2zqiD.png">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/734402/201704/734402-20170419163353556-40564745.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/19/U2zLJe.png">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/734402/201704/734402-20170419163100790-1455377573.png">
+<meta property="article:published_time" content="2020-10-01T00:51:10.000Z">
+<meta property="article:modified_time" content="2020-10-13T11:40:10.000Z">
+<meta property="article:author" content="Yuan Min">
+<meta property="article:tag" content="English Chinese Poet Math">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/07/19/U2zqiD.png">
+  
+    <link rel="alternate" href="/atom.xml" title="English Chinese Poet And Math" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">English Chinese Poet And Math</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://yan-cem.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-DataBase/MongoDB 安装与配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/01/DataBase/MongoDB%20%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2020-10-01T00:51:10.000Z" itemprop="datePublished">2020-10-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DataBase/">DataBase</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MongoDB安装与配置
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><h3 id="1-1-下载："><a href="#1-1-下载：" class="headerlink" title="1.1 下载："></a>1.1 下载：</h3><p><a target="_blank" rel="noopener" href="http://downloads.mongodb.org/win32/mongodb-win32-i386-3.2.4-signed.msi">[mongodb 32bit]</a></p>
+<p><a href="">[Mongodb 64bit]</a></p>
+<h3 id="1-2-安装"><a href="#1-2-安装" class="headerlink" title="1.2 安装"></a>1.2 安装</h3><p>略</p>
+<h2 id="2-配置"><a href="#2-配置" class="headerlink" title="2. 配置"></a>2. 配置</h2><h3 id="2-1-创建-mongodb-数据库存放目录"><a href="#2-1-创建-mongodb-数据库存放目录" class="headerlink" title="2.1 创建 mongodb 数据库存放目录"></a>2.1 创建 mongodb 数据库存放目录</h3><p>存放目录： <code>D:\mongodb\data</code></p>
+<p>创建配置文件： <code>D:\mongodb\mongodb.config</code></p>
+<ul>
+<li><p><code>mongodb.config</code>文件内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dbpath&#x3D;D:\mongodb\data\db</span><br><span class="line">logpath&#x3D;D:\mongodb\data\log\mongodb.log</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>创建日志目录： <code>D:\mongodb\data\log</code></p>
+<p>创建日志文件：<code>D:\mongodb\data\log\mongodb.log</code></p>
+<h3 id="2-2-开启服务器"><a href="#2-2-开启服务器" class="headerlink" title="2.2 开启服务器"></a>2.2 开启服务器</h3><h4 id="2-2-1-方法一"><a href="#2-2-1-方法一" class="headerlink" title="2.2.1 方法一"></a>2.2.1 方法一</h4><ul>
+<li><p>MongoDB 使用引擎<code>mmapv1</code>启动服务器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\Applications\MongoDB\bin&gt;mongod --dbpath D:\mongodb\data\db --storageEngine=mmapv1</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s1.ax1x.com/2020/07/19/U2zqiD.png" alt="启动服务器"></p>
+</li>
+<li><p>测试</p>
+<p><img src="https://images2015.cnblogs.com/blog/734402/201704/734402-20170419163353556-40564745.png" alt="测试"></p>
+</li>
+</ul>
+<h4 id="2-2-2-方法二"><a href="#2-2-2-方法二" class="headerlink" title="2.2.2 方法二"></a>2.2.2 方法二</h4><ul>
+<li><p>管理员身份命令行输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;$ mongod --config E:\mongodb\mongodb.config  --install --serviceName <span class="string">&quot;MongoDB&quot;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/07/19/U2zLJe.png" alt="配置服务器"></p>
+<ul>
+<li><p>查看配置</p>
+</li>
+<li><p><code>windows + R</code>输入： <code>services.msc</code>开启服务；</p>
+<p><img src="https://images2015.cnblogs.com/blog/734402/201704/734402-20170419163100790-1455377573.png" alt="开启服务"></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yan-cem.github.io/2020/10/01/DataBase/MongoDB%20%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" data-id="ckg7y5ekj000098nfhby6g18b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/10/JavaScript/JS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          第一章 2 JS数据类型
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/01/Blog/Hexo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo创建博客</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DataBase/">DataBase</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS-Code/">VS Code</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">Tags</h3>
+  <div class="widget"><ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/" rel="tag">JS权威指南</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/" rel="tag">TypeScript</a></li></ul></div>
+</div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/10/13/Ubuntu/Ubuntu%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E7%BC%93%E5%AD%98/">Ubuntu清除系统缓存</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/10/JavaScript/JS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/JS%20%E6%A6%82%E8%BF%B0/">第一章 1 JS概述</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/10/JavaScript/JS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">第一章 2 JS数据类型</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/01/DataBase/MongoDB%20%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">MongoDB安装与配置</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/01/Blog/Hexo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/">Hexo创建博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Yuan Min<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Node常用静态服务器 | English Chinese Poet And Math</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1. http-server install 1$ npm install -g http-server  Use  项目所在目录，命令行启动： 默认端口为 8080。可以启动多个项目，http-server 会为它们分不同路由；  1$ hs -o     		&#x2F;&#x2F;http-server  -open   或者  1$ http-server -c-l  (只输入http-server的话，更新">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node常用静态服务器">
+<meta property="og:url" content="https://yan-cem.github.io/2020/10/01/Node/Node%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E7%9A%84%E9%9D%99%E6%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
+<meta property="og:site_name" content="English Chinese Poet And Math">
+<meta property="og:description" content="1. http-server install 1$ npm install -g http-server  Use  项目所在目录，命令行启动： 默认端口为 8080。可以启动多个项目，http-server 会为它们分不同路由；  1$ hs -o     		&#x2F;&#x2F;http-server  -open   或者  1$ http-server -c-l  (只输入http-server的话，更新">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-01T00:51:10.000Z">
+<meta property="article:modified_time" content="2020-10-13T11:40:10.000Z">
+<meta property="article:author" content="Yuan Min">
+<meta property="article:tag" content="English Chinese Poet Math">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="English Chinese Poet And Math" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">English Chinese Poet And Math</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://yan-cem.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Node/Node几种常用的静态服务器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/01/Node/Node%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E7%9A%84%E9%9D%99%E6%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="article-date">
+  <time datetime="2020-10-01T00:51:10.000Z" itemprop="datePublished">2020-10-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Node/">Node</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Node常用静态服务器
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-http-server"><a href="#1-http-server" class="headerlink" title="1. http-server"></a>1. http-server</h3><ol>
+<li><p>install</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g http-server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use</p>
+<ul>
+<li>项目所在目录，命令行启动： 默认端口为 8080。可以启动多个项目，http-server 会为它们分不同路由；</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hs -o     		//http-server  -open</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>或者</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ http-server -c-l  (只输入http-server的话，更新了代码后，页面不会同步更新)</span><br></pre></td></tr></table></figure>
+
+<p>在浏览器窗口打开网页：<code> localhost:8080</code></p>
+</li>
+<li><p>Stop</p>
+</li>
+</ol>
+<ul>
+<li><p>退出</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ Ctrl C</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-Serve-静态服务器"><a href="#2-Serve-静态服务器" class="headerlink" title="2. Serve 静态服务器"></a>2. Serve 静态服务器</h3><ol>
+<li><p>install</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g serve</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use</p>
+<p>项目所在目录，执行 serve 即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm run build           //打包生成dist?</span><br><span class="line">$ serve -s .\dist</span><br><span class="line">$ serve                  //启动localhost:5000</span><br><span class="line">$ 访问localhost:5000</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Stop</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ Ctrl C</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="3-anywhere-开启静态服务"><a href="#3-anywhere-开启静态服务" class="headerlink" title="3.anywhere 开启静态服务"></a>3.anywhere 开启静态服务</h3><ol>
+<li><p>全局安装 anywhere</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install anywhere -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ anywhere 8009</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>stop</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ Ctrl C</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="4-live-server-服务器"><a href="#4-live-server-服务器" class="headerlink" title="4.live-server 服务器"></a>4.live-server 服务器</h3><ol>
+<li><p>install</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g live-server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ live-server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Stop</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ Ctrl C</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="5-JSON-服务器"><a href="#5-JSON-服务器" class="headerlink" title="5. JSON 服务器"></a>5. JSON 服务器</h3><ol>
+<li><p>install</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g json-server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use</p>
+<ul>
+<li>创建一个目录： json-server</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>创建 db.json</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;posts&quot;</span>: [</span><br><span class="line">   	&#123;<span class="string">&quot;id&quot;</span>: 1, <span class="string">&quot;title&quot;</span>: <span class="string">&quot;json-server&quot;</span>,<span class="string">&quot;author&quot;</span>: <span class="string">&quot;typicode&quot;</span>&#125;</span><br><span class="line">  ],</span><br><span class="line">   <span class="string">&quot;comments&quot;</span>: [</span><br><span class="line">   	 &#123;<span class="string">&quot;id&quot;</span>: 2, <span class="string">&quot;body&quot;</span>: <span class="string">&quot;some comment&quot;</span>, <span class="string">&quot;postId&quot;</span>: 1&#125;</span><br><span class="line">  ],</span><br><span class="line">   <span class="string">&quot;profile&quot;</span>: [</span><br><span class="line">   	&#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;typicode&quot;</span>&#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>启动服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ json-server --watch db.json 		<span class="comment">##localhost:3000</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="3">
+<li><p>stop</p>
+<ul>
+<li>关闭服务器</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ Ctrl C</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yan-cem.github.io/2020/10/01/Node/Node%E5%87%A0%E7%A7%8D%E5%B8%B8%E7%94%A8%E7%9A%84%E9%9D%99%E6%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="ckg7y5enu000598nfbj724q7s" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/01/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Linux常用命令
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/01/Node/Node%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Node安装与配置</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DataBase/">DataBase</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS-Code/">VS Code</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">Tags</h3>
+  <div class="widget"><ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/" rel="tag">JS权威指南</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/" rel="tag">TypeScript</a></li></ul></div>
+</div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/10/13/Ubuntu/Ubuntu%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E7%BC%93%E5%AD%98/">Ubuntu清除系统缓存</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/10/JavaScript/JS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/JS%20%E6%A6%82%E8%BF%B0/">第一章 1 JS概述</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/10/JavaScript/JS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">第一章 2 JS数据类型</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/01/DataBase/MongoDB%20%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">MongoDB安装与配置</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/01/Blog/Hexo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/">Hexo创建博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Yuan Min<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
