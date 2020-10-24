@@ -113,16 +113,60 @@
 </li>
 </ul>
 <h4 id="3-使用"><a href="#3-使用" class="headerlink" title="3. 使用"></a>3. 使用</h4><ul>
-<li><p>查看 Node 版本号</p>
+<li><p>查看 Node 远程仓库版本号: 耐心等待</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm ls-remote</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ol start="2">
-<li><p>安装 Node</p>
-</li>
-<li><p>不同版本 Node 切换</p>
-</li>
+<li>安装 Node</li>
 </ol>
+<ul>
+<li><p>安装 Node 14.14.0</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvm install 14.14.0</span><br><span class="line">nvm install 13.0.0</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="3">
+<li>查看 Node 版本号</li>
+</ol>
+<ul>
+<li><p>查看本地安装不同版本 Node</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看当前使用版本号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm current</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="4">
+<li>使用 Node</li>
+</ol>
+<ul>
+<li><p>不同版本 Node 切换</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="5">
+<li>卸载 Node</li>
+</ol>
+<ul>
+<li><p>卸载不需要版本的 Node</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm uninstall node-version</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载当前版本 Node</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvm deactivate</span><br><span class="line">nvm uninstall node_version</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="6">
+<li>切换使用的 Node</li>
+</ol>
+<ul>
+<li><p>选择使用的版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 14.14.0</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-npm-配置镜像源"><a href="#4-npm-配置镜像源" class="headerlink" title="4. npm 配置镜像源"></a>4. npm 配置镜像源</h4><ul>
+<li>npm 配置镜像源<br><img src="https://s1.ax1x.com/2020/10/24/BZCbT0.png" alt="npm配置镜像源"></li>
+</ul>
 
       
     </div>
