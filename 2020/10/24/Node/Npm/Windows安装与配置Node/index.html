@@ -7,15 +7,15 @@
   
   <title>1.Windows安装与配置Node | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 下载 [Node 官网下载：]  下载 Windows 安装包 (.msi)   2. 安装目录 D：&#x2F;Applications&#x2F;nodejs  3. 安装 省略  4. 配置环境变量 创建两个目录： node_cache, node_global   其中node_cache为下载缓存目录  node_global目录生成node_modules,全局安装包就置于此；  npm 配置 co">
+  <meta name="description" content="1. 下载 [Node 官网下载：]  下载 Windows 安装包 (.msi)   2. 安装目录 D：&#x2F;Applications&#x2F;node  3. 安装 省略  4. 配置环境变量 环境配置主要是配置 npm 安装的全局模块所在的路径，以及缓存 cache 的路径；   为什么要配置环境变量   全局安装 Node 依赖包时，系统默认会将安装的模块置于C:\Users\Adminstrati">
 <meta property="og:type" content="article">
 <meta property="og:title" content="1.Windows安装与配置Node">
 <meta property="og:url" content="https://full-stoke.github.io/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="1. 下载 [Node 官网下载：]  下载 Windows 安装包 (.msi)   2. 安装目录 D：&#x2F;Applications&#x2F;nodejs  3. 安装 省略  4. 配置环境变量 创建两个目录： node_cache, node_global   其中node_cache为下载缓存目录  node_global目录生成node_modules,全局安装包就置于此；  npm 配置 co">
+<meta property="og:description" content="1. 下载 [Node 官网下载：]  下载 Windows 安装包 (.msi)   2. 安装目录 D：&#x2F;Applications&#x2F;node  3. 安装 省略  4. 配置环境变量 环境配置主要是配置 npm 安装的全局模块所在的路径，以及缓存 cache 的路径；   为什么要配置环境变量   全局安装 Node 依赖包时，系统默认会将安装的模块置于C:\Users\Adminstrati">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-10-26T23:08:08.594Z">
+<meta property="article:modified_time" content="2020-10-27T00:09:18.890Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="Node">
 <meta name="twitter:card" content="summary">
@@ -96,23 +96,36 @@
 </li>
 </ul>
 <h4 id="2-安装目录"><a href="#2-安装目录" class="headerlink" title="2. 安装目录"></a>2. 安装目录</h4><ul>
-<li>D：/Applications/nodejs</li>
+<li>D：/Applications/node</li>
 </ul>
 <h4 id="3-安装"><a href="#3-安装" class="headerlink" title="3. 安装"></a>3. 安装</h4><ul>
 <li>省略</li>
 </ul>
-<h4 id="4-配置环境变量"><a href="#4-配置环境变量" class="headerlink" title="4. 配置环境变量"></a>4. 配置环境变量</h4><ol>
-<li>创建两个目录： <code>node_cache</code>, <code>node_global</code></li>
+<h4 id="4-配置环境变量"><a href="#4-配置环境变量" class="headerlink" title="4. 配置环境变量"></a>4. 配置环境变量</h4><ul>
+<li>环境配置主要是配置 npm 安装的全局模块所在的路径，以及缓存 cache 的路径；</li>
+</ul>
+<ol>
+<li>为什么要配置环境变量</li>
 </ol>
 <ul>
-<li><p>其中<code>node_cache</code>为下载缓存目录</p>
+<li>全局安装 Node 依赖包时，系统默认会将安装的模块置于<code>C:\Users\Adminstration\AppData\Roaming\npm</code>，从而占用 C 盘空间；</li>
+</ul>
+<ol start="2">
+<li>配置环境变量</li>
+</ol>
+<ul>
+<li><p>创建两个目录： <code>node_cache</code>, <code>node_global</code></p>
 </li>
-<li><p><code>node_global</code>目录生成<code>node_modules</code>,全局安装包就置于此；</p>
+<li><p>其中<code>node_cache</code>为下载包时缓存目录</p>
 </li>
-<li><p>npm 配置 config</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> prefix <span class="string">&quot;D:\Applications\Node\node_global&quot;</span></span><br><span class="line">npm config <span class="built_in">set</span> cache :<span class="string">&quot;D:\Applications\Node\node_cache&quot;</span></span><br></pre></td></tr></table></figure>
+<li><p><code>node_global</code>全局安装包就置于此；</p>
 </li>
 </ul>
+<ol>
+<li>npm 配置 config</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> prefix <span class="string">&quot;D:\Applications\node\node_global&quot;</span></span><br><span class="line">npm config <span class="built_in">set</span> cache :<span class="string">&quot;D:\Applications\node\node_cache&quot;</span></span><br></pre></td></tr></table></figure>
+
 <ol start="2">
 <li>配置环境变量</li>
 </ol>
@@ -122,7 +135,7 @@
 </li>
 <li><p>配置系统环境变量</p>
 </li>
-<li><p>新建 PATH</p>
+<li><p>新建 PATH：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%NODE_PATH%</span><br><span class="line">D:\Applications\node\node_global\node_modules</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>测试</p>

@@ -288,23 +288,36 @@
 </li>
 </ul>
 <h4 id="2-安装目录"><a href="#2-安装目录" class="headerlink" title="2. 安装目录"></a>2. 安装目录</h4><ul>
-<li>D：/Applications/nodejs</li>
+<li>D：/Applications/node</li>
 </ul>
 <h4 id="3-安装"><a href="#3-安装" class="headerlink" title="3. 安装"></a>3. 安装</h4><ul>
 <li>省略</li>
 </ul>
-<h4 id="4-配置环境变量"><a href="#4-配置环境变量" class="headerlink" title="4. 配置环境变量"></a>4. 配置环境变量</h4><ol>
-<li>创建两个目录： <code>node_cache</code>, <code>node_global</code></li>
+<h4 id="4-配置环境变量"><a href="#4-配置环境变量" class="headerlink" title="4. 配置环境变量"></a>4. 配置环境变量</h4><ul>
+<li>环境配置主要是配置 npm 安装的全局模块所在的路径，以及缓存 cache 的路径；</li>
+</ul>
+<ol>
+<li>为什么要配置环境变量</li>
 </ol>
 <ul>
-<li><p>其中<code>node_cache</code>为下载缓存目录</p>
+<li>全局安装 Node 依赖包时，系统默认会将安装的模块置于<code>C:\Users\Adminstration\AppData\Roaming\npm</code>，从而占用 C 盘空间；</li>
+</ul>
+<ol start="2">
+<li>配置环境变量</li>
+</ol>
+<ul>
+<li><p>创建两个目录： <code>node_cache</code>, <code>node_global</code></p>
 </li>
-<li><p><code>node_global</code>目录生成<code>node_modules</code>,全局安装包就置于此；</p>
+<li><p>其中<code>node_cache</code>为下载包时缓存目录</p>
 </li>
-<li><p>npm 配置 config</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> prefix <span class="string">&quot;D:\Applications\Node\node_global&quot;</span></span><br><span class="line">npm config <span class="built_in">set</span> cache :<span class="string">&quot;D:\Applications\Node\node_cache&quot;</span></span><br></pre></td></tr></table></figure>
+<li><p><code>node_global</code>全局安装包就置于此；</p>
 </li>
 </ul>
+<ol>
+<li>npm 配置 config</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> prefix <span class="string">&quot;D:\Applications\node\node_global&quot;</span></span><br><span class="line">npm config <span class="built_in">set</span> cache :<span class="string">&quot;D:\Applications\node\node_cache&quot;</span></span><br></pre></td></tr></table></figure>
+
 <ol start="2">
 <li>配置环境变量</li>
 </ol>
@@ -314,7 +327,7 @@
 </li>
 <li><p>配置系统环境变量</p>
 </li>
-<li><p>新建 PATH</p>
+<li><p>新建 PATH：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%NODE_PATH%</span><br><span class="line">D:\Applications\node\node_global\node_modules</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>测试</p>
@@ -362,7 +375,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
+        <h4 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h4><p><a target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows/releases">[下载地址]</a></p>
+<ul>
+<li><p>下载版本： <code>nvm-noinstall.zip</code></p>
+</li>
+<li><p>解压</p>
+</li>
+</ul>
+<h4 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h4><ul>
+<li><p>安装目录： <code>F:/Application/Nvm/nvm</code></p>
+<p><img src="https://s1.ax1x.com/2020/10/15/0TAl59.png" alt="[安装目录]"></p>
+</li>
+<li><p>创建目录<code>node</code>存放Node依赖包: <code>F:/Application/Nvm/node</code></p>
+</li>
+<li><p>打开nvm目录，点击<code>install.exe</code>文件，生成settings.text文件</p>
+<p><img src="https://s1.ax1x.com/2020/10/15/0TAtKK.png" alt="[安装nvm]"></p>
+</li>
+<li><p>转贴安装目录和Node依赖包目录，如下图：</p>
+<p><img src="https://s1.ax1x.com/2020/10/15/0TERQx.png" alt="[配置文件]"></p>
+</li>
+</ul>
+<h4 id="3-配置NPM环境变量"><a href="#3-配置NPM环境变量" class="headerlink" title="3. 配置NPM环境变量"></a>3. 配置NPM环境变量</h4><ul>
+<li><p>npm 配置镜像源: settings文件配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node_mirror: https://npm.taobao.org/mirrors/node/</span><br><span class="line">npm_mirror: https://npm.taobao.org/mirrors/npm/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置图</p>
+<p><img src="https://s1.ax1x.com/2020/10/27/BMA8Rs.jpg" alt="[Nvm配置图]"></p>
+</li>
+</ul>
+<h4 id="4-使用"><a href="#4-使用" class="headerlink" title="4. 使用"></a>4. 使用</h4><ul>
+<li>安装node不同版本<br><img src="https://s1.ax1x.com/2020/10/15/0TAVg0.png" alt="[使用]"></li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
 <h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
@@ -611,9 +655,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h4 id="1-Ubuntu20-04-安装与配置-Node"><a href="#1-Ubuntu20-04-安装与配置-Node" class="headerlink" title="1.Ubuntu20.04 安装与配置 Node"></a>1.Ubuntu20.04 安装与配置 Node</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/">[1.Ubuntu20.04 安装与配置 Node]</a></p>
-<h4 id="2-Ubuntu20-04-安装与配置-Nvm"><a href="#2-Ubuntu20-04-安装与配置-Nvm" class="headerlink" title="2.Ubuntu20.04 安装与配置 Nvm"></a>2.Ubuntu20.04 安装与配置 Nvm</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/">[2.Ubuntu20.04 安装与配置 Nvm]</a></p>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/Ubuntu%E6%95%99%E7%A8%8B/">[1.Ubuntu 教程]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+<h4 id="2-Ubuntu20-04-tar-xz-包方式安装-Node"><a href="#2-Ubuntu20-04-tar-xz-包方式安装-Node" class="headerlink" title="2.Ubuntu20.04 tar.xz 包方式安装 Node"></a>2.Ubuntu20.04 tar.xz 包方式安装 Node</h4><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/50fb7228238b">[Ubuntu20.04 tar.xz 包方式安装 Node]</a></p>
+<h4 id="3-Ubuntu20-04-安装与配置-Nvm"><a href="#3-Ubuntu20-04-安装与配置-Nvm" class="headerlink" title="3.Ubuntu20.04 安装与配置 Nvm"></a>3.Ubuntu20.04 安装与配置 Nvm</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/">[2.Ubuntu20.04 安装与配置 Nvm]</a></p>
+<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4. 参考文档"></a>4. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/Ubuntu%E6%95%99%E7%A8%8B/">[1.Ubuntu 教程]</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
