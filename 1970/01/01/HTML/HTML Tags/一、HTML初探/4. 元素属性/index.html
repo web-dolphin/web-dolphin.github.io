@@ -7,15 +7,15 @@
   
   <title>Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="teaching for web development">
+  <meta name="description" content="6.6 元素属性(attribute)一个元素可以有多个属性 I like apples and oranges使用布尔属性 Enter your name 自定义属性 Enter your name6.7 创建 HTML 文档元数据标签： 向浏览器提供文档的相关信息； 父元素、子元素、后代元素、兄弟元素 元素分类：元数据元素(metadata element)、流元素 (flow element">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Coding Your Wonderful Life">
 <meta property="og:url" content="https://full-stoke.github.io/1970/01/01/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/4.%20%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="teaching for web development">
+<meta property="og:description" content="6.6 元素属性(attribute)一个元素可以有多个属性 I like apples and oranges使用布尔属性 Enter your name 自定义属性 Enter your name6.7 创建 HTML 文档元数据标签： 向浏览器提供文档的相关信息； 父元素、子元素、后代元素、兄弟元素 元素分类：元数据元素(metadata element)、流元素 (flow element">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="1970-01-01T00:00:00.000Z">
-<meta property="article:modified_time" content="2020-10-28T05:59:59.463Z">
+<meta property="article:modified_time" content="2020-10-28T06:21:30.815Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="HTML5 CSS3 JavaScript Java Python C++ Node Express Nestjs MongoDB MySQL">
 <meta name="twitter:card" content="summary">
@@ -79,7 +79,214 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>6.6 元素属性(attribute)<br>一个元素可以有多个属性</p>
+<p>I like apples and oranges<br>使用布尔属性</p>
+<p>Enter your name <input disabled /><br>自定义属性</p>
+<p>Enter your name<br><input disabled="true" data-creator="adam" data-purpose="collection" /><br>6.7 创建 HTML 文档<br>元数据标签： 向浏览器提供文档的相关信息；</p>
+<p>父元素、子元素、后代元素、兄弟元素</p>
+<p>元素分类：元数据元素(metadata element)、流元素 (flow element)、短语元素(phrasing element)</p>
+<p>a) 元数据元素(metadata element)</p>
+<p>构建 HTML 文档的基本结构，向浏览器提高文档信息；<br>b) 流元素 (flow element)</p>
+<p>规定这些元素可以成为父元素；<br>是短语元素的超级；<br>短语元素都是流元素；<br>但是，流元素并不一定是短语元素；<br>c) 短语元素(phrasing element)</p>
+<p>和流元素呼应，规定这些元素可以成为子元素<br>d) 无法归入上述三种类型的元素；</p>
+<p>例如： <li></li>元素，只能用在非常有限的情况，只能有三种父元素；</p>
+<ul></ul>无序列表，<ol></ol>有序列表，<menu></menu>菜单；
+
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title></title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li>I like<a href="/apple.html">apples</a> and oranges</li>
+        <li>Today was warm and sunny.</li>
+        <li>I would like go fishing;</li>
+      </ul>
+    </div>
+  </body>
+</html>
+6.8 使用 HTML 实体
+HTML 的实体(entity):
+
+<p>表四： 特殊字符<br>字符 实体名称 实体编码<br>‘ ‘<br>&lt; &lt; &lt;</p>
+<pre><code>    &gt;</code></pre>
+<p>&amp; &amp; &amp;<br>“ “ “<br>‘ ‘ ‘<br>€ € €<br>£ £ £<br>¥ ¥ ¥<br>© © ©<br>® ® ®<br>™ ™ ™<br>× × ×<br>÷ ÷ ÷<br>6.9 HTML5 全局属性<br>全局属性： global attribute；</p>
+<p>局部属性：local attribute；</p>
+<p>表五： HTML5 全局属性<br>属性() 元素(element) 说明(description)<br>style 短语元素 css 行内属性<br>lang 短语元素 说明元素内容使用的语言<br>id 短语元素 css id<br>class 短语元素 css 类<br>accesskey input 设定一个或几个页面元素的快捷键<br>dir 短语元素 规定了文字的方向<br>contenteditable 短语元素 规定内容是可编辑的<br>draggable 短语元素 规定了元素可以拖放<br>dropzone 短语元素 与 draggable 配套<br>hidden 短语元素 隐藏元素<br>spellcheck 短语元素 是否对元素内容做拼写检查<br>tabindex 短语元素 键盘 Tab 在 HTML 页面元素之间切换<br>title 短语元素 提供元素的额外信息<br>example1: accesskey</p>
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Demo for accesskey</title>
+  </head>
+  <body>
+    <form action="http://localhost:5000/user">
+      <label for="username">用户名</label>
+      <!-- Alt + n -->
+      <input type="text" name="username" id="username" accesskey="n" /><br />
+      <label for="password">密码</label>
+      <!-- Alt + p -->
+      <input type="text" name="password" id="password" accesskey="p" /><br />
+      <label for="confirm">确认</label>
+      <!-- Alt + c -->
+      <input type="text" name="confirm" id="confirm" accesskey="c" /><br />
+      <!-- Alt + s -->
+      <input type="submit" value="Login" accesskey="s" />
+    </form>
+  </body>
+</html>
+example2: class
+
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Demo for class</title>
+    <style>
+      .apress {
+        padding: 5px;
+        margin: 2px;
+        color: white;
+        background: #aaa;
+      }
+      .apple {
+        font-size: x-large;
+        display: block;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <a target="_blank" rel="noopener" href="https://apress.com" class="apress">Apress web site</a>
+    <a target="_blank" rel="noopener" href="https://apple.com" class="apple add">Apple web site</a>
+    <script>
+      let add = document.querySelector('.add')
+      add.style.border = 'thin solid black'
+      add.style.background = 'red'
+      add.style.color = 'white'
+    </script>
+  </body>
+</html>
+example 3: contenteditable 属性
+
+<p>文本可编辑</p>
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Demo for contenteditable</title>
+  </head>
+  <body>
+    <p contenteditable="true">It is raining right now.</p>
+  </body>
+</html>
+example 4: dir 属性
+
+<p>规定了文字的方向： ltr 或者 rtl</p>
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Demo for dir</title>
+  </head>
+  <body>
+    <p dir="ltr">This is left-to-right</p>
+    <p dir="rtl">This is right-to-left</p>
+  </body>
+</html>
+example 5: draggable and dropzone 属性
+
+<p>详见拖放</p>
+<p>example 6: lang 属性</p>
+<p>说明元素内容使用的语言</p>
+<p lang="en">Hello -Tomas How are you?</p>
+
+<p>example 7: spellcheck 属性</p>
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Demo for dir</title>
+  </head>
+  <body>
+    <textarea spellcheck="true" cols="50px" rows="10px">
+This is some mispelled text</textarea
+    >
+  </body>
+</html>
+example 8: tabindex 属性
+
+<p>按下 Tab 键时，按数字的从小到大一次选取元素内容</p>
+<p>数值为负值时，不被选中</p>
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Demo for tabindex</title>
+  </head>
+  <body>
+    <form action="http://localhost:5000/user">
+      <label for="username">用户名</label>
+      <!-- Tab -->
+      <input type="text" name="username" id="username" tabindex="2" /><br />
+      <label for="password">密码</label>
+      <!-- Tab -->
+      <input type="text" name="password" id="password" tabindex="1" /><br />
+      <label for="confirm">确认</label>
+      <!-- Tab 不被选中-->
+      <input type="text" name="confirm" id="confirm" tabindex="-1" /><br />
+      <input type="submit" value="Login" />
+    </form>
+  </body>
+</html>
+example 9: title 属性
+
+<p>提供元素的额外信息： 鼠标悬停时，显示工具提示</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14</p>
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Demo for title</title>
+  </head>
+  <body>
+    <a target="_blank" rel="noopener" href="https://apress.com" title="Apress Publishing"
+      >Visit the apress site
+    </a>
+  </body>
+</html>
+6.10 新的 DOCTYPE 和字符集
+DOCYTYPE
+
+<p>浏览器的显示模式有多种：</p>
+<p>Strandards: 标准模式<br>DOCTYPE 会告诉浏览器采用：Standards 模式显示<br>1</p>
+<!DOCTYPE html>
+
+<p>字符集</p>
+<p>字符集也简化很多了</p>
+<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a href="">[一、HTML 初探]</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
       
     </div>
     <footer class="article-footer">
