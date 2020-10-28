@@ -14,13 +14,11 @@
 <meta property="og:site_name" content="Coding Your Wonderful Life">
 <meta property="og:description" content="1.HTML5 新增元素 HTML5 定义的许多元素 HTML4 中也存在，但是，元素的含义已经发生了很大的变化，或者，其使用方式已经不同； HTML5 本身还新增了许多新的元素；  2.HTML5 新增功能 HTML5 规范新增了以下内容： Canvas： 2D 和 3DCross-DocumentGeolocationAudio and VideoFormsMathMLMicrodataFil">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://full-stoke.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/3.HTML5%20%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9/imgs/timg.jpg">
 <meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-10-28T02:05:22.350Z">
+<meta property="article:modified_time" content="2020-10-28T06:49:54.044Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://full-stoke.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/3.HTML5%20%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9/imgs/timg.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Coding Your Wonderful Life" type="application/atom+xml">
   
@@ -100,246 +98,8 @@
 <p>Canvas： 2D 和 3D<br>Cross-Document<br>Geolocation<br>Audio and Video<br>Forms<br>MathML<br>Microdata<br>File System API<br>Server-Sent Events<br>Scalable Vector Graphics(SVG)<br>WebSocket API<br>Web Workers API<br>Web RTC API<br>Web Origin Concept<br>Web Storage<br>XMLHttpRequest Level 2<br>Web 离线缓存应用<br>拖放<br>顾名思义， HTML 是一种标记语言，以其标记为文档内容的元素文档的结构；</p>
 </li>
 </ul>
-<ol start="6">
-<li>元素<br>元素不区分大小写；<br>内容与呈现分离<br>6.1. 基本元<br>表二： 基本元素</li>
-</ol>
-<p>元素 (element) 说明（description)<br>!DOCTYPE 声明当前文档为 HTML5 文档<br>html 文档根目录<br>head 文档头部标签<br>title 文档标题标签<br>mate 文档元数据标签<br>link 文档外链接标签<br>script 文档外部资源标签<br>style 文档内联样式标签<br>body 文档主题标签<br>6.2 常用元素<br>表三： 常用元素</p>
-<p>表三： 常用元素<br>元素 (element) 说明（description) 元素类型<br>div 定义文档中的节(容器) 块级元素(block)<br>p 段落 block<br>ul 无序列表 block<br>ol 有序列表 block<br>li 定义列表的项目 block<br>span 定义文档中的节(容器) 行级元素(inline)<br>b 粗体文本 inline<br>i 斜体文本 inline<br>table 表格 block<br>tr 表格的行元素 block<br>th 头部单元格 block<br>td 体部单元格 block<br>br 折行 inline<br>hr 水平线 block<br>label input 说明 inline<br>input 输入框 block<br>textarea 多行输入框 block<br>a 链接 inline<br>img 图片 inline-block<br>6.3 空元素<br>没有内容的元素</p>
-<p>1<br>2<br>3<br>I like</p>
-<div></div>
-
-<p>apples and oranges<br>6.4 自闭合元素<br>对于空元素，可以用一个标签代替，以简洁标签；</p>
-<p>1<br>2<br>3<br>I like</p>
-<div />
-
-<p>apples and oranges<br>6.5 虚元素（void element）<br>有些元素只能使用一个标签，并且在其中不能插入任何内容的元素；</p>
-<p>1<br>2<br>3<br>4<br>I like apples and oranges</p>
-<hr />
-
-<p>Today was warm and sunny <br /><br>I would like go fishing;<br>6.6 元素属性(attribute)<br>一个元素可以有多个属性</p>
-<p>1<br>I like <a class="link" href="/apple.html" id="firstlink">apples</a> and oranges<br>使用布尔属性</p>
-<p>1<br>Enter your name <input disabled /><br>自定义属性</p>
-<p>1<br>2<br>Enter your name<br><input disabled="true" data-creator="adam" data-purpose="collection" /><br>6.7 创建 HTML 文档<br>元数据标签： 向浏览器提供文档的相关信息；</p>
-<p>父元素、子元素、后代元素、兄弟元素</p>
-<p>元素分类：元数据元素(metadata element)、流元素 (flow element)、短语元素(phrasing element)</p>
-<p>a) 元数据元素(metadata element)</p>
-<p>构建 HTML 文档的基本结构，向浏览器提高文档信息；<br>b) 流元素 (flow element)</p>
-<p>规定这些元素可以成为父元素；<br>是短语元素的超级；<br>短语元素都是流元素；<br>但是，流元素并不一定是短语元素；<br>c) 短语元素(phrasing element)</p>
-<p>和流元素呼应，规定这些元素可以成为子元素<br>d) 无法归入上述三种类型的元素；</p>
-<p>例如： <li></li>元素，只能用在非常有限的情况，只能有三种父元素；</p>
-<ul></ul>无序列表，<ol></ol>有序列表，<menu></menu>菜单；
-
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title></title>
-    <link rel="stylesheet" href="css/index.css" />
-  </head>
-  <body>
-    <div class="container">
-      <ul>
-        <li>I like<a href="/apple.html">apples</a> and oranges</li>
-        <li>Today was warm and sunny.</li>
-        <li>I would like go fishing;</li>
-      </ul>
-    </div>
-  </body>
-</html>
-6.8 使用 HTML 实体
-HTML 的实体(entity):
-
-<p>表四： 特殊字符<br>字符 实体名称 实体编码<br>‘ ‘ &nbsp; &#160;<br>&lt; &lt; &lt;</p>
-<blockquote>
-<pre><code>&gt;        &gt;
-
-&amp; &amp; &amp;
-“ &quot; &quot;
-‘ &#39; &#39;
-€ € €
-£ £ £
-¥ ¥ ¥
-© © ©
-® ® ®
-™ ™ ™
-× × ×
-÷ ÷ ÷
-6.9 HTML5 全局属性
-全局属性： global attribute；</code></pre>
-</blockquote>
-<p>局部属性：local attribute；</p>
-<p>表五： HTML5 全局属性<br>属性() 元素(element) 说明(description)<br>style 短语元素 css 行内属性<br>lang 短语元素 说明元素内容使用的语言<br>id 短语元素 css id<br>class 短语元素 css 类<br>accesskey input 设定一个或几个页面元素的快捷键<br>dir 短语元素 规定了文字的方向<br>contenteditable 短语元素 规定内容是可编辑的<br>draggable 短语元素 规定了元素可以拖放<br>dropzone 短语元素 与 draggable 配套<br>hidden 短语元素 隐藏元素<br>spellcheck 短语元素 是否对元素内容做拼写检查<br>tabindex 短语元素 键盘 Tab 在 HTML 页面元素之间切换<br>title 短语元素 提供元素的额外信息<br>example1: accesskey</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for accesskey</title>
-  </head>
-  <body>
-    <form action="http://localhost:5000/user">
-      <label for="username">用户名</label>
-      <!-- Alt + n -->
-      <input type="text" name="username" id="username" accesskey="n" /><br />
-      <label for="password">密码</label>
-      <!-- Alt + p -->
-      <input type="text" name="password" id="password" accesskey="p" /><br />
-      <label for="confirm">确认</label>
-      <!-- Alt + c -->
-      <input type="text" name="confirm" id="confirm" accesskey="c" /><br />
-      <!-- Alt + s -->
-      <input type="submit" value="Login" accesskey="s" />
-    </form>
-  </body>
-</html>
-example2: class
-
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for class</title>
-    <style>
-      .apress {
-        padding: 5px;
-        margin: 2px;
-        color: white;
-        background: #aaa;
-      }
-      .apple {
-        font-size: x-large;
-        display: block;
-        margin-top: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <a target="_blank" rel="noopener" href="https://apress.com" class="apress">Apress web site</a>
-    <a target="_blank" rel="noopener" href="https://apple.com" class="apple add">Apple web site</a>
-    <script>
-      let add = document.querySelector('.add')
-      add.style.border = 'thin solid black'
-      add.style.background = 'red'
-      add.style.color = 'white'
-    </script>
-  </body>
-</html>
-example 3: contenteditable 属性
-
-<p>文本可编辑<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for contenteditable</title>
-  </head>
-  <body>
-    <p contenteditable="true">It is raining right now.</p>
-  </body>
-</html>
-example 4: dir 属性
-
-<p>规定了文字的方向： ltr 或者 rtl<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for dir</title>
-  </head>
-  <body>
-    <p dir="ltr">This is left-to-right</p>
-    <p dir="rtl">This is right-to-left</p>
-  </body>
-</html>
-example 5: draggable and dropzone 属性
-
-<p>详见拖放<br>1<br><img src="imgs/timg.jpg" draggle="true" /><br>example 6: lang 属性</p>
-<p>说明元素内容使用的语言<br>1</p>
-<p lang="en">Hello -Tomas How are you?</p>
-
-<p>example 7: spellcheck 属性</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for dir</title>
-  </head>
-  <body>
-    <textarea spellcheck="true" cols="50px" rows="10px">
-This is some mispelled text</textarea
-    >
-  </body>
-</html>
-example 8: tabindex 属性
-
-<p>按下 Tab 键时，按数字的从小到大一次选取元素内容</p>
-<p>数值为负值时，不被选中</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for tabindex</title>
-  </head>
-  <body>
-    <form action="http://localhost:5000/user">
-      <label for="username">用户名</label>
-      <!-- Tab -->
-      <input type="text" name="username" id="username" tabindex="2" /><br />
-      <label for="password">密码</label>
-      <!-- Tab -->
-      <input type="text" name="password" id="password" tabindex="1" /><br />
-      <label for="confirm">确认</label>
-      <!-- Tab 不被选中-->
-      <input type="text" name="confirm" id="confirm" tabindex="-1" /><br />
-      <input type="submit" value="Login" />
-    </form>
-  </body>
-</html>
-example 9: title 属性
-
-<p>提供元素的额外信息： 鼠标悬停时，显示工具提示</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for title</title>
-  </head>
-  <body>
-    <a target="_blank" rel="noopener" href="https://apress.com" title="Apress Publishing"
-      >Visit the apress site
-    </a>
-  </body>
-</html>
-6.10 新的 DOCTYPE 和字符集
-DOCYTYPE
-
-<p>浏览器的显示模式有多种：</p>
-<p>Strandards: 标准模式<br>DOCTYPE 会告诉浏览器采用：Standards 模式显示<br>1</p>
-<!DOCTYPE html>
-
-<p>字符集</p>
-<p>字符集也简化很多了</p>
+<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%B8%80%E3%80%81HTML%20%E5%88%9D%E6%8E%A2/">[一、HTML 初探]</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
@@ -355,11 +115,11 @@ DOCYTYPE
     
 <nav id="article-nav">
   
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/2.HTML%E5%85%83%E7%B4%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/4.%20%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          2.HTML元素
+          4.HTML元素属性
         
       </div>
     </a>
@@ -393,7 +153,7 @@ DOCYTYPE
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">22</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">22</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -403,7 +163,7 @@ DOCYTYPE
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">86</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">88</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 

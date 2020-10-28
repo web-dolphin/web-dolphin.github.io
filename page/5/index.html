@@ -67,6 +67,229 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JavaScript/JavaScript Tags/十、Ajax技术/临时/Ajax基本技术原理案例之三" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%9F%BA%E6%9C%AC%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%89/" class="article-date">
+  <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%9F%BA%E6%9C%AC%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%89/">Ajax基本技术原理案例之三</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-项目创建"><a href="#1-项目创建" class="headerlink" title="1. 项目创建"></a>1. 项目创建</h4><ol>
+<li><p>创建目录： <code>ajax-base-master</code> / <code>public</code></p>
+</li>
+<li><p>初始化项目<code>root</code>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git install express</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建服务器： <code>server.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置静态资源： HTML、CSS、JS、Image</span></span><br><span class="line">app.use(express.static(path.join(__dirname, <span class="string">&#x27;public&#x27;</span>)))</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> port = process.env.NODE_ENV || <span class="number">3000</span></span><br><span class="line"></span><br><span class="line">app.listen(<span class="function">() =&gt;</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Server running on port: http://localhost:<span class="subst">$&#123;port&#125;</span>...`</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建静态文件：<code>index.html</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span>&gt;</span>Ajax Demo<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Ajax 请求数据的四个步骤</p>
+<ol>
+<li><p>对象创建</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xml</span><br><span class="line"><span class="keyword">if</span> (XMLHttpRequest) &#123;</span><br><span class="line">  xml = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  xml = <span class="keyword">new</span> ActiveXObject(<span class="string">&#x27;Mircrosoft.XMLHTTP&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置请求方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xml.open(<span class="string">&#x27;GET&#x27;</span>, url, <span class="literal">true</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用回调函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xml.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (xml.readyState == <span class="number">4</span> &amp;&amp; xml.status == <span class="number">200</span>) &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发送请求</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xml.send(<span class="literal">null</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>为<code>server.js</code>添加路由</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/get&#x27;</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> res.send(<span class="string">&#x27;落霞与孤鹜齐飞 秋水共长天一色&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>为<code>indexhtml</code>注册事件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> url = <span class="string">&#x27;http://localhost:3000/get&#x27;</span></span><br><span class="line"><span class="keyword">const</span> div = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;div&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;button&#x27;</span>)</span><br><span class="line">btn.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> xml</span><br><span class="line">  <span class="keyword">if</span> (XMLHttpRequest) &#123;</span><br><span class="line">    xml = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    xml = <span class="keyword">new</span> ActiveXObject(<span class="string">&#x27;Mircrosoft.XMLHTTP&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  xml.open(<span class="string">&#x27;GET&#x27;</span>, url, <span class="literal">true</span>)</span><br><span class="line">  xml.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (xml.readyState == <span class="number">4</span> &amp;&amp; xml.status == <span class="number">200</span>) &#123;</span><br><span class="line">      div.innerHTML = xml.responseText</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  xml.send()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切换到<code>root</code>目录，启动<code>Server</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nodemon server.js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>浏览器<code>url</code>： <code>http://localhost:3000</code></p>
+<ul>
+<li>点击按钮，文件内容更换为： <code>落霞与孤鹜齐飞 秋水共长天一色</code></li>
+<li>观察<code>url</code>并没有改变；</li>
+</ul>
+</li>
+<li><p>原始代码</p>
+<ul>
+<li><code>server.js</code></li>
+<li><code>index.html</code></li>
+</ul>
+</li>
+<li><p>关于 Ajax 基本原理的<code>TypeScript</code>版本介绍</p>
+<p><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/15/JavaScript/JS/Ajax-base-for-Typescript/">参考文档</a></p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://full-stoke.github.io/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%9F%BA%E6%9C%AC%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%89/" data-id="ckgso277q000bkesh7l5denp6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/JavaScript Tags/十、Ajax技术/临时/Ajax异步请求案例 - Git JSON解析" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%20-%20Git%20JSON%E8%A7%A3%E6%9E%90/" class="article-date">
+  <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%20-%20Git%20JSON%E8%A7%A3%E6%9E%90/">Ajax异步请求案例：Git JSON解析</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-项目说明"><a href="#1-项目说明" class="headerlink" title="1. 项目说明"></a>1. 项目说明</h4><ol>
+<li><p>创建如下前端页面</p>
+<p><img src="https://s1.ax1x.com/2020/10/16/0bJuKf.png" alt="页面"></p>
+</li>
+<li><p>点击 B 按钮，通过 Ajax 从后端接收到图片的<code>src</code>、页面标题、文章内容，刷新文章部分，页面不发生刷新</p>
+<p><img src="https://s1.ax1x.com/2020/10/16/0bhYWR.png" alt="Ajax-JSON"></p>
+</li>
+</ol>
+<h4 id="2-步骤"><a href="#2-步骤" class="headerlink" title="2. 步骤"></a>2. 步骤</h4><ol>
+<li><p>后端</p>
+<ul>
+<li><p>创建目录： <code>ajax-base-master</code> / <code>public</code></p>
+</li>
+<li><p>初始化项目<code>root</code>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git install express</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建服务器/配置静态资源： <code>server.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 引入express框架</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="comment">//6. 引入路径处理模块</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="comment">//2. 创建web服务器</span></span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"><span class="comment">//5. 静态资源访问服务功能</span></span><br><span class="line">app.use(express.static(path.join(__dirname, <span class="string">&#x27;public&#x27;</span>)))</span><br><span class="line"></span><br><span class="line"><span class="comment">//3. 设置端口</span></span><br><span class="line"><span class="keyword">const</span> PORT = process.env.NODE_ENV || <span class="number">3000</span></span><br><span class="line"><span class="comment">//4. 监听端口</span></span><br><span class="line"><span class="keyword">const</span> server = app.listen(PORT, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Server running at port: http://localhost:<span class="subst">$&#123;PORT&#125;</span>...`</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动服务:<code> server.js</code>根目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nodemon server.js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>视图</p>
+<p><img src="https://s1.ax1x.com/2020/10/16/0bNVPJ.png" alt="启动server"></p>
+</li>
+<li><p>配置路由</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//6. 配置路易</span></span><br><span class="line">app.get(<span class="string">&#x27;/article&#x27;</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> res.send(&#123;</span><br><span class="line">    title: <span class="string">&#x27;滕王阁序&#x27;</span>,</span><br><span class="line">    image: <span class="string">&#x27;imgs/photo1.jpg&#x27;</span>,</span><br><span class="line">    content:</span><br><span class="line">      <span class="string">&#x27;落霞与孤鹜齐飞 秋水工厂天一色 渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-前端"><a href="#3-前端" class="headerlink" title="3. 前端"></a>3. 前端</h4><ul>
+<li><p>创建静态资源目录： 参见视图</p>
+</li>
+<li><p>创建静态文件：<code>index.html</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span></span></span><br><span class="line"><span class="tag">      <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo for ajax base master<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span></span></span><br><span class="line"><span class="tag">      <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">href</span>=<span class="string">&quot;imgs/favicon.ico&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/index.css&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h2</span>&gt;</span>Hello World!<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;imgs/photo.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;photo&quot;</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">          Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span><br><span class="line">          Perspiciatis amet consequatur eligendi, autem molestias nostrum</span><br><span class="line">          ratione animi temporibus beatae quo expedita accusamus delectus</span><br><span class="line">          sapiente distinctio! Quibusdam cumque numquam unde dolorem.</span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/index.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建静态文件： <code>less/indexless</code>，保存时自动生成<code>css/index.css</code></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.center</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">min-height</span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="selector-class">.center</span>;</span><br><span class="line">  <span class="selector-class">.card</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">280px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">2px</span> <span class="number">4px</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>);</span><br><span class="line">    <span class="selector-tag">h2</span> &#123;</span><br><span class="line">      <span class="attribute">text-align</span>: center;</span><br><span class="line">      <span class="attribute">line-height</span>: <span class="number">60px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">img</span> &#123;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">ul</span> &#123;</span><br><span class="line">      <span class="attribute">padding</span>: <span class="number">20px</span> <span class="number">0</span>;</span><br><span class="line">      <span class="selector-tag">li</span> &#123;</span><br><span class="line">        <span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">        <span class="selector-tag">&amp;</span><span class="selector-pseudo">:nth-of-type(2)</span> &#123;</span><br><span class="line">          <span class="attribute">float</span>: right;</span><br><span class="line">          <span class="attribute">margin</span>: <span class="number">10px</span> auto <span class="number">0</span>;</span><br><span class="line">          <span class="selector-tag">button</span> &#123;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">30px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">            <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">            <span class="attribute">background</span>: green;</span><br><span class="line">            <span class="attribute">outline</span>: none;</span><br><span class="line">            <span class="attribute">border</span>: <span class="number">0px</span>;</span><br><span class="line">            <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">            <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">            <span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">2px</span> <span class="number">6px</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建静态文件： <code>js/index.js</code></p>
+</li>
+<li><p>Ajax 请求数据的四个步骤</p>
+<ol>
+<li><p>对象创建</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置请求方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(<span class="string">&#x27;GET&#x27;</span>, url)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用回调函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发送请求</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xml.send()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解析<code>JSON</code></p>
+<ul>
+<li><p>由于响应的数据较多，只能采用<code>JSON</code>结构的数据传输；</p>
+</li>
+<li><p>但是，数据在传输过程中，自动转换为了字符串；</p>
+</li>
+<li><p>我们可以测试以下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">xhr.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> data = xhr.responseText</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">typeof</span> data) <span class="comment">// string</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>由于在前端字符串不好操作，所以要解析为对象： <code>JSON.parse()</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 4. 获取服务端发给客户端的数据</span></span><br><span class="line">xhr.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> article = <span class="built_in">JSON</span>.parse(xhr.responseText)</span><br><span class="line">  h2.innerHTML = article.title</span><br><span class="line">  image.src = article.image</span><br><span class="line">  content.innerHTML = article.content</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><code>index.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 5. 设置访问路由</span></span><br><span class="line"><span class="keyword">const</span> url = <span class="string">&#x27;http://localhost:3000/article&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 6. 获取元素</span></span><br><span class="line"><span class="keyword">const</span> h2 = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;h2&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> image = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;img&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> content = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.content&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;button&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 7. 事件监听</span></span><br><span class="line">btn.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 1. 创建代理对象</span></span><br><span class="line">  <span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 2. 设置请求方式</span></span><br><span class="line">  xhr.open(<span class="string">&#x27;GET&#x27;</span>, url, <span class="literal">true</span>)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 3. 发送请求</span></span><br><span class="line">  xhr.send()</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 4. 获取服务端发给客户端的数据</span></span><br><span class="line">  xhr.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> article = <span class="built_in">JSON</span>.parse(xhr.responseText)</span><br><span class="line">    h2.innerHTML = article.title</span><br><span class="line">    image.src = article.image</span><br><span class="line">    content.innerHTML = article.content</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>浏览器<code>url</code>： <code>http://localhost:3000</code></p>
+</li>
+<li><p>点击按钮，文章更新了</p>
+</li>
+<li><p>观察<code>url</code>并没有改变；</p>
+</li>
+</ul>
+<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4. 参考文档"></a>4. 参考文档</h4><ol>
+<li><p>关于 Ajax 基本原理的<code>TypeScript</code>版本介绍</p>
+<p><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/15/JavaScript/JS/Ajax-base-for-Typescript/">参考文档</a></p>
+</li>
+<li><p>Ajax 技术原理简介</p>
+<p><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/15/JavaScript/Ajax/Ajax%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E7%AE%80%E4%BB%8B%20/">参考文档</a></p>
+</li>
+<li><p>Ajax 异步请求案例</p>
+<p><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/12/JavaScript/Ajax/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B/">参考文档</a></p>
+</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://full-stoke.github.io/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%20-%20Git%20JSON%E8%A7%A3%E6%9E%90/" data-id="ckgso277r000dkesh3ewwg5k6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JavaScript/JavaScript Tags/十、Ajax技术/临时/Ajax异步请求案例之一 - 基础代码" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%80%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/" class="article-date">
@@ -781,265 +1004,6 @@
 
 
   
-    <article id="post-HTML/HTML Tags/一、HTML初探/5. HTML5 全局属性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/1970/01/01/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/5.%20HTML5%20%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7/" class="article-date">
-  <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://full-stoke.github.io/1970/01/01/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/5.%20HTML5%20%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7/" data-id="ckgszq9at0000frshayk31gyg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML/HTML Tags/一、HTML初探/4. 元素属性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/1970/01/01/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/4.%20%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/" class="article-date">
-  <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>6.6 元素属性(attribute)<br>一个元素可以有多个属性</p>
-<p>I like apples and oranges<br>使用布尔属性</p>
-<p>Enter your name <input disabled /><br>自定义属性</p>
-<p>Enter your name<br><input disabled="true" data-creator="adam" data-purpose="collection" /><br>6.7 创建 HTML 文档<br>元数据标签： 向浏览器提供文档的相关信息；</p>
-<p>父元素、子元素、后代元素、兄弟元素</p>
-<p>元素分类：元数据元素(metadata element)、流元素 (flow element)、短语元素(phrasing element)</p>
-<p>a) 元数据元素(metadata element)</p>
-<p>构建 HTML 文档的基本结构，向浏览器提高文档信息；<br>b) 流元素 (flow element)</p>
-<p>规定这些元素可以成为父元素；<br>是短语元素的超级；<br>短语元素都是流元素；<br>但是，流元素并不一定是短语元素；<br>c) 短语元素(phrasing element)</p>
-<p>和流元素呼应，规定这些元素可以成为子元素<br>d) 无法归入上述三种类型的元素；</p>
-<p>例如： <li></li>元素，只能用在非常有限的情况，只能有三种父元素；</p>
-<ul></ul>无序列表，<ol></ol>有序列表，<menu></menu>菜单；
-
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title></title>
-    <link rel="stylesheet" href="css/index.css" />
-  </head>
-  <body>
-    <div class="container">
-      <ul>
-        <li>I like<a href="/apple.html">apples</a> and oranges</li>
-        <li>Today was warm and sunny.</li>
-        <li>I would like go fishing;</li>
-      </ul>
-    </div>
-  </body>
-</html>
-6.8 使用 HTML 实体
-HTML 的实体(entity):
-
-<p>表四： 特殊字符<br>字符 实体名称 实体编码<br>‘ ‘<br>&lt; &lt; &lt;</p>
-<pre><code>    &gt;</code></pre>
-<p>&amp; &amp; &amp;<br>“ “ “<br>‘ ‘ ‘<br>€ € €<br>£ £ £<br>¥ ¥ ¥<br>© © ©<br>® ® ®<br>™ ™ ™<br>× × ×<br>÷ ÷ ÷<br>6.9 HTML5 全局属性<br>全局属性： global attribute；</p>
-<p>局部属性：local attribute；</p>
-<p>表五： HTML5 全局属性<br>属性() 元素(element) 说明(description)<br>style 短语元素 css 行内属性<br>lang 短语元素 说明元素内容使用的语言<br>id 短语元素 css id<br>class 短语元素 css 类<br>accesskey input 设定一个或几个页面元素的快捷键<br>dir 短语元素 规定了文字的方向<br>contenteditable 短语元素 规定内容是可编辑的<br>draggable 短语元素 规定了元素可以拖放<br>dropzone 短语元素 与 draggable 配套<br>hidden 短语元素 隐藏元素<br>spellcheck 短语元素 是否对元素内容做拼写检查<br>tabindex 短语元素 键盘 Tab 在 HTML 页面元素之间切换<br>title 短语元素 提供元素的额外信息<br>example1: accesskey</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for accesskey</title>
-  </head>
-  <body>
-    <form action="http://localhost:5000/user">
-      <label for="username">用户名</label>
-      <!-- Alt + n -->
-      <input type="text" name="username" id="username" accesskey="n" /><br />
-      <label for="password">密码</label>
-      <!-- Alt + p -->
-      <input type="text" name="password" id="password" accesskey="p" /><br />
-      <label for="confirm">确认</label>
-      <!-- Alt + c -->
-      <input type="text" name="confirm" id="confirm" accesskey="c" /><br />
-      <!-- Alt + s -->
-      <input type="submit" value="Login" accesskey="s" />
-    </form>
-  </body>
-</html>
-example2: class
-
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for class</title>
-    <style>
-      .apress {
-        padding: 5px;
-        margin: 2px;
-        color: white;
-        background: #aaa;
-      }
-      .apple {
-        font-size: x-large;
-        display: block;
-        margin-top: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <a target="_blank" rel="noopener" href="https://apress.com" class="apress">Apress web site</a>
-    <a target="_blank" rel="noopener" href="https://apple.com" class="apple add">Apple web site</a>
-    <script>
-      let add = document.querySelector('.add')
-      add.style.border = 'thin solid black'
-      add.style.background = 'red'
-      add.style.color = 'white'
-    </script>
-  </body>
-</html>
-example 3: contenteditable 属性
-
-<p>文本可编辑</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for contenteditable</title>
-  </head>
-  <body>
-    <p contenteditable="true">It is raining right now.</p>
-  </body>
-</html>
-example 4: dir 属性
-
-<p>规定了文字的方向： ltr 或者 rtl</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for dir</title>
-  </head>
-  <body>
-    <p dir="ltr">This is left-to-right</p>
-    <p dir="rtl">This is right-to-left</p>
-  </body>
-</html>
-example 5: draggable and dropzone 属性
-
-<p>详见拖放</p>
-<p>example 6: lang 属性</p>
-<p>说明元素内容使用的语言</p>
-<p lang="en">Hello -Tomas How are you?</p>
-
-<p>example 7: spellcheck 属性</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for dir</title>
-  </head>
-  <body>
-    <textarea spellcheck="true" cols="50px" rows="10px">
-This is some mispelled text</textarea
-    >
-  </body>
-</html>
-example 8: tabindex 属性
-
-<p>按下 Tab 键时，按数字的从小到大一次选取元素内容</p>
-<p>数值为负值时，不被选中</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for tabindex</title>
-  </head>
-  <body>
-    <form action="http://localhost:5000/user">
-      <label for="username">用户名</label>
-      <!-- Tab -->
-      <input type="text" name="username" id="username" tabindex="2" /><br />
-      <label for="password">密码</label>
-      <!-- Tab -->
-      <input type="text" name="password" id="password" tabindex="1" /><br />
-      <label for="confirm">确认</label>
-      <!-- Tab 不被选中-->
-      <input type="text" name="confirm" id="confirm" tabindex="-1" /><br />
-      <input type="submit" value="Login" />
-    </form>
-  </body>
-</html>
-example 9: title 属性
-
-<p>提供元素的额外信息： 鼠标悬停时，显示工具提示</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for title</title>
-  </head>
-  <body>
-    <a target="_blank" rel="noopener" href="https://apress.com" title="Apress Publishing"
-      >Visit the apress site
-    </a>
-  </body>
-</html>
-6.10 新的 DOCTYPE 和字符集
-DOCYTYPE
-
-<p>浏览器的显示模式有多种：</p>
-<p>Strandards: 标准模式<br>DOCTYPE 会告诉浏览器采用：Standards 模式显示<br>1</p>
-<!DOCTYPE html>
-
-<p>字符集</p>
-<p>字符集也简化很多了</p>
-<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a href="">[一、HTML 初探]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://full-stoke.github.io/1970/01/01/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/4.%20%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/" data-id="ckgszq9cb0007frsh39v18w40" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -1065,7 +1029,7 @@ DOCYTYPE
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">22</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">22</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -1075,7 +1039,7 @@ DOCYTYPE
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">86</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">88</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
