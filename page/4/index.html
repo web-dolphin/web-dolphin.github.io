@@ -249,11 +249,54 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>6.9 HTML5 全局属性<br>全局属性： global attribute；</p>
-<p>局部属性：local attribute；</p>
-<p>表五： HTML5 全局属性<br>属性() 元素(element) 说明(description)<br>style 短语元素 css 行内属性<br>lang 短语元素 说明元素内容使用的语言<br>id 短语元素 css id<br>class 短语元素 css 类<br>accesskey input 设定一个或几个页面元素的快捷键<br>dir 短语元素 规定了文字的方向<br>contenteditable 短语元素 规定内容是可编辑的<br>draggable 短语元素 规定了元素可以拖放<br>dropzone 短语元素 与 draggable 配套<br>hidden 短语元素 隐藏元素<br>spellcheck 短语元素 是否对元素内容做拼写检查<br>tabindex 短语元素 键盘 Tab 在 HTML 页面元素之间切换<br>title 短语元素 提供元素的额外信息<br>example1: accesskey</p>
-<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%B8%80%E3%80%81HTML%20%E5%88%9D%E6%8E%A2/">[一、HTML 初探]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+        <h4 id="1-全局属性：-global-attribute；"><a href="#1-全局属性：-global-attribute；" class="headerlink" title="1.全局属性： global attribute；"></a>1.全局属性： global attribute；</h4><ul>
+<li><p>style：css 行内样式属性,短语元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;width:800px;height:30px;background:green&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://baidu.com&quot;</span>&gt;</span>Baidu<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>lang： 说明元素内容使用的语言,短语元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">&quot;stylus&quot;</span>&gt;</span></span><br><span class="line"><span class="css">  <span class="selector-id">#app</span> &#123;</span></span><br><span class="line">    width: 800px;</span><br><span class="line">    height: 30px;</span><br><span class="line">    background: green;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>Hello -Tomas How are you?<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>id： css 样式 id，同一个页面只有一个 id,短语元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">dir</span>=<span class="string">&quot;rtl&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://baidu.com&quot;</span>&gt;</span>Baidu<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>class： css 类样式,短语元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo for class<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-class">.apress</span> &#123;</span></span><br><span class="line">        padding: 5px;</span><br><span class="line">        margin: 2px;</span><br><span class="line">        color: white;</span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-id">#aaa</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.apple</span> &#123;</span></span><br><span class="line">        font-size: x-large;</span><br><span class="line">        display: block;</span><br><span class="line">        margin-top: 20px;</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://apress.com&quot;</span> <span class="attr">class</span>=<span class="string">&quot;apress&quot;</span>&gt;</span>Apress web site<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://apple.com&quot;</span> <span class="attr">class</span>=<span class="string">&quot;apple add&quot;</span>&gt;</span>Apple web site<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> add = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.add&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      add.style.border = <span class="string">&#x27;thin solid black&#x27;</span></span></span><br><span class="line"><span class="javascript">      add.style.background = <span class="string">&#x27;red&#x27;</span></span></span><br><span class="line"><span class="javascript">      add.style.color = <span class="string">&#x27;white&#x27;</span></span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>accesskey： input 设定一个或几个页面元素的快捷键,短语元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo for accesskey<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;http://localhost:5000/user&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;username&quot;</span>&gt;</span>用户名<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- Alt + n --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span> <span class="attr">accesskey</span>=<span class="string">&quot;n&quot;</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;password&quot;</span>&gt;</span>密码<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- Alt + p --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">id</span>=<span class="string">&quot;password&quot;</span> <span class="attr">accesskey</span>=<span class="string">&quot;p&quot;</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;confirm&quot;</span>&gt;</span>确认<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- Alt + c --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;confirm&quot;</span> <span class="attr">id</span>=<span class="string">&quot;confirm&quot;</span> <span class="attr">accesskey</span>=<span class="string">&quot;c&quot;</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- Alt + s --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Login&quot;</span> <span class="attr">accesskey</span>=<span class="string">&quot;s&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>dir：规定元素了文字的方向,短语元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo for dir<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">dir</span>=<span class="string">&quot;ltr&quot;</span>&gt;</span>This is left-to-right<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">dir</span>=<span class="string">&quot;rtl&quot;</span>&gt;</span>This is right-to-left<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>contenteditable：规定元素内容是可编辑,短语元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo for contenteditable<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">contenteditable</span>=<span class="string">&quot;true&quot;</span>&gt;</span>It is raining right now.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>draggable： 短语元素 规定了元素可以拖放,短语元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">draggable</span>&gt;</span>落霞与孤鹜齐飞 秋水共长天一色<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;imgs/timg.jpg&quot;</span> <span class="attr">draggle</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>dropzone 短语元素 与 draggable 配套,短语元素</p>
+<p><a href="">[详见拖放]</a></p>
+</li>
+<li><p>hidden 短语元素 隐藏元素,短语元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">hidden</span>&gt;</span>落霞与孤鹜齐飞 秋水共长天一色<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>落霞与孤鹜齐飞 秋水共长天一色<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>spellcheck 短语元素 是否对元素内容做拼写检查,短语元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo for dir<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">spellcheck</span>=<span class="string">&quot;true&quot;</span> <span class="attr">cols</span>=<span class="string">&quot;50px&quot;</span> <span class="attr">rows</span>=<span class="string">&quot;10px&quot;</span>&gt;</span></span><br><span class="line">    This is some mispelled text<span class="tag">&lt;/<span class="name">textarea</span></span></span><br><span class="line"><span class="tag">    &gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>tabindex: 短语元素 键盘 Tab 在 HTML 页面元素之间切换</p>
+<ul>
+<li>按下 Tab 键时，按数字的从小到大一次选取元素内容</li>
+<li>数值为负值时，不被选中</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo for tabindex<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;http://localhost:5000/user&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;username&quot;</span>&gt;</span>用户名<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- Tab --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span> <span class="attr">tabindex</span>=<span class="string">&quot;2&quot;</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;password&quot;</span>&gt;</span>密码<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- Tab --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">id</span>=<span class="string">&quot;password&quot;</span> <span class="attr">tabindex</span>=<span class="string">&quot;1&quot;</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;confirm&quot;</span>&gt;</span>确认<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- Tab 不被选中--&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;confirm&quot;</span> <span class="attr">id</span>=<span class="string">&quot;confirm&quot;</span> <span class="attr">tabindex</span>=<span class="string">&quot;-1&quot;</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Login&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>title 短语元素 提供元素的额外信息</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo for title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://apress.com&quot;</span> <span class="attr">title</span>=<span class="string">&quot;Apress Publishing&quot;</span></span></span><br><span class="line"><span class="tag">      &gt;</span>Visit the apress site</span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%B8%80%E3%80%81HTML%20%E5%88%9D%E6%8E%A2/">[一、HTML 初探]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
@@ -451,11 +494,15 @@
 <h4 id="2-常用元素"><a href="#2-常用元素" class="headerlink" title="2.常用元素"></a>2.常用元素</h4><ol>
 <li><p>空元素</p>
 <p>没有内容的元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I like</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">apples and oranges</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>自闭合元素</p>
 <p>对于空元素，可以用一个标签代替，以简洁标签，称为自闭合标签；</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I like</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> /&gt;</span></span><br><span class="line">apples and oranges</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>虚元素：void element</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">I like apples and oranges</span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line">Today was warm and sunny <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">I would like go fishing;</span><br></pre></td></tr></table></figure>
+
 <p>表二： HTML 常用元素</p>
 <table>
 <thead>
@@ -661,210 +708,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>6.6 元素属性(attribute)<br>一个元素可以有多个属性</p>
-<p>I like apples and oranges<br>使用布尔属性</p>
-<p>Enter your name <input disabled /><br>自定义属性</p>
-<p>Enter your name<br><input disabled="true" data-creator="adam" data-purpose="collection" /><br>6.7 创建 HTML 文档<br>元数据标签： 向浏览器提供文档的相关信息；</p>
-<p>父元素、子元素、后代元素、兄弟元素</p>
-<p>元素分类：元数据元素(metadata element)、流元素 (flow element)、短语元素(phrasing element)</p>
-<p>a) 元数据元素(metadata element)</p>
-<p>构建 HTML 文档的基本结构，向浏览器提高文档信息；<br>b) 流元素 (flow element)</p>
-<p>规定这些元素可以成为父元素；<br>是短语元素的超级；<br>短语元素都是流元素；<br>但是，流元素并不一定是短语元素；<br>c) 短语元素(phrasing element)</p>
-<p>和流元素呼应，规定这些元素可以成为子元素<br>d) 无法归入上述三种类型的元素；</p>
-<p>例如： <li></li>元素，只能用在非常有限的情况，只能有三种父元素；</p>
-<ul></ul>无序列表，<ol></ol>有序列表，<menu></menu>菜单；
+        <h4 id="1-元素属性-attribute"><a href="#1-元素属性-attribute" class="headerlink" title="1.元素属性(attribute)"></a>1.元素属性(attribute)</h4><ol>
+<li><p>一个元素可以有多个属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">I like <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;link&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/apple.html&quot;</span> <span class="attr">id</span>=<span class="string">&quot;firstlink&quot;</span>&gt;</span>apples<span class="tag">&lt;/<span class="name">a</span>&gt;</span> and</span><br><span class="line">oranges</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用布尔属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter your name <span class="tag">&lt;<span class="name">input</span> <span class="attr">disabled</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自定义属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter your name</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">disabled</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-creator</span>=<span class="string">&quot;adam&quot;</span> <span class="attr">data-purpose</span>=<span class="string">&quot;collection&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title></title>
-    <link rel="stylesheet" href="css/index.css" />
-  </head>
-  <body>
-    <div class="container">
-      <ul>
-        <li>I like<a href="/apple.html">apples</a> and oranges</li>
-        <li>Today was warm and sunny.</li>
-        <li>I would like go fishing;</li>
-      </ul>
-    </div>
-  </body>
-</html>
-6.8 使用 HTML 实体
-HTML 的实体(entity):
-
-<p>表四： 特殊字符<br>字符 实体名称 实体编码<br>‘ ‘<br>&lt; &lt; &lt;</p>
-<pre><code>    &gt;</code></pre>
-<p>&amp; &amp; &amp;<br>“ “ “<br>‘ ‘ ‘<br>€ € €<br>£ £ £<br>¥ ¥ ¥<br>© © ©<br>® ® ®<br>™ ™ ™<br>× × ×<br>÷ ÷ ÷</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for accesskey</title>
-  </head>
-  <body>
-    <form action="http://localhost:5000/user">
-      <label for="username">用户名</label>
-      <!-- Alt + n -->
-      <input type="text" name="username" id="username" accesskey="n" /><br />
-      <label for="password">密码</label>
-      <!-- Alt + p -->
-      <input type="text" name="password" id="password" accesskey="p" /><br />
-      <label for="confirm">确认</label>
-      <!-- Alt + c -->
-      <input type="text" name="confirm" id="confirm" accesskey="c" /><br />
-      <!-- Alt + s -->
-      <input type="submit" value="Login" accesskey="s" />
-    </form>
-  </body>
-</html>
-example2: class
-
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for class</title>
-    <style>
-      .apress {
-        padding: 5px;
-        margin: 2px;
-        color: white;
-        background: #aaa;
-      }
-      .apple {
-        font-size: x-large;
-        display: block;
-        margin-top: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <a target="_blank" rel="noopener" href="https://apress.com" class="apress">Apress web site</a>
-    <a target="_blank" rel="noopener" href="https://apple.com" class="apple add">Apple web site</a>
-    <script>
-      let add = document.querySelector('.add')
-      add.style.border = 'thin solid black'
-      add.style.background = 'red'
-      add.style.color = 'white'
-    </script>
-  </body>
-</html>
-example 3: contenteditable 属性
-
-<p>文本可编辑</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for contenteditable</title>
-  </head>
-  <body>
-    <p contenteditable="true">It is raining right now.</p>
-  </body>
-</html>
-example 4: dir 属性
-
-<p>规定了文字的方向： ltr 或者 rtl</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for dir</title>
-  </head>
-  <body>
-    <p dir="ltr">This is left-to-right</p>
-    <p dir="rtl">This is right-to-left</p>
-  </body>
-</html>
-example 5: draggable and dropzone 属性
-
-<p>详见拖放</p>
-<p>example 6: lang 属性</p>
-<p>说明元素内容使用的语言</p>
-<p lang="en">Hello -Tomas How are you?</p>
-
-<p>example 7: spellcheck 属性</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for dir</title>
-  </head>
-  <body>
-    <textarea spellcheck="true" cols="50px" rows="10px">
-This is some mispelled text</textarea
-    >
-  </body>
-</html>
-example 8: tabindex 属性
-
-<p>按下 Tab 键时，按数字的从小到大一次选取元素内容</p>
-<p>数值为负值时，不被选中</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for tabindex</title>
-  </head>
-  <body>
-    <form action="http://localhost:5000/user">
-      <label for="username">用户名</label>
-      <!-- Tab -->
-      <input type="text" name="username" id="username" tabindex="2" /><br />
-      <label for="password">密码</label>
-      <!-- Tab -->
-      <input type="text" name="password" id="password" tabindex="1" /><br />
-      <label for="confirm">确认</label>
-      <!-- Tab 不被选中-->
-      <input type="text" name="confirm" id="confirm" tabindex="-1" /><br />
-      <input type="submit" value="Login" />
-    </form>
-  </body>
-</html>
-example 9: title 属性
-
-<p>提供元素的额外信息： 鼠标悬停时，显示工具提示</p>
-<!DOCTYPE html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Demo for title</title>
-  </head>
-  <body>
-    <a target="_blank" rel="noopener" href="https://apress.com" title="Apress Publishing"
-      >Visit the apress site
-    </a>
-  </body>
-</html>
-6.10 新的 DOCTYPE 和字符集
-DOCYTYPE
-
-<p>浏览器的显示模式有多种：</p>
-<p>Strandards: 标准模式<br>DOCTYPE 会告诉浏览器采用：Standards 模式显示<br>1</p>
-<!DOCTYPE html>
-
-<p>字符集</p>
-<p>字符集也简化很多了</p>
-<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%B8%80%E3%80%81HTML%20%E5%88%9D%E6%8E%A2/">[一、HTML 初探]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+</li>
+</ol>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%B8%80%E3%80%81HTML%20%E5%88%9D%E6%8E%A2/">[一、HTML 初探]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
@@ -907,18 +764,382 @@ DOCYTYPE
 <li>HTML5 定义的许多元素 HTML4 中也存在，但是，元素的含义已经发生了很大的变化，或者，其使用方式已经不同；</li>
 <li>HTML5 本身还新增了许多新的元素；</li>
 </ul>
-<h4 id="2-HTML5-新增功能"><a href="#2-HTML5-新增功能" class="headerlink" title="2.HTML5 新增功能"></a>2.HTML5 新增功能</h4><ul>
-<li><p>HTML5 规范新增了以下内容：</p>
-<p>Canvas： 2D 和 3D<br>Cross-Document<br>Geolocation<br>Audio and Video<br>Forms<br>MathML<br>Microdata<br>File System API<br>Server-Sent Events<br>Scalable Vector Graphics(SVG)<br>WebSocket API<br>Web Workers API<br>Web RTC API<br>Web Origin Concept<br>Web Storage<br>XMLHttpRequest Level 2<br>Web 离线缓存应用<br>拖放<br>顾名思义， HTML 是一种标记语言，以其标记为文档内容的元素文档的结构；</p>
-</li>
-</ul>
-<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%B8%80%E3%80%81HTML%20%E5%88%9D%E6%8E%A2/">[一、HTML 初探]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+<h4 id="2-HTML5-新增功能"><a href="#2-HTML5-新增功能" class="headerlink" title="2.HTML5 新增功能"></a>2.HTML5 新增功能</h4><ol>
+<li>Canvas</li>
+</ol>
+<p><a href="">[Canvas： 2D 和 3D]</a></p>
+<p><a href="">[Cross-Document]</a></p>
+<p><a href="">[Geolocation]</a><br>Audio and Video<br>Forms<br>MathML<br>Microdata<br>File System API<br>Server-Sent Events<br>Scalable Vector Graphics(SVG)<br>WebSocket API<br>Web Workers API<br>Web RTC API<br>Web Origin Concept<br>Web Storage<br>XMLHttpRequest Level 2<br>Web 离线缓存应用<br>拖放</p>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%B8%80%E3%80%81HTML%20%E5%88%9D%E6%8E%A2/">[一、HTML 初探]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
       <a data-url="https://full-stoke.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/3.HTML5%20%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9/" data-id="ckgszq9cc0008frsh7zhg0d10" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/一、HTML初探/6. HTML 实体" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/6.%20HTML%20%E5%AE%9E%E4%BD%93/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/6.%20HTML%20%E5%AE%9E%E4%BD%93/">6.HTML实体</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>表一： HTML 实体</p>
+<table>
+<thead>
+<tr>
+<th align="center">字符</th>
+<th align="center">实体名称</th>
+<th align="center">实体编码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">‘ ‘</td>
+<td align="center">&amp;nbsp</td>
+<td align="center">&amp;#160</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">&lt;</td>
+<td align="center">&lt;</td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="center">&gt;</td>
+<td align="center">&gt;</td>
+</tr>
+<tr>
+<td align="center">&amp;</td>
+<td align="center">&amp;</td>
+<td align="center">&amp;</td>
+</tr>
+<tr>
+<td align="center">“</td>
+<td align="center">“</td>
+<td align="center">“</td>
+</tr>
+<tr>
+<td align="center">‘</td>
+<td align="center">‘</td>
+<td align="center">‘</td>
+</tr>
+<tr>
+<td align="center">€</td>
+<td align="center">€</td>
+<td align="center">€</td>
+</tr>
+<tr>
+<td align="center">£</td>
+<td align="center">£</td>
+<td align="center">£</td>
+</tr>
+<tr>
+<td align="center">¥</td>
+<td align="center">¥</td>
+<td align="center">¥</td>
+</tr>
+<tr>
+<td align="center">©</td>
+<td align="center">©</td>
+<td align="center">©</td>
+</tr>
+<tr>
+<td align="center">®</td>
+<td align="center">®</td>
+<td align="center">®</td>
+</tr>
+<tr>
+<td align="center">™</td>
+<td align="center">™</td>
+<td align="center">™</td>
+</tr>
+<tr>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="center">÷</td>
+<td align="center">÷</td>
+<td align="center">÷</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%B8%80%E3%80%81HTML%20%E5%88%9D%E6%8E%A2/">[一、HTML 初探]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://full-stoke.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/6.%20HTML%20%E5%AE%9E%E4%BD%93/" data-id="ckgtcrz7q00006mshfez6beil" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、CSS 初探/1. 定义和应用样式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/1.%20%E5%AE%9A%E4%B9%89%E5%92%8C%E5%BA%94%E7%94%A8%E6%A0%B7%E5%BC%8F/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/1.%20%E5%AE%9A%E4%B9%89%E5%92%8C%E5%BA%94%E7%94%A8%E6%A0%B7%E5%BC%8F/">定义和应用样式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a href="">[二、CSS 初探]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://full-stoke.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/1.%20%E5%AE%9A%E4%B9%89%E5%92%8C%E5%BA%94%E7%94%A8%E6%A0%B7%E5%BC%8F/" data-id="ckgtcrz7s00016mshgm1s23ut" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、CSS 初探/2. 样式的层叠和继承" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.%20%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%B1%82%E5%8F%A0%E5%92%8C%E7%BB%A7%E6%89%BF/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.%20%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%B1%82%E5%8F%A0%E5%92%8C%E7%BB%A7%E6%89%BF/">样式的层叠和继承</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a href="">[二、CSS 初探]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://full-stoke.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.%20%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%B1%82%E5%8F%A0%E5%92%8C%E7%BB%A7%E6%89%BF/" data-id="ckgtcrz7t00036msh19loar2g" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、CSS 初探/3. CSS 中的颜色" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/3.%20CSS%20%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/3.%20CSS%20%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2/">3. CSS 中的颜色</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a href="">[3. CSS 中的颜色]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://full-stoke.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/3.%20CSS%20%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2/" data-id="ckgtcrz7u00056msh4e2n3pka" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、CSS 初探/4. CSS 中的长度" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/4.%20CSS%20%E4%B8%AD%E7%9A%84%E9%95%BF%E5%BA%A6/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/4.%20CSS%20%E4%B8%AD%E7%9A%84%E9%95%BF%E5%BA%A6/">4. CSS 中的长度</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a href="">[二、CSS 初探]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://full-stoke.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/4.%20CSS%20%E4%B8%AD%E7%9A%84%E9%95%BF%E5%BA%A6/" data-id="ckgtcrz7x00076msh7xcj0jr5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、CSS 初探/5. 其他 CSS 单位" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/5.%20%E5%85%B6%E4%BB%96%20CSS%20%E5%8D%95%E4%BD%8D/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/5.%20%E5%85%B6%E4%BB%96%20CSS%20%E5%8D%95%E4%BD%8D/">5. 其他 CSS 单位</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a href="">[二、CSS 初探]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://full-stoke.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/5.%20%E5%85%B6%E4%BB%96%20CSS%20%E5%8D%95%E4%BD%8D/" data-id="ckgtcrz7z000a6mshaxujfj3d" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、CSS 初探/6. 测试 CSS 特性的支持情况" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/6.%20%E6%B5%8B%E8%AF%95%20CSS%20%E7%89%B9%E6%80%A7%E7%9A%84%E6%94%AF%E6%8C%81%E6%83%85%E5%86%B5/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/6.%20%E6%B5%8B%E8%AF%95%20CSS%20%E7%89%B9%E6%80%A7%E7%9A%84%E6%94%AF%E6%8C%81%E6%83%85%E5%86%B5/">6. 测试 CSS 特性的支持情况</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a href="">[二、CSS 初探]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://full-stoke.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/6.%20%E6%B5%8B%E8%AF%95%20CSS%20%E7%89%B9%E6%80%A7%E7%9A%84%E6%94%AF%E6%8C%81%E6%83%85%E5%86%B5/" data-id="ckgtcrz80000b6mshck4p974q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -1401,476 +1622,6 @@ DOCYTYPE
 
 
   
-    <article id="post-Node/Npm/NPM包管理器" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Node/">Node</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">NPM包管理器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Windows-安装与配置-Node"><a href="#1-Windows-安装与配置-Node" class="headerlink" title="1. Windows 安装与配置 Node"></a>1. Windows 安装与配置 Node</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/">[1.Windows 安装与配置 Node]</a></p>
-<h4 id="2-Windows-安装与配置-Nvm"><a href="#2-Windows-安装与配置-Nvm" class="headerlink" title="2. Windows 安装与配置 Nvm"></a>2. Windows 安装与配置 Nvm</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/">[2.Windows 安装与配置 Nvm]</a></p>
-<h4 id="3-Ubuntu-安装与配置-Node"><a href="#3-Ubuntu-安装与配置-Node" class="headerlink" title="3. Ubuntu 安装与配置 Node"></a>3. Ubuntu 安装与配置 Node</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/">[1.Ubuntu 安装与配置 Node]</a></p>
-<h4 id="4-Ubuntu-安装与配置-Nvm"><a href="#4-Ubuntu-安装与配置-Nvm" class="headerlink" title="4. Ubuntu 安装与配置 Nvm"></a>4. Ubuntu 安装与配置 Nvm</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/">[2.Ubuntu 安装与配置 Nvm]</a></p>
-<h4 id="5-NPM-镜像源配置"><a href="#5-NPM-镜像源配置" class="headerlink" title="5. NPM 镜像源配置"></a>5. NPM 镜像源配置</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">[3.NPM 镜像源配置]</a></p>
-<h4 id="6-参考文档"><a href="#6-参考文档" class="headerlink" title="6. 参考文档"></a>6. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Tutorial/Node%E6%95%99%E7%A8%8B/">[Node 教程]</a></p>
-<h4 id="7-联系方式"><a href="#7-联系方式" class="headerlink" title="7. 联系方式"></a>7. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://full-stoke.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/" data-id="ckgr4xrwc0003agshcg083avu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Npm/NPM镜像源配置" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">3.NPM镜像源配置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-单次使用"><a href="#1-单次使用" class="headerlink" title="1. 单次使用"></a>1. 单次使用</h4><ul>
-<li><p>command line 配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-永久使用"><a href="#2-永久使用" class="headerlink" title="2. 永久使用"></a>2. 永久使用</h4><ol>
-<li><p>设置成全局下载镜像站点，每次安装软件默认从淘宝镜像下载：</p>
-</li>
-<li><p>方法一</p>
-</li>
-</ol>
-<ul>
-<li><p>打开.npmrc 文件： <code>nodejs\node_modules\npm\npmrc</code></p>
-</li>
-<li><p>没有的话可以使用 git 命令行新建：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .npmrc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>增加一行: <code>registry =https://registry.npm.taobao.org</code> 即可；</p>
-</li>
-</ul>
-<ol start="3">
-<li>方法二</li>
-</ol>
-<ul>
-<li><p>命令行设置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry    // 或</span><br><span class="line">npm info express    //输出：https://registry.npm.taobao.org/  ok</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://full-stoke.github.io/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/" data-id="ckgr4xrwd0004agsh00ma742i" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tutorial/Node教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Tutorial/Node%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Node/">Node</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tutorial/Node%E6%95%99%E7%A8%8B/">Node教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-Node-安装"><a href="#1-Node-安装" class="headerlink" title="1. Node 安装"></a>1. Node 安装</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://full-stoke.github.io/2020/10/24/Node/Tutorial/Node%E6%95%99%E7%A8%8B/" data-id="ckgr4xrwf0006agsh7w10h3qn" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Linux/Linux/Ubuntu教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Linux/Linux/Ubuntu%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Ubuntu/">Ubuntu</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Linux/Linux/Ubuntu%E6%95%99%E7%A8%8B/">1.Ubuntu教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Ubuntu-系统及应用软件安装与配置"><a href="#1-Ubuntu-系统及应用软件安装与配置" class="headerlink" title="1.Ubuntu 系统及应用软件安装与配置"></a>1.Ubuntu 系统及应用软件安装与配置</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Linux/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://full-stoke.github.io/2020/10/24/Linux/Linux/Ubuntu%E6%95%99%E7%A8%8B/" data-id="ckgraldsz0000qosh43dbep7i" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Linux/Linux/Ubuntu系统及应用软件安装与配置" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Linux/Linux/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Ubuntu/">Ubuntu</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Linux/Linux/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">2.Ubuntu系统及应用软件安装与配置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Ubuntu20-04-安装与配置-Node"><a href="#1-Ubuntu20-04-安装与配置-Node" class="headerlink" title="1.Ubuntu20.04 安装与配置 Node"></a>1.Ubuntu20.04 安装与配置 Node</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/">[1.Ubuntu20.04 安装与配置 Node]</a></p>
-<h4 id="2-Ubuntu20-04-tar-xz-包方式安装-Node"><a href="#2-Ubuntu20-04-tar-xz-包方式安装-Node" class="headerlink" title="2.Ubuntu20.04 tar.xz 包方式安装 Node"></a>2.Ubuntu20.04 tar.xz 包方式安装 Node</h4><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/50fb7228238b">[3.Ubuntu20.04 tar.xz 包方式安装 Node]</a></p>
-<h4 id="3-Ubuntu20-04-安装与配置-Nvm"><a href="#3-Ubuntu20-04-安装与配置-Nvm" class="headerlink" title="3.Ubuntu20.04 安装与配置 Nvm"></a>3.Ubuntu20.04 安装与配置 Nvm</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/">[2.Ubuntu20.04 安装与配置 Nvm]</a></p>
-<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4. 参考文档"></a>4. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Linux/Ubuntu%E6%95%99%E7%A8%8B/">[1.Ubuntu 教程]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://full-stoke.github.io/2020/10/24/Linux/Linux/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" data-id="ckgraldt70001qosh7i869d6f" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/VS Code Compile Hero Plugin" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/VS%20Code%20Compile%20Hero%20Plugin/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/VS%20Code%20Compile%20Hero%20Plugin/">VS Code Compile Hero Plugin</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-VS-Code-必备插件"><a href="#1-VS-Code-必备插件" class="headerlink" title="1. VS Code 必备插件"></a>1. VS Code 必备插件</h4><ul>
-<li>自动编译：less, sass, scss, typescript, jade, pug and jsx.</li>
-</ul>
-<h4 id="2-安装插件：略"><a href="#2-安装插件：略" class="headerlink" title="2. 安装插件：略"></a>2. 安装插件：略</h4><p><img src="https://s1.ax1x.com/2020/10/24/BVAHtx.png" alt="Compile Hero"></p>
-<ul>
-<li>编辑器右下角底部栏开关 Compile Hero 设置为: On</li>
-</ul>
-<h4 id="3-配置-Settings-json"><a href="#3-配置-Settings-json" class="headerlink" title="3. 配置 Settings.json"></a>3. 配置 Settings.json</h4><ul>
-<li><p>配置输出目录： <code>assert/js/</code></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&quot;compile-hero&quot;: &#123;</span><br><span class="line">  &quot;disable-compile-files-on-did-save-code&quot;: false,</span><br><span class="line">  &quot;notification-toggle&quot;: false,</span><br><span class="line">  &quot;javascript-output-directory&quot;: &quot;../assert/js/&quot;,</span><br><span class="line">  &quot;typescript-output-directory&quot;: &quot;../assert/js/&quot;,</span><br><span class="line">  &quot;javascript-output-toggle&quot;: false,</span><br><span class="line">  &quot;sass-output-directory&quot;: &quot;../assert/css/&quot;,</span><br><span class="line">  &quot;less-output-directory&quot;: &quot;../assert/css/&quot;,</span><br><span class="line">  &quot;sass-output-toggle&quot;: true,</span><br><span class="line">  &quot;ignore&quot;: [&quot;src/test.js&quot;, &quot;*/test.scss&quot;, &quot;**/spec/*&quot;, &quot;**/src/**/*&quot;,&quot;*/less/*&quot;],</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Settings 配置示意图<br><img src="https://s1.ax1x.com/2020/10/24/BVZQ6U.png" alt="Settings"></p>
-</li>
-</ul>
-<h4 id="4-使用"><a href="#4-使用" class="headerlink" title="4. 使用"></a>4. 使用</h4><ul>
-<li><p>按快捷键 (ctrl+s) 或者文件列表右键菜单选择 Compile File(s) 命令启动编译，将会在该文件的同级目录 assert/js 或者 assert/css 下生成编译后的文件，助你远离 webpack 和 gulp 等编译工具操作的繁琐；</p>
-</li>
-<li><p>按快捷键 (alt+shift+f) 或者文件列表右键菜单选择 Format Document 将会帮你自动格式化文件；</p>
-</li>
-<li><p>支持 less, scss, scss 等文件代码高亮；</p>
-</li>
-<li><p>支持在默认浏览器打开 html 文件；</p>
-</li>
-<li><p>支持压缩 javascript 和 css 文件</p>
-</li>
-<li><p>支持格式化 javascript, json, css, sass, 和 html 等文件；</p>
-</li>
-<li><p>可修改编译后目录和文件的输出位置: 文件列表点击插件 Setting =&gt;</p>
-<p><img src="https://s1.ax1x.com/2020/10/24/BVmwee.png" alt="Setting"></p>
-</li>
-</ul>
-<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a href="">[VS Code 安装、配置与使用]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://full-stoke.github.io/2020/10/23/VSCode/VS%20Code%20Compile%20Hero%20Plugin/" data-id="ckgoyeyz10004ahsh7mjignoe" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Hexo/Hexo创建博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/21/Hexo/Hexo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time datetime="2020-10-20T16:00:00.000Z" itemprop="datePublished">2020-10-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/21/Hexo/Hexo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/">Hexo创建博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-安装-hexo-脚手架"><a href="#1-安装-hexo-脚手架" class="headerlink" title="1. 安装 hexo 脚手架"></a>1. 安装 hexo 脚手架</h4><ul>
-<li><p>全局安装 Hexo: 开启 Git</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-初始化项目"><a href="#2-初始化项目" class="headerlink" title="2. 初始化项目"></a>2. 初始化项目</h4><ul>
-<li><p>初始化 hexo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> hexo_blog</span><br><span class="line">$ hexo init</span><br><span class="line">$ git init</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="3">
-<li>本地部署</li>
-</ol>
-<ul>
-<li><p>Hexo 本地部署并测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>localhost:4000</p>
-</li>
-</ul>
-<ol start="3">
-<li>安装插件</li>
-</ol>
-<ul>
-<li><p>安装 ：hexo-deployer-git</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="4">
-<li>生成静态文件</li>
-</ol>
-<ul>
-<li><p>生成目录和静态文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo -g       //简写</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="5">
-<li>创建 github 仓库</li>
-</ol>
-<ul>
-<li>username: full-stoke</li>
-<li>repository: full-stoke-github.io</li>
-</ul>
-<ol start="6">
-<li>修改配置文件</li>
-</ol>
-<ul>
-<li><p>_config.yml</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">repo:</span> <span class="string">git@github.com:full-stoke/full-stoke.github.io.git</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="7">
-<li>配置用户名和邮箱</li>
-</ol>
-<ul>
-<li><p>项目配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$git</span> config user.name <span class="string">&quot;full-stoke&quot;</span></span><br><span class="line"><span class="variable">$git</span> config user.email <span class="string">&quot;username@gmai.com&quot;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>全局配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$git</span> config --global user.name <span class="string">&quot;full-stoke&quot;</span></span><br><span class="line"><span class="variable">$git</span> config --global user.email <span class="string">&quot;username@gmai.com&quot;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="8">
-<li>创建和配置公钥</li>
-</ol>
-<ul>
-<li><p>创建 github 仓库：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/">[网址：]</a></li>
-<li>注册账号 ： &lt;用户名&gt;</li>
-<li>创建远程仓库： &lt;用户名&gt;github.io</li>
-</ul>
-</li>
-<li><p>本地仓库与 github 远程仓库关联时，需要在 github 配置公钥</p>
-</li>
-<li><p>创建 Github SSH key 密钥</p>
-</li>
-<li><p>创建一个 SSH key,在命令行（即 Git Bash）输入以下命令， 回车三下即可：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;username@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>生成：id_rsa(私钥) 和 id_rsa.pub(公钥),</p>
-</li>
-<li><p>打开公钥： id_rsa.pub</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure></li>
-<li><p>编辑器打开 id_rsa.pub</p>
-</li>
-<li><p>复制公钥黏贴到 Github： SSH Key</p>
-</li>
-<li><p>测试是否添加成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>提示符下： 返回<code>“You’ve successfully authenticated”</code>即成功</p>
-</li>
-</ul>
-<h4 id="3-部署"><a href="#3-部署" class="headerlink" title="3. 部署"></a>3. 部署</h4><ul>
-<li>deploy<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line">$ hexo clean</span><br><span class="line">$ hexo d -g <span class="comment">#生成并上传</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="4-故障处理"><a href="#4-故障处理" class="headerlink" title="4.故障处理"></a>4.故障处理</h4><ul>
-<li>故障处理<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean	<span class="comment">## 删除public目录，然后再来重新生成和发布</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="5-配置文件范本"><a href="#5-配置文件范本" class="headerlink" title="5.配置文件范本"></a>5.配置文件范本</h4><ol>
-<li><p>配置文件：<code>\_config.yml</code>说明</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">title: Hexo <span class="comment">#站点的标题</span></span><br><span class="line">subtitle: <span class="comment">#站点的副标题</span></span><br><span class="line">description: <span class="comment">#站点的描述，写一段话来介绍你的博客吧:)，主要为SEO使用</span></span><br><span class="line">author: John Doe <span class="comment">#显示的文章作者名字，例如我配置的是fourstring</span></span><br><span class="line">language: <span class="comment">#语言。简体中文是zh-Hans</span></span><br><span class="line">timezone: <span class="comment">#时区，可以不配置，默认以本地时区为准</span></span><br><span class="line">url: http://yoursite.com <span class="comment">#你的站点地址，如果是全站HTTPS记得写成https://domain.com</span></span><br><span class="line">root: / <span class="comment">#如果您的网站存放在子目录中，例如 http://yoursite.com/blog，则请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。（引用自官方文档）</span></span><br><span class="line">permalink: :year/:month/:day/:title/ <span class="comment">#固定链接格式。这项配置的格式为：变量1/变量2/变量3...，其中合法的变量格式为“:变量名”（注意，:是变量的组成部分！）这样生成的效果为/2016/08/10/文章标题。默认的固定链接格式存在一些问题，下文讲解</span></span><br><span class="line">per_page: 10 <span class="comment">#设置每页文章篇数，设为0可以关闭分页功能</span></span><br><span class="line">theme: <span class="comment">#使用的主题。下文讲解</span></span><br><span class="line"><span class="built_in">type</span>: git</span><br><span class="line"><span class="comment">#部署配置，其值是一个杂凑表，注意缩进，下文详细讲解</span></span><br><span class="line">deploy: git@github.com:&lt;用户名&gt;/&lt;用户名&gt;.github.io.git</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="6-参考文档"><a href="#6-参考文档" class="headerlink" title="6. 参考文档"></a>6. 参考文档</h4><ul>
-<li><a href="">[Blog]</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://full-stoke.github.io/2020/10/21/Hexo/Hexo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="ckgoyeyys0001ahsh057o35tb" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -1896,7 +1647,7 @@ DOCYTYPE
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">22</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">22</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -1906,7 +1657,7 @@ DOCYTYPE
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">88</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">95</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
