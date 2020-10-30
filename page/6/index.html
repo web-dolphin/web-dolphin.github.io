@@ -67,6 +67,248 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Hexo/Hexo创建博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/21/Hexo/Hexo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time datetime="2020-10-20T16:00:00.000Z" itemprop="datePublished">2020-10-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/21/Hexo/Hexo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/">Hexo创建博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-安装-hexo-脚手架"><a href="#1-安装-hexo-脚手架" class="headerlink" title="1. 安装 hexo 脚手架"></a>1. 安装 hexo 脚手架</h4><ul>
+<li><p>全局安装 Hexo: 开启 Git</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-初始化项目"><a href="#2-初始化项目" class="headerlink" title="2. 初始化项目"></a>2. 初始化项目</h4><ul>
+<li><p>初始化 hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> hexo_blog</span><br><span class="line">$ hexo init</span><br><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="3">
+<li>本地部署</li>
+</ol>
+<ul>
+<li><p>Hexo 本地部署并测试</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>localhost:4000</p>
+</li>
+</ul>
+<ol start="3">
+<li>安装插件</li>
+</ol>
+<ul>
+<li><p>安装 ：hexo-deployer-git</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="4">
+<li>生成静态文件</li>
+</ol>
+<ul>
+<li><p>生成目录和静态文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo -g       //简写</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="5">
+<li>创建 github 仓库</li>
+</ol>
+<ul>
+<li>username: full-stoke</li>
+<li>repository: full-stoke-github.io</li>
+</ul>
+<ol start="6">
+<li>修改配置文件</li>
+</ol>
+<ul>
+<li><p>_config.yml</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">repo:</span> <span class="string">git@github.com:full-stoke/full-stoke.github.io.git</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="7">
+<li>配置用户名和邮箱</li>
+</ol>
+<ul>
+<li><p>项目配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$git</span> config user.name <span class="string">&quot;full-stoke&quot;</span></span><br><span class="line"><span class="variable">$git</span> config user.email <span class="string">&quot;username@gmai.com&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>全局配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$git</span> config --global user.name <span class="string">&quot;full-stoke&quot;</span></span><br><span class="line"><span class="variable">$git</span> config --global user.email <span class="string">&quot;username@gmai.com&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="8">
+<li>创建和配置公钥</li>
+</ol>
+<ul>
+<li><p>创建 github 仓库：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/">[网址：]</a></li>
+<li>注册账号 ： &lt;用户名&gt;</li>
+<li>创建远程仓库： &lt;用户名&gt;github.io</li>
+</ul>
+</li>
+<li><p>本地仓库与 github 远程仓库关联时，需要在 github 配置公钥</p>
+</li>
+<li><p>创建 Github SSH key 密钥</p>
+</li>
+<li><p>创建一个 SSH key,在命令行（即 Git Bash）输入以下命令， 回车三下即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;username@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>生成：id_rsa(私钥) 和 id_rsa.pub(公钥),</p>
+</li>
+<li><p>打开公钥： id_rsa.pub</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure></li>
+<li><p>编辑器打开 id_rsa.pub</p>
+</li>
+<li><p>复制公钥黏贴到 Github： SSH Key</p>
+</li>
+<li><p>测试是否添加成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>提示符下： 返回<code>“You’ve successfully authenticated”</code>即成功</p>
+</li>
+</ul>
+<h4 id="3-部署"><a href="#3-部署" class="headerlink" title="3. 部署"></a>3. 部署</h4><ul>
+<li>deploy<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line">$ hexo clean</span><br><span class="line">$ hexo d -g <span class="comment">#生成并上传</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-故障处理"><a href="#4-故障处理" class="headerlink" title="4.故障处理"></a>4.故障处理</h4><ul>
+<li>故障处理<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean	<span class="comment">## 删除public目录，然后再来重新生成和发布</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-配置文件范本"><a href="#5-配置文件范本" class="headerlink" title="5.配置文件范本"></a>5.配置文件范本</h4><ol>
+<li><p>配置文件：<code>\_config.yml</code>说明</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">title: Hexo <span class="comment">#站点的标题</span></span><br><span class="line">subtitle: <span class="comment">#站点的副标题</span></span><br><span class="line">description: <span class="comment">#站点的描述，写一段话来介绍你的博客吧:)，主要为SEO使用</span></span><br><span class="line">author: John Doe <span class="comment">#显示的文章作者名字，例如我配置的是fourstring</span></span><br><span class="line">language: <span class="comment">#语言。简体中文是zh-Hans</span></span><br><span class="line">timezone: <span class="comment">#时区，可以不配置，默认以本地时区为准</span></span><br><span class="line">url: http://yoursite.com <span class="comment">#你的站点地址，如果是全站HTTPS记得写成https://domain.com</span></span><br><span class="line">root: / <span class="comment">#如果您的网站存放在子目录中，例如 http://yoursite.com/blog，则请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。（引用自官方文档）</span></span><br><span class="line">permalink: :year/:month/:day/:title/ <span class="comment">#固定链接格式。这项配置的格式为：变量1/变量2/变量3...，其中合法的变量格式为“:变量名”（注意，:是变量的组成部分！）这样生成的效果为/2016/08/10/文章标题。默认的固定链接格式存在一些问题，下文讲解</span></span><br><span class="line">per_page: 10 <span class="comment">#设置每页文章篇数，设为0可以关闭分页功能</span></span><br><span class="line">theme: <span class="comment">#使用的主题。下文讲解</span></span><br><span class="line"><span class="built_in">type</span>: git</span><br><span class="line"><span class="comment">#部署配置，其值是一个杂凑表，注意缩进，下文详细讲解</span></span><br><span class="line">deploy: git@github.com:&lt;用户名&gt;/&lt;用户名&gt;.github.io.git</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="6-参考文档"><a href="#6-参考文档" class="headerlink" title="6. 参考文档"></a>6. 参考文档</h4><ul>
+<li><a href="">[Blog]</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://full-stoke.github.io/2020/10/21/Hexo/Hexo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="ckgoyeyys0001ahsh057o35tb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/JavaScript Tags/十、Ajax技术/临时/Ajax基本技术原理案例之三" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%9F%BA%E6%9C%AC%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%89/" class="article-date">
+  <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%9F%BA%E6%9C%AC%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%89/">Ajax基本技术原理案例之三</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-项目创建"><a href="#1-项目创建" class="headerlink" title="1. 项目创建"></a>1. 项目创建</h4><ol>
+<li><p>创建目录： <code>ajax-base-master</code> / <code>public</code></p>
+</li>
+<li><p>初始化项目<code>root</code>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git install express</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建服务器： <code>server.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置静态资源： HTML、CSS、JS、Image</span></span><br><span class="line">app.use(express.static(path.join(__dirname, <span class="string">&#x27;public&#x27;</span>)))</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> port = process.env.NODE_ENV || <span class="number">3000</span></span><br><span class="line"></span><br><span class="line">app.listen(<span class="function">() =&gt;</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Server running on port: http://localhost:<span class="subst">$&#123;port&#125;</span>...`</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建静态文件：<code>index.html</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span>&gt;</span>Ajax Demo<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Ajax 请求数据的四个步骤</p>
+<ol>
+<li><p>对象创建</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xml</span><br><span class="line"><span class="keyword">if</span> (XMLHttpRequest) &#123;</span><br><span class="line">  xml = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  xml = <span class="keyword">new</span> ActiveXObject(<span class="string">&#x27;Mircrosoft.XMLHTTP&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置请求方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xml.open(<span class="string">&#x27;GET&#x27;</span>, url, <span class="literal">true</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用回调函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xml.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (xml.readyState == <span class="number">4</span> &amp;&amp; xml.status == <span class="number">200</span>) &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发送请求</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xml.send(<span class="literal">null</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>为<code>server.js</code>添加路由</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/get&#x27;</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> res.send(<span class="string">&#x27;落霞与孤鹜齐飞 秋水共长天一色&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>为<code>indexhtml</code>注册事件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> url = <span class="string">&#x27;http://localhost:3000/get&#x27;</span></span><br><span class="line"><span class="keyword">const</span> div = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;div&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;button&#x27;</span>)</span><br><span class="line">btn.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> xml</span><br><span class="line">  <span class="keyword">if</span> (XMLHttpRequest) &#123;</span><br><span class="line">    xml = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    xml = <span class="keyword">new</span> ActiveXObject(<span class="string">&#x27;Mircrosoft.XMLHTTP&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  xml.open(<span class="string">&#x27;GET&#x27;</span>, url, <span class="literal">true</span>)</span><br><span class="line">  xml.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (xml.readyState == <span class="number">4</span> &amp;&amp; xml.status == <span class="number">200</span>) &#123;</span><br><span class="line">      div.innerHTML = xml.responseText</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  xml.send()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切换到<code>root</code>目录，启动<code>Server</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nodemon server.js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>浏览器<code>url</code>： <code>http://localhost:3000</code></p>
+<ul>
+<li>点击按钮，文件内容更换为： <code>落霞与孤鹜齐飞 秋水共长天一色</code></li>
+<li>观察<code>url</code>并没有改变；</li>
+</ul>
+</li>
+<li><p>原始代码</p>
+<ul>
+<li><code>server.js</code></li>
+<li><code>index.html</code></li>
+</ul>
+</li>
+<li><p>关于 Ajax 基本原理的<code>TypeScript</code>版本介绍</p>
+<p><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/15/JavaScript/JS/Ajax-base-for-Typescript/">参考文档</a></p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://full-stoke.github.io/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%9F%BA%E6%9C%AC%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%89/" data-id="ckgso277q000bkesh7l5denp6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JavaScript/JavaScript Tags/十、Ajax技术/临时/Ajax异步请求案例 - Git JSON解析" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%20-%20Git%20JSON%E8%A7%A3%E6%9E%90/" class="article-date">
@@ -938,7 +1180,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -948,7 +1190,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">108</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">110</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
