@@ -67,6 +67,100 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Node/Npm/Windows安装与配置Node" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" class="article-date">
+  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/">1.Windows安装与配置Node</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h4><ul>
+<li><p><a target="_blank" rel="noopener" href="http://nodejs.cn/download/">[Node 官网下载：]</a></p>
+</li>
+<li><p>下载 Windows 安装包 (.msi)</p>
+</li>
+</ul>
+<h4 id="2-安装目录"><a href="#2-安装目录" class="headerlink" title="2. 安装目录"></a>2. 安装目录</h4><ul>
+<li>D：/Applications/node</li>
+</ul>
+<h4 id="3-安装"><a href="#3-安装" class="headerlink" title="3. 安装"></a>3. 安装</h4><ul>
+<li>省略</li>
+</ul>
+<h4 id="4-配置环境变量"><a href="#4-配置环境变量" class="headerlink" title="4. 配置环境变量"></a>4. 配置环境变量</h4><ul>
+<li>环境配置主要是配置 npm 安装的全局模块所在的路径，以及缓存 cache 的路径；</li>
+</ul>
+<ol>
+<li>为什么要配置环境变量</li>
+</ol>
+<ul>
+<li>全局安装 Node 依赖包时，系统默认会将安装的模块置于<code>C:\Users\Adminstration\AppData\Roaming\npm</code>，从而占用 C 盘空间；</li>
+</ul>
+<ol start="2">
+<li>配置环境变量</li>
+</ol>
+<ul>
+<li><p>创建两个目录： <code>node_cache</code>, <code>node_global</code></p>
+</li>
+<li><p>其中<code>node_cache</code>为下载包时缓存目录</p>
+</li>
+<li><p><code>node_global</code>全局安装包就置于此；</p>
+</li>
+</ul>
+<ol>
+<li>npm 配置 config</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> prefix <span class="string">&quot;D:\Applications\node\node_global&quot;</span></span><br><span class="line">npm config <span class="built_in">set</span> cache :<span class="string">&quot;D:\Applications\node\node_cache&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>配置环境变量</li>
+</ol>
+<ul>
+<li><p>配置用户环境变量:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\Applications\node\node_global</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置系统环境变量</p>
+</li>
+<li><p>新建 PATH：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%NODE_PATH%</span><br><span class="line">D:\Applications\node\node_global\node_modules</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install yarn -g</span><br><span class="line">yarn -v</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://full-stoke.github.io/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" data-id="ckgx578ey003roysh8030ehf0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Node/Npm/Windows安装与配置Nvm" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" class="article-date">
@@ -291,13 +385,13 @@
       
         <h4 id="1-安装-hexo-脚手架"><a href="#1-安装-hexo-脚手架" class="headerlink" title="1. 安装 hexo 脚手架"></a>1. 安装 hexo 脚手架</h4><ul>
 <li><p>全局安装 Hexo: 开启 Git</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
 <h4 id="2-初始化项目"><a href="#2-初始化项目" class="headerlink" title="2. 初始化项目"></a>2. 初始化项目</h4><ul>
 <li><p>初始化 hexo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> hexo_blog</span><br><span class="line">$ hexo init</span><br><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo_blog</span><br><span class="line">hexo init</span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ol start="3">
@@ -305,7 +399,7 @@
 </ol>
 <ul>
 <li><p>Hexo 本地部署并测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>localhost:4000</p>
 </li>
@@ -323,7 +417,7 @@
 </ol>
 <ul>
 <li><p>生成目录和静态文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo -g       //简写</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo -g       //简写</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ol start="5">
@@ -368,7 +462,7 @@
 <li><p>创建 Github SSH key 密钥</p>
 </li>
 <li><p>创建一个 SSH key,在命令行（即 Git Bash）输入以下命令， 回车三下即可：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;username@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;username@gmail.com&quot;</span></span><br></pre></td></tr></table></figure></li>
 <li><p>生成：id_rsa(私钥) 和 id_rsa.pub(公钥),</p>
 </li>
 <li><p>打开公钥： id_rsa.pub</p>
@@ -378,18 +472,18 @@
 <li><p>复制公钥黏贴到 Github： SSH Key</p>
 </li>
 <li><p>测试是否添加成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>提示符下： 返回<code>“You’ve successfully authenticated”</code>即成功</p>
 </li>
 </ul>
 <h4 id="3-部署"><a href="#3-部署" class="headerlink" title="3. 部署"></a>3. 部署</h4><ul>
-<li>deploy<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line">$ hexo clean</span><br><span class="line">$ hexo d -g <span class="comment">#生成并上传</span></span><br></pre></td></tr></table></figure>
+<li>deploy<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br><span class="line">hexo clean</span><br><span class="line">hexo d -g <span class="comment">#生成并上传</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
 <h4 id="4-故障处理"><a href="#4-故障处理" class="headerlink" title="4.故障处理"></a>4.故障处理</h4><ul>
-<li>故障处理<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean	<span class="comment">## 删除public目录，然后再来重新生成和发布</span></span><br></pre></td></tr></table></figure>
+<li>故障处理<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean	<span class="comment">## 删除public目录，然后再来重新生成和发布</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -418,9 +512,9 @@
 
 
   
-    <article id="post-JavaScript/JavaScript Tags/十、Ajax技术/临时/Ajax基本技术原理案例之三" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/十、Ajax技术/临时/Ajax基本技术原理案例之三" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%9F%BA%E6%9C%AC%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%89/" class="article-date">
+    <a href="/2020/10/12/JavaScript/Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%9F%BA%E6%9C%AC%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%89/" class="article-date">
   <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
 </a>
     
@@ -432,7 +526,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%9F%BA%E6%9C%AC%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%89/">Ajax基本技术原理案例之三</a>
+      <a class="article-title" href="/2020/10/12/JavaScript/Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%9F%BA%E6%9C%AC%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%89/">Ajax基本技术原理案例之三</a>
     </h1>
   
 
@@ -497,7 +591,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://full-stoke.github.io/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%9F%BA%E6%9C%AC%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%89/" data-id="ckgx578go006boysh1ek3afx7" class="article-share-link">Share</a>
+      <a data-url="https://full-stoke.github.io/2020/10/12/JavaScript/Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%9F%BA%E6%9C%AC%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%89/" data-id="ckgxiuvsi000mc2sh1ie02cei" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -509,9 +603,9 @@
 
 
   
-    <article id="post-JavaScript/JavaScript Tags/十、Ajax技术/临时/Ajax异步请求案例 - Git JSON解析" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/十、Ajax技术/临时/Ajax异步请求案例 - Git JSON解析" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%20-%20Git%20JSON%E8%A7%A3%E6%9E%90/" class="article-date">
+    <a href="/2020/10/12/JavaScript/Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%20-%20Git%20JSON%E8%A7%A3%E6%9E%90/" class="article-date">
   <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
 </a>
     
@@ -523,7 +617,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%20-%20Git%20JSON%E8%A7%A3%E6%9E%90/">Ajax异步请求案例：Git JSON解析</a>
+      <a class="article-title" href="/2020/10/12/JavaScript/Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%20-%20Git%20JSON%E8%A7%A3%E6%9E%90/">Ajax异步请求案例：Git JSON解析</a>
     </h1>
   
 
@@ -629,7 +723,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://full-stoke.github.io/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%20-%20Git%20JSON%E8%A7%A3%E6%9E%90/" data-id="ckgx578gp006eoysh7hznh28z" class="article-share-link">Share</a>
+      <a data-url="https://full-stoke.github.io/2020/10/12/JavaScript/Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%20-%20Git%20JSON%E8%A7%A3%E6%9E%90/" data-id="ckgxiuvsj000oc2shaun47ejc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -641,9 +735,9 @@
 
 
   
-    <article id="post-JavaScript/JavaScript Tags/十、Ajax技术/临时/Ajax异步请求案例之一 - 基础代码" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/十、Ajax技术/临时/Ajax异步请求案例之一 - 基础代码" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%80%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/" class="article-date">
+    <a href="/2020/10/12/JavaScript/Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%80%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/" class="article-date">
   <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
 </a>
     
@@ -655,7 +749,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%80%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/">Ajax异步请求案例之一:基础代码</a>
+      <a class="article-title" href="/2020/10/12/JavaScript/Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%80%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/">Ajax异步请求案例之一:基础代码</a>
     </h1>
   
 
@@ -725,7 +819,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://full-stoke.github.io/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%80%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/" data-id="ckgx578gq006goysh47h92t4t" class="article-share-link">Share</a>
+      <a data-url="https://full-stoke.github.io/2020/10/12/JavaScript/Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%80%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/" data-id="ckgxiuvsk000qc2sh6caphev8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -737,9 +831,9 @@
 
 
   
-    <article id="post-JavaScript/JavaScript Tags/十、Ajax技术/临时/Ajax异步请求案例之二 - 基础代码" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/十、Ajax技术/临时/Ajax异步请求案例之二 - 基础代码" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%BA%8C%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/" class="article-date">
+    <a href="/2020/10/12/JavaScript/Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%BA%8C%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/" class="article-date">
   <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
 </a>
     
@@ -751,7 +845,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%BA%8C%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/">Ajax异步请求案例之二:基础代码</a>
+      <a class="article-title" href="/2020/10/12/JavaScript/Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%BA%8C%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/">Ajax异步请求案例之二:基础代码</a>
     </h1>
   
 
@@ -842,7 +936,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://full-stoke.github.io/2020/10/12/JavaScript/JavaScript%20Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%BA%8C%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/" data-id="ckgx578gs006koysh5mx9h7bp" class="article-share-link">Share</a>
+      <a data-url="https://full-stoke.github.io/2020/10/12/JavaScript/Tags/%E5%8D%81%E3%80%81Ajax%E6%8A%80%E6%9C%AF/%E4%B8%B4%E6%97%B6/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%BA%8C%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/" data-id="ckgxiuvsl000tc2sh5k09e54u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -1380,7 +1474,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -1390,7 +1484,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">113</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">114</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
