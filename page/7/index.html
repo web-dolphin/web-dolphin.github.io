@@ -67,9 +67,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-VSCode/Tags/13. HTML Boilerplate" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-VSCode/Tags/2.Compile Hero Plugin" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/13.%20HTML%20Boilerplate/" class="article-date">
+    <a href="/2020/10/23/VSCode/Tags/2.Compile%20Hero%20Plugin/" class="article-date">
   <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
 </a>
     
@@ -81,7 +81,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/13.%20HTML%20Boilerplate/">13. HTML Boilerplate</a>
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/2.Compile%20Hero%20Plugin/">2.Compile Hero Plugin</a>
     </h1>
   
 
@@ -89,23 +89,84 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-HTML-Boilerplate"><a href="#1-HTML-Boilerplate" class="headerlink" title="1.HTML Boilerplate"></a>1.HTML Boilerplate</h4><ul>
-<li><p>使用HTML模版插件，你就摆脱了为HTML新文件重新编写头部和正文标签的苦恼；</p>
+        <h4 id="1-VS-Code-必备插件"><a href="#1-VS-Code-必备插件" class="headerlink" title="1. VS Code 必备插件"></a>1. VS Code 必备插件</h4><ul>
+<li>自动编译：less, sass, scss, typescript, jade, pug and jsx.</li>
+</ul>
+<h4 id="2-安装插件：略"><a href="#2-安装插件：略" class="headerlink" title="2. 安装插件：略"></a>2. 安装插件：略</h4><p><img src="https://s1.ax1x.com/2020/10/24/BVAHtx.png" alt="Compile Hero"></p>
+<ul>
+<li>编辑器右下角底部栏开关 Compile Hero 设置为: On</li>
+</ul>
+<h4 id="3-配置-Settings-json"><a href="#3-配置-Settings-json" class="headerlink" title="3. 配置 Settings.json"></a>3. 配置 Settings.json</h4><ul>
+<li><p>配置输出目录： <code>assert/js/</code></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&quot;compile-hero&quot;: &#123;</span><br><span class="line">  &quot;disable-compile-files-on-did-save-code&quot;: false,</span><br><span class="line">  &quot;notification-toggle&quot;: false,</span><br><span class="line">  &quot;javascript-output-directory&quot;: &quot;../assert/js/&quot;,</span><br><span class="line">  &quot;typescript-output-directory&quot;: &quot;../assert/js/&quot;,</span><br><span class="line">  &quot;javascript-output-toggle&quot;: false,</span><br><span class="line">  &quot;sass-output-directory&quot;: &quot;../assert/css/&quot;,</span><br><span class="line">  &quot;less-output-directory&quot;: &quot;../assert/css/&quot;,</span><br><span class="line">  &quot;sass-output-toggle&quot;: true,</span><br><span class="line">  &quot;ignore&quot;: [&quot;src/test.js&quot;, &quot;*/test.scss&quot;, &quot;**/spec/*&quot;, &quot;**/src/**/*&quot;,&quot;*/less/*&quot;],</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>你只需在空文件中输入html，并按Tab键，即可生成干净的文档结构</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HTML Boilerplate</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>示意图</p>
-<p><img src="https://yuanmin650304.github.io/2020/10/01/VS%20Code/13.HTML%20Boilerplate/" alt="示意图"></p>
+<li><p>Settings 配置示意图<br><img src="https://s1.ax1x.com/2020/10/24/BVZQ6U.png" alt="Settings"></p>
 </li>
 </ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+<h4 id="4-使用"><a href="#4-使用" class="headerlink" title="4. 使用"></a>4. 使用</h4><ul>
+<li><p>按快捷键 (ctrl+s) 或者文件列表右键菜单选择 Compile File(s) 命令启动编译，将会在该文件的同级目录 assert/js 或者 assert/css 下生成编译后的文件，助你远离 webpack 和 gulp 等编译工具操作的繁琐；</p>
+</li>
+<li><p>按快捷键 (alt+shift+f) 或者文件列表右键菜单选择 Format Document 将会帮你自动格式化文件；</p>
+</li>
+<li><p>支持 less, scss, scss 等文件代码高亮；</p>
+</li>
+<li><p>支持在默认浏览器打开 html 文件；</p>
+</li>
+<li><p>支持压缩 javascript 和 css 文件</p>
+</li>
+<li><p>支持格式化 javascript, json, css, sass, 和 html 等文件；</p>
+</li>
+<li><p>可修改编译后目录和文件的输出位置: 文件列表点击插件 Setting =&gt;</p>
+<p><img src="https://s1.ax1x.com/2020/10/24/BVmwee.png" alt="Setting"></p>
+</li>
+</ul>
+<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a href="">[VS Code 安装、配置与使用]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6.联系方式"></a>6.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/13.%20HTML%20Boilerplate/" data-id="ckh1xhf0r0055trshf6pg6tfs" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/2.Compile%20Hero%20Plugin/" data-id="ckh1ziu4b005ea2shg2p44n4f" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/22. Code Runner" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/22.%20Code%20Runner/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/22.%20Code%20Runner/">22. Code Runner</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4.联系方式"></a>4.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/22.%20Code%20Runner/" data-id="ckh1ziu4c005ha2shb0yt1k0m" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -153,57 +214,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/27.%20Faker/" data-id="ckh1xhf0s0057trshd3hoaxsi" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/10. CSS Peek" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/10.%20CSS%20Peek/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/10.%20CSS%20Peek/">10. CSS Peek</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-CSS-Peek"><a href="#1-CSS-Peek" class="headerlink" title="1. CSS Peek"></a>1. CSS Peek</h4><ul>
-<li><p>可以追踪至样式表中 CSS 类和 ids 定义的地方;</p>
-</li>
-<li><p>当你在 HTML 文件中右键，单击选择Go to Definition 或者 Peek definition 选项，它便会给你发送样式设置的 CSS 代码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSS Peek</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/05/0t0ukT.gif" alt="使用示意图"></p>
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/10.%20CSS%20Peek/" data-id="ckh1xhf0u005atrsh5mhz6r3d" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/27.%20Faker/" data-id="ckh1ziu4d005ja2shgrg885dd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -251,7 +262,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/28.SVG%20Viewer/" data-id="ckh1xhf0w005ctrsh29qc1v5p" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/28.SVG%20Viewer/" data-id="ckh1ziu4f005ma2sh5oqb3853" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -308,7 +319,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/3.%20Settint%20Json/" data-id="ckh1xhf0y005ftrsh2zyk50yr" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/3.%20Settint%20Json/" data-id="ckh1ziu4g005oa2sh3z46b46i" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -358,7 +369,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/30.%20Change%20Cas/" data-id="ckh1xhf10005htrsh04ae4njz" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/30.%20Change%20Cas/" data-id="ckh1ziu4h005qa2shems6cpjc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -410,7 +421,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/31.%20Minify/" data-id="ckh1xhf12005ktrshfxpi0s1o" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/31.%20Minify/" data-id="ckh1ziu4i005sa2sh0onugqow" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -458,59 +469,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/32.%E7%BB%99%E6%8B%AC%E5%8F%B7%E6%B7%BB%E5%8A%A0%E9%A2%9C%E8%89%B2/" data-id="ckh1xhf13005mtrshfmlr9awc" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/34. Quokka" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/34.%20Quokka/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/34.%20Quokka/">34. Quokka</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Quokka"><a href="#1-Quokka" class="headerlink" title="1. Quokka"></a>1. Quokka</h4><ul>
-<li><p>Quokka 是一个调试工具插件，能够根据你正在编写的代码提供实时反馈;</p>
-</li>
-<li><p>它易于配置，并能够预览变量的函数和计算值结果;</p>
-</li>
-<li><p>另外，在使用 JSX 或 TypeScript 项目中，它能够开箱即用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Quokka</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>示意图</p>
-<p><img src="https://s1.ax1x.com/2020/11/03/ByyhKP.gif" alt="示意图"></p>
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/34.%20Quokka/" data-id="ckh1xhf15005otrshbmzb8c4s" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/32.%E7%BB%99%E6%8B%AC%E5%8F%B7%E6%B7%BB%E5%8A%A0%E9%A2%9C%E8%89%B2/" data-id="ckh1ziu4j005ua2sh09n56vbv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -572,7 +531,59 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/36.%20ES6%20%E5%BF%AB%E9%80%9F%E6%8F%90%E7%A4%BA/" data-id="ckh1xhf16005qtrshgruw667g" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/36.%20ES6%20%E5%BF%AB%E9%80%9F%E6%8F%90%E7%A4%BA/" data-id="ckh1ziu4l005wa2shdepg9eq6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/34. Quokka" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/34.%20Quokka/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/34.%20Quokka/">34. Quokka</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Quokka"><a href="#1-Quokka" class="headerlink" title="1. Quokka"></a>1. Quokka</h4><ul>
+<li><p>Quokka 是一个调试工具插件，能够根据你正在编写的代码提供实时反馈;</p>
+</li>
+<li><p>它易于配置，并能够预览变量的函数和计算值结果;</p>
+</li>
+<li><p>另外，在使用 JSX 或 TypeScript 项目中，它能够开箱即用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Quokka</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>示意图</p>
+<p><img src="https://s1.ax1x.com/2020/11/03/ByyhKP.gif" alt="示意图"></p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/34.%20Quokka/" data-id="ckh1ziu4m005ya2shg3yq2j74" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -627,7 +638,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/39.%20Browser%20Previews/" data-id="ckh1xhf18005strsh818bh59x" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/39.%20Browser%20Previews/" data-id="ckh1ziu4m0060a2sh2n0f9z8z" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -684,7 +695,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/40.%20Snippets/" data-id="ckh1xhf1a005utrshc5f5fvwa" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/40.%20Snippets/" data-id="ckh1ziu4n0062a2sh6ffy60pz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -724,7 +735,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/41.%20VS%20Code%E5%BF%AB%E9%80%9F%E7%BC%96%E5%86%99HTML%E4%BB%A3%E7%A0%81/" data-id="ckh1xhf1b005wtrsh1mbs51k6" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/41.%20VS%20Code%E5%BF%AB%E9%80%9F%E7%BC%96%E5%86%99HTML%E4%BB%A3%E7%A0%81/" data-id="ckh1ziu4o0064a2sh4lgfgy76" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -778,7 +789,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/5.%20Prettier%20-%20Code%20formatter/" data-id="ckh1xhf1c005ytrshaqq1emlb" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/5.%20Prettier%20-%20Code%20formatter/" data-id="ckh1ziu4p0066a2sh7vt8gmsg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -840,47 +851,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/6.%20Auto%20Rename%20Complete%20Close%20Tagg/" data-id="ckh1xhf1d0060trsh3i636xf5" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/8. Vscode Icons" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/8.%20Vscode%20Icons/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/8.%20Vscode%20Icons/">8. Vscode Icons</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4.联系方式"></a>4.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/8.%20Vscode%20Icons/" data-id="ckh1xhf1e0062trshbrm04ly5" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/6.%20Auto%20Rename%20Complete%20Close%20Tagg/" data-id="ckh1ziu4q0068a2sh54r60qtk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -926,7 +897,47 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/7.%20Beautify/" data-id="ckh1xhf1f0064trsh0o3z7o43" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/7.%20Beautify/" data-id="ckh1ziu4r006aa2shfvcuh0bd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/8. Vscode Icons" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/8.%20Vscode%20Icons/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/8.%20Vscode%20Icons/">8. Vscode Icons</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4.联系方式"></a>4.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/8.%20Vscode%20Icons/" data-id="ckh1ziu4s006ca2shekjpgs4k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -983,7 +994,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/9.%20Easy%20Less/" data-id="ckh1xhf1g0066trsh6qx60sox" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/9.%20Easy%20Less/" data-id="ckh1ziu4t006ea2shgo7zh9u8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -1028,7 +1039,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%20%E6%95%99%E7%A8%8B/" data-id="ckh1xhf1h0068trsh2537ft34" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%20%E6%95%99%E7%A8%8B/" data-id="ckh1ziu4u006ga2shcviqbm1v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1311,7 +1322,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/" data-id="ckh1xhf1i006atrsh8qvyatth" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/" data-id="ckh1ziu4v006ia2sh1aho0qf2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1460,7 +1471,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/21/Hexo/Hexo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="ckh1xhey6000strsh7mup8xmw" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/21/Hexo/Hexo%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="ckh1ziu1l000sa2sh4lfthctp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
@@ -1528,15 +1539,15 @@
           </li>
         
           <li>
-            <a href="/2020/10/28/English/3.%205English%20for%20TypeScript/">3.5English for TypeScript</a>
+            <a href="/2020/10/28/English/3.1English%20For%20ECMAScript/">3.1English for ECMAScript</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/28/English/3.2English%20For%20DOM/">3.2English for DOM</a>
           </li>
         
           <li>
             <a href="/2020/10/28/English/3.%20English%20for%20JavaScript/">3.English for JavaScript</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/28/English/3.1English%20For%20ECMAScript/">3.1English for ECMAScript</a>
           </li>
         
       </ul>

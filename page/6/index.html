@@ -124,7 +124,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/3.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" data-id="ckh1xhezp002ytrsh0ptl1ws2" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/3.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" data-id="ckh1ziu320031a2sh281xcfti" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
@@ -250,7 +250,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/4.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" data-id="ckh1xhezr0033trshbt7bad77" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/4.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" data-id="ckh1ziu340034a2sh2tmc5idu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
@@ -295,80 +295,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/" data-id="ckh1xhf01003ntrsh40y205sa" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Npm/NPM镜像源配置" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">3.NPM镜像源配置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-单次使用"><a href="#1-单次使用" class="headerlink" title="1. 单次使用"></a>1. 单次使用</h4><ul>
-<li><p>command line 配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-永久使用"><a href="#2-永久使用" class="headerlink" title="2. 永久使用"></a>2. 永久使用</h4><ol>
-<li><p>设置成全局下载镜像站点，每次安装软件默认从淘宝镜像下载：</p>
-</li>
-<li><p>方法一</p>
-</li>
-</ol>
-<ul>
-<li><p>打开.npmrc 文件： <code>nodejs\node_modules\npm\npmrc</code></p>
-</li>
-<li><p>没有的话可以使用 git 命令行新建：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .npmrc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>增加一行: <code>registry =https://registry.npm.taobao.org</code> 即可；</p>
-</li>
-</ul>
-<ol start="3">
-<li>方法二</li>
-</ol>
-<ul>
-<li><p>命令行设置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry    // 或</span><br><span class="line">npm info express    //输出：https://registry.npm.taobao.org/  ok</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/" data-id="ckh1xhf03003ptrshhaaz31qf" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/" data-id="ckh1ziu3g003oa2shat3tb15l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -462,7 +389,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" data-id="ckh1xhf04003utrsh3blrhkpf" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" data-id="ckh1ziu3h003ra2shclyz7y3z" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -474,16 +401,12 @@
 
 
   
-    <article id="post-Node/Tutorial/Node教程" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Npm/NPM镜像源配置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/24/Node/Tutorial/Node%E6%95%99%E7%A8%8B/" class="article-date">
+    <a href="/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/" class="article-date">
   <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Node/">Node</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -492,7 +415,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tutorial/Node%E6%95%99%E7%A8%8B/">Node教程</a>
+      <a class="article-title" href="/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">3.NPM镜像源配置</a>
     </h1>
   
 
@@ -500,18 +423,50 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-Node-安装"><a href="#1-Node-安装" class="headerlink" title="1. Node 安装"></a>1. Node 安装</h4><p><a href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[1.NPM 包管理器]</a></p>
-<h4 id="2-Express教程"><a href="#2-Express教程" class="headerlink" title="2.Express教程"></a>2.Express教程</h4><p><a href="">[2.Express教程]</a></p>
-<h4 id="3-Koa教程"><a href="#3-Koa教程" class="headerlink" title="3.Koa教程"></a>3.Koa教程</h4><p><a href="">[3.Koa教程]</a></p>
-<h4 id="4-Nest教程"><a href="#4-Nest教程" class="headerlink" title="4.Nest教程"></a>4.Nest教程</h4><p><a href="">[4.Nest教程]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+        <h4 id="1-单次使用"><a href="#1-单次使用" class="headerlink" title="1. 单次使用"></a>1. 单次使用</h4><ul>
+<li><p>command line 配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-永久使用"><a href="#2-永久使用" class="headerlink" title="2. 永久使用"></a>2. 永久使用</h4><ol>
+<li><p>设置成全局下载镜像站点，每次安装软件默认从淘宝镜像下载：</p>
+</li>
+<li><p>方法一</p>
+</li>
+</ol>
+<ul>
+<li><p>打开.npmrc 文件： <code>nodejs\node_modules\npm\npmrc</code></p>
+</li>
+<li><p>没有的话可以使用 git 命令行新建：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .npmrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增加一行: <code>registry =https://registry.npm.taobao.org</code> 即可；</p>
+</li>
+</ul>
+<ol start="3">
+<li>方法二</li>
+</ol>
+<ul>
+<li><p>命令行设置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry    // 或</span><br><span class="line">npm info express    //输出：https://registry.npm.taobao.org/  ok</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/24/Node/Tutorial/Node%E6%95%99%E7%A8%8B/" data-id="ckh1xhf05003wtrshcf5k44pp" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/" data-id="ckh1ziu3j003va2shaiz21qm1" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+
     </footer>
   </div>
   
@@ -595,7 +550,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" data-id="ckh1xhf06003ztrsh7575dtyq" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" data-id="ckh1ziu3k003xa2shbj5b87tm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -607,14 +562,14 @@
 
 
   
-    <article id="post-Vue/Tutorial/Vue教程" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Tutorial/Node教程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/" class="article-date">
+    <a href="/2020/10/24/Node/Tutorial/Node%E6%95%99%E7%A8%8B/" class="article-date">
   <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Vue/">Vue</a>
+    <a class="article-category-link" href="/categories/Node/">Node</a>
   </div>
 
   </div>
@@ -625,7 +580,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/">Vue教程</a>
+      <a class="article-title" href="/2020/10/24/Node/Tutorial/Node%E6%95%99%E7%A8%8B/">Node教程</a>
     </h1>
   
 
@@ -633,13 +588,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[]</a></p>
+        <h4 id="1-Node-安装"><a href="#1-Node-安装" class="headerlink" title="1. Node 安装"></a>1. Node 安装</h4><p><a href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[1.NPM 包管理器]</a></p>
+<h4 id="2-Express教程"><a href="#2-Express教程" class="headerlink" title="2.Express教程"></a>2.Express教程</h4><p><a href="">[2.Express教程]</a></p>
+<h4 id="3-Koa教程"><a href="#3-Koa教程" class="headerlink" title="3.Koa教程"></a>3.Koa教程</h4><p><a href="">[3.Koa教程]</a></p>
+<h4 id="4-Nest教程"><a href="#4-Nest教程" class="headerlink" title="4.Nest教程"></a>4.Nest教程</h4><p><a href="">[4.Nest教程]</a></p>
 <h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/" data-id="ckh1xhf1j006dtrshczyc7whq" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/24/Node/Tutorial/Node%E6%95%99%E7%A8%8B/" data-id="ckh1ziu3m0043a2shafxp1fn6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -681,7 +639,49 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" data-id="ckh1xhf1k006ftrsh7n7u8uls" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" data-id="ckh1ziu3v004ia2sh1l7tegwh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Vue/Tutorial/Vue教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Vue/">Vue</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/">Vue教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://web-oyster.github.io/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/" data-id="ckh1ziu4w006la2shei468jcd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -762,7 +762,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/Linux/Ubuntu/10.Ubuntu20.04%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E7%BC%93%E5%AD%98/" data-id="ckh1xhezk002rtrsh2fa402yh" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/Linux/Ubuntu/10.Ubuntu20.04%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E7%BC%93%E5%AD%98/" data-id="ckh1ziu2x002sa2sh4v77bqnz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
@@ -820,7 +820,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/Linux/Ubuntu/11.Ubuntu%E5%AE%89%E8%A3%85TypeScript/" data-id="ckh1xhezn002utrsh2ugdfhc6" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/Linux/Ubuntu/11.Ubuntu%E5%AE%89%E8%A3%85TypeScript/" data-id="ckh1ziu2z002wa2shfl51am1o" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
@@ -868,7 +868,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/Linux/Ubuntu/7.Ubuntu20.04%E5%AE%89%E8%A3%85VS%20Code/" data-id="ckh1xhezw003ctrshhlv2b7tm" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/Linux/Ubuntu/7.Ubuntu20.04%E5%AE%89%E8%A3%85VS%20Code/" data-id="ckh1ziu39003fa2sh1qgrbrsj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
@@ -916,7 +916,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/Linux/Ubuntu/8.Ubuntu20.04%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AEWPS/" data-id="ckh1xhezy003htrsh0x669wnx" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/Linux/Ubuntu/8.Ubuntu20.04%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AEWPS/" data-id="ckh1ziu3b003ia2sh097te6ey" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
@@ -968,7 +968,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/Linux/Ubuntu/9.Ubuntu20.04%E5%AE%89%E8%A3%85Google%20Chrome/" data-id="ckh1xhezz003jtrshgxin8naq" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/Linux/Ubuntu/9.Ubuntu20.04%E5%AE%89%E8%A3%85Google%20Chrome/" data-id="ckh1ziu3f003ma2sh76x7hbuc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
@@ -1034,7 +1034,57 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/1.%20Settings%20Sync/" data-id="ckh1xhf0g004ntrsh4kgqbjys" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/1.%20Settings%20Sync/" data-id="ckh1ziu3z004ta2sh60v0cqks" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/10. CSS Peek" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/10.%20CSS%20Peek/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/10.%20CSS%20Peek/">10. CSS Peek</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-CSS-Peek"><a href="#1-CSS-Peek" class="headerlink" title="1. CSS Peek"></a>1. CSS Peek</h4><ul>
+<li><p>可以追踪至样式表中 CSS 类和 ids 定义的地方;</p>
+</li>
+<li><p>当你在 HTML 文件中右键，单击选择Go to Definition 或者 Peek definition 选项，它便会给你发送样式设置的 CSS 代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSS Peek</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/05/0t0ukT.gif" alt="使用示意图"></p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/10.%20CSS%20Peek/" data-id="ckh1ziu40004va2sh8foo6pce" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -1082,7 +1132,57 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/11.%20Color%20Info/" data-id="ckh1xhf0i004ptrsh919scjq6" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/11.%20Color%20Info/" data-id="ckh1ziu42004za2sh89dce7qv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/13. HTML Boilerplate" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/13.%20HTML%20Boilerplate/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/13.%20HTML%20Boilerplate/">13. HTML Boilerplate</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-HTML-Boilerplate"><a href="#1-HTML-Boilerplate" class="headerlink" title="1.HTML Boilerplate"></a>1.HTML Boilerplate</h4><ul>
+<li><p>使用HTML模版插件，你就摆脱了为HTML新文件重新编写头部和正文标签的苦恼；</p>
+</li>
+<li><p>你只需在空文件中输入html，并按Tab键，即可生成干净的文档结构</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HTML Boilerplate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>示意图</p>
+<p><img src="https://yuanmin650304.github.io/2020/10/01/VS%20Code/13.HTML%20Boilerplate/" alt="示意图"></p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/13.%20HTML%20Boilerplate/" data-id="ckh1ziu420051a2sh8kcidm3c" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -1134,7 +1234,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/14.%20Icon%20Fonts/" data-id="ckh1xhf0i004rtrshaaxidyu5" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/14.%20Icon%20Fonts/" data-id="ckh1ziu460054a2sh8m8y5uml" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -1174,7 +1274,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/15.%20Auto%20Comment%20Blocks/" data-id="ckh1xhf0k004utrshczpmgt42" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/15.%20Auto%20Comment%20Blocks/" data-id="ckh1ziu470057a2shb2zj9u9w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -1226,118 +1326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/18.%20TODO%20%E6%B3%A8%E9%87%8A/" data-id="ckh1xhf0l004wtrsh06z50zgv" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/2.Compile Hero Plugin" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/2.Compile%20Hero%20Plugin/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/2.Compile%20Hero%20Plugin/">2.Compile Hero Plugin</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-VS-Code-必备插件"><a href="#1-VS-Code-必备插件" class="headerlink" title="1. VS Code 必备插件"></a>1. VS Code 必备插件</h4><ul>
-<li>自动编译：less, sass, scss, typescript, jade, pug and jsx.</li>
-</ul>
-<h4 id="2-安装插件：略"><a href="#2-安装插件：略" class="headerlink" title="2. 安装插件：略"></a>2. 安装插件：略</h4><p><img src="https://s1.ax1x.com/2020/10/24/BVAHtx.png" alt="Compile Hero"></p>
-<ul>
-<li>编辑器右下角底部栏开关 Compile Hero 设置为: On</li>
-</ul>
-<h4 id="3-配置-Settings-json"><a href="#3-配置-Settings-json" class="headerlink" title="3. 配置 Settings.json"></a>3. 配置 Settings.json</h4><ul>
-<li><p>配置输出目录： <code>assert/js/</code></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&quot;compile-hero&quot;: &#123;</span><br><span class="line">  &quot;disable-compile-files-on-did-save-code&quot;: false,</span><br><span class="line">  &quot;notification-toggle&quot;: false,</span><br><span class="line">  &quot;javascript-output-directory&quot;: &quot;../assert/js/&quot;,</span><br><span class="line">  &quot;typescript-output-directory&quot;: &quot;../assert/js/&quot;,</span><br><span class="line">  &quot;javascript-output-toggle&quot;: false,</span><br><span class="line">  &quot;sass-output-directory&quot;: &quot;../assert/css/&quot;,</span><br><span class="line">  &quot;less-output-directory&quot;: &quot;../assert/css/&quot;,</span><br><span class="line">  &quot;sass-output-toggle&quot;: true,</span><br><span class="line">  &quot;ignore&quot;: [&quot;src/test.js&quot;, &quot;*/test.scss&quot;, &quot;**/spec/*&quot;, &quot;**/src/**/*&quot;,&quot;*/less/*&quot;],</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Settings 配置示意图<br><img src="https://s1.ax1x.com/2020/10/24/BVZQ6U.png" alt="Settings"></p>
-</li>
-</ul>
-<h4 id="4-使用"><a href="#4-使用" class="headerlink" title="4. 使用"></a>4. 使用</h4><ul>
-<li><p>按快捷键 (ctrl+s) 或者文件列表右键菜单选择 Compile File(s) 命令启动编译，将会在该文件的同级目录 assert/js 或者 assert/css 下生成编译后的文件，助你远离 webpack 和 gulp 等编译工具操作的繁琐；</p>
-</li>
-<li><p>按快捷键 (alt+shift+f) 或者文件列表右键菜单选择 Format Document 将会帮你自动格式化文件；</p>
-</li>
-<li><p>支持 less, scss, scss 等文件代码高亮；</p>
-</li>
-<li><p>支持在默认浏览器打开 html 文件；</p>
-</li>
-<li><p>支持压缩 javascript 和 css 文件</p>
-</li>
-<li><p>支持格式化 javascript, json, css, sass, 和 html 等文件；</p>
-</li>
-<li><p>可修改编译后目录和文件的输出位置: 文件列表点击插件 Setting =&gt;</p>
-<p><img src="https://s1.ax1x.com/2020/10/24/BVmwee.png" alt="Setting"></p>
-</li>
-</ul>
-<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a href="">[VS Code 安装、配置与使用]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6.联系方式"></a>6.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/2.Compile%20Hero%20Plugin/" data-id="ckh1xhf0m004ztrsh9cwu64uk" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/22. Code Runner" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/22.%20Code%20Runner/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/22.%20Code%20Runner/">22. Code Runner</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4.联系方式"></a>4.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/22.%20Code%20Runner/" data-id="ckh1xhf0n0051trsh8ydv8feg" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/18.%20TODO%20%E6%B3%A8%E9%87%8A/" data-id="ckh1ziu49005ba2sh8622018l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
@@ -1405,15 +1394,15 @@
           </li>
         
           <li>
-            <a href="/2020/10/28/English/3.%205English%20for%20TypeScript/">3.5English for TypeScript</a>
+            <a href="/2020/10/28/English/3.1English%20For%20ECMAScript/">3.1English for ECMAScript</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/28/English/3.2English%20For%20DOM/">3.2English for DOM</a>
           </li>
         
           <li>
             <a href="/2020/10/28/English/3.%20English%20for%20JavaScript/">3.English for JavaScript</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/28/English/3.1English%20For%20ECMAScript/">3.1English for ECMAScript</a>
           </li>
         
       </ul>

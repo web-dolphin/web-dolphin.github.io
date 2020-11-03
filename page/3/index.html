@@ -67,6 +67,62 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-CSS/Tags/二、CSS 初探/4. CSS 中的长度" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/4.%20CSS%20%E4%B8%AD%E7%9A%84%E9%95%BF%E5%BA%A6/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/4.%20CSS%20%E4%B8%AD%E7%9A%84%E9%95%BF%E5%BA%A6/">CSS 中的长度</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-绝对长度：-cm（厘米），pt-（磅）"><a href="#1-绝对长度：-cm（厘米），pt-（磅）" class="headerlink" title="1. 绝对长度： cm（厘米），pt （磅）"></a>1. 绝对长度： cm（厘米），pt （磅）</h4><h4 id="2-相对单位："><a href="#2-相对单位：" class="headerlink" title="2. 相对单位："></a>2. 相对单位：</h4><ul>
+<li><p>与元素字号挂钩的单位： em;</p>
+</li>
+<li><p>与元素字体 x 高度挂钩的单位： ex， 即字体基线到中线之间的距离，通常 1 ex = 0.5em;</p>
+</li>
+<li><p>与根元素(html 元素)挂钩的单位： rem;</p>
+</li>
+<li><p>与像素挂钩的单位： px；</p>
+</li>
+<li><p>与元素属性的值得百分比挂钩的单位： %;</p>
+</li>
+<li><p>Example</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>CSS 的颜色<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">      body &#123;</span><br><span class="line">        height: 100vh;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.container</span> &#123;</span></span><br><span class="line">        width: 80%;</span><br><span class="line">        height: 80%;</span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-id">#690</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line">      div &#123;</span><br><span class="line">        margin: 10px;</span><br><span class="line">        float: left;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.one</span> &#123;</span></span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        background: red;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.two</span> &#123;</span></span><br><span class="line">        width: 10em;</span><br><span class="line">        height: 10em;</span><br><span class="line">        font-size: 2rem;</span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-id">#00ff00</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.three</span> &#123;</span></span><br><span class="line">        width: 10rem;</span><br><span class="line">        height: 10rem;</span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-tag">rgba</span>(0, 0, 0, 0<span class="selector-class">.5</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.four</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-tag">hsla</span>(120, 100%, 50%, 0<span class="selector-class">.8</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;one&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;two&quot;</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;three&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;four&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://web-oyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/4.%20CSS%20%E4%B8%AD%E7%9A%84%E9%95%BF%E5%BA%A6/" data-id="ckh1ziu51006sa2shbv9i2qe8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-CSS/Tags/二、CSS 初探/3. CSS 中的颜色" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/3.%20CSS%20%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2/" class="article-date">
@@ -249,63 +305,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/3.%20CSS%20%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2/" data-id="ckh1xhf1t006strsh3zpwceap" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/二、CSS 初探/4. CSS 中的长度" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/4.%20CSS%20%E4%B8%AD%E7%9A%84%E9%95%BF%E5%BA%A6/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/4.%20CSS%20%E4%B8%AD%E7%9A%84%E9%95%BF%E5%BA%A6/">CSS 中的长度</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-绝对长度：-cm（厘米），pt-（磅）"><a href="#1-绝对长度：-cm（厘米），pt-（磅）" class="headerlink" title="1. 绝对长度： cm（厘米），pt （磅）"></a>1. 绝对长度： cm（厘米），pt （磅）</h4><h4 id="2-相对单位："><a href="#2-相对单位：" class="headerlink" title="2. 相对单位："></a>2. 相对单位：</h4><ul>
-<li><p>与元素字号挂钩的单位： em;</p>
-</li>
-<li><p>与元素字体 x 高度挂钩的单位： ex， 即字体基线到中线之间的距离，通常 1 ex = 0.5em;</p>
-</li>
-<li><p>与根元素(html 元素)挂钩的单位： rem;</p>
-</li>
-<li><p>与像素挂钩的单位： px；</p>
-</li>
-<li><p>与元素属性的值得百分比挂钩的单位： %;</p>
-</li>
-<li><p>Example</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>CSS 的颜色<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">      body &#123;</span><br><span class="line">        height: 100vh;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.container</span> &#123;</span></span><br><span class="line">        width: 80%;</span><br><span class="line">        height: 80%;</span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-id">#690</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line">      div &#123;</span><br><span class="line">        margin: 10px;</span><br><span class="line">        float: left;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.one</span> &#123;</span></span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        background: red;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.two</span> &#123;</span></span><br><span class="line">        width: 10em;</span><br><span class="line">        height: 10em;</span><br><span class="line">        font-size: 2rem;</span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-id">#00ff00</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.three</span> &#123;</span></span><br><span class="line">        width: 10rem;</span><br><span class="line">        height: 10rem;</span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-tag">rgba</span>(0, 0, 0, 0<span class="selector-class">.5</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.four</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-tag">hsla</span>(120, 100%, 50%, 0<span class="selector-class">.8</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;one&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;two&quot;</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;three&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;four&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/4.%20CSS%20%E4%B8%AD%E7%9A%84%E9%95%BF%E5%BA%A6/" data-id="ckh1xhf1v006vtrshh9woblzb" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/3.%20CSS%20%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2/" data-id="ckh1ziu52006ta2sh6pvi18j3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -356,65 +356,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/5.%20%E5%85%B6%E4%BB%96%20CSS%20%E5%8D%95%E4%BD%8D/" data-id="ckh1xhf1w006xtrshe5000gu7" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/5.%20%E5%85%B6%E4%BB%96%20CSS%20%E5%8D%95%E4%BD%8D/" data-id="ckh1ziu53006wa2sh7sobbh72" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-DataBase/MongoDB/Tutorial/MongoDB教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/DataBase/MongoDB/Tutorial/MongoDB%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/DataBase/">DataBase</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/DataBase/MongoDB/Tutorial/MongoDB%E6%95%99%E7%A8%8B/">MongoDB教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-MongoDB-安装"><a href="#1-MongoDB-安装" class="headerlink" title="1.MongoDB 安装"></a>1.MongoDB 安装</h4><ol>
-<li>Windows 安装</li>
-</ol>
-<p><a href="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tags/Windows%E5%AE%89%E8%A3%85MongoDB/">[Windows 安装 MongoDB]</a></p>
-<ol start="2">
-<li>Ubuntu20.04 安装</li>
-</ol>
-<p><a href="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tags/Ubuntu20.04%E5%AE%89%E8%A3%85MongoDB/">[Ubuntu20.04 安装 MongoDB]</a></p>
-<ol start="3">
-<li>3.Mongoose建模与关联设置</li>
-</ol>
-<p><a href="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tags/2.Mongoose%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%85%B3%E8%81%94%E8%AE%BE%E7%BD%AE/">[3.Mongoose建模与关联设置]</a></p>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/DataBase/Tutorial/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%99%E7%A8%8B/">[数据库教程]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tutorial/MongoDB%E6%95%99%E7%A8%8B/" data-id="ckh1xhf1x0071trsha7fch2c7" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -488,7 +434,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.Windows%E5%AE%89%E8%A3%85MongoDB/" data-id="ckh1xhf1y0073trsh1ffugy4c" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.Windows%E5%AE%89%E8%A3%85MongoDB/" data-id="ckh1ziu54006za2sh9rub5yfm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a></li></ul>
@@ -648,7 +594,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tags/2.Mongoose%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%85%B3%E8%81%94%E8%AE%BE%E7%BD%AE/" data-id="ckh1xhf1z0077trsh5vkk2waz" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tags/2.Mongoose%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%85%B3%E8%81%94%E8%AE%BE%E7%BD%AE/" data-id="ckh1ziu550072a2shfuay6shw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a></li></ul>
@@ -660,9 +606,63 @@
 
 
   
-    <article id="post-HTML/HTML Tags/三、HTML5元素/3.1 HTML5新增元素" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-DataBase/MongoDB/Tutorial/MongoDB教程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.1%20HTML5%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0/" class="article-date">
+    <a href="/2020/10/28/DataBase/MongoDB/Tutorial/MongoDB%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DataBase/">DataBase</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/DataBase/MongoDB/Tutorial/MongoDB%E6%95%99%E7%A8%8B/">MongoDB教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-MongoDB-安装"><a href="#1-MongoDB-安装" class="headerlink" title="1.MongoDB 安装"></a>1.MongoDB 安装</h4><ol>
+<li>Windows 安装</li>
+</ol>
+<p><a href="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tags/Windows%E5%AE%89%E8%A3%85MongoDB/">[Windows 安装 MongoDB]</a></p>
+<ol start="2">
+<li>Ubuntu20.04 安装</li>
+</ol>
+<p><a href="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tags/Ubuntu20.04%E5%AE%89%E8%A3%85MongoDB/">[Ubuntu20.04 安装 MongoDB]</a></p>
+<ol start="3">
+<li>3.Mongoose建模与关联设置</li>
+</ol>
+<p><a href="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tags/2.Mongoose%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%85%B3%E8%81%94%E8%AE%BE%E7%BD%AE/">[3.Mongoose建模与关联设置]</a></p>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/DataBase/Tutorial/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%99%E7%A8%8B/">[数据库教程]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tutorial/MongoDB%E6%95%99%E7%A8%8B/" data-id="ckh1ziu580075a2sh0w1k676i" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/一、JavaScript简介/1.JavaScript简史" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/1.JavaScript%E7%AE%80%E5%8F%B2/" class="article-date">
   <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
@@ -674,7 +674,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.1%20HTML5%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0/">3.1 HTML5 新增元素</a>
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/1.JavaScript%E7%AE%80%E5%8F%B2/">JavaScript 简史</a>
     </h1>
   
 
@@ -682,217 +682,99 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-HTML5-新增元素"><a href="#1-HTML5-新增元素" class="headerlink" title="1. HTML5 新增元素"></a>1. HTML5 新增元素</h4><ol>
-<li>HTML5 定义的许多元素 HTML4 中也存在，但是，元素的含义已经发生了很大的变化，或者，其使用方式已经不同；</li>
-<li>HTML5 本身还新增了许多新的元素；</li>
-</ol>
-<ul>
-<li><p>HTML5 元素主要变化： 将元素语义与其内容呈现结果的影响分开；</p>
+        <h4 id="1-JavaScript-简史"><a href="#1-JavaScript-简史" class="headerlink" title="1. JavaScript 简史"></a>1. JavaScript 简史</h4><ul>
+<li><p>JavaScript 是为了处理表单验证，于 1995 年由就职 Netscape 公司的 Brendan Eich 编写，并于当年 2 月发布，取名：LiveScript；</p>
 </li>
-<li><p>HTML元素负责文档内容的结构和含义，而内容的呈现则由 CSS 样式控制；</p>
+<li><p>为了搭载媒体热炒 Java 的顺风车，改名 JavaScript</p>
 </li>
-<li><p>HTML5 中新增的大多数元素都具有含义；</p>
-<table>
-<thead>
-<tr>
-<th>element</th>
-<th>discription</th>
-<th>type</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>section</td>
-<td>文档节</td>
-<td></td>
-</tr>
-<tr>
-<td>nav</td>
-<td>导航</td>
-<td></td>
-</tr>
-<tr>
-<td>header</td>
-<td>页眉</td>
-<td></td>
-</tr>
-<tr>
-<td>article</td>
-<td>文章</td>
-<td></td>
-</tr>
-<tr>
-<td>aside</td>
-<td>文章侧栏</td>
-<td></td>
-</tr>
-<tr>
-<td>main</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>footer</td>
-<td>页脚</td>
-<td></td>
-</tr>
-<tr>
-<td>details</td>
-<td>元素的细节</td>
-<td></td>
-</tr>
-<tr>
-<td>summary / details</td>
-<td>元素可见的标题</td>
-<td></td>
-</tr>
-<tr>
-<td>dialog</td>
-<td>对话框窗口</td>
-<td></td>
-</tr>
-<tr>
-<td>dir</td>
-<td>目录列表</td>
-<td></td>
-</tr>
-<tr>
-<td>menu</td>
-<td>命令的菜单,列表</td>
-<td></td>
-</tr>
-<tr>
-<td>menuitem</td>
-<td>菜单项目</td>
-<td></td>
-</tr>
-<tr>
-<td>command</td>
-<td>命令按钮</td>
-<td></td>
-</tr>
-<tr>
-<td>fieldset</td>
-<td>围绕元素的边框(可用于表单内元素分组)</td>
-<td></td>
-</tr>
-<tr>
-<td>legend</td>
-<td>在边框上的标题</td>
-<td></td>
-</tr>
-<tr>
-<td>select</td>
-<td>选择列表(内联元素)</td>
-<td></td>
-</tr>
-<tr>
-<td>optgroup</td>
-<td>组合选择列表选项</td>
-<td></td>
-</tr>
-<tr>
-<td>option</td>
-<td>选择列表选项(也可做 datalist 选项)</td>
-<td></td>
-</tr>
-<tr>
-<td>iframe</td>
-<td>内联框架(不推荐)</td>
-<td></td>
-</tr>
-<tr>
-<td>figure</td>
-<td>媒介内容分组，与figcaption一同使用</td>
-<td></td>
-</tr>
-<tr>
-<td>figcaption</td>
-<td>图像标题，与figure一同使用</td>
-<td></td>
-</tr>
-<tr>
-<td>map</td>
-<td>图像映射</td>
-<td></td>
-</tr>
-<tr>
-<td>area</td>
-<td>图像区域</td>
-<td></td>
-</tr>
-<tr>
-<td>canvas</td>
-<td>图形容器(脚本来绘制图形)</td>
-<td></td>
-</tr>
-<tr>
-<td>video</td>
-<td>视频</td>
-<td></td>
-</tr>
-<tr>
-<td>source</td>
-<td>媒介源</td>
-<td></td>
-</tr>
-<tr>
-<td>track</td>
-<td>文本轨道</td>
-<td></td>
-</tr>
-<tr>
-<td>audio</td>
-<td>声音内容</td>
-<td></td>
-</tr>
-<tr>
-<td>blockquote</td>
-<td>块引用</td>
-<td></td>
-</tr>
-<tr>
-<td>address</td>
-<td>文档联系信息</td>
-<td></td>
-</tr>
-<tr>
-<td>center</td>
-<td>居中文本(不赞成使用)</td>
-<td></td>
-</tr>
-<tr>
-<td>spacer</td>
-<td>在水平和垂直方向插入空间(空元素)</td>
-<td></td>
-</tr>
-<tr>
-<td>pre</td>
-<td>预定义元素</td>
-<td><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/14/HTML/Elements%20Description/Pr%20Element/">参考文档</a></td>
-</tr>
-<tr>
-<td>caption</td>
-<td>标题</td>
-<td><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/14/HTML/Elements%20Description/Caption%20Element/">参考文档</a></td>
-</tr>
-<tr>
-<td>blockquote</td>
-<td>引自他处的内容</td>
-<td><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/14/HTML/Elements%20Description/Blockquote%20Element/">参考文档</a></td>
-</tr>
-</tbody></table>
+<li><p>1996 年 8 月，Microsoft 进入 Web 浏览器领域，在其 Internet Explorer3 中加入了名为 JScript 的 JavaScript;</p>
+</li>
+<li><p>1997 年，欧洲计算机制造商协会(ECMA:European Coumputer Manufacturers Association)指定协会下辖 39 号技术委员会，负责“标准化脚本语言的语法和语义”，定义了 ECMAScript 语言标准；</p>
+</li>
+<li><p>1998 年 ISO/IEC(国际标准化组织和国际电工委员会)采用了 ECMA-262 定义的 ECMAScript 作为标准，浏览器开发商开始致力于将 ECMAScript 作为各自的 JavaScript 实现的基础；</p>
+</li>
+<li><p>1998 年 10 月 W3C 推荐了<code>DOM Level 1</code>级别的文档对象模型(DOM: Document Object Model),</p>
+</li>
+<li><p>2009 年 12 月 ECMAScript 第五版(ES5)发行，新增： 原生 JSON 对象，继承，高级属性的定义，提出了严格模式；</p>
+</li>
+<li><p>2015 年 ECMAScript 第六版(ES6)发行，提出了更多的编程规定的方法；</p>
+</li>
+<li><p>到现在位置 ECMAScript 版本号已发行到 ES10；</p>
+</li>
+<li><p>Nodes 是 JavaScript 运行的宿主环境，于 2008 年发布，应用于服务器等后端编程；</p>
+</li>
+<li><p>现在 JavaScript 已经成为功能全面的前后端编程语言；</p>
+</li>
+<li><p>TypeScript： Microsoft 公司团队开发的通过添加 Type 实现对 JavaScript 的扩展；</p>
 </li>
 </ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E5%9B%9B%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[一、HTML 元素]</a></p>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[JavaScript 简介]</a></p>
 <h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.1%20HTML5%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0/" data-id="ckh1xhf200079trshfqtr6pmd" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/1.JavaScript%E7%AE%80%E5%8F%B2/" data-id="ckh1ziu590078a2shcugz5wxy" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/一、JavaScript简介/2.JavaScript实现" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/">JavaScript 实现</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-JavaScript-宿主环境"><a href="#1-JavaScript-宿主环境" class="headerlink" title="1.JavaScript 宿主环境"></a>1.JavaScript 宿主环境</h3><h3 id="2-JavaScript-组成"><a href="#2-JavaScript-组成" class="headerlink" title="2. JavaScript 组成"></a>2. JavaScript 组成</h3><ul>
+<li><p>ECMAScript</p>
+</li>
+<li><p>DOM：</p>
+</li>
+</ul>
+<p>DOM 经过扩展用于 HTML 的应用程序编程接口(API: Application Programming Interface),DOM 把整个页面映射为一个多层节点结构</p>
+<ul>
+<li>BOM</li>
+</ul>
+<h4 id="2-1ECMAScript"><a href="#2-1ECMAScript" class="headerlink" title="2.1ECMAScript"></a>2.1ECMAScript</h4><p><a href="">[2.1ECMAScript]</a></p>
+<h4 id="2-2DOM"><a href="#2-2DOM" class="headerlink" title="2.2DOM"></a>2.2DOM</h4><p><a href="">[2.2DOM]</a></p>
+<h4 id="2-3BOM"><a href="#2-3BOM" class="headerlink" title="2.3BOM"></a>2.3BOM</h4><p><a href="">[2.3BOM]</a></p>
+<h3 id="3-Node"><a href="#3-Node" class="headerlink" title="3.Node"></a>3.Node</h3><h4 id="3-1-Node-基础"><a href="#3-1-Node-基础" class="headerlink" title="3.1 Node 基础"></a>3.1 Node 基础</h4><p><a href="">[3.1 Node 基础]</a></p>
+<h4 id="3-2-Express-框架"><a href="#3-2-Express-框架" class="headerlink" title="3.2 Express 框架"></a>3.2 Express 框架</h4><p><a href="">[3.2 Express 框架]</a></p>
+<h4 id="3-3-Koa-框架"><a href="#3-3-Koa-框架" class="headerlink" title="3.3 Koa 框架"></a>3.3 Koa 框架</h4><p><a href="">[3.3 Koa 框架]</a></p>
+<h4 id="3-4-Nest-框架"><a href="#3-4-Nest-框架" class="headerlink" title="3.4 Nest 框架"></a>3.4 Nest 框架</h4><p><a href="">[3.4 Nest 框架]</a></p>
+<h3 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4. 参考文档"></a>4. 参考文档</h3><p><a href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[JavaScript 简介]</a></p>
+<h3 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://web-oyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/" data-id="ckh1ziu5a007aa2shh5bf0dbp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
 
     </footer>
   </div>
@@ -984,87 +866,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/1.1%20HTML%E5%8F%91%E5%B1%95%E7%AE%80%E5%8F%B2/" data-id="ckh1xhf21007ctrshbqob3ft7" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML/HTML Tags/三、HTML5元素/3.4 HTML5 新增表单相关属性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.4%20HTML5%20%E6%96%B0%E5%A2%9E%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.4%20HTML5%20%E6%96%B0%E5%A2%9E%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7/">3.5 HTML5 链接相关的属性</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%BA%94%E3%80%81HTML5%20%E5%85%83%E7%B4%A0/">[三、HTML5 元素]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.4%20HTML5%20%E6%96%B0%E5%A2%9E%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7/" data-id="ckh1xhf22007ftrshf80i19dt" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML/HTML Tags/三、HTML5元素/3.3 HTML5 新增 input 元素的 type 类型" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.3%20HTML5%20%E6%96%B0%E5%A2%9E%20input%20%E5%85%83%E7%B4%A0%E7%9A%84%20type%20%E7%B1%BB%E5%9E%8B/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.3%20HTML5%20%E6%96%B0%E5%A2%9E%20input%20%E5%85%83%E7%B4%A0%E7%9A%84%20type%20%E7%B1%BB%E5%9E%8B/">3.3 HTML5 新增 Input 元素的 Type 类型</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%BA%94%E3%80%81HTML5%20%E5%85%83%E7%B4%A0/">[三、HTML5 元素]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.3%20HTML5%20%E6%96%B0%E5%A2%9E%20input%20%E5%85%83%E7%B4%A0%E7%9A%84%20type%20%E7%B1%BB%E5%9E%8B/" data-id="ckh1xhf23007htrshgipm3r2o" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/1.1%20HTML%E5%8F%91%E5%B1%95%E7%AE%80%E5%8F%B2/" data-id="ckh1ziu5b007da2sh95b8a71b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -1328,7 +1130,248 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/1.2%20HTML%E5%85%83%E7%B4%A0%E5%88%9D%E6%8E%A2/" data-id="ckh1xhf24007itrsh054e9tls" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/1.2%20HTML%E5%85%83%E7%B4%A0%E5%88%9D%E6%8E%A2/" data-id="ckh1ziu5c007ga2shb6oj66h7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/三、HTML5元素/3.1 HTML5新增元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.1%20HTML5%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.1%20HTML5%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0/">3.1 HTML5 新增元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-HTML5-新增元素"><a href="#1-HTML5-新增元素" class="headerlink" title="1. HTML5 新增元素"></a>1. HTML5 新增元素</h4><ol>
+<li>HTML5 定义的许多元素 HTML4 中也存在，但是，元素的含义已经发生了很大的变化，或者，其使用方式已经不同；</li>
+<li>HTML5 本身还新增了许多新的元素；</li>
+</ol>
+<ul>
+<li><p>HTML5 元素主要变化： 将元素语义与其内容呈现结果的影响分开；</p>
+</li>
+<li><p>HTML元素负责文档内容的结构和含义，而内容的呈现则由 CSS 样式控制；</p>
+</li>
+<li><p>HTML5 中新增的大多数元素都具有含义；</p>
+<table>
+<thead>
+<tr>
+<th>element</th>
+<th>discription</th>
+<th>type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>section</td>
+<td>文档节</td>
+<td></td>
+</tr>
+<tr>
+<td>nav</td>
+<td>导航</td>
+<td></td>
+</tr>
+<tr>
+<td>header</td>
+<td>页眉</td>
+<td></td>
+</tr>
+<tr>
+<td>article</td>
+<td>文章</td>
+<td></td>
+</tr>
+<tr>
+<td>aside</td>
+<td>文章侧栏</td>
+<td></td>
+</tr>
+<tr>
+<td>main</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>footer</td>
+<td>页脚</td>
+<td></td>
+</tr>
+<tr>
+<td>details</td>
+<td>元素的细节</td>
+<td></td>
+</tr>
+<tr>
+<td>summary / details</td>
+<td>元素可见的标题</td>
+<td></td>
+</tr>
+<tr>
+<td>dialog</td>
+<td>对话框窗口</td>
+<td></td>
+</tr>
+<tr>
+<td>dir</td>
+<td>目录列表</td>
+<td></td>
+</tr>
+<tr>
+<td>menu</td>
+<td>命令的菜单,列表</td>
+<td></td>
+</tr>
+<tr>
+<td>menuitem</td>
+<td>菜单项目</td>
+<td></td>
+</tr>
+<tr>
+<td>command</td>
+<td>命令按钮</td>
+<td></td>
+</tr>
+<tr>
+<td>fieldset</td>
+<td>围绕元素的边框(可用于表单内元素分组)</td>
+<td></td>
+</tr>
+<tr>
+<td>legend</td>
+<td>在边框上的标题</td>
+<td></td>
+</tr>
+<tr>
+<td>select</td>
+<td>选择列表(内联元素)</td>
+<td></td>
+</tr>
+<tr>
+<td>optgroup</td>
+<td>组合选择列表选项</td>
+<td></td>
+</tr>
+<tr>
+<td>option</td>
+<td>选择列表选项(也可做 datalist 选项)</td>
+<td></td>
+</tr>
+<tr>
+<td>iframe</td>
+<td>内联框架(不推荐)</td>
+<td></td>
+</tr>
+<tr>
+<td>figure</td>
+<td>媒介内容分组，与figcaption一同使用</td>
+<td></td>
+</tr>
+<tr>
+<td>figcaption</td>
+<td>图像标题，与figure一同使用</td>
+<td></td>
+</tr>
+<tr>
+<td>map</td>
+<td>图像映射</td>
+<td></td>
+</tr>
+<tr>
+<td>area</td>
+<td>图像区域</td>
+<td></td>
+</tr>
+<tr>
+<td>canvas</td>
+<td>图形容器(脚本来绘制图形)</td>
+<td></td>
+</tr>
+<tr>
+<td>video</td>
+<td>视频</td>
+<td></td>
+</tr>
+<tr>
+<td>source</td>
+<td>媒介源</td>
+<td></td>
+</tr>
+<tr>
+<td>track</td>
+<td>文本轨道</td>
+<td></td>
+</tr>
+<tr>
+<td>audio</td>
+<td>声音内容</td>
+<td></td>
+</tr>
+<tr>
+<td>blockquote</td>
+<td>块引用</td>
+<td></td>
+</tr>
+<tr>
+<td>address</td>
+<td>文档联系信息</td>
+<td></td>
+</tr>
+<tr>
+<td>center</td>
+<td>居中文本(不赞成使用)</td>
+<td></td>
+</tr>
+<tr>
+<td>spacer</td>
+<td>在水平和垂直方向插入空间(空元素)</td>
+<td></td>
+</tr>
+<tr>
+<td>pre</td>
+<td>预定义元素</td>
+<td><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/14/HTML/Elements%20Description/Pr%20Element/">参考文档</a></td>
+</tr>
+<tr>
+<td>caption</td>
+<td>标题</td>
+<td><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/14/HTML/Elements%20Description/Caption%20Element/">参考文档</a></td>
+</tr>
+<tr>
+<td>blockquote</td>
+<td>引自他处的内容</td>
+<td><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/14/HTML/Elements%20Description/Blockquote%20Element/">参考文档</a></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E5%9B%9B%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[一、HTML 元素]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.1%20HTML5%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0/" data-id="ckh1ziu5d007ha2sh9blpfxjv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -1459,7 +1502,87 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.2%20HTML5%E6%96%B0%E5%A2%9E%E4%B8%BB%E4%BD%93%E5%85%83%E7%B4%A0/" data-id="ckh1xhf25007ltrsh41k7cs3u" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.2%20HTML5%E6%96%B0%E5%A2%9E%E4%B8%BB%E4%BD%93%E5%85%83%E7%B4%A0/" data-id="ckh1ziu5e007ka2sh7xswavle" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/三、HTML5元素/3.3 HTML5 新增 input 元素的 type 类型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.3%20HTML5%20%E6%96%B0%E5%A2%9E%20input%20%E5%85%83%E7%B4%A0%E7%9A%84%20type%20%E7%B1%BB%E5%9E%8B/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.3%20HTML5%20%E6%96%B0%E5%A2%9E%20input%20%E5%85%83%E7%B4%A0%E7%9A%84%20type%20%E7%B1%BB%E5%9E%8B/">3.3 HTML5 新增 Input 元素的 Type 类型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%BA%94%E3%80%81HTML5%20%E5%85%83%E7%B4%A0/">[三、HTML5 元素]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.3%20HTML5%20%E6%96%B0%E5%A2%9E%20input%20%E5%85%83%E7%B4%A0%E7%9A%84%20type%20%E7%B1%BB%E5%9E%8B/" data-id="ckh1ziu5f007la2shaz171kk0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/三、HTML5元素/3.4 HTML5 新增表单相关属性" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.4%20HTML5%20%E6%96%B0%E5%A2%9E%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.4%20HTML5%20%E6%96%B0%E5%A2%9E%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7/">3.5 HTML5 链接相关的属性</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%BA%94%E3%80%81HTML5%20%E5%85%83%E7%B4%A0/">[三、HTML5 元素]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.4%20HTML5%20%E6%96%B0%E5%A2%9E%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7/" data-id="ckh1ziu5g007oa2sh7vkb474z" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -1499,7 +1622,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.5%20HTML5%20%E9%93%BE%E6%8E%A5%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B1%9E%E6%80%A7/" data-id="ckh1xhf28007ntrshcmf91jx2" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.5%20HTML5%20%E9%93%BE%E6%8E%A5%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B1%9E%E6%80%A7/" data-id="ckh1ziu5h007pa2shhzxx6on1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -1585,7 +1708,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.6%20HTML5%20%E5%85%A8%E5%B1%80%E5%B1%9E/" data-id="ckh1xhf2a007qtrshh82r1k22" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.6%20HTML5%20%E5%85%A8%E5%B1%80%E5%B1%9E/" data-id="ckh1ziu5i007sa2shaw862nfj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -1700,7 +1823,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.1%20HTML%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" data-id="ckh1xhf2b007strshdyiydwu7" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.1%20HTML%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" data-id="ckh1ziu5j007ua2sh375ifu9k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -1740,7 +1863,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.10%20%E5%B5%8C%E5%85%A5%E5%85%83%E7%B4%A0/" data-id="ckh1xhf2c007utrsh4fzj49xz" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.10%20%E5%B5%8C%E5%85%A5%E5%85%83%E7%B4%A0/" data-id="ckh1ziu5l007xa2shhjc78re4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -1877,7 +2000,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.11%20%20HTML%20%E5%AE%9E%E4%BD%93/" data-id="ckh1xhf2d007wtrsh8adtfj0k" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.11%20%20HTML%20%E5%AE%9E%E4%BD%93/" data-id="ckh1ziu5m007za2shgwmf5tid" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -1937,7 +2060,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.12%20%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/" data-id="ckh1xhf2e007ytrsha91pekmr" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.12%20%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/" data-id="ckh1ziu5o0082a2shgnc73l37" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -1977,87 +2100,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.2%20HTML%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/" data-id="ckh1xhf2f0080trshb40z5kn0" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML/HTML Tags/二、HTML元素/2.3 HTML行内块级元素" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.3%20HTML%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.3%20HTML%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/">2.3 HTML行内块级元素</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E5%9B%9B%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.3%20HTML%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" data-id="ckh1xhf2g0082trsh7x712c7c" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML/HTML Tags/二、HTML元素/2.4 创建 HTML 文档" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.4%20%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.4%20%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3/">2.4 创建HTML文档</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E5%9B%9B%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.4%20%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3/" data-id="ckh1xhf2h0084trsh1nt8ess7" class="article-share-link">Share</a>
+      <a data-url="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.2%20HTML%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/" data-id="ckh1ziu5p0084a2shdzo1cknf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -2125,15 +2168,15 @@
           </li>
         
           <li>
-            <a href="/2020/10/28/English/3.%205English%20for%20TypeScript/">3.5English for TypeScript</a>
+            <a href="/2020/10/28/English/3.1English%20For%20ECMAScript/">3.1English for ECMAScript</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/28/English/3.2English%20For%20DOM/">3.2English for DOM</a>
           </li>
         
           <li>
             <a href="/2020/10/28/English/3.%20English%20for%20JavaScript/">3.English for JavaScript</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/28/English/3.1English%20For%20ECMAScript/">3.1English for ECMAScript</a>
           </li>
         
       </ul>
