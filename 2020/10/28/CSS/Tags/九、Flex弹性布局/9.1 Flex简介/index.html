@@ -7,15 +7,15 @@
   
   <title>9.1 Flex简介 | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Flex布局的容器是一个伸缩容器；  可以动态设置其容器中子元素的width和height,自适应Flex布局的容器的width和height；  Flex容器也可以设置伸缩比例和固定宽度；  Flex需要设置容器中的元素称为item(项目)；  元素的排列方向（主轴和交叉轴）；  支持元素是否自动换行；  设为Flex布局以后，子元素的float、clear和vertical-align属性将">
+  <meta name="description" content="1. Flex Layout弹性布局 Flex是Flexable Box，简称弹性布局;  Flex布局的容器是一个伸缩容器；  可以动态设置其容器中子元素的width和height,自适应Flex布局的容器的width和height；  任何一个块级元素都可以声明为 Flex Layout 123div.container &amp;#123;  display: flex&amp;#125;  行内元素也可以">
 <meta property="og:type" content="article">
 <meta property="og:title" content="9.1 Flex简介">
 <meta property="og:url" content="https://web-oyster.github.io/2020/10/28/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.1%20Flex%E7%AE%80%E4%BB%8B/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="Flex布局的容器是一个伸缩容器；  可以动态设置其容器中子元素的width和height,自适应Flex布局的容器的width和height；  Flex容器也可以设置伸缩比例和固定宽度；  Flex需要设置容器中的元素称为item(项目)；  元素的排列方向（主轴和交叉轴）；  支持元素是否自动换行；  设为Flex布局以后，子元素的float、clear和vertical-align属性将">
+<meta property="og:description" content="1. Flex Layout弹性布局 Flex是Flexable Box，简称弹性布局;  Flex布局的容器是一个伸缩容器；  可以动态设置其容器中子元素的width和height,自适应Flex布局的容器的width和height；  任何一个块级元素都可以声明为 Flex Layout 123div.container &amp;#123;  display: flex&amp;#125;  行内元素也可以">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-05T03:34:55.535Z">
+<meta property="article:modified_time" content="2020-11-05T03:57:21.400Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
@@ -89,24 +89,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
+        <h4 id="1-Flex-Layout弹性布局"><a href="#1-Flex-Layout弹性布局" class="headerlink" title="1. Flex Layout弹性布局"></a>1. Flex Layout弹性布局</h4><ul>
+<li><p>Flex是Flexable Box，简称<code>弹性布局</code>;</p>
+</li>
 <li><p>Flex布局的容器是一个伸缩容器；</p>
 </li>
 <li><p>可以动态设置其容器中子元素的<code>width</code>和<code>height</code>,自适应Flex布局的容器的<code>width</code>和<code>height</code>；</p>
 </li>
+<li><p>任何一个块级元素都可以声明为 Flex Layout</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>行内元素也可以声明为 Flex Layout</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span><span class="selector-class">.inline</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>不同内核的浏览器，必须加上其前缀</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: -webkit-flex; <span class="comment">/* Safari Chrome*/</span></span><br><span class="line">  <span class="attribute">display</span>: -moz-flex; <span class="comment">/* Firefox */</span></span><br><span class="line">  <span class="attribute">display</span>: -ms-flex; <span class="comment">/* IE */</span></span><br><span class="line">  <span class="attribute">display</span>: -o-flex; <span class="comment">/* Opera */</span></span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Flex容器也可以设置伸缩比例和固定宽度；</p>
 </li>
-<li><p>Flex需要设置容器中的元素称为item(项目)；</p>
-</li>
-<li><p>元素的排列方向（主轴和交叉轴）；</p>
+<li><p>Flex可以设置容器中元素的排列方向（主轴和交叉轴）；</p>
 </li>
 <li><p>支持元素是否自动换行；</p>
 </li>
 <li><p>设为Flex布局以后，子元素的float、clear和vertical-align属性将失效；</p>
 </li>
 </ul>
-<h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/CSS/Tutorial/%E4%B9%9D%E3%80%81Flex%20%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">[九、Flex 弹性布局]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/CSS/Tutorial/%E4%B9%9D%E3%80%81Flex%20%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">[九、Flex 弹性布局]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>

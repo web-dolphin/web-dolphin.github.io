@@ -7,15 +7,15 @@
   
   <title>9.2 Flex基本概念 | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.参考文档[九、Flex 弹性布局] 2. 联系方式[Email]">
+  <meta name="description" content="1.容器 采用 Flex 布局的元素，称为 Flex 容器（flex container），简称容器；  2.项目 容器中所有子元素自动成为容器成员，称为 Flex 项目（flex item）  3.主轴 main axis: flex布局主轴；  主轴设置为纵轴 1flex-direction: column; 主轴设置为水平轴 1flex-direction: row; 默认主轴方向为水平方向">
 <meta property="og:type" content="article">
 <meta property="og:title" content="9.2 Flex基本概念">
 <meta property="og:url" content="https://web-oyster.github.io/2020/10/28/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.2%20Flex%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="1.参考文档[九、Flex 弹性布局] 2. 联系方式[Email]">
+<meta property="og:description" content="1.容器 采用 Flex 布局的元素，称为 Flex 容器（flex container），简称容器；  2.项目 容器中所有子元素自动成为容器成员，称为 Flex 项目（flex item）  3.主轴 main axis: flex布局主轴；  主轴设置为纵轴 1flex-direction: column; 主轴设置为水平轴 1flex-direction: row; 默认主轴方向为水平方向">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-05T03:26:34.613Z">
+<meta property="article:modified_time" content="2020-11-05T04:20:56.920Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
@@ -89,8 +89,39 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/28/CSS/Tutorial/%E4%B9%9D%E3%80%81Flex%20%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">[九、Flex 弹性布局]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+        <h4 id="1-容器"><a href="#1-容器" class="headerlink" title="1.容器"></a>1.容器</h4><ul>
+<li>采用 Flex 布局的元素，称为 Flex 容器（flex container），简称<code>容器</code>；</li>
+</ul>
+<h4 id="2-项目"><a href="#2-项目" class="headerlink" title="2.项目"></a>2.项目</h4><ul>
+<li>容器中所有子元素自动成为容器成员，称为 Flex 项目（flex item）</li>
+</ul>
+<h4 id="3-主轴"><a href="#3-主轴" class="headerlink" title="3.主轴"></a>3.主轴</h4><ul>
+<li><p>main axis: flex布局主轴；</p>
+</li>
+<li><p>主轴设置为纵轴</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">flex-direction</span>: <span class="selector-tag">column</span>;</span><br></pre></td></tr></table></figure></li>
+<li><p>主轴设置为水平轴</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">flex-direction</span>: <span class="selector-tag">row</span>;</span><br></pre></td></tr></table></figure></li>
+<li><p>默认主轴方向为水平方向(从左到右)；</p>
+</li>
+<li><p>主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；</p>
+</li>
+<li><p>项目默认沿主轴排列，单个项目占据的主轴空间叫做main size；</p>
+</li>
+</ul>
+<h4 id="4-交叉轴"><a href="#4-交叉轴" class="headerlink" title="4.交叉轴"></a>4.交叉轴</h4><ul>
+<li><p>主轴确定后，与之垂直的方向称为交叉轴；</p>
+</li>
+<li><p>cross axis: flex布局中交叉轴；</p>
+</li>
+<li><p>默认交叉轴方向为垂直方向(从上到下)；</p>
+</li>
+<li><p>交叉轴的开始位置叫做cross start，结束位置叫做cross end，占据的交叉轴空间叫做cross size；</p>
+</li>
+</ul>
+<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5.参考文档"></a>5.参考文档</h4><p><a href="git@github.com:web-oyster/flex_layout.git">[源码]</a></p>
+<p><a href="https://web-oyster.github.io/2020/10/28/CSS/Tutorial/%E4%B9%9D%E3%80%81Flex%20%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">[九、Flex 弹性布局]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
