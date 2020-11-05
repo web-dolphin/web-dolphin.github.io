@@ -7,18 +7,22 @@
   
   <title>2.Compile Hero Plugin | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. VS Code 必备插件 自动编译：less, sass, scss, typescript, jade, pug and jsx.  2. 安装插件：略  编辑器右下角底部栏开关 Compile Hero 设置为: On  3. 配置 Settings.json 配置输出目录： assert&#x2F;js&#x2F; 1234567891011&quot;compile-hero&quot;: &amp;#123;">
+  <meta name="description" content="1. VS Code 必备插件 自动编译：less, sass, scss, typescript, jade, pug and jsx.  2. 安装插件：略  编辑器右下角底部栏开关 Compile Hero 设置为: On  3. 配置 Settings.json 配置输出目录： assert&#x2F;js&#x2F; 123456789101112131415161718&quot;compile-hero">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2.Compile Hero Plugin">
 <meta property="og:url" content="https://web-oyster.github.io/2020/10/23/VSCode/Tags/2.Compile%20Hero%20Plugin/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="1. VS Code 必备插件 自动编译：less, sass, scss, typescript, jade, pug and jsx.  2. 安装插件：略  编辑器右下角底部栏开关 Compile Hero 设置为: On  3. 配置 Settings.json 配置输出目录： assert&#x2F;js&#x2F; 1234567891011&quot;compile-hero&quot;: &amp;#123;">
+<meta property="og:description" content="1. VS Code 必备插件 自动编译：less, sass, scss, typescript, jade, pug and jsx.  2. 安装插件：略  编辑器右下角底部栏开关 Compile Hero 设置为: On  3. 配置 Settings.json 配置输出目录： assert&#x2F;js&#x2F; 123456789101112131415161718&quot;compile-hero">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BVAHtx.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BVZQ6U.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200829131927150.gif">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200829132027416.gif">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200829131927150.gif">
 <meta property="og:image" content="https://s1.ax1x.com/2020/10/24/BVmwee.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200829131958177.gif">
 <meta property="article:published_time" content="2020-10-22T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-03T07:34:09.247Z">
+<meta property="article:modified_time" content="2020-11-04T09:36:41.783Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="VS Code">
 <meta name="twitter:card" content="summary">
@@ -102,19 +106,26 @@
 </ul>
 <h4 id="3-配置-Settings-json"><a href="#3-配置-Settings-json" class="headerlink" title="3. 配置 Settings.json"></a>3. 配置 Settings.json</h4><ul>
 <li><p>配置输出目录： <code>assert/js/</code></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&quot;compile-hero&quot;: &#123;</span><br><span class="line">  &quot;disable-compile-files-on-did-save-code&quot;: false,</span><br><span class="line">  &quot;notification-toggle&quot;: false,</span><br><span class="line">  &quot;javascript-output-directory&quot;: &quot;../assert/js/&quot;,</span><br><span class="line">  &quot;typescript-output-directory&quot;: &quot;../assert/js/&quot;,</span><br><span class="line">  &quot;javascript-output-toggle&quot;: false,</span><br><span class="line">  &quot;sass-output-directory&quot;: &quot;../assert/css/&quot;,</span><br><span class="line">  &quot;less-output-directory&quot;: &quot;../assert/css/&quot;,</span><br><span class="line">  &quot;sass-output-toggle&quot;: true,</span><br><span class="line">  &quot;ignore&quot;: [&quot;src/test.js&quot;, &quot;*/test.scss&quot;, &quot;**/spec/*&quot;, &quot;**/src/**/*&quot;,&quot;*/less/*&quot;],</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&quot;compile-hero&quot;: &#123;</span><br><span class="line">  <span class="comment">//1.全局开关，true 为不开启自动编译， 默认 false 为开启自动编译</span></span><br><span class="line">  &quot;disable-compile-files-on-did-save-code&quot;: false,</span><br><span class="line">  &quot;notification-toggle&quot;: false,</span><br><span class="line">  <span class="comment">//2.javascript 输出的目录</span></span><br><span class="line">  &quot;javascript-output-directory&quot;: &quot;../assert/js/&quot;,</span><br><span class="line">  <span class="comment">//3.局部开关，true 为开启 javascript 自动编译，false 为不开启 javascript 自动编译</span></span><br><span class="line">  &quot;javascript-output-toggle&quot;: false,</span><br><span class="line">  &quot;typescript-output-directory&quot;: &quot;../assert/js/&quot;,</span><br><span class="line">  &quot;jtypescript-output-toggle&quot;: true,</span><br><span class="line">  <span class="comment">//4.sass 输出的目录</span></span><br><span class="line">  &quot;sass-output-directory&quot;: &quot;../assert/css/&quot;,</span><br><span class="line">  &quot;less-output-directory&quot;: &quot;../assert/css/&quot;,</span><br><span class="line">  <span class="comment">//5.局部开关，true 为开启 sass 自动编译，false 为不开启 sass 自动编译</span></span><br><span class="line">  &quot;sass-output-toggle&quot;: true,</span><br><span class="line">  &quot;less-output-toggle&quot;: true,</span><br><span class="line">  &quot;ignore&quot;: [&quot;src/test.js&quot;, &quot;*/test.scss&quot;, &quot;**/spec/*&quot;, &quot;**/src/**/*&quot;,&quot;*/less/*&quot;],</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Settings 配置示意图<br><img src="https://s1.ax1x.com/2020/10/24/BVZQ6U.png" alt="Settings"></p>
 </li>
 </ul>
 <h4 id="4-使用"><a href="#4-使用" class="headerlink" title="4. 使用"></a>4. 使用</h4><ul>
+<li><p>底边右下角设置, Compile Hero: On</p>
+<p><img src="https://img-blog.csdnimg.cn/20200829131927150.gif" alt="Compile Hero: On/Off"></p>
+</li>
 <li><p>按快捷键 (ctrl+s) 或者文件列表右键菜单选择 Compile File(s) 命令启动编译，将会在该文件的同级目录 assert/js 或者 assert/css 下生成编译后的文件，助你远离 webpack 和 gulp 等编译工具操作的繁琐；</p>
 </li>
-<li><p>按快捷键 (alt+shift+f) 或者文件列表右键菜单选择 Format Document 将会帮你自动格式化文件；</p>
+<li><p>按快捷键 (Ctrl+shift+I) 或者编辑文件选择 Format Document 将会帮你自动格式化文件；</p>
+<p><img src="https://img-blog.csdnimg.cn/20200829132027416.gif" alt="Format Document"></p>
 </li>
 <li><p>支持 less, scss, scss 等文件代码高亮；</p>
 </li>
 <li><p>支持在默认浏览器打开 html 文件；</p>
+</li>
+<li><p>支持编译Jade Pug</p>
+<p><img src="https://img-blog.csdnimg.cn/20200829131927150.gif" alt="Compile Jade"></p>
 </li>
 <li><p>支持压缩 javascript 和 css 文件</p>
 </li>
@@ -122,6 +133,7 @@
 </li>
 <li><p>可修改编译后目录和文件的输出位置: 文件列表点击插件 Setting =&gt;</p>
 <p><img src="https://s1.ax1x.com/2020/10/24/BVmwee.png" alt="Setting"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200829131958177.gif" alt="Setting"></p>
 </li>
 </ul>
 <h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a href="">[VS Code 安装、配置与使用]</a></p>
@@ -169,7 +181,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DataBase/">DataBase</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Full-Stack-Development/">Full Stack Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Github/">Github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS-Code/">VS Code</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DataBase/">DataBase</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Full-Stack-Development/">Full Stack Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Github/">Github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS-Code/">VS Code</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -189,7 +201,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">150</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">162</span></li></ul>
     </div>
   </div>
 
@@ -202,23 +214,23 @@
       <ul>
         
           <li>
-            <a href="/2020/10/28/English/1.English%20For%20HTML/">1.English for HTML</a>
+            <a href="/2020/10/28/CSS/Tutorial/%E4%B8%83%E3%80%81Position%E5%AE%9A%E4%BD%8D/">七、Position定位</a>
           </li>
         
           <li>
-            <a href="/2020/10/28/English/2.English%20For%20CSS/">2.English for CSS</a>
+            <a href="/2020/10/28/CSS/Tutorial/%E4%B8%89%E3%80%81%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">三、盒子模型</a>
           </li>
         
           <li>
-            <a href="/2020/10/28/English/3.1English%20For%20ECMAScript/">3.1English for ECMAScript</a>
+            <a href="/2020/10/28/CSS/Tutorial/%E4%B9%9D%E3%80%81Flex%20%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">九、Flex弹性布局</a>
           </li>
         
           <li>
-            <a href="/2020/10/28/English/3.2English%20For%20DOM/">3.2English for DOM</a>
+            <a href="/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E9%80%89%E6%8B%A9%E5%99%A8/">二、CSS 选择器</a>
           </li>
         
           <li>
-            <a href="/2020/10/28/English/3.%20English%20for%20JavaScript/">3.English for JavaScript</a>
+            <a href="/2020/10/28/CSS/Tutorial/%E4%BA%94%E3%80%81%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/">五、文本样式</a>
           </li>
         
       </ul>
