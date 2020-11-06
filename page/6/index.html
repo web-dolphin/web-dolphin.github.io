@@ -1221,19 +1221,30 @@
 <li><p>multiparty可以设置上传文件的保存路径、限制文件的大小…</p>
 </li>
 <li><p>对于涉及文件上传的表单，必须设置<form enctype="multipart/form-data"></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> multipart = <span class="built_in">require</span>(<span class="string">&#x27;connect-multiparty&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> multipartMiddleware = multipart();</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">&#x27;/&#x27;</span>, multipartMiddleware, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> res.json(&#123;</span><br><span class="line">    data:req.files</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
 <h4 id="8-配置mongoose链接"><a href="#8-配置mongoose链接" class="headerlink" title="8. 配置mongoose链接"></a>8. 配置mongoose链接</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> connect = <span class="built_in">require</span>(<span class="string">&#x27;./config/connect&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
-<h4 id="9-安装-配置cookies-key-value"><a href="#9-安装-配置cookies-key-value" class="headerlink" title="9. 安装/配置cookies: (key/value)"></a>9. 安装/配置cookies: (key/value)</h4><p>详见： Cookies 安装与配置</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> cookieParser=<span class="built_in">require</span>(<span class="string">&quot;cookie-parser&quot;</span>)</span><br><span class="line"><span class="keyword">const</span> session = <span class="built_in">require</span>(<span class="string">&#x27;express-session&#x27;</span>)</span><br><span class="line">app.use(cookieParser())</span><br><span class="line">app.use(session(&#123;</span><br><span class="line">  cookieName: <span class="string">&#x27;session&#x27;</span>,</span><br><span class="line">  secret: <span class="string">&#x27;random_string_goes_here&#x27;</span>,</span><br><span class="line">  duration: <span class="number">30</span> * <span class="number">60</span> * <span class="number">1000</span>,</span><br><span class="line">  activeDuration: <span class="number">5</span> * <span class="number">60</span> * <span class="number">1000</span>,</span><br><span class="line">&#125;))  </span><br></pre></td></tr></table></figure>
+<h4 id="9-安装-配置cookies-key-value"><a href="#9-安装-配置cookies-key-value" class="headerlink" title="9. 安装/配置cookies: (key/value)"></a>9. 安装/配置cookies: (key/value)</h4><ul>
+<li><p>详见： Cookies 安装与配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> cookieParser=<span class="built_in">require</span>(<span class="string">&quot;cookie-parser&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> session = <span class="built_in">require</span>(<span class="string">&#x27;express-session&#x27;</span>)</span><br><span class="line"></span><br><span class="line">app.use(cookieParser())</span><br><span class="line"></span><br><span class="line">app.use(session(&#123;</span><br><span class="line">  cookieName: <span class="string">&#x27;session&#x27;</span>,</span><br><span class="line">  secret: <span class="string">&#x27;random_string_goes_here&#x27;</span>,</span><br><span class="line">  duration: <span class="number">30</span> * <span class="number">60</span> * <span class="number">1000</span>,</span><br><span class="line">  activeDuration: <span class="number">5</span> * <span class="number">60</span> * <span class="number">1000</span>,</span><br><span class="line">&#125;))  </span><br></pre></td></tr></table></figure>
 
-<h4 id="10-安装-配置express-session-connect-mongo"><a href="#10-安装-配置express-session-connect-mongo" class="headerlink" title="10. 安装 / 配置express-session / connect-mongo"></a>10. 安装 / 配置express-session / connect-mongo</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> session = <span class="built_in">require</span>(<span class="string">&#x27;express-session&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> MongoStore = <span class="built_in">require</span>(<span class="string">&#x27;connect-mongo&#x27;</span>)(session)</span><br><span class="line"></span><br><span class="line">app.use(session(&#123; </span><br><span class="line">	secret:<span class="string">&#x27;anything&#x27;</span>,        <span class="comment">//服务器生成session的签名，可以是任意字符串，用于加密</span></span><br><span class="line">	name: <span class="string">&#x27;&#x27;</span> ,                <span class="comment">//返回给客户端的cookie名称，默认为connect.sid</span></span><br><span class="line">	resave: <span class="literal">false</span>,            <span class="comment">//强制保存session，即使没有变化，默认值为true</span></span><br><span class="line">	saveUninitialized:<span class="literal">true</span>,   <span class="comment">//强制将未初始化的session存储，默认为true</span></span><br><span class="line">	cookie:&#123; <span class="attr">secure</span>:<span class="literal">false</span> &#125;   <span class="comment">//设置cookie，maxAge、path、domain...</span></span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"> app.use(session(&#123;</span><br><span class="line">	secret:<span class="string">&#x27;1234&#x27;</span>, </span><br><span class="line">	resave:<span class="literal">false</span>, </span><br><span class="line">	saveUninitialized:<span class="literal">true</span>,</span><br><span class="line">	cookie: &#123; <span class="attr">maxAge</span>:<span class="number">1000</span>*<span class="number">60</span>*<span class="number">30</span> &#125;,  <span class="comment">//在浏览器未关闭的情况下，30min后过期</span></span><br><span class="line">	rooling:<span class="literal">true</span>,                   <span class="comment">//默认false，每次请求时强行设置cookie，这将会重置cookie过期时间</span></span><br><span class="line">	store:<span class="keyword">new</span> MongoStore(&#123;</span><br><span class="line">		url: <span class="string">&#x27;mongodb://127.0.0.1:27017/student&#x27;</span>,  <span class="comment">//数据库地址</span></span><br><span class="line">		touchAfter: <span class="number">24</span>*<span class="number">3600</span>,                        <span class="comment">//不管多少次请求，24小时内只更新一次session，除非在 app.use(session(&#123;</span></span><br><span class="line">    		secret:<span class="string">&#x27;1234&#x27;</span>, </span><br><span class="line">    		resave:<span class="literal">false</span>, </span><br><span class="line">    		saveUninitialized:<span class="literal">true</span>,</span><br><span class="line">        cookie: &#123; <span class="attr">maxAge</span>:<span class="number">1000</span>*<span class="number">60</span>*<span class="number">30</span> &#125;,              <span class="comment">//在浏览器未关闭的情况下，30min后过期</span></span><br><span class="line">        rooling:<span class="literal">true</span>,                  <span class="comment">//默认false，每次请求时强行设置cookie，这将会重置cookie过期时间</span></span><br><span class="line">        store:<span class="keyword">new</span> MongoStore(&#123;</span><br><span class="line">            url: <span class="string">&#x27;mongodb://127.0.0.1:27017/student&#x27;</span>, <span class="comment">//数据库地址</span></span><br><span class="line">            touchAfter: <span class="number">24</span>*<span class="number">3600</span> <span class="comment">//不管多少次请求，24小时内只更新一次session，除在session数据上更改了内容</span></span><br><span class="line">        &#125;) </span><br><span class="line">	&#125;) </span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="10-安装-配置express-session-connect-mongo"><a href="#10-安装-配置express-session-connect-mongo" class="headerlink" title="10. 安装 / 配置express-session / connect-mongo"></a>10. 安装 / 配置express-session / connect-mongo</h4><ul>
+<li><p>session</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> session = <span class="built_in">require</span>(<span class="string">&#x27;express-session&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> MongoStore = <span class="built_in">require</span>(<span class="string">&#x27;connect-mongo&#x27;</span>)(session)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 一、配置方案</span></span><br><span class="line">app.use(session(&#123;</span><br><span class="line">  <span class="comment">//1.服务器生成session的签名，可以是任意字符串，用于加密</span></span><br><span class="line">  secret:<span class="string">&#x27;1234&#x27;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">//2.强制保存session，即使没有变化，默认值为true  </span></span><br><span class="line">  resave:<span class="literal">false</span>, </span><br><span class="line"></span><br><span class="line">  <span class="comment">//3.强制将未初始化的session存储，默认为true    </span></span><br><span class="line">  saveUninitialized:<span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">//4.设置cookie，maxAge、path、domain...  </span></span><br><span class="line">  cookie: &#123; <span class="attr">maxAge</span>:<span class="number">1000</span>*<span class="number">60</span>*<span class="number">30</span> &#125;, </span><br><span class="line"></span><br><span class="line">  <span class="comment">//5. 默认false，每次请求时强行设置cookie，这将会重置cookie过期时间 </span></span><br><span class="line">  rooling:<span class="literal">true</span>,                   </span><br><span class="line">  store:<span class="keyword">new</span> MongoStore(&#123;</span><br><span class="line">    <span class="comment">//6. 数据库地址</span></span><br><span class="line">    url: <span class="string">&#x27;mongodb://127.0.0.1:27017/student&#x27;</span>,  </span><br><span class="line">    touchAfter: <span class="number">24</span>*<span class="number">3600</span>,   </span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)) </span><br></pre></td></tr></table></figure>
 
-<h4 id="11-跨域"><a href="#11-跨域" class="headerlink" title="11. 跨域"></a>11. 跨域</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;cors&#x27;</span>)()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="11-跨域"><a href="#11-跨域" class="headerlink" title="11. 跨域"></a>11. 跨域</h4><ul>
+<li><p>Cors插件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;cors&#x27;</span>)()</span><br></pre></td></tr></table></figure>
 
+</li>
+</ul>
 <h4 id="12-参考文档"><a href="#12-参考文档" class="headerlink" title="12.参考文档"></a>12.参考文档</h4><p><a href="">[]</a></p>
 <h4 id="13-联系方式"><a href="#13-联系方式" class="headerlink" title="13. 联系方式"></a>13. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
@@ -1299,6 +1310,74 @@
     </div>
     <footer class="article-footer">
       <a data-url="https://web-oyster.github.io/2020/10/28/Node/Express/Tags/01.%E5%88%9B%E5%BB%BAExpress%20%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="ckh5m9dp10002z1shb7v7h7j7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Express/Tags/Mongodb安装为32位windows服务" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Node/Express/Tags/Mongodb%E5%AE%89%E8%A3%85%E4%B8%BA32%E4%BD%8Dwindows%E6%9C%8D%E5%8A%A1/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Node/Express/Tags/Mongodb%E5%AE%89%E8%A3%85%E4%B8%BA32%E4%BD%8Dwindows%E6%9C%8D%E5%8A%A1/">Mongodb安装为32位windows服务</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-创建安装目录"><a href="#1-创建安装目录" class="headerlink" title="1. 创建安装目录"></a>1. 创建安装目录</h4><ul>
+<li><p>创建db目录：F:\mongodb\data\db</p>
+</li>
+<li><p>创建log目录: F:\mongodb\data\log\</p>
+</li>
+</ul>
+<h5 id="mongoDB-bin-目录"><a href="#mongoDB-bin-目录" class="headerlink" title="mongoDB/bin/目录"></a>mongoDB/bin/目录</h5><ul>
+<li><p>启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; mongod --dbpath F:\mongodb\data\db --storageEngine=mmapv1</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="配置：-将MongoDB安装为windows服务"><a href="#配置：-将MongoDB安装为windows服务" class="headerlink" title="配置： 将MongoDB安装为windows服务"></a>配置： 将MongoDB安装为windows服务</h4><ul>
+<li><p>新建mongod.cfg文件，放在mongodb安装文件的bin目录下，内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">port=27017</span><br><span class="line">journal=<span class="literal">true</span></span><br><span class="line">logappend=<span class="literal">true</span></span><br><span class="line">storageEngine=mmapv1</span><br><span class="line">dbpath=F:\mongodb\data\db</span><br><span class="line">logpath=F:\mongodb\data\<span class="built_in">log</span>\mongodb.log</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>管理员身份</code>打开cmd命令行，进入MongoDB安装目录的 bin目录：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin&gt;mongod --config <span class="string">&quot;C:\mongodb\mongodb.config&quot;</span>  --install --serviceName <span class="string">&quot;MongoDB&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>如图结果存放在日志文件中，查看日志发现已经成功。如果失败有可能没有使用管理员身份，遭到拒绝访问</p>
+<h4 id="启动mongodb服务"><a href="#启动mongodb服务" class="headerlink" title="启动mongodb服务"></a>启动mongodb服务</h4><ul>
+<li><p>启动windows服务</p>
+</li>
+<li><p>打开cmd输入<code>services.msc</code>，点击启动,查看服务可以看到MongoDB服务;</p>
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a href="">[]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://web-oyster.github.io/2020/10/28/Node/Express/Tags/Mongodb%E5%AE%89%E8%A3%85%E4%B8%BA32%E4%BD%8Dwindows%E6%9C%8D%E5%8A%A1/" data-id="ckh5n5dhv0000l4shcka60rf2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -1656,53 +1735,6 @@
 
 
   
-    <article id="post-Git/Tutorial/Git教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Git/">Git</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">Git教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Git-创建与管理本地仓库"><a href="#1-Git-创建与管理本地仓库" class="headerlink" title="1. Git 创建与管理本地仓库"></a>1. Git 创建与管理本地仓库</h4><p><a href="https://web-oyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">[1. Git 创建与管理本地仓库]</a></p>
-<h4 id="2-快速创建-Github-远程仓库"><a href="#2-快速创建-Github-远程仓库" class="headerlink" title="2.快速创建 Github 远程仓库"></a>2.快速创建 Github 远程仓库</h4><p><a href="https://web-oyster.github.io/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[2.快速创建 Github 远程仓库]</a></p>
-<h4 id="3-Git-远程仓库管理"><a href="#3-Git-远程仓库管理" class="headerlink" title="3.Git 远程仓库管理"></a>3.Git 远程仓库管理</h4><p><a href="https://web-oyster.github.io/2020/10/25/Git/Remote%20Repostories/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">[Git 远程仓库管理]</a></p>
-<h4 id="4-Git-command-操作命令"><a href="#4-Git-command-操作命令" class="headerlink" title="4.Git command 操作命令"></a>4.Git command 操作命令</h4><p><a href="https://web-oyster.github.io/2020/10/25/Git/Local%20Repostories/Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/">[Git command 操作命令]</a></p>
-<h4 id="5-Git日志与回退版本号"><a href="#5-Git日志与回退版本号" class="headerlink" title="5.Git日志与回退版本号"></a>5.Git日志与回退版本号</h4><p><a href="https://web-oyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/">[Git日志与回退版本号]</a></p>
-<h4 id="6-Git本地仓库设置签名"><a href="#6-Git本地仓库设置签名" class="headerlink" title="6.Git本地仓库设置签名"></a>6.Git本地仓库设置签名</h4><p><a href="https://web-oyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/">[Git本地仓库设置签名]</a></p>
-<h4 id="7-联系方式"><a href="#7-联系方式" class="headerlink" title="7. 联系方式"></a>7. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://web-oyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/" data-id="ckh1ziu20001da2sh5tby5e78" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -1728,7 +1760,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">23</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">25</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">23</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">25</span></li></ul>
     </div>
   </div>
 
@@ -1738,7 +1770,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">176</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">177</span></li></ul>
     </div>
   </div>
 
