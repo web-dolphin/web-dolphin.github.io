@@ -67,6 +67,63 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-VSCode/Tags/40. Snippets" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/40.%20Snippets/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/40.%20Snippets/">40. Snippets</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Snippets-配置"><a href="#1-Snippets-配置" class="headerlink" title="1. Snippets 配置"></a>1. Snippets 配置</h4><ul>
+<li><p>示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/11/0gwZkT.png" alt="示意图"></p>
+</li>
+<li><p>设置html5: html.json</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;html5&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;prefix&quot;</span>: <span class="string">&quot;html5&quot;</span>,</span><br><span class="line">    <span class="string">&quot;body&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;&lt;!DOCTYPE html&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;&lt;html lang=\&quot;en\&quot;&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;head&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;meta charset=\&quot;UTF-8\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;meta name=\&quot;viewport\&quot; content=\&quot;width=device-width, initial-scale=1.0\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;title&gt;Document&lt;/title&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;link rel=\&quot;shortcut icon\&quot; href=\&quot;imgs/favicon.ico\&quot; type=\&quot;image/x-icon\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;link rel=\&quot;stylesheet\&quot; href=\&quot;css/index.css\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;script src=\&quot;js/vue.js\&quot;&gt;&lt;/script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;/head&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;body&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;div id=\&quot;app\&quot;&gt;&lt;/div&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;script&gt;&lt;/script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;/body&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;&lt;/html&gt;&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/11/0gw30x.png" alt="示意图"></p>
+</li>
+</ul>
+<ul>
+<li><p>设置Vue: html.json</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;Vue&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;prefix&quot;</span>: <span class="string">&quot;vue&quot;</span>,</span><br><span class="line">    <span class="string">&quot;body&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;&lt;!DOCTYPE html&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;&lt;html lang=\&quot;zh-CN\&quot;&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;head&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;title&gt;<span class="variable">$1</span>&lt;/title&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;meta charset=\&quot;UTF-8\&quot;&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;meta name=\&quot;viewport\&quot; content=\&quot;width=device-width, initial-scale=1\&quot;&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;link rel=\&quot;shortcut icon\&quot; href=\&quot;imgs/favicon.ico\&quot; type=\&quot;image/x-icon\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;link rel=\&quot;stylesheet\&quot; href=\&quot;css/index.css\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;script src=\&quot;js/vue.js\&quot;&gt;&lt;/script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;script src=\&quot;https://cdn.bootcss.com/vue/2.2.2/vue.min.js\&quot;&gt;&lt;/script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;/head&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;body&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;div id=\&quot;app\&quot;&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t&lt;hello title=\&quot;title: title\&quot;&gt;&lt;/hello&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;/div&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\tVue.component(\&quot;hello\&quot;, &#123;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\tprops: &#123; title: String &#125;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\t\tdata() &#123;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\t\t\treturn &#123;&#125;;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\t\t&#125;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\tmethods: &#123;&#125;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\ttemplate: `&lt;div&gt;&lt;div&gt;Hello World&lt;/div&gt;&lt;/div&gt;`,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t&#125;);&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\tconst vm = new Vue(&#123;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\tel: \&quot;#app\&quot;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\tdata: &#123;&#125;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\tmethods: &#123;&#125;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t&#125;);&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;/script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;/body&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;&lt;/html&gt;&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;description&quot;</span>: <span class="string">&quot;vue - Defines a template for a vue &amp; html5 document&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://web-oyster.github.io/2020/10/23/VSCode/Tags/40.%20Snippets/" data-id="ckh72lct6006bj1sh7fcgf22n" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-VSCode/Tags/41. VS Code快速编写HTML代码" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/23/VSCode/Tags/41.%20VS%20Code%E5%BF%AB%E9%80%9F%E7%BC%96%E5%86%99HTML%E4%BB%A3%E7%A0%81/" class="article-date">
@@ -998,7 +1055,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">23</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">25</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">23</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">20</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">25</span></li></ul>
     </div>
   </div>
 
@@ -1008,7 +1065,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">177</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">177</span></li></ul>
     </div>
   </div>
 
@@ -1025,6 +1082,10 @@
           </li>
         
           <li>
+            <a href="/2020/11/03/CSS/Tags/%E5%8D%81%E4%BA%8C%E3%80%81Transform%E5%8F%98%E6%8D%A2/12.20%20Transform%E6%A1%88%E4%BE%8B/">12.1 Transform案例</a>
+          </li>
+        
+          <li>
             <a href="/2020/10/28/English/1.English%20For%20HTML/">1.English for HTML</a>
           </li>
         
@@ -1034,10 +1095,6 @@
         
           <li>
             <a href="/2020/10/28/English/3.%205English%20for%20TypeScript/">3.5English for TypeScript</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/28/English/3.%20English%20for%20JavaScript/">3.English for JavaScript</a>
           </li>
         
       </ul>
