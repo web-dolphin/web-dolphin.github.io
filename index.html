@@ -93,10 +93,13 @@
 <li>transform 属性向元素应用 2D 或 3D 转换；</li>
 <li>该属性允许我们对元素进行旋转、缩放、移动或倾斜操作</li>
 </ol>
-<h4 id="2-Transform语法"><a href="#2-Transform语法" class="headerlink" title="2.Transform语法"></a>2.Transform语法</h4>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">selector</span>&gt; &#123;</span><br><span class="line">  <span class="attribute">transform</span>: &lt;value&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object.style.transform = &lt;value&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="3-Transform属性值"><a href="#3-Transform属性值" class="headerlink" title="3.Transform属性值"></a>3.Transform属性值</h4><ul>
+<h4 id="2-Transform语法"><a href="#2-Transform语法" class="headerlink" title="2.Transform语法"></a>2.Transform语法</h4><ul>
+<li><p>CSS 语法</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">selector</span>&gt; &#123;</span><br><span class="line">  <span class="attribute">transform</span>: &lt;value&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JS语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object.style.transform = &lt;value&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="3-Transform属性值"><a href="#3-Transform属性值" class="headerlink" title="3.Transform属性值"></a>3.Transform属性值</h4></li>
 <li><p>表一：属性</p>
 <table>
 <thead>
@@ -145,9 +148,55 @@
 <td>scale3d(x,y,z)</td>
 <td>3D 缩放转换</td>
 </tr>
+<tr>
+<td>scaleX(x)</td>
+<td>设置 X 轴的值来定义缩放转换</td>
+</tr>
+<tr>
+<td>scaleY(y)</td>
+<td>设置 Y 轴的值来定义缩放转换</td>
+</tr>
+<tr>
+<td>scaleZ(z)</td>
+<td>设置 Z 轴的值来定义缩放转换</td>
+</tr>
+<tr>
+<td>rotate(angle)</td>
+<td>2D 旋转，参数为角度</td>
+</tr>
+<tr>
+<td>rotate3d(x,y,z,angle)</td>
+<td>3D 旋转</td>
+</tr>
+<tr>
+<td>rotateX(angle)</td>
+<td>定义沿着 X 轴的 3D 旋转</td>
+</tr>
+<tr>
+<td>rotateY(angle)</td>
+<td>定义沿着 Y 轴的 3D 旋转</td>
+</tr>
+<tr>
+<td>rotateZ(angle)</td>
+<td>定义沿着 Z 轴的 3D 旋转</td>
+</tr>
+<tr>
+<td>skew(x-angle,y-angle)</td>
+<td>沿着 X 和 Y 轴的 2D 倾斜转换</td>
+</tr>
+<tr>
+<td>skewX(angle)</td>
+<td>沿着 X 轴的 2D 倾斜转换</td>
+</tr>
+<tr>
+<td>skewY(angle)</td>
+<td>沿着 Y 轴的 2D 倾斜转换</td>
+</tr>
+<tr>
+<td>perspective(n)</td>
+<td>为 3D 转换元素定义透视视图</td>
+</tr>
 </tbody></table>
-<p>|scaleX(x)|设置 X 轴的值来定义缩放转换|<br>|scaleY(y)|设置 Y 轴的值来定义缩放转换|<br>|scaleZ(z)|设置 Z 轴的值来定义缩放转换|<br>|rotate(angle)|2D 旋转，参数为角度|<br>|rotate3d(x,y,z,angle)|3D 旋转|</p>
-<p>|rotateX(angle)|定义沿着 X 轴的 3D 旋转|<br>|rotateY(angle)|定义沿着 Y 轴的 3D 旋转|<br>|rotateZ(angle)|定义沿着 Z 轴的 3D 旋转|<br>|skew(x-angle,y-angle)|沿着 X 和 Y 轴的 2D 倾斜转换|<br>|skewX(angle)|沿着 X 轴的 2D 倾斜转换|<br>|skewY(angle)|沿着 Y 轴的 2D 倾斜转换|<br>|perspective(n)|为 3D 转换元素定义透视视图|</p>
 </li>
 </ul>
 <h4 id="4-案例"><a href="#4-案例" class="headerlink" title="4.案例"></a>4.案例</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-oyster/3d_animation">[3d_animation]</a></p>
