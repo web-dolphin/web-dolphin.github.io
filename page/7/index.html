@@ -787,11 +787,11 @@
 
 </li>
 </ul>
-<h4 id="3-方法调用"><a href="#3-方法调用" class="headerlink" title="3. 方法调用"></a>3. 方法调用</h4>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> object = &#123;</span><br><span class="line">  name : <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">    age:<span class="number">20</span>,</span><br><span class="line">    say:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;my name is: &quot;</span> + <span class="built_in">this</span>.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">object.say()</span><br></pre></td></tr></table></figure>
-<ul>
+<h4 id="3-方法调用"><a href="#3-方法调用" class="headerlink" title="3. 方法调用"></a>3. 方法调用</h4><ul>
 <li><p>方法的调用表达式本身是一个对象属性访问表达式；</p>
 </li>
 <li><p>方法调用的参数和返回值与普通函数调用完全相同；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> object = &#123;</span><br><span class="line">  name : <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">    age:<span class="number">20</span>,</span><br><span class="line">    say:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;my name is: &quot;</span> + <span class="built_in">this</span>.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">object.say()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>方法调用与函数调用的区别： 在与调用上下文。方法调用的属性表达式由两部分组成： 对象和属性名称，因此，法法调用的上下文是调用方法的对象，函数体可以使用关键字this引用该对象；</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> calculator = &#123;<span class="comment">//对象直接量</span></span><br><span class="line">  operator1: <span class="number">10</span>,</span><br><span class="line">  operator2: <span class="number">20</span>,</span><br><span class="line">  add: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.result = <span class="built_in">this</span>.operator1 + <span class="built_in">this</span>.operator2;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.result</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> sum = calculator.add()</span><br><span class="line"><span class="built_in">console</span>.log(sum)</span><br><span class="line"><span class="built_in">console</span>.log(calculator.result)</span><br></pre></td></tr></table></figure>
@@ -839,19 +839,28 @@
 </li>
 </ul>
 <h4 id="5-间接调用"><a href="#5-间接调用" class="headerlink" title="5. 间接调用"></a>5. 间接调用</h4><ol>
-<li><p>JavaScript对象包含两个方法，都显示地指定调用所需的this值，也就是说，任何函数都可以作为任意对象的方方法来调用，哪怕这个函数不是那个对象的方法。两个方法都可以指定调用的实参</p>
+<li><p>JavaScript对象包含两个方法，都显示地指定调用所需的this值，也就是说，任何函数都可以作为任意对象的方法来调用，哪怕这个函数不是那个对象的方法。两个方法都可以指定调用的实参</p>
 </li>
 <li><p>通过call()调用</p>
 </li>
 </ol>
 <ul>
-<li>call()方法使用自己的实参列表作为函数的实参。</li>
+<li><p>call()方法使用自己的实参列表作为函数的实参。</p>
+</li>
+<li><p>语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> object = &#123;&#125;</span><br><span class="line">fn.call(object)</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <ol start="3">
 <li>通过apply()调用</li>
 </ol>
 <ul>
-<li>apply()方法则要求以数组的形式传入参数</li>
+<li><p>apply()方法则要求以数组的形式传入参数</p>
+</li>
+<li><p>语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> object = &#123;&#125;</span><br><span class="line">fn.apply(object)</span><br></pre></td></tr></table></figure>
+
+</li>
 </ul>
 <p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.12Call()%E6%96%B9%E6%B3%95%E4%B8%8EApply()%E6%96%B9%E6%B3%95/">[2.8.12Call()方法与Apply()方法]</a></p>
 <h4 id="6-参考文档"><a href="#6-参考文档" class="headerlink" title="6. 参考文档"></a>6. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
