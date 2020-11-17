@@ -7,15 +7,15 @@
   
   <title>2.9 HTML表单元素 | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.参考文档[二、HTML 元素] 2. 联系方式[Email]">
+  <meta name="description" content="1. 表单元素的作用 收集客户信息  2. 表单元素组成 表单域  表单控件  提示信息   3. 表单元素 form: 表单域   1&lt;form action&#x3D;&quot;http:&#x2F;&#x2F;localhost:3000&#x2F;login&quot; methods&#x3D;&quot;post&quot;&gt;&lt;&#x2F;form&gt;  input: 输入框 1&lt;input type&#x3D;&quot;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2.9 HTML表单元素">
 <meta property="og:url" content="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.9%20%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="1.参考文档[二、HTML 元素] 2. 联系方式[Email]">
+<meta property="og:description" content="1. 表单元素的作用 收集客户信息  2. 表单元素组成 表单域  表单控件  提示信息   3. 表单元素 form: 表单域   1&lt;form action&#x3D;&quot;http:&#x2F;&#x2F;localhost:3000&#x2F;login&quot; methods&#x3D;&quot;post&quot;&gt;&lt;&#x2F;form&gt;  input: 输入框 1&lt;input type&#x3D;&quot;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-09T00:19:21.689Z">
+<meta property="article:modified_time" content="2020-11-16T10:05:46.780Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
@@ -89,7 +89,109 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+        <h4 id="1-表单元素的作用"><a href="#1-表单元素的作用" class="headerlink" title="1. 表单元素的作用"></a>1. 表单元素的作用</h4><ul>
+<li>收集客户信息</li>
+</ul>
+<h4 id="2-表单元素组成"><a href="#2-表单元素组成" class="headerlink" title="2. 表单元素组成"></a>2. 表单元素组成</h4><ul>
+<li><p>表单域</p>
+</li>
+<li><p>表单控件</p>
+</li>
+<li><p>提示信息</p>
+</li>
+</ul>
+<h4 id="3-表单元素"><a href="#3-表单元素" class="headerlink" title="3. 表单元素"></a>3. 表单元素</h4><ul>
+<li><p>form: 表单域</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;http://localhost:3000/login&quot;</span> <span class="attr">methods</span>=<span class="string">&quot;post&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>input: 输入框</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>textarea: 多行输入框</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">rows</span>=<span class="string">&quot;10&quot;</span> <span class="attr">cols</span>=<span class="string">&quot;10&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>label: 提示信息</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;&quot;</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-表单元素属性"><a href="#4-表单元素属性" class="headerlink" title="4. 表单元素属性"></a>4. 表单元素属性</h4><ol>
+<li>表单控件</li>
+</ol>
+<ul>
+<li><p>action属性</p>
+</li>
+<li><p>methods属性</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;http://localhost:3000/project&quot;</span> <span class="attr">methods</span>=<span class="string">&quot;get&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="2">
+<li>表单控件</li>
+</ol>
+<ul>
+<li><p>type属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;uasername&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>name属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;uasername&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>value属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>id属性: 与label配合使用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;username&quot;</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>readonly属性: 属性规定输入字段为只读</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">readonly</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>disable属性:属性规定元素是不可用和不可点击的 </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Andy&quot;</span> <span class="attr">disable</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>size属性: 属性规定输入字段的尺寸</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">size</span>=<span class="string">&quot;20&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>maxlength属性: 属性规定输入字段允许的最大长度</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">maxlength</span>=<span class="string">&quot;20&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="3">
+<li>提示信息</li>
+</ol>
+<ul>
+<li><p>for属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;username&quot;</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="4">
+<li>多行输入框</li>
+</ol>
+<ul>
+<li><p>cols属性</p>
+</li>
+<li><p>rows属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">rows</span>=<span class="string">&quot;20&quot;</span> <span class="attr">cols</span>=<span class="string">&quot;40&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-type属性类型"><a href="#5-type属性类型" class="headerlink" title="5. type属性类型"></a>5. type属性类型</h4><ul>
+<li><p>text类型： 文本</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;username&quot;</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;uasername&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>password类型： 密码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;password&quot;</span>&gt;</span>密码：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;password&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>radio类型： 单选框</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;gender&quot;</span>&gt;</span>性别：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;gender&quot;</span> <span class="attr">value</span>=<span class="string">&quot;male&quot;</span> <span class="attr">id</span>=<span class="string">&quot;gender&quot;</span>/&gt;</span>Male</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;gender&quot;</span> <span class="attr">value</span>=<span class="string">&quot;female&quot;</span> <span class="attr">id</span>=<span class="string">&quot;gender&quot;</span>/&gt;</span>Female</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>checkbox类型：多选框</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;favorite&quot;</span>&gt;</span>喜好：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;favorite&quot;</span> <span class="attr">value</span>=<span class="string">&quot;post&quot;</span> <span class="attr">id</span>=<span class="string">&quot;favorite&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;favorite&quot;</span> <span class="attr">value</span>=<span class="string">&quot;sport&quot;</span> <span class="attr">id</span>=<span class="string">&quot;favorite&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;favorite&quot;</span> <span class="attr">value</span>=<span class="string">&quot;art&quot;</span> <span class="attr">id</span>=<span class="string">&quot;favorite&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;favorite&quot;</span> <span class="attr">value</span>=<span class="string">&quot;music&quot;</span> <span class="attr">id</span>=<span class="string">&quot;favorite&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>submit类型： 提交按钮</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;submit&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>reset类型: 重置按钮</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;reset&quot;</span> <span class="attr">value</span>=<span class="string">&quot;reset&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
 <h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
@@ -144,7 +246,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">23</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">51</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">25</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">51</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">25</span></li></ul>
     </div>
   </div>
 
@@ -154,7 +256,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">203</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">204</span></li></ul>
     </div>
   </div>
 

@@ -15,7 +15,7 @@
 <meta property="og:description" content="1. HTML5 新增元素 HTML5 定义的许多元素 HTML4 中也存在，但是，元素的含义已经发生了很大的变化，或者，其使用方式已经不同； HTML5 本身还新增了许多新的元素；   HTML5 元素主要变化： 将元素语义与其内容呈现结果的影响分开；  HTML元素负责文档内容的结构和含义，而内容的呈现则由 CSS 样式控制；  HTML5 中新增的大多数元素都具有含义；    element">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-02T00:50:12.572Z">
+<meta property="article:modified_time" content="2020-11-16T10:44:00.266Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
@@ -148,13 +148,63 @@
 <td></td>
 </tr>
 <tr>
-<td>summary / details</td>
+<td>summary</td>
 <td>元素可见的标题</td>
 <td></td>
 </tr>
 <tr>
 <td>dialog</td>
 <td>对话框窗口</td>
+<td></td>
+</tr>
+<tr>
+<td>bdi</td>
+<td>设置一段文本，使其脱离父元素的文本方向设置</td>
+<td></td>
+</tr>
+<tr>
+<td>meter</td>
+<td>定义度量衡</td>
+<td></td>
+</tr>
+<tr>
+<td>ruby</td>
+<td>定义ruby注释</td>
+<td></td>
+</tr>
+<tr>
+<td>rt</td>
+<td>定义字符的解释和发音</td>
+<td></td>
+</tr>
+<tr>
+<td>rp</td>
+<td>定义不支持ruby元素的浏览器所显示的内容</td>
+<td></td>
+</tr>
+<tr>
+<td>wbr</td>
+<td>规定在文本的何处适合添加换行符</td>
+<td></td>
+</tr>
+<tr>
+<td>time</td>
+<td>定义时间和日期</td>
+<td></td>
+</tr>
+<tr>
+<td>mark</td>
+<td>定义有记号的文本</td>
+<td></td>
+</tr>
+<tr>
+<td>progress</td>
+<td>定义任何类型的任务进度</td>
+<td></td>
+</tr>
+<tr>
+<td>output</td>
+<td>定义不同类型的输出</td>
 <td></td>
 </tr>
 <tr>
@@ -233,8 +283,18 @@
 <td></td>
 </tr>
 <tr>
+<td>svg</td>
+<td>svg矢量图元素</td>
+<td></td>
+</tr>
+<tr>
 <td>video</td>
 <td>视频</td>
+<td></td>
+</tr>
+<tr>
+<td>audio</td>
+<td>音频</td>
 <td></td>
 </tr>
 <tr>
@@ -248,8 +308,8 @@
 <td></td>
 </tr>
 <tr>
-<td>audio</td>
-<td>声音内容</td>
+<td>embed</td>
+<td>嵌入内容</td>
 <td></td>
 </tr>
 <tr>
@@ -345,7 +405,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">23</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">51</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">25</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">51</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">25</span></li></ul>
     </div>
   </div>
 
@@ -355,7 +415,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">203</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">204</span></li></ul>
     </div>
   </div>
 
