@@ -317,7 +317,7 @@
 <ul>
 <li><p>autocomplete 属性规定form或input域应该拥有自动完成功能;</p>
 </li>
-<li><p>注意: autocomplete 适用于以下类型的 <input> 标签：text, search, url, telephone, email, password, datepickers, range 以及 color</p>
+<li><p>注意: autocomplete 适用于以下类型的input标签：text, search, url, telephone, email, password, datepickers, range 以及 color</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">action</span>=<span class="string">&quot;&quot;</span> <span class="attr">method</span>=<span class="string">&quot;&quot;</span> <span class="attr">autocomplete</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -345,7 +345,7 @@
 <ul>
 <li><p>formaction 属性用于描述表单提交的URL地址</p>
 </li>
-<li><p>formaction 属性会覆盖<form> 元素中的action属性</p>
+<li><p>formaction 属性会覆盖<code>&lt;form&gt;</code>元素中的action属性</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;http://localhost:3000/login&quot;</span>&gt;</span></span><br><span class="line">  First name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;fname&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">  Last name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;lname&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Submit&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">formaction</span>=<span class="string">&quot;http://localhost:8080/admin/login&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">value</span>=<span class="string">&quot;Submit as admin&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -367,7 +367,7 @@
 <ul>
 <li><p>formmethod 属性定义了表单提交的方式;</p>
 </li>
-<li><p>formmethod 属性覆盖了 <form> 元素的的method 属性;</p>
+<li><p>formmethod 属性覆盖了<code>&lt;form&gt;</code>元素的的method 属性;</p>
 </li>
 <li><p>该属性可以与 type=”submit” 和 type=”image” 配合使用;</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;demo-form.php&quot;</span> <span class="attr">method</span>=<span class="string">&quot;get&quot;</span>&gt;</span></span><br><span class="line">  First name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;fname&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">  Last name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;lname&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Submit&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">formmethod</span>=<span class="string">&quot;post&quot;</span> <span class="attr">formaction</span>=<span class="string">&quot;demo-post.php&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">value</span>=<span class="string">&quot;Submit using POST&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -379,7 +379,7 @@
 <ul>
 <li><p>novalidate 属性是一个 boolean 属性.</p>
 </li>
-<li><p>novalidate属性描述了 <input> 元素在表单提交时无需被验证。</p>
+<li><p>novalidate属性描述了<code>&lt;input&gt;</code>元素在表单提交时无需被验证。</p>
 </li>
 <li><p>formnovalidate 属性会覆盖 <form> 元素的novalidate属性.</p>
 </li>
@@ -393,7 +393,7 @@
 <ul>
 <li><p>formtarget 属性指定一个名称或一个关键字来指明表单提交数据接收后的展示方式;</p>
 </li>
-<li><p>The formtarget 属性覆盖 <form>元素的target属性;</p>
+<li><p>The formtarget 属性覆盖<code>&lt;form&gt;</code>元素的target属性;</p>
 </li>
 <li><p>formtarget 属性与type=”submit” 和 type=”image”配合使用;</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;demo-form.php&quot;</span>&gt;</span></span><br><span class="line">  First name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;fname&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">  Last name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;lname&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Submit as normal&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">formtarget</span>=<span class="string">&quot;_blank&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">value</span>=<span class="string">&quot;Submit to a new window&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -403,9 +403,9 @@
 <li>height and width</li>
 </ol>
 <ul>
-<li><p>height 和 width 属性规定用于 image 类型的 <input> 标签的图像高度和宽度；</p>
+<li><p>height 和 width 属性规定用于 image 类型的<code>&lt;input&gt;</code>标签的图像高度和宽度；</p>
 </li>
-<li><p>height 和 width 属性只适用于 image 类型的<input> 标签；</p>
+<li><p>height 和 width 属性只适用于 image 类型的<code>&lt;input&gt;</code>标签；</p>
 </li>
 <li><p>提示:图像通常会同时指定高度和宽度属性。如果图像设置高度和宽度，图像所需的空间在加载页时会被保留。如果没有这些属性， 浏览器不知道图像的大小，并不能预留适当的空间。图片在加载过程中会使页面布局效果改变 （尽管图片已加载)</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;image&quot;</span> <span class="attr">src</span>=<span class="string">&quot;background.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Submit&quot;</span> <span class="attr">width</span>=<span class="string">&quot;48&quot;</span> <span class="attr">height</span>=<span class="string">&quot;48&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -425,7 +425,7 @@
 <ul>
 <li><p>min、max 和 step 属性用于为包含数字或日期的 input 类型规定限定（约束）;</p>
 </li>
-<li><p>注意: min、max 和 step 属性适用于以下类型的 <input> 标签：date pickers、number 以及 range;</p>
+<li><p>注意: min、max 和 step 属性适用于以下类型的<code>&lt;input&gt;</code>标签：date pickers、number 以及 range;</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Enter a date before 1980-01-01:</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;date&quot;</span> <span class="attr">name</span>=<span class="string">&quot;bday&quot;</span> <span class="attr">max</span>=<span class="string">&quot;1979-12-31&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">Enter a date after 2020-01-01:</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;date&quot;</span> <span class="attr">name</span>=<span class="string">&quot;bday&quot;</span> <span class="attr">min</span>=<span class="string">&quot;2020-01-02&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">Quantity (between 1 and 5):</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;number&quot;</span> <span class="attr">name</span>=<span class="string">&quot;quantity&quot;</span> <span class="attr">min</span>=<span class="string">&quot;1&quot;</span> <span class="attr">max</span>=<span class="string">&quot;5&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;rang&quot;</span> <span class="attr">name</span>=<span class="string">&quot;rate&quot;</span> <span class="attr">min</span>=<span class="string">&quot;0&quot;</span> <span class="attr">max</span>=<span class="string">&quot;100&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -435,9 +435,9 @@
 <ul>
 <li><p>multiple 属性是一个 boolean 属性;</p>
 </li>
-<li><p>multiple 属性规定<input> 元素中可选择多个值;</p>
+<li><p>multiple 属性规定<code>&lt;input&gt;</code>元素中可选择多个值;</p>
 </li>
-<li><p>注意: multiple 属性适用于以下类型的<input> 标签：email 和 file;</p>
+<li><p>注意: multiple 属性适用于以下类型的<code>&lt;input&gt;</code>标签：email 和 file;</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;img&quot;</span>&gt;</span>Select images: <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> <span class="attr">name</span>=<span class="string">&quot;img&quot;</span> <span class="attr">id</span>=<span class="string">&quot;img&quot;</span> <span class="attr">multiple</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -445,9 +445,9 @@
 <li>pattern (regexp)</li>
 </ol>
 <ul>
-<li><p>pattern 属性描述了一个正则表达式用于验证<input> 元素的值;</p>
+<li><p>pattern 属性描述了一个正则表达式用于验证<code>&lt;input&gt;</code>元素的值;</p>
 </li>
-<li><p>注意:pattern 属性适用于以下类型的<input> 标签: text, search, url, tel, email, 和 password;</p>
+<li><p>注意:pattern 属性适用于以下类型的<code>&lt;input&gt;</code>标签: text, search, url, tel, email, 和 password;</p>
 </li>
 <li><p>是用来全局 title 属性描述了模式;</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;country&quot;</span>&gt;</span>Country code: <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;country_code&quot;</span> <span class="attr">pattern</span>=<span class="string">&quot;[A-Za-z]&#123;3&#125;&quot;</span> <span class="attr">title</span>=<span class="string">&quot;Three letter country code&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -461,7 +461,7 @@
 </li>
 <li><p>简短的提示在用户输入值前会显示在输入域上;</p>
 </li>
-<li><p>注意: placeholder 属性适用于以下类型的<input> 标签：text, search, url, telephone, email 以及 password。</p>
+<li><p>注意: placeholder 属性适用于以下类型的input标签：text, search, url, telephone, email 以及 password。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;please insert username!&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -473,7 +473,7 @@
 </li>
 <li><p>required 属性规定必须在提交之前填写输入域（不能为空）;</p>
 </li>
-<li><p>注意:required 属性适用于以下类型的<input> 标签：text, search, url, telephone, email, password, date pickers, number, checkbox, radio 以及 file;</p>
+<li><p>注意:required 属性适用于以下类型的input标签：text, search, url, telephone, email, password, date pickers, number, checkbox, radio 以及 file;</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;please insert username!&quot;</span> <span class="attr">required</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
