@@ -67,175 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-CSS/Tags/九、Flex弹性布局/9.3 Flex容器属性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.3%20Flex%E5%AE%B9%E5%99%A8%E5%B1%9E%E6%80%A7/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.3%20Flex%E5%AE%B9%E5%99%A8%E5%B1%9E%E6%80%A7/">9.3 Flex容器属性</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-容器属性说明"><a href="#1-容器属性说明" class="headerlink" title="1.容器属性说明"></a>1.容器属性说明</h3><h4 id="1-flex-direction属性"><a href="#1-flex-direction属性" class="headerlink" title="1. flex-direction属性"></a>1. flex-direction属性</h4><ol>
-<li><p>flex-direction属性：设置主轴方向；</p>
-</li>
-<li><p>main axis默认方向为：水平从左到右；</p>
-</li>
-<li><p>flex-direction属性值： </p>
-<ul>
-<li><p>row（默认值）：主轴为水平方向，起点在左端;</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-direction</span>: row;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>row-reverse：主轴为水平方向，起点在右端;</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-direction</span>: row-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>column：主轴为垂直方向，起点在上沿;</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-direction</span>: column;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>column-reverse：主轴为垂直方向，起点在下沿;</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-direction</span>: column-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="2-flex-wrap属性"><a href="#2-flex-wrap属性" class="headerlink" title="2. flex-wrap属性"></a>2. flex-wrap属性</h4><ol>
-<li><p>默认情况下，项目都排在一条线（又称”轴线”）上;</p>
-</li>
-<li><p>flex-wrap属性定义，如果一条轴线排不下，如何换行;</p>
-</li>
-<li><p>flex-wrap属性值：</p>
-<ul>
-<li><p>nowrap（默认）：不换行；</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-wrap</span>: nowrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>wrap：换行，第一行在上方;</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>wrap-reverse：换行，第一行在下方</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="3-flex-flow属性"><a href="#3-flex-flow属性" class="headerlink" title="3. flex-flow属性"></a>3. flex-flow属性</h4><ol>
-<li>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap;</li>
-</ol>
-<ul>
-<li><p>flex-flow属性值：</p>
-  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-flow</span>: row nowrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="4-justify-content属性"><a href="#4-justify-content属性" class="headerlink" title="4. justify-content属性"></a>4. justify-content属性</h4><ol>
-<li><p>justify-content属性定义了项目在主轴上的对齐方式;</p>
-</li>
-<li><p>justify-content属性值</p>
-<ul>
-<li><p>flex-start（默认值）：左对齐</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: flex-start;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>flex-end: 右对齐</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: flex-end;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>center： 居中</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>space-around： 两端对齐，项目之间的间隔都相等 </p>
-</li>
-</ul>
-</li>
-</ol>
-<pre><code>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-around;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre>
-<ul>
-<li><p>space-between： 每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍</p>
-   <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="5-align-items属性"><a href="#5-align-items属性" class="headerlink" title="5. align-items属性"></a>5. align-items属性</h4><ol>
-<li><p>align-items属性定义项目在交叉轴上对齐方式;</p>
-<ul>
-<li><p>具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下；</p>
-</li>
-<li><p>flex-start：交叉轴的起点对齐；</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: flex-start;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>flex-end：交叉轴的终点对齐；</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: flex-end;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>center：交叉轴的中点对齐；</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>baseline: 项目的第一行文字的基线对齐；</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: baseline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度；</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="6-align-content属性"><a href="#6-align-content属性" class="headerlink" title="6. align-content属性"></a>6. align-content属性</h4><ol>
-<li><p>align-content属性定义了多根轴线的对齐方式;</p>
-</li>
-<li><p>如果项目只有一根轴线，该属性不起作用;</p>
-</li>
-<li><p>align-content属性值</p>
-<ul>
-<li><p>flex-start：与交叉轴的起点对齐；</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-content</span>: flex-start;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>flex-end：与交叉轴的终点对齐；</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-content</span>: flex-end;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>center：与交叉轴的中点对齐；</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-content</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布；</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-content</span>: space-between;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔  - 大一倍；</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-content</span>: space-around;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>stretch（默认值）：轴线占满整个交叉轴；</p>
-  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-content</span>: stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/CSS/Tutorial/%E4%B9%9D%E3%80%81Flex%20%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">[九、Flex 弹性布局]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.3%20Flex%E5%AE%B9%E5%99%A8%E5%B1%9E%E6%80%A7/" data-id="ckhdrvcga007d2jiihwzo9axi" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-CSS/Tags/九、Flex弹性布局/9.4 项目属性" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/28/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.4%20%E9%A1%B9%E7%9B%AE%E5%B1%9E%E6%80%A7/" class="article-date">
@@ -907,201 +738,6 @@
     </div>
     <footer class="article-footer">
       <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.5%20%E5%85%B6%E4%BB%96%20CSS%20%E5%8D%95%E4%BD%8D/" data-id="ckhdrvcgl00812jii8uqjdeb9" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/六、其他CSS属性和特性/6.1 webkit-box-reflect属性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81%E5%85%B6%E4%BB%96CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.1%20webkit-box-reflect%E5%B1%9E%E6%80%A7/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81%E5%85%B6%E4%BB%96CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.1%20webkit-box-reflect%E5%B1%9E%E6%80%A7/">6.1 Webkit-Box-Reflect属性</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-CSS3倒影特效"><a href="#1-CSS3倒影特效" class="headerlink" title="1.CSS3倒影特效"></a>1.CSS3倒影特效</h4><ul>
-<li><p>语法</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webkit-box-reflect: &lt;direction&gt; || &lt;offset&gt; || &lt;mask-box-image&gt;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-属性值"><a href="#2-属性值" class="headerlink" title="2. 属性值"></a>2. 属性值</h4><ol>
-<li>direction: 定义方向</li>
-</ol>
-<ul>
-<li><p>above: 指定倒影在对象的上边</p>
-</li>
-<li><p>below: 指定倒影在对象的下边</p>
-</li>
-<li><p>left: 指定倒影在对象的左边</p>
-</li>
-<li><p>right: 指定倒影在对象的右边</p>
-</li>
-</ul>
-<ol start="2">
-<li>offset: 定义反射偏移的距离,取值包括数值或百分比;</li>
-</ol>
-<ul>
-<li><p><code>百分比</code>来定义倒影与对象之间的间距,默认为0。</p>
-</li>
-<li><p>可以为负值;</p>
-</li>
-<li><p>用长度值来定义倒影与对象之间的间隔，可以为负值;</p>
-</li>
-</ul>
-<ol start="3">
-<li>mask-box-image： 定义遮罩图像</li>
-</ol>
-<ul>
-<li>该图像将覆盖投影区域。如果省略该参数值，则默认为无遮罩图像；</li>
-</ul>
-<p>取值：<br>none：无遮罩图像：<br>使用绝对或相对地址指定遮罩图像；<br>使用线性渐变创建遮罩图像；<br>使用径向(放射性)渐变创建遮罩图像；<br>使用重复的线性渐变创建背遮罩像；<br>使用重复的径向(放射性)渐变创建遮罩图像；</p>
-<h4 id="3-案例"><a href="#3-案例" class="headerlink" title="3.案例"></a>3.案例</h4><p><a href="">[文字特效倒影效果]</a></p>
-<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81%E5%85%B6%E4%BB%96%20CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、其他 CSS 属性和特性]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81%E5%85%B6%E4%BB%96CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.1%20webkit-box-reflect%E5%B1%9E%E6%80%A7/" data-id="ckhdrvcgq00832jiihcf42ht8" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/六、其他CSS属性和特性/6.20 CSS属性和特性案例" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81%E5%85%B6%E4%BB%96CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.20%20CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7%E6%A1%88%E4%BE%8B/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81%E5%85%B6%E4%BB%96CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.20%20CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7%E6%A1%88%E4%BE%8B/">6.20 CSS 案例</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-wave-effective"><a href="#1-wave-effective" class="headerlink" title="1. wave_effective"></a>1. wave_effective</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-oyster/calc_var/tree/main/assert/wave_effective">[源码]</a></p>
-<h4 id="2-word-special-effection"><a href="#2-word-special-effection" class="headerlink" title="2. word_special_effection"></a>2. word_special_effection</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-oyster/calc_var/tree/main/assert/word_special_effection">[源码]</a></p>
-<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81%E5%85%B6%E4%BB%96%20CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、其他 CSS 属性和特性]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81%E5%85%B6%E4%BB%96CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.20%20CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7%E6%A1%88%E4%BE%8B/" data-id="ckhdrvcgr00852jiigfal41m0" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/六、其他CSS属性和特性/6.2Calc函数与Var变量" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81%E5%85%B6%E4%BB%96CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.2Calc%E5%87%BD%E6%95%B0%E4%B8%8EVar%E5%8F%98%E9%87%8F/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81%E5%85%B6%E4%BB%96CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.2Calc%E5%87%BD%E6%95%B0%E4%B8%8EVar%E5%8F%98%E9%87%8F/">6.2 Calc函数与Var变量</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Var-变量"><a href="#1-Var-变量" class="headerlink" title="1. Var()变量"></a>1. Var()变量</h4><ul>
-<li><p>语法： <code>--变量名</code>;</p>
-</li>
-<li><p>在body中或者任何想要使用的变量语法的层级中定义var()变量；</p>
-</li>
-<li><p>在任何标签使用；</p>
-</li>
-<li><p>案例</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">/*定义变量*/</span></span><br><span class="line">  <span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">--fontSize</span>: <span class="number">18px</span>;</span><br><span class="line">    <span class="attribute">--color</span>: <span class="number">#ff0000</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/*使用变量*/</span></span><br><span class="line">  <span class="selector-class">.container</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="built_in">var</span>(--fontSize);</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">var</span>(--color);</span><br><span class="line">  &#125;</span><br><span class="line">  ``</span><br><span class="line"></span><br><span class="line">#### 2. <span class="selector-tag">Calc</span>()函数</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">-</span> <span class="selector-tag">Calc</span>()通常与<span class="selector-tag">Var</span>()配合使用</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">-</span> 本案例，在<span class="selector-tag">HTML</span>文件的行内样式设置了变量`<span class="selector-tag">--i</span>`;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">-</span> 在动画延时中用`时间值` <span class="selector-tag">x</span> `变量<span class="selector-tag">--i</span>`</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">-</span> <span class="selector-tag">HTML</span>文件</span><br><span class="line"></span><br><span class="line">  ```<span class="selector-tag">html</span></span><br><span class="line">  &lt;div class=&quot;wave&quot;&gt;</span><br><span class="line">  &lt;span style=&quot;--i:1&quot;&gt;Welcome&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">  &lt;span style=&quot;--i:2&quot;&gt;to&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">  &lt;span style=&quot;--i:3&quot;&gt;Cascading&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">  &lt;span style=&quot;--i:4&quot;&gt;style&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">  &lt;span style=&quot;--i:5&quot;&gt;sheets&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">  &lt;span style=&quot;--i:6&quot;&gt;World&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">  &lt;span style=&quot;--i:7&quot;&gt;!&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">  &lt;span style=&quot;--i:8&quot;&gt;......&amp;nbsp;&amp;nbsp;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>LESS文件</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">animation-delay</span>: calc(.<span class="number">2s</span>*var(--i));</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>LESS文件</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">&amp;</span><span class="selector-pseudo">:nth-of-type(1)</span> &#123;</span><br><span class="line">  <span class="attribute">--i</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">&amp;</span><span class="selector-pseudo">:nth-of-type(2)</span> &#123;</span><br><span class="line">  <span class="attribute">--i</span>: <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">&amp;</span><span class="selector-pseudo">:nth-of-type(3)</span> &#123;</span><br><span class="line">  <span class="attribute">--i</span>: <span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">&amp;</span><span class="selector-pseudo">:nth-of-type(4)</span> &#123;</span><br><span class="line">  <span class="attribute">--i</span>: <span class="number">4</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">&amp;</span><span class="selector-pseudo">:nth-of-type(5)</span> &#123;</span><br><span class="line">  <span class="attribute">--i</span>: <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">&amp;</span><span class="selector-pseudo">:nth-of-type(6)</span> &#123;</span><br><span class="line">  <span class="attribute">--i</span>: <span class="number">6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">&amp;</span><span class="selector-pseudo">:nth-of-type(7)</span> &#123;</span><br><span class="line">  <span class="attribute">--i</span>: <span class="number">7</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">&amp;</span><span class="selector-pseudo">:nth-of-type(8)</span> &#123;</span><br><span class="line">  <span class="attribute">--i</span>: <span class="number">8</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">&amp;</span><span class="selector-pseudo">:nth-of-type(9)</span> &#123;</span><br><span class="line">  <span class="attribute">--i</span>: <span class="number">9</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">&amp;</span><span class="selector-pseudo">:nth-of-type(10)</span> &#123;</span><br><span class="line">  <span class="attribute">--i</span>: <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="attribute">animation-delay</span>: calc(.<span class="number">2s</span>*var(--i));</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>案例2</p>
-</li>
-<li><p>HTML</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;div-1&quot;</span>&gt;</span>div-1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;div-2&quot;</span>&gt;</span>div-2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;div-3&quot;</span>&gt;</span>div-3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>CSS</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">--width </span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">--height </span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">--color </span>: red;</span><br><span class="line">  <span class="attribute">--fontSize </span>: <span class="number">18px</span>;</span><br><span class="line">  <span class="attribute">--bgColor </span>: <span class="number">#3c3c3c</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-around</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">var</span>(--width);</span><br><span class="line">    <span class="attribute">height</span>: <span class="built_in">var</span>(--height);</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="built_in">var</span>(--height);</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">var</span>(--bgColor);</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div-1</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">var</span>(--color);</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="built_in">var</span>(--fontSize);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div-2</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: yellow;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="built_in">calc</span>(var(--fontSize) + <span class="number">4px</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.div-3</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: green;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="built_in">calc</span>(var(--fontSize) + <span class="number">8px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3-总结"><a href="#3-总结" class="headerlink" title="3.总结"></a>3.总结</h4></li>
-<li><p>关于函数要的慎用，会影响SEO优化；</p>
-</li>
-</ul>
-<h4 id="4-动画"><a href="#4-动画" class="headerlink" title="4. 动画"></a>4. 动画</h4><ul>
-<li><p>本案例中对span元素，调用用动画；</p>
-</li>
-<li><p>执行变换： 在Y轴方向进行变换;</p>
-</li>
-</ul>
-<h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><h4 id="3-案例"><a href="#3-案例" class="headerlink" title="3.案例"></a>3.案例</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-oyster/calc_var/tree/main/assert/wave_effective">[wave_effective]</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/web-oyster/calc_var/tree/main/assert/word_special_effection">[word_special_effection]</a></p>
-<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81%E5%85%B6%E4%BB%96%20CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、其他 CSS 属性和特性]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81%E5%85%B6%E4%BB%96CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.2Calc%E5%87%BD%E6%95%B0%E4%B8%8EVar%E5%8F%98%E9%87%8F/" data-id="ckhdrvcgt00872jiia9pqb4eg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -2314,6 +1950,246 @@
 
 
   
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.1 HTML块级元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.1%20HTML%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.1%20HTML%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/">2.1 HTML块级元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-块级元素-Block-的定义"><a href="#1-块级元素-Block-的定义" class="headerlink" title="1. 块级元素(Block)的定义"></a>1. 块级元素(Block)的定义</h3><ol>
+<li>总是在新行上开始</li>
+<li>高度，行高以及外边距和内边距都可控制；</li>
+<li>宽度缺省是它的容器的 100%，除非设定一个宽度；</li>
+<li>它可以容纳内联元素和其他块元素；</li>
+<li>多个块状元素标签写在一起，默认排列方式为从上至下；</li>
+</ol>
+<h3 id="2-块级元素汇总表"><a href="#2-块级元素汇总表" class="headerlink" title="2.块级元素汇总表"></a>2.块级元素汇总表</h3><ol>
+<li><p>常用块级元素</p>
+<table>
+<thead>
+<tr>
+<th>element</th>
+<th>discription</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>body</td>
+<td>文档内容</td>
+</tr>
+<tr>
+<td>h1~h6</td>
+<td>定义标题标签(heading)</td>
+</tr>
+<tr>
+<td>div</td>
+<td>布局元素，不表示任何其他内容分组</td>
+</tr>
+<tr>
+<td>p</td>
+<td>表示段落</td>
+</tr>
+<tr>
+<td>hr</td>
+<td>段落级别的主题变换</td>
+</tr>
+<tr>
+<td>br</td>
+<td>换行(空标签)</td>
+</tr>
+<tr>
+<td>table</td>
+<td>表格元素</td>
+</tr>
+<tr>
+<td>form</td>
+<td>表单元素</td>
+</tr>
+<tr>
+<td>ul</td>
+<td>无序列表</td>
+</tr>
+<tr>
+<td>li</td>
+<td>列表项</td>
+</tr>
+<tr>
+<td>ol</td>
+<td>有序列表</td>
+</tr>
+<tr>
+<td>dl</td>
+<td>生成术语及其定义的列表</td>
+</tr>
+<tr>
+<td>dt</td>
+<td>列表项</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>列表项</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>源码</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/block_elements">[block-element]</a></p>
+</li>
+<li><p>参考文档</p>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.1%20HTML%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" data-id="ckhdrvchb00992jii8gtedkdt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.10 嵌入元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.10%20%E5%B5%8C%E5%85%A5%E5%85%83%E7%B4%A0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.10%20%E5%B5%8C%E5%85%A5%E5%85%83%E7%B4%A0/">2.10 HTML嵌入元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.10%20%E5%B5%8C%E5%85%A5%E5%85%83%E7%B4%A0/" data-id="ckhdrvchc009b2jiidkn0as1a" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.2 HTML行内元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.2%20HTML%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.2%20HTML%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/">2.2HTML行内元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.2%20HTML%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/" data-id="ckhdrvchh009i2jii9etk8bmj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.3 HTML行内块级元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.3%20HTML%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.3%20HTML%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/">2.3 HTML行内块级元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.3%20HTML%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" data-id="ckhdrvchi009k2jiie6yt20fr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
 
 
   <nav id="page-nav">
@@ -2339,7 +2215,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">30</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">51</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">25</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">51</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">25</span></li></ul>
     </div>
   </div>
 
@@ -2349,7 +2225,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">210</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">212</span></li></ul>
     </div>
   </div>
 
