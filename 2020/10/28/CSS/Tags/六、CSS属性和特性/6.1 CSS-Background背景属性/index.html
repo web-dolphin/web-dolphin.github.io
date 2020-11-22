@@ -7,15 +7,15 @@
   
   <title>6.1 CSS Background背景属性 | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="4.参考文档[六、CSS属性和特性] 5. 联系方式[Email]">
+  <meta name="description" content="1. CSS Background背景属性 汇总表    属性 描述 CSS    background 在一个声明中设置所有的背景属性。 1   background-attachment 设置背景图像是否固定或者随着页面的其余部分滚动。 1   background-color 设置元素的背景颜色。 1   background-image 设置元素的背景图像。 1   background-">
 <meta property="og:type" content="article">
 <meta property="og:title" content="6.1 CSS Background背景属性">
 <meta property="og:url" content="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.1%20CSS-Background%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="4.参考文档[六、CSS属性和特性] 5. 联系方式[Email]">
+<meta property="og:description" content="1. CSS Background背景属性 汇总表    属性 描述 CSS    background 在一个声明中设置所有的背景属性。 1   background-attachment 设置背景图像是否固定或者随着页面的其余部分滚动。 1   background-color 设置元素的背景颜色。 1   background-image 设置元素的背景图像。 1   background-">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-22T06:47:12.549Z">
+<meta property="article:modified_time" content="2020-11-22T07:45:24.196Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
@@ -89,8 +89,381 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+        <h4 id="1-CSS-Background背景属性"><a href="#1-CSS-Background背景属性" class="headerlink" title="1. CSS Background背景属性"></a>1. CSS Background背景属性</h4><ul>
+<li><p>汇总表</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>background</td>
+<td>在一个声明中设置所有的背景属性。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>background-attachment</td>
+<td>设置背景图像是否固定或者随着页面的其余部分滚动。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>设置元素的背景颜色。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>background-image</td>
+<td>设置元素的背景图像。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>background-position</td>
+<td>设置背景图像的开始位置。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>background-repeat</td>
+<td>设置是否及如何重复背景图像。</td>
+<td>1</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="2-background属性"><a href="#2-background属性" class="headerlink" title="2.  background属性"></a>2.  background属性</h4><p>background 简写属性在一个声明中设置所有的背景属性。可以按顺序设置如下属性：</p>
+<p>background-color , background-image , background-repeat , background-attachment , background-position。</p>
+<p>如果不设置其中的某个值，也不会出问题。</p>
+<p>通常建议使用这个属性，而不是分别使用单个属性，因为这个属性在较老的浏览器中能够得到更好的支持，而且需要键入的字母也更少。</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>not specified</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>no</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.background = “white url(paper.gif) repeat-y”</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>background-color</td>
+<td>规定要使用的背景颜色。参阅：background-color中可能的值。</td>
+</tr>
+<tr>
+<td>background-image</td>
+<td>规定要使用的背景图像。参阅：background-image 中可能的值。</td>
+</tr>
+<tr>
+<td>background-repeat</td>
+<td>规定如何重复背景图像。参阅：background-repeat中可能的值。</td>
+</tr>
+<tr>
+<td>background-attachment</td>
+<td>规定背景图像是否固定或者随着页面的其余部分滚动。参阅：background-attachment中可能的值。</td>
+</tr>
+<tr>
+<td>background-position</td>
+<td>规定背景图像的位置。参阅：background-position 中可能的值。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 background 属性的设置。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 background 属性。任何的版本的 IE（包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="3-background-attachment属性"><a href="#3-background-attachment属性" class="headerlink" title="3. background-attachment属性"></a>3. background-attachment属性</h4><p>background-attachment 属性设置背景图像是否固定或者随着页面的其余部分滚动。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>scroll</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>no</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.backgroundAttachment=”fixed”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>scroll</td>
+<td>默认值。背景图像会随着页面其余部分的滚动而移动。</td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>当页面的其余部分滚动时，背景图像不会移动。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 background-attachment 属性的设置。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 background-attachment 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
+<h4 id="4-background-color属性"><a href="#4-background-color属性" class="headerlink" title="4. background-color属性"></a>4. background-color属性</h4><p>background-color 属性设置元素的背景颜色。</p>
+<p>background-color 属性为元素设置一种纯色。这种颜色会填充元素的内容、内边距和边框区域，扩展到元素边框的外边界（但不包括外边距）。如果边框有透明部分（如虚线边框），会透过这些透明部分显示出背景色。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>transparent</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>no</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.backgroundColor=”#00FF00”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color_name</td>
+<td>规定颜色值为颜色名称的背景颜色（比如 red）。</td>
+</tr>
+<tr>
+<td>hex_number</td>
+<td>规定颜色值为十六进制值的背景颜色（比如 #ff0000）。</td>
+</tr>
+<tr>
+<td>rgb_number</td>
+<td>规定颜色值为 rgb 代码的背景颜色（比如 rgb(255,0,0)）。</td>
+</tr>
+<tr>
+<td>transparent</td>
+<td>默认。背景颜色为透明。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 background-color 属性的设置。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 background-color 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
+<h4 id="5-background-image属性"><a href="#5-background-image属性" class="headerlink" title="5.background-image属性"></a>5.background-image属性</h4><p>background-image 属性为元素设置背景图像。</p>
+<p>元素的背景占据了元素的全部尺寸，包括内边距和边框，但不包括外边距。默认地，背景图像位于元素的左上角，并在水平和垂直方向上重复。</p>
+<p>background-image 属性会在元素的背景中设置一个图像。根据 background-repeat 属性的值，图像可以无限平铺、沿着某个轴（x轴或y轴）平铺，或者根本不平铺。初始背景图像（原图像）根据 background-position属性的值放置。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>none</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>no</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.backgroundImage=”url(stars.gif)”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>url(‘URL’)</td>
+<td>指向图像的路径。</td>
+</tr>
+<tr>
+<td>none</td>
+<td>默认值。不显示背景图像。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 background-image 属性的设置。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 background-image 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
+<h4 id="6-background-position属性"><a href="#6-background-position属性" class="headerlink" title="6. background-position属性"></a>6. background-position属性</h4><p>background-position 属性设置背景图像的起始位置。</p>
+<p>这个属性设置背景原图像（ background-image定义）的位置，背景图像如果要重复，从这一点开始。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>0% 0%</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>no</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.backgroundPosition=”center”</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>需要把 background-attachment 属性设置为 “fixed”，才能保证该属性在 Firefox 和 Opera 中正常工作。</p>
+<ul>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>top left    top center    top rightcenter left  center center   center rightbottom left  bottom center   bottom right</td>
+<td>如果您仅规定了一个关键词，那么第二个值将是”center”。默认值：0% 0%。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>x% y%</th>
+<th>第一个值是水平位置，第二个值是垂直位置。左上角是 0% 0%。右下角是 100% 100%。如果仅规定了一个值，另一个值将是 50%。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>xpos ypos</td>
+<td>第一个值是水平位置，第二个值是垂直位置。左上角是 0 0。单位是像素 (0px 0px) 或任何其他的 CSS 单位。如果仅规定了一个值，另一个值将是50%。您可以混合使用 % 和 position 值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 background-position 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
+<h4 id="7-background-repeat属性"><a href="#7-background-repeat属性" class="headerlink" title="7. background-repeat属性"></a>7. background-repeat属性</h4><p>background-repeat 属性设置是否及如何重复背景图像。默认地，背景图像在水平和垂直方向上重复。</p>
+<p>background-repeat 属性定义了图像的平铺模式。</p>
+<p>从原图像开始重复，原图像由 background-image定义，根据 background-position 放置。</p>
+<ul>
+<li><p>默认值： </p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>repeat</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>no</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.backgroundPosition=”center”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>repeat</td>
+<td>默认。背景图像将在垂直方向和水平方向重复。</td>
+</tr>
+<tr>
+<td>repeat-x</td>
+<td>背景图像将在水平方向重复。</td>
+</tr>
+<tr>
+<td>repeat-y</td>
+<td>背景图像将在垂直方向重复。</td>
+</tr>
+<tr>
+<td>no-repeat</td>
+<td>背景图像将仅显示一次。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 background-repeat 属性的设置。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 background-repeat 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
+<h4 id="8-参考文档"><a href="#8-参考文档" class="headerlink" title="8.参考文档"></a>8.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
+<h4 id="9-联系方式"><a href="#9-联系方式" class="headerlink" title="9. 联系方式"></a>9. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>

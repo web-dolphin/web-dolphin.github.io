@@ -1057,8 +1057,381 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+        <h4 id="1-CSS-Background背景属性"><a href="#1-CSS-Background背景属性" class="headerlink" title="1. CSS Background背景属性"></a>1. CSS Background背景属性</h4><ul>
+<li><p>汇总表</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>background</td>
+<td>在一个声明中设置所有的背景属性。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>background-attachment</td>
+<td>设置背景图像是否固定或者随着页面的其余部分滚动。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>设置元素的背景颜色。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>background-image</td>
+<td>设置元素的背景图像。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>background-position</td>
+<td>设置背景图像的开始位置。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>background-repeat</td>
+<td>设置是否及如何重复背景图像。</td>
+<td>1</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="2-background属性"><a href="#2-background属性" class="headerlink" title="2.  background属性"></a>2.  background属性</h4><p>background 简写属性在一个声明中设置所有的背景属性。可以按顺序设置如下属性：</p>
+<p>background-color , background-image , background-repeat , background-attachment , background-position。</p>
+<p>如果不设置其中的某个值，也不会出问题。</p>
+<p>通常建议使用这个属性，而不是分别使用单个属性，因为这个属性在较老的浏览器中能够得到更好的支持，而且需要键入的字母也更少。</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>not specified</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>no</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.background = “white url(paper.gif) repeat-y”</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>background-color</td>
+<td>规定要使用的背景颜色。参阅：background-color中可能的值。</td>
+</tr>
+<tr>
+<td>background-image</td>
+<td>规定要使用的背景图像。参阅：background-image 中可能的值。</td>
+</tr>
+<tr>
+<td>background-repeat</td>
+<td>规定如何重复背景图像。参阅：background-repeat中可能的值。</td>
+</tr>
+<tr>
+<td>background-attachment</td>
+<td>规定背景图像是否固定或者随着页面的其余部分滚动。参阅：background-attachment中可能的值。</td>
+</tr>
+<tr>
+<td>background-position</td>
+<td>规定背景图像的位置。参阅：background-position 中可能的值。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 background 属性的设置。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 background 属性。任何的版本的 IE（包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="3-background-attachment属性"><a href="#3-background-attachment属性" class="headerlink" title="3. background-attachment属性"></a>3. background-attachment属性</h4><p>background-attachment 属性设置背景图像是否固定或者随着页面的其余部分滚动。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>scroll</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>no</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.backgroundAttachment=”fixed”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>scroll</td>
+<td>默认值。背景图像会随着页面其余部分的滚动而移动。</td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>当页面的其余部分滚动时，背景图像不会移动。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 background-attachment 属性的设置。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 background-attachment 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
+<h4 id="4-background-color属性"><a href="#4-background-color属性" class="headerlink" title="4. background-color属性"></a>4. background-color属性</h4><p>background-color 属性设置元素的背景颜色。</p>
+<p>background-color 属性为元素设置一种纯色。这种颜色会填充元素的内容、内边距和边框区域，扩展到元素边框的外边界（但不包括外边距）。如果边框有透明部分（如虚线边框），会透过这些透明部分显示出背景色。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>transparent</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>no</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.backgroundColor=”#00FF00”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color_name</td>
+<td>规定颜色值为颜色名称的背景颜色（比如 red）。</td>
+</tr>
+<tr>
+<td>hex_number</td>
+<td>规定颜色值为十六进制值的背景颜色（比如 #ff0000）。</td>
+</tr>
+<tr>
+<td>rgb_number</td>
+<td>规定颜色值为 rgb 代码的背景颜色（比如 rgb(255,0,0)）。</td>
+</tr>
+<tr>
+<td>transparent</td>
+<td>默认。背景颜色为透明。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 background-color 属性的设置。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 background-color 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
+<h4 id="5-background-image属性"><a href="#5-background-image属性" class="headerlink" title="5.background-image属性"></a>5.background-image属性</h4><p>background-image 属性为元素设置背景图像。</p>
+<p>元素的背景占据了元素的全部尺寸，包括内边距和边框，但不包括外边距。默认地，背景图像位于元素的左上角，并在水平和垂直方向上重复。</p>
+<p>background-image 属性会在元素的背景中设置一个图像。根据 background-repeat 属性的值，图像可以无限平铺、沿着某个轴（x轴或y轴）平铺，或者根本不平铺。初始背景图像（原图像）根据 background-position属性的值放置。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>none</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>no</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.backgroundImage=”url(stars.gif)”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>url(‘URL’)</td>
+<td>指向图像的路径。</td>
+</tr>
+<tr>
+<td>none</td>
+<td>默认值。不显示背景图像。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 background-image 属性的设置。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 background-image 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
+<h4 id="6-background-position属性"><a href="#6-background-position属性" class="headerlink" title="6. background-position属性"></a>6. background-position属性</h4><p>background-position 属性设置背景图像的起始位置。</p>
+<p>这个属性设置背景原图像（ background-image定义）的位置，背景图像如果要重复，从这一点开始。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>0% 0%</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>no</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.backgroundPosition=”center”</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>需要把 background-attachment 属性设置为 “fixed”，才能保证该属性在 Firefox 和 Opera 中正常工作。</p>
+<ul>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>top left    top center    top rightcenter left  center center   center rightbottom left  bottom center   bottom right</td>
+<td>如果您仅规定了一个关键词，那么第二个值将是”center”。默认值：0% 0%。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>x% y%</th>
+<th>第一个值是水平位置，第二个值是垂直位置。左上角是 0% 0%。右下角是 100% 100%。如果仅规定了一个值，另一个值将是 50%。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>xpos ypos</td>
+<td>第一个值是水平位置，第二个值是垂直位置。左上角是 0 0。单位是像素 (0px 0px) 或任何其他的 CSS 单位。如果仅规定了一个值，另一个值将是50%。您可以混合使用 % 和 position 值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 background-position 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
+<h4 id="7-background-repeat属性"><a href="#7-background-repeat属性" class="headerlink" title="7. background-repeat属性"></a>7. background-repeat属性</h4><p>background-repeat 属性设置是否及如何重复背景图像。默认地，背景图像在水平和垂直方向上重复。</p>
+<p>background-repeat 属性定义了图像的平铺模式。</p>
+<p>从原图像开始重复，原图像由 background-image定义，根据 background-position 放置。</p>
+<ul>
+<li><p>默认值： </p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>repeat</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>no</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.backgroundPosition=”center”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>repeat</td>
+<td>默认。背景图像将在垂直方向和水平方向重复。</td>
+</tr>
+<tr>
+<td>repeat-x</td>
+<td>背景图像将在水平方向重复。</td>
+</tr>
+<tr>
+<td>repeat-y</td>
+<td>背景图像将在垂直方向重复。</td>
+</tr>
+<tr>
+<td>no-repeat</td>
+<td>背景图像将仅显示一次。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 background-repeat 属性的设置。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 background-repeat 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
+<h4 id="8-参考文档"><a href="#8-参考文档" class="headerlink" title="8.参考文档"></a>8.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
+<h4 id="9-联系方式"><a href="#9-联系方式" class="headerlink" title="9. 联系方式"></a>9. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
@@ -1097,8 +1470,503 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+        <h4 id="1-CSS-Text文本属性汇总表"><a href="#1-CSS-Text文本属性汇总表" class="headerlink" title="1. CSS-Text文本属性汇总表"></a>1. CSS-Text文本属性汇总表</h4><ul>
+<li><p>汇总表</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color</td>
+<td>设置文本的颜色。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>规定文本的方向 / 书写方向。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>letter-spacing</td>
+<td>设置字符间距。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>设置行高。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>规定文本的水平对齐方式。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>text-decoration</td>
+<td>规定添加到文本的装饰效果。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>text-indent</td>
+<td>规定文本块首行的缩进。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>text-shadow</td>
+<td>规定添加到文本的阴影效果。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>text-transform</td>
+<td>控制文本的大小写。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>unicode-bidi</td>
+<td>设置文本方向。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>white-space</td>
+<td>规定如何处理元素中的空白。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>world-spacing</td>
+<td>设置单词间距。</td>
+<td>1</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="2-color属性"><a href="#2-color属性" class="headerlink" title="2. color属性"></a>2. color属性</h4><p>color 属性规定文本的颜色。</p>
+<p>这个属性设置了一个元素的前景色（在 HTML 表现中，就是元素文本的颜色）；光栅图像不受 color 影响。这个颜色还会应用到元素的所有边框，除非被 border-color 或另外某个边框颜色属性覆盖。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>not specified</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.color=”#FF0000”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color_name</td>
+<td>规定颜色值为颜色名称的颜色（比如 red）。</td>
+</tr>
+<tr>
+<td>hex_number</td>
+<td>规定颜色值为十六进制值的颜色（比如 #ff0000）。</td>
+</tr>
+<tr>
+<td>rgb_number</td>
+<td>规定颜色值为 rgb 代码的颜色（比如 rgb(255,0,0)）。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承颜色。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 color 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="3-direction属性"><a href="#3-direction属性" class="headerlink" title="3.direction属性"></a>3.direction属性</h4><p>direction 属性规定文本的方向 / 书写方向。该属性指定了块的基本书写方向，以及针对 Unicode 双向算法的嵌入和覆盖方向。不支持双向文本的用户代理可以忽略这个属性。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>ltr</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS2</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.direction=”rtl”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ltr</td>
+<td>默认。文本方向从左到右。</td>
+</tr>
+<tr>
+<td>rtl</td>
+<td>文本方向从右到左。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 direction 属性的值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 direction 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="4-letter-spacing属性"><a href="#4-letter-spacing属性" class="headerlink" title="4.letter-spacing属性"></a>4.letter-spacing属性</h4><p>letter-spacing 属性增加或减少字符间的空白（字符间距）。</p>
+<p>该属性定义了在文本字符框之间插入多少空间。由于字符字形通常比其字符框要窄，指定长度值时，会调整字母之间通常的间隔。因此，normal 就相当于值为 0。允许使用负值，这会让字母之间挤得更紧。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>normal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.letterSpacing=”3px”</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<ul>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>normal</td>
+<td>默认。规定字符间没有额外的空间。</td>
+</tr>
+<tr>
+<td>length</td>
+<td>定义字符间的固定空间（允许使用负值）。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 letter-spacing 属性的值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 letter-spacing 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
+<h4 id="5-line-height属性"><a href="#5-line-height属性" class="headerlink" title="5. line-height属性"></a>5. line-height属性</h4><p>line-height 属性设置行间的距离（行高）。不允许使用负值。</p>
+<p>该属性会影响行框的布局。在应用到一个块级元素时，它定义了该元素中基线之间的最小距离而不是最大距离。</p>
+<p>line-height 与 font-size 的计算值之差（在 CSS 中成为“行间距”）分为两半，分别加到一个文本行内容的顶部和底部。可以包含这些内容的最小框就是行框。</p>
+<p>原始数字值指定了一个缩放因子，后代元素会继承这个缩放因子而不是计算值。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>normal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.lineHeight=”2”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>normal</td>
+<td>默认。设置合理的行间距。</td>
+</tr>
+<tr>
+<td>number</td>
+<td>设置数字，此数字会与当前的字体尺寸相乘来设置行间距。</td>
+</tr>
+<tr>
+<td>length</td>
+<td>设置固定的行间距。</td>
+</tr>
+<tr>
+<td>%</td>
+<td>基于当前字体尺寸的百分比行间距。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 line-height 属性的值。</td>
+</tr>
+</tbody></table>
+<p>所有浏览器都支持 line-height 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="6-text-align属性"><a href="#6-text-align属性" class="headerlink" title="6. text-align属性"></a>6. text-align属性</h4><p>text-align 属性规定元素中的文本的水平对齐方式。</p>
+<p>该属性通过指定行框与哪个点对齐，从而设置块级元素内文本的水平对齐方式。通过允许用户代理调整行内容中字母和字之间的间隔，可以支持值 justify；不同用户代理可能会得到不同的结果。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>如果direction属性是ltr，则默认值是left；如果direction是rtl，则为right。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.textAlign=”right”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>把文本排列到左边。默认值：由浏览器决定。</td>
+</tr>
+<tr>
+<td>right</td>
+<td>把文本排列到右边。</td>
+</tr>
+<tr>
+<td>center</td>
+<td>把文本排列到中间。</td>
+</tr>
+<tr>
+<td>justify</td>
+<td>实现两端对齐文本效果。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 text-align 属性的值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 text-align 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="7-text-decoration属性"><a href="#7-text-decoration属性" class="headerlink" title="7. text-decoration属性"></a>7. text-decoration属性</h4><p>text-decoration 属性规定添加到文本的修饰。修饰的颜色由 “color” 属性设置。</p>
+<p>这个属性允许对文本设置某种效果，如加下划线。如果后代元素没有自己的装饰，祖先元素上设置的装饰会“延伸”到后代元素中。不要求用户代理支持 blink。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>none</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>no</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>版本：</th>
+<th>CSS1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JavaScript语法：</td>
+<td>object.style.textDecoration=”overline”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>none</td>
+<td>默认。定义标准的文本。</td>
+</tr>
+<tr>
+<td>underline</td>
+<td>定义文本下的一条线。</td>
+</tr>
+<tr>
+<td>overline</td>
+<td>定义文本上的一条线。</td>
+</tr>
+<tr>
+<td>line-through</td>
+<td>定义穿过文本下的一条线。</td>
+</tr>
+<tr>
+<td>blink</td>
+<td>定义闪烁的文本。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 text-decoration 属性的值。</td>
+</tr>
+</tbody></table>
+<p>所有主流浏览器都支持 text-decoration 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。IE、Chrome 或 Safari 不支持 “blink” 属性值。</p>
+<h4 id="8-text-indent属性"><a href="#8-text-indent属性" class="headerlink" title="8. text-indent属性"></a>8. text-indent属性</h4><p>text-indent 属性规定文本块中首行文本的缩进。允许使用负值。如果使用负值，那么首行会被缩进到左边。在 CSS 2.1 之前，text-indent 总是继承计算值，而不是声明值。</p>
+<p>用于定义块级元素中第一个内容行的缩进。这最常用于建立一个“标签页”效果。允许指定负值，这会产生一种“悬挂缩进”的效果。</p>
+<ul>
+<li>默认值：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>not specified</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.textIndent=”50px”</td>
+</tr>
+</tbody></table>
+<ul>
+<li>可能的值：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>length</td>
+<td>定义固定的缩进。默认值：0。</td>
+</tr>
+<tr>
+<td>%</td>
+<td>定义基于父元素宽度的百分比的缩进。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 text-indent 属性的值。</td>
+</tr>
+</tbody></table>
+<p>所有浏览器都支持 text-indent 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="9-text-transform属性"><a href="#9-text-transform属性" class="headerlink" title="9. text-transform属性"></a>9. text-transform属性</h4><p>text-transform 属性控制文本的大小写。</p>
+<p>这个属性会改变元素中的字母大小写，而不论源文档中文本的大小写。如果值为 capitalize，则要对某些字母大写，但是并没有明确定义如何确定哪些字母要大写，这取决于用户代理如何识别出各个“词”。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>none</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.textTransform=”uppercase”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="10-参考文档"><a href="#10-参考文档" class="headerlink" title="10.参考文档"></a>10.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
+<h4 id="11-联系方式"><a href="#11-联系方式" class="headerlink" title="11. 联系方式"></a>11. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
