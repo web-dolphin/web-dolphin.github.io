@@ -1368,7 +1368,7 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>xpos ypos</td>
+<td>x px y px</td>
 <td>第一个值是水平位置，第二个值是垂直位置。左上角是 0 0。单位是像素 (0px 0px) 或任何其他的 CSS 单位。如果仅规定了一个值，另一个值将是50%。您可以混合使用 % 和 position 值。</td>
 </tr>
 </tbody></table>
@@ -1726,8 +1726,6 @@
 </tbody></table>
 </li>
 <li><p>可能的值：</p>
-</li>
-</ul>
 <table>
 <thead>
 <tr>
@@ -1756,6 +1754,8 @@
 <td>规定应该从父元素继承 line-height 属性的值。</td>
 </tr>
 </tbody></table>
+</li>
+</ul>
 <p>所有浏览器都支持 line-height 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
 <h4 id="6-text-align属性"><a href="#6-text-align属性" class="headerlink" title="6. text-align属性"></a>6. text-align属性</h4><p>text-align 属性规定元素中的文本的水平对齐方式。</p>
 <p>该属性通过指定行框与哪个点对齐，从而设置块级元素内文本的水平对齐方式。通过允许用户代理调整行内容中字母和字之间的间隔，可以支持值 justify；不同用户代理可能会得到不同的结果。</p>
@@ -1844,8 +1844,6 @@
 </tbody></table>
 </li>
 <li><p>可能的值：</p>
-</li>
-</ul>
 <table>
 <thead>
 <tr>
@@ -1878,12 +1876,13 @@
 <td>规定应该从父元素继承 text-decoration 属性的值。</td>
 </tr>
 </tbody></table>
+</li>
+</ul>
 <p>所有主流浏览器都支持 text-decoration 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。IE、Chrome 或 Safari 不支持 “blink” 属性值。</p>
 <h4 id="8-text-indent属性"><a href="#8-text-indent属性" class="headerlink" title="8. text-indent属性"></a>8. text-indent属性</h4><p>text-indent 属性规定文本块中首行文本的缩进。允许使用负值。如果使用负值，那么首行会被缩进到左边。在 CSS 2.1 之前，text-indent 总是继承计算值，而不是声明值。</p>
 <p>用于定义块级元素中第一个内容行的缩进。这最常用于建立一个“标签页”效果。允许指定负值，这会产生一种“悬挂缩进”的效果。</p>
 <ul>
-<li>默认值：</li>
-</ul>
+<li><p>默认值：</p>
 <table>
 <thead>
 <tr>
@@ -1904,9 +1903,8 @@
 <td>object.style.textIndent=”50px”</td>
 </tr>
 </tbody></table>
-<ul>
-<li>可能的值：</li>
-</ul>
+</li>
+<li><p>可能的值：</p>
 <table>
 <thead>
 <tr>
@@ -1927,6 +1925,8 @@
 <td>规定应该从父元素继承 text-indent 属性的值。</td>
 </tr>
 </tbody></table>
+</li>
+</ul>
 <p>所有浏览器都支持 text-indent 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
 <h4 id="9-text-transform属性"><a href="#9-text-transform属性" class="headerlink" title="9. text-transform属性"></a>9. text-transform属性</h4><p>text-transform 属性控制文本的大小写。</p>
 <p>这个属性会改变元素中的字母大小写，而不论源文档中文本的大小写。如果值为 capitalize，则要对某些字母大写，但是并没有明确定义如何确定哪些字母要大写，这取决于用户代理如何识别出各个“词”。</p>
