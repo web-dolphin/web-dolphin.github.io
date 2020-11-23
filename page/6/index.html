@@ -67,9 +67,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/8.函数/2.8.1 ECMAScript函数的定义" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.1 HTML块级元素" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.1%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89/" class="article-date">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.1%20HTML%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" class="article-date">
   <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
@@ -81,7 +81,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.1%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89/">2.8.1 ECMAScript函数的定义</a>
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.1%20HTML%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/">2.1 HTML块级元素</a>
     </h1>
   
 
@@ -89,140 +89,1051 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-函数的概述"><a href="#1-函数的概述" class="headerlink" title="1. 函数的概述"></a>1. 函数的概述</h4><ul>
-<li>函数是一段JavaScript代码，只定义一次，但是，可以被执行或者调用任意次；</li>
-<li>函数的定义包括形参的标识符列表，函数调用时需要为形参传递实参值；</li>
-<li>函数在被执行过程，会形成自己的私有作用域或称为局部作用域，在其私有作用域中的变量，称之为私有变量或局部变量；</li>
-<li>在私有作用域中的变量，全局无法访问，只能通过将子函数嵌套在函数中，这样子函数就可以访问其所处作用域中的任何变量，这就意味着该子函数构成了一个闭包，并且通过该子函数的返回值，获取到父函数中的私有变量；</li>
-<li>在函数执行过程，函数还拥有本次调用的上下文-this关键字指向函数的调用者；</li>
-<li>如果函数挂载到一个对象，作为对象的一个属性，就称之为对象的方法；</li>
-<li>当通过对象调用函数时，该对象就是此次调用的上下文，也就是该函数this的指向值；</li>
-<li>通过new关键字，创建新对象时，这个函数就称为构造函数；</li>
-<li>在JavaScript中，函数即是对象；程序可以任意操作它，例如：可以把函数赋值给变量，或者作为参数传递给其他变量，因为函数就是对象，所以，可以为函数设置属性，甚至可以调用它们的方法；</li>
+        <h3 id="1-块级元素-Block-的定义"><a href="#1-块级元素-Block-的定义" class="headerlink" title="1. 块级元素(Block)的定义"></a>1. 块级元素(Block)的定义</h3><ol>
+<li>总是在新行上开始</li>
+<li>高度，行高以及外边距和内边距都可控制；</li>
+<li>宽度缺省是它的容器的 100%，除非设定一个宽度；</li>
+<li>它可以容纳内联元素和其他块元素；</li>
+<li>多个块状元素标签写在一起，默认排列方式为从上至下；</li>
+</ol>
+<h3 id="2-块级元素汇总表"><a href="#2-块级元素汇总表" class="headerlink" title="2.块级元素汇总表"></a>2.块级元素汇总表</h3><ol>
+<li><p>常用块级元素</p>
+<table>
+<thead>
+<tr>
+<th>element</th>
+<th>discription</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>body</td>
+<td>文档内容</td>
+</tr>
+<tr>
+<td>h1~h6</td>
+<td>定义标题标签(heading)</td>
+</tr>
+<tr>
+<td>div</td>
+<td>布局元素，不表示任何其他内容分组</td>
+</tr>
+<tr>
+<td>p</td>
+<td>表示段落</td>
+</tr>
+<tr>
+<td>hr</td>
+<td>段落级别的主题变换</td>
+</tr>
+<tr>
+<td>br</td>
+<td>换行(空标签)</td>
+</tr>
+<tr>
+<td>table</td>
+<td>表格元素</td>
+</tr>
+<tr>
+<td>form</td>
+<td>表单元素</td>
+</tr>
+<tr>
+<td>ul</td>
+<td>无序列表</td>
+</tr>
+<tr>
+<td>li</td>
+<td>列表项</td>
+</tr>
+<tr>
+<td>ol</td>
+<td>有序列表</td>
+</tr>
+<tr>
+<td>dl</td>
+<td>生成术语及其定义的列表</td>
+</tr>
+<tr>
+<td>dt</td>
+<td>列表项</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>列表项</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>源码</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/block_elements">[block-element]</a></p>
+</li>
+<li><p>参考文档</p>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.1%20HTML%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" data-id="ckhuajgo200a8woiigpej8m97" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.12 HTML元素属性" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.12%20HTML%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.12%20HTML%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/">2.12 HTML元素属性</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-元素属性-attribute"><a href="#1-元素属性-attribute" class="headerlink" title="1.元素属性(attribute)"></a>1.元素属性(attribute)</h4><ol>
+<li><p>一个元素可以有多个属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">I like <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;link&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/apple.html&quot;</span> <span class="attr">id</span>=<span class="string">&quot;firstlink&quot;</span>&gt;</span>apples<span class="tag">&lt;/<span class="name">a</span>&gt;</span> and</span><br><span class="line">oranges</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用布尔属性:</p>
+<ul>
+<li> <code>readonly</code></li>
 </ul>
-<h4 id="2-函数的组成与定义"><a href="#2-函数的组成与定义" class="headerlink" title="2. 函数的组成与定义"></a>2. 函数的组成与定义</h4><ol>
-<li>函数的组成：</li>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;form_action.asp&quot;</span> <span class="attr">method</span>=<span class="string">&quot;get&quot;</span>&gt;</span></span><br><span class="line">  Name:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;email&quot;</span> /&gt;</span></span><br><span class="line">  Country:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;country&quot;</span> <span class="attr">value</span>=<span class="string">&quot;China&quot;</span> <span class="attr">readonly</span>=<span class="string">&quot;readonly&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Submit&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>disabled</code></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter your name <span class="tag">&lt;<span class="name">input</span> <span class="attr">disabled</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自定义属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter your name</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">disabled</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-creator</span>=<span class="string">&quot;adam&quot;</span> <span class="attr">data-purpose</span>=<span class="string">&quot;collection&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.12%20HTML%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/" data-id="ckhuajgo300aawoii4gzh5ay5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.11  HTML 特殊字符" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.11%20%20HTML%20%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.11%20%20HTML%20%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/">2.11 HTML特殊字符</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>HTML 特殊字体： HTML 预留字符</p>
+</li>
+<li><p>在 HTML 中不能使用小于号（&lt;）和大于号（&gt;），这是因为浏览器会误认为它们是标签；</p>
+</li>
+<li><p>如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符特殊字体（character entities）</p>
+</li>
+<li><p>字符特殊字体类似这样：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="symbol">&amp;lt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- or --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="symbol">&amp;#60;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>表一： HTML 特殊字体</p>
+<table>
+<thead>
+<tr>
+<th align="center">字符</th>
+<th align="center">特殊字体名称</th>
+<th align="center">特殊字体编码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">‘ ‘</td>
+<td align="center"><code>&amp;nbsp</code></td>
+<td align="center"><code>&amp;#160</code></td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center"><code>&amp;lt</code></td>
+<td align="center"><code>&amp;#60</code></td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="center"><code>&amp;gt</code></td>
+<td align="center"><code>&amp;#62</code></td>
+</tr>
+<tr>
+<td align="center">&amp;</td>
+<td align="center"><code>&amp;amp</code></td>
+<td align="center"><code>&amp;#38</code></td>
+</tr>
+<tr>
+<td align="center">“</td>
+<td align="center"><code>&amp;quot</code></td>
+<td align="center"><code>&amp;#34</code></td>
+</tr>
+<tr>
+<td align="center">￠</td>
+<td align="center"><code>&amp;cent</code></td>
+<td align="center"><code>&amp;#162</code></td>
+</tr>
+<tr>
+<td align="center">‘</td>
+<td align="center"><code>&amp;apos</code></td>
+<td align="center"><code>&amp;#39</code></td>
+</tr>
+<tr>
+<td align="center">€</td>
+<td align="center"><code>&amp;euro</code></td>
+<td align="center"><code>&amp;#8364</code></td>
+</tr>
+<tr>
+<td align="center">£</td>
+<td align="center"><code>&amp;pound</code></td>
+<td align="center"><code>&amp;#163</code></td>
+</tr>
+<tr>
+<td align="center">¥</td>
+<td align="center"><code>&amp;yen</code></td>
+<td align="center"><code>&amp;#165</code></td>
+</tr>
+<tr>
+<td align="center">©</td>
+<td align="center"><code>&amp;copy</code></td>
+<td align="center"><code>&amp;#169</code></td>
+</tr>
+<tr>
+<td align="center">®</td>
+<td align="center"><code>&amp;reg</code></td>
+<td align="center"><code>&amp;#174</code></td>
+</tr>
+<tr>
+<td align="center">™</td>
+<td align="center"><code>&amp;trade</code></td>
+<td align="center"><code>&amp;#8482</code></td>
+</tr>
+<tr>
+<td align="center">×</td>
+<td align="center"><code>&amp;times</code></td>
+<td align="center"><code>&amp;#215</code></td>
+</tr>
+<tr>
+<td align="center">÷</td>
+<td align="center"><code>&amp;divide</code></td>
+<td align="center"><code>&amp;#247</code></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sunbocong/article/details/81032758">[html中显示特殊符号]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.11%20%20HTML%20%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/" data-id="ckhuajgo400acwoiia5g71y2b" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.13 HTML列表元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.13%20HTML%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.13%20HTML%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0/">2.13 HTML列表元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Ul无序列表元素"><a href="#1-Ul无序列表元素" class="headerlink" title="1. Ul无序列表元素"></a>1. Ul无序列表元素</h4><ul>
+<li><p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>君不见黄河之水天上来，奔流到海不复回。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>君不见高堂明镜悲白发，朝如青丝暮成雪。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>css修改默认样式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123; <span class="attribute">list-style</span>: none; &#125;</span><br><span class="line"><span class="selector-tag">li</span> &#123; <span class="attribute">list-style</span>: none; &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参考文档</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/html-element/blob/main/12-block_elements/demo/14.0-ul_element.html">[14.0-ul_element.html]</a></p>
+<h4 id="2-Ol有序列表元素"><a href="#2-Ol有序列表元素" class="headerlink" title="2. Ol有序列表元素"></a>2. Ol有序列表元素</h4><ul>
+<li><p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-CN&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of ol element with Vue<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;imgs/favicon.ico&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/index_ol.css&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span> <span class="attr">start</span>=<span class="string">&quot;5&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet1&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet2&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet3&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet4&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>&#123;&#123;about&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span> <span class="attr">reversed</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet1&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet2&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet3&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet4&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>&#123;&#123;about&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span> <span class="attr">type</span>=<span class="string">&quot;I&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet1&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet2&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet3&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet4&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>&#123;&#123;about&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">      el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line"><span class="javascript">        title: <span class="string">&quot;唐诗名句选&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet1: <span class="string">&quot;独坐幽篁里 弹琴复长啸 深林人不知 明月来相照&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet2: <span class="string">&quot;君不见黄河之水天上来 奔流到海不复回&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet3: <span class="string">&quot;君不见高堂明镜悲白发 朝如青丝暮成雪&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet4: <span class="string">&quot;秦时明月汉时关 万里长征人未还&quot;</span>,</span></span><br><span class="line"><span class="javascript">        img: <span class="string">&quot;imgs/photo1.jpg&quot;</span>,</span></span><br><span class="line"><span class="javascript">        link: <span class="string">&quot;https://www.shicimingju.com/shicimark/tangshisanbaishou.html&quot;</span>,</span></span><br><span class="line"><span class="javascript">        about: <span class="string">&quot;唐诗三百首&quot;</span></span></span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参考文档</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/html-element/blob/main/12-block_elements/demo/7.0-ol_element.html">[7.0-ol_element.html]</a></p>
+<ul>
+<li><p>css设置列表标记类型</p>
+</li>
+<li><p>list-style-type: none、box/check/circle/diamond/disc/dash/square/decimal 、decimal、binary、lower-alpha、upper-alpha</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Attribute<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">&quot;http://titan/listings/&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">ol</span> &#123;<span class="attribute">list-style-type</span>: lower-alpha&#125;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>I like apples and oranges<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h5</span>&gt;</span>I also like<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>bananas<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>mangoes<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span> <span class="attr">style</span>=<span class="string">&quot;list-style-type: decimal&quot;</span>&gt;</span>cherries<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>plums<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>peaches<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>grapes<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-Dl自定义列表"><a href="#3-Dl自定义列表" class="headerlink" title="3. Dl自定义列表"></a>3. Dl自定义列表</h4><ul>
+<li><p>HTML文档</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-CN&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of div element with Vue<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;imgs/favicon.ico&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/index_dl.css&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">dl</span> <span class="attr">class</span>=<span class="string">&quot;dl&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span>&#123;&#123;title1&#125;&#125;<span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dd</span>&gt;</span>&#123;&#123;content1&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">dl</span> <span class="attr">class</span>=<span class="string">&quot;dl&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span>&#123;&#123;title2&#125;&#125;<span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dd</span>&gt;</span>&#123;&#123;content2&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">dl</span> <span class="attr">class</span>=<span class="string">&quot;dl&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span>&#123;&#123;title3&#125;&#125;<span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dd</span>&gt;</span>&#123;&#123;content3&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>竹里馆<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">      el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line"><span class="javascript">        title: <span class="string">&quot;唐诗名句选&quot;</span>,</span></span><br><span class="line"><span class="javascript">        title1: <span class="string">&quot;滕王阁序&quot;</span>,</span></span><br><span class="line"><span class="javascript">        content1: <span class="string">&quot;渔舟晚唱 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&quot;</span>,</span></span><br><span class="line"><span class="javascript">        title2: <span class="string">&quot;春晓&quot;</span>,</span></span><br><span class="line"><span class="javascript">        content2: <span class="string">&quot;春眠不觉晓 处处闻啼鸟 夜来风雨声 花落知多少&quot;</span>,</span></span><br><span class="line"><span class="javascript">        title3: <span class="string">&quot;竹馆里&quot;</span>,</span></span><br><span class="line"><span class="javascript">        content3: <span class="string">&quot;独坐幽篁里 弹琴复长啸 深林人不知 明月来相照&quot;</span>,</span></span><br><span class="line"><span class="javascript">        img: <span class="string">&quot;imgs/photo1.jpg&quot;</span>,</span></span><br><span class="line"><span class="javascript">        link: <span class="string">&quot;https://www.shicimingju.com/shicimark/tangshisanbaishou.html&quot;</span>,</span></span><br><span class="line"><span class="javascript">        about: <span class="string">&quot;唐诗三百首&quot;</span>&#125;,</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参考文档</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/html-element/blob/main/12-block_elements/demo/5.0-dl_serial_element.html">[5.0-dl_serial_element.html]</a></p>
+<h4 id="4-列表相关CSS属性"><a href="#4-列表相关CSS属性" class="headerlink" title="4. 列表相关CSS属性"></a>4. 列表相关CSS属性</h4><ul>
+<li><p>使用图像作为列表标记</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123;<span class="attribute">list-style-image</span>: <span class="built_in">url</span>(<span class="string">&#x27;banana.jpg&#x27;</span>)&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置列表标记的位置</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123;  <span class="attribute">list-style-position</span>: inside/outside; &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4></li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email： <a href="mailto:&#x79;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#109;">&#x79;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.13%20HTML%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0/" data-id="ckhuajgo500aewoiicjnf1iti" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.10 嵌入元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.10%20%E5%B5%8C%E5%85%A5%E5%85%83%E7%B4%A0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.10%20%E5%B5%8C%E5%85%A5%E5%85%83%E7%B4%A0/">2.10 HTML嵌入元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.10%20%E5%B5%8C%E5%85%A5%E5%85%83%E7%B4%A0/" data-id="ckhuajgo600agwoiiezlfb6u0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/六、CSS属性和特性/6.3 CSS-Font字体属性" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.3%20CSS-Font%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.3%20CSS-Font%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7/">6.3 CSS-Font字体属性</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-CSS-Font字体属性汇总"><a href="#1-CSS-Font字体属性汇总" class="headerlink" title="1. CSS-Font字体属性汇总"></a>1. CSS-Font字体属性汇总</h4><ul>
+<li><p>汇总表</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>font</td>
+<td>在一个声明中设置所有字体属性。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>规定文本的字体系列。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>规定文本的字体尺寸。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>font-size-adjust</td>
+<td>为元素规定 aspect 值。（CSS2.1已删除该属性）</td>
+<td>2</td>
+</tr>
+<tr>
+<td>font-stretch</td>
+<td>收缩或拉伸当前的字体系列。（CSS2.1已删除该属性）</td>
+<td>2</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>规定文本的字体样式。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>font-variant</td>
+<td>规定文本的字体样式。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>规定字体的粗细。</td>
+<td>1</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#56;&#56;&#x38;&#64;&#x6f;&#117;&#116;&#108;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#117;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#56;&#56;&#x38;&#64;&#x6f;&#117;&#116;&#108;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.3%20CSS-Font%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7/" data-id="ckhuajgo700aiwoii4rtg5cu9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.2 HTML行内元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.2%20HTML%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.2%20HTML%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/">2.2HTML行内元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.2%20HTML%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/" data-id="ckhuajgo800akwoiihk1t6pd5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.3 HTML行内块级元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.3%20HTML%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.3%20HTML%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/">2.3 HTML行内块级元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.3%20HTML%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" data-id="ckhuajgo900amwoii05ws22j2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.4 创建 HTML 文档" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.4%20%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.4%20%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3/">2.4 创建HTML文档</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.4%20%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3/" data-id="ckhuajgoa00aowoiiepyf7x7i" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.5 标记文字" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.5%20%E6%A0%87%E8%AE%B0%E6%96%87%E5%AD%97/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.5%20%E6%A0%87%E8%AE%B0%E6%96%87%E5%AD%97/">2. 5 HTML标记文字</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.5%20%E6%A0%87%E8%AE%B0%E6%96%87%E5%AD%97/" data-id="ckhuajgob00aqwoiifkt9fck2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.6 HTML组织内容" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.6%20HTML%E7%BB%84%E7%BB%87%E5%86%85%E5%AE%B9/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.6%20HTML%E7%BB%84%E7%BB%87%E5%86%85%E5%AE%B9/">2.6 HTML组织内容</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.6%20HTML%E7%BB%84%E7%BB%87%E5%86%85%E5%AE%B9/" data-id="ckhuajgoc00aswoiiegezhf59" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.7  文档分节" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.7%20%20%E6%96%87%E6%A1%A3%E5%88%86%E8%8A%82/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.7%20%20%E6%96%87%E6%A1%A3%E5%88%86%E8%8A%82/">2.7 HTML文档分节</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.7%20%20%E6%96%87%E6%A1%A3%E5%88%86%E8%8A%82/" data-id="ckhuajgod00auwoiigbkien3j" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.8 表格元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.8%20%E8%A1%A8%E6%A0%BC%E5%85%83%E7%B4%A0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.8%20%E8%A1%A8%E6%A0%BC%E5%85%83%E7%B4%A0/">2.8 HTML表格元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-HTML-表格元素"><a href="#1-HTML-表格元素" class="headerlink" title="1.HTML 表格元素"></a>1.HTML 表格元素</h4><table>
+<thead>
+<tr>
+<th>element</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>table</td>
+<td>表格元素</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>表格标题元素</td>
+</tr>
+<tr>
+<td>tr</td>
+<td>表格行元素</td>
+</tr>
+<tr>
+<td>th</td>
+<td>表头单元格元素</td>
+</tr>
+<tr>
+<td>td</td>
+<td>表格单元格元素</td>
+</tr>
+<tr>
+<td>thead</td>
+<td>表格行表头</td>
+</tr>
+<tr>
+<td>tbody</td>
+<td>表格列表头</td>
+</tr>
+<tr>
+<td>tfoot</td>
+<td>表格表脚</td>
+</tr>
+<tr>
+<td>colgroup</td>
+<td>对表格按列处理元素</td>
+</tr>
+<tr>
+<td>col</td>
+<td>对表格按列处理元素</td>
+</tr>
+</tbody></table>
+<h4 id="2-HTML-表格属性"><a href="#2-HTML-表格属性" class="headerlink" title="2.HTML 表格属性"></a>2.HTML 表格属性</h4><ul>
+<li>表二： 表格属性</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>colspan</td>
+<td>列合并</td>
+</tr>
+<tr>
+<td>rowspan</td>
+<td>行合并</td>
+</tr>
+<tr>
+<td>headers</td>
+<td>表格头</td>
+</tr>
+<tr>
+<td>border</td>
+<td>表格边框</td>
+</tr>
+</tbody></table>
+<h4 id="3-设置表格样式"><a href="#3-设置表格样式" class="headerlink" title="3. 设置表格样式"></a>3. 设置表格样式</h4><ol>
+<li>配置独立边框： table元素</li>
 </ol>
 <ul>
-<li><p>function关键字；</p>
+<li><p>border-collapse： collapse 、separate</p>
 </li>
-<li><p>函数名称标识符；</p>
-</li>
-<li><p>一对圆括号；</p>
-</li>
-<li><p>一对花括号(函数体)</p>
-</li>
-<li><p>函数定义的语法格式：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">name</span>(<span class="params"></span>)</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<li><p>border-spacing</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span> &#123;  <span class="attribute">border-collapse</span>: collapse; &#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ol start="2">
-<li>函数的定义</li>
+<li>指定表格布局: table-layout</li>
 </ol>
 <ul>
-<li>函数的定义都是从function关键字开始；</li>
-<li>函数名称是函数声明语句的必须部分，对于函数表达式来说，这个名字是可选的，如果存在，该名字只存在于函数体中，并指代该函数对象本身；</li>
-<li>圆括号：包含0个或者多个用逗号隔开的标识符组成的列表，这些标识符是函数的参数名称；</li>
-<li>花括号：包含0条或者多条JavaScript语句，构成了函数体，一旦调用就执行这些语句；</li>
+<li>auto</li>
+<li>fixed</li>
 </ul>
 <ol start="3">
-<li>案例</li>
+<li> 处理空单元格: empty-cells</li>
 </ol>
 <ul>
-<li><p>函数声明(Function Declaration)</p>
+<li><p>hidden</p>
 </li>
-<li><p>示例一： </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">name,age,family</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> family</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> family = person(<span class="string">&quot;Andy&quot;</span>,<span class="number">20</span>,[<span class="string">&quot;Tomas&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Nicholas&quot;</span>])</span><br><span class="line"><span class="built_in">console</span>.log(family)</span><br></pre></td></tr></table></figure></li>
-<li><p>本案例中，我们定义了一个命名函数，并声明了函数名为person;</p>
-</li>
-<li><p>形参：name,age,famiyl;</p>
-</li>
-<li><p>通过return关键字返回了参数family的值；</p>
-</li>
-<li><p>然后，通过给person传递实参，调用了该函数，并将结果复制给变量<code>let family</code></p>
-</li>
-<li><p>最后输出了family的结果;</p>
-</li>
-<li><p><code>return语句导致函数停止执行，并返回一个表达式(如果有的话)的值给调用者。 如果没有相关表达式，则返回undefined</code></p>
-</li>
-<li><p><code>如果函数不包含return语句，函数将执行函数体内的每一条语句，并返回undefined值给调用者。</code></p>
-</li>
-<li><p><code>函数声明定义的函数，函数声明与引用值具有提升机制，提升到全局作用域的顶部，因此，这种方式定义的函数，函数调用可以置于函数定义之前执行；</code></p>
-</li>
-<li><p>函数表达式(Function Express)</p>
-</li>
-<li><p>示例二: </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = <span class="function"><span class="keyword">function</span>(<span class="params">name,age,family</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> family;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> family = person(<span class="string">&quot;Andy&quot;</span>,<span class="number">20</span>,[<span class="string">&quot;Toams&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Nicholas&quot;</span>,<span class="string">&quot;Andon&quot;</span>]);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(family)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>函数表达式,其函数的引用只有到代码执行时才赋值给变量，因此，函数的调用不能提前；</code></p>
-</li>
-<li><p>示例三</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">printprops</span>(<span class="params">o</span>)</span>&#123;</span><br><span class="line">  <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> p <span class="keyword">in</span> o</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(p + <span class="string">&quot;: &quot;</span> + o[p]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">printprops([<span class="string">&#x27;Andy&#x27;</span>,<span class="string">&quot;Tomas&quot;</span>,<span class="string">&quot;Alax&quot;</span>]);    <span class="comment">// 0: Andy 1: Tomas 2: Alax</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>示例四: 计算两个笛卡尔坐标(x1,y1)和(x2,y2)之间的距离</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">distance</span>(<span class="params">x1,y1,x2,y2</span>) </span>&#123;</span><br><span class="line"><span class="keyword">let</span> dx = x2 - x1;</span><br><span class="line"><span class="keyword">let</span> dy = y2 - y1;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.sqrt(dx * dx + dy * dy).toFixed(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> sqrt = distance(<span class="number">0</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">console</span>.log(sqrt)         <span class="comment">//2.83</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>示例五：计算阶乘的递归函数</li>
-<li>x!的值是从x到x递减(步长为1)的值的累乘</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(x&lt;=<span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> x * factorial(x-<span class="number">1</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = factorial(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">console</span>.log(result)  <span class="comment">// 5 x 4 x 3 x 2 x 1 = 120</span></span><br></pre></td></tr></table></figure>
-
+<li><p>show</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">td</span> &#123;  <span class="attribute">empty-cells</span>: hidden; &#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="3-函数的命名"><a href="#3-函数的命名" class="headerlink" title="3. 函数的命名"></a>3. 函数的命名</h4><ul>
-<li><p>函数的命名： </p>
-<ol>
-<li>以动词或动词词组为前缀的词组；</li>
-<li>通常第一个字母小写；</li>
-<li>当函数名包含多个单词时：<ul>
-<li>一种约定以下划线分隔，例如： like_this()；</li>
-<li>另一种约定驼峰命名，除了第一个单词首写字母小写外，其余单词首写字母大写，例如： likeThis()</li>
-</ul>
-</li>
+<ol start="4">
+<li>设置标题的位置: caption-side</li>
 </ol>
+<ul>
+<li><p>top</p>
 </li>
-</ul>
-<h4 id="4-命名函数、匿名函数与立即调用函数"><a href="#4-命名函数、匿名函数与立即调用函数" class="headerlink" title="4. 命名函数、匿名函数与立即调用函数"></a>4. 命名函数、匿名函数与立即调用函数</h4><ul>
-<li><p>命名函数： 函数声明定义的函数</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">declarationName</span>(<span class="params"></span>)</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>函数表达式</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> epxressName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>匿名函数: 没有赋值的函数表达式</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>立即调用函数</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(x * x)</span><br><span class="line">&#125;)(<span class="number">10</span>)            <span class="comment">//100</span></span><br></pre></td></tr></table></figure>
+<li><p>bottom</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">caption</span> &#123;  <span class="attribute">caption-side</span>: bottom; &#125;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h4 id="5-函数表达式"><a href="#5-函数表达式" class="headerlink" title="5. 函数表达式"></a>5. 函数表达式</h4><ul>
-<li><p>示例六: 求传入参数的平方</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> square = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x * x</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = square(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">console</span>.log(result)     <span class="comment">// 25</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4. 参考文档"></a>4. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5.联系方式"></a>5.联系方式</h4><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#56;&#x38;&#56;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#109;">&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#56;&#x38;&#56;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.8%20%E8%A1%A8%E6%A0%BC%E5%85%83%E7%B4%A0/" data-id="ckhuajgof00awwoii3uxzg38p" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.9 表单元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.9%20%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.9%20%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/">2.9 HTML表单元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-表单元素的作用"><a href="#1-表单元素的作用" class="headerlink" title="1. 表单元素的作用"></a>1. 表单元素的作用</h4><ul>
+<li>收集客户信息</li>
+</ul>
+<h4 id="2-表单元素组成"><a href="#2-表单元素组成" class="headerlink" title="2. 表单元素组成"></a>2. 表单元素组成</h4><ul>
+<li><p>表单域</p>
+</li>
+<li><p>表单控件</p>
+</li>
+<li><p>提示信息</p>
+</li>
+</ul>
+<h4 id="3-表单元素"><a href="#3-表单元素" class="headerlink" title="3. 表单元素"></a>3. 表单元素</h4><ul>
+<li><p>form: 表单域</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;http://localhost:3000/login&quot;</span> <span class="attr">methods</span>=<span class="string">&quot;post&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>input: 输入框</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>textarea: 多行输入框</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">rows</span>=<span class="string">&quot;10&quot;</span> <span class="attr">cols</span>=<span class="string">&quot;10&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>label: 提示信息</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;&quot;</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h4 id="6-函数的嵌套"><a href="#6-函数的嵌套" class="headerlink" title="6. 函数的嵌套"></a>6. 函数的嵌套</h4><ul>
-<li><p>函数具有局部作用域(私有作用域)，在全局作用域无法访问函数内部的变量；</p>
+<h4 id="4-表单元素属性"><a href="#4-表单元素属性" class="headerlink" title="4. 表单元素属性"></a>4. 表单元素属性</h4><ol>
+<li>表单控件</li>
+</ol>
+<ul>
+<li><p>action属性</p>
 </li>
-<li><p>在函数内部嵌套一个函数，因为函数作用域链的机制，嵌套函数可以访问上级函数私有作用域内部的变量，并形成闭包；</p>
+<li><p>methods属性</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;http://localhost:3000/project&quot;</span> <span class="attr">methods</span>=<span class="string">&quot;get&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="2">
+<li>表单控件</li>
+</ol>
+<ul>
+<li><p>type属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;uasername&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>name属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;uasername&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>由于嵌套函数被全局函数占用，其有效内存不能释放；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x * x;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.sqrt(square(a) + square(b))</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = fn(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line"><span class="built_in">console</span>.log(result)     <span class="comment">//5</span></span><br></pre></td></tr></table></figure>
+<li><p>value属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>id属性: 与label配合使用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;username&quot;</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>readonly属性: 属性规定输入字段为只读</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">readonly</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>disable属性:属性规定元素是不可用和不可点击的 </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Andy&quot;</span> <span class="attr">disable</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>size属性: 属性规定输入字段的尺寸</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">size</span>=<span class="string">&quot;20&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>maxlength属性: 属性规定输入字段允许的最大长度</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">maxlength</span>=<span class="string">&quot;20&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="3">
+<li>提示信息</li>
+</ol>
+<ul>
+<li><p>for属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;username&quot;</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="4">
+<li>多行输入框</li>
+</ol>
+<ul>
+<li><p>cols属性</p>
+</li>
+<li><p>rows属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">rows</span>=<span class="string">&quot;20&quot;</span> <span class="attr">cols</span>=<span class="string">&quot;40&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7. 参考文档"></a>7. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
-<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+<h4 id="5-type属性类型"><a href="#5-type属性类型" class="headerlink" title="5. type属性类型"></a>5. type属性类型</h4><ul>
+<li><p>text类型： 文本</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;username&quot;</span>&gt;</span>用户名：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;uasername&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>password类型： 密码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;password&quot;</span>&gt;</span>密码：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;password&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>radio类型： 单选框</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;gender&quot;</span>&gt;</span>性别：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;gender&quot;</span> <span class="attr">value</span>=<span class="string">&quot;male&quot;</span> <span class="attr">id</span>=<span class="string">&quot;gender&quot;</span>/&gt;</span>Male</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;gender&quot;</span> <span class="attr">value</span>=<span class="string">&quot;female&quot;</span> <span class="attr">id</span>=<span class="string">&quot;gender&quot;</span>/&gt;</span>Female</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参考案例</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/css_slider/blob/main/slider_radio.html">[slider_radio.html]</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/css_slider/blob/main/slider_radio_img.html">[slider_radio_img.html]</a></p>
+<ul>
+<li><p>checkbox类型：多选框</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;favorite&quot;</span>&gt;</span>喜好：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;favorite&quot;</span> <span class="attr">value</span>=<span class="string">&quot;post&quot;</span> <span class="attr">id</span>=<span class="string">&quot;favorite&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;favorite&quot;</span> <span class="attr">value</span>=<span class="string">&quot;sport&quot;</span> <span class="attr">id</span>=<span class="string">&quot;favorite&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;favorite&quot;</span> <span class="attr">value</span>=<span class="string">&quot;art&quot;</span> <span class="attr">id</span>=<span class="string">&quot;favorite&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;favorite&quot;</span> <span class="attr">value</span>=<span class="string">&quot;music&quot;</span> <span class="attr">id</span>=<span class="string">&quot;favorite&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>submit类型： 提交按钮</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;submit&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>reset类型: 重置按钮</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;reset&quot;</span> <span class="attr">value</span>=<span class="string">&quot;reset&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.1%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89/" data-id="ckhdrvciw00bt2jii43t979n9" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.9%20%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/" data-id="ckhuajgog00aywoii2aey4lcm" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
 
     </footer>
   </div>
@@ -231,9 +1142,9 @@
 
 
   
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/2.数据类型/引用类型/2.2  ECMA引用数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/一、JavaScript简介/1.JavaScript简史" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/2.2%20%20ECMA%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="article-date">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/1.JavaScript%E7%AE%80%E5%8F%B2/" class="article-date">
   <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
@@ -245,7 +1156,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/2.2%20%20ECMA%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">2.2.2ECMAScript引用数据类型</a>
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/1.JavaScript%E7%AE%80%E5%8F%B2/">1.2 JavaScript 简史</a>
     </h1>
   
 
@@ -253,13 +1164,39 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
+        <h4 id="1-JavaScript-简史"><a href="#1-JavaScript-简史" class="headerlink" title="1. JavaScript 简史"></a>1. JavaScript 简史</h4><ul>
+<li><p>JavaScript 是为了处理表单验证，于 1995 年由就职 Netscape 公司的 Brendan Eich 编写，并于当年 2 月发布，取名：LiveScript；</p>
+</li>
+<li><p>为了搭载媒体热炒 Java 的顺风车，改名 JavaScript</p>
+</li>
+<li><p>1996 年 8 月，Microsoft 进入 Web 浏览器领域，在其 Internet Explorer3 中加入了名为 JScript 的 JavaScript;</p>
+</li>
+<li><p>1997 年，欧洲计算机制造商协会(ECMA:European Coumputer Manufacturers Association)指定协会下辖 39 号技术委员会，负责“标准化脚本语言的语法和语义”，定义了 ECMAScript 语言标准；</p>
+</li>
+<li><p>1998 年 ISO/IEC(国际标准化组织和国际电工委员会)采用了 ECMA-262 定义的 ECMAScript 作为标准，浏览器开发商开始致力于将 ECMAScript 作为各自的 JavaScript 实现的基础；</p>
+</li>
+<li><p>1998 年 10 月 W3C 推荐了<code>DOM Level 1</code>级别的文档对象模型(DOM: Document Object Model),</p>
+</li>
+<li><p>2009 年 12 月 ECMAScript 第五版(ES5)发行，新增： 原生 JSON 对象，继承，高级属性的定义，提出了严格模式；</p>
+</li>
+<li><p>2015 年 ECMAScript 第六版(ES6)发行，提出了更多的编程规定的方法；</p>
+</li>
+<li><p>到现在位置 ECMAScript 版本号已发行到 ES10；</p>
+</li>
+<li><p>Nodes 是 JavaScript 运行的宿主环境，于 2008 年发布，应用于服务器等后端编程；</p>
+</li>
+<li><p>现在 JavaScript 已经成为功能全面的前后端编程语言；</p>
+</li>
+<li><p>TypeScript： Microsoft 公司团队开发的通过添加 Type 实现对 JavaScript 的扩展；</p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[JavaScript 简介]</a></p>
 <h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/2.2%20%20ECMA%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-id="ckhdrvciz00bz2jiifs326c24" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/1.JavaScript%E7%AE%80%E5%8F%B2/" data-id="ckhuajgoh00b0woii32271aqa" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -271,9 +1208,9 @@
 
 
   
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/2.数据类型/基本类型/2.2 ECMA基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/一、JavaScript简介/2.JavaScript实现" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/2.2%20ECMA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="article-date">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/" class="article-date">
   <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
@@ -285,7 +1222,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/2.2%20ECMA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">2.2.1 ECMAScript基本数据类型</a>
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/">1.2 JavaScript 实现</a>
     </h1>
   
 
@@ -293,13 +1230,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+        <h3 id="1-JavaScript-宿主环境"><a href="#1-JavaScript-宿主环境" class="headerlink" title="1.JavaScript 宿主环境"></a>1.JavaScript 宿主环境</h3><h3 id="2-JavaScript-组成"><a href="#2-JavaScript-组成" class="headerlink" title="2. JavaScript 组成"></a>2. JavaScript 组成</h3><ul>
+<li><p>ECMAScript</p>
+</li>
+<li><p>DOM：</p>
+</li>
+</ul>
+<p>DOM 经过扩展用于 HTML 的应用程序编程接口(API: Application Programming Interface),DOM 把整个页面映射为一个多层节点结构</p>
+<ul>
+<li>BOM</li>
+</ul>
+<h4 id="2-1ECMAScript"><a href="#2-1ECMAScript" class="headerlink" title="2.1ECMAScript"></a>2.1ECMAScript</h4><p><a href="">[2.1ECMAScript]</a></p>
+<h4 id="2-2DOM"><a href="#2-2DOM" class="headerlink" title="2.2DOM"></a>2.2DOM</h4><p><a href="">[2.2DOM]</a></p>
+<h4 id="2-3BOM"><a href="#2-3BOM" class="headerlink" title="2.3BOM"></a>2.3BOM</h4><p><a href="">[2.3BOM]</a></p>
+<h3 id="3-Node"><a href="#3-Node" class="headerlink" title="3.Node"></a>3.Node</h3><h4 id="3-1-Node-基础"><a href="#3-1-Node-基础" class="headerlink" title="3.1 Node 基础"></a>3.1 Node 基础</h4><p><a href="">[3.1 Node 基础]</a></p>
+<h4 id="3-2-Express-框架"><a href="#3-2-Express-框架" class="headerlink" title="3.2 Express 框架"></a>3.2 Express 框架</h4><p><a href="">[3.2 Express 框架]</a></p>
+<h4 id="3-3-Koa-框架"><a href="#3-3-Koa-框架" class="headerlink" title="3.3 Koa 框架"></a>3.3 Koa 框架</h4><p><a href="">[3.3 Koa 框架]</a></p>
+<h4 id="3-4-Nest-框架"><a href="#3-4-Nest-框架" class="headerlink" title="3.4 Nest 框架"></a>3.4 Nest 框架</h4><p><a href="">[3.4 Nest 框架]</a></p>
+<h3 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4. 参考文档"></a>4. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[JavaScript 简介]</a></p>
+<h3 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/2.2%20ECMA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-id="ckhdrvcj000c12jiig2bm6uek" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/" data-id="ckhuajgoi00b2woiihrrm3j9x" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -311,9 +1265,9 @@
 
 
   
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/11.内置对象/2.11 ECMAScript内置对象" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Express/Tags/01.创建Express 服务器" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11%20ECMAScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
+    <a href="/2020/10/28/Node/Express/Tags/01.%E5%88%9B%E5%BB%BAExpress%20%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="article-date">
   <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
@@ -325,7 +1279,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11%20ECMAScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11 ECMAScript内置对象</a>
+      <a class="article-title" href="/2020/10/28/Node/Express/Tags/01.%E5%88%9B%E5%BB%BAExpress%20%E6%9C%8D%E5%8A%A1%E5%99%A8/">01.创建Express服务器</a>
     </h1>
   
 
@@ -333,16 +1287,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+        <h4 id="1-安装服务器：-server-js"><a href="#1-安装服务器：-server-js" class="headerlink" title="1. 安装服务器： server.js"></a>1. 安装服务器： server.js</h4><ul>
+<li><p>创建项目目录: <code>linux</code>示范</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">touch server</span><br><span class="line"><span class="built_in">cd</span> server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装： <code>express</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express</span><br></pre></td></tr></table></figure></li>
+<li><p>根目录创建目录： routes，controls，models， configs，public，views，static</p>
+</li>
+<li><p>根目录创建文件： server.js， route.js</p>
+</li>
+</ul>
+<h4 id="2-配置服务器"><a href="#2-配置服务器" class="headerlink" title="2.配置服务器"></a>2.配置服务器</h4><ul>
+<li><p>server.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 引入express安装包</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. 创建服务</span></span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">//3. 配置服务器端口</span></span><br><span class="line"><span class="keyword">const</span> port = process.env.NODE_ENV || <span class="number">3000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//4. 监听端口： localhost:3000</span></span><br><span class="line">app.listen(port,<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(<span class="string">`Express Server is running at port:http://localhost:<span class="subst">$&#123;port&#125;</span>!...`</span>))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置静态资源</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 引入path包</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. 配置静态资源</span></span><br><span class="line">app.use(express.static(path.join(__dirname,<span class="string">&#x27;/public&#x27;</span>)))</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/Node/Express/Tutorials/Express%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B/">[1.Express服务器教程]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11%20ECMAScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckhds1elz0000ayiif3ej414u" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Express/Tags/01.%E5%88%9B%E5%BB%BAExpress%20%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="ckhuajgoj00b5woiia12n66vb" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
 
     </footer>
   </div>
@@ -351,9 +1325,9 @@
 
 
   
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/12.堆栈内存、变量与作用域/2.12 ECMAScript堆栈内存、变量与作用域" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Express/Tags/Mongodb安装为32位windows服务" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/12.%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F/2.12%20ECMAScript%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F/" class="article-date">
+    <a href="/2020/10/28/Node/Express/Tags/Mongodb%E5%AE%89%E8%A3%85%E4%B8%BA32%E4%BD%8Dwindows%E6%9C%8D%E5%8A%A1/" class="article-date">
   <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
@@ -365,7 +1339,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/12.%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F/2.12%20ECMAScript%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F/">2.13 ECMAScript堆栈内存、变量与作用域</a>
+      <a class="article-title" href="/2020/10/28/Node/Express/Tags/Mongodb%E5%AE%89%E8%A3%85%E4%B8%BA32%E4%BD%8Dwindows%E6%9C%8D%E5%8A%A1/">Mongodb安装为32位windows服务</a>
     </h1>
   
 
@@ -373,16 +1347,44 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+        <h4 id="1-创建安装目录"><a href="#1-创建安装目录" class="headerlink" title="1. 创建安装目录"></a>1. 创建安装目录</h4><ul>
+<li><p>创建db目录：F:\mongodb\data\db</p>
+</li>
+<li><p>创建log目录: F:\mongodb\data\log\</p>
+</li>
+</ul>
+<h5 id="mongoDB-bin-目录"><a href="#mongoDB-bin-目录" class="headerlink" title="mongoDB/bin/目录"></a>mongoDB/bin/目录</h5><ul>
+<li><p>启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; mongod --dbpath F:\mongodb\data\db --storageEngine=mmapv1</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="配置：-将MongoDB安装为windows服务"><a href="#配置：-将MongoDB安装为windows服务" class="headerlink" title="配置： 将MongoDB安装为windows服务"></a>配置： 将MongoDB安装为windows服务</h4><ul>
+<li><p>新建mongod.cfg文件，放在mongodb安装文件的bin目录下，内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">port=27017</span><br><span class="line">journal=<span class="literal">true</span></span><br><span class="line">logappend=<span class="literal">true</span></span><br><span class="line">storageEngine=mmapv1</span><br><span class="line">dbpath=F:\mongodb\data\db</span><br><span class="line">logpath=F:\mongodb\data\<span class="built_in">log</span>\mongodb.log</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>管理员身份</code>打开cmd命令行，进入MongoDB安装目录的 bin目录：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin&gt;mongod --config <span class="string">&quot;C:\mongodb\mongodb.config&quot;</span>  --install --serviceName <span class="string">&quot;MongoDB&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>如图结果存放在日志文件中，查看日志发现已经成功。如果失败有可能没有使用管理员身份，遭到拒绝访问</p>
+<h4 id="启动mongodb服务"><a href="#启动mongodb服务" class="headerlink" title="启动mongodb服务"></a>启动mongodb服务</h4><ul>
+<li><p>启动windows服务</p>
+</li>
+<li><p>打开cmd输入<code>services.msc</code>，点击启动,查看服务可以看到MongoDB服务;</p>
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tutorial/MongoDB%E6%95%99%E7%A8%8B/">[1. MongoDB教程]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/12.%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F/2.12%20ECMAScript%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F/" data-id="ckhds1em50001ayii23vidpxx" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Express/Tags/Mongodb%E5%AE%89%E8%A3%85%E4%B8%BA32%E4%BD%8Dwindows%E6%9C%8D%E5%8A%A1/" data-id="ckhuajgok00b6woii4x8f5b1a" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
 
     </footer>
   </div>
@@ -391,9 +1393,117 @@
 
 
   
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/13.闭包/2.13 ECMAScript闭包" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Express/Tutorials/1。 Express服务器教程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/13.%E9%97%AD%E5%8C%85/2.13%20ECMAScript%E9%97%AD%E5%8C%85/" class="article-date">
+    <a href="/2020/10/28/Node/Express/Tutorials/1%E3%80%82%20Express%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Node/">Node</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Node/Express/Tutorials/1%E3%80%82%20Express%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B/">1.Express服务器教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-安装服务器：-server-js"><a href="#1-安装服务器：-server-js" class="headerlink" title="1. 安装服务器： server.js"></a>1. 安装服务器： server.js</h4><ul>
+<li><p>创建项目目录: <code>linux</code>示范</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">touch server</span><br><span class="line"><span class="built_in">cd</span> server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装： <code>express</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express</span><br></pre></td></tr></table></figure></li>
+<li><p>根目录创建目录： routes，controls，models， configs，public，views，static</p>
+</li>
+<li><p>根目录创建文件： server.js， route.js</p>
+</li>
+</ul>
+<h4 id="2-配置服务器"><a href="#2-配置服务器" class="headerlink" title="2.配置服务器"></a>2.配置服务器</h4><ul>
+<li><p>server.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 引入express安装包</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. 创建服务</span></span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">//3. 配置服务器端口</span></span><br><span class="line"><span class="keyword">const</span> port = process.env.NODE_ENV || <span class="number">3000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//4. 监听端口： localhost:3000</span></span><br><span class="line">app.listen(port,<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(<span class="string">`Express Server is running at port:http://localhost:<span class="subst">$&#123;port&#125;</span>!...`</span>))</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-路由"><a href="#2-路由" class="headerlink" title="2.路由"></a>2.路由</h4><ul>
+<li><p>配置路由</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> routes = <span class="built_in">require</span>(<span class="string">&#x27;./config/routes&#x27;</span>)</span><br><span class="line">routes(app)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-静态资源"><a href="#3-静态资源" class="headerlink" title="3.静态资源"></a>3.静态资源</h4><ul>
+<li><p>配置静态资源</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 引入path包</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. 配置静态资源</span></span><br><span class="line">app.use(express.static(path.join(__dirname,<span class="string">&#x27;/public&#x27;</span>)))</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-配置模板引擎：jade-js"><a href="#4-配置模板引擎：jade-js" class="headerlink" title="4. 配置模板引擎：jade.js"></a>4. 配置模板引擎：jade.js</h4><ul>
+<li>安装：<code> jade</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 引入jade包</span></span><br><span class="line"><span class="keyword">const</span> jade=<span class="built_in">require</span>(<span class="string">&quot;jade&quot;</span>);   </span><br><span class="line"></span><br><span class="line"><span class="comment">//2. 设置默认的模板引擎</span></span><br><span class="line">app.set(<span class="string">&quot;view engine&quot;</span>,<span class="string">&quot;jade&quot;</span>);   </span><br><span class="line"></span><br><span class="line"><span class="comment">//3. 定义模板引擎</span></span><br><span class="line">app.engine(<span class="string">&#x27;jade&#x27;</span>, jade.__express);     </span><br></pre></td></tr></table></figure>
+
+<h4 id="5-配置视图的对应目录"><a href="#5-配置视图的对应目录" class="headerlink" title="5.配置视图的对应目录"></a>5.配置视图的对应目录</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.set(<span class="string">&#x27;views&#x27;</span>,path.join(__dirname,<span class="string">&#x27;/views&#x27;</span>))    </span><br></pre></td></tr></table></figure>
+
+<h4 id="6-配置post请求解析"><a href="#6-配置post请求解析" class="headerlink" title="6. 配置post请求解析"></a>6. 配置post请求解析</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.use(express.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;))</span><br><span class="line">app.use(express.json())</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-安装-配置multiparty中间件：解析文件"><a href="#7-安装-配置multiparty中间件：解析文件" class="headerlink" title="7. 安装/配置multiparty中间件：解析文件"></a>7. 安装/配置multiparty中间件：解析文件</h4><ul>
+<li><p>multiparty可以设置上传文件的保存路径、限制文件的大小…</p>
+</li>
+<li><p>对于涉及文件上传的表单，必须设置<form enctype="multipart/form-data"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> multipart = <span class="built_in">require</span>(<span class="string">&#x27;connect-multiparty&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> multipartMiddleware = multipart();</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">&#x27;/&#x27;</span>, multipartMiddleware, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> res.json(&#123;</span><br><span class="line">    data:req.files</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="8-配置mongoose链接"><a href="#8-配置mongoose链接" class="headerlink" title="8. 配置mongoose链接"></a>8. 配置mongoose链接</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> connect = <span class="built_in">require</span>(<span class="string">&#x27;./config/connect&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="9-安装-配置cookies-key-value"><a href="#9-安装-配置cookies-key-value" class="headerlink" title="9. 安装/配置cookies: (key/value)"></a>9. 安装/配置cookies: (key/value)</h4><ul>
+<li><p>详见： Cookies 安装与配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> cookieParser=<span class="built_in">require</span>(<span class="string">&quot;cookie-parser&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> session = <span class="built_in">require</span>(<span class="string">&#x27;express-session&#x27;</span>)</span><br><span class="line"></span><br><span class="line">app.use(cookieParser())</span><br><span class="line"></span><br><span class="line">app.use(session(&#123;</span><br><span class="line">  cookieName: <span class="string">&#x27;session&#x27;</span>,</span><br><span class="line">  secret: <span class="string">&#x27;random_string_goes_here&#x27;</span>,</span><br><span class="line">  duration: <span class="number">30</span> * <span class="number">60</span> * <span class="number">1000</span>,</span><br><span class="line">  activeDuration: <span class="number">5</span> * <span class="number">60</span> * <span class="number">1000</span>,</span><br><span class="line">&#125;))  </span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="10-安装-配置express-session-connect-mongo"><a href="#10-安装-配置express-session-connect-mongo" class="headerlink" title="10. 安装 / 配置express-session / connect-mongo"></a>10. 安装 / 配置express-session / connect-mongo</h4><ul>
+<li><p>session</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> session = <span class="built_in">require</span>(<span class="string">&#x27;express-session&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> MongoStore = <span class="built_in">require</span>(<span class="string">&#x27;connect-mongo&#x27;</span>)(session)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 一、配置方案</span></span><br><span class="line">app.use(session(&#123;</span><br><span class="line">  <span class="comment">//1.服务器生成session的签名，可以是任意字符串，用于加密</span></span><br><span class="line">  secret:<span class="string">&#x27;1234&#x27;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">//2.强制保存session，即使没有变化，默认值为true  </span></span><br><span class="line">  resave:<span class="literal">false</span>, </span><br><span class="line"></span><br><span class="line">  <span class="comment">//3.强制将未初始化的session存储，默认为true    </span></span><br><span class="line">  saveUninitialized:<span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">//4.设置cookie，maxAge、path、domain...  </span></span><br><span class="line">  cookie: &#123; <span class="attr">maxAge</span>:<span class="number">1000</span>*<span class="number">60</span>*<span class="number">30</span> &#125;, </span><br><span class="line"></span><br><span class="line">  <span class="comment">//5. 默认false，每次请求时强行设置cookie，这将会重置cookie过期时间 </span></span><br><span class="line">  rooling:<span class="literal">true</span>,                   </span><br><span class="line">  store:<span class="keyword">new</span> MongoStore(&#123;</span><br><span class="line">    <span class="comment">//6. 数据库地址</span></span><br><span class="line">    url: <span class="string">&#x27;mongodb://127.0.0.1:27017/student&#x27;</span>,  </span><br><span class="line">    touchAfter: <span class="number">24</span>*<span class="number">3600</span>,   </span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)) </span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="11-跨域"><a href="#11-跨域" class="headerlink" title="11. 跨域"></a>11. 跨域</h4><ul>
+<li><p>Cors插件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;cors&#x27;</span>)()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="12-参考文档"><a href="#12-参考文档" class="headerlink" title="12.参考文档"></a>12.参考文档</h4><p><a href="">[]</a></p>
+<h4 id="13-联系方式"><a href="#13-联系方式" class="headerlink" title="13. 联系方式"></a>13. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Express/Tutorials/1%E3%80%82%20Express%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B/" data-id="ckhuajgom00b8woii4z8xe8ao" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/四、HTML5新增内容/Canvas/4.1Canvas画布" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E5%9B%9B%E3%80%81HTML5%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9/Canvas/4.1Canvas%E7%94%BB%E5%B8%83/" class="article-date">
   <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
@@ -405,7 +1515,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/13.%E9%97%AD%E5%8C%85/2.13%20ECMAScript%E9%97%AD%E5%8C%85/">2.13 ECMAScript闭包</a>
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E5%9B%9B%E3%80%81HTML5%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9/Canvas/4.1Canvas%E7%94%BB%E5%B8%83/">4.1 Canvas画布</a>
     </h1>
   
 
@@ -413,16 +1523,491 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+        <blockquote>
+<p>canvas 最早由 Apple 引入 WebKit,用于 Mac OS X 的 Dashboard,后来又在 Safari 和 Google Chrome 被实现。<br>基于 Gecko 1.8 的浏览器,比如 Firefox 1.5, 同样支持这个元素。<br>&lt;canvas&gt; 元素是 WhatWG Web applications 1.0 规范的一部分,也包含于 HTML 5 中。</p>
+</blockquote>
+<h3 id="体验-Canvas"><a href="#体验-Canvas" class="headerlink" title="体验 Canvas"></a>体验 Canvas</h3><h4 id="什么是-Canvas？"><a href="#什么是-Canvas？" class="headerlink" title="什么是 Canvas？"></a>什么是 Canvas？</h4><p>HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。<br>画布是一个矩形区域，您可以控制其每一像素。<br>canvas 拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。</p>
+<h4 id="创建-Canvas-元素"><a href="#创建-Canvas-元素" class="headerlink" title="创建 Canvas 元素"></a>创建 Canvas 元素</h4><p>向 HTML5 页面添加 canvas 元素。<br>规定元素的 id、宽度和高度：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;myCanvas&quot;</span> <span class="attr">width</span>=<span class="string">&quot;200&quot;</span> <span class="attr">height</span>=<span class="string">&quot;100&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Canvas-坐标系"><a href="#Canvas-坐标系" class="headerlink" title="Canvas 坐标系"></a>Canvas 坐标系</h4><p><img src="images/location.jpg"></p>
+<h4 id="通过-JavaScript-来绘制"><a href="#通过-JavaScript-来绘制" class="headerlink" title="通过 JavaScript 来绘制"></a>通过 JavaScript 来绘制</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*获取元素*/</span></span><br><span class="line"><span class="keyword">var</span> myCanvas = <span class="built_in">document</span>.querySelector(<span class="string">&quot;#myCanvas&quot;</span>);</span><br><span class="line"><span class="comment">/*获取绘图工具*/</span></span><br><span class="line"><span class="keyword">var</span> context = myCanvas.getContext(<span class="string">&quot;2d&quot;</span>);</span><br><span class="line"><span class="comment">/*设置绘图的起始位置*/</span></span><br><span class="line">context.moveTo(<span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line"><span class="comment">/*绘制路径*/</span></span><br><span class="line">context.lineTo(<span class="number">200</span>, <span class="number">200</span>);</span><br><span class="line"><span class="comment">/*描边*/</span></span><br><span class="line">context.stroke();</span><br></pre></td></tr></table></figure>
+
+<h3 id="Canvas-的基本使用"><a href="#Canvas-的基本使用" class="headerlink" title="Canvas 的基本使用"></a>Canvas 的基本使用</h3><h4 id="图形绘制"><a href="#图形绘制" class="headerlink" title="图形绘制"></a>图形绘制</h4><p>需要理解些概念：</p>
+<ul>
+<li>路径的概念</li>
+<li>路径的绘制<ul>
+<li>描边 stroke()</li>
+<li>填充 fill()<br><img src="images/path.jpg"></li>
+</ul>
+</li>
+<li>闭合路径<ul>
+<li>手动闭合</li>
+<li>程序闭合 closePath()</li>
+</ul>
+</li>
+<li>填充规则(非零环绕)<br><img src="images/zero.jpg"></li>
+<li>开启新的路径 beginPath()</li>
+</ul>
+<h4 id="设置样式"><a href="#设置样式" class="headerlink" title="设置样式"></a>设置样式</h4><ul>
+<li>画笔的状态<ul>
+<li>lineWidth 线宽，默认 1px</li>
+<li>lineCap 线末端类型：(butt 默认)、round、square</li>
+<li>lineJoin 相交线的拐点 miter(默认)、round、bevel</li>
+<li>strokeStyle 线的颜色</li>
+<li>fillStyle 填充颜色</li>
+<li>setLineDash() 设置虚线</li>
+<li>getLineDash() 获取虚线宽度集合</li>
+<li>lineDashOffset 设置虚线偏移量（负值向右偏移）</li>
+</ul>
+</li>
+</ul>
+<h4 id="实例练习"><a href="#实例练习" class="headerlink" title="实例练习"></a>实例练习</h4><ul>
+<li>渐变色绘制</li>
+<li>镂空的房子</li>
+<li>绘制坐标网格</li>
+<li>绘制坐标系</li>
+<li>绘制坐标点</li>
+<li>绘制折线图</li>
+</ul>
+<h4 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h4><ul>
+<li><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/html_ref_canvas.asp">w3school</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial">Canvas_API</a></li>
+</ul>
+<h3 id="Canvas-图形绘制"><a href="#Canvas-图形绘制" class="headerlink" title="Canvas 图形绘制"></a>Canvas 图形绘制</h3><h4 id="矩形绘制"><a href="#矩形绘制" class="headerlink" title="矩形绘制"></a>矩形绘制</h4><ul>
+<li>rect(x,y,w,h) 没有独立路径</li>
+<li>strokeRect(x,y,w,h) 有独立路径，不影响别的绘制</li>
+<li>fillRect(x,y,w,h) 有独立路径，不影响别的绘制</li>
+<li>clearRect(x,y,w,h) 擦除矩形区域</li>
+</ul>
+<h4 id="圆弧绘制"><a href="#圆弧绘制" class="headerlink" title="圆弧绘制"></a>圆弧绘制</h4><ul>
+<li>弧度概念</li>
+<li>arc()<ul>
+<li>x 圆心横坐标</li>
+<li>y 圆心纵坐标</li>
+<li>r 半径</li>
+<li>startAngle 开始角度</li>
+<li>endAngle 结束角度</li>
+<li>anticlockwise 是否逆时针方向绘制（默认 false 表示顺时针；true 表示逆时针）</li>
+</ul>
+</li>
+</ul>
+<h4 id="绘制文本"><a href="#绘制文本" class="headerlink" title="绘制文本"></a>绘制文本</h4><ul>
+<li>ctx.font = ‘微软雅黑’ 设置字体</li>
+<li>strokeText()</li>
+<li>fillText(text,x,y,maxWidth)<ul>
+<li>text 要绘制的文本</li>
+<li>x,y 文本绘制的坐标（文本左下角）</li>
+<li>maxWidth 设置文本最大宽度，可选参数</li>
+</ul>
+</li>
+<li>ctx.textAlign 文本水平对齐方式，相对绘制坐标来说的<ul>
+<li>left</li>
+<li>center</li>
+<li>right</li>
+<li>start 默认</li>
+<li>end</li>
+</ul>
+</li>
+<li>ctx.direction 属性 css(rtl ltr) start 和 end 于此相关<ul>
+<li>如果是 ltr,start 和 left 表现一致</li>
+<li>如果是 rtl,start 和 right 表现一致</li>
+</ul>
+</li>
+<li>ctx.textBaseline 设置基线（垂直对齐方式 ）<ul>
+<li>top 文本的基线处于文本的正上方，并且有一段距离</li>
+<li>middle 文本的基线处于文本的正中间</li>
+<li>bottom 文本的基线处于文本的证下方，并且有一段距离</li>
+<li>hanging 文本的基线处于文本的正上方，并且和文本粘合</li>
+<li>alphabetic 默认值，基线处于文本的下方，并且穿过文字</li>
+<li>ideographic 和 bottom 相似，但是不一样</li>
+</ul>
+</li>
+<li>measureText() 获取文本宽度 obj.width</li>
+</ul>
+<h4 id="实例练习-1"><a href="#实例练习-1" class="headerlink" title="实例练习"></a>实例练习</h4><ul>
+<li>绘制扇形</li>
+<li>绘制圆角矩形</li>
+<li>绘制圆</li>
+<li>绘制饼图</li>
+</ul>
+<h3 id="做动画"><a href="#做动画" class="headerlink" title="做动画"></a>做动画</h3><h4 id="绘制图片"><a href="#绘制图片" class="headerlink" title="绘制图片"></a>绘制图片</h4><ul>
+<li>drawImage()<ul>
+<li>三个参数 drawImage(img,x,y)<ul>
+<li>img 图片对象、canvas 对象、video 对象</li>
+<li>x,y 图片绘制的左上角</li>
+</ul>
+</li>
+<li>五个参数 drawImage(img,x,y,w,h)<ul>
+<li>img 图片对象、canvas 对象、video 对象</li>
+<li>x,y 图片绘制的左上角</li>
+<li>w,h 图片绘制尺寸设置(图片缩放，不是截取)</li>
+</ul>
+</li>
+<li>九个参数 drawImage(img,x,y,w,h,x1,y1,w1,h1)<ul>
+<li>img 图片对象、canvas 对象、video 对象</li>
+<li>x,y,w,h 图片中的一个矩形区域</li>
+<li>x1,y1,w1,h1 画布中的一个矩形区域</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="序列帧动画"><a href="#序列帧动画" class="headerlink" title="序列帧动画"></a>序列帧动画</h4><ul>
+<li>绘制精灵图</li>
+<li>动起来</li>
+<li>控制边界</li>
+<li>键盘控制</li>
+</ul>
+<h4 id="坐标变换"><a href="#坐标变换" class="headerlink" title="坐标变换"></a>坐标变换</h4><ul>
+<li>平移 移动画布的原点<ul>
+<li>translate(x,y) 参数表示移动目标点的坐标</li>
+</ul>
+</li>
+<li>缩放<ul>
+<li>scale(x,y) 参数表示宽高的缩放比例</li>
+</ul>
+</li>
+<li>旋转<ul>
+<li>rotate(angle) 参数表示旋转角度</li>
+</ul>
+</li>
+</ul>
+<h3 id="颜色、样式和阴影"><a href="#颜色、样式和阴影" class="headerlink" title="颜色、样式和阴影"></a>颜色、样式和阴影</h3><table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_fillstyle.asp">fillStyle</a></td>
+<td align="left">设置或返回用于填充绘画的颜色、渐变或模式</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_strokestyle.asp">strokeStyle</a></td>
+<td align="left">设置或返回用于笔触的颜色、渐变或模式</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_shadowcolor.asp">shadowColor</a></td>
+<td align="left">设置或返回用于阴影的颜色</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_shadowblur.asp">shadowBlur</a></td>
+<td align="left">设置或返回用于阴影的模糊级别</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_shadowoffsetx.asp">shadowOffsetX</a></td>
+<td align="left">设置或返回阴影距形状的水平距离</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_shadowoffsety.asp">shadowOffsetY</a></td>
+<td align="left">设置或返回阴影距形状的垂直距离</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_createlineargradient.asp">createLinearGradient()</a></td>
+<td align="left">创建线性渐变（用在画布内容上）</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_createpattern.asp">createPattern()</a></td>
+<td align="left">在指定的方向上重复指定的元素</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_createradialgradient.asp">createRadialGradient()</a></td>
+<td align="left">创建放射状/环形的渐变（用在画布内容上）</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_addcolorstop.asp">addColorStop()</a></td>
+<td align="left">规定渐变对象中的颜色和停止位置</td>
+</tr>
+</tbody></table>
+<h3 id="线条样式"><a href="#线条样式" class="headerlink" title="线条样式"></a>线条样式</h3><table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_linecap.asp">lineCap</a></td>
+<td align="left">设置或返回线条的结束端点样式</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_linejoin.asp">lineJoin</a></td>
+<td align="left">设置或返回两条线相交时，所创建的拐角类型</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_linewidth.asp">lineWidth</a></td>
+<td align="left">设置或返回当前的线条宽度</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_miterlimit.asp">miterLimit</a></td>
+<td align="left">设置或返回最大斜接长度</td>
+</tr>
+</tbody></table>
+<h3 id="矩形"><a href="#矩形" class="headerlink" title="矩形"></a>矩形</h3><table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_rect.asp">rect()</a></td>
+<td align="left">创建矩形</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_fillrect.asp">fillRect()</a></td>
+<td align="left">绘制“被填充”的矩形</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_strokerect.asp">strokeRect()</a></td>
+<td align="left">绘制矩形（无填充）</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_clearrect.asp">clearRect()</a></td>
+<td align="left">在给定的矩形内清除指定的像素</td>
+</tr>
+</tbody></table>
+<h3 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h3><table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_fill.asp">fill()</a></td>
+<td align="left">填充当前绘图（路径）</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_stroke.asp">stroke()</a></td>
+<td align="left">绘制已定义的路径</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_beginpath.asp">beginPath()</a></td>
+<td align="left">起始一条路径，或重置当前路径</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_moveto.asp">moveTo()</a></td>
+<td align="left">把路径移动到画布中的指定点，不创建线条</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_closepath.asp">closePath()</a></td>
+<td align="left">创建从当前点回到起始点的路径</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_lineto.asp">lineTo()</a></td>
+<td align="left">添加一个新点，然后在画布中创建从该点到最后指定点的线条</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_clip.asp">clip()</a></td>
+<td align="left">从原始画布剪切任意形状和尺寸的区域</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_quadraticcurveto.asp">quadraticCurveTo()</a></td>
+<td align="left">创建二次贝塞尔曲线</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_beziercurveto.asp">bezierCurveTo()</a></td>
+<td align="left">创建三次方贝塞尔曲线</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_arc.asp">arc()</a></td>
+<td align="left">创建弧/曲线（用于创建圆形或部分圆）</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_arcto.asp">arcTo()</a></td>
+<td align="left">创建两切线之间的弧/曲线</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_ispointinpath.asp">isPointInPath()</a></td>
+<td align="left">如果指定的点位于当前路径中，则返回 true，否则返回 false</td>
+</tr>
+</tbody></table>
+<h3 id="转换"><a href="#转换" class="headerlink" title="转换"></a>转换</h3><table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_scale.asp">scale()</a></td>
+<td align="left">缩放当前绘图至更大或更小</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_rotate.asp">rotate()</a></td>
+<td align="left">旋转当前绘图</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_translate.asp">translate()</a></td>
+<td align="left">重新映射画布上的 (0,0) 位置</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_transform.asp">transform()</a></td>
+<td align="left">替换绘图的当前转换矩阵</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_settransform.asp">setTransform()</a></td>
+<td align="left">将当前转换重置为单位矩阵。然后运行 transform()</td>
+</tr>
+</tbody></table>
+<h3 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h3><table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_font.asp">font</a></td>
+<td align="left">设置或返回文本内容的当前字体属性</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_textalign.asp">textAlign</a></td>
+<td align="left">设置或返回文本内容的当前对齐方式</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_textbaseline.asp">textBaseline</a></td>
+<td align="left">设置或返回在绘制文本时使用的当前文本基线</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_filltext.asp">fillText()</a></td>
+<td align="left">在画布上绘制“被填充的”文本</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_stroketext.asp">strokeText()</a></td>
+<td align="left">在画布上绘制文本（无填充）</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_measuretext.asp">measureText()</a></td>
+<td align="left">返回包含指定文本宽度的对象</td>
+</tr>
+</tbody></table>
+<h3 id="图像绘制"><a href="#图像绘制" class="headerlink" title="图像绘制"></a>图像绘制</h3><table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_drawimage.asp">drawImage()</a></td>
+<td align="left">向画布上绘制图像、画布或视频</td>
+</tr>
+</tbody></table>
+<h3 id="像素操作"><a href="#像素操作" class="headerlink" title="像素操作"></a>像素操作</h3><table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_imagedata_width.asp">width</a></td>
+<td align="left">返回 ImageData 对象的宽度</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_imagedata_height.asp">height</a></td>
+<td align="left">返回 ImageData 对象的高度</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_imagedata_data.asp">data</a></td>
+<td align="left">返回一个对象，其包含指定的 ImageData 对象的图像数据</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_createimagedata.asp">createImageData()</a></td>
+<td align="left">创建新的、空白的 ImageData 对象</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_getimagedata.asp">getImageData()</a></td>
+<td align="left">返回 ImageData 对象，该对象为画布上指定的矩形复制像素数据</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_putimagedata.asp">putImageData()</a></td>
+<td align="left">把图像数据（从指定的 ImageData 对象）放回画布上</td>
+</tr>
+</tbody></table>
+<h3 id="合成"><a href="#合成" class="headerlink" title="合成"></a>合成</h3><table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_globalalpha.asp">globalAlpha</a></td>
+<td align="left">设置或返回绘图的当前 alpha 或透明值</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/canvas_globalcompositeoperation.asp">globalCompositeOperation</a></td>
+<td align="left">设置或返回新图像如何绘制到已有的图像上</td>
+</tr>
+</tbody></table>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">save()</td>
+<td align="left">保存当前环境的状态</td>
+</tr>
+<tr>
+<td align="left">restore()</td>
+<td align="left">返回之前保存过的路径状态和属性</td>
+</tr>
+<tr>
+<td align="left">createEvent()</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">getContext()</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">toDataURL()</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<p>​</p>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E5%9B%9B%E3%80%81HTML5%20%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9/">[四、HTML5 新增内容]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/13.%E9%97%AD%E5%8C%85/2.13%20ECMAScript%E9%97%AD%E5%8C%85/" data-id="ckhds1emd0004ayiialqo15r8" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E5%9B%9B%E3%80%81HTML5%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9/Canvas/4.1Canvas%E7%94%BB%E5%B8%83/" data-id="ckhuajgor00bfwoiih2r6dza4" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
 
     </footer>
   </div>
@@ -431,9 +2016,9 @@
 
 
   
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/14.正则表达式/2.14 ECMAScript正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-HTML/HTML Tags/四、HTML5新增内容/SVG/4.3 SVG" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/14.%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/2.14%20ECMAScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E5%9B%9B%E3%80%81HTML5%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9/SVG/4.3%20SVG/" class="article-date">
   <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
@@ -445,7 +2030,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/14.%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/2.14%20ECMAScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">2.14 ECMAScript正则表达式</a>
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E5%9B%9B%E3%80%81HTML5%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9/SVG/4.3%20SVG/">4.3 Scalable Vector Graphics(SVG)</a>
     </h1>
   
 
@@ -453,576 +2038,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+        <h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E5%9B%9B%E3%80%81HTML5%20%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9/">[四、HTML5 新增内容]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/14.%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/2.14%20ECMAScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" data-id="ckhds1eme0005ayii36vfa9sy" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E5%9B%9B%E3%80%81HTML5%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9/SVG/4.3%20SVG/" data-id="ckhuajgos00bhwoii9pz2avvq" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/15.浏览器环境/2.15 ECMAScript浏览器环境" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/15.%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83/2.15%20ECMAScript%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/15.%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83/2.15%20ECMAScript%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83/">2.15 ECMAScript浏览器环境</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/15.%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83/2.15%20ECMAScript%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83/" data-id="ckhds1emg0007ayiiahq4eruf" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/10.内置函数/2.10 ECMAScript内置函数" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/10.%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/2.10%20ECMAScript%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/10.%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/2.10%20ECMAScript%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/">2.10 ECMAScript内置函数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/10.%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/2.10%20ECMAScript%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/" data-id="ckhds26hs0000cxiigwnpffe1" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tutorial/2.2ECMAScript数据类型" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.2ECMAScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.2ECMAScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">2.2 ECMAScript数据类型</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.2ECMAScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-id="ckhdsoycg0000sviigs13el1g" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tutorial/2.3 ECMAScript变量" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.3%20ECMAScript%E5%8F%98%E9%87%8F/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.3%20ECMAScript%E5%8F%98%E9%87%8F/">2.3 ECMAScript变量</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.3%20ECMAScript%E5%8F%98%E9%87%8F/" data-id="ckhdsoycj0001sviifl9h9ful" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tutorial/2.4 ECMAScript表达式" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.4%20ECMAScript%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.4%20ECMAScript%E8%A1%A8%E8%BE%BE%E5%BC%8F/">2.4 ECMAScript表达式</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.4%20ECMAScript%E8%A1%A8%E8%BE%BE%E5%BC%8F/" data-id="ckhdsoyck0002svii478cffk7" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tutorial/2.5 ECMAScript运算符" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.5%20ECMAScript%E8%BF%90%E7%AE%97%E7%AC%A6/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.5%20ECMAScript%E8%BF%90%E7%AE%97%E7%AC%A6/">2.5 ECMAScript运算符</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.5%20ECMAScript%E8%BF%90%E7%AE%97%E7%AC%A6/" data-id="ckhdsoycl0003sviiec77f190" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tutorial/2.6 ECMAScript语句" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.6%20ECMAScript%E8%AF%AD%E5%8F%A5/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.6%20ECMAScript%E8%AF%AD%E5%8F%A5/">2.6 ECMAScript语句</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.6%20ECMAScript%E8%AF%AD%E5%8F%A5/" data-id="ckhdsoycp0008sviicmzmcrs8" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tutorial/2.10 ECMAScript内置函数" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.10%20ECMAScript%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.10%20ECMAScript%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/">2.10 ECMAScript内置函数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.10%20ECMAScript%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/" data-id="ckhdt2c6r0000d8iifyin308f" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tutorial/2.11 ECMAScript内置对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.11%20ECMAScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.11%20ECMAScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11 ECMAScript内置对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.11%20ECMAScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckhdt2c710001d8ii70lm4229" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tutorial/2.13 ECMAScript闭包" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.13%20ECMAScript%E9%97%AD%E5%8C%85/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.13%20ECMAScript%E9%97%AD%E5%8C%85/">2.13 ECMAScript闭包</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.13%20ECMAScript%E9%97%AD%E5%8C%85/" data-id="ckhdt2c730002d8ii82gtfmef" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tutorial/2.12 ECMAScript堆栈内存、变量与作用域" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.12%20ECMAScript%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.12%20ECMAScript%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F/">2.12 ECMAScript堆栈内存、变量与作用域</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.12%20ECMAScript%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F/" data-id="ckhdt2c750004d8ii0tnr3kno" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tutorial/2.14 ECMAScript正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.14%20ECMAScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.14%20ECMAScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">2.14 ECMAScript正则表达式</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.14%20ECMAScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" data-id="ckhdt2c760005d8ii1mngez6g" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tutorial/2.15 ECMAScript浏览器环境" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.15%20ECMAScript%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.15%20ECMAScript%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83/">2.15 ECMAScript浏览器环境</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.15%20ECMAScript%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83/" data-id="ckhdt2c770007d8iihoeq5imr" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tutorial/2.16 ECMAScript递归" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.16%20ECMAScript%E9%80%92%E5%BD%92/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.16%20ECMAScript%E9%80%92%E5%BD%92/">2.16 ECMAScript递归</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.16%20ECMAScript%E9%80%92%E5%BD%92/" data-id="ckhdt2c790009d8ii6o69glbf" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
 
     </footer>
   </div>
@@ -1066,7 +2091,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">224</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">224</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -1077,10 +2102,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2020/11/17/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/Sound%20of%20Silence/">(no title)</a>
-          </li>
         
           <li>
             <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/1.%20%E5%AF%B9%E8%B1%A1/5.1.1%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">5.1.1 面向对象的程序设计</a>
@@ -1096,6 +2117,10 @@
         
           <li>
             <a href="/2020/11/04/Today's%20Excises/Today's%20Excises/">Today&#39;s Excises for November 8 ~ 15</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/03/CSS/Tags/%E5%8D%81%E4%BA%8C%E3%80%81Transform%E5%8F%98%E6%8D%A2/12.20%20Transform%E6%A1%88%E4%BE%8B/">12.1 Transform案例</a>
           </li>
         
       </ul>
