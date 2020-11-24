@@ -67,6 +67,325 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/8.函数/2.8.3 ECMAScript函数的参数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.3%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.3%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0/">2.8.3 ECMAScript函数的参数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-形参"><a href="#1-形参" class="headerlink" title="1.形参"></a>1.形参</h3><h4 id="1-1-形参类型"><a href="#1-1-形参类型" class="headerlink" title="1.1 形参类型"></a>1.1 形参类型</h4><ol>
+<li>函数定义时并没有对形参类型进行指定，也没有对实参类型进行检查，因此，参数的类型可以是任意值；</li>
+<li>函数定义时并没有对形参数量进行指定，当是实参数量与形参数量不匹配时，如何显式测试实参类型以避免非法实参传入函数：</li>
+</ol>
+<ul>
+<li><p>当函数调用时传入的实参数量少于形参数量时，剩余的形参将被设置为undefined;</p>
+</li>
+<li><p>函数调用时形参是否可选以及是否可省略，应当给省略的参数赋值一个合理的默认值，以保持较好的适应性；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> o = &#123;</span><br><span class="line">  name: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">  age: <span class="number">20</span>,</span><br><span class="line">  say: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;Hello Function!&quot;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">o.gender = <span class="string">&quot;male&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPropertyNames</span>(<span class="params">o,<span class="comment">/*optional*/</span>a</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// if(a === undefined) a = []          //如果未定义，则使用新数组</span></span><br><span class="line">  a = a || []                            <span class="comment">//等同于上句代码</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> property <span class="keyword">in</span> o) a.push(property);</span><br><span class="line">  <span class="built_in">console</span>.log(a)</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> a = getPropertyNames(o);         <span class="comment">//将o的属性存储到一个新的数组</span></span><br><span class="line">getPropertyNames(o.gender,a)         <span class="comment">//将p的属性追加至数组a中</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第一个实参是真值就返回第一个实参，否则就返回第二个实参，如果省略了第二个实参(null or undefined)就返回空数组，并赋值给a;</p>
+</li>
+<li><p>需要敬爱嗯可选实参放在参数列表的末尾，因为，当其他程序员调用你的程序时，时没有办法省略第一个实参，而传入第二个实参的；</p>
+</li>
+<li><p>同样需要注意在函数定义时，使用注释<code>/*optional*/</code>强调形参是可选的；</p>
+</li>
+</ul>
+<ol start="3">
+<li>实参对象实现参数传递</li>
+</ol>
+<h4 id="1-2-Arguments参数"><a href="#1-2-Arguments参数" class="headerlink" title="1.2 Arguments参数"></a>1.2 Arguments参数</h4><ol>
+<li><p>在函数体内，标识符arguments指向实参对象的引用，实参对象是一个类数组对象；</p>
+</li>
+<li><p>通过数字下标就能访问传入函数的实参值-arguments[i]；</p>
+</li>
+<li><p>arguments同样包含也个length属性，用以标识其所包含元素的个数；</p>
+</li>
+<li><p>实参对象允许函数可以操作任意数量的实参；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">max</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> max = <span class="built_in">Number</span>.NEGATIVE_INFINITY;</span><br><span class="line">  <span class="comment">// 遍历实参，查找并记录最大值</span></span><br><span class="line">  <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i = <span class="number">0</span>; i&lt; <span class="built_in">arguments</span>.length; i++</span>)</span> &#123;</span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params"><span class="built_in">arguments</span>[i] &gt; max</span>)</span> &#123;</span><br><span class="line">      max = <span class="built_in">arguments</span>[i] </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> max</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> largest = max(<span class="number">20</span>,<span class="number">10</span>,<span class="number">200</span>,<span class="number">300</span>,<span class="number">1000</span>)</span><br><span class="line"><span class="built_in">console</span>.log(largest)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><p>案例二： 求任意数值和</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSum</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> sum = <span class="number">0</span>;</span><br><span class="line">  <span class="comment">// 遍历实参，查找并记录最大值</span></span><br><span class="line">  <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i = <span class="number">0</span>; i&lt; <span class="built_in">arguments</span>.length; i++</span>)</span> &#123;</span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params"><span class="keyword">typeof</span> <span class="built_in">arguments</span>[i] === <span class="string">&quot;number&quot;</span></span>)</span>&#123;</span><br><span class="line">      sum += <span class="built_in">arguments</span>[i]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> sum</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = getSum(<span class="number">20</span>,<span class="number">10</span>,<span class="number">5</span>,<span class="number">15</span>,<span class="string">&#x27;Andy&#x27;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(result)</span><br></pre></td></tr></table></figure></li>
+<li><p>arguments实参对象，可以是任何类型的参数</p>
+</li>
+<li><p>对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getObject</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i = <span class="number">0</span>; i&lt; <span class="built_in">arguments</span>.length; i++</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">arguments</span>[i])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">getObject(&#123;<span class="attr">name</span>: <span class="string">&quot;andy&quot;</span>,<span class="attr">age</span>: <span class="number">20</span>&#125;)</span><br></pre></td></tr></table></figure></li>
+<li><p>数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getArray</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i = <span class="number">0</span>; i&lt; <span class="built_in">arguments</span>.length; i++</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">arguments</span>[i])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">getArray([<span class="string">&quot;Hello&quot;</span>,<span class="string">&quot;World&quot;</span>,<span class="number">12</span>,<span class="literal">null</span>,<span class="literal">undefined</span>,&#123;<span class="attr">name</span>:<span class="string">&#x27;Andy&#x27;</span>,<span class="attr">age</span>: <span class="number">20</span>&#125;])</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-实参"><a href="#2-实参" class="headerlink" title="2.实参"></a>2.实参</h3><ol>
+<li><p>数字类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">num</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(num)</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="number">12</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>字符串类型</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(str)</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="string">&quot;Hello JavaScript!&quot;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>布尔类型</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">isTrue</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(isTrue)</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="literal">false</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>null类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">nul</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(nul)</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="literal">null</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>undefined类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">under</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(under)</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="literal">undefined</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(arr)</span><br><span class="line">&#125;</span><br><span class="line">fn([<span class="string">&quot;Andy&quot;</span>,<span class="string">&quot;Tomas&quot;</span>,<span class="string">&quot;Jhon&quot;</span>])</span><br></pre></td></tr></table></figure></li>
+<li><p>对象</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> object = &#123;</span><br><span class="line">  name: <span class="string">&quot;Bear&quot;</span>,</span><br><span class="line">  location: <span class="string">&quot;Arctic&quot;</span>,</span><br><span class="line">  eat: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">object</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(object)</span><br><span class="line">&#125;</span><br><span class="line">fn(object)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">callback</span>)</span>&#123;</span><br><span class="line">  <span class="comment">//调用funct</span></span><br><span class="line">  <span class="keyword">let</span> result = funct(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(result)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//定义函数funct</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">funct</span>(<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line">fn()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h3 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.3%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0/" data-id="ckhuajgqc00duwoiic85u1n95" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/8.函数/2.8.4 ECMAScript函数的返回值" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.4%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.4%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/">2.8.4 ECMAScript函数的返回值</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-返回值类型"><a href="#1-返回值类型" class="headerlink" title="1.返回值类型"></a>1.返回值类型</h4><ul>
+<li><p>函数返回值可以是任何类型</p>
+</li>
+<li><p>函数作为返回值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> object = &#123;</span><br><span class="line">    a: <span class="string">&quot;string&quot;</span>,</span><br><span class="line">    b: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</span><br><span class="line">    c: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">getObject</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    object.d = <span class="string">&#x27;Hello World!&#x27;</span></span><br><span class="line">    <span class="built_in">console</span>.log(object)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">fn()()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对象作为返回值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> object = &#123;</span><br><span class="line">    a: <span class="string">&quot;string&quot;</span>,</span><br><span class="line">    b: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</span><br><span class="line">    c: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> object</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = fn()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(result)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.4%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/" data-id="ckhuajgqd00dwwoiih5xr5pnl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/8.函数/2.8.5 ECMAScript闭包" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.5%20ECMAScript%E9%97%AD%E5%8C%85/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.5%20ECMAScript%E9%97%AD%E5%8C%85/">2.8.5 ECMAScript闭包</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.5%20ECMAScript%E9%97%AD%E5%8C%85/" data-id="ckhuajgqf00dywoiign25amn3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/8.函数/2.8.6 ECMAScript函数的属性和方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.6%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.6%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/">2.8.6 ECMAScript函数的属性和方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.6%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/" data-id="ckhuajgqg00e0woii9mxb6zco" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/8.函数/2.8.7 ECMAScript 构造函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.7%20ECMAScript%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.7%20ECMAScript%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">2.8.7 ECMAScript 构造函数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.7%20ECMAScript%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" data-id="ckhuajgqh00e2woii327eb0hx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/8.函数/2.8.8 ECMAScript 函数式编程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.8%20ECMAScript%20%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.8%20ECMAScript%20%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/">2.8.8 ECMAScript 函数式编程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.8%20ECMAScript%20%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/" data-id="ckhuajgqi00e4woiic5ui0rzs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/8.函数/2.8.9 ECMAScript 作为命名空间的函数" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.9%20ECMAScript%20%E4%BD%9C%E4%B8%BA%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E7%9A%84%E5%87%BD%E6%95%B0/" class="article-date">
@@ -170,8 +489,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+        <h3 id="1-目录"><a href="#1-目录" class="headerlink" title="1. 目录"></a>1. 目录</h3><h4 id="1-Array内置对象"><a href="#1-Array内置对象" class="headerlink" title="1.Array内置对象"></a>1.Array内置对象</h4><p><a href="">[2.11.1 Array内置对象]</a></p>
+<h4 id="2-String内置对象"><a href="#2-String内置对象" class="headerlink" title="2.String内置对象"></a>2.String内置对象</h4><p><a href="">[2.11.2 String内置对象]</a></p>
+<h4 id="3-Boolean内置对象"><a href="#3-Boolean内置对象" class="headerlink" title="3.Boolean内置对象"></a>3.Boolean内置对象</h4><p><a href="">[2.11.3 Boolean内置对象]</a></p>
+<h4 id="4-Math内置对象"><a href="#4-Math内置对象" class="headerlink" title="4.Math内置对象"></a>4.Math内置对象</h4><p><a href="">[2.11.4 Math内置对象]</a></p>
+<h4 id="5-Number内置对象"><a href="#5-Number内置对象" class="headerlink" title="5.Number内置对象"></a>5.Number内置对象</h4><p><a href="">[2.11.5 Number内置对象]</a></p>
+<h4 id="6-String内置对象"><a href="#6-String内置对象" class="headerlink" title="6.String内置对象"></a>6.String内置对象</h4><p><a href="">[2.11.6 String内置对象]</a></p>
+<h4 id="7-RegExp内置对象"><a href="#7-RegExp内置对象" class="headerlink" title="7.RegExp内置对象"></a>7.RegExp内置对象</h4><p><a href="">[2.11.7 RegExp内置对象]</a></p>
+<h4 id="8-Functions内置对象"><a href="#8-Functions内置对象" class="headerlink" title="8.Functions内置对象"></a>8.Functions内置对象</h4><p><a href="">[2.11.8 Functions内置对象]</a></p>
+<h4 id="9-Events内置对象"><a href="#9-Events内置对象" class="headerlink" title="9.Events内置对象"></a>9.Events内置对象</h4><p><a href="">[2.11.9 Events内置对象]</a></p>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;</a></p>
 
       
     </div>
@@ -738,66 +1066,10 @@
 
 
   
-    <article id="post-Full Stack/Tutorial/1.0-Full Stack全栈开发最新教程" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/11.内置对象/2.11.1 Array内置对象" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/25/Full%20Stack/Tutorial/1.0-Full%20Stack%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E6%9C%80%E6%96%B0%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Full-Stack-Development/">Full Stack Development</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Full%20Stack/Tutorial/1.0-Full%20Stack%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E6%9C%80%E6%96%B0%E6%95%99%E7%A8%8B/">1.0-Full Stack全栈开发最新教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-HTML初探"><a href="#1-HTML初探" class="headerlink" title="1. HTML初探"></a>1. HTML初探</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%B8%80%E3%80%81HTML%20%E5%88%9D%E6%8E%A2/">[一、HTML 初探]</a></p>
-<h4 id="2-HTML元素"><a href="#2-HTML元素" class="headerlink" title="2. HTML元素"></a>2. HTML元素</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
-<h4 id="3-VS-Code初探"><a href="#3-VS-Code初探" class="headerlink" title="3. VS Code初探"></a>3. VS Code初探</h4><h4 id="4-CSS初探"><a href="#4-CSS初探" class="headerlink" title="4. CSS初探"></a>4. CSS初探</h4><!-- #### 5. JavaScript初探
-
-#### 6. Express初探
-
-#### 7. Less初探
-
-#### 8. MongoDB初探
-
-#### 9. ES6初探
-
-#### 10. TypeScript初探 -->
-
-<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a href="">[VS Code 安装、配置与使用]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6.联系方式"></a>6.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Full%20Stack/Tutorial/1.0-Full%20Stack%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E6%9C%80%E6%96%B0%E6%95%99%E7%A8%8B/" data-id="ckhuajghb001jwoii8m597ndo" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git/Local Repostories/Git command 操作命令" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Local%20Repostories/Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.1%20Array%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
   </div>
@@ -808,7 +1080,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/">Git Command 操作命令</a>
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.1%20Array%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11.1 Array内置对象</a>
     </h1>
   
 
@@ -816,456 +1088,198 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-初始化操作命令"><a href="#1-初始化操作命令" class="headerlink" title="1.初始化操作命令"></a>1.初始化操作命令</h4><ul>
-<li><p>初始化操作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-
+        <h3 id="1-Array对象"><a href="#1-Array对象" class="headerlink" title="1. Array对象"></a>1. Array对象</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><ul>
+<li><p>Array 对象用于在单个的变量中存储多个值</p>
 </li>
-</ul>
-<h4 id="2-查看资源操作命令"><a href="#2-查看资源操作命令" class="headerlink" title="2.查看资源操作命令"></a>2.查看资源操作命令</h4><ul>
-<li><p>查看资源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看隐藏资源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>分屏查看资源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ll | less</span><br><span class="line">ls -l | less</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看 git 本地仓库的子目录和文件</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll .git/</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-Git-设置签名"><a href="#3-Git-设置签名" class="headerlink" title="3. Git 设置签名"></a>3. Git 设置签名</h4><ul>
-<li>Git 设置系统签名</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name andy</span><br><span class="line">git config --global user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
-
+<li><p>创建Array对象的语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>();</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>Git 设置项目签名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name andy</span><br><span class="line">git config user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
-
+<li>返回新创建并被初始化了的空数组，<code>length = 0</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(size);</span><br></pre></td></tr></table></figure></li>
+<li><p>返回具有指定个数、<code>element[i] = undefined</code>的数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(element0,element1,...elementn);</span><br></pre></td></tr></table></figure></li>
+<li><p>返回具有指定个数和元素的数组</p>
 </li>
 </ul>
-<h4 id="4-Git-删除更改退回到修改前的状态"><a href="#4-Git-删除更改退回到修改前的状态" class="headerlink" title="4. Git 删除更改退回到修改前的状态"></a>4. Git 删除更改退回到修改前的状态</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" data-id="ckhuajghe001owoiico49e5kx" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git/Local Repostories/Git创建与管理本地仓库" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Local%20Repostories/Git%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/Git%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">Git创建与管理本地仓库</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-创建本地仓库"><a href="#1-创建本地仓库" class="headerlink" title="1.创建本地仓库"></a>1.创建本地仓库</h4><ol>
-<li><p>创建工作区(Work Space)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir project &amp; <span class="built_in">cd</span> project</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>初始化本地仓库()</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>新建文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch index.html</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查询状态</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将项目添加到暂存区</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将暂存区项目提交至本地仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;&lt;message&gt;&quot;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="2-创建与管理分区"><a href="#2-创建与管理分区" class="headerlink" title="2.创建与管理分区"></a>2.创建与管理分区</h4><ol>
-<li><p>查询分支</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建分支： dev</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch dev</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>切换分支</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout dev</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>合并分支：主分支合并 dev 分支</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge dev</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="3-参考文当"><a href="#3-参考文当" class="headerlink" title="3.参考文当"></a>3.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" data-id="ckhuajghf001qwoii8oq9h7lf" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git/Local Repostories/Git日志与回退版本号" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Local%20Repostories/Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/">Git日志与回退版本号</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Git-日志"><a href="#1-Git-日志" class="headerlink" title="1.Git 日志"></a>1.Git 日志</h4><ul>
-<li><p>查看日志信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br><span class="line">git <span class="built_in">log</span> --pretty=oneline</span><br><span class="line">git reflog</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>b:向回翻页</p>
-</li>
-<li><p>空格：向前翻页</p>
-</li>
-</ul>
-<h4 id="2-Git-版本控制"><a href="#2-Git-版本控制" class="headerlink" title="2.Git 版本控制"></a>2.Git 版本控制</h4><ol>
-<li>版本回退</li>
+<h4 id="2-Array对象属性"><a href="#2-Array对象属性" class="headerlink" title="2.Array对象属性"></a>2.Array对象属性</h4><ol>
+<li>constructor： 返回对创建此对象的数组函数的引用；</li>
 </ol>
 <ul>
-<li><p>版本回退上一版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD^</span><br><span class="line">git reset --hard HEAD~1</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>版本回退三步版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD^^^</span><br><span class="line">git reset --hard HEAD~3</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>版本回退帮助查询</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">help</span> reset</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>--soft参数</code>: 仅在本地库移动指针</p>
-</li>
-<li><p><code>--mixed参数</code>:</p>
-</li>
-<li><p><code>--hard参数</code>：</p>
+<li><p>指向Object对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.constructor === <span class="built_in">Object</span>)     <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ol start="2">
-<li>删除版本找回</li>
+<li>length： 设置或返回数组中元素的数目</li>
 </ol>
 <ul>
-<li><p>永久删除文件的找回操作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;filename&gt;</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">git rm &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加到暂存区的删除文件找回</p>
+<li><p>数字下标，从0开始计数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = <span class="built_in">Array</span>(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">console</span>.log(arr.length)             <span class="comment">//5</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="3-比较文件差异"><a href="#3-比较文件差异" class="headerlink" title="3.比较文件差异"></a>3.比较文件差异</h4><ul>
-<li><p>工作区与暂存区版本比较</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>工作区文件与本地库历史记录比较</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff HEAD &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>工作区文件与本地库当前版本比较</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff HEAD</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="4-参考文当"><a href="#4-参考文当" class="headerlink" title="4.参考文当"></a>4.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/" data-id="ckhuajghl001uwoii1gkpb03v" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git/Local Repostories/Git本地仓库设置签名" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Local%20Repostories/Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/">Git本地仓库设置签名</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Git-本地仓库签名的作用"><a href="#1-Git-本地仓库签名的作用" class="headerlink" title="1.Git 本地仓库签名的作用"></a>1.Git 本地仓库签名的作用</h4><ul>
-<li>区分不同开发人员的身份和权限</li>
-</ul>
-<h4 id="2-Git-地仓库签名与-Github-账号的关系"><a href="#2-Git-地仓库签名与-Github-账号的关系" class="headerlink" title="2.Git 地仓库签名与 Github 账号的关系"></a>2.Git 地仓库签名与 Github 账号的关系</h4><ul>
-<li>本地仓库签名与 Github 远程仓库登陆账号、密码没有任何关系</li>
-</ul>
-<h4 id="3-签名格式"><a href="#3-签名格式" class="headerlink" title="3.签名格式"></a>3.签名格式</h4><ul>
-<li>user.name: 任意姓名就可</li>
-<li>user.email: 任意邮箱地址就可</li>
-</ul>
-<h4 id="4-设置签名"><a href="#4-设置签名" class="headerlink" title="4.设置签名"></a>4.设置签名</h4><ul>
-<li><p>项目(仓库)级别签名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name andy</span><br><span class="line">git config user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>系统级别签名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name andy</span><br><span class="line">git config --global user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>签名优先级别： 项目(仓库)级别签名优先于系统级别签名</p>
-</li>
-<li><p>查看项目签名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat .git/config</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s1.ax1x.com/2020/10/30/BYTfRP.png" alt="[查看项目签名]"></p>
-</li>
-<li><p>查看系统签名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ～/.gitconfig</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s1.ax1x.com/2020/10/30/BYTVbQ.png" alt="[查看系统签名]"></p>
-</li>
-</ul>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/" data-id="ckhuajgho001wwoii5iw0e0r1" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git/Remote Repostories/快速创建Github远程仓库" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">快速创建Github远程仓库</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Github-服务器注册账号"><a href="#1-Github-服务器注册账号" class="headerlink" title="1. Github 服务器注册账号"></a>1. Github 服务器注册账号</h4><ul>
-<li>注册用户名</li>
-</ul>
-<h4 id="2-创建远程仓库"><a href="#2-创建远程仓库" class="headerlink" title="2. 创建远程仓库"></a>2. 创建远程仓库</h4><ul>
-<li><p>方法一：左边栏 <code>Repositories</code>新建仓库</p>
-</li>
-<li><p>方法二：右上角 <code>+</code>新建仓库</p>
-</li>
-<li><p>创建仓库示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/25/BeuSED.png" alt="创建仓库示意图"></p>
-</li>
-</ul>
-<h4 id="3-创建本地库"><a href="#3-创建本地库" class="headerlink" title="3. 创建本地库"></a>3. 创建本地库</h4><ul>
-<li><p>方法一： 克隆远程仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:github_account/repository.git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>克隆示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/25/BenxHO.png" alt="克隆"></p>
-</li>
-<li><p>方法二： 直接创建本地库</p>
-</li>
-</ul>
-<h4 id="4-建立本地仓库与远程仓库关联"><a href="#4-建立本地仓库与远程仓库关联" class="headerlink" title="4. 建立本地仓库与远程仓库关联"></a>4. 建立本地仓库与远程仓库关联</h4><ol>
-<li> 创建公钥</li>
+<ol start="3">
+<li>prototype: 向对象中添加属性和方法</li>
 </ol>
 <ul>
-<li><p>git 通过如下命令：</p>
-<ol>
-<li>生成<code>.ssh</code>目录;</li>
-<li>创建一对密钥： <code>id_rsa</code>(私钥)和<code>id_rsa.pub</code>(公钥)</li>
-<li>其中 windows 系统在： C：盘的<code>administration</code>目录</li>
-<li>Ubuntu 系统存放在<code>Home</code>目录</li>
-<li>编辑器打开公钥，将其复制到 Github 的<code>SSH and GPG keys</code></li>
+<li><p>通过函数将传递的参数转换为数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> arr = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(arr)                      <span class="comment">// [1,2,3]</span></span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)   </span><br></pre></td></tr></table></figure></li>
+<li><p>arguments对象是函数内部可以访问的类似数组的对象，其中包含传递给该函数的参数的值</p>
+</li>
+</ul>
+<h4 id="3-Array对象方法"><a href="#3-Array对象方法" class="headerlink" title="3.Array对象方法"></a>3.Array对象方法</h4><ol>
+<li>concate()</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &lt;Github注册邮箱&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>参考文档: <a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/01/Git/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">[Git 远程仓库管理]</a></p>
-</li>
-</ul>
-<h4 id="5-Git-拉取与推送文件"><a href="#5-Git-拉取与推送文件" class="headerlink" title="5. Git 拉取与推送文件"></a>5. Git 拉取与推送文件</h4><ul>
-<li>详见参考文档： <a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/01/Git/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">[Git 远程仓库管理]</a></li>
-</ul>
-<h4 id="6-Git-命令"><a href="#6-Git-命令" class="headerlink" title="6. Git 命令"></a>6. Git 命令</h4><h5 id="1-create-a-new-repository-on-the-command-line"><a href="#1-create-a-new-repository-on-the-command-line" class="headerlink" title="1. create a new repository on the command line"></a>1. create a new repository on the command line</h5><ul>
-<li>git init</li>
-<li>git add README.md</li>
-<li>git commit -m “first commit”</li>
-<li>git branch -M main</li>
-<li>git remote add origin <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;</a>:web-oyster/blog_for_web-master.git</li>
-<li>注释： web-oyster 是 github 用户名,blog_for_web-master 是远程仓库名</li>
-<li>git push -u origin main</li>
-</ul>
-<h5 id="2-push-an-existing-repository-from-the-command-line"><a href="#2-push-an-existing-repository-from-the-command-line" class="headerlink" title="2. push an existing repository from the command line"></a>2. push an existing repository from the command line</h5><ul>
-<li>git remote add origin <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#111;&#109;">&#103;&#105;&#x74;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#111;&#109;</a>:web-oyster/blog_for_web-master.git</li>
-<li>git branch -M main</li>
-<li>git push -u origin main</li>
-</ul>
-<h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7. 参考文档"></a>7. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" data-id="ckhuajghq001ywoiicnmoe4eu" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git/Remote Repostories/Git远程仓库管理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Remote%20Repostories/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Remote%20Repostories/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">Git远程仓库管理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Github-SSH-仓库地址"><a href="#1-Github-SSH-仓库地址" class="headerlink" title="1. Github SSH 仓库地址"></a>1. Github SSH 仓库地址</h4><ul>
-<li><p>地址组成</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git@github.com:web-oyster/html-elements.git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#109;">&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#109;</a>： git 网址</p>
-</li>
-<li><p>web-oyster： github 账号</p>
-</li>
-<li><p>html-elements： github 远程仓库名</p>
-</li>
-</ul>
-<h4 id="2-创建远程仓库关联"><a href="#2-创建远程仓库关联" class="headerlink" title="2. 创建远程仓库关联"></a>2. 创建远程仓库关联</h4><ul>
-<li><p>git 初始化本地仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建远程仓库</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[快速创建 Github 远程仓库]</a></p>
 <ul>
-<li><p>第一次提交：关联远程仓库地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:&lt;github账号&gt;/&lt;github远程仓库名&gt;.git</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<li><p>连接两个或更多的数组，并返回结果</p>
 </li>
-<li><p>第二次提交</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>参考文档</p>
+<li><p>创建新数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> name = [<span class="string">&quot;George&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Thoms&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> name1 = [<span class="string">&quot;James&quot;</span>,<span class="string">&quot;Adrew&quot;</span>,<span class="string">&quot;Martin&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> result = arr.concat(name,name1)</span><br><span class="line"><span class="built_in">console</span>.log(result)             <span class="comment">//[1,2,3,4,5,&quot;George&quot;,&quot;Jhon&quot;,&quot;Thoms&quot;,&quot;James&quot;,&quot;Adrew&quot;,&quot;Martin&quot;]</span></span><br><span class="line"><span class="built_in">console</span>.log(result.__proto__ === <span class="built_in">Array</span>.prototype)   <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[快速创建 Github 远程仓库]</a></p>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+<ol start="2">
+<li>join()</li>
+</ol>
+<ul>
+<li><p>把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔;</p>
+</li>
+<li><p>语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arrObject.join(separator)</span><br></pre></td></tr></table></figure></li>
+<li><p>separator: 可选，指定要选用的分隔符，省略默认为逗号；</p>
+</li>
+<li><p>创建新数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&quot;George&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Thoms&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> result = arr.join(<span class="string">&quot;|&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result)         <span class="comment">//George|Jhon|Thoms</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="3">
+<li>pop()</li>
+</ol>
+<ul>
+<li><p>删除并返回数组的最后一个元素</p>
+</li>
+<li><p>将改变原数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = [<span class="string">&quot;George&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Thoms&quot;</span>,<span class="string">&quot;James&quot;</span>,<span class="string">&quot;Adrew&quot;</span>,<span class="string">&quot;Martin&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> result = name.pop()</span><br><span class="line"><span class="built_in">console</span>.log(result)          <span class="comment">//&quot;Martin&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(name)             <span class="comment">//[&quot;George&quot;,&quot;Jhon&quot;,&quot;Thoms&quot;,&quot;James&quot;,&quot;Adrew&quot;]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="4">
+<li>shift()</li>
+</ol>
+<ul>
+<li><p>删除并返回数组的第一个元素</p>
+</li>
+<li><p>将改变原数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = [<span class="string">&quot;George&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Thoms&quot;</span>,<span class="string">&quot;James&quot;</span>,<span class="string">&quot;Adrew&quot;</span>,<span class="string">&quot;Martin&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> result = name.shift()</span><br><span class="line"><span class="built_in">console</span>.log(result)          <span class="comment">//&quot;George&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(name)             <span class="comment">//[&quot;Jhon&quot;,&quot;Thoms&quot;,&quot;James&quot;,&quot;Adrew&quot;,&quot;Martin&quot;]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="5">
+<li>push()</li>
+</ol>
+<ul>
+<li><p>向数组的末尾添加一个或更多元素，并返回新的长度;</p>
+</li>
+<li><p>将改变原数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = [<span class="string">&quot;George&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Thoms&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> result = name.push(<span class="string">&quot;James&quot;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(result)          <span class="comment">// 4</span></span><br><span class="line"><span class="built_in">console</span>.log(name)             <span class="comment">//[&quot;George&quot;,&quot;Jhon&quot;,&quot;Thoms&quot;,&quot;James&quot;]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="6">
+<li>unshift()</li>
+</ol>
+<ul>
+<li><p>向数组的开头添加一个或更多元素，并返回新的长度</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = [<span class="string">&quot;George&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Thoms&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> result = name.unshift(<span class="string">&quot;James&quot;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(result)          <span class="comment">// 4</span></span><br><span class="line"><span class="built_in">console</span>.log(name)             <span class="comment">//[&quot;James&quot;,&quot;George&quot;,&quot;Jhon&quot;,&quot;Thoms&quot;,&quot;James&quot;]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="7">
+<li>slice()</li>
+</ol>
+<ul>
+<li><p>从某个已有的数组返回选定的元素</p>
+</li>
+<li><p>返回元素计数，数组下标从0开始，所选定的元素包括起始下标元素，但是，不包括终止下标元素；</p>
+</li>
+<li><p>如果所选元素从起始元素到结尾元素时，可以省略第二参数</p>
+</li>
+<li><p>不改变原数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = [<span class="string">&quot;George&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Thoms&quot;</span>,<span class="string">&quot;James&quot;</span>,<span class="string">&quot;Adrew&quot;</span>,<span class="string">&quot;Martin&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> result = name.slice(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">console</span>.log(result)          <span class="comment">//&quot;Jhon&quot;,&quot;Thoms&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(name)             <span class="comment">//[&quot;George&quot;,&quot;Jhon&quot;,&quot;Thoms&quot;,&quot;James&quot;,&quot;Adrew&quot;,&quot;Martin&quot;]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="8">
+<li>splice()</li>
+</ol>
+<ul>
+<li><p>splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。</p>
+</li>
+<li><p>该方法会改变原始数组</p>
+</li>
+<li><p>案例一： 我们将创建一个新数组，并向其添加一个元素：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = [<span class="string">&quot;George&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Thoms&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> result = name.splice(<span class="number">2</span>,<span class="number">0</span>,<span class="string">&quot;Walliam&quot;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(result)          <span class="comment">//[]</span></span><br><span class="line"><span class="built_in">console</span>.log(name)             <span class="comment">//[&quot;George&quot;,&quot;Jhon&quot;,&quot;Walliam&quot;,&quot;Thoms&quot;]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>案例二： 我们将创建一个新数组，删除原数组元素，并向其添加一个元素：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = [<span class="string">&quot;George&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Thoms&quot;</span>,<span class="string">&quot;James&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> result = name.splice(<span class="number">2</span>,<span class="number">1</span>,<span class="string">&quot;Walliam&quot;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(result)          <span class="comment">//[&quot;Thoms&quot;]</span></span><br><span class="line"><span class="built_in">console</span>.log(name)             <span class="comment">//[&quot;George&quot;,&quot;Jhon&quot;,&quot;Walliam&quot;,&quot;James&quot;]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>案例三： 我们将创建一个新数组，删除多个原数组元素，并向其添加多个元素：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = [<span class="string">&quot;George&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Thoms&quot;</span>,<span class="string">&quot;James&quot;</span>,<span class="string">&quot;Adrew&quot;</span>,<span class="string">&quot;Martin&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> result = name.splice(<span class="number">2</span>,<span class="number">3</span>,<span class="string">&quot;Walliam&quot;</span>,<span class="string">&quot;Alax&quot;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(result)          <span class="comment">//[&quot;Thoms&quot;, &quot;James&quot;, &quot;Adrew&quot;]</span></span><br><span class="line"><span class="built_in">console</span>.log(name)             <span class="comment">//[&quot;George&quot;,&quot;Jhon&quot;,&quot;Walliam&quot;,&quot;Alax&quot;,&quot;Martin&quot;]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="9">
+<li>sort()</li>
+</ol>
+<ul>
+<li><p>对数组的元素进行排序</p>
+</li>
+<li><p>该方法会改变原始数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = [<span class="string">&quot;George&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Thoms&quot;</span>,<span class="string">&quot;James&quot;</span>,<span class="string">&quot;Adrew&quot;</span>,<span class="string">&quot;Martin&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> result = name.sort()</span><br><span class="line"><span class="built_in">console</span>.log(result)          <span class="comment">//[&quot;Adrew&quot;, &quot;George&quot;, &quot;James&quot;, &quot;Jhon&quot;, &quot;Martin&quot;, &quot;Thoms&quot;]</span></span><br><span class="line"><span class="built_in">console</span>.log(name)             <span class="comment">//[&quot;Adrew&quot;, &quot;George&quot;, &quot;James&quot;, &quot;Jhon&quot;, &quot;Martin&quot;, &quot;Thoms&quot;]</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="10">
+<li>reverse()</li>
+</ol>
+<ul>
+<li><p>颠倒数组中元素的顺序</p>
+</li>
+<li><p>该方法会改变原始数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = [<span class="string">&quot;George&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Thoms&quot;</span>,<span class="string">&quot;James&quot;</span>,<span class="string">&quot;Adrew&quot;</span>,<span class="string">&quot;Martin&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> result = name.reverse()</span><br><span class="line"><span class="built_in">console</span>.log(result)          <span class="comment">//[&quot;Martin&quot;, &quot;Adrew&quot;, &quot;James&quot;, &quot;Thoms&quot;, &quot;Jhon&quot;, &quot;George&quot;]</span></span><br><span class="line"><span class="built_in">console</span>.log(name)             <span class="comment">//[&quot;Martin&quot;, &quot;Adrew&quot;, &quot;James&quot;, &quot;Thoms&quot;, &quot;Jhon&quot;, &quot;George&quot;]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="11">
+<li>toString()</li>
+</ol>
+<ul>
+<li><p>把数组转换为字符串，并返回结果</p>
+</li>
+<li><p>返回值与没有参数的 join()方法返回的字符串相同</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = [<span class="string">&quot;George&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Thoms&quot;</span>,<span class="string">&quot;James&quot;</span>,<span class="string">&quot;Adrew&quot;</span>,<span class="string">&quot;Martin&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> result = name.toString()</span><br><span class="line"><span class="built_in">console</span>.log(result)           <span class="comment">//George,Jhon,Thoms,James,Adrew,Martin</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="12">
+<li>toLocalString()</li>
+</ol>
+<ul>
+<li><p>首先调用每个数组元素的 toLocaleString() 方法，然后使用地区特定的分隔符把生成的字符串连接起来，形成一个字符串</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = [<span class="string">&quot;George&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Thoms&quot;</span>,<span class="string">&quot;James&quot;</span>,<span class="string">&quot;Adrew&quot;</span>,<span class="string">&quot;Martin&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> result = name.toLocalString()</span><br><span class="line"><span class="built_in">console</span>.log(result)           <span class="comment">//George,Jhon,Thoms,James,Adrew,Martin</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="13">
+<li>valueOf()</li>
+</ol>
+<ul>
+<li><p>返回数组对象的原始值</p>
+</li>
+<li><p>valueOf() 方法返回 Array 对象的原始值;</p>
+</li>
+<li><p>该原始值由 Array 对象派生的所有对象继承;</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = [<span class="string">&quot;George&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Thoms&quot;</span>,<span class="string">&quot;James&quot;</span>,<span class="string">&quot;Adrew&quot;</span>,<span class="string">&quot;Martin&quot;</span>];</span><br><span class="line"><span class="keyword">let</span> result = name.valueOf()</span><br><span class="line"><span class="built_in">console</span>.log(result)        <span class="comment">//[&quot;George&quot;,&quot;Jhon&quot;,&quot;Thoms&quot;,&quot;James&quot;,&quot;Adrew&quot;,&quot;Martin&quot;]</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11%20ECMAScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11 ECMAScript内置对象]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#x61;&#110;&#x6d;&#105;&#x6e;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#x6d;">&#121;&#117;&#x61;&#110;&#x6d;&#105;&#x6e;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Remote%20Repostories/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/" data-id="ckhuajght0021woii7iywf161" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.1%20Array%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckhw0oiog000cn7ii750k8dre" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
 
     </footer>
   </div>
@@ -1274,16 +1288,12 @@
 
 
   
-    <article id="post-Git/Tutorial/Git教程" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/11.内置对象/2.11.10 Functions内置对象" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.10%20Functions%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Git/">Git</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -1292,7 +1302,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">Git教程</a>
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.10%20Functions%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11.10 Functions内置对象</a>
     </h1>
   
 
@@ -1300,20 +1310,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-Git-创建与管理本地仓库"><a href="#1-Git-创建与管理本地仓库" class="headerlink" title="1. Git 创建与管理本地仓库"></a>1. Git 创建与管理本地仓库</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">[1. Git 创建与管理本地仓库]</a></p>
-<h4 id="2-快速创建-Github-远程仓库"><a href="#2-快速创建-Github-远程仓库" class="headerlink" title="2.快速创建 Github 远程仓库"></a>2.快速创建 Github 远程仓库</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[2.快速创建 Github 远程仓库]</a></p>
-<h4 id="3-Git-远程仓库管理"><a href="#3-Git-远程仓库管理" class="headerlink" title="3.Git 远程仓库管理"></a>3.Git 远程仓库管理</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Remote%20Repostories/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">[Git 远程仓库管理]</a></p>
-<h4 id="4-Git-command-操作命令"><a href="#4-Git-command-操作命令" class="headerlink" title="4.Git command 操作命令"></a>4.Git command 操作命令</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Local%20Repostories/Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/">[Git command 操作命令]</a></p>
-<h4 id="5-Git日志与回退版本号"><a href="#5-Git日志与回退版本号" class="headerlink" title="5.Git日志与回退版本号"></a>5.Git日志与回退版本号</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/">[Git日志与回退版本号]</a></p>
-<h4 id="6-Git本地仓库设置签名"><a href="#6-Git本地仓库设置签名" class="headerlink" title="6.Git本地仓库设置签名"></a>6.Git本地仓库设置签名</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/">[Git本地仓库设置签名]</a></p>
-<h4 id="7-联系方式"><a href="#7-联系方式" class="headerlink" title="7. 联系方式"></a>7. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+        <h3 id="1-Function对象"><a href="#1-Function对象" class="headerlink" title="1. Function对象"></a>1. Function对象</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><ul>
+<li><p>创建String对象的语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 2.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[[]]()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 3.Array对象方法</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1. concate()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="2">
+<li><p>join()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">3. pop()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>push()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">5. shift()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>unshift()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">7. slice()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>splice()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">9. sort()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
+<li><p>toSource()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">11. toString()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
+<li><p>toLocalString()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">13. valueOf()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#97;&#110;&#109;&#105;&#110;&#56;&#x38;&#x38;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#109;">&#121;&#117;&#97;&#110;&#109;&#105;&#110;&#56;&#x38;&#x38;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/" data-id="ckhuajghv0024woiiatzrafm4" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.10%20Functions%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckhw0oioi000dn7iicmib8e2g" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
     </footer>
   </div>
   
@@ -1321,16 +1352,12 @@
 
 
   
-    <article id="post-Java/Tutorial/Java基础教程" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/11.内置对象/2.11.2 String内置对象" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/24/Java/Tutorial/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.2%20String%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -1339,7 +1366,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Java/Tutorial/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">1.Java教程</a>
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.2%20String%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11.2 String内置对象</a>
     </h1>
   
 
@@ -1347,15 +1374,42 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[1.]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+        <h3 id="1-String对象"><a href="#1-String对象" class="headerlink" title="1. String对象"></a>1. String对象</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><ul>
+<li></li>
+<li><p>创建String对象的语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 2.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[[]]()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 3.Array对象方法</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1. concate()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="2">
+<li><p>join()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">3. pop()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>push()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">5. shift()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>unshift()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">7. slice()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>splice()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">9. sort()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
+<li><p>toSource()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">11. toString()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
+<li><p>toLocalString()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">13. valueOf()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#109;&#105;&#110;&#56;&#x38;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#111;&#111;&#107;&#46;&#99;&#x6f;&#x6d;">&#121;&#x75;&#x61;&#x6e;&#109;&#105;&#110;&#56;&#x38;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#111;&#111;&#107;&#46;&#99;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Java/Tutorial/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" data-id="ckhuajgie002hwoii3dcq9u3g" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.2%20String%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckhw0oiol000fn7ii16vb1994" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
     </footer>
   </div>
   
@@ -1367,7 +1421,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/8/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/10/">Next &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/8/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/10/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -1388,7 +1442,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">30</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">55</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">30</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">72</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
     </div>
   </div>
 
@@ -1398,7 +1452,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">228</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">239</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -1427,7 +1481,7 @@
           </li>
         
           <li>
-            <a href="/2020/11/04/Today's%20Excises/Today's%20Excises/">Today&#39;s Excises for November 8 ~ 15</a>
+            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.2%20Prototype%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF_02/">5.4.1 Prototype原型链继承_02</a>
           </li>
         
       </ul>

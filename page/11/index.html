@@ -67,6 +67,1074 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Node/Npm/NPM镜像源配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">3.NPM镜像源配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-单次使用"><a href="#1-单次使用" class="headerlink" title="1. 单次使用"></a>1. 单次使用</h4><ul>
+<li><p>command line 配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-永久使用"><a href="#2-永久使用" class="headerlink" title="2. 永久使用"></a>2. 永久使用</h4><ol>
+<li><p>设置成全局下载镜像站点，每次安装软件默认从淘宝镜像下载：</p>
+</li>
+<li><p>方法一</p>
+</li>
+</ol>
+<ul>
+<li><p>打开.npmrc 文件： <code>nodejs\node_modules\npm\npmrc</code></p>
+</li>
+<li><p>没有的话可以使用 git 命令行新建：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .npmrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增加一行: <code>registry =https://registry.npm.taobao.org</code> 即可；</p>
+</li>
+</ul>
+<ol start="3">
+<li>方法二</li>
+</ol>
+<ul>
+<li><p>命令行设置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry    // 或</span><br><span class="line">npm info express    //输出：https://registry.npm.taobao.org/  ok</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/" data-id="ckhuajgjl004bwoii23cwdful" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Npm/Windows安装与配置Node" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" class="article-date">
+  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/">1.Windows安装与配置Node</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h4><ul>
+<li><p><a target="_blank" rel="noopener" href="http://nodejs.cn/download/">[Node 官网下载：]</a></p>
+</li>
+<li><p>下载 Windows 安装包 (.msi)</p>
+</li>
+</ul>
+<h4 id="2-安装目录"><a href="#2-安装目录" class="headerlink" title="2. 安装目录"></a>2. 安装目录</h4><ul>
+<li>D：/Applications/node</li>
+</ul>
+<h4 id="3-安装"><a href="#3-安装" class="headerlink" title="3. 安装"></a>3. 安装</h4><ul>
+<li>省略</li>
+</ul>
+<h4 id="4-配置环境变量"><a href="#4-配置环境变量" class="headerlink" title="4. 配置环境变量"></a>4. 配置环境变量</h4><ul>
+<li>环境配置主要是配置 npm 安装的全局模块所在的路径，以及缓存 cache 的路径；</li>
+</ul>
+<ol>
+<li>为什么要配置环境变量</li>
+</ol>
+<ul>
+<li>全局安装 Node 依赖包时，系统默认会将安装的模块置于<code>C:\Users\Adminstration\AppData\Roaming\npm</code>，从而占用 C 盘空间；</li>
+</ul>
+<ol start="2">
+<li>配置环境变量</li>
+</ol>
+<ul>
+<li><p>创建两个目录： <code>node_cache</code>, <code>node_global</code></p>
+</li>
+<li><p>其中<code>node_cache</code>为下载包时缓存目录</p>
+</li>
+<li><p><code>node_global</code>全局安装包就置于此；</p>
+</li>
+</ul>
+<ol>
+<li>npm 配置 config</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> prefix <span class="string">&quot;D:\Applications\node\node_global&quot;</span></span><br><span class="line">npm config <span class="built_in">set</span> cache :<span class="string">&quot;D:\Applications\node\node_cache&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>配置环境变量</li>
+</ol>
+<ul>
+<li><p>配置用户环境变量:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\Applications\node\node_global</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置系统环境变量</p>
+</li>
+<li><p>新建 PATH：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%NODE_PATH%</span><br><span class="line">D:\Applications\node\node_global\node_modules</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install yarn -g</span><br><span class="line">yarn -v</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" data-id="ckhuajgjm004fwoii7n207y58" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Npm/Windows安装与配置Nvm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" class="article-date">
+  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/">2.Windows安装与配置Nvm</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-卸载node"><a href="#1-卸载node" class="headerlink" title="1. 卸载node"></a>1. 卸载node</h4><ul>
+<li>将安装的node卸载；</li>
+</ul>
+<h4 id="2-下载"><a href="#2-下载" class="headerlink" title="2.下载"></a>2.下载</h4><p><a target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows/releases">[下载地址]</a></p>
+<ul>
+<li><p>下载版本： <code>nvm-noinstall.zip</code></p>
+</li>
+<li><p>解压</p>
+</li>
+</ul>
+<h4 id="3-安装"><a href="#3-安装" class="headerlink" title="3. 安装"></a>3. 安装</h4><ul>
+<li><p>安装目录： <code>F:/Application/Nvm/nvm</code></p>
+<p><img src="https://s1.ax1x.com/2020/10/15/0TAl59.png" alt="[安装目录]"></p>
+</li>
+<li><p>创建目录<code>node</code>存放Node依赖包: <code>F:/Application/Nvm/node</code></p>
+</li>
+<li><p>打开nvm目录，点击<code>install.exe</code>文件，生成settings.text文件</p>
+<p><img src="https://s1.ax1x.com/2020/10/15/0TAtKK.png" alt="[安装nvm]"></p>
+</li>
+<li><p>转贴安装目录和Node依赖包目录，如下图：</p>
+<p><img src="https://s1.ax1x.com/2020/10/15/0TERQx.png" alt="[配置文件]"></p>
+</li>
+</ul>
+<h4 id="4-配置NPM环境变量"><a href="#4-配置NPM环境变量" class="headerlink" title="4. 配置NPM环境变量"></a>4. 配置NPM环境变量</h4><ul>
+<li><p>npm 配置镜像源: settings文件配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node_mirror: https://npm.taobao.org/mirrors/node/</span><br><span class="line">npm_mirror: https://npm.taobao.org/mirrors/npm/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置图</p>
+<p><img src="https://s1.ax1x.com/2020/10/27/BMA8Rs.jpg" alt="[Nvm配置图]"></p>
+</li>
+</ul>
+<h4 id="5-使用"><a href="#5-使用" class="headerlink" title="5. 使用"></a>5. 使用</h4><ol>
+<li>安装不同版本 Node</li>
+</ol>
+<ul>
+<li><p>查看node版本号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装指定版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install node &lt;version&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>查看安装node不同版本</p>
+<p><img src="https://s1.ax1x.com/2020/10/15/0TAVg0.png" alt="[使用]"></p>
+</li>
+<li><p>使用特定版本的node</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 12.0.0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试node使用版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="6-参考文档"><a href="#6-参考文档" class="headerlink" title="6. 参考文档"></a>6. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/24/Node/Npm/Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" data-id="ckhuajgjo004iwoiibn1572s4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Tutorial/Node教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/24/Node/Tutorial/Node%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Node/">Node</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/24/Node/Tutorial/Node%E6%95%99%E7%A8%8B/">Node教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Node-安装"><a href="#1-Node-安装" class="headerlink" title="1. Node 安装"></a>1. Node 安装</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[1.NPM 包管理器]</a></p>
+<h4 id="2-Express教程"><a href="#2-Express教程" class="headerlink" title="2.Express教程"></a>2.Express教程</h4><p><a href="">[2.Express教程]</a></p>
+<h4 id="3-Koa教程"><a href="#3-Koa教程" class="headerlink" title="3.Koa教程"></a>3.Koa教程</h4><p><a href="">[3.Koa教程]</a></p>
+<h4 id="4-Nest教程"><a href="#4-Nest教程" class="headerlink" title="4.Nest教程"></a>4.Nest教程</h4><p><a href="">[4.Nest教程]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/Node%E6%95%99%E7%A8%8B/" data-id="ckhuajgjp004kwoiiaonqcijb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Python/Tutorial/Python基础教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">Python基础教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" data-id="ckhuajgjr004nwoii070hc4v9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Linux/Ubuntu/4.Ubuntu安装与配置Nvm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/24/Linux/Ubuntu/4.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" class="article-date">
+  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/24/Linux/Ubuntu/4.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/">4.Ubuntu20.04 安装与配置 Nvm</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Nvm简介"><a href="#1-Nvm简介" class="headerlink" title="1.Nvm简介"></a>1.Nvm简介</h4><ul>
+<li>Node 的一种版本管理器，它可以管理多版本 Node 以及 npm</li>
+</ul>
+<h4 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h4><ul>
+<li><p>下载</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/creationix/nvm">[nvm 的仓库地址]</a></p>
+<p><img src="https://s1.ax1x.com/2020/10/24/BVoBHs.png" alt="nvm github repository"></p>
+</li>
+<li><p>克隆</p>
+<p>终端 Home 目录执行如下命令，克隆 nvm：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/opt</span><br><span class="line">sudo git <span class="built_in">clone</span> https://github.com/creationix/nvm .nvm</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>克隆示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/24/BVT5QS.png" alt="nvm clone"></p>
+</li>
+<li><p>安装 nvm</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> nvm</span><br><span class="line">bash install.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/24/BV7kJx.png" alt="install nvm"></p>
+</li>
+<li><p>测试安装版本: 关闭终端，重启终端</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm -v</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-使用"><a href="#3-使用" class="headerlink" title="3. 使用"></a>3. 使用</h4><ul>
+<li><p>查看 Node 远程仓库版本号: 耐心等待</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm ls-remote</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="2">
+<li>安装 Node</li>
+</ol>
+<ul>
+<li><p>安装 Node 14.14.0</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvm install 14.14.0</span><br><span class="line">nvm install 13.0.0</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="3">
+<li>查看 Node 版本号</li>
+</ol>
+<ul>
+<li><p>查看本地安装不同版本 Node</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看当前使用版本号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm current</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="4">
+<li>使用 Node</li>
+</ol>
+<ul>
+<li><p>不同版本 Node 切换</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 14.14.0</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="5">
+<li>卸载 Node</li>
+</ol>
+<ul>
+<li><p>卸载不需要版本的 Node</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm uninstall node-version</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载当前版本 Node</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvm deactivate</span><br><span class="line">nvm uninstall node_version</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="6">
+<li>切换使用的 Node</li>
+</ol>
+<ul>
+<li><p>选择使用的版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 14.14.0</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-npm-配置镜像源"><a href="#4-npm-配置镜像源" class="headerlink" title="4. npm 配置镜像源"></a>4. npm 配置镜像源</h4><ul>
+<li><p>npm 配置镜像源<br><img src="https://s1.ax1x.com/2020/10/24/BZCbT0.png" alt="npm配置镜像源"></p>
+</li>
+<li><p>参考文档</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">[NPM 镜像源配置]</a></p>
+<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
+<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Ubuntu/4.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" data-id="ckhuajgk00054woiifcrv7k0q" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Vue/Tutorial/Vue教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Vue/">Vue</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/">Vue教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/" data-id="ckhuajglv006rwoiihbc5bozi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Linux/Ubuntu/10.Ubuntu20.04清除系统缓存" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/Linux/Ubuntu/10.Ubuntu20.04%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E7%BC%93%E5%AD%98/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/Linux/Ubuntu/10.Ubuntu20.04%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E7%BC%93%E5%AD%98/">10.Ubuntu20.04清除系统缓存</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-清除-apt缓存"><a href="#1-清除-apt缓存" class="headerlink" title="1.清除/apt缓存"></a>1.清除/apt缓存</h4><ul>
+<li><p>为什么要清除/apt缓存</p>
+<ul>
+<li><p>在ubuntu系统它会保留你下载和安装的所有文件，防止你再次使用它时，再次下载</p>
+</li>
+<li><p>查看/apt缓存占用空间</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo du -sh /var/cache/apt/archives</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>清除缓存</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get clean</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-删除旧的内核"><a href="#2-删除旧的内核" class="headerlink" title="2.删除旧的内核"></a>2.删除旧的内核</h4><ul>
+<li><p>为什么要删除旧的内核</p>
+<ul>
+<li><p>系统更新后，旧的内核被保存下来，可以采用以下命令查询，uninstall就是需要删除的旧内核</p>
+</li>
+<li><p>查看内核</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --get-selections | grep linux</span><br></pre></td></tr></table></figure></li>
+<li><p>示意图</p>
+</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/10/11/0g6vWV.png" alt="示意图"></p>
+<ul>
+<li><p>删除旧的内核</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get autoremove --purge</span><br></pre></td></tr></table></figure>
+<h4 id="3-删除不再使用的软件"><a href="#3-删除不再使用的软件" class="headerlink" title="3. 删除不再使用的软件"></a>3. 删除不再使用的软件</h4></li>
+</ul>
+</li>
+<li><p>查看应用软件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep package-name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除不再需要的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove package-name1 package-name2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除不需要的环境变量</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get autoremove --purge</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4. 参考文档"></a>4. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5.联系方式"></a>5.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/Linux/Ubuntu/10.Ubuntu20.04%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E7%BC%93%E5%AD%98/" data-id="ckhuajgiz0039woiiajzqadyd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Linux/Ubuntu/11.Ubuntu安装TypeScript" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/Linux/Ubuntu/11.Ubuntu%E5%AE%89%E8%A3%85TypeScript/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/Linux/Ubuntu/11.Ubuntu%E5%AE%89%E8%A3%85TypeScript/">11.Ubuntu安装TypeScript</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h4><ul>
+<li><p>全局安装TypeScript</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g typescript</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置全局参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /opt/node/bin/tsc /usr/<span class="built_in">local</span>/bin/tsc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc -version</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ts-node 安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -g ts-node</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ts-node -version</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/Linux/Ubuntu/11.Ubuntu%E5%AE%89%E8%A3%85TypeScript/" data-id="ckhuajgj1003cwoii9rz64glz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Linux/Ubuntu/7.Ubuntu20.04安装VS Code" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/Linux/Ubuntu/7.Ubuntu20.04%E5%AE%89%E8%A3%85VS%20Code/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/Linux/Ubuntu/7.Ubuntu20.04%E5%AE%89%E8%A3%85VS%20Code/">7.Ubuntu20.04安装VS Code</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-下载软件：-deb"><a href="#1-下载软件：-deb" class="headerlink" title="1. 下载软件： .deb"></a>1. 下载软件： .deb</h4><p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/Download">[下载地址]</a></p>
+<h4 id="2-安装-Visual-Studio-Code"><a href="#2-安装-Visual-Studio-Code" class="headerlink" title="2. 安装 Visual Studio Code"></a>2. 安装 Visual Studio Code</h4><ul>
+<li><p>软件当前目录</p>
+<p>``bash<br>sudo apt -i code_1.49.3-1601661857_amd64.deb</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 3. 使用</span><br><span class="line"></span><br><span class="line">  &#96;&#96;&#96;bash</span><br><span class="line">  code</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4. 参考文档"></a>4. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5.联系方式"></a>5.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/Linux/Ubuntu/7.Ubuntu20.04%E5%AE%89%E8%A3%85VS%20Code/" data-id="ckhuajgjb003uwoii3m8yfcgt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Linux/Ubuntu/8.Ubuntu20.04安装与配置WPS" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/Linux/Ubuntu/8.Ubuntu20.04%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AEWPS/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/Linux/Ubuntu/8.Ubuntu20.04%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AEWPS/">8.Ubuntu20.04安装与配置WPS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-卸载原生-Libooffice"><a href="#1-卸载原生-Libooffice" class="headerlink" title="1.卸载原生 Libooffice"></a>1.卸载原生 Libooffice</h4>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove libreoffice-common</span><br></pre></td></tr></table></figure>
+<h4 id="2-下载软件包"><a href="#2-下载软件包" class="headerlink" title="2. 下载软件包"></a>2. 下载软件包</h4><p><a target="_blank" rel="noopener" href="https://www.wps.cn/product/wpslinux/">[下载地址]</a></p>
+<h4 id="3-安装WPS"><a href="#3-安装WPS" class="headerlink" title="3. 安装WPS"></a>3. 安装WPS</h4><ul>
+<li><p>软件当前目录</p>
+<p>``bash<br>sudo dpkg -i fwps-office_11.1.0.9719_amd64.deb</p>
+<pre><code></code></pre>
+</li>
+</ul>
+<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4. 参考文档"></a>4. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5.联系方式"></a>5.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/Linux/Ubuntu/8.Ubuntu20.04%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AEWPS/" data-id="ckhuajgjg0041woiifvw8dk47" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Linux/Ubuntu/9.Ubuntu20.04安装Google Chrome" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/Linux/Ubuntu/9.Ubuntu20.04%E5%AE%89%E8%A3%85Google%20Chrome/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/Linux/Ubuntu/9.Ubuntu20.04%E5%AE%89%E8%A3%85Google%20Chrome/">9.Ubuntu20.04安装Google Chrome</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Google-Chrome"><a href="#1-Google-Chrome" class="headerlink" title="1. Google Chrome"></a>1. Google Chrome</h4><ul>
+<li><p>wget 下载 Google Chrome .deb 软件包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装 Chrome</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i google-chrome-stable_current_amd64.deb</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">google-chrome-stable</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Ubuntu/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/Linux/Ubuntu/9.Ubuntu20.04%E5%AE%89%E8%A3%85Google%20Chrome/" data-id="ckhuajgjh0045woii14f8d5hu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/1. Settings Sync" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/1.%20Settings%20Sync/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/1.%20Settings%20Sync/">1. Settings Sync</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Settings-Sync"><a href="#1-Settings-Sync" class="headerlink" title="1. Settings Sync"></a>1. Settings Sync</h4><ul>
+<li><p>可以同步 VS Code 设置同步到 GitHub 账号，包括:</p>
+</li>
+<li><p>setting 文件和插件设置等;</p>
+</li>
+<li><p>重新配置 VS Code 的时候只需同步一下即可;</p>
+</li>
+<li><p>安装完成后，只需要新增一个 Github token;</p>
+</li>
+<li><p>剩下的根据个人喜好进行配置，其他的插件自动帮你完成。</p>
+</li>
+<li><p>示意图<br><img src="https://img-blog.csdnimg.cn/20190605105940731.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21haXhpYW9jaGFp,size_16,color_FFFFFF,t_70" alt="示意图"></p>
+</li>
+</ul>
+<h4 id="2-登陆、注册"><a href="#2-登陆、注册" class="headerlink" title="2. 登陆、注册"></a>2. 登陆、注册</h4><ul>
+<li><p>点击左下角 <code>Setting</code></p>
+</li>
+<li><p><code>Turn On Settings Sync</code></p>
+</li>
+<li><p>LOGIN WITH GITHUB`</p>
+</li>
+<li><p>填写邮箱，密码， 打开邮箱提取验证码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Settings Sync</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4.联系方式"></a>4.联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#56;&#56;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#111;&#x6d;">&#121;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#56;&#56;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/1.%20Settings%20Sync/" data-id="ckhuajgjx004zwoii142r3ic1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/10. CSS Peek" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/10.%20CSS%20Peek/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/10.%20CSS%20Peek/">10. CSS Peek</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-CSS-Peek"><a href="#1-CSS-Peek" class="headerlink" title="1. CSS Peek"></a>1. CSS Peek</h4><ul>
+<li><p>可以追踪至样式表中 CSS 类和 ids 定义的地方;</p>
+</li>
+<li><p>当你在 HTML 文件中右键，单击选择Go to Definition 或者 Peek definition 选项，它便会给你发送样式设置的 CSS 代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSS Peek</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/05/0t0ukT.gif" alt="使用示意图"></p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#110;&#109;&#x69;&#x6e;&#x38;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#109;">&#x79;&#x75;&#97;&#110;&#109;&#x69;&#x6e;&#x38;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/10.%20CSS%20Peek/" data-id="ckhuajgjz0050woiicfb92y6a" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/11. Color Info" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/11.%20Color%20Info/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/11.%20Color%20Info/">11. Color Info</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Color-Info"><a href="#1-Color-Info" class="headerlink" title="1. Color Info"></a>1. Color Info</h4><ul>
+<li><p>获取颜色相关信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Color Info</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/05/0t0e00.gif" alt="使用示意图"></p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#110;&#56;&#56;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#110;&#56;&#56;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/11.%20Color%20Info/" data-id="ckhuajgk30055woiibnycfpz6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/13. HTML Boilerplate" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/13.%20HTML%20Boilerplate/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/13.%20HTML%20Boilerplate/">13. HTML Boilerplate</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-HTML-Boilerplate"><a href="#1-HTML-Boilerplate" class="headerlink" title="1.HTML Boilerplate"></a>1.HTML Boilerplate</h4><ul>
+<li><p>使用HTML模版插件，你就摆脱了为HTML新文件重新编写头部和正文标签的苦恼；</p>
+</li>
+<li><p>你只需在空文件中输入html，并按Tab键，即可生成干净的文档结构</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HTML Boilerplate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>示意图</p>
+<p><img src="https://yuanmin650304.github.io/2020/10/01/VS%20Code/13.HTML%20Boilerplate/" alt="示意图"></p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#109;">&#121;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/13.%20HTML%20Boilerplate/" data-id="ckhuajgk50059woii7yag111f" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/14. Icon Fonts" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/14.%20Icon%20Fonts/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/14.%20Icon%20Fonts/">14. Icon Fonts</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Icon-Fonts"><a href="#1-Icon-Fonts" class="headerlink" title="1. Icon Fonts"></a>1. Icon Fonts</h4><ul>
+<li><p>能够在项目中添加图标字体;</p>
+</li>
+<li><p>支持超过 20 个热门的图标集;</p>
+</li>
+<li><p>包括了 Font Awesome、Ionicons、Glyphicons 和 Material Design Icons。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Icon Fonts</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/05/0t011J.gif" alt="示意图"></p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/14.%20Icon%20Fonts/" data-id="ckhuajgk7005cwoiig9lz91es" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-VSCode/Tags/18. TODO 注释" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/23/VSCode/Tags/18.%20TODO%20%E6%B3%A8%E9%87%8A/" class="article-date">
@@ -286,1209 +1354,11 @@
 
 
   
-    <article id="post-VSCode/Tags/28.SVG Viewer" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/28.SVG%20Viewer/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/28.SVG%20Viewer/">28.SVG Viewer</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-SVG图片预览插件"><a href="#1-SVG图片预览插件" class="headerlink" title="1.SVG图片预览插件"></a>1.SVG图片预览插件</h4><ul>
-<li><p>SVG 图片预览插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SVG Viewer</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/05/0t0t76.gif" alt="示意图"></p>
-</li>
-</ul>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4.联系方式"></a>4.联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#56;&#x38;&#x38;&#64;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#111;&#107;&#x2e;&#99;&#x6f;&#109;">&#121;&#117;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#56;&#x38;&#x38;&#64;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#111;&#107;&#x2e;&#99;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/28.SVG%20Viewer/" data-id="ckhuajgkf005qwoiifqbjclov" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/3. Settint Json" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/3.%20Settint%20Json/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/3.%20Settint%20Json/">3. Settings Json</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Setting-json-配置"><a href="#1-Setting-json-配置" class="headerlink" title="1. Setting json 配置"></a>1. Setting json 配置</h4><ul>
-<li><p>打开设置</p>
-<ul>
-<li><p>方法一： file =&gt; preferences =&gt; settings</p>
-</li>
-<li><p>方法二： 左下角设置按钮 =&gt; Settings</p>
-</li>
-<li><p>方法三：[Ctr + Shift + P] =&gt; 输入： Settings =&gt; Settings Json</p>
-</li>
-</ul>
-</li>
-<li><p>setting json</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;editor.fontSize&quot;</span>: <span class="number">20</span>,</span><br><span class="line">  <span class="comment">//这个等于false editor.tabSize才生效</span></span><br><span class="line">  <span class="attr">&quot;editor.detectIndentation&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">//tab空格数</span></span><br><span class="line">  <span class="attr">&quot;editor.tabSize&quot;</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="comment">//失去焦点自动保存</span></span><br><span class="line">  <span class="attr">&quot;files.autoSave&quot;</span>: <span class="string">&quot;onFocusChange&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;window.zoomLevel&quot;</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="comment">//使用VS code-icons图标</span></span><br><span class="line">  <span class="attr">&quot;workbench.iconTheme&quot;</span>: <span class="string">&quot;vscode-icons&quot;</span>,</span><br><span class="line">  <span class="comment">//可视区域折行</span></span><br><span class="line">  <span class="attr">&quot;editor.wordWrap&quot;</span>: <span class="string">&quot;on&quot;</span>,</span><br><span class="line">  <span class="comment">//Prettier</span></span><br><span class="line">  <span class="comment">//保存时自动格式化</span></span><br><span class="line">  <span class="attr">&quot;editor.formatOnSave&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">//格式化的时候双引号变单引号</span></span><br><span class="line">  <span class="attr">&quot;prettier.singleQuote&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">//Manta&#x27;s Stylus Supremacy配置如下</span></span><br><span class="line">  <span class="comment">// 是否插入冒号</span></span><br><span class="line">  <span class="attr">&quot;stylusSupremacy.insertColons&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 是否插入分好</span></span><br><span class="line">  <span class="attr">&quot;stylusSupremacy.insertSemicolons&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">// 是否插入大括号</span></span><br><span class="line">  <span class="attr">&quot;stylusSupremacy.insertBraces&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">// import之后是否换行</span></span><br><span class="line">  <span class="attr">&quot;stylusSupremacy.insertNewLineAroundImports&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">// 两个选择器中是否换行</span></span><br><span class="line">  <span class="attr">&quot;stylusSupremacy.insertNewLineAroundBlocks&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">//eslint配置如下</span></span><br><span class="line">  <span class="comment">//eslint 保存自动格式化</span></span><br><span class="line">  <span class="attr">&quot;eslint.autoFixOnSave&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">//eslint 作用文件</span></span><br><span class="line">  <span class="attr">&quot;eslint.validate&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;javascript&quot;</span>,</span><br><span class="line">    <span class="string">&quot;html&quot;</span>,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;language&quot;</span>: <span class="string">&quot;vue&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;autoFix&quot;</span>: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="comment">//vetur</span></span><br><span class="line">  <span class="comment">//格式化vue template模板</span></span><br><span class="line">  <span class="attr">&quot;vetur.format.defaultFormatter.html&quot;</span>: <span class="string">&quot;js-beautify-html&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;vetur.format.defaultFormatterOptions&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;js-beautify-html&quot;</span>: &#123;</span><br><span class="line">      <span class="comment">//设置标签内多个属性折行</span></span><br><span class="line">      <span class="comment">//Wrap attributes to new lines [auto|force|force-aligned|force-expand-multiline]</span></span><br><span class="line">      <span class="attr">&quot;wrap_attributes&quot;</span>: <span class="string">&quot;force-expand-multiline&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//px2rem</span></span><br><span class="line">  <span class="comment">//根目录font-size，默认：16px</span></span><br><span class="line">  <span class="attr">&quot;px2rem.rootFontSize&quot;</span>: <span class="number">23.4375</span>,</span><br><span class="line">  <span class="comment">//rem保留小数位数，默认：6位。</span></span><br><span class="line">  <span class="attr">&quot;px2rem.fixedDigits&quot;</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="comment">//是否开启注释，默认：true</span></span><br><span class="line">  <span class="attr">&quot;px2rem.isNeedNotes&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">//autoprefixer</span></span><br><span class="line">  <span class="comment">//兼容浏览器版本</span></span><br><span class="line">  <span class="attr">&quot;autoprefixer.browsers&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;last 2 versions&quot;</span>,</span><br><span class="line">    <span class="string">&quot;ios &gt;= 8&quot;</span>,</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">&quot;less.compile&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;compress&quot;</span>: <span class="literal">false</span>, <span class="comment">// 是否删除多余空白字符</span></span><br><span class="line">    <span class="attr">&quot;sourceMap&quot;</span>: <span class="literal">false</span>, <span class="comment">// 是否创建文件目录树，true的话会自动生成一个 .css.map 文件</span></span><br><span class="line">    <span class="attr">&quot;out&quot;</span>: <span class="literal">true</span>, <span class="comment">// 是否输出css文件，false为不输出</span></span><br><span class="line">    <span class="attr">&quot;outExt&quot;</span>: <span class="string">&quot;css&quot;</span> <span class="comment">// 输出文件的后缀,默认为.css</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#x38;&#56;&#56;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#x6d;">&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#x38;&#56;&#56;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/3.%20Settint%20Json/" data-id="ckhuajgkh005swoii4ct58719" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/30. Change Cas" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/30.%20Change%20Cas/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/30.%20Change%20Cas/">30. Change Cas</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-文本大小写的转换插件"><a href="#1-文本大小写的转换插件" class="headerlink" title="1.文本大小写的转换插件"></a>1.文本大小写的转换插件</h4><ul>
-<li><p>VSCode 内置开箱即用的文本转换选项，能进行文本大小写的转换；</p>
-</li>
-<li><p>此插件则添加了用于修改文本的更多命名格式，包括驼峰命名、下划线分隔命名，snake_case 命名以及 CONST_CAS 命名等。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Change Case</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/05/0t0KtU.gif" alt="示意图"></p>
-</li>
-</ul>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4.联系方式"></a>4.联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#56;&#x38;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#x6f;&#107;&#46;&#99;&#111;&#109;">&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#56;&#x38;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#x6f;&#107;&#46;&#99;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/30.%20Change%20Cas/" data-id="ckhuajgkj005uwoiielbn3977" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/32.给括号添加颜色" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/32.%E7%BB%99%E6%8B%AC%E5%8F%B7%E6%B7%BB%E5%8A%A0%E9%A2%9C%E8%89%B2/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/32.%E7%BB%99%E6%8B%AC%E5%8F%B7%E6%B7%BB%E5%8A%A0%E9%A2%9C%E8%89%B2/">32.给括号添加颜色</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Bracket-Pair-Colorize"><a href="#1-Bracket-Pair-Colorize" class="headerlink" title="1.Bracket Pair Colorize"></a>1.Bracket Pair Colorize</h4><ul>
-<li><p>让括号拥有独立的颜色，易于区分。可以配合任意主题使用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Bracket Pair Colorize</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/05/0tnlSe.png" alt="示意图"></p>
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#x38;&#x38;&#64;&#111;&#x75;&#116;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#121;&#x75;&#97;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#x38;&#x38;&#64;&#111;&#x75;&#116;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/32.%E7%BB%99%E6%8B%AC%E5%8F%B7%E6%B7%BB%E5%8A%A0%E9%A2%9C%E8%89%B2/" data-id="ckhuajgkl005wwoii6zmd2ydd" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/34. Quokka" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/34.%20Quokka/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/34.%20Quokka/">34. Quokka</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Quokka"><a href="#1-Quokka" class="headerlink" title="1. Quokka"></a>1. Quokka</h4><ul>
-<li><p>Quokka 是一个调试工具插件，能够根据你正在编写的代码提供实时反馈;</p>
-</li>
-<li><p>它易于配置，并能够预览变量的函数和计算值结果;</p>
-</li>
-<li><p>另外，在使用 JSX 或 TypeScript 项目中，它能够开箱即用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Quokka</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>示意图</p>
-<p><img src="https://s1.ax1x.com/2020/11/03/ByyhKP.gif" alt="示意图"></p>
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#110;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#99;&#x6f;&#109;">&#x79;&#x75;&#97;&#110;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#99;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/34.%20Quokka/" data-id="ckhuajgkm005ywoiigso04d24" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/36. ES6 快速提示" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/36.%20ES6%20%E5%BF%AB%E9%80%9F%E6%8F%90%E7%A4%BA/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/36.%20ES6%20%E5%BF%AB%E9%80%9F%E6%8F%90%E7%A4%BA/">36. ES6 快速提示</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-JavaScript-ES6-code-snippets"><a href="#1-JavaScript-ES6-code-snippets" class="headerlink" title="1.JavaScript(ES6) code snippets"></a>1.JavaScript(ES6) code snippets</h4><ul>
-<li><p>snippet： 指能够帮助快速输入重复代码模板</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JavaScript(ES6) code snippets</span><br></pre></td></tr></table></figure></li>
-<li><p>方法一</p>
-<ul>
-<li><p>通过快捷键「Ctrl + Shift + P」打开命令窗口（All Command Window）</p>
-</li>
-<li><p>输入「snippet」，点选「Preferences：Configure User Snippets」</p>
-</li>
-</ul>
-</li>
-<li><p>方法二</p>
-</li>
-<li><p>点击左边栏： Setting</p>
-</li>
-<li><p>User Snippets</p>
-</li>
-<li><p>示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/05/0tQ89f.png" alt="示意图"></p>
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/01/VS%20Code/3.%20Setting%20json/">[参见Setting Json]</a></p>
-<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#110;&#109;&#105;&#110;&#x38;&#56;&#x38;&#x38;&#x40;&#111;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#111;&#109;">&#x79;&#x75;&#97;&#110;&#109;&#105;&#110;&#x38;&#56;&#x38;&#x38;&#x40;&#111;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/36.%20ES6%20%E5%BF%AB%E9%80%9F%E6%8F%90%E7%A4%BA/" data-id="ckhuajgkn0060woiiand0fq0o" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/39. Browser Previews" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/39.%20Browser%20Previews/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/39.%20Browser%20Previews/">39. Browser Previews</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-VS-Code内置浏览器"><a href="#1-VS-Code内置浏览器" class="headerlink" title="1. VS Code内置浏览器"></a>1. VS Code内置浏览器</h4><ul>
-<li><p>安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Browser Previews</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用</p>
-<ul>
-<li>导航栏选择<code>.html</code>文件</li>
-<li><code>Ctrl</code> + <code>Shift</code> + <code>P</code>打开<code>Command Palette</code>窗口</li>
-<li>输入： <code>Browser Previews: Open Active File in Preview</code></li>
-</ul>
-</li>
-<li><p>使用示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/05/0t0lp4.png" alt="示意图"></p>
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#46;&#x63;&#111;&#109;">&#121;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#46;&#x63;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/39.%20Browser%20Previews/" data-id="ckhuajgkp0062woiial9edb6f" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/40. Snippets" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/40.%20Snippets/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/40.%20Snippets/">40. Snippets</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Snippets-配置"><a href="#1-Snippets-配置" class="headerlink" title="1. Snippets 配置"></a>1. Snippets 配置</h4><ul>
-<li><p>示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/11/0gwZkT.png" alt="示意图"></p>
-</li>
-<li><p>设置html5: html.json</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;html5&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;prefix&quot;</span>: <span class="string">&quot;html5&quot;</span>,</span><br><span class="line">    <span class="string">&quot;body&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;&lt;!DOCTYPE html&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;&lt;html lang=\&quot;en\&quot;&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;head&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;meta charset=\&quot;UTF-8\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;meta name=\&quot;viewport\&quot; content=\&quot;width=device-width, initial-scale=1.0\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;title&gt;Document&lt;/title&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;link rel=\&quot;shortcut icon\&quot; href=\&quot;imgs/favicon.ico\&quot; type=\&quot;image/x-icon\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;link rel=\&quot;stylesheet\&quot; href=\&quot;css/index.css\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;script src=\&quot;js/vue.js\&quot;&gt;&lt;/script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;/head&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;body&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;div id=\&quot;app\&quot;&gt;&lt;/div&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;script&gt;&lt;/script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;/body&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;&lt;/html&gt;&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/11/0gw30x.png" alt="示意图"></p>
-</li>
-</ul>
-<ul>
-<li><p>设置Vue: html.json</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;Vue&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;prefix&quot;</span>: <span class="string">&quot;vue&quot;</span>,</span><br><span class="line">    <span class="string">&quot;body&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;&lt;!DOCTYPE html&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;&lt;html lang=\&quot;zh-CN\&quot;&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;head&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;title&gt;<span class="variable">$1</span>&lt;/title&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;meta charset=\&quot;UTF-8\&quot;&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;meta name=\&quot;viewport\&quot; content=\&quot;width=device-width, initial-scale=1\&quot;&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;link rel=\&quot;shortcut icon\&quot; href=\&quot;imgs/favicon.ico\&quot; type=\&quot;image/x-icon\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;link rel=\&quot;stylesheet\&quot; href=\&quot;css/index.css\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;script src=\&quot;js/vue.js\&quot;&gt;&lt;/script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;script src=\&quot;https://cdn.bootcss.com/vue/2.2.2/vue.min.js\&quot;&gt;&lt;/script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;/head&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;body&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;div id=\&quot;app\&quot;&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t&lt;hello title=\&quot;title: title\&quot;&gt;&lt;/hello&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;/div&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\tVue.component(\&quot;hello\&quot;, &#123;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\tprops: &#123; title: String &#125;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\t\tdata() &#123;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\t\t\treturn &#123;&#125;;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\t\t&#125;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\tmethods: &#123;&#125;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\ttemplate: `&lt;div&gt;&lt;div&gt;Hello World&lt;/div&gt;&lt;/div&gt;`,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t&#125;);&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\tconst vm = new Vue(&#123;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\tel: \&quot;#app\&quot;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\tdata: &#123;&#125;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\tmethods: &#123;&#125;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t&#125;);&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;/script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;/body&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;&lt;/html&gt;&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;description&quot;</span>: <span class="string">&quot;vue - Defines a template for a vue &amp; html5 document&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#110;&#109;&#105;&#110;&#x38;&#56;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#110;&#109;&#105;&#110;&#x38;&#56;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/40.%20Snippets/" data-id="ckhuajgkq0064woii6nquhwhq" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/41. VS Code快速编写HTML代码" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/41.%20VS%20Code%E5%BF%AB%E9%80%9F%E7%BC%96%E5%86%99HTML%E4%BB%A3%E7%A0%81/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/41.%20VS%20Code%E5%BF%AB%E9%80%9F%E7%BC%96%E5%86%99HTML%E4%BB%A3%E7%A0%81/">41. vs Code快速编写HTML代码</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Emmet基本用法"><a href="#1-Emmet基本用法" class="headerlink" title="1. Emmet基本用法"></a>1. Emmet基本用法</h4><ol>
-<li><p>bq: <code>&lt;blockquote&gt;&lt;/blockquote&gt;</code></p>
-</li>
-<li><p>输入标签，根据提示符，选择项目</p>
-</li>
-</ol>
-<h4 id="2-文本操作符-Text-Opreators"><a href="#2-文本操作符-Text-Opreators" class="headerlink" title="2. 文本操作符(Text Opreators)"></a>2. 文本操作符(Text Opreators)</h4><ol>
-<li>输入元素并生成内容： <code>&#123;&#125;</code></li>
-</ol>
-<ul>
-<li><p>示例</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">div</span>&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">a</span>&#123;链接&#125; <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span>&gt;</span>链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-属性操作符-Attribute-Operators"><a href="#3-属性操作符-Attribute-Operators" class="headerlink" title="3. 属性操作符(Attribute Operators)"></a>3. 属性操作符(Attribute Operators)</h4><ul>
-<li><p>示例</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">div.poet</span>&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">div</span>#<span class="attr">poet</span>&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>隐式标签则会自动联想生成对应元素,根据配置规则生成不同的结果</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">.poet</span>&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">em</span>&gt;</span>.port&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">em</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">em</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">table</span>&gt;</span>.row&gt;.col&#123;落霞与孤鹜齐飞，秋水共长天一色&#125;*2--&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">&quot;rol&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">&quot;rol&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>绑定多个类名: <code>.</code>符号</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">div.content.poet</span>&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>自定义属性: []</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">a</span>[<span class="attr">href</span>=<span class="string">&quot;http://loaclhost:300&quot;</span> <span class="attr">data-title</span>=<span class="string">&quot;titie&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>]&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; <span class="attr">--</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://loaclhost:300&quot;</span> <span class="attr">data-title</span>=<span class="string">&quot;titie&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="4-嵌套操作符-Nesting-Operators"><a href="#4-嵌套操作符-Nesting-Operators" class="headerlink" title="4. 嵌套操作符(Nesting Operators)"></a>4. 嵌套操作符(Nesting Operators)</h4><ol>
-<li>嵌套操作符用于将缩写元素放置在生成的树中,是否应放置在上下文元素:</li>
-</ol>
-<ul>
-<li><p>子级</p>
-</li>
-<li><p>通过<code>&gt;字符标识</code>可以生成嵌套子级元素,可以配合元素属性进行连写</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">div</span>#<span class="attr">app</span>&gt;</span>ul&gt;li&#123;&#125;&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>同级</p>
-</li>
-<li><p><code>+字符标识</code>生成兄弟级元素</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> #<span class="attr">app</span>&gt;</span>(ul.title&gt;li&#123;落霞与孤鹜齐飞，秋水共长天一色&#125;+ul.content&gt;li&#123;落霞与孤鹜齐飞，秋水共长天一色&#125;)*2 --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>父级</p>
-</li>
-<li><p><code>^字符标识</code>所在位置开始,查找左侧最近的元素的父级元素并生成其兄弟级元素.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> #<span class="attr">app</span>&gt;</span>p.title&gt;span&#123;落霞与孤鹜齐飞，秋水共长天一色&#125;^ul&gt;(li&#123;落霞与孤鹜齐飞，秋水共长天一色&#125;)*2--&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="5-分组操作符-Grouping-Operators"><a href="#5-分组操作符-Grouping-Operators" class="headerlink" title="5. 分组操作符(Grouping Operators)"></a>5. 分组操作符(Grouping Operators)</h4><ul>
-<li><p>分组使用<code>()字符标识</code>来实现缩写的分离</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> #<span class="attr">app</span>&gt;</span>(ul.title&gt;li.poet&#123;落霞与孤鹜齐飞，秋水共长天一色&#125;+span.author&#123;王勃&#125;) --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;author&quot;</span>&gt;</span>王勃<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="6-乘法-Multiplication-Operator"><a href="#6-乘法-Multiplication-Operator" class="headerlink" title="6. 乘法(Multiplication Operator)"></a>6. 乘法(Multiplication Operator)</h4><ul>
-<li><p>使用<code>*字符标识</code>实现元素倍增</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> #<span class="attr">app</span>&gt;</span>(ul.title&gt;li.poet&#123;落霞与孤鹜齐飞，秋水共长天一色&#125;+span.author&#123;王勃&#125;)*2 --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;author&quot;</span>&gt;</span>王勃<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;author&quot;</span>&gt;</span>王勃<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="7-自动计数-numbering"><a href="#7-自动计数-numbering" class="headerlink" title="7. 自动计数(numbering)"></a>7. 自动计数(numbering)</h4><ul>
-<li><p>使用<code>$字符标识</code>生成重复项时增加一个序号</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">ul</span>&gt;</span>li.poet$&#123;Item Number $&#125;*3 --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet1&quot;</span>&gt;</span>Item Number 1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet2&quot;</span>&gt;</span>Item Number 2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet3&quot;</span>&gt;</span>Item Number 3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果生成两位数则使用两个连续的$$,更多位数以此类推…</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">ul</span>&gt;</span>li.poet-$$*3 --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet-01&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet-02&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet-03&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>@N可以改变起始值.需要注意的是如果配合升降序使用的话N是放到+-符后</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">ul</span>&gt;</span>li.poet-$$@10*3 --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet-10&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet-11&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet-12&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="8-模拟文本-随机文本"><a href="#8-模拟文本-随机文本" class="headerlink" title="8. 模拟文本/随机文本"></a>8. 模拟文本/随机文本</h4><ul>
-<li><p><code>lorem</code></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">div</span>&gt;</span>lorem --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita molestias blanditiis ut officia incidunt velit, repellat eligendi tempora numquam, facilis neque eum consequuntur corrupti dolorem, explicabo sapiente culpa ea accusamus.<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt; !<span class="attr">--</span> (<span class="attr">p</span>&gt;</span>lorem4)*3--&gt;</span><br><span class="line">&lt;&lt;p&gt;Lorem ipsum dolor sit.&lt;/p&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Reprehenderit cum tenetur ex!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Facilis placeat voluptatum fuga.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="9-包装文本"><a href="#9-包装文本" class="headerlink" title="9. 包装文本"></a>9. 包装文本</h4><ul>
-<li><p><code>选中文本</code>,按下ctrl+shift+p打开命令窗口输入ewrap</p>
-</li>
-<li><p>选择Emmet:使用缩写进行包装(Wrap with Abbreviation)选项</p>
-</li>
-<li><p>输入缩写字符nav&gt;ul&gt;li*按下回车键即可看到效果.</p>
-</li>
-<li><p>当然也可以在菜单=&gt;编辑=&gt;Emmet(M)..然后输入.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">首页</span><br><span class="line">产品介绍</span><br><span class="line">关于我们</span><br><span class="line">联系我们</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#109;&#105;&#110;&#x38;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#x63;&#111;&#x6d;">&#x79;&#117;&#x61;&#x6e;&#109;&#105;&#110;&#x38;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#x63;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/41.%20VS%20Code%E5%BF%AB%E9%80%9F%E7%BC%96%E5%86%99HTML%E4%BB%A3%E7%A0%81/" data-id="ckhuajgks0066woiidguxa643" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/5. Prettier - Code formatter" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/5.%20Prettier%20-%20Code%20formatter/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/5.%20Prettier%20-%20Code%20formatter/">5. Prettier-Code Formatter</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-一键格式化插件"><a href="#1-一键格式化插件" class="headerlink" title="1. 一键格式化插件"></a>1. 一键格式化插件</h4><ul>
-<li><p>格式化代码： HTML CSS JS Less Sass TypeScript 等</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Prettier - Code formatter</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置： settings</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;editor.formatOnSave&quot;</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>示意图：Settings</p>
-<p><img src="https://s1.ax1x.com/2020/10/05/0tZ1Qs.png" alt="settings"></p>
-</li>
-<li><p>示意图：格式化</p>
-<p><img src="https://s1.ax1x.com/2020/10/05/0t3FNn.gif" alt="格式化"></p>
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#111;&#x6d;">&#121;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/5.%20Prettier%20-%20Code%20formatter/" data-id="ckhuajgkt0068woii4mqshcg7" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/6. Auto Rename Complete Close Tagg" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/6.%20Auto%20Rename%20Complete%20Close%20Tagg/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/6.%20Auto%20Rename%20Complete%20Close%20Tagg/">6. Auto Rename/Complete/Close Tagg</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Auto-Rename-Tag"><a href="#1-Auto-Rename-Tag" class="headerlink" title="1.Auto Rename Tag"></a>1.Auto Rename Tag</h4><ul>
-<li><p>自动重命名HTML标签；</p>
-</li>
-<li><p>Auto Rename Tag: 自动修改HTML标签；</p>
-</li>
-<li><p>更改HTML标签名时，会自动更新对应的开始标签和结束标签的标签名。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Auto Rename Tag</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-Auto-Complete-Tag"><a href="#2-Auto-Complete-Tag" class="headerlink" title="2.Auto Complete Tag"></a>2.Auto Complete Tag</h4><ul>
-<li><p>Auto Complete Tag: 集成了Auto Close Tag和Auto Rename Tag的功能，丰富了VS Code编写HTML时的标签自动补全功能;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Auto Complete Tag</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-Auto-Close-Tag-自动闭合标签"><a href="#3-Auto-Close-Tag-自动闭合标签" class="headerlink" title="3. Auto Close Tag 自动闭合标签"></a>3. Auto Close Tag 自动闭合标签</h4><ul>
-<li><p>Auto Close Tag: 输入开始标签后，自动添加结束标签;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Auto Close Tag</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4.联系方式"></a>4.联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;">&#x79;&#117;&#97;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/6.%20Auto%20Rename%20Complete%20Close%20Tagg/" data-id="ckhuajgkv006awoii7r5shmlc" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/7. Beautify" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/7.%20Beautify/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/7.%20Beautify/">7. Beautify</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-一键格式化插件"><a href="#1-一键格式化插件" class="headerlink" title="1. 一键格式化插件"></a>1. 一键格式化插件</h4><ul>
-<li><p>格式化插件只需要Beautify</p>
-</li>
-<li><p>一键格式化 HTML CSS JS</p>
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#x61;&#110;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#107;&#x2e;&#99;&#111;&#x6d;">&#x79;&#x75;&#x61;&#110;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#107;&#x2e;&#99;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/7.%20Beautify/" data-id="ckhuajgkw006cwoii5ufg6eiz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/8. Vscode Icons" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/8.%20Vscode%20Icons/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/8.%20Vscode%20Icons/">8. Vscode Icons</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4.联系方式"></a>4.联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#110;&#109;&#x69;&#110;&#x38;&#56;&#x38;&#56;&#64;&#111;&#x75;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#111;&#x6d;">&#121;&#x75;&#x61;&#110;&#109;&#x69;&#110;&#x38;&#56;&#x38;&#56;&#64;&#111;&#x75;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/8.%20Vscode%20Icons/" data-id="ckhuajgkx006ewoii6awefjqf" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/9. Easy Less" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/9.%20Easy%20Less/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/9.%20Easy%20Less/">9. Easy Less</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Easy-Less-安装"><a href="#1-Easy-Less-安装" class="headerlink" title="1.Easy Less 安装"></a>1.Easy Less 安装</h4><ul>
-<li><p>配置setting.json</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="attr">&quot;less.compile&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;compress&quot;</span>: <span class="literal">false</span>, <span class="comment">// true =&gt; remove surplus whitespace</span></span><br><span class="line">    <span class="attr">&quot;sourceMap&quot;</span>: <span class="literal">false</span>, <span class="comment">// true =&gt; generate source maps (.css.map files)</span></span><br><span class="line">    <span class="attr">&quot;out&quot;</span>: <span class="string">&quot;../css/&quot;</span> <span class="comment">// false =&gt; DON&#x27;T output .css files (overridable per-file, see below)</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-使用"><a href="#2-使用" class="headerlink" title="2. 使用"></a>2. 使用</h4><ul>
-<li><p>创建./less目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir less</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>新建index.less文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch ./less/index.less</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编辑index.less文件，自动生成： css/index.css目录和文件</p>
-<p><img src="https://s1.ax1x.com/2020/10/11/0g07qI.png" alt="Settings"></p>
-</li>
-</ul>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4.联系方式"></a>4.联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#109;&#x69;&#x6e;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#117;&#x61;&#110;&#109;&#x69;&#x6e;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/9.%20Easy%20Less/" data-id="ckhuajgky006gwoiifuzr1m3h" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tutorial/VS Code 教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tutorial/VS%20Code%20%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tutorial/VS%20Code%20%E6%95%99%E7%A8%8B/">VS Code教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-VS-Code-安装、配置与使用"><a href="#1-VS-Code-安装、配置与使用" class="headerlink" title="1. VS Code 安装、配置与使用"></a>1. VS Code 安装、配置与使用</h4><p> <a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Full%20Stack/Tutorial/1.0-Full%20Stack%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E6%9C%80%E6%96%B0%E6%95%99%E7%A8%8B/">[1.0-Full Stack全栈开发最新教程]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%20%E6%95%99%E7%A8%8B/" data-id="ckhuajgl0006iwoii455cf90i" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tutorial/VS Code安装、配置与使用" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/VS-Code/">VS Code</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">VS Code 安装、配置与使用</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/Linux/Ubuntu/7.Ubuntu20.04%E5%AE%89%E8%A3%85VS%20Code/">[Ubuntu20.04安装VS Code]</a></p>
-<h3 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h3><ol start="40">
-<li>User Snippet</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/40.%20Snippets/">[40. User Snippet]</a></p>
-<ol start="41">
-<li>VS Code快速编写HTML代码</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/41.%20VS%20Code%E5%BF%AB%E9%80%9F%E7%BC%96%E5%86%99HTML%E4%BB%A3%E7%A0%81/">[41. VS Code快速编写HTML代码]</a></p>
-<h3 id="3-插件配置"><a href="#3-插件配置" class="headerlink" title="3.插件配置"></a>3.插件配置</h3><h4 id="3-1-VS-Code插件安装目录"><a href="#3-1-VS-Code插件安装目录" class="headerlink" title="3.1 VS Code插件安装目录"></a>3.1 VS Code插件安装目录</h4><ol>
-<li>Settings Sync</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/1.%20Settings%20Sync/">[1. Settings Sync]</a></p>
-<ol start="2">
-<li>Hero</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/2.Compile%20Hero%20Plugin/">[2. VS Code Compile Hero Plugin]</a></p>
-<ol start="3">
-<li>Settings Json</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/3.%20Settint%20Json/">[3. Settings Json]</a></p>
-<ol start="4">
-<li>Path Intellisense</li>
-</ol>
-<ul>
-<li>自动路经补全</li>
-</ul>
-<ol start="5">
-<li>Prettier - Code formatter</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/5.%20Prettier%20-%20Code%20formatter/">[5. Prettier]</a></p>
-<ol start="6">
-<li>Auto Rename/Complete/Close Tagg</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/6.%20Auto%20Rename%20Complete%20Close%20Tagg/">[6. Auto Rename/Complete/Close Tagg]</a></p>
-<ol start="7">
-<li>Beautify</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/7.%20Beautify/">[7. Beautify]</a></p>
-<ol start="8">
-<li>Vscode Icons</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/8.%20Vscode%20Icons/">[8. Vscode Icons]</a></p>
-<ol start="9">
-<li>Easy Less</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/9.%20Easy%20Less/">[9. Easy Less]</a></p>
-<ol start="10">
-<li>CSS Peek</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/10.%20CSS%20Peek/">[10. CSS Peek]</a></p>
-<ol start="11">
-<li>Color Info</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/11.%20Color%20Info/">[11. Color Info]</a></p>
-<ol start="12">
-<li>Chinese Language Pack</li>
-</ol>
-<ul>
-<li>略</li>
-</ul>
-<ol start="13">
-<li>HTML Boilerplate</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/13.%20HTML%20Boilerplate/">[13. HTML Boilerplate]</a></p>
-<ol start="14">
-<li>Icon Fonts</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/14.%20Icon%20Fonts/">[14. Icon Fonts]</a></p>
-<ol start="15">
-<li>Auto Comment Blocks</li>
-</ol>
-<ul>
-<li>自动插入注释行</li>
-</ul>
-<ol start="16">
-<li>cssrem</li>
-</ol>
-<ul>
-<li>自动计算CSS单位和rem单位</li>
-</ul>
-<ol start="17">
-<li>文档顶部插入说明注释</li>
-</ol>
-<ul>
-<li><p>全局注释</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vscode-fileheader</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="18">
-<li>TODO 注释</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/18.%20TODO%20%E6%B3%A8%E9%87%8A/">[18. TODO 注释]</a></p>
-<ol start="19">
-<li>Js 注释</li>
-</ol>
-<ul>
-<li><p>Js 函数方法添加参数注解</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Document This</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="20">
-<li>Node 模块</li>
-</ol>
-<ul>
-<li><p>import 语句中自动完成 Node.js 模块</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Node.js Modules Intellisense</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="21">
-<li>JS 调试工具</li>
-</ol>
-<ul>
-<li><p>Debugger for Chrome</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Debugger <span class="keyword">for</span> Chrome</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="22">
-<li>Code Runner</li>
-</ol>
-<ul>
-<li><p>自动运行代码片段</p>
-<ul>
-<li>写C++的时候如果发现右键没有run code选项，可以安装code runner,可以不Debug直接运行代码；</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Code Runner</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="23">
-<li>Code Spell Checker</li>
-</ol>
-<ul>
-<li><p>代码拼写检查工具</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Code Spell Checker</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="24">
-<li>定义和维护编码风格</li>
-</ol>
-<ul>
-<li><p>在不同的编辑器或 IDE，定义和维护一致的编码风格</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EditorCogfig <span class="keyword">for</span> VS Code</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="25">
-<li>TS 与 JS 语法更新</li>
-</ol>
-<ul>
-<li><p>最新的TypeScript和Javascript语法</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">atest TypeScript and Javascript Grammar</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="26">
-<li>查看文件大小</li>
-</ol>
-<ul>
-<li><p>1.Filesize</p>
-<ul>
-<li><p>编辑器左下角显示： filesize</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filesize</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>2.Import Cost</p>
-<ul>
-<li><p>查看导入包的大小</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import Cost</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-<ol start="27">
-<li>Faker</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/27.%20Faker/">[27. Faker]</a></p>
-<p>28.SVG Viewer</p>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/28.SVG%20Viewer/">[28.SVG Viewer]</a></p>
-<ol start="29">
-<li>Regex Previewer</li>
-</ol>
-<ul>
-<li><p>用于实时测试正则表达式的实用工具；</p>
-</li>
-<li><p>可以将正则表达式模式应用在任何打开的文件上，并高亮所有的匹配项。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Regex Previewer</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="30">
-<li>Change Cas</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/30.%20Change%20Cas/">[30. Change Cas]</a></p>
-<ol start="31">
-<li>Minify</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/31.%20Minify/">[31. Minify]</a></p>
-<ol start="32">
-<li>给括号添加颜色</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/32.%E7%BB%99%E6%8B%AC%E5%8F%B7%E6%B7%BB%E5%8A%A0%E9%A2%9C%E8%89%B2/">[32. 给括号添加颜色]</a></p>
-<ol start="33">
-<li>Git 日至查询</li>
-</ol>
-<ul>
-<li><p>GitLens-Git supercharged</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GitLens-Git supercharged</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="34">
-<li>Quokka</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/34.%20Quokka/">[34. Quokka]</a></p>
-<ol start="35">
-<li>ESlint </li>
-</ol>
-<ul>
-<li><p>语法编辑纠错</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ESlint </span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="36">
-<li>ES6 快速提示</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/36.%20ES6%20%E5%BF%AB%E9%80%9F%E6%8F%90%E7%A4%BA/">[36. ES6 快速提示]</a></p>
-<ol start="37">
-<li>Markdown</li>
-</ol>
-<ul>
-<li><p>Markdown语法监测</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Markdown</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="38">
-<li>Vue Vetur</li>
-</ol>
-<ul>
-<li><p>多功能集成插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vetur</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="39">
-<li>Browser Previews</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tags/39.%20Browser%20Previews/">[39. Browser Previews]</a></p>
-<h3 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4. 参考文档"></a>4. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%20%E6%95%99%E7%A8%8B/">[VS Code教程]</a></p>
-<h3 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5.联系方式"></a>5.联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/" data-id="ckhuajgl2006kwoiiaqpg7t4b" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSCode/Tags/31. Minify" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/23/VSCode/Tags/31.%20Minify/" class="article-date">
-  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/23/VSCode/Tags/31.%20Minify/">31. Minify</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Minify"><a href="#1-Minify" class="headerlink" title="1.Minify"></a>1.Minify</h4><ul>
-<li><p>压缩合并 JavaScript和 CSS 文件的应用程序；</p>
-</li>
-<li><p>提供了大量自定义的设置，以及自动压缩保存并导出为.min 文件的选项；</p>
-</li>
-<li><p>能够分别通过 uglify-js、clean-css和 html-minifier，与 JavaScript、CSS和 HTML 协同工作。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Minify</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/05/0t08XR.gif" alt="示意图"></p>
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#110;&#x6d;&#x69;&#110;&#56;&#x38;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;">&#x79;&#117;&#97;&#110;&#x6d;&#x69;&#110;&#56;&#x38;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/31.%20Minify/" data-id="ckhuajgm40074woiibecefcke" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/10/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/12/">Next &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/10/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/12/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -1509,7 +1379,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">30</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">55</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">30</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">72</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
     </div>
   </div>
 
@@ -1519,7 +1389,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">228</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">239</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -1548,7 +1418,7 @@
           </li>
         
           <li>
-            <a href="/2020/11/04/Today's%20Excises/Today's%20Excises/">Today&#39;s Excises for November 8 ~ 15</a>
+            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.2%20Prototype%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF_02/">5.4.1 Prototype原型链继承_02</a>
           </li>
         
       </ul>
