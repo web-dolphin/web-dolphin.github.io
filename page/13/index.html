@@ -1212,9 +1212,9 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
 
 
   
-    <article id="post-Node/Tags/Node Server/1.0 Node的安装与环境变量配置" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Tags/Node Server/6.1 Node的安装与环境变量配置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/1970/01/01/Node/Tags/Node%20Server/1.0%20Node%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/" class="article-date">
+    <a href="/1970/01/01/Node/Tags/Node%20Server/6.1%20Node%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/" class="article-date">
   <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
 </a>
     
@@ -1228,7 +1228,7 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/1.0%20Node%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/" data-id="cki0aynn60000muii4hkd4gvd" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/6.1%20Node%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/" data-id="cki0cmgq800007tiihlbc4ljr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1238,42 +1238,9 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
 
 
   
-    <article id="post-Node/Tags/Node Server/10. Node回调函数" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Tags/Node Server/6.11 Node异步编程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/1970/01/01/Node/Tags/Node%20Server/10.%20Node%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/" class="article-date">
-  <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-回调函数"><a href="#1-回调函数" class="headerlink" title="1. 回调函数"></a>1. 回调函数</h4><ul>
-<li><p>自己定义函数让别人去调用</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// getData函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getData</span> (<span class="params">callback</span>) </span>&#123;&#125;</span><br><span class="line">  <span class="comment">// getData函数调用</span></span><br><span class="line">getData (<span class="function">() =&gt;</span> &#123;&#125;);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-使用回调函数获取异步API执行结果"><a href="#2-使用回调函数获取异步API执行结果" class="headerlink" title="2. 使用回调函数获取异步API执行结果"></a>2. 使用回调函数获取异步API执行结果</h4>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getMsg</span> (<span class="params">callback</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      callback (&#123; <span class="attr">msg</span>: <span class="string">&#x27;Hello Node.js&#x27;</span> &#125;)</span><br><span class="line">  &#125;, <span class="number">2000</span>);</span><br><span class="line">&#125;</span><br><span class="line">getMsg (<span class="function">(<span class="params">msg</span>) =&gt;</span> &#123; </span><br><span class="line">    <span class="built_in">console</span>.log(msg);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/10.%20Node%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/" data-id="cki0aynnu000amuii8oal5zkt" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tags/Node Server/11. Node异步编程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/1970/01/01/Node/Tags/Node%20Server/11.%20Node%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" class="article-date">
+    <a href="/1970/01/01/Node/Tags/Node%20Server/6.11%20Node%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" class="article-date">
   <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
 </a>
     
@@ -1362,7 +1329,7 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/11.%20Node%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" data-id="cki0aynnx000cmuii44s7fzgy" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/6.11%20Node%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" data-id="cki0cmgr9000g7tiibdfb21yw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1372,9 +1339,42 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
 
 
   
-    <article id="post-Node/Tags/Node Server/12. Node客户端请求途径" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Tags/Node Server/6.10 Node回调函数" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/1970/01/01/Node/Tags/Node%20Server/12.%20Node%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82%E9%80%94%E5%BE%84/" class="article-date">
+    <a href="/1970/01/01/Node/Tags/Node%20Server/6.10%20Node%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/" class="article-date">
+  <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-回调函数"><a href="#1-回调函数" class="headerlink" title="1. 回调函数"></a>1. 回调函数</h4><ul>
+<li><p>自己定义函数让别人去调用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// getData函数定义</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getData</span> (<span class="params">callback</span>) </span>&#123;&#125;</span><br><span class="line">  <span class="comment">// getData函数调用</span></span><br><span class="line">getData (<span class="function">() =&gt;</span> &#123;&#125;);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-使用回调函数获取异步API执行结果"><a href="#2-使用回调函数获取异步API执行结果" class="headerlink" title="2. 使用回调函数获取异步API执行结果"></a>2. 使用回调函数获取异步API执行结果</h4>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getMsg</span> (<span class="params">callback</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      callback (&#123; <span class="attr">msg</span>: <span class="string">&#x27;Hello Node.js&#x27;</span> &#125;)</span><br><span class="line">  &#125;, <span class="number">2000</span>);</span><br><span class="line">&#125;</span><br><span class="line">getMsg (<span class="function">(<span class="params">msg</span>) =&gt;</span> &#123; </span><br><span class="line">    <span class="built_in">console</span>.log(msg);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/6.10%20Node%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/" data-id="cki0cmgra000i7tiid0rs7fz7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Tags/Node Server/6.12 Node客户端请求途径" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/1970/01/01/Node/Tags/Node%20Server/6.12%20Node%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82%E9%80%94%E5%BE%84/" class="article-date">
   <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
 </a>
     
@@ -1409,7 +1409,7 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/12.%20Node%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82%E9%80%94%E5%BE%84/" data-id="cki0aynnz000dmuii5wuh1qgy" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/6.12%20Node%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82%E9%80%94%E5%BE%84/" data-id="cki0cmgrb000j7tiib1b5db1b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1419,9 +1419,9 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
 
 
   
-    <article id="post-Node/Tags/Node Server/2.0 Node的模块化开发" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Tags/Node Server/6.2 Node的模块化开发" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/1970/01/01/Node/Tags/Node%20Server/2.0%20Node%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/" class="article-date">
+    <a href="/1970/01/01/Node/Tags/Node%20Server/6.2%20Node%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/" class="article-date">
   <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
 </a>
     
@@ -1719,7 +1719,7 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/2.0%20Node%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/" data-id="cki0ayno0000emuiibfx80iig" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/6.2%20Node%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/" data-id="cki0cmgrc000k7tiifawmclna" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1729,9 +1729,9 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
 
 
   
-    <article id="post-Node/Tags/Node Server/3.0 Node服务器端基本概念" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Tags/Node Server/6.3 Node服务器端基本概念" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/1970/01/01/Node/Tags/Node%20Server/3.0%20Node%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="article-date">
+    <a href="/1970/01/01/Node/Tags/Node%20Server/6.3%20Node%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="article-date">
   <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
 </a>
     
@@ -1810,7 +1810,7 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/3.0%20Node%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" data-id="cki0ayno2000fmuiif7vl16f2" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/6.3%20Node%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" data-id="cki0cmgrf000l7tii1cqjbg4n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1820,9 +1820,9 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
 
 
   
-    <article id="post-Node/Tags/Node Server/4.0 Node创建Web服务器" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Tags/Node Server/6.4 Node创建Web服务器" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/1970/01/01/Node/Tags/Node%20Server/4.0%20Node%E5%88%9B%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="article-date">
+    <a href="/1970/01/01/Node/Tags/Node%20Server/6.4%20Node%E5%88%9B%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="article-date">
   <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
 </a>
     
@@ -1851,7 +1851,7 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/4.0%20Node%E5%88%9B%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="cki0ayno3000gmuiie10v6htb" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/6.4%20Node%E5%88%9B%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="cki0cmgrg000m7tiifcuveox2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1861,9 +1861,9 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
 
 
   
-    <article id="post-Node/Tags/Node Server/5.0 HTTP通信协议与响应处理" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Tags/Node Server/6.5 HTTP通信协议与响应处理" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/1970/01/01/Node/Tags/Node%20Server/5.0%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/" class="article-date">
+    <a href="/1970/01/01/Node/Tags/Node%20Server/6.5%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/" class="article-date">
   <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
 </a>
     
@@ -1959,7 +1959,7 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/5.0%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/" data-id="cki0ayno5000hmuiiaqhm66tp" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/6.5%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/" data-id="cki0cmgrh000n7tiifjy65k07" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1969,9 +1969,9 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
 
 
   
-    <article id="post-Node/Tags/Node Server/6.0 Node请求参数" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Tags/Node Server/6.6 Node请求参数" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/1970/01/01/Node/Tags/Node%20Server/6.0%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/" class="article-date">
+    <a href="/1970/01/01/Node/Tags/Node%20Server/6.6%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/" class="article-date">
   <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
 </a>
     
@@ -2005,7 +2005,7 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/6.0%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/" data-id="cki0ayno6000imuiic1o2hjca" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/6.6%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/" data-id="cki0cmgri000o7tii09j0dpzr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2015,9 +2015,9 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
 
 
   
-    <article id="post-Node/Tags/Node Server/7.0 Node路由设置" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Tags/Node Server/6.7 Node路由设置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/1970/01/01/Node/Tags/Node%20Server/7.0%20Node%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/" class="article-date">
+    <a href="/1970/01/01/Node/Tags/Node%20Server/6.7%20Node%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/" class="article-date">
   <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
 </a>
     
@@ -2042,7 +2042,7 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/7.0%20Node%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/" data-id="cki0ayno7000jmuiih94thpw3" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Node%20Server/6.7%20Node%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/" data-id="cki0cmgrj000p7tii8d48228w" class="article-share-link">Share</a>
       
       
     </footer>
