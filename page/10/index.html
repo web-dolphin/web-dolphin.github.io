@@ -67,326 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/11.内置对象/2.11.3 Boolean内置对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.3%20Boolean%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.3%20Boolean%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11.3 Boolean内置对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-Boolean对象"><a href="#1-Boolean对象" class="headerlink" title="1. Boolean对象"></a>1. Boolean对象</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><ul>
-<li><p>创建String对象的语法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 2.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[[]]()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 3.Array对象方法</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1. concate()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="2">
-<li><p>join()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">3. pop()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>push()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">5. shift()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>unshift()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">7. slice()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>splice()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">9. sort()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
-<li><p>toSource()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">11. toString()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
-<li><p>toLocalString()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">13. valueOf()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#64;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#46;&#99;&#x6f;&#x6d;">&#121;&#x75;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#64;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#46;&#99;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.3%20Boolean%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckhw0oiop000hn7iih7073fb2" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/11.内置对象/2.11.4 Math内置对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.4%20Math%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.4%20Math%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11.4 Math内置对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-Math对象"><a href="#1-Math对象" class="headerlink" title="1. Math对象"></a>1. Math对象</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><ul>
-<li><p>创建String对象的语法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 2.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[[]]()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 3.Array对象方法</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1. concate()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="2">
-<li><p>join()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">3. pop()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>push()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">5. shift()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>unshift()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">7. slice()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>splice()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">9. sort()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
-<li><p>toSource()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">11. toString()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
-<li><p>toLocalString()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">13. valueOf()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#111;&#109;">&#121;&#x75;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.4%20Math%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckhw0oios000jn7ii367xhxkv" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/11.内置对象/2.11.5 Number内置对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.5%20Number%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.5%20Number%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11.5 Number内置对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-Number对象"><a href="#1-Number对象" class="headerlink" title="1. Number对象"></a>1. Number对象</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><ul>
-<li><p>创建String对象的语法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 2.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[[]]()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 3.Array对象方法</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1. concate()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="2">
-<li><p>join()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">3. pop()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>push()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">5. shift()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>unshift()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">7. slice()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>splice()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">9. sort()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
-<li><p>toSource()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">11. toString()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
-<li><p>toLocalString()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">13. valueOf()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#117;&#97;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#64;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;">&#x79;&#117;&#97;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#64;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.5%20Number%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckhw0oiow000ln7ii5st84py2" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/11.内置对象/2.11.6 Events内置对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.6%20Events%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.6%20Events%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11.6 Events内置对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-Events内置对象"><a href="#1-Events内置对象" class="headerlink" title="1. Events内置对象"></a>1. Events内置对象</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><ul>
-<li><p>创建String对象的语法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">#### 2.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[[]]()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 3.Array对象方法</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1. concate()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="2">
-<li><p>join()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">3. pop()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>push()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">5. shift()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>unshift()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">7. slice()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>splice()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">9. sort()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
-<li><p>toSource()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">11. toString()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
-<li><p>toLocalString()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">13. valueOf()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#117;&#x61;&#110;&#109;&#x69;&#110;&#x38;&#56;&#56;&#x38;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#x2e;&#99;&#111;&#109;">&#x79;&#117;&#x61;&#110;&#109;&#x69;&#110;&#x38;&#56;&#56;&#x38;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#x2e;&#99;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.6%20Events%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckhw0oioy000nn7ii7ewxd4ll" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/11.内置对象/2.11.7 RegExp内置对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.7%20RegExp%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.7%20RegExp%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11.7 RegExp内置对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-RegExp对象"><a href="#1-RegExp对象" class="headerlink" title="1. RegExp对象"></a>1. RegExp对象</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><ul>
-<li><p>创建String对象的语法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">#### 2.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[[]]()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 3.Array对象方法</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1. concate()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="2">
-<li><p>join()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">3. pop()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>push()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">5. shift()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>unshift()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">7. slice()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>splice()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">9. sort()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
-<li><p>toSource()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">11. toString()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
-<li><p>toLocalString()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">13. valueOf()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#56;&#56;&#x38;&#64;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#56;&#56;&#x38;&#64;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.7%20RegExp%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckhw0oip1000pn7ii79gnbr75" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/11.内置对象/2.11.8 Date内置对象" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.8%20Date%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
@@ -674,6 +354,840 @@ sudo hwclock --localtime --systohc</code></pre>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-DataBase/MongoDB/Tags/1.1Windows安装MongoDB" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/DataBase/MongoDB/Tags/1.1Windows%E5%AE%89%E8%A3%85MongoDB/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/DataBase/MongoDB/Tags/1.1Windows%E5%AE%89%E8%A3%85MongoDB/">Windows安装MongoDB</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-下载"><a href="#1-下载" class="headerlink" title="1.下载"></a>1.下载</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://www.mongodb.com/">[下载地址]</a></li>
+</ul>
+<h4 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h4><ul>
+<li>常规安装，在此省略；</li>
+</ul>
+<h4 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h4><p>3.1 创建 mongodb 数据库存放目录</p>
+<ul>
+<li><p>数据存放目录： D:\mongodb\data</p>
+</li>
+<li><p>创建配置文件： D:\mongodb\mongodb.config</p>
+</li>
+<li><p>mongodb.config 文件配置内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dbpath=D:\mongodb\data\db</span><br><span class="line">logpath=D:\mongodb\data\<span class="built_in">log</span>\mongodb.log</span><br></pre></td></tr></table></figure>
+
+<p>3.2 创建日志目录</p>
+</li>
+<li><p>创建日志目录： D:\mongodb\data\log</p>
+</li>
+<li><p>创建日志文件：D:\mongodb\data\log\mongodb.log</p>
+<p>3.3 开启服务器</p>
+</li>
+<li><p>方法一</p>
+<p>MongoDB 使用引擎 mmapv1 启动服务器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\Applications\MongoDB\bin&gt;mongod --dbpath D:\mongodb\data\db --storageEngine=mmapv1</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s1.ax1x.com/2020/07/19/U2zqiD.png" alt="[示意图]"></p>
+</li>
+<li><p>方法二</p>
+<p>管理员身份命令行输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --config E:\mongodb\mongodb.config  --install --serviceName <span class="string">&quot;MongoDB&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s1.ax1x.com/2020/07/19/U2zLJe.png" alt="[示意图]"></p>
+</li>
+<li><p>查看配置结果</p>
+</li>
+</ul>
+<p><code>windows</code> + <code>R</code>输入： services.msc 开启服务；</p>
+<h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tutorial/MongoDB%E6%95%99%E7%A8%8B/">[MongoDB 教程]</a></p>
+<h4 id="2、联系方式"><a href="#2、联系方式" class="headerlink" title="2、联系方式"></a>2、联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.1Windows%E5%AE%89%E8%A3%85MongoDB/" data-id="cki0aynnp0003muiidu5raipy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-DataBase/MongoDB/Tags/1.3 .Mongoose建模与关联设置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/DataBase/MongoDB/Tags/1.3%20.Mongoose%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%85%B3%E8%81%94%E8%AE%BE%E7%BD%AE/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/DataBase/MongoDB/Tags/1.3%20.Mongoose%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%85%B3%E8%81%94%E8%AE%BE%E7%BD%AE/">3.Mongoose建模与关联设置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-创建数据库"><a href="#1-创建数据库" class="headerlink" title="1.创建数据库"></a>1.创建数据库</h3><ul>
+<li><p>1.1 创建目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir demo-mongoose_Schema</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.2 安装mongoose</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ yarn init </span><br><span class="line">$ yarn add mongoose</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.3 创建post.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//require mongoode</span></span><br><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"><span class="comment">//connect to mongodb</span></span><br><span class="line">mongoose.connect(<span class="string">&#x27;mongodb://localhost:27017/mongo-relation&#x27;</span>, &#123;</span><br><span class="line">  useNewUrlParser: <span class="literal">true</span>,</span><br><span class="line">  useUnifiedTopology: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.4 创建post模型(Schema)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Post = mongoose.model(<span class="string">&#x27;Post&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    title: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    content: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.5 post 增删改查操作</p>
+<ul>
+<li><p>1.5.1 创建测试函数 和 调用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.5.2 post 插入数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">await</span> Post.insertMany([&#123;</span><br><span class="line">  title: <span class="string">&quot;岳阳楼记&quot;</span>,</span><br><span class="line">  content: <span class="string">&quot;先天下之忧而忧 后天下之乐而乐&quot;</span>,</span><br><span class="line">&#125;, &#123;</span><br><span class="line">  title: <span class="string">&quot;离骚&quot;</span>,</span><br><span class="line">  content: <span class="string">&quot;朝饮木兰之坠露兮 夕餐秋菊之落英&quot;</span>,</span><br><span class="line">&#125;, &#123;</span><br><span class="line">  title: <span class="string">&quot;滕王阁序&quot;</span>,</span><br><span class="line">  content: <span class="string">&quot;落霞与孤鹜齐飞 秋水共长天一色&quot;</span>,</span><br><span class="line">&#125;])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.5.3 post查询数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="keyword">const</span> posts = <span class="keyword">await</span> Post.find()</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="string">``</span></span><br><span class="line"></span><br><span class="line">- <span class="number">1.5</span><span class="number">.4</span> post删除数据</span><br><span class="line"></span><br><span class="line">   <span class="string">``</span><span class="string">`js</span></span><br><span class="line"><span class="string">   await Post.db.dropCollection(&#x27;posts&#x27;)</span></span><br><span class="line"><span class="string">   console.log(posts)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.5.5 post条件查询</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> post1 = <span class="keyword">await</span> Post.findOne(&#123;</span><br><span class="line">  title: <span class="string">&#x27;岳阳楼记&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(post1)</span><br><span class="line"><span class="keyword">const</span> post2 = <span class="keyword">await</span> Post.findOne(&#123;</span><br><span class="line">  title: <span class="string">&#x27;离骚&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(post2)</span><br><span class="line"><span class="keyword">const</span> post3 = <span class="keyword">await</span> Post.findOne(&#123;</span><br><span class="line">  title: <span class="string">&#x27;滕王阁序&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(post3)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.6 创建Category模型(Schema)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Category = mongoose.model(<span class="string">&#x27;Category&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    name: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>1.7 Category 增删改查操作</p>
+<ul>
+<li><p>1.7.1 category 插入数据 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">await</span> Category.insertMany([</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;散文&#x27;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;诗歌&#x27;</span> &#125;</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.7.2 category 查询数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> categories = <span class="keyword">await</span> Category.find()</span><br><span class="line"><span class="built_in">console</span>.log(categories)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.7.3 category 删除数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">await</span> Category.db.dropCollection(<span class="string">&#x27;categories&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.7.4 category 条件查询</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> category1 = <span class="keyword">await</span> Category.findOne(&#123;</span><br><span class="line">  name: <span class="string">&#x27;散文&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// console.log(category1)</span></span><br><span class="line"><span class="keyword">const</span> category2 = <span class="keyword">await</span> Category.findOne(&#123;</span><br><span class="line">  name: <span class="string">&#x27;诗歌&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// console.log(category2)</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-代码汇总"><a href="#2-代码汇总" class="headerlink" title="2. 代码汇总"></a>2. 代码汇总</h3><ul>
+<li><p>源代码</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"></span><br><span class="line">mongoose.connect(<span class="string">&#x27;mongodb://localhost:27017/mongo-relation&#x27;</span>, &#123;</span><br><span class="line">    useNewUrlParser: <span class="literal">true</span>,</span><br><span class="line">    useUnifiedTopology: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//1. category</span></span><br><span class="line"><span class="keyword">const</span> Category = mongoose.model(<span class="string">&#x27;Category&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    name: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. post</span></span><br><span class="line"><span class="keyword">const</span> Post = mongoose.model(<span class="string">&#x27;Post&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    title: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    content: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//1.1 category插入数据</span></span><br><span class="line">    <span class="comment">// await Category.insertMany([</span></span><br><span class="line">    <span class="comment">// 		&#123; name: &#x27;散文&#x27; &#125;,</span></span><br><span class="line">    <span class="comment">// 		&#123; name: &#x27;诗歌&#x27; &#125;</span></span><br><span class="line">    <span class="comment">// ])</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//1.2 category查询数据</span></span><br><span class="line">    <span class="comment">// const categories = await Category.find()</span></span><br><span class="line">    <span class="built_in">console</span>.log(categories)</span><br><span class="line"></span><br><span class="line">    <span class="comment">//1.3 category删除数据</span></span><br><span class="line">    <span class="comment">// await Category.db.dropCollection(&#x27;categories&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// -------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.1 post 插入数据</span></span><br><span class="line">    <span class="comment">// await Post.insertMany([&#123;</span></span><br><span class="line">    <span class="comment">// 		title: &quot;岳阳楼记&quot;,</span></span><br><span class="line">    <span class="comment">// 		content: &quot;先天下之忧而忧 后天下之乐而乐&quot;,</span></span><br><span class="line">    <span class="comment">// &#125;, &#123;</span></span><br><span class="line">    <span class="comment">// 		title: &quot;离骚&quot;,</span></span><br><span class="line">    <span class="comment">// 		content: &quot;朝饮木兰之坠露兮 夕餐秋菊之落英&quot;,</span></span><br><span class="line">    <span class="comment">// &#125;, &#123;</span></span><br><span class="line">    <span class="comment">// 		title: &quot;滕王阁序&quot;,</span></span><br><span class="line">    <span class="comment">// 		content: &quot;落霞与孤鹜齐飞 秋水共长天一色&quot;,</span></span><br><span class="line">    <span class="comment">// &#125;])</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//2.2 post查询数据</span></span><br><span class="line">    <span class="keyword">const</span> posts = <span class="keyword">await</span> Post.find()</span><br><span class="line">    <span class="built_in">console</span>.log(posts)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.3 post删除数据</span></span><br><span class="line">    <span class="comment">// await Post.db.dropCollection(&#x27;posts&#x27;)</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="3-模型关联"><a href="#3-模型关联" class="headerlink" title="3. 模型关联"></a>3. 模型关联</h3><ul>
+<li><p>3.1 关联一对多字段： 对象</p>
+<ul>
+<li><p>关联方式： 一篇文章关联： 分类，而不是分类关联文章；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Post = mongoose.model(<span class="string">&#x27;Post&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    title: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    body: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">  <span class="comment">//1. 关联一对多字段： 对象</span></span><br><span class="line">    category: &#123; <span class="attr">type</span>: mongoose.SchemaTypes.ObjectId, <span class="attr">ref</span>: <span class="string">&#x27;Category&#x27;</span> &#125;,</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3.2 关联多个分类： 数组</p>
+</li>
+<li><p>关联方式： 一篇文章关联： 多个分类，而不是分类关联文章；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">//2. 关联多个分类： 数组</span></span><br><span class="line">categories: [&#123; <span class="attr">type</span>: mongoose.SchemaTypes.ObjectId, <span class="attr">ref</span>: <span class="string">&#x27;Category&#x27;</span> &#125;]</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-关联模型的查询"><a href="#4-关联模型的查询" class="headerlink" title="4.关联模型的查询"></a>4.关联模型的查询</h3><ul>
+<li><p>4.1 一对多查询</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//2.5 一对多设置关联</span></span><br><span class="line">post1.category = category1</span><br><span class="line">post1.save()</span><br><span class="line"><span class="built_in">console</span>.log(post1)</span><br><span class="line"></span><br><span class="line">post2.category = category2</span><br><span class="line">post2.save()</span><br><span class="line"><span class="built_in">console</span>.log(post2)</span><br><span class="line"></span><br><span class="line">post3.category = category1</span><br><span class="line">post3.save()</span><br><span class="line"><span class="built_in">console</span>.log(post3)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>完整代码</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"></span><br><span class="line">mongoose.connect(<span class="string">&#x27;mongodb://localhost:27017/mongo-relation&#x27;</span>, &#123;</span><br><span class="line">    useNewUrlParser: <span class="literal">true</span>,</span><br><span class="line">    useUnifiedTopology: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//1. category</span></span><br><span class="line"><span class="keyword">const</span> Category = mongoose.model(<span class="string">&#x27;Category&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    name: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. post</span></span><br><span class="line"><span class="keyword">const</span> Post = mongoose.model(<span class="string">&#x27;Post&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    title: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    content: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    <span class="comment">//1. 关联一对多字段： 对象</span></span><br><span class="line">    category: &#123; <span class="attr">type</span>: mongoose.SchemaTypes.ObjectId, <span class="attr">ref</span>: <span class="string">&#x27;Category&#x27;</span> &#125;,</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//1.4 category 条件查询</span></span><br><span class="line">    <span class="keyword">const</span> category1 = <span class="keyword">await</span> Category.findOne(&#123;<span class="attr">name</span>: <span class="string">&#x27;散文&#x27;</span>&#125;)</span><br><span class="line">    <span class="keyword">const</span> category2 = <span class="keyword">await</span> Category.findOne(&#123;<span class="attr">name</span>: <span class="string">&#x27;诗歌&#x27;</span>&#125;)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//2.4 post条件查询</span></span><br><span class="line">    <span class="keyword">const</span> post1 = <span class="keyword">await</span> Post.findOne(&#123;<span class="attr">title</span>: <span class="string">&#x27;岳阳楼记&#x27;</span>&#125;)</span><br><span class="line">    <span class="keyword">const</span> post2 = <span class="keyword">await</span> Post.findOne(&#123;<span class="attr">title</span>: <span class="string">&#x27;离骚&#x27;</span>&#125;)</span><br><span class="line">    <span class="keyword">const</span> post3 = <span class="keyword">await</span> Post.findOne(&#123;<span class="attr">title</span>: <span class="string">&#x27;滕王阁序&#x27;</span>&#125;)</span><br><span class="line">  </span><br><span class="line">    <span class="comment">//2.5 一对多设置关联</span></span><br><span class="line">    post1.category = category1</span><br><span class="line">    post1.save()</span><br><span class="line"></span><br><span class="line">    post2.category = category2</span><br><span class="line">    post2.save()</span><br><span class="line">    </span><br><span class="line">    post3.category = category1</span><br><span class="line">    post3.save()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> posts = <span class="keyword">await</span> Post.find().populate(<span class="string">&#x27;category&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(posts)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    _id: <span class="number">5</span>eb643084360c02e14eb5f59,</span><br><span class="line">    title: <span class="string">&#x27;岳阳楼记&#x27;</span>,</span><br><span class="line">    content: <span class="string">&#x27;先天下之忧而忧 后天下之乐而乐&#x27;</span>,</span><br><span class="line">    __v: <span class="number">0</span>,</span><br><span class="line">    category: &#123; <span class="attr">_id</span>: <span class="number">5</span>eb63520cb4fdf34f0386040, <span class="attr">name</span>: <span class="string">&#x27;散文&#x27;</span>, <span class="attr">__v</span>: <span class="number">0</span> &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    _id: <span class="number">5</span>eb643084360c02e14eb5f5a,</span><br><span class="line">    title: <span class="string">&#x27;离骚&#x27;</span>,</span><br><span class="line">    content: <span class="string">&#x27;朝饮木兰之坠露兮 夕餐秋菊之落英&#x27;</span>,</span><br><span class="line">    __v: <span class="number">0</span>,</span><br><span class="line">    category: &#123; <span class="attr">_id</span>: <span class="number">5</span>eb63520cb4fdf34f0386041, <span class="attr">name</span>: <span class="string">&#x27;诗歌&#x27;</span>, <span class="attr">__v</span>: <span class="number">0</span> &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    _id: <span class="number">5</span>eb643084360c02e14eb5f5b,</span><br><span class="line">    title: <span class="string">&#x27;滕王阁序&#x27;</span>,</span><br><span class="line">    content: <span class="string">&#x27;落霞与孤鹜齐飞 秋水共长天一色&#x27;</span>,</span><br><span class="line">    __v: <span class="number">0</span>,</span><br><span class="line">    category: &#123; <span class="attr">_id</span>: <span class="number">5</span>eb63520cb4fdf34f0386040, <span class="attr">name</span>: <span class="string">&#x27;散文&#x27;</span>, <span class="attr">__v</span>: <span class="number">0</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>4.2 多对多查询</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"></span><br><span class="line">mongoose.connect(<span class="string">&#x27;mongodb://localhost:27017/mongo-posts&#x27;</span>, &#123;</span><br><span class="line">    useNewUrlParser: <span class="literal">true</span>,</span><br><span class="line">    useUnifiedTopology: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//1. category</span></span><br><span class="line"><span class="keyword">const</span> Category = mongoose.model(<span class="string">&#x27;Category&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    name: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. post</span></span><br><span class="line"><span class="keyword">const</span> Post = mongoose.model(<span class="string">&#x27;Post&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    title: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    content: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    <span class="comment">//2. 关联多个分类： 数组</span></span><br><span class="line">    categories: [&#123; <span class="attr">type</span>: mongoose.SchemaTypes.ObjectId, <span class="attr">ref</span>: <span class="string">&#x27;Category&#x27;</span> &#125;]</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//1.4 category 条件查询</span></span><br><span class="line">    <span class="keyword">const</span> category1 = <span class="keyword">await</span> Category.findOne(&#123;<span class="attr">name</span>: <span class="string">&#x27;散文&#x27;</span>&#125;)</span><br><span class="line">    <span class="keyword">const</span> category2 = <span class="keyword">await</span> Category.findOne(&#123;<span class="attr">name</span>: <span class="string">&#x27;诗歌&#x27;</span>&#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2.4 post条件查询</span></span><br><span class="line">    <span class="keyword">const</span> post1 = <span class="keyword">await</span> Post.findOne(&#123;<span class="attr">title</span>: <span class="string">&#x27;岳阳楼记&#x27;</span>&#125;)</span><br><span class="line">    <span class="keyword">const</span> post2 = <span class="keyword">await</span> Post.findOne(&#123;<span class="attr">title</span>: <span class="string">&#x27;离骚&#x27;</span>&#125;)</span><br><span class="line">    <span class="keyword">const</span> post3 = <span class="keyword">await</span> Post.findOne(&#123;<span class="attr">title</span>: <span class="string">&#x27;滕王阁序&#x27;</span>&#125;)</span><br><span class="line">  </span><br><span class="line">    <span class="comment">//2.5 多对多设置关联</span></span><br><span class="line">    post1.categories = category1</span><br><span class="line">    post1.save()</span><br><span class="line"></span><br><span class="line">    post2.categories = category2</span><br><span class="line">    post2.save()</span><br><span class="line">        </span><br><span class="line">    post3.categories = [category1, category2]</span><br><span class="line">    post3.save()</span><br><span class="line">    <span class="comment">//查询</span></span><br><span class="line">    <span class="keyword">const</span> posts = <span class="keyword">await</span> Post.find().populate(<span class="string">&#x27;categories&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(posts[<span class="number">0</span>],posts[<span class="number">1</span>],posts[<span class="number">2</span>])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>测试</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">_id</span>: <span class="number">5</span>eb64ad2133f812324f6de5b, <span class="attr">name</span>: <span class="string">&#x27;散文&#x27;</span>, <span class="attr">__v</span>: <span class="number">0</span> &#125;</span><br><span class="line">&#123; <span class="attr">_id</span>: <span class="number">5</span>eb64ad2133f812324f6de5c, <span class="attr">name</span>: <span class="string">&#x27;诗歌&#x27;</span>, <span class="attr">__v</span>: <span class="number">0</span> &#125;</span><br><span class="line">&#123;</span><br><span class="line">  categories: [ <span class="number">5</span>eb64ad2133f812324f6de5b ],</span><br><span class="line">  _id: <span class="number">5</span>eb64a655ef4f1055c462059,</span><br><span class="line">  title: <span class="string">&#x27;岳阳楼记&#x27;</span>,</span><br><span class="line">  content: <span class="string">&#x27;先天下之忧而忧 后天下之乐而乐&#x27;</span>,</span><br><span class="line">  __v: <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  categories: [ <span class="number">5</span>eb64ad2133f812324f6de5c ],</span><br><span class="line">  _id: <span class="number">5</span>eb64a655ef4f1055c46205a,</span><br><span class="line">  title: <span class="string">&#x27;离骚&#x27;</span>,</span><br><span class="line">  content: <span class="string">&#x27;朝饮木兰之坠露兮 夕餐秋菊之落英&#x27;</span>,</span><br><span class="line">  __v: <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  categories: [</span><br><span class="line">    &#123; <span class="attr">_id</span>: <span class="number">5</span>eb64ad2133f812324f6de5b, <span class="attr">name</span>: <span class="string">&#x27;散文&#x27;</span>, <span class="attr">__v</span>: <span class="number">0</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">_id</span>: <span class="number">5</span>eb64ad2133f812324f6de5c, <span class="attr">name</span>: <span class="string">&#x27;诗歌&#x27;</span>, <span class="attr">__v</span>: <span class="number">0</span> &#125;</span><br><span class="line">  ],</span><br><span class="line">  _id: <span class="number">5</span>eb64a655ef4f1055c46205b,</span><br><span class="line">  title: <span class="string">&#x27;滕王阁序&#x27;</span>,</span><br><span class="line">  content: <span class="string">&#x27;落霞与孤鹜齐飞 秋水共长天一色&#x27;</span>,</span><br><span class="line">  __v: <span class="number">3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-从被关联模型中查询关联模型"><a href="#5-从被关联模型中查询关联模型" class="headerlink" title="5. 从被关联模型中查询关联模型"></a>5. 从被关联模型中查询关联模型</h3><ul>
+<li><p>5.1 定义虚拟字段</p>
+<ul>
+<li><p>指定关联模型</p>
+</li>
+<li><p>指定本地模型的id字段</p>
+</li>
+<li><p>定义外键： Post的categories字段</p>
+</li>
+<li><p>justOne: false, 查询多条数据</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> CategorySchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    name: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;</span><br><span class="line">&#125;)</span><br><span class="line">CategorySchema.virtual(<span class="string">&#x27;posts&#x27;</span>, &#123;  <span class="comment">// 定义虚拟字段</span></span><br><span class="line">  ref: <span class="string">&#x27;Post&#x27;</span>,                      <span class="comment">// 关联的模型</span></span><br><span class="line">  localField: <span class="string">&#x27;_id&#x27;</span>,                <span class="comment">// 内键，Category模型的id字段</span></span><br><span class="line">  foreignField: <span class="string">&#x27;categories&#x27;</span>,       <span class="comment">// 外键，关联模型的category字段</span></span><br><span class="line">  justOne: <span class="literal">false</span>                    <span class="comment">// 不是只查询一条数据</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//1. category</span></span><br><span class="line"><span class="keyword">const</span> Category = mongoose.model(<span class="string">&#x27;Category&#x27;</span>, CategorySchema)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>5.2 查询关联模型</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> categories = <span class="keyword">await</span> Category.find().populate(<span class="string">&#x27;posts&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(categories[<span class="number">0</span>].posts)</span><br><span class="line">    <span class="built_in">console</span>.log(categories[<span class="number">1</span>].posts)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="6-源码汇总"><a href="#6-源码汇总" class="headerlink" title="6. 源码汇总"></a>6. 源码汇总</h3><ul>
+<li><p>源代码</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"></span><br><span class="line">mongoose.connect(<span class="string">&#x27;mongodb://localhost:27017/mongo-posts&#x27;</span>, &#123;</span><br><span class="line">    useNewUrlParser: <span class="literal">true</span>,</span><br><span class="line">    useUnifiedTopology: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> CategorySchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    name: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;</span><br><span class="line">&#125;)</span><br><span class="line">CategorySchema.virtual(<span class="string">&#x27;posts&#x27;</span>, &#123;  <span class="comment">// 定义虚拟字段</span></span><br><span class="line">  ref: <span class="string">&#x27;Post&#x27;</span>,                      <span class="comment">// 关联的模型</span></span><br><span class="line">  localField: <span class="string">&#x27;_id&#x27;</span>,                <span class="comment">// 内键，Category模型的id字段</span></span><br><span class="line">  foreignField: <span class="string">&#x27;categories&#x27;</span>,       <span class="comment">// 外键，关联模型的category字段</span></span><br><span class="line">  justOne: <span class="literal">false</span>                    <span class="comment">// 不是只查询一条数据</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//1. category</span></span><br><span class="line"><span class="keyword">const</span> Category = mongoose.model(<span class="string">&#x27;Category&#x27;</span>, CategorySchema)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. post</span></span><br><span class="line"><span class="keyword">const</span> Post = mongoose.model(<span class="string">&#x27;Post&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    title: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    content: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    <span class="comment">//2. 关联多个分类： 数组</span></span><br><span class="line">    categories: [&#123; <span class="attr">type</span>: mongoose.SchemaTypes.ObjectId, <span class="attr">ref</span>: <span class="string">&#x27;Category&#x27;</span> &#125;]</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> categories = <span class="keyword">await</span> Category.find().populate(<span class="string">&#x27;posts&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(categories[<span class="number">0</span>].posts)</span><br><span class="line">    <span class="built_in">console</span>.log(categories[<span class="number">1</span>].posts)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tutorial/MongoDB%E6%95%99%E7%A8%8B/">[MongoDB 教程]</a></p>
+<h3 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.3%20.Mongoose%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%85%B3%E8%81%94%E8%AE%BE%E7%BD%AE/" data-id="cki0aynnr0004muii4x1zhr5a" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-DataBase/MongoDB/Tags/1.2 Mongodb安装为32位windows服务" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/DataBase/MongoDB/Tags/1.2%20Mongodb%E5%AE%89%E8%A3%85%E4%B8%BA32%E4%BD%8Dwindows%E6%9C%8D%E5%8A%A1/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/DataBase/MongoDB/Tags/1.2%20Mongodb%E5%AE%89%E8%A3%85%E4%B8%BA32%E4%BD%8Dwindows%E6%9C%8D%E5%8A%A1/">Mongodb安装为32位windows服务</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-创建安装目录"><a href="#1-创建安装目录" class="headerlink" title="1. 创建安装目录"></a>1. 创建安装目录</h4><ul>
+<li><p>创建db目录：F:\mongodb\data\db</p>
+</li>
+<li><p>创建log目录: F:\mongodb\data\log\</p>
+</li>
+</ul>
+<h5 id="mongoDB-bin-目录"><a href="#mongoDB-bin-目录" class="headerlink" title="mongoDB/bin/目录"></a>mongoDB/bin/目录</h5><ul>
+<li><p>启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; mongod --dbpath F:\mongodb\data\db --storageEngine=mmapv1</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="配置：-将MongoDB安装为windows服务"><a href="#配置：-将MongoDB安装为windows服务" class="headerlink" title="配置： 将MongoDB安装为windows服务"></a>配置： 将MongoDB安装为windows服务</h4><ul>
+<li><p>新建mongod.cfg文件，放在mongodb安装文件的bin目录下，内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">port=27017</span><br><span class="line">journal=<span class="literal">true</span></span><br><span class="line">logappend=<span class="literal">true</span></span><br><span class="line">storageEngine=mmapv1</span><br><span class="line">dbpath=F:\mongodb\data\db</span><br><span class="line">logpath=F:\mongodb\data\<span class="built_in">log</span>\mongodb.log</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>管理员身份</code>打开cmd命令行，进入MongoDB安装目录的 bin目录：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin&gt;mongod --config <span class="string">&quot;C:\mongodb\mongodb.config&quot;</span>  --install --serviceName <span class="string">&quot;MongoDB&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>如图结果存放在日志文件中，查看日志发现已经成功。如果失败有可能没有使用管理员身份，遭到拒绝访问</p>
+<h4 id="启动mongodb服务"><a href="#启动mongodb服务" class="headerlink" title="启动mongodb服务"></a>启动mongodb服务</h4><ul>
+<li><p>启动windows服务</p>
+</li>
+<li><p>打开cmd输入<code>services.msc</code>，点击启动,查看服务可以看到MongoDB服务;</p>
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/DataBase/MongoDB/Tutorial/MongoDB%E6%95%99%E7%A8%8B/">[1. MongoDB教程]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.2%20Mongodb%E5%AE%89%E8%A3%85%E4%B8%BA32%E4%BD%8Dwindows%E6%9C%8D%E5%8A%A1/" data-id="cki0aynnt0007muiiea9c9lfi" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Tags/Express/Tags/01.创建Express 服务器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Node/Tags/Express/Tags/01.%E5%88%9B%E5%BB%BAExpress%20%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Node/Tags/Express/Tags/01.%E5%88%9B%E5%BB%BAExpress%20%E6%9C%8D%E5%8A%A1%E5%99%A8/">01.创建Express服务器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-安装服务器：-server-js"><a href="#1-安装服务器：-server-js" class="headerlink" title="1. 安装服务器： server.js"></a>1. 安装服务器： server.js</h4><ul>
+<li><p>创建项目目录: <code>linux</code>示范</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">touch server</span><br><span class="line"><span class="built_in">cd</span> server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装： <code>express</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express</span><br></pre></td></tr></table></figure></li>
+<li><p>根目录创建目录： routes，controls，models， configs，public，views，static</p>
+</li>
+<li><p>根目录创建文件： server.js， route.js</p>
+</li>
+</ul>
+<h4 id="2-配置服务器"><a href="#2-配置服务器" class="headerlink" title="2.配置服务器"></a>2.配置服务器</h4><ul>
+<li><p>server.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 引入express安装包</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. 创建服务</span></span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">//3. 配置服务器端口</span></span><br><span class="line"><span class="keyword">const</span> port = process.env.NODE_ENV || <span class="number">3000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//4. 监听端口： localhost:3000</span></span><br><span class="line">app.listen(port,<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(<span class="string">`Express Server is running at port:http://localhost:<span class="subst">$&#123;port&#125;</span>!...`</span>))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置静态资源</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 引入path包</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. 配置静态资源</span></span><br><span class="line">app.use(express.static(path.join(__dirname,<span class="string">&#x27;/public&#x27;</span>)))</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/Node/Express/Tutorials/Express%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B/">[1.Express服务器教程]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/Tags/01.%E5%88%9B%E5%BB%BAExpress%20%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="cki0aynoe000pmuii2zxyg6jq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Tags/Express/Tags/1。 Express服务器教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Node/Tags/Express/Tags/1%E3%80%82%20Express%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Node/">Node</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Node/Tags/Express/Tags/1%E3%80%82%20Express%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B/">1.Express服务器教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-安装服务器：-server-js"><a href="#1-安装服务器：-server-js" class="headerlink" title="1. 安装服务器： server.js"></a>1. 安装服务器： server.js</h4><ul>
+<li><p>创建项目目录: <code>linux</code>示范</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">touch server</span><br><span class="line"><span class="built_in">cd</span> server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装： <code>express</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express</span><br></pre></td></tr></table></figure></li>
+<li><p>根目录创建目录： routes，controls，models， configs，public，views，static</p>
+</li>
+<li><p>根目录创建文件： server.js， route.js</p>
+</li>
+</ul>
+<h4 id="2-配置服务器"><a href="#2-配置服务器" class="headerlink" title="2.配置服务器"></a>2.配置服务器</h4><ul>
+<li><p>server.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 引入express安装包</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. 创建服务</span></span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">//3. 配置服务器端口</span></span><br><span class="line"><span class="keyword">const</span> port = process.env.NODE_ENV || <span class="number">3000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//4. 监听端口： localhost:3000</span></span><br><span class="line">app.listen(port,<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(<span class="string">`Express Server is running at port:http://localhost:<span class="subst">$&#123;port&#125;</span>!...`</span>))</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-路由"><a href="#2-路由" class="headerlink" title="2.路由"></a>2.路由</h4><ul>
+<li><p>配置路由</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> routes = <span class="built_in">require</span>(<span class="string">&#x27;./config/routes&#x27;</span>)</span><br><span class="line">routes(app)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-静态资源"><a href="#3-静态资源" class="headerlink" title="3.静态资源"></a>3.静态资源</h4><ul>
+<li><p>配置静态资源</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 引入path包</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. 配置静态资源</span></span><br><span class="line">app.use(express.static(path.join(__dirname,<span class="string">&#x27;/public&#x27;</span>)))</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-配置模板引擎：jade-js"><a href="#4-配置模板引擎：jade-js" class="headerlink" title="4. 配置模板引擎：jade.js"></a>4. 配置模板引擎：jade.js</h4><ul>
+<li>安装：<code> jade</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 引入jade包</span></span><br><span class="line"><span class="keyword">const</span> jade=<span class="built_in">require</span>(<span class="string">&quot;jade&quot;</span>);   </span><br><span class="line"></span><br><span class="line"><span class="comment">//2. 设置默认的模板引擎</span></span><br><span class="line">app.set(<span class="string">&quot;view engine&quot;</span>,<span class="string">&quot;jade&quot;</span>);   </span><br><span class="line"></span><br><span class="line"><span class="comment">//3. 定义模板引擎</span></span><br><span class="line">app.engine(<span class="string">&#x27;jade&#x27;</span>, jade.__express);     </span><br></pre></td></tr></table></figure>
+
+<h4 id="5-配置视图的对应目录"><a href="#5-配置视图的对应目录" class="headerlink" title="5.配置视图的对应目录"></a>5.配置视图的对应目录</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.set(<span class="string">&#x27;views&#x27;</span>,path.join(__dirname,<span class="string">&#x27;/views&#x27;</span>))    </span><br></pre></td></tr></table></figure>
+
+<h4 id="6-配置post请求解析"><a href="#6-配置post请求解析" class="headerlink" title="6. 配置post请求解析"></a>6. 配置post请求解析</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.use(express.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;))</span><br><span class="line">app.use(express.json())</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-安装-配置multiparty中间件：解析文件"><a href="#7-安装-配置multiparty中间件：解析文件" class="headerlink" title="7. 安装/配置multiparty中间件：解析文件"></a>7. 安装/配置multiparty中间件：解析文件</h4><ul>
+<li><p>multiparty可以设置上传文件的保存路径、限制文件的大小…</p>
+</li>
+<li><p>对于涉及文件上传的表单，必须设置<form enctype="multipart/form-data"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> multipart = <span class="built_in">require</span>(<span class="string">&#x27;connect-multiparty&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> multipartMiddleware = multipart();</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">&#x27;/&#x27;</span>, multipartMiddleware, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> res.json(&#123;</span><br><span class="line">    data:req.files</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="8-配置mongoose链接"><a href="#8-配置mongoose链接" class="headerlink" title="8. 配置mongoose链接"></a>8. 配置mongoose链接</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> connect = <span class="built_in">require</span>(<span class="string">&#x27;./config/connect&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="9-安装-配置cookies-key-value"><a href="#9-安装-配置cookies-key-value" class="headerlink" title="9. 安装/配置cookies: (key/value)"></a>9. 安装/配置cookies: (key/value)</h4><ul>
+<li><p>详见： Cookies 安装与配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> cookieParser=<span class="built_in">require</span>(<span class="string">&quot;cookie-parser&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> session = <span class="built_in">require</span>(<span class="string">&#x27;express-session&#x27;</span>)</span><br><span class="line"></span><br><span class="line">app.use(cookieParser())</span><br><span class="line"></span><br><span class="line">app.use(session(&#123;</span><br><span class="line">  cookieName: <span class="string">&#x27;session&#x27;</span>,</span><br><span class="line">  secret: <span class="string">&#x27;random_string_goes_here&#x27;</span>,</span><br><span class="line">  duration: <span class="number">30</span> * <span class="number">60</span> * <span class="number">1000</span>,</span><br><span class="line">  activeDuration: <span class="number">5</span> * <span class="number">60</span> * <span class="number">1000</span>,</span><br><span class="line">&#125;))  </span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="10-安装-配置express-session-connect-mongo"><a href="#10-安装-配置express-session-connect-mongo" class="headerlink" title="10. 安装 / 配置express-session / connect-mongo"></a>10. 安装 / 配置express-session / connect-mongo</h4><ul>
+<li><p>session</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> session = <span class="built_in">require</span>(<span class="string">&#x27;express-session&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> MongoStore = <span class="built_in">require</span>(<span class="string">&#x27;connect-mongo&#x27;</span>)(session)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 一、配置方案</span></span><br><span class="line">app.use(session(&#123;</span><br><span class="line">  <span class="comment">//1.服务器生成session的签名，可以是任意字符串，用于加密</span></span><br><span class="line">  secret:<span class="string">&#x27;1234&#x27;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">//2.强制保存session，即使没有变化，默认值为true  </span></span><br><span class="line">  resave:<span class="literal">false</span>, </span><br><span class="line"></span><br><span class="line">  <span class="comment">//3.强制将未初始化的session存储，默认为true    </span></span><br><span class="line">  saveUninitialized:<span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">//4.设置cookie，maxAge、path、domain...  </span></span><br><span class="line">  cookie: &#123; <span class="attr">maxAge</span>:<span class="number">1000</span>*<span class="number">60</span>*<span class="number">30</span> &#125;, </span><br><span class="line"></span><br><span class="line">  <span class="comment">//5. 默认false，每次请求时强行设置cookie，这将会重置cookie过期时间 </span></span><br><span class="line">  rooling:<span class="literal">true</span>,                   </span><br><span class="line">  store:<span class="keyword">new</span> MongoStore(&#123;</span><br><span class="line">    <span class="comment">//6. 数据库地址</span></span><br><span class="line">    url: <span class="string">&#x27;mongodb://127.0.0.1:27017/student&#x27;</span>,  </span><br><span class="line">    touchAfter: <span class="number">24</span>*<span class="number">3600</span>,   </span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)) </span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="11-跨域"><a href="#11-跨域" class="headerlink" title="11. 跨域"></a>11. 跨域</h4><ul>
+<li><p>Cors插件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;cors&#x27;</span>)()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="12-参考文档"><a href="#12-参考文档" class="headerlink" title="12.参考文档"></a>12.参考文档</h4><p><a href="">[]</a></p>
+<h4 id="13-联系方式"><a href="#13-联系方式" class="headerlink" title="13. 联系方式"></a>13. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/Tags/1%E3%80%82%20Express%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B/" data-id="cki0aynoh000tmuiigahwh3j7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Tags/Express/Tags/2.1  Express创建项目目录" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Node/Tags/Express/Tags/2.1%20%20Express%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Node/Tags/Express/Tags/2.1%20%20Express%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95/">2.1  Express创建项目目录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-项目分析"><a href="#1-项目分析" class="headerlink" title="1. 项目分析"></a>1. 项目分析</h3><h4 id="1-创建项目根目录"><a href="#1-创建项目根目录" class="headerlink" title="1. 创建项目根目录"></a>1. 创建项目根目录</h4><ul>
+<li><p>server目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir server </span><br><span class="line"><span class="built_in">cd</span> server</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-创将服务器入口文件"><a href="#2-创将服务器入口文件" class="headerlink" title="2. 创将服务器入口文件"></a>2. 创将服务器入口文件</h4><ul>
+<li><p>app.js文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &gt; app.js</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-项目初始化"><a href="#3-项目初始化" class="headerlink" title="3. 项目初始化"></a>3. 项目初始化</h4><ul>
+<li><p>初始化： 按提示完成提交文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init </span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-安装express框架"><a href="#4-安装express框架" class="headerlink" title="4. 安装express框架"></a>4. 安装express框架</h4><ul>
+<li><p>项目安装express</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-创建项目配置目录"><a href="#5-创建项目配置目录" class="headerlink" title="5. 创建项目配置目录"></a>5. 创建项目配置目录</h4><ul>
+<li><p>Config目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir config</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="6-创建路由目录"><a href="#6-创建路由目录" class="headerlink" title=".6 创建路由目录"></a>.6 创建路由目录</h4><ul>
+<li><p>Routes目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir routes</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="7-创建静态资源目录"><a href="#7-创建静态资源目录" class="headerlink" title="7. 创建静态资源目录"></a>7. 创建静态资源目录</h4><ul>
+<li><p>Public目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir public</span><br><span class="line"><span class="built_in">cd</span> public</span><br><span class="line">mkdir css js imgs</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="8-创建Views目录"><a href="#8-创建Views目录" class="headerlink" title="8. 创建Views目录"></a>8. 创建Views目录</h4><ul>
+<li><p>Views目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir Views</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="9-创建数据库操作目录"><a href="#9-创建数据库操作目录" class="headerlink" title="9. 创建数据库操作目录"></a>9. 创建数据库操作目录</h4><ul>
+<li><p>Models目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir models</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a href="">[express教程]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email：<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#117;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/Tags/2.1%20%20Express%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95/" data-id="cki0aynom000vmuii5no19pxf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Tags/Express/Tags/2.2 Express创建服务器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Node/Tags/Express/Tags/2.2%20Express%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Node/Tags/Express/Tags/2.2%20Express%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/">2.2 Express创建服务器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-项目分析"><a href="#1-项目分析" class="headerlink" title="1.项目分析"></a>1.项目分析</h3><h4 id="1-创建服务器"><a href="#1-创建服务器" class="headerlink" title="1. 创建服务器"></a>1. 创建服务器</h4><ul>
+<li><p>app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 引入express框架</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.create Server</span></span><br><span class="line"><span class="keyword">const</span> app = express()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-设置监听端口"><a href="#2-设置监听端口" class="headerlink" title="2. 设置监听端口"></a>2. 设置监听端口</h4><ul>
+<li><p>app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//3. 设置端口</span></span><br><span class="line"><span class="keyword">const</span> port = process.env.NODE_ENV || <span class="number">3000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//4. 监听端口</span></span><br><span class="line">app.listen(port,<span class="function">() =&gt;</span> <span class="built_in">console</span>.log(<span class="string">`Express Server is running at port:http://localhost:<span class="subst">$&#123;port&#125;</span>!...`</span>))</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-设置post解析"><a href="#3-设置post解析" class="headerlink" title="3. 设置post解析"></a>3. 设置post解析</h4><ul>
+<li><p>app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//5. post parser plugin:parser application /x-www-form-urlencoded</span></span><br><span class="line">app.use(express.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;))</span><br><span class="line"><span class="comment">//6. post parser plugin： application / json</span></span><br><span class="line">app.use(express.json())</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a href="">[express教程]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#117;&#97;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#x63;&#111;&#x6d;">&#x79;&#117;&#97;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#x63;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/Tags/2.2%20Express%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="cki0aynoo000wmuiihuqh5bva" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Tags/Express/Tags/2.3 Express构建模块化路由" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Node/Tags/Express/Tags/2.3%20Express%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E8%B7%AF%E7%94%B1/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Node/Tags/Express/Tags/2.3%20Express%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E8%B7%AF%E7%94%B1/">2.3 Express构建模块化路由</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-项目分析"><a href="#1-项目分析" class="headerlink" title="1.项目分析"></a>1.项目分析</h3><h4 id="1-创建服务器"><a href="#1-创建服务器" class="headerlink" title="1. 创建服务器"></a>1. 创建服务器</h4><ul>
+<li><p>app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//7.load router to Router container</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;./config/route&#x27;</span>)(app)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-配置路由"><a href="#2-配置路由" class="headerlink" title="2. 配置路由"></a>2. 配置路由</h4><ol>
+<li>Config目录</li>
+</ol>
+<ul>
+<li><p>创建route.js</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir route.js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>route.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> index = <span class="built_in">require</span>(<span class="string">&#x27;../routes/index&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> users = <span class="built_in">require</span>(<span class="string">&#x27;../routes/users&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">app</span>)=&gt;</span>&#123;</span><br><span class="line">  app.use(<span class="string">&#x27;/&#x27;</span>,index)</span><br><span class="line">  app.use(<span class="string">&#x27;/api/users&#x27;</span>,users)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="2">
+<li>Routes目录</li>
+</ol>
+<ul>
+<li><p>创建<code>index.js 和 user.js</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir index.js user.js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>index.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. import express</span></span><br><span class="line"><span class="keyword">const</span> express= <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. create route</span></span><br><span class="line"><span class="keyword">const</span> router = express.Router()</span><br><span class="line"></span><br><span class="line"><span class="comment">//4.配置路由</span></span><br><span class="line">router.get(<span class="string">&#x27;/&#x27;</span>,<span class="function">(<span class="params">req,res,next</span>)=&gt;</span>&#123;</span><br><span class="line">  res.render(<span class="string">&#x27;index.html&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//3. exports router</span></span><br><span class="line"><span class="built_in">module</span>.exports = router</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>user.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. import express</span></span><br><span class="line"><span class="keyword">const</span> express= <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. create route</span></span><br><span class="line"><span class="keyword">const</span> router = express.Router()</span><br><span class="line"></span><br><span class="line"><span class="comment">//4.配置路由</span></span><br><span class="line">router.get(<span class="string">&#x27;/register&#x27;</span>,<span class="function">(<span class="params">req,res,next</span>)=&gt;</span>&#123;</span><br><span class="line">  res.render(<span class="string">&#x27;register.html&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">&#x27;/login&#x27;</span>,<span class="function">(<span class="params">req,res,next</span>)=&gt;</span>&#123;</span><br><span class="line">  res.render(<span class="string">&#x27;login.html&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//3. exports router</span></span><br><span class="line"><span class="built_in">module</span>.exports = router</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-配置Views文件"><a href="#5-配置Views文件" class="headerlink" title="5. 配置Views文件"></a>5. 配置Views文件</h4><ul>
+<li><p>app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//5.express static resource: views</span></span><br><span class="line">app.set(<span class="string">&#x27;views&#x27;</span>,path.join(__dirname,<span class="string">&#x27;/views&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="6-创建HTML文件"><a href="#6-创建HTML文件" class="headerlink" title="6. 创建HTML文件"></a>6. 创建HTML文件</h4><ol>
+<li>Views目录分别创建</li>
+</ol>
+<ul>
+<li><p>index.html</p>
+</li>
+<li><p>register.html</p>
+</li>
+<li><p>login.html</p>
+</li>
+</ul>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a href="">[express教程]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#56;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#111;&#x6b;&#x2e;&#x63;&#111;&#109;">&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#56;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#111;&#x6b;&#x2e;&#x63;&#111;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/Tags/2.3%20Express%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E8%B7%AF%E7%94%B1/" data-id="cki0aynoq000ymuii1h26a8xm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Tags/Express/Tags/2.4  Express配置静态资源" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Node/Tags/Express/Tags/2.4%20%20Express%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Node/Tags/Express/Tags/2.4%20%20Express%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/">2.3 Express配置路由</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-项目分析"><a href="#1-项目分析" class="headerlink" title="1.项目分析"></a>1.项目分析</h3><h4 id="1-配置静态资源"><a href="#1-配置静态资源" class="headerlink" title="1. 配置静态资源"></a>1. 配置静态资源</h4><ul>
+<li><p>app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//7.引入`Node path`路经包</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="comment">//8.open express static resource </span></span><br><span class="line">app.use(express.static(path.join(__dirname,<span class="string">&#x27;/public&#x27;</span>)))</span><br></pre></td></tr></table></figure>
+<h4 id="6-创建静态资源文件"><a href="#6-创建静态资源文件" class="headerlink" title="6. 创建静态资源文件"></a>6. 创建静态资源文件</h4></li>
+</ul>
+<ol>
+<li>Public/css目录创建</li>
+</ol>
+<ul>
+<li>index.css</li>
+</ul>
+<ol start="2">
+<li>Public/js目录创建</li>
+</ol>
+<ul>
+<li>index.js</li>
+</ul>
+<p>3.Public/imgs目录添加 </p>
+<ul>
+<li><p>favicon.ico</p>
+</li>
+<li><p>background.jpg</p>
+</li>
+</ul>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a href="">[express教程]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#46;&#99;&#x6f;&#x6d;">&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#46;&#99;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/Tags/2.4%20%20Express%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/" data-id="cki0aynow0012muiicgwgf419" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Tags/Express/Tags/2.5 配置mongoose链接" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Node/Tags/Express/Tags/2.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Node/Tags/Express/Tags/2.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/">2.5 配置Mongoose链接</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-项目分析"><a href="#1-项目分析" class="headerlink" title="1.项目分析"></a>1.项目分析</h3><h4 id="1-入口文件引入connect-js文件"><a href="#1-入口文件引入connect-js文件" class="headerlink" title="1. 入口文件引入connect.js文件"></a>1. 入口文件引入connect.js文件</h4><ul>
+<li><p>app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> connect = <span class="built_in">require</span>(<span class="string">&#x27;/config/connect&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-链接MongooDB"><a href="#2-链接MongooDB" class="headerlink" title="2. 链接MongooDB"></a>2. 链接MongooDB</h4><ol>
+<li>Config目录</li>
+</ol>
+<ul>
+<li><p>connect.js文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.import mongoose module</span></span><br><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.connect to mongoDB</span></span><br><span class="line">mongoose.connect(<span class="string">&#x27;mongodb://localhost:27017/blog&#x27;</span>,</span><br><span class="line">                &#123;<span class="attr">useUnifiedTopology</span>:<span class="literal">true</span>,<span class="attr">useNewUrlParser</span>:<span class="literal">true</span>&#125;)</span><br><span class="line">                .then(<span class="function">()=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;Success connecting to MongoDB!&#x27;</span>)&#125;)</span><br><span class="line">                .catch(<span class="function">()=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;Failed to connect MongoDB!&#x27;</span>)&#125;)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a href="">[express教程]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#110;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#x63;&#111;&#109;">&#x79;&#x75;&#97;&#110;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#x63;&#111;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/Tags/2.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/" data-id="cki0aynoy0013muii57vlbbg8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
 
     </footer>
   </div>
@@ -1148,270 +1662,11 @@ sudo hwclock --localtime --systohc</code></pre>
 
 
   
-    <article id="post-Git/Remote Repostories/Git远程仓库管理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Remote%20Repostories/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Remote%20Repostories/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">Git远程仓库管理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Github-SSH-仓库地址"><a href="#1-Github-SSH-仓库地址" class="headerlink" title="1. Github SSH 仓库地址"></a>1. Github SSH 仓库地址</h4><ul>
-<li><p>地址组成</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git@github.com:web-oyster/html-elements.git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#109;">&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#109;</a>： git 网址</p>
-</li>
-<li><p>web-oyster： github 账号</p>
-</li>
-<li><p>html-elements： github 远程仓库名</p>
-</li>
-</ul>
-<h4 id="2-创建远程仓库关联"><a href="#2-创建远程仓库关联" class="headerlink" title="2. 创建远程仓库关联"></a>2. 创建远程仓库关联</h4><ul>
-<li><p>git 初始化本地仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建远程仓库</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[快速创建 Github 远程仓库]</a></p>
-<ul>
-<li><p>第一次提交：关联远程仓库地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:&lt;github账号&gt;/&lt;github远程仓库名&gt;.git</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>第二次提交</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>参考文档</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[快速创建 Github 远程仓库]</a></p>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Remote%20Repostories/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/" data-id="ckhuajght0021woii7iywf161" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git/Tutorial/Git教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Git/">Git</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">Git教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Git-创建与管理本地仓库"><a href="#1-Git-创建与管理本地仓库" class="headerlink" title="1. Git 创建与管理本地仓库"></a>1. Git 创建与管理本地仓库</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">[1. Git 创建与管理本地仓库]</a></p>
-<h4 id="2-快速创建-Github-远程仓库"><a href="#2-快速创建-Github-远程仓库" class="headerlink" title="2.快速创建 Github 远程仓库"></a>2.快速创建 Github 远程仓库</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[2.快速创建 Github 远程仓库]</a></p>
-<h4 id="3-Git-远程仓库管理"><a href="#3-Git-远程仓库管理" class="headerlink" title="3.Git 远程仓库管理"></a>3.Git 远程仓库管理</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Remote%20Repostories/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">[Git 远程仓库管理]</a></p>
-<h4 id="4-Git-command-操作命令"><a href="#4-Git-command-操作命令" class="headerlink" title="4.Git command 操作命令"></a>4.Git command 操作命令</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Local%20Repostories/Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/">[Git command 操作命令]</a></p>
-<h4 id="5-Git日志与回退版本号"><a href="#5-Git日志与回退版本号" class="headerlink" title="5.Git日志与回退版本号"></a>5.Git日志与回退版本号</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/">[Git日志与回退版本号]</a></p>
-<h4 id="6-Git本地仓库设置签名"><a href="#6-Git本地仓库设置签名" class="headerlink" title="6.Git本地仓库设置签名"></a>6.Git本地仓库设置签名</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/">[Git本地仓库设置签名]</a></p>
-<h4 id="7-联系方式"><a href="#7-联系方式" class="headerlink" title="7. 联系方式"></a>7. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/" data-id="ckhuajghv0024woiiatzrafm4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Java/Tutorial/Java基础教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Java/Tutorial/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Java/Tutorial/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">1.Java教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[1.]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Java/Tutorial/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" data-id="ckhuajgie002hwoii3dcq9u3g" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Linux/Tutorial/Ubuntu教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Linux/Tutorial/Ubuntu%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Ubuntu/">Ubuntu</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Linux/Tutorial/Ubuntu%E6%95%99%E7%A8%8B/">1.Ubuntu教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/Linux/Ubuntu/1.Ubuntu20.04%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/">[1.Ubuntu20.04系统安装]</a></p>
-<h4 id="2-Ubuntu-系统及应用软件安装与配置"><a href="#2-Ubuntu-系统及应用软件安装与配置" class="headerlink" title="2. Ubuntu 系统及应用软件安装与配置"></a>2. Ubuntu 系统及应用软件安装与配置</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Linux/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E6%95%99%E7%A8%8B/" data-id="ckhuajgiv0032woiiaml4fw75" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Linux/Tutorial/Ubuntu系统及应用软件安装与配置" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Ubuntu/">Ubuntu</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">2.Ubuntu系统及应用软件安装与配置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Ubuntu20-04系统安装"><a href="#1-Ubuntu20-04系统安装" class="headerlink" title="1. Ubuntu20.04系统安装"></a>1. Ubuntu20.04系统安装</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Linux/Ubuntu/1.Ubuntu20.04%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/">[1. Ubuntu20.04系统安装]</a></p>
-<h4 id="2-Ubuntu20-04配置国内镜像源"><a href="#2-Ubuntu20-04配置国内镜像源" class="headerlink" title="2. Ubuntu20.04配置国内镜像源"></a>2. Ubuntu20.04配置国内镜像源</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Linux/Ubuntu/2.Ubuntu20.04%E9%85%8D%E7%BD%AE%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%BA%90/">[2. Ubuntu20.04配置国内镜像源]</a></p>
-<h4 id="3-Ubuntu20-04-安装与配置-Node"><a href="#3-Ubuntu20-04-安装与配置-Node" class="headerlink" title="3. Ubuntu20.04 安装与配置 Node"></a>3. Ubuntu20.04 安装与配置 Node</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Linux/Ubuntu/3.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/">[3.Ubuntu20.04 安装与配置 Node]</a></p>
-<h4 id="4-Ubuntu20-04-安装与配置-Nvm"><a href="#4-Ubuntu20-04-安装与配置-Nvm" class="headerlink" title="4.Ubuntu20.04 安装与配置 Nvm"></a>4.Ubuntu20.04 安装与配置 Nvm</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Linux/Ubuntu/4.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/">[4.Ubuntu20.04 安装与配置 Nvm]</a></p>
-<h4 id="5-Ubuntu20-04安装第三方软件"><a href="#5-Ubuntu20-04安装第三方软件" class="headerlink" title="5.Ubuntu20.04安装第三方软件"></a>5.Ubuntu20.04安装第三方软件</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Linux/Ubuntu/5.Ubuntu20.04%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BD%AF%E4%BB%B6/">[5.Ubuntu20.04安装第三方软件]</a></p>
-<h4 id="6-Ubuntu20-04安装MongoDB"><a href="#6-Ubuntu20-04安装MongoDB" class="headerlink" title="6.Ubuntu20.04安装MongoDB"></a>6.Ubuntu20.04安装MongoDB</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Linux/Ubuntu/6.Ubuntu20.04%E5%AE%89%E8%A3%85MongoDB/">[6.Ubuntu20.04安装MongoDB]</a></p>
-<h4 id="7-Ubuntu20-04安装VS-Code"><a href="#7-Ubuntu20-04安装VS-Code" class="headerlink" title="7.Ubuntu20.04安装VS Code"></a>7.Ubuntu20.04安装VS Code</h4><p><a href="https://weboyster.github.io/2020/10/23/Linux/Ubuntu/7.Ubuntu20.04%E5%AE%89%E8%A3%85VS%20Code/">[7.Ubuntu20.04安装VS Code]</a></p>
-<h4 id="8-Ubuntu20-04安装与配置WPS"><a href="#8-Ubuntu20-04安装与配置WPS" class="headerlink" title="8.Ubuntu20.04安装与配置WPS"></a>8.Ubuntu20.04安装与配置WPS</h4><p><a href="https://weboyster.github.io/2020/10/23/Linux/Ubuntu/8.Ubuntu20.04%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AEWPS/">[8.Ubuntu20.04安装与配置WPS]</a></p>
-<h4 id="9-Ubuntu20-04安装Google-Chrome"><a href="#9-Ubuntu20-04安装Google-Chrome" class="headerlink" title="9.Ubuntu20.04安装Google Chrome"></a>9.Ubuntu20.04安装Google Chrome</h4><p><a href="https://weboyster.github.io/2020/10/23/Linux/Ubuntu/9.Ubuntu20.04%E5%AE%89%E8%A3%85Google%20Chrome/">[9.Ubuntu20.04安装Google Chrome]</a></p>
-<h4 id="10-Ubuntu20-04清除缓存"><a href="#10-Ubuntu20-04清除缓存" class="headerlink" title="10.Ubuntu20.04清除缓存"></a>10.Ubuntu20.04清除缓存</h4><p><a href="https://weboyster.github.io/2020/10/23/Linux/Ubuntu/10.Ubuntu20.04%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E7%BC%93%E5%AD%98/">[10.Ubuntu20.04清除缓存]</a></p>
-<h4 id="11-Ubuntu20-04安装TypeScript"><a href="#11-Ubuntu20-04安装TypeScript" class="headerlink" title="11.Ubuntu20.04安装TypeScript"></a>11.Ubuntu20.04安装TypeScript</h4><p><a href="https://weboyster.github.io/2020/10/23/Linux/Ubuntu/11.Ubuntu%E5%AE%89%E8%A3%85TypeScript/">[11.Ubuntu20.04安装TypeScript]</a></p>
-<h4 id="12-Ubuntu20-04安装Tweaks桌面美化工具"><a href="#12-Ubuntu20-04安装Tweaks桌面美化工具" class="headerlink" title="12. Ubuntu20.04安装Tweaks桌面美化工具"></a>12. Ubuntu20.04安装Tweaks桌面美化工具</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Linux/Ubuntu/12.Ububtu20.04%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/">[12. Ubuntu20.04安装Tweaks桌面美化工具]</a></p>
-<h4 id="13-Ububtu20-04-Windows双系统时间同步"><a href="#13-Ububtu20-04-Windows双系统时间同步" class="headerlink" title="13.Ububtu20.04 Windows双系统时间同步"></a>13.Ububtu20.04 Windows双系统时间同步</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Linux/Ubuntu/13.Ububtu20.04%20Windows%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/">[13.Ububtu20.04 Windows双系统时间同步]</a></p>
-<h4 id="14-Ubuntu20-04-tar-xz-包方式安装-Node"><a href="#14-Ubuntu20-04-tar-xz-包方式安装-Node" class="headerlink" title="14.Ubuntu20.04 tar.xz 包方式安装 Node"></a>14.Ubuntu20.04 tar.xz 包方式安装 Node</h4><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/50fb7228238b">[14. Ubuntu20.04 tar.xz 包方式安装 Node]</a></p>
-<h4 id="15-Ubuntu20-04安装wechat"><a href="#15-Ubuntu20-04安装wechat" class="headerlink" title="15.Ubuntu20.04安装wechat"></a>15.Ubuntu20.04安装wechat</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Linux/Ubuntu/15.Ubuntu20.04%E5%AE%89%E8%A3%85wechat/">[15.Ubuntu20.04安装wechat]</a></p>
-<h4 id="6-参考文档"><a href="#6-参考文档" class="headerlink" title="6. 参考文档"></a>6. 参考文档</h4><p><a href="https://weboyster.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E6%95%99%E7%A8%8B/">[1.Ubuntu 教程]</a></p>
-<h4 id="7-联系方式"><a href="#7-联系方式" class="headerlink" title="7. 联系方式"></a>7. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" data-id="ckhuajgiw0035woii7cdddex6" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/9/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/11/">Next &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/9/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/11/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -1422,7 +1677,7 @@ sudo hwclock --localtime --systohc</code></pre>
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DataBase/">DataBase</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Full-Stack-Development/">Full Stack Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Github/">Github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS-Code/">VS Code</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DataBase/">DataBase</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Full-Stack-Development/">Full Stack Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Github/">Github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS-Code/">VS Code</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -1432,7 +1687,7 @@ sudo hwclock --localtime --systohc</code></pre>
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
     </div>
   </div>
 
@@ -1442,7 +1697,7 @@ sudo hwclock --localtime --systohc</code></pre>
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">241</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">246</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">15</span></li></ul>
     </div>
   </div>
 

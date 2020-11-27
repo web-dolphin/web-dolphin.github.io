@@ -67,210 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-HTML/HTML Tags/三、HTML5元素/3.3 HTML5 新增表单元素" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.3%20HTML5%20%E6%96%B0%E5%A2%9E%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.3%20HTML5%20%E6%96%B0%E5%A2%9E%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/">3.3 HTML5 新增表单元素</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-fieldset元素"><a href="#1-fieldset元素" class="headerlink" title="1. fieldset元素"></a>1. fieldset元素</h4><ul>
-<li><p>fieldset元素： 对input元素进行编组</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;username&quot;</span>&gt;</span>Name:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span>/&gt;</span>     </span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;city&quot;</span>&gt;</span>City:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;city&quot;</span> <span class="attr">id</span>=<span class="string">&quot;city&quot;</span>/&gt;</span> </span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-legned元素"><a href="#2-legned元素" class="headerlink" title="2.legned元素"></a>2.legned元素</h4><ul>
-<li><p>legned元素必须与fieldset元素配合使用；</p>
-</li>
-<li><p>legned元素提供相关信息；</p>
-</li>
-<li><p>legned元素必须是fieldset元素的第一个子元素；</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">legend</span>&gt;</span>个人信息<span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;username&quot;</span>&gt;</span>Name:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span>/&gt;</span>     </span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;city&quot;</span>&gt;</span>City:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;city&quot;</span> <span class="attr">id</span>=<span class="string">&quot;city&quot;</span>/&gt;</span> </span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-datelist元素"><a href="#3-datelist元素" class="headerlink" title="3. datelist元素"></a>3. datelist元素</h4><ul>
-<li><p>datalist标签需要与input标签配合使用，用来表示可选的列表</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">list</span>=<span class="string">&quot;browsers&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">&quot;browsers&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;Internet Explorer&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;Firefox&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;Chrome&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;Opera&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;Safari&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="4-output元素"><a href="#4-output元素" class="headerlink" title="4. output元素"></a>4. output元素</h4><ul>
-<li><p>标签显示计算或用户操作的结果</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">oninput</span>=<span class="string">&quot;x.value=parseInt(a.value)+parseInt(b.value)&quot;</span>&gt;</span>0</span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;range&quot;</span> <span class="attr">id</span>=<span class="string">&quot;a&quot;</span> <span class="attr">value</span>=<span class="string">&quot;50&quot;</span>&gt;</span>100</span><br><span class="line">  +<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;number&quot;</span> <span class="attr">id</span>=<span class="string">&quot;b&quot;</span> <span class="attr">value</span>=<span class="string">&quot;50&quot;</span>&gt;</span></span><br><span class="line">  =<span class="tag">&lt;<span class="name">output</span> <span class="attr">name</span>=<span class="string">&quot;x&quot;</span> <span class="attr">for</span>=<span class="string">&quot;a b&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">output</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>案例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;form onsubmit&#x3D;&quot;return false&quot; oninput&#x3D;&quot;res.value &#x3D; quant.valueAsNumber * price.valueAsNumber&quot;&gt;</span><br><span class="line">  &lt;fieldset&gt;</span><br><span class="line">    &lt;legend&gt;Price Calculator&lt;&#x2F;legend&gt;</span><br><span class="line">      &lt;input type&#x3D;&quot;number&quot; placeholder&#x3D;&quot;Quantity&quot; id&#x3D;&quot;quant&quot; name&#x3D;&quot;quant&quot;&#x2F;&gt;  x     </span><br><span class="line">      &lt;input type&#x3D;&quot;number&quot; placeholder&#x3D;&quot;Price&quot; id&#x3D;&quot;price&quot; name&#x3D;&quot;price&quot;&#x2F;&gt; &#x3D; </span><br><span class="line">      &lt;output for&#x3D;&quot;quant name&quot; name&#x3D;&quot;res&quot;&gt;</span><br><span class="line">    &lt;&#x2F;li&gt; </span><br><span class="line">  &lt;&#x2F;fieldset&gt;</span><br><span class="line">&lt;&#x2F;form&gt;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5.参考文档"></a>5.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%B8%89%E3%80%81HTML5%20%E5%85%83%E7%B4%A0/">[三、HTML5元素]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#x6e;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#109;">&#x79;&#117;&#97;&#x6e;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#109;</a></p>
-<h3 id="6-创建表单"><a href="#6-创建表单" class="headerlink" title="6. 创建表单"></a>6. 创建表单</h3><p>| <strong>**   |             | 短语     |<br>| **legend</strong>   | 表示fieldset元素的说明性标签   | 无       |</p>
-<p>| ****   |      | 无       |</p>
-<p>| <strong>select</strong>   | 给用户提供一组固定的选项       | 短语     |<br>| <strong>textarea</strong> | 用户可以输入多行文字           | 短语     |<br>| <strong>button</strong>   | 表单提交或重置按钮             | 短语     |</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.3%20HTML5%20%E6%96%B0%E5%A2%9E%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/" data-id="ckhuajgnq009qwoii1i5h84zr" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML/HTML Tags/三、HTML5元素/3.4 HTML5 新增表单元素的 type 类型" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.4%20HTML5%20%E6%96%B0%E5%A2%9E%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E7%9A%84%20type%20%E7%B1%BB%E5%9E%8B/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.4%20HTML5%20%E6%96%B0%E5%A2%9E%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E7%9A%84%20type%20%E7%B1%BB%E5%9E%8B/">3.4 HTML5 新增 Input 元素的 Type 类型</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-文本类"><a href="#1-文本类" class="headerlink" title="1. 文本类"></a>1. 文本类</h4><ol>
-<li><p>type=text类型： 文本</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=password类型： 密码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>type=url类型： 网络地址</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;url&quot;</span> <span class="attr">name</span>=<span class="string">&quot;url&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=email类型： 邮箱</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;email&quot;</span> <span class="attr">name</span>=<span class="string">&quot;email&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=tel类型： 电话</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;tel&quot;</span> <span class="attr">name</span>=<span class="string">&quot;tel&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="2-操作类"><a href="#2-操作类" class="headerlink" title="2. 操作类"></a>2. 操作类</h4><ol>
-<li><p>Checkbox：复选框</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;favorite&quot;</span>&gt;</span>喜好：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">id</span>=<span class="string">&quot;favorite&quot;</span>/&gt;</span>诗词</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">id</span>=<span class="string">&quot;favorite&quot;</span>/&gt;</span>体育</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">id</span>=<span class="string">&quot;favorite&quot;</span>/&gt;</span>艺术</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">id</span>=<span class="string">&quot;favorite&quot;</span>/&gt;</span>音乐</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=radio类型: 单选框</p>
-</li>
-</ol>
-<ul>
-<li><p>要实现单选效果，name属性值必须相同</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;gender&quot;</span>&gt;</span>性别：<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">id</span>=<span class="string">&quot;gender&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span>/&gt;</span>男性</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">id</span>=<span class="string">&quot;gender&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span>/&gt;</span>女性</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>当然我们也可以用这个属性，实现CSS轮播图效果</p>
-</li>
-</ul>
-<ul>
-<li>参考案例</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/css_slider/blob/main/slider_radio_img.html">[slider_radio_img]</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/css_slider/blob/main/slider_radio.html">[slider_radio_img]</a></p>
-<ol start="3">
-<li><p>type=range类型： 百分比滑动条</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">progress</span> <span class="attr">min</span>=<span class="string">&quot;0&quot;</span> <span class="attr">max</span>=<span class="string">&quot;100&quot;</span> <span class="attr">value</span>=<span class="string">&quot;20&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">progress</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;goProgress()&quot;</span>&gt;</span>Progress<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> pro = <span class="built_in">document</span>.querySelector(<span class="string">&quot;progress&quot;</span>)</span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">&quot;button&quot;</span>)</span></span><br><span class="line"><span class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">goProgress</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line">  toEnd(pro,2,0)</span><br><span class="line">&#125;</span><br><span class="line"><span class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">toEnd</span>(<span class="params">pro,step,value</span>)</span>&#123;</span></span><br><span class="line">  value = value + 1;</span><br><span class="line">  pro.value = value;</span><br><span class="line"><span class="javascript">  <span class="function"><span class="title">if</span>(<span class="params">value&lt;<span class="number">100</span></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line">      toEnd(pro,step,value)</span><br><span class="line">    &#125;,50)</span><br><span class="line"><span class="javascript">  &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(<span class="string">&quot;任务完成&quot;</span>)</span></span><br><span class="line">    &#125;,50)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=file类型: 上传文件</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=number类型: 数值</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;counter&quot;</span>&gt;</span>数量 ( 1 到 5 之间 ):<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;number&quot;</span> <span class="attr">name</span>=<span class="string">&quot;quantity&quot;</span> <span class="attr">min</span>=<span class="string">&quot;1&quot;</span> <span class="attr">max</span>=<span class="string">&quot;5&quot;</span> <span class="attr">id</span>=<span class="string">&quot;counter&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=search类型: 搜索</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Score: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;search&quot;</span> <span class="attr">name</span>=<span class="string">&quot;score&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=color类型： 拾取颜色</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;favcolor&quot;</span>&gt;</span>选择你喜欢的颜色: <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;color&quot;</span> <span class="attr">name</span>=<span class="string">&quot;favcolor&quot;</span> <span class="attr">id</span>=<span class="string">&quot;favcolor&quot;</span> /&gt;</span></span><br><span class="line">  ``` </span><br><span class="line"></span><br><span class="line">#### 3. 功能类</span><br><span class="line"></span><br><span class="line">1. type=button类型: 按钮</span><br><span class="line"></span><br><span class="line">  ```html</span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Buttom&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=submit类型: 提交</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Submit&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=reset类型: 重置</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;reset&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Reset&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=image类型: 图片提交</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;reset&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Reset&quot;</span> /&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="4-Date类"><a href="#4-Date类" class="headerlink" title="4. Date类"></a>4. Date类</h4><ol>
-<li><p>type=date类型： 年月日控件</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;date&quot;</span>&gt;</span>Date:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;date&quot;</span> <span class="attr">name</span>=<span class="string">&quot;borthday&quot;</span> <span class="attr">id</span>=<span class="string">&quot;date&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=month类型： 年月控件</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;date&quot;</span>&gt;</span>Date:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;month&quot;</span> <span class="attr">name</span>=<span class="string">&quot;borthdaymonth&quot;</span> <span class="attr">id</span>=<span class="string">&quot;date&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=week类型： 年周控件</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;date&quot;</span>&gt;</span>Date:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;week&quot;</span> <span class="attr">name</span>=<span class="string">&quot;borthdayweek&quot;</span> <span class="attr">id</span>=<span class="string">&quot;date&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=time类型： 时间控件</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;date&quot;</span>&gt;</span>Date:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;time&quot;</span> <span class="attr">name</span>=<span class="string">&quot;borthdaytime&quot;</span> <span class="attr">id</span>=<span class="string">&quot;date&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=datetime类型： 年月日+时间控件</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;date&quot;</span>&gt;</span>Date:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;datetime&quot;</span> <span class="attr">name</span>=<span class="string">&quot;borthdaydatetime&quot;</span> <span class="attr">id</span>=<span class="string">&quot;date&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>type=datetime-local类型： 本地年月日+时间控件</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;date&quot;</span>&gt;</span>Date:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;datetime-local&quot;</span> <span class="attr">name</span>=<span class="string">&quot;borthdaydatetime&quot;</span> <span class="attr">id</span>=<span class="string">&quot;date&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="5-特殊类"><a href="#5-特殊类" class="headerlink" title="5. 特殊类"></a>5. 特殊类</h4><ol>
-<li><p>type=hidden类型： 隐藏信息</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;http://localhost:3000/login&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">legend</span>&gt;</span>个人信息<span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;hidden&quot;</span> <span class="attr">name</span>=<span class="string">&quot;Id&quot;</span> <span class="attr">value</span>=<span class="string">&quot;123456&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;username&quot;</span>&gt;</span>Name:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span>/&gt;</span>     </span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;city&quot;</span>&gt;</span>City:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;city&quot;</span> <span class="attr">id</span>=<span class="string">&quot;city&quot;</span>/&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%B8%89%E3%80%81HTML5%20%E5%85%83%E7%B4%A0/">[三、HTML5元素]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#56;&#56;&#x38;&#x38;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#99;&#111;&#x6d;">&#121;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#56;&#56;&#x38;&#x38;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#99;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.4%20HTML5%20%E6%96%B0%E5%A2%9E%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E7%9A%84%20type%20%E7%B1%BB%E5%9E%8B/" data-id="ckhuajgnr009swoiidqxsa7su" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-HTML/HTML Tags/三、HTML5元素/3.5 HTML5 新增表单相关属性" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.5%20HTML5%20%E6%96%B0%E5%A2%9E%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7/" class="article-date">
@@ -1842,11 +1638,134 @@
 
 
   
+    <article id="post-JavaScript/Tags/一、JavaScript简介/1.JavaScript简史" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/1.JavaScript%E7%AE%80%E5%8F%B2/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/1.JavaScript%E7%AE%80%E5%8F%B2/">1.2 JavaScript 简史</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-JavaScript-简史"><a href="#1-JavaScript-简史" class="headerlink" title="1. JavaScript 简史"></a>1. JavaScript 简史</h4><ul>
+<li><p>JavaScript 是为了处理表单验证，于 1995 年由就职 Netscape 公司的 Brendan Eich 编写，并于当年 2 月发布，取名：LiveScript；</p>
+</li>
+<li><p>为了搭载媒体热炒 Java 的顺风车，改名 JavaScript</p>
+</li>
+<li><p>1996 年 8 月，Microsoft 进入 Web 浏览器领域，在其 Internet Explorer3 中加入了名为 JScript 的 JavaScript;</p>
+</li>
+<li><p>1997 年，欧洲计算机制造商协会(ECMA:European Coumputer Manufacturers Association)指定协会下辖 39 号技术委员会，负责“标准化脚本语言的语法和语义”，定义了 ECMAScript 语言标准；</p>
+</li>
+<li><p>1998 年 ISO/IEC(国际标准化组织和国际电工委员会)采用了 ECMA-262 定义的 ECMAScript 作为标准，浏览器开发商开始致力于将 ECMAScript 作为各自的 JavaScript 实现的基础；</p>
+</li>
+<li><p>1998 年 10 月 W3C 推荐了<code>DOM Level 1</code>级别的文档对象模型(DOM: Document Object Model),</p>
+</li>
+<li><p>2009 年 12 月 ECMAScript 第五版(ES5)发行，新增： 原生 JSON 对象，继承，高级属性的定义，提出了严格模式；</p>
+</li>
+<li><p>2015 年 ECMAScript 第六版(ES6)发行，提出了更多的编程规定的方法；</p>
+</li>
+<li><p>到现在位置 ECMAScript 版本号已发行到 ES10；</p>
+</li>
+<li><p>Nodes 是 JavaScript 运行的宿主环境，于 2008 年发布，应用于服务器等后端编程；</p>
+</li>
+<li><p>现在 JavaScript 已经成为功能全面的前后端编程语言；</p>
+</li>
+<li><p>TypeScript： Microsoft 公司团队开发的通过添加 Type 实现对 JavaScript 的扩展；</p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[JavaScript 简介]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/1.JavaScript%E7%AE%80%E5%8F%B2/" data-id="ckhuajgoh00b0woii32271aqa" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/一、JavaScript简介/2.JavaScript实现" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/">1.2 JavaScript 实现</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-JavaScript-宿主环境"><a href="#1-JavaScript-宿主环境" class="headerlink" title="1.JavaScript 宿主环境"></a>1.JavaScript 宿主环境</h3><h3 id="2-JavaScript-组成"><a href="#2-JavaScript-组成" class="headerlink" title="2. JavaScript 组成"></a>2. JavaScript 组成</h3><ul>
+<li><p>ECMAScript</p>
+</li>
+<li><p>DOM：</p>
+</li>
+</ul>
+<p>DOM 经过扩展用于 HTML 的应用程序编程接口(API: Application Programming Interface),DOM 把整个页面映射为一个多层节点结构</p>
+<ul>
+<li>BOM</li>
+</ul>
+<h4 id="2-1ECMAScript"><a href="#2-1ECMAScript" class="headerlink" title="2.1ECMAScript"></a>2.1ECMAScript</h4><p><a href="">[2.1ECMAScript]</a></p>
+<h4 id="2-2DOM"><a href="#2-2DOM" class="headerlink" title="2.2DOM"></a>2.2DOM</h4><p><a href="">[2.2DOM]</a></p>
+<h4 id="2-3BOM"><a href="#2-3BOM" class="headerlink" title="2.3BOM"></a>2.3BOM</h4><p><a href="">[2.3BOM]</a></p>
+<h3 id="3-Node"><a href="#3-Node" class="headerlink" title="3.Node"></a>3.Node</h3><h4 id="3-1-Node-基础"><a href="#3-1-Node-基础" class="headerlink" title="3.1 Node 基础"></a>3.1 Node 基础</h4><p><a href="">[3.1 Node 基础]</a></p>
+<h4 id="3-2-Express-框架"><a href="#3-2-Express-框架" class="headerlink" title="3.2 Express 框架"></a>3.2 Express 框架</h4><p><a href="">[3.2 Express 框架]</a></p>
+<h4 id="3-3-Koa-框架"><a href="#3-3-Koa-框架" class="headerlink" title="3.3 Koa 框架"></a>3.3 Koa 框架</h4><p><a href="">[3.3 Koa 框架]</a></p>
+<h4 id="3-4-Nest-框架"><a href="#3-4-Nest-框架" class="headerlink" title="3.4 Nest 框架"></a>3.4 Nest 框架</h4><p><a href="">[3.4 Nest 框架]</a></p>
+<h3 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4. 参考文档"></a>4. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[JavaScript 简介]</a></p>
+<h3 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/" data-id="ckhuajgoi00b2woiihrrm3j9x" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/5/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/7/">Next &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/5/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/7/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -1857,7 +1776,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DataBase/">DataBase</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Full-Stack-Development/">Full Stack Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Github/">Github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS-Code/">VS Code</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DataBase/">DataBase</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Full-Stack-Development/">Full Stack Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Github/">Github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS-Code/">VS Code</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -1867,7 +1786,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
     </div>
   </div>
 
@@ -1877,7 +1796,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">241</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">246</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">15</span></li></ul>
     </div>
   </div>
 
