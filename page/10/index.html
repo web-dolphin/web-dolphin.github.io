@@ -1192,12 +1192,16 @@ sudo hwclock --localtime --systohc</code></pre>
 
 
   
-    <article id="post-Git/Local Repostories/Git command 操作命令" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Git/Tutorial/Git教程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/25/Git/Local%20Repostories/Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" class="article-date">
+    <a href="/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/" class="article-date">
   <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Git/">Git</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -1206,7 +1210,7 @@ sudo hwclock --localtime --systohc</code></pre>
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/">Git Command 操作命令</a>
+      <a class="article-title" href="/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">Git教程</a>
     </h1>
   
 
@@ -1214,51 +1218,20 @@ sudo hwclock --localtime --systohc</code></pre>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-初始化操作命令"><a href="#1-初始化操作命令" class="headerlink" title="1.初始化操作命令"></a>1.初始化操作命令</h4><ul>
-<li><p>初始化操作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-查看资源操作命令"><a href="#2-查看资源操作命令" class="headerlink" title="2.查看资源操作命令"></a>2.查看资源操作命令</h4><ul>
-<li><p>查看资源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看隐藏资源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>分屏查看资源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ll | less</span><br><span class="line">ls -l | less</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看 git 本地仓库的子目录和文件</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll .git/</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-Git-设置签名"><a href="#3-Git-设置签名" class="headerlink" title="3. Git 设置签名"></a>3. Git 设置签名</h4><ul>
-<li>Git 设置系统签名</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name andy</span><br><span class="line">git config --global user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>Git 设置项目签名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name andy</span><br><span class="line">git config user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="4-Git-删除更改退回到修改前的状态"><a href="#4-Git-删除更改退回到修改前的状态" class="headerlink" title="4. Git 删除更改退回到修改前的状态"></a>4. Git 删除更改退回到修改前的状态</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+        <h4 id="1-Git-创建与管理本地仓库"><a href="#1-Git-创建与管理本地仓库" class="headerlink" title="1. Git 创建与管理本地仓库"></a>1. Git 创建与管理本地仓库</h4><p><a href="">[1. Git 创建与管理本地仓库]</a></p>
+<h4 id="2-快速创建-Github-远程仓库"><a href="#2-快速创建-Github-远程仓库" class="headerlink" title="2.快速创建 Github 远程仓库"></a>2.快速创建 Github 远程仓库</h4><p><a href="">[2.快速创建 Github 远程仓库]</a></p>
+<h4 id="3-Git-远程仓库管理"><a href="#3-Git-远程仓库管理" class="headerlink" title="3.Git 远程仓库管理"></a>3.Git 远程仓库管理</h4><p><a href="">[3.Git 远程仓库管理]</a></p>
+<h4 id="4-Git-command-操作命令"><a href="#4-Git-command-操作命令" class="headerlink" title="4.Git command 操作命令"></a>4.Git command 操作命令</h4><p><a href="">[4.Git command 操作命令]</a></p>
+<h4 id="5-Git日志与回退版本号"><a href="#5-Git日志与回退版本号" class="headerlink" title="5.Git日志与回退版本号"></a>5.Git日志与回退版本号</h4><p><a href="">[5.Git日志与回退版本号]</a></p>
+<h4 id="6-Git本地仓库设置签名"><a href="#6-Git本地仓库设置签名" class="headerlink" title="6.Git本地仓库设置签名"></a>6.Git本地仓库设置签名</h4><p><a href="">[6.Git本地仓库设置签名]</a></p>
+<h4 id="7-联系方式"><a href="#7-联系方式" class="headerlink" title="7. 联系方式"></a>7. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" data-id="ckhuajghe001owoiico49e5kx" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/" data-id="ckhuajghv0024woiiatzrafm4" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
-
     </footer>
   </div>
   
@@ -1266,9 +1239,9 @@ sudo hwclock --localtime --systohc</code></pre>
 
 
   
-    <article id="post-Git/Local Repostories/Git创建与管理本地仓库" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Git/Local Repostories/1. Git 创建与管理本地仓库" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/25/Git/Local%20Repostories/Git%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" class="article-date">
+    <a href="/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" class="article-date">
   <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
 </a>
     
@@ -1280,7 +1253,7 @@ sudo hwclock --localtime --systohc</code></pre>
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/Git%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">Git创建与管理本地仓库</a>
+      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">1. Git 创建与管理本地仓库</a>
     </h1>
   
 
@@ -1330,7 +1303,7 @@ sudo hwclock --localtime --systohc</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" data-id="ckhuajghf001qwoii8oq9h7lf" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" data-id="cki2ui6fq0000xxii64snawev" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
@@ -1342,9 +1315,9 @@ sudo hwclock --localtime --systohc</code></pre>
 
 
   
-    <article id="post-Git/Local Repostories/Git日志与回退版本号" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Git/Local Repostories/4.Git command 操作命令" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/25/Git/Local%20Repostories/Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/" class="article-date">
+    <a href="/2020/10/25/Git/Local%20Repostories/4.Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" class="article-date">
   <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
 </a>
     
@@ -1356,7 +1329,81 @@ sudo hwclock --localtime --systohc</code></pre>
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/">Git日志与回退版本号</a>
+      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/4.Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/">4.Git Command 操作命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-初始化操作命令"><a href="#1-初始化操作命令" class="headerlink" title="1.初始化操作命令"></a>1.初始化操作命令</h4><ul>
+<li><p>初始化操作</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-查看资源操作命令"><a href="#2-查看资源操作命令" class="headerlink" title="2.查看资源操作命令"></a>2.查看资源操作命令</h4><ul>
+<li><p>查看资源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看隐藏资源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分屏查看资源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ll | less</span><br><span class="line">ls -l | less</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看 git 本地仓库的子目录和文件</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll .git/</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Git-设置签名"><a href="#3-Git-设置签名" class="headerlink" title="3. Git 设置签名"></a>3. Git 设置签名</h4><ul>
+<li>Git 设置系统签名</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name andy</span><br><span class="line">git config --global user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>Git 设置项目签名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name andy</span><br><span class="line">git config user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-Git-删除更改退回到修改前的状态"><a href="#4-Git-删除更改退回到修改前的状态" class="headerlink" title="4. Git 删除更改退回到修改前的状态"></a>4. Git 删除更改退回到修改前的状态</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/4.Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" data-id="cki2ui6fv0001xxii48pqa58f" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Git/Local Repostories/5.Git日志与回退版本号" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/25/Git/Local%20Repostories/5.Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/" class="article-date">
+  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/5.Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/">Git日志与回退版本号</a>
     </h1>
   
 
@@ -1421,7 +1468,7 @@ sudo hwclock --localtime --systohc</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/" data-id="ckhuajghl001uwoii1gkpb03v" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/5.Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/" data-id="cki2ui6fy0003xxii4ztu2if7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
@@ -1433,9 +1480,9 @@ sudo hwclock --localtime --systohc</code></pre>
 
 
   
-    <article id="post-Git/Local Repostories/Git本地仓库设置签名" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Git/Local Repostories/6.Git本地仓库设置签名" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/25/Git/Local%20Repostories/Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/" class="article-date">
+    <a href="/2020/10/25/Git/Local%20Repostories/6.Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/" class="article-date">
   <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
 </a>
     
@@ -1447,7 +1494,7 @@ sudo hwclock --localtime --systohc</code></pre>
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/">Git本地仓库设置签名</a>
+      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/6.Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/">6.Git本地仓库设置签名</a>
     </h1>
   
 
@@ -1491,7 +1538,7 @@ sudo hwclock --localtime --systohc</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/" data-id="ckhuajgho001wwoii5iw0e0r1" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/6.Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/" data-id="cki2ui6g00005xxii3hs35nmg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
@@ -1503,9 +1550,9 @@ sudo hwclock --localtime --systohc</code></pre>
 
 
   
-    <article id="post-Git/Remote Repostories/快速创建Github远程仓库" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Git/Remote Repostories/2.快速创建 Github 远程仓库" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" class="article-date">
+    <a href="/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" class="article-date">
   <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
 </a>
     
@@ -1517,7 +1564,7 @@ sudo hwclock --localtime --systohc</code></pre>
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">快速创建Github远程仓库</a>
+      <a class="article-title" href="/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">2.快速创建 Github 远程仓库</a>
     </h1>
   
 
@@ -1575,12 +1622,12 @@ sudo hwclock --localtime --systohc</code></pre>
 <li>git add README.md</li>
 <li>git commit -m “first commit”</li>
 <li>git branch -M main</li>
-<li>git remote add origin <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;</a>:web-oyster/blog_for_web-master.git</li>
+<li>git remote add origin <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">&#103;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a>:web-oyster/blog_for_web-master.git</li>
 <li>注释： web-oyster 是 github 用户名,blog_for_web-master 是远程仓库名</li>
 <li>git push -u origin main</li>
 </ul>
 <h5 id="2-push-an-existing-repository-from-the-command-line"><a href="#2-push-an-existing-repository-from-the-command-line" class="headerlink" title="2. push an existing repository from the command line"></a>2. push an existing repository from the command line</h5><ul>
-<li>git remote add origin <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#111;&#109;">&#103;&#105;&#x74;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#111;&#109;</a>:web-oyster/blog_for_web-master.git</li>
+<li>git remote add origin <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;">&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;</a>:web-oyster/blog_for_web-master.git</li>
 <li>git branch -M main</li>
 <li>git push -u origin main</li>
 </ul>
@@ -1590,77 +1637,7 @@ sudo hwclock --localtime --systohc</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" data-id="ckhuajghq001ywoiicnmoe4eu" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git/Remote Repostories/Git远程仓库管理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Remote%20Repostories/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Remote%20Repostories/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">Git远程仓库管理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Github-SSH-仓库地址"><a href="#1-Github-SSH-仓库地址" class="headerlink" title="1. Github SSH 仓库地址"></a>1. Github SSH 仓库地址</h4><ul>
-<li><p>地址组成</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git@github.com:web-oyster/html-elements.git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#109;">&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#109;</a>： git 网址</p>
-</li>
-<li><p>web-oyster： github 账号</p>
-</li>
-<li><p>html-elements： github 远程仓库名</p>
-</li>
-</ul>
-<h4 id="2-创建远程仓库关联"><a href="#2-创建远程仓库关联" class="headerlink" title="2. 创建远程仓库关联"></a>2. 创建远程仓库关联</h4><ul>
-<li><p>git 初始化本地仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建远程仓库</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[快速创建 Github 远程仓库]</a></p>
-<ul>
-<li><p>第一次提交：关联远程仓库地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:&lt;github账号&gt;/&lt;github远程仓库名&gt;.git</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>第二次提交</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>参考文档</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[快速创建 Github 远程仓库]</a></p>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Remote%20Repostories/Git%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/" data-id="ckhuajght0021woii7iywf161" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" data-id="cki2ui6g10007xxii8utjgmai" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>

@@ -5,23 +5,20 @@
   
 
   
-  <title>Git本地仓库设置签名 | Coding Your Wonderful Life</title>
+  <title>1. Git 创建与管理本地仓库 | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.Git 本地仓库签名的作用 区分不同开发人员的身份和权限  2.Git 地仓库签名与 Github 账号的关系 本地仓库签名与 Github 远程仓库登陆账号、密码没有任何关系  3.签名格式 user.name: 任意姓名就可 user.email: 任意邮箱地址就可  4.设置签名 项目(仓库)级别签名 12git config user.name andygit config user.">
+  <meta name="description" content="1.创建本地仓库 创建工作区(Work Space) 1mkdir project &amp; cd project  初始化本地仓库() 1git init  新建文件 1touch index.html  查询状态 1git status  将项目添加到暂存区 1git status  将暂存区项目提交至本地仓库 1git commit -m &quot;&lt;message&gt;&amp;quo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git本地仓库设置签名">
-<meta property="og:url" content="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/index.html">
+<meta property="og:title" content="1. Git 创建与管理本地仓库">
+<meta property="og:url" content="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="1.Git 本地仓库签名的作用 区分不同开发人员的身份和权限  2.Git 地仓库签名与 Github 账号的关系 本地仓库签名与 Github 远程仓库登陆账号、密码没有任何关系  3.签名格式 user.name: 任意姓名就可 user.email: 任意邮箱地址就可  4.设置签名 项目(仓库)级别签名 12git config user.name andygit config user.">
+<meta property="og:description" content="1.创建本地仓库 创建工作区(Work Space) 1mkdir project &amp; cd project  初始化本地仓库() 1git init  新建文件 1touch index.html  查询状态 1git status  将项目添加到暂存区 1git status  将暂存区项目提交至本地仓库 1git commit -m &quot;&lt;message&gt;&amp;quo">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://s1.ax1x.com/2020/10/30/BYTfRP.png">
-<meta property="og:image" content="https://s1.ax1x.com/2020/10/30/BYTVbQ.png">
 <meta property="article:published_time" content="2020-10-24T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-10-30T06:53:27.171Z">
+<meta property="article:modified_time" content="2020-11-29T08:08:51.073Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s1.ax1x.com/2020/10/30/BYTfRP.png">
   
     <link rel="alternate" href="/atom.xml" title="Coding Your Wonderful Life" type="application/atom+xml">
   
@@ -70,9 +67,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Git/Local Repostories/Git本地仓库设置签名" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Git/Local Repostories/1. Git 创建与管理本地仓库" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/25/Git/Local%20Repostories/Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/" class="article-date">
+    <a href="/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" class="article-date">
   <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
 </a>
     
@@ -84,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Git本地仓库设置签名
+      1. Git 创建与管理本地仓库
     </h1>
   
 
@@ -92,43 +89,49 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-Git-本地仓库签名的作用"><a href="#1-Git-本地仓库签名的作用" class="headerlink" title="1.Git 本地仓库签名的作用"></a>1.Git 本地仓库签名的作用</h4><ul>
-<li>区分不同开发人员的身份和权限</li>
-</ul>
-<h4 id="2-Git-地仓库签名与-Github-账号的关系"><a href="#2-Git-地仓库签名与-Github-账号的关系" class="headerlink" title="2.Git 地仓库签名与 Github 账号的关系"></a>2.Git 地仓库签名与 Github 账号的关系</h4><ul>
-<li>本地仓库签名与 Github 远程仓库登陆账号、密码没有任何关系</li>
-</ul>
-<h4 id="3-签名格式"><a href="#3-签名格式" class="headerlink" title="3.签名格式"></a>3.签名格式</h4><ul>
-<li>user.name: 任意姓名就可</li>
-<li>user.email: 任意邮箱地址就可</li>
-</ul>
-<h4 id="4-设置签名"><a href="#4-设置签名" class="headerlink" title="4.设置签名"></a>4.设置签名</h4><ul>
-<li><p>项目(仓库)级别签名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name andy</span><br><span class="line">git config user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
+        <h4 id="1-创建本地仓库"><a href="#1-创建本地仓库" class="headerlink" title="1.创建本地仓库"></a>1.创建本地仓库</h4><ol>
+<li><p>创建工作区(Work Space)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir project &amp; <span class="built_in">cd</span> project</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>系统级别签名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name andy</span><br><span class="line">git config --global user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
+<li><p>初始化本地仓库()</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>签名优先级别： 项目(仓库)级别签名优先于系统级别签名</p>
+<li><p>新建文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch index.html</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>查看项目签名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat .git/config</span><br></pre></td></tr></table></figure>
+<li><p>查询状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将项目添加到暂存区</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将暂存区项目提交至本地仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;&lt;message&gt;&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://s1.ax1x.com/2020/10/30/BYTfRP.png" alt="[查看项目签名]"></p>
 </li>
-<li><p>查看系统签名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ～/.gitconfig</span><br></pre></td></tr></table></figure>
+</ol>
+<h4 id="2-创建与管理分区"><a href="#2-创建与管理分区" class="headerlink" title="2.创建与管理分区"></a>2.创建与管理分区</h4><ol>
+<li><p>查询分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建分支： dev</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切换分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>合并分支：主分支合并 dev 分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge dev</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://s1.ax1x.com/2020/10/30/BYTVbQ.png" alt="[查看系统签名]"></p>
 </li>
-</ul>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+</ol>
+<h4 id="3-参考文当"><a href="#3-参考文当" class="headerlink" title="3.参考文当"></a>3.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/" data-id="ckhuajgho001wwoii5iw0e0r1" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" data-id="cki2ui6fq0000xxii64snawev" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
@@ -139,19 +142,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/10/25/Git/Local%20Repostories/Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Git日志与回退版本号
+          Git教程
         
       </div>
     </a>
   
   
-    <a href="/2020/10/25/Git/Remote%20Repostories/%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGithub%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/10/25/Git/Local%20Repostories/4.Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">快速创建Github远程仓库</div>
+      <div class="article-nav-title">4.Git Command 操作命令</div>
     </a>
   
 </nav>
