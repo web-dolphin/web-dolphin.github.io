@@ -67,6 +67,412 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-VSCode/Tags/39. Browser Previews" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/39.%20Browser%20Previews/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/39.%20Browser%20Previews/">39. Browser Previews</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-VS-Code内置浏览器"><a href="#1-VS-Code内置浏览器" class="headerlink" title="1. VS Code内置浏览器"></a>1. VS Code内置浏览器</h4><ul>
+<li><p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Browser Previews</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用</p>
+<ul>
+<li>导航栏选择<code>.html</code>文件</li>
+<li><code>Ctrl</code> + <code>Shift</code> + <code>P</code>打开<code>Command Palette</code>窗口</li>
+<li>输入： <code>Browser Previews: Open Active File in Preview</code></li>
+</ul>
+</li>
+<li><p>使用示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/05/0t0lp4.png" alt="示意图"></p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#46;&#x63;&#111;&#109;">&#121;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#46;&#x63;&#111;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/39.%20Browser%20Previews/" data-id="ckhuajgkp0062woiial9edb6f" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/40. Snippets" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/40.%20Snippets/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/40.%20Snippets/">40. Snippets</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Snippets-配置"><a href="#1-Snippets-配置" class="headerlink" title="1. Snippets 配置"></a>1. Snippets 配置</h4><ul>
+<li><p>示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/11/0gwZkT.png" alt="示意图"></p>
+</li>
+<li><p>设置html5: html.json</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;html5&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;prefix&quot;</span>: <span class="string">&quot;html5&quot;</span>,</span><br><span class="line">    <span class="string">&quot;body&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;&lt;!DOCTYPE html&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;&lt;html lang=\&quot;en\&quot;&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;head&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;meta charset=\&quot;UTF-8\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;meta name=\&quot;viewport\&quot; content=\&quot;width=device-width, initial-scale=1.0\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;title&gt;Document&lt;/title&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;link rel=\&quot;shortcut icon\&quot; href=\&quot;imgs/favicon.ico\&quot; type=\&quot;image/x-icon\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;link rel=\&quot;stylesheet\&quot; href=\&quot;css/index.css\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;script src=\&quot;js/vue.js\&quot;&gt;&lt;/script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;/head&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;body&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;div id=\&quot;app\&quot;&gt;&lt;/div&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;script&gt;&lt;/script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;/body&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;&lt;/html&gt;&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/11/0gw30x.png" alt="示意图"></p>
+</li>
+</ul>
+<ul>
+<li><p>设置Vue: html.json</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;Vue&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;prefix&quot;</span>: <span class="string">&quot;vue&quot;</span>,</span><br><span class="line">    <span class="string">&quot;body&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;&lt;!DOCTYPE html&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;&lt;html lang=\&quot;zh-CN\&quot;&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;head&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;title&gt;<span class="variable">$1</span>&lt;/title&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;meta charset=\&quot;UTF-8\&quot;&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;meta name=\&quot;viewport\&quot; content=\&quot;width=device-width, initial-scale=1\&quot;&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;link rel=\&quot;shortcut icon\&quot; href=\&quot;imgs/favicon.ico\&quot; type=\&quot;image/x-icon\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;link rel=\&quot;stylesheet\&quot; href=\&quot;css/index.css\&quot;/&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;script src=\&quot;js/vue.js\&quot;&gt;&lt;/script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;script src=\&quot;https://cdn.bootcss.com/vue/2.2.2/vue.min.js\&quot;&gt;&lt;/script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;/head&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;body&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;div id=\&quot;app\&quot;&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t&lt;hello title=\&quot;title: title\&quot;&gt;&lt;/hello&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;/div&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\tVue.component(\&quot;hello\&quot;, &#123;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\tprops: &#123; title: String &#125;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\t\tdata() &#123;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\t\t\treturn &#123;&#125;;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\t\t&#125;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\tmethods: &#123;&#125;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\ttemplate: `&lt;div&gt;&lt;div&gt;Hello World&lt;/div&gt;&lt;/div&gt;`,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t&#125;);&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\tconst vm = new Vue(&#123;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\tel: \&quot;#app\&quot;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\tdata: &#123;&#125;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t\tmethods: &#123;&#125;,&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t\t&#125;);&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t\t&lt;/script&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;\t&lt;/body&gt;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;&lt;/html&gt;&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;description&quot;</span>: <span class="string">&quot;vue - Defines a template for a vue &amp; html5 document&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#110;&#109;&#105;&#110;&#x38;&#56;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#110;&#109;&#105;&#110;&#x38;&#56;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/40.%20Snippets/" data-id="ckhuajgkq0064woii6nquhwhq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/41. VS Code快速编写HTML代码" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/41.%20VS%20Code%E5%BF%AB%E9%80%9F%E7%BC%96%E5%86%99HTML%E4%BB%A3%E7%A0%81/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/41.%20VS%20Code%E5%BF%AB%E9%80%9F%E7%BC%96%E5%86%99HTML%E4%BB%A3%E7%A0%81/">41. vs Code快速编写HTML代码</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Emmet基本用法"><a href="#1-Emmet基本用法" class="headerlink" title="1. Emmet基本用法"></a>1. Emmet基本用法</h4><ol>
+<li><p>bq: <code>&lt;blockquote&gt;&lt;/blockquote&gt;</code></p>
+</li>
+<li><p>输入标签，根据提示符，选择项目</p>
+</li>
+</ol>
+<h4 id="2-文本操作符-Text-Opreators"><a href="#2-文本操作符-Text-Opreators" class="headerlink" title="2. 文本操作符(Text Opreators)"></a>2. 文本操作符(Text Opreators)</h4><ol>
+<li>输入元素并生成内容： <code>&#123;&#125;</code></li>
+</ol>
+<ul>
+<li><p>示例</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">div</span>&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">a</span>&#123;链接&#125; <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span>&gt;</span>链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-属性操作符-Attribute-Operators"><a href="#3-属性操作符-Attribute-Operators" class="headerlink" title="3. 属性操作符(Attribute Operators)"></a>3. 属性操作符(Attribute Operators)</h4><ul>
+<li><p>示例</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">div.poet</span>&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">div</span>#<span class="attr">poet</span>&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>隐式标签则会自动联想生成对应元素,根据配置规则生成不同的结果</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">.poet</span>&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">em</span>&gt;</span>.port&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">em</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">em</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">table</span>&gt;</span>.row&gt;.col&#123;落霞与孤鹜齐飞，秋水共长天一色&#125;*2--&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">&quot;rol&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">&quot;rol&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>绑定多个类名: <code>.</code>符号</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">div.content.poet</span>&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>自定义属性: []</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">a</span>[<span class="attr">href</span>=<span class="string">&quot;http://loaclhost:300&quot;</span> <span class="attr">data-title</span>=<span class="string">&quot;titie&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>]&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; <span class="attr">--</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://loaclhost:300&quot;</span> <span class="attr">data-title</span>=<span class="string">&quot;titie&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-嵌套操作符-Nesting-Operators"><a href="#4-嵌套操作符-Nesting-Operators" class="headerlink" title="4. 嵌套操作符(Nesting Operators)"></a>4. 嵌套操作符(Nesting Operators)</h4><ol>
+<li>嵌套操作符用于将缩写元素放置在生成的树中,是否应放置在上下文元素:</li>
+</ol>
+<ul>
+<li><p>子级</p>
+</li>
+<li><p>通过<code>&gt;字符标识</code>可以生成嵌套子级元素,可以配合元素属性进行连写</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">div</span>#<span class="attr">app</span>&gt;</span>ul&gt;li&#123;&#125;&#123;落霞与孤鹜齐飞，秋水共长天一色&#125; --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同级</p>
+</li>
+<li><p><code>+字符标识</code>生成兄弟级元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> #<span class="attr">app</span>&gt;</span>(ul.title&gt;li&#123;落霞与孤鹜齐飞，秋水共长天一色&#125;+ul.content&gt;li&#123;落霞与孤鹜齐飞，秋水共长天一色&#125;)*2 --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>父级</p>
+</li>
+<li><p><code>^字符标识</code>所在位置开始,查找左侧最近的元素的父级元素并生成其兄弟级元素.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> #<span class="attr">app</span>&gt;</span>p.title&gt;span&#123;落霞与孤鹜齐飞，秋水共长天一色&#125;^ul&gt;(li&#123;落霞与孤鹜齐飞，秋水共长天一色&#125;)*2--&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-分组操作符-Grouping-Operators"><a href="#5-分组操作符-Grouping-Operators" class="headerlink" title="5. 分组操作符(Grouping Operators)"></a>5. 分组操作符(Grouping Operators)</h4><ul>
+<li><p>分组使用<code>()字符标识</code>来实现缩写的分离</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> #<span class="attr">app</span>&gt;</span>(ul.title&gt;li.poet&#123;落霞与孤鹜齐飞，秋水共长天一色&#125;+span.author&#123;王勃&#125;) --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;author&quot;</span>&gt;</span>王勃<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="6-乘法-Multiplication-Operator"><a href="#6-乘法-Multiplication-Operator" class="headerlink" title="6. 乘法(Multiplication Operator)"></a>6. 乘法(Multiplication Operator)</h4><ul>
+<li><p>使用<code>*字符标识</code>实现元素倍增</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> #<span class="attr">app</span>&gt;</span>(ul.title&gt;li.poet&#123;落霞与孤鹜齐飞，秋水共长天一色&#125;+span.author&#123;王勃&#125;)*2 --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;author&quot;</span>&gt;</span>王勃<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;title&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span>落霞与孤鹜齐飞，秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;author&quot;</span>&gt;</span>王勃<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="7-自动计数-numbering"><a href="#7-自动计数-numbering" class="headerlink" title="7. 自动计数(numbering)"></a>7. 自动计数(numbering)</h4><ul>
+<li><p>使用<code>$字符标识</code>生成重复项时增加一个序号</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">ul</span>&gt;</span>li.poet$&#123;Item Number $&#125;*3 --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet1&quot;</span>&gt;</span>Item Number 1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet2&quot;</span>&gt;</span>Item Number 2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet3&quot;</span>&gt;</span>Item Number 3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果生成两位数则使用两个连续的$$,更多位数以此类推…</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">ul</span>&gt;</span>li.poet-$$*3 --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet-01&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet-02&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet-03&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>@N可以改变起始值.需要注意的是如果配合升降序使用的话N是放到+-符后</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">ul</span>&gt;</span>li.poet-$$@10*3 --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet-10&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet-11&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;poet-12&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="8-模拟文本-随机文本"><a href="#8-模拟文本-随机文本" class="headerlink" title="8. 模拟文本/随机文本"></a>8. 模拟文本/随机文本</h4><ul>
+<li><p><code>lorem</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; !<span class="attr">--</span> <span class="attr">div</span>&gt;</span>lorem --&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita molestias blanditiis ut officia incidunt velit, repellat eligendi tempora numquam, facilis neque eum consequuntur corrupti dolorem, explicabo sapiente culpa ea accusamus.<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt; !<span class="attr">--</span> (<span class="attr">p</span>&gt;</span>lorem4)*3--&gt;</span><br><span class="line">&lt;&lt;p&gt;Lorem ipsum dolor sit.&lt;/p&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Reprehenderit cum tenetur ex!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Facilis placeat voluptatum fuga.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="9-包装文本"><a href="#9-包装文本" class="headerlink" title="9. 包装文本"></a>9. 包装文本</h4><ul>
+<li><p><code>选中文本</code>,按下ctrl+shift+p打开命令窗口输入ewrap</p>
+</li>
+<li><p>选择Emmet:使用缩写进行包装(Wrap with Abbreviation)选项</p>
+</li>
+<li><p>输入缩写字符nav&gt;ul&gt;li*按下回车键即可看到效果.</p>
+</li>
+<li><p>当然也可以在菜单=&gt;编辑=&gt;Emmet(M)..然后输入.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">首页</span><br><span class="line">产品介绍</span><br><span class="line">关于我们</span><br><span class="line">联系我们</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#109;&#105;&#110;&#x38;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#x63;&#111;&#x6d;">&#x79;&#117;&#x61;&#x6e;&#109;&#105;&#110;&#x38;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#x63;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/41.%20VS%20Code%E5%BF%AB%E9%80%9F%E7%BC%96%E5%86%99HTML%E4%BB%A3%E7%A0%81/" data-id="ckhuajgks0066woiidguxa643" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/5. Prettier - Code formatter" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/5.%20Prettier%20-%20Code%20formatter/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/5.%20Prettier%20-%20Code%20formatter/">5. Prettier-Code Formatter</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-一键格式化插件"><a href="#1-一键格式化插件" class="headerlink" title="1. 一键格式化插件"></a>1. 一键格式化插件</h4><ul>
+<li><p>格式化代码： HTML CSS JS Less Sass TypeScript 等</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Prettier - Code formatter</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置： settings</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;editor.formatOnSave&quot;</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>示意图：Settings</p>
+<p><img src="https://s1.ax1x.com/2020/10/05/0tZ1Qs.png" alt="settings"></p>
+</li>
+<li><p>示意图：格式化</p>
+<p><img src="https://s1.ax1x.com/2020/10/05/0t3FNn.gif" alt="格式化"></p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#111;&#x6d;">&#121;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/5.%20Prettier%20-%20Code%20formatter/" data-id="ckhuajgkt0068woii4mqshcg7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/6. Auto Rename Complete Close Tagg" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/6.%20Auto%20Rename%20Complete%20Close%20Tagg/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/6.%20Auto%20Rename%20Complete%20Close%20Tagg/">6. Auto Rename/Complete/Close Tagg</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Auto-Rename-Tag"><a href="#1-Auto-Rename-Tag" class="headerlink" title="1.Auto Rename Tag"></a>1.Auto Rename Tag</h4><ul>
+<li><p>自动重命名HTML标签；</p>
+</li>
+<li><p>Auto Rename Tag: 自动修改HTML标签；</p>
+</li>
+<li><p>更改HTML标签名时，会自动更新对应的开始标签和结束标签的标签名。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Auto Rename Tag</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-Auto-Complete-Tag"><a href="#2-Auto-Complete-Tag" class="headerlink" title="2.Auto Complete Tag"></a>2.Auto Complete Tag</h4><ul>
+<li><p>Auto Complete Tag: 集成了Auto Close Tag和Auto Rename Tag的功能，丰富了VS Code编写HTML时的标签自动补全功能;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Auto Complete Tag</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-Auto-Close-Tag-自动闭合标签"><a href="#3-Auto-Close-Tag-自动闭合标签" class="headerlink" title="3. Auto Close Tag 自动闭合标签"></a>3. Auto Close Tag 自动闭合标签</h4><ul>
+<li><p>Auto Close Tag: 输入开始标签后，自动添加结束标签;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Auto Close Tag</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4.联系方式"></a>4.联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;">&#x79;&#117;&#97;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/6.%20Auto%20Rename%20Complete%20Close%20Tagg/" data-id="ckhuajgkv006awoii7r5shmlc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/7. Beautify" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/7.%20Beautify/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/7.%20Beautify/">7. Beautify</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-一键格式化插件"><a href="#1-一键格式化插件" class="headerlink" title="1. 一键格式化插件"></a>1. 一键格式化插件</h4><ul>
+<li><p>格式化插件只需要Beautify</p>
+</li>
+<li><p>一键格式化 HTML CSS JS</p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#x61;&#110;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#107;&#x2e;&#99;&#111;&#x6d;">&#x79;&#x75;&#x61;&#110;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#107;&#x2e;&#99;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/7.%20Beautify/" data-id="ckhuajgkw006cwoii5ufg6eiz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-VSCode/Tags/8. Vscode Icons" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/23/VSCode/Tags/8.%20Vscode%20Icons/" class="article-date">
@@ -1838,391 +2244,6 @@
 
 
   
-    <article id="post-Node/Tags/Node Server/6.4 Node创建Web服务器" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/12/Node/Tags/Node%20Server/6.4%20Node%E5%88%9B%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="article-date">
-  <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/12/Node/Tags/Node%20Server/6.4%20Node%E5%88%9B%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8/">6.4 Node创建Web服务器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="1-创建Web服务器"><a href="#1-创建Web服务器" class="headerlink" title="1. 创建Web服务器"></a>1. 创建Web服务器</h4><ol>
-<li><p>引入系统模块http</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引用系统模块</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建web服务器</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建web服务器</span></span><br><span class="line"><span class="keyword">const</span> app = http.createServer();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>监听端口</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 监听3000端口</span></span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;服务器已启动，监听3000端口，请访问 localhost:3000&#x27;</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>响应请求</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 当客户端发送请求的时候</span></span><br><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">//  响应</span></span><br><span class="line">      res.end(<span class="string">&#x27;&lt;h1&gt;hi, user&lt;/h1&gt;&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#x75;&#97;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.4%20Node%E5%88%9B%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="cki0cmgrg000m7tiifcuveox2" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tags/Node Server/6.5 HTTP通信协议与响应处理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/12/Node/Tags/Node%20Server/6.5%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/" class="article-date">
-  <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/12/Node/Tags/Node%20Server/6.5%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/">6.5 HTTP通信协议与响应处理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="1-http通信协议"><a href="#1-http通信协议" class="headerlink" title="1. http通信协议"></a>1. http通信协议</h4><ul>
-<li><p>超文本传输协议(英文：HyperText Transfer Protocol，缩写：HTTP)</p>
-</li>
-<li><p>规定了如何从网站服务器传输超文本到本地浏览器;</p>
-</li>
-<li><p>基于客户端服务器架构工作，是客户端(用户)和服务器端(网站)请求和应答的标准</p>
-</li>
-</ul>
-<h4 id="2-报文"><a href="#2-报文" class="headerlink" title="2. 报文"></a>2. 报文</h4><ul>
-<li><p>在HTTP请求和响应的过程中传递的数据块就叫报文,包括要传送的数据和一些附加信息，并且要遵守规定好的格式</p>
-<p><img src="imgs/%E6%8A%A5%E6%96%87.jpg" alt="报文原理图"></p>
-</li>
-</ul>
-<h4 id="3-请求报文"><a href="#3-请求报文" class="headerlink" title="3. 请求报文"></a>3. 请求报文</h4><ol>
-<li><p>请求方式: Request Method</p>
-<ul>
-<li>GET:   请求数据</li>
-<li>POST:  发送数据</li>
-</ul>
-</li>
-<li><p>请求地址: Request URL</p>
-<ul>
-<li><p>代码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  req.headers  <span class="comment">// 获取请求报文</span></span><br><span class="line">  req.url      <span class="comment">// 获取请求地址</span></span><br><span class="line">  req.method   <span class="comment">// 获取请求方法</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>获取请求信息</p>
-<ul>
-<li>获取请求地址:  req.url</li>
-<li>获取请求方式： req.method</li>
-<li>获取请求信息： req.headers</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = http.createServer()</span><br><span class="line"></span><br><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 1. 获取请求地址: req.url</span></span><br><span class="line">  <span class="built_in">console</span>.log(req.url);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 2. 获取请求方式： req.method</span></span><br><span class="line">  <span class="built_in">console</span>.log(req.method);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 3. 获取请求信息： req.headers</span></span><br><span class="line">  <span class="built_in">console</span>.log(req.headers);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 4. 获取请求信息： req.headers[&#x27;accept&#x27;]</span></span><br><span class="line">  <span class="built_in">console</span>.log(req.headers[<span class="string">&#x27;accept&#x27;</span>])</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> port = process.env.NODE_ENV || <span class="number">3000</span>;</span><br><span class="line">app.listen(port,()= &gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Server listen on port: <span class="subst">$&#123;port&#125;</span>...`</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>获取get请求信息</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(req.query)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取post请求信息</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(req.body)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="4-响应报文"><a href="#4-响应报文" class="headerlink" title="4. 响应报文"></a>4. 响应报文</h4><ol>
-<li><p>HTTP状态码</p>
-<ul>
-<li><p>200 请求成功</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">   res.writeHead(<span class="number">200</span>,&#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;text/html;charset=utf8&#x27;</span>&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-<li><p>404 请求的资源没有被找到</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">   res.writeHead(<span class="number">400</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>500 服务器端错误</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">   res.writeHead(<span class="number">500</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-<li><p>400 客户端请求有语法错误</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">   res.writeHead(<span class="number">404</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>内容类型</p>
-<ul>
-<li><p>text/html</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 设置响应报文</span></span><br><span class="line">  res.writeHead(<span class="number">200</span>, &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;text/html; charset=utf8&#x27;</span>&#125;);</span><br><span class="line">  <span class="function"><span class="title">if</span>(<span class="params">req.method === <span class="string">&quot;GET&quot;</span></span>)</span>&#123;</span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">req.url == <span class="string">&#x27;/index&#x27;</span> || req.url == <span class="string">&#x27;/&#x27;</span></span>)</span>&#123;</span><br><span class="line">      res.end(<span class="string">&quot;&lt;h2&gt;Welcom to HTML5!欢迎来到HTML5&lt;/h2&gt;&quot;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="function"><span class="title">if</span>(<span class="params">req.url == <span class="string">&#x27;/css&#x27;</span></span>)</span> &#123;</span><br><span class="line">      res.end(<span class="string">&quot;&lt;h2&gt;Welcom to CSS3!&lt;/h2&gt;&quot;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      res.end(<span class="string">&quot;Not found!&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;<span class="keyword">else</span> <span class="function"><span class="title">if</span>(<span class="params">req.method === <span class="string">&quot;POST&quot;</span></span>)</span>&#123;</span><br><span class="line">    res.end(<span class="string">&quot;Hello World!&quot;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-<li><p>text/css</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 设置响应报文</span></span><br><span class="line">  res.writeHead(<span class="number">200</span>, &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;text/css;charset=utf8&#x27;</span>&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>application/javascript</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 设置响应报文</span></span><br><span class="line">  res.writeHead(<span class="number">200</span>, &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/javascript;charset=utf8&#x27;</span>&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-<li><p>image/jpg</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 设置响应报文</span></span><br><span class="line">  res.writeHead(<span class="number">200</span>, &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;image/jpg;charset=utf8&#x27;</span>&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>application/json</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 设置响应报文</span></span><br><span class="line">  res.writeHead(<span class="number">200</span>, &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/json;charset=utf8&#x27;</span>&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3></li>
-</ul>
-</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#56;&#x38;&#x38;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#56;&#x38;&#x38;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.5%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/" data-id="cki0cmgrh000n7tiifjy65k07" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tags/Node Server/6.6 Node请求参数" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/12/Node/Tags/Node%20Server/6.6%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/" class="article-date">
-  <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/12/Node/Tags/Node%20Server/6.6%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/">6.6 Node请求参数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="1-请求参数"><a href="#1-请求参数" class="headerlink" title="1. 请求参数"></a>1. 请求参数</h4><ol>
-<li>客户端向服务器端发送请求时，有时需要携带一些客户信息;</li>
-<li>客户信息需要通过请求参数的形式传递到服务器端，比如登录操作</li>
-</ol>
-<h4 id="2-GET请求参数"><a href="#2-GET请求参数" class="headerlink" title="2. GET请求参数"></a>2. GET请求参数</h4><ul>
-<li><p>参数被放置在浏览器地址栏中，例如：<a target="_blank" rel="noopener" href="http://localhost:3000/?name=zhangsan&amp;age=20">http://localhost:3000/?name=zhangsan&amp;age=20</a></p>
-</li>
-<li><p>参数获取需要借助系统模块url，url模块用来处理url地址</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="comment">// 导入url系统模块 用于处理url地址</span></span><br><span class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = http.createServer();</span><br><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 将url路径的各个部分解析出来并返回对象</span></span><br><span class="line">        <span class="comment">// true 代表将参数解析为对象格式</span></span><br><span class="line">    <span class="keyword">let</span> &#123;query&#125; = url.parse(req.url, <span class="literal">true</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(query);</span><br><span class="line">&#125;);</span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-POST请求参数"><a href="#3-POST请求参数" class="headerlink" title="3. POST请求参数"></a>3. POST请求参数</h4><ul>
-<li><p>参数被放置在请求体中进行传输;</p>
-</li>
-<li><p>获取POST参数需要使用data事件和end事件;</p>
-</li>
-<li><p>使用querystring系统模块将参数转换为对象格式</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 导入系统模块querystring 用于将HTTP参数转换为对象格式</span></span><br><span class="line"><span class="keyword">const</span> querystring = <span class="built_in">require</span>(<span class="string">&#x27;querystring&#x27;</span>);</span><br><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> postData = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="comment">// 监听参数传输事件</span></span><br><span class="line">    req.on(<span class="string">&#x27;data&#x27;</span>, <span class="function">(<span class="params">chunk</span>) =&gt;</span> postData += chunk;);</span><br><span class="line">    <span class="comment">// 监听参数传输完毕事件</span></span><br><span class="line">    req.on(<span class="string">&#x27;end&#x27;</span>, <span class="function">() =&gt;</span> &#123; </span><br><span class="line">        <span class="built_in">console</span>.log(querystring.parse(postData)); </span><br><span class="line">    &#125;); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#x75;&#x61;&#110;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#111;&#x6d;">&#121;&#x75;&#x61;&#110;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.6%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/" data-id="cki0cmgri000o7tii09j0dpzr" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tags/Node Server/6.7 Node路由设置" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/12/Node/Tags/Node%20Server/6.7%20Node%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/" class="article-date">
-  <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/12/Node/Tags/Node%20Server/6.7%20Node%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/">6.7 Node路由设置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="1-路由"><a href="#1-路由" class="headerlink" title="1. 路由"></a>1. 路由</h4><ol>
-<li><p>路由是指客户端请求地址与服务器端程序代码的对应关系;</p>
-</li>
-<li><p>简单的说，就是请求什么响应什么</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="http://localhost:3000/index">http://localhost:3000/index</a></li>
-<li><a target="_blank" rel="noopener" href="http://localhost:3000/login">http://localhost:3000/login</a></li>
-</ul>
-<p><img src="imgs/%E8%B7%AF%E7%94%B1.jpg" alt="路由"></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 当客户端发来请求的时候</span></span><br><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 获取客户端的请求路径</span></span><br><span class="line">    <span class="keyword">let</span> &#123; pathname &#125; = url.parse(req.url);</span><br><span class="line">    <span class="keyword">if</span> (pathname == <span class="string">&#x27;/&#x27;</span> || pathname == <span class="string">&#x27;/index&#x27;</span>) &#123;</span><br><span class="line">        res.end(<span class="string">&#x27;欢迎来到首页&#x27;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (pathname == <span class="string">&#x27;/list&#x27;</span>) &#123;</span><br><span class="line">        res.end(<span class="string">&#x27;欢迎来到列表页页&#x27;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        res.end(<span class="string">&#x27;抱歉, 您访问的页面出游了&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#x38;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;">&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#x38;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.7%20Node%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/" data-id="cki0cmgrj000p7tii8d48228w" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tags/Node Server/6.8Node静态资源" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/12/Node/Tags/Node%20Server/6.8Node%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/" class="article-date">
-  <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/12/Node/Tags/Node%20Server/6.8Node%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/">6.8Node静态资源</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><ol>
-<li><p>服务器端不需要处理，可以直接响应给客户端的资源就是静态资源;</p>
-</li>
-<li><p>例如CSS、JavaScript、image文件</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="http://www.dolphin.com/images/logo.png">http://www.dolphin.com/images/logo.png</a></li>
-</ul>
-</li>
-</ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#116;&#108;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#116;&#108;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.8Node%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/" data-id="cki0cmgrk000q7tii8dscdhw1" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tags/Node Server/6.9 Node动态资源" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/" class="article-date">
-  <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/">6.9 Node动态资源</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="1-动态资源"><a href="#1-动态资源" class="headerlink" title="1. 动态资源"></a>1. 动态资源</h4><ol>
-<li><p>相同的请求地址不同的响应资源，这种资源就是动态资源</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="http://www.dolphin.com/article?id=1">http://www.dolphin.com/article?id=1</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.dolphin.com/article?id=2">http://www.dolphin.com/article?id=2</a></li>
-</ul>
-</li>
-</ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;">&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/" data-id="cki0cmgro000r7tii5nbhgqcx" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -2248,7 +2269,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">22</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
     </div>
   </div>
 
@@ -2258,7 +2279,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">261</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">267</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 

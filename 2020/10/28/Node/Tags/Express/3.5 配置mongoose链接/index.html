@@ -7,15 +7,15 @@
   
   <title>3.5 配置Mongoose链接 | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.项目分析1. 入口文件引入connect.js文件 app.js 1const connect &#x3D; require(&amp;#x27;&#x2F;config&#x2F;connect&amp;#x27;)    2. 链接MongooDB Config目录   connect.js文件 12345678&#x2F;&#x2F;1.import mongoose moduleconst mongoose &#x3D; require(&amp;#x27;mongo">
+  <meta name="description" content="1.项目分析1. 入口文件引入connect.js文件 app.js 1const connect &#x3D; require(&amp;#x27;.&#x2F;config&#x2F;connect&amp;#x27;)    2. 链接MongooDB数据库 Config目录   connect.js文件 12345678910111213141516171819&#x2F;&#x2F;1.import mongoose moduleconst mongo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="3.5 配置Mongoose链接">
 <meta property="og:url" content="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="1.项目分析1. 入口文件引入connect.js文件 app.js 1const connect &#x3D; require(&amp;#x27;&#x2F;config&#x2F;connect&amp;#x27;)    2. 链接MongooDB Config目录   connect.js文件 12345678&#x2F;&#x2F;1.import mongoose moduleconst mongoose &#x3D; require(&amp;#x27;mongo">
+<meta property="og:description" content="1.项目分析1. 入口文件引入connect.js文件 app.js 1const connect &#x3D; require(&amp;#x27;.&#x2F;config&#x2F;connect&amp;#x27;)    2. 链接MongooDB数据库 Config目录   connect.js文件 12345678910111213141516171819&#x2F;&#x2F;1.import mongoose moduleconst mongo">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-03T03:12:42.918Z">
+<meta property="article:modified_time" content="2020-12-03T03:34:31.391Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="Node">
 <meta name="twitter:card" content="summary">
@@ -91,21 +91,21 @@
       
         <h3 id="1-项目分析"><a href="#1-项目分析" class="headerlink" title="1.项目分析"></a>1.项目分析</h3><h4 id="1-入口文件引入connect-js文件"><a href="#1-入口文件引入connect-js文件" class="headerlink" title="1. 入口文件引入connect.js文件"></a>1. 入口文件引入connect.js文件</h4><ul>
 <li><p>app.js</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> connect = <span class="built_in">require</span>(<span class="string">&#x27;/config/connect&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> connect = <span class="built_in">require</span>(<span class="string">&#x27;./config/connect&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h4 id="2-链接MongooDB"><a href="#2-链接MongooDB" class="headerlink" title="2. 链接MongooDB"></a>2. 链接MongooDB</h4><ol>
+<h4 id="2-链接MongooDB数据库"><a href="#2-链接MongooDB数据库" class="headerlink" title="2. 链接MongooDB数据库"></a>2. 链接MongooDB数据库</h4><ol>
 <li>Config目录</li>
 </ol>
 <ul>
 <li><p>connect.js文件</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.import mongoose module</span></span><br><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.connect to mongoDB</span></span><br><span class="line">mongoose.connect(<span class="string">&#x27;mongodb://localhost:27017/blog&#x27;</span>,</span><br><span class="line">                &#123;<span class="attr">useUnifiedTopology</span>:<span class="literal">true</span>,<span class="attr">useNewUrlParser</span>:<span class="literal">true</span>&#125;)</span><br><span class="line">                .then(<span class="function">()=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;Success connecting to MongoDB!&#x27;</span>)&#125;)</span><br><span class="line">                .catch(<span class="function">()=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;Failed to connect MongoDB!&#x27;</span>)&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.import mongoose module</span></span><br><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.connect to mongoDB</span></span><br><span class="line">mongoose.connect(</span><br><span class="line">  <span class="string">&#x27;mongodb://localhost:27017/blog&#x27;</span>,</span><br><span class="line">  &#123;</span><br><span class="line">    useUnifiedTopology:<span class="literal">true</span>,</span><br><span class="line">    useNewUrlParser:<span class="literal">true</span>,</span><br><span class="line">    useCreateIndex: <span class="literal">true</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function">()=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;Success connecting to MongoDB!&#x27;</span>)&#125;)</span><br><span class="line">  .catch(<span class="function">()=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;Failed to connect MongoDB!&#x27;</span>)&#125;)</span><br><span class="line">  <span class="comment">// or</span></span><br><span class="line">  cont db = mongoose.connection</span><br><span class="line">  db.on(<span class="string">&#x27;error&#x27;</span>,<span class="built_in">console</span>.error.bind(<span class="built_in">console</span>,<span class="string">&#x27;connection error:&#x27;</span>))</span><br><span class="line">  db.once(<span class="string">&#x27;open&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;Datebase is Ok!&#x27;</span>)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#110;&#x6d;&#105;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#x75;&#x61;&#110;&#x6d;&#105;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#109;&#x69;&#110;&#56;&#56;&#56;&#x38;&#64;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#107;&#x2e;&#99;&#111;&#x6d;">&#x79;&#x75;&#97;&#x6e;&#109;&#x69;&#110;&#56;&#56;&#56;&#x38;&#64;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#107;&#x2e;&#99;&#111;&#x6d;</a></p>
 
       
     </div>
@@ -131,9 +131,9 @@
     </a>
   
   
-    <a href="/2020/10/25/Full%20Stack/Tutorial/1.0-Full%20Stack%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E6%9C%80%E6%96%B0%E6%95%99%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/10/28/Node/Tags/Express/3.6%20Express%E6%A8%A1%E6%9D%BF%E6%96%87%E4%BB%B6/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">1.0-Full Stack全栈开发最新教程</div>
+      <div class="article-nav-title">3.6 Express模板文件</div>
     </a>
   
 </nav>
@@ -159,7 +159,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">22</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
     </div>
   </div>
 
@@ -169,7 +169,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">261</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">267</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 
