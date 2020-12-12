@@ -5,20 +5,20 @@
   
 
   
-  <title>South Mountain Training</title>
+  <title>Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="teaching for web development">
 <meta property="og:type" content="website">
-<meta property="og:title" content="South Mountain Training">
+<meta property="og:title" content="Coding Your Wonderful Life">
 <meta property="og:url" content="https://weboyster.github.io/page/11/index.html">
-<meta property="og:site_name" content="South Mountain Training">
+<meta property="og:site_name" content="Coding Your Wonderful Life">
 <meta property="og:description" content="teaching for web development">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="HTML5 CSS3 JavaScript Java Python C++ Node Express Nestjs MongoDB MySQL">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="South Mountain Training" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Coding Your Wonderful Life" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -39,7 +39,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">South Mountain Training</a>
+        <a href="/" id="logo">Coding Your Wonderful Life</a>
       </h1>
       
     </div>
@@ -66,156 +66,6 @@
 </header>
       <div class="outer">
         <section id="main">
-  
-    <article id="post-Git/Local Repostories/1. Git 创建与管理本地仓库" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">1. Git 创建与管理本地仓库</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-创建本地仓库"><a href="#1-创建本地仓库" class="headerlink" title="1.创建本地仓库"></a>1.创建本地仓库</h4><ol>
-<li><p>创建工作区(Work Space)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir project &amp; <span class="built_in">cd</span> project</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>初始化本地仓库()</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>新建文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch index.html</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查询状态</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将项目添加到暂存区</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将暂存区项目提交至本地仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;&lt;message&gt;&quot;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="2-创建与管理分区"><a href="#2-创建与管理分区" class="headerlink" title="2.创建与管理分区"></a>2.创建与管理分区</h4><ol>
-<li><p>查询分支</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建分支： dev</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch dev</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>切换分支</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout dev</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>合并分支：主分支合并 dev 分支</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge dev</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="3-参考文当"><a href="#3-参考文当" class="headerlink" title="3.参考文当"></a>3.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#109;&#x69;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;">&#x79;&#117;&#x61;&#110;&#109;&#x69;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" data-id="cki2ui6fq0000xxii64snawev" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git/Local Repostories/4.Git command 操作命令" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Local%20Repostories/4.Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/4.Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/">4.Git Command 操作命令</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-初始化操作命令"><a href="#1-初始化操作命令" class="headerlink" title="1.初始化操作命令"></a>1.初始化操作命令</h4><ul>
-<li><p>初始化操作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-查看资源操作命令"><a href="#2-查看资源操作命令" class="headerlink" title="2.查看资源操作命令"></a>2.查看资源操作命令</h4><ul>
-<li><p>查看资源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看隐藏资源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>分屏查看资源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ll | less</span><br><span class="line">ls -l | less</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看 git 本地仓库的子目录和文件</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll .git/</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-Git-设置签名"><a href="#3-Git-设置签名" class="headerlink" title="3. Git 设置签名"></a>3. Git 设置签名</h4><ul>
-<li>Git 设置系统签名</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name andy</span><br><span class="line">git config --global user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>Git 设置项目签名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name andy</span><br><span class="line">git config user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="4-Git-删除更改退回到修改前的状态"><a href="#4-Git-删除更改退回到修改前的状态" class="headerlink" title="4. Git 删除更改退回到修改前的状态"></a>4. Git 删除更改退回到修改前的状态</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-参考文当"><a href="#5-参考文当" class="headerlink" title="5.参考文当"></a>5.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#110;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#107;&#x2e;&#99;&#111;&#x6d;">&#x79;&#x75;&#97;&#110;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#107;&#x2e;&#99;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/4.Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" data-id="cki2ui6fv0001xxii48pqa58f" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
   
     <article id="post-Git/Local Repostories/5.Git日志与回退版本号" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -291,12 +141,12 @@
 </li>
 </ul>
 <h4 id="4-参考文当"><a href="#4-参考文当" class="headerlink" title="4. 参考文当"></a>4. 参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#111;&#107;&#46;&#99;&#111;&#109;">&#121;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#111;&#107;&#46;&#99;&#111;&#109;</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#110;&#109;&#105;&#110;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;">&#x79;&#x75;&#97;&#110;&#109;&#105;&#110;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/5.Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/" data-id="cki2ui6fy0003xxii4ztu2if7" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/5.Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/" data-id="ckil24r3e001vr3ii08ss29qc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
@@ -361,16 +211,113 @@
 </li>
 </ul>
 <h4 id="5-参考文当"><a href="#5-参考文当" class="headerlink" title="5.参考文当"></a>5.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#97;&#x6e;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#111;&#x6d;">&#121;&#117;&#97;&#x6e;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#111;&#x6d;</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#99;&#111;&#109;">&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#99;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/6.Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/" data-id="cki2ui6g00005xxii3hs35nmg" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/6.Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/" data-id="ckil24r3g001xr3iihbzeaqzj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
 
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Git/Local Repostories/7. Git常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/25/Git/Local%20Repostories/7.%20Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/7.%20Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">7. Git常用命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1. 常用命令"></a>1. 常用命令</h3><h4 id="1-Git常用命令及方法大全"><a href="#1-Git常用命令及方法大全" class="headerlink" title="1.Git常用命令及方法大全"></a>1.Git常用命令及方法大全</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/web_csdn_share/article/details/79243308">[1.Git常用命令及方法大全]</a></p>
+<h3 id="2-参考文当"><a href="#2-参考文当" class="headerlink" title="2.参考文当"></a>2.参考文当</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#x79;&#x75;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#x6d;">&#x79;&#x75;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/7.%20Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-id="ckil24r3h001zr3iib9beet0f" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Full Stack/Tutorial/1.0-Full Stack全栈开发最新教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/25/Full%20Stack/Tutorial/1.0-Full%20Stack%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E6%9C%80%E6%96%B0%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Full-Stack-Development/">Full Stack Development</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/25/Full%20Stack/Tutorial/1.0-Full%20Stack%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E6%9C%80%E6%96%B0%E6%95%99%E7%A8%8B/">1.0-Full Stack全栈开发最新教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-HTML初探"><a href="#1-HTML初探" class="headerlink" title="1. HTML初探"></a>1. HTML初探</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%B8%80%E3%80%81HTML%20%E5%88%9D%E6%8E%A2/">[一、HTML 初探]</a></p>
+<h4 id="2-HTML元素"><a href="#2-HTML元素" class="headerlink" title="2. HTML元素"></a>2. HTML元素</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="3-VS-Code初探"><a href="#3-VS-Code初探" class="headerlink" title="3. VS Code初探"></a>3. VS Code初探</h4><h4 id="4-CSS初探"><a href="#4-CSS初探" class="headerlink" title="4. CSS初探"></a>4. CSS初探</h4><!-- #### 5. JavaScript初探
+
+#### 6. Express初探
+
+#### 7. Less初探
+
+#### 8. MongoDB初探
+
+#### 9. ES6初探
+
+#### 10. TypeScript初探 -->
+
+<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a href="">[VS Code 安装、配置与使用]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6.联系方式"></a>6.联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/25/Full%20Stack/Tutorial/1.0-Full%20Stack%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E6%9C%80%E6%96%B0%E6%95%99%E7%A8%8B/" data-id="ckil24r3k0023r3iicwi19oze" class="article-share-link">Share</a>
+      
+      
     </footer>
   </div>
   
@@ -452,22 +399,22 @@
 <li>git add README.md</li>
 <li>git commit -m “first commit”</li>
 <li>git branch -M main</li>
-<li>git remote add origin <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#105;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;">&#103;&#105;&#116;&#64;&#103;&#105;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;</a>:web-oyster/blog_for_web-master.git</li>
+<li>git remote add origin <a href="mailto:&#103;&#x69;&#116;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;">&#103;&#x69;&#116;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;</a>:web-oyster/blog_for_web-master.git</li>
 <li>注释： web-oyster 是 github 用户名,blog_for_web-master 是远程仓库名</li>
 <li>git push -u origin main</li>
 </ul>
 <h5 id="2-push-an-existing-repository-from-the-command-line"><a href="#2-push-an-existing-repository-from-the-command-line" class="headerlink" title="2. push an existing repository from the command line"></a>2. push an existing repository from the command line</h5><ul>
-<li>git remote add origin <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:web-oyster/blog_for_web-master.git</li>
+<li>git remote add origin <a href="mailto:&#103;&#x69;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#98;&#46;&#99;&#x6f;&#x6d;">&#103;&#x69;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#98;&#46;&#99;&#x6f;&#x6d;</a>:web-oyster/blog_for_web-master.git</li>
 <li>git branch -M main</li>
 <li>git push -u origin main</li>
 </ul>
 <h4 id="7-参考文当"><a href="#7-参考文当" class="headerlink" title="7.参考文当"></a>7.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#46;&#x63;&#111;&#x6d;">&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#46;&#x63;&#111;&#x6d;</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#109;&#105;&#x6e;&#56;&#56;&#56;&#56;&#64;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#109;">&#x79;&#117;&#x61;&#110;&#109;&#105;&#x6e;&#56;&#56;&#56;&#56;&#64;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" data-id="cki2ui6g10007xxii8utjgmai" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" data-id="ckil24r3t002hr3ii2r3v40br" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
@@ -505,7 +452,7 @@
 <li><p>地址组成</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git@github.com:web-oyster/html-elements.git</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#105;&#116;&#x40;&#103;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;</a>： git 网址</p>
+<li><p><a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#x69;&#116;&#64;&#103;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a>： git 网址</p>
 </li>
 <li><p>web-oyster： github 账号</p>
 </li>
@@ -532,12 +479,12 @@
 </ul>
 <p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[2.快速创建 Github 远程仓库]</a></p>
 <h4 id="3-参考文当"><a href="#3-参考文当" class="headerlink" title="3.参考文当"></a>3.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#x38;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#x63;&#111;&#109;">&#121;&#x75;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#x38;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#x63;&#111;&#109;</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#64;&#111;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x75;&#97;&#x6e;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#64;&#111;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Remote%20Repostories/3.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/" data-id="cki2ui6g6000axxii4uinauz4" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Remote%20Repostories/3.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/" data-id="ckil24r3v002kr3ii1ath5smp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
@@ -549,12 +496,16 @@
 
 
   
-    <article id="post-Git/Local Repostories/7. Git常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Git/Tutorial/Git教程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/25/Git/Local%20Repostories/7.%20Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="article-date">
+    <a href="/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/" class="article-date">
   <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Git/">Git</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -563,7 +514,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/7.%20Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">7. Git常用命令</a>
+      <a class="article-title" href="/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">Git教程</a>
     </h1>
   
 
@@ -571,18 +522,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1. 常用命令"></a>1. 常用命令</h3><h4 id="1-Git常用命令及方法大全"><a href="#1-Git常用命令及方法大全" class="headerlink" title="1.Git常用命令及方法大全"></a>1.Git常用命令及方法大全</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/web_csdn_share/article/details/79243308">[1.Git常用命令及方法大全]</a></p>
-<h3 id="2-参考文当"><a href="#2-参考文当" class="headerlink" title="2.参考文当"></a>2.参考文当</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#x79;&#117;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#x38;&#x40;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#117;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#x38;&#x40;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+        <h4 id="1-Git-创建与管理本地仓库"><a href="#1-Git-创建与管理本地仓库" class="headerlink" title="1. Git 创建与管理本地仓库"></a>1. Git 创建与管理本地仓库</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">[1. Git 创建与管理本地仓库]</a></p>
+<h4 id="2-快速创建-Github-远程仓库"><a href="#2-快速创建-Github-远程仓库" class="headerlink" title="2.快速创建 Github 远程仓库"></a>2.快速创建 Github 远程仓库</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[2.快速创建 Github 远程仓库]</a></p>
+<h4 id="3-Git-远程仓库管理"><a href="#3-Git-远程仓库管理" class="headerlink" title="3.Git 远程仓库管理"></a>3.Git 远程仓库管理</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Remote%20Repostories/3.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">[3.Git 远程仓库管理]</a></p>
+<h4 id="4-Git-command-操作命令"><a href="#4-Git-command-操作命令" class="headerlink" title="4.Git command 操作命令"></a>4.Git command 操作命令</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Local%20Repostories/4.Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/">[4.Git command 操作命令]</a></p>
+<h4 id="5-Git日志与回退版本号"><a href="#5-Git日志与回退版本号" class="headerlink" title="5.Git日志与回退版本号"></a>5.Git日志与回退版本号</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Local%20Repostories/5.Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/">[5.Git日志与回退版本号]</a></p>
+<h4 id="6-Git本地仓库设置签名"><a href="#6-Git本地仓库设置签名" class="headerlink" title="6.Git本地仓库设置签名"></a>6.Git本地仓库设置签名</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Local%20Repostories/6.Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/">[6.Git本地仓库设置签名]</a></p>
+<h4 id="7-Git常用命令"><a href="#7-Git常用命令" class="headerlink" title="7. Git常用命令"></a>7. Git常用命令</h4><p><a href="">[7. Git常用命令]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#x38;&#x38;&#64;&#x6f;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#x2e;&#99;&#111;&#109;">&#x79;&#x75;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#x38;&#x38;&#64;&#x6f;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#x2e;&#99;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/7.%20Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-id="cki4es6mh0000gkiievsd4y2d" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/" data-id="ckil24r3w002mr3ii13pwhzot" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
-
     </footer>
   </div>
   
@@ -622,7 +576,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Java/Tutorial/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" data-id="ckhuajgie002hwoii3dcq9u3g" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/24/Java/Tutorial/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" data-id="ckil24r3z002qr3ii35y42o0i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -665,7 +619,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E6%95%99%E7%A8%8B/" data-id="ckhuajgiv0032woiiaml4fw75" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E6%95%99%E7%A8%8B/" data-id="ckil24r4e003ar3iiavnrb4q1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -722,7 +676,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" data-id="ckhuajgiw0035woii7cdddex6" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" data-id="ckil24r4f003cr3iid1zq57vc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -784,58 +738,16 @@
 <p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">[NPM 镜像源配置]</a></p>
 <h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
 <p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email：<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#x6d;&#x69;&#110;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#117;&#x61;&#x6e;&#x6d;&#x69;&#110;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email：<a href="mailto:&#121;&#117;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#x38;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#111;&#x6d;">&#121;&#117;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#x38;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#111;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Ubuntu/3.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" data-id="ckhuajgj6003lwoiie8gsggju" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Ubuntu/3.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" data-id="ckil24r4p003ur3ii6uzkhtzz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Python/Tutorial/Python基础教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">Python基础教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" data-id="ckhuajgjr004nwoii070hc4v9" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -952,58 +864,16 @@
 <p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">[NPM 镜像源配置]</a></p>
 <h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
 <p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#110;&#56;&#x38;&#x38;&#x38;&#64;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;">&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#110;&#56;&#x38;&#x38;&#x38;&#64;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email：<a href="mailto:&#121;&#x75;&#97;&#110;&#x6d;&#x69;&#110;&#x38;&#x38;&#56;&#x38;&#64;&#111;&#117;&#116;&#x6c;&#111;&#111;&#107;&#46;&#99;&#x6f;&#109;">&#121;&#x75;&#97;&#110;&#x6d;&#x69;&#110;&#x38;&#x38;&#56;&#x38;&#64;&#111;&#117;&#116;&#x6c;&#111;&#111;&#107;&#46;&#99;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Ubuntu/4.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" data-id="ckhuajgk00054woiifcrv7k0q" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Ubuntu/4.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" data-id="ckil24r4r003zr3ii71fvbutu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Vue/Tutorial/Vue教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Vue/">Vue</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/">Vue教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/" data-id="ckhuajglv006rwoiihbc5bozi" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -1042,12 +912,59 @@
 <h4 id="四、Koa教程"><a href="#四、Koa教程" class="headerlink" title="四、Koa教程"></a>四、Koa教程</h4><p><a href="">[四、Koa教程]</a></p>
 <h4 id="五、Nest教程"><a href="#五、Nest教程" class="headerlink" title="五、Nest教程"></a>五、Nest教程</h4><p><a href="">[五、Nest教程]</a></p>
 <h4 id="六、Node-Server教程"><a href="#六、Node-Server教程" class="headerlink" title="六、Node Server教程"></a>六、Node Server教程</h4><p><a href="">[六、Node Server教程]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#56;&#56;&#x40;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#x75;&#97;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#56;&#56;&#x40;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p>Email：<a href="mailto:&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/" data-id="cki0aynnl0001muiig0nwdudc" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/" data-id="ckil24r52004hr3iifk9r0p79" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Tutorial/三、Expess 教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Node/">Node</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">三、Expess 教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="3-1-Express创建项目目录"><a href="#3-1-Express创建项目目录" class="headerlink" title="3.1  Express创建项目目录"></a>3.1  Express创建项目目录</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.1%20%20Express%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95/">[3.1  Express创建项目目录]</a></p>
+<h4 id="3-2-Express创建服务器"><a href="#3-2-Express创建服务器" class="headerlink" title="3.2 Express创建服务器"></a>3.2 Express创建服务器</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.2%20Express%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/">[3.2 Express创建服务器]</a></p>
+<h4 id="3-3-Express构建模块化路由"><a href="#3-3-Express构建模块化路由" class="headerlink" title="3.3 Express构建模块化路由"></a>3.3 Express构建模块化路由</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.3%20Express%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E8%B7%AF%E7%94%B1/">[3.3 Express构建模块化路由]</a></p>
+<h4 id="3-4-Express配置静态资源"><a href="#3-4-Express配置静态资源" class="headerlink" title="3.4 Express配置静态资源"></a>3.4 Express配置静态资源</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.4%20%20Express%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/">[3.4 Express配置静态资源]</a></p>
+<h4 id="3-5-配置mongoose链接"><a href="#3-5-配置mongoose链接" class="headerlink" title="3.5 配置mongoose链接"></a>3.5 配置mongoose链接</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/">[3.5 配置mongoose链接]</a></p>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/">[一、Node教程]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#x61;&#x6e;&#109;&#105;&#110;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#46;&#99;&#x6f;&#109;">&#121;&#117;&#x61;&#x6e;&#109;&#105;&#110;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/" data-id="ckil24r54004jr3ii6ouo4ph0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1088,12 +1005,151 @@
 <h4 id="2-3-NPM-镜像源配置"><a href="#2-3-NPM-镜像源配置" class="headerlink" title="2.3 NPM 镜像源配置"></a>2.3 NPM 镜像源配置</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tags/Npm/2.3%20%20NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">[2.3 NPM 镜像源配置]</a></p>
 <h4 id="2-4-Noder-Serve-静态服务器的安装"><a href="#2-4-Noder-Serve-静态服务器的安装" class="headerlink" title="2.4 Noder Serve 静态服务器的安装"></a>2.4 Noder Serve 静态服务器的安装</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tags/Npm/2.4%20Noder%20%E9%9D%99%E6%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85/">[2.4 Noder Serve 静态服务器的安装]</a></p>
 <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a href="%5B%5B%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B%5D%5D(https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/)">[一、Node教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#97;&#x6e;&#109;&#105;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#x6f;&#117;&#116;&#108;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#121;&#117;&#97;&#x6e;&#109;&#105;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#x6f;&#117;&#116;&#108;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#110;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#109;">&#x79;&#x75;&#97;&#110;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/" data-id="cki0aynnn0002muii59kmaqcr" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/" data-id="ckil24r55004nr3ii0eju0op5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Tutorial/六、Node Server教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Node/">Node</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">六、Node Server教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="6-1-Node的安装与环境变量配置"><a href="#6-1-Node的安装与环境变量配置" class="headerlink" title="6.1 Node的安装与环境变量配置"></a>6.1 Node的安装与环境变量配置</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.1%20Node%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/">[6.1 Node的安装与环境变量配置]</a></p>
+<h4 id="6-2-Node的模块化开发"><a href="#6-2-Node的模块化开发" class="headerlink" title="6.2 Node的模块化开发"></a>6.2 Node的模块化开发</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.2%20Node%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/">[6.2 Node的模块化开发]</a></p>
+<h4 id="6-3-Node服务器端基本概念"><a href="#6-3-Node服务器端基本概念" class="headerlink" title="6.3 Node服务器端基本概念"></a>6.3 Node服务器端基本概念</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.3%20Node%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">[6.3 Node服务器端基本概念]</a></p>
+<h4 id="6-4-Node创建Web服务器"><a href="#6-4-Node创建Web服务器" class="headerlink" title="6.4 Node创建Web服务器"></a>6.4 Node创建Web服务器</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.4%20Node%E5%88%9B%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8/">[6.4 Node创建Web服务器]</a></p>
+<h4 id="6-5-HTTP通信协议与响应处理"><a href="#6-5-HTTP通信协议与响应处理" class="headerlink" title="6.5 HTTP通信协议与响应处理"></a>6.5 HTTP通信协议与响应处理</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.5%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/">[6.5 HTTP通信协议与响应处理]</a></p>
+<h4 id="6-6-Node请求参数"><a href="#6-6-Node请求参数" class="headerlink" title="6.6 Node请求参数"></a>6.6 Node请求参数</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.6%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/">[6.6 Node请求参数]</a></p>
+<h4 id="6-7-Node路由设置"><a href="#6-7-Node路由设置" class="headerlink" title="6.7 Node路由设置"></a>6.7 Node路由设置</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.7%20Node%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/">[6.7 Node路由设置]</a></p>
+<h4 id="6-8Node静态资源"><a href="#6-8Node静态资源" class="headerlink" title="6.8Node静态资源"></a>6.8Node静态资源</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.8Node%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/">[6.8Node静态资源]</a></p>
+<h4 id="6-9-Node动态资源"><a href="#6-9-Node动态资源" class="headerlink" title="6.9 Node动态资源"></a>6.9 Node动态资源</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/">[6.9 Node动态资源]</a></p>
+<h4 id="6-10-Node回调函数"><a href="#6-10-Node回调函数" class="headerlink" title="6.10 Node回调函数"></a>6.10 Node回调函数</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.10%20Node%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/">[6.10 Node回调函数]</a></p>
+<h4 id="6-11-Node异步编程"><a href="#6-11-Node异步编程" class="headerlink" title="6.11 Node异步编程"></a>6.11 Node异步编程</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.11%20Node%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">[6.11 Node异步编程]</a></p>
+<h4 id="6-12-Node客户端请求途径"><a href="#6-12-Node客户端请求途径" class="headerlink" title="6.12 Node客户端请求途径"></a>6.12 Node客户端请求途径</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.12%20Node%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82%E9%80%94%E5%BE%84/">[6.12 Node客户端请求途径]</a></p>
+<h4 id="6-13-PM2进程管理器"><a href="#6-13-PM2进程管理器" class="headerlink" title="6.13 PM2进程管理器"></a>6.13 PM2进程管理器</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/">[6.13 PM2进程管理器]</a></p>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/">[一、Node教程]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#117;&#97;&#110;&#109;&#105;&#110;&#56;&#56;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#117;&#97;&#110;&#109;&#105;&#110;&#56;&#56;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/" data-id="ckil24r56004pr3ii5tzc6frh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Python/Tutorial/Python基础教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">Python基础教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" data-id="ckil24r5m0059r3iiggtp2bzl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Vue/Tutorial/Vue教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Vue/">Vue</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/">Vue教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/" data-id="ckil24r6v007ar3ii1vyxgfag" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1180,85 +1236,12 @@
 </li>
 </ul>
 <h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/">[二、NPM 包管理器]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#56;&#x38;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#56;&#x38;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;">&#x79;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tags/Npm/2.1%20Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" data-id="cki0aynoc000mmuii1apr4t9h" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tags/Npm/2.3  NPM镜像源配置" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Tags/Npm/2.3%20%20NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tags/Npm/2.3%20%20NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">2.3 NPM镜像源配置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-单次使用"><a href="#1-单次使用" class="headerlink" title="1. 单次使用"></a>1. 单次使用</h4><ul>
-<li><p>command line 配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-永久使用"><a href="#2-永久使用" class="headerlink" title="2. 永久使用"></a>2. 永久使用</h4><ol>
-<li><p>设置成全局下载镜像站点，每次安装软件默认从淘宝镜像下载：</p>
-</li>
-<li><p>方法一</p>
-</li>
-</ol>
-<ul>
-<li><p>打开.npmrc 文件： <code>nodejs\node_modules\npm\npmrc</code></p>
-</li>
-<li><p>没有的话可以使用 git 命令行新建：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .npmrc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>增加一行: <code>registry =https://registry.npm.taobao.org</code> 即可；</p>
-</li>
-</ul>
-<ol start="3">
-<li>方法二</li>
-</ol>
-<ul>
-<li><p>命令行设置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry    // 或</span><br><span class="line">npm info express    //输出：https://registry.npm.taobao.org/  ok</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/">[二、NPM 包管理器]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#56;&#56;&#56;&#64;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#121;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#56;&#56;&#56;&#64;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tags/Npm/2.3%20%20NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/" data-id="cki0aynod000nmuiic2yx5qnb" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tags/Npm/2.1%20Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" data-id="ckil24r9p00c6r3ii8serheex" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -1344,12 +1327,12 @@
 </li>
 </ul>
 <h4 id="6-参考文档"><a href="#6-参考文档" class="headerlink" title="6. 参考文档"></a>6. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/">[二、NPM 包管理器]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#109;&#105;&#110;&#56;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#117;&#x61;&#110;&#109;&#105;&#110;&#56;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#x6d;">&#x79;&#117;&#97;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tags/Npm/2.2%20%20Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" data-id="cki0aynof000rmuii2yesaz5i" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tags/Npm/2.2%20%20Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" data-id="ckil24r9q00c8r3ii0wmf0a5q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -1361,16 +1344,12 @@
 
 
   
-    <article id="post-Node/Tutorial/三、Expess 教程" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Tags/Npm/2.3  NPM镜像源配置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/" class="article-date">
+    <a href="/2020/10/24/Node/Tags/Npm/2.3%20%20NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/" class="article-date">
   <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Node/">Node</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -1379,7 +1358,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">三、Expess 教程</a>
+      <a class="article-title" href="/2020/10/24/Node/Tags/Npm/2.3%20%20NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">2.3 NPM镜像源配置</a>
     </h1>
   
 
@@ -1387,75 +1366,50 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="3-1-Express创建项目目录"><a href="#3-1-Express创建项目目录" class="headerlink" title="3.1  Express创建项目目录"></a>3.1  Express创建项目目录</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.1%20%20Express%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95/">[3.1  Express创建项目目录]</a></p>
-<h4 id="3-2-Express创建服务器"><a href="#3-2-Express创建服务器" class="headerlink" title="3.2 Express创建服务器"></a>3.2 Express创建服务器</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.2%20Express%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/">[3.2 Express创建服务器]</a></p>
-<h4 id="3-3-Express构建模块化路由"><a href="#3-3-Express构建模块化路由" class="headerlink" title="3.3 Express构建模块化路由"></a>3.3 Express构建模块化路由</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.3%20Express%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E8%B7%AF%E7%94%B1/">[3.3 Express构建模块化路由]</a></p>
-<h4 id="3-4-Express配置静态资源"><a href="#3-4-Express配置静态资源" class="headerlink" title="3.4 Express配置静态资源"></a>3.4 Express配置静态资源</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.4%20%20Express%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/">[3.4 Express配置静态资源]</a></p>
-<h4 id="3-5-配置mongoose链接"><a href="#3-5-配置mongoose链接" class="headerlink" title="3.5 配置mongoose链接"></a>3.5 配置mongoose链接</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/">[3.5 配置mongoose链接]</a></p>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/">[一、Node教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#56;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;">&#x79;&#117;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#56;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;</a></p>
+        <h4 id="1-单次使用"><a href="#1-单次使用" class="headerlink" title="1. 单次使用"></a>1. 单次使用</h4><ul>
+<li><p>command line 配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-永久使用"><a href="#2-永久使用" class="headerlink" title="2. 永久使用"></a>2. 永久使用</h4><ol>
+<li><p>设置成全局下载镜像站点，每次安装软件默认从淘宝镜像下载：</p>
+</li>
+<li><p>方法一</p>
+</li>
+</ol>
+<ul>
+<li><p>打开.npmrc 文件： <code>nodejs\node_modules\npm\npmrc</code></p>
+</li>
+<li><p>没有的话可以使用 git 命令行新建：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .npmrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增加一行: <code>registry =https://registry.npm.taobao.org</code> 即可；</p>
+</li>
+</ul>
+<ol start="3">
+<li>方法二</li>
+</ol>
+<ul>
+<li><p>命令行设置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry    // 或</span><br><span class="line">npm info express    //输出：https://registry.npm.taobao.org/  ok</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/">[二、NPM 包管理器]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#56;&#56;&#x38;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#x79;&#117;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#56;&#56;&#x38;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/" data-id="cki0b44ru0000y1iigkgs9fiu" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tags/Npm/2.3%20%20NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/" data-id="ckil24r9r00car3ii2tcr2vt6" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
 
-
-  
-    <article id="post-Node/Tutorial/六、Node Server教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Node/">Node</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">六、Node Server教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="6-1-Node的安装与环境变量配置"><a href="#6-1-Node的安装与环境变量配置" class="headerlink" title="6.1 Node的安装与环境变量配置"></a>6.1 Node的安装与环境变量配置</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.1%20Node%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/">[6.1 Node的安装与环境变量配置]</a></p>
-<h4 id="6-2-Node的模块化开发"><a href="#6-2-Node的模块化开发" class="headerlink" title="6.2 Node的模块化开发"></a>6.2 Node的模块化开发</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.2%20Node%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/">[6.2 Node的模块化开发]</a></p>
-<h4 id="6-3-Node服务器端基本概念"><a href="#6-3-Node服务器端基本概念" class="headerlink" title="6.3 Node服务器端基本概念"></a>6.3 Node服务器端基本概念</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.3%20Node%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">[6.3 Node服务器端基本概念]</a></p>
-<h4 id="6-4-Node创建Web服务器"><a href="#6-4-Node创建Web服务器" class="headerlink" title="6.4 Node创建Web服务器"></a>6.4 Node创建Web服务器</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.4%20Node%E5%88%9B%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8/">[6.4 Node创建Web服务器]</a></p>
-<h4 id="6-5-HTTP通信协议与响应处理"><a href="#6-5-HTTP通信协议与响应处理" class="headerlink" title="6.5 HTTP通信协议与响应处理"></a>6.5 HTTP通信协议与响应处理</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.5%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/">[6.5 HTTP通信协议与响应处理]</a></p>
-<h4 id="6-6-Node请求参数"><a href="#6-6-Node请求参数" class="headerlink" title="6.6 Node请求参数"></a>6.6 Node请求参数</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.6%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/">[6.6 Node请求参数]</a></p>
-<h4 id="6-7-Node路由设置"><a href="#6-7-Node路由设置" class="headerlink" title="6.7 Node路由设置"></a>6.7 Node路由设置</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.7%20Node%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/">[6.7 Node路由设置]</a></p>
-<h4 id="6-8Node静态资源"><a href="#6-8Node静态资源" class="headerlink" title="6.8Node静态资源"></a>6.8Node静态资源</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.8Node%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/">[6.8Node静态资源]</a></p>
-<h4 id="6-9-Node动态资源"><a href="#6-9-Node动态资源" class="headerlink" title="6.9 Node动态资源"></a>6.9 Node动态资源</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/">[6.9 Node动态资源]</a></p>
-<h4 id="6-10-Node回调函数"><a href="#6-10-Node回调函数" class="headerlink" title="6.10 Node回调函数"></a>6.10 Node回调函数</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.10%20Node%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/">[6.10 Node回调函数]</a></p>
-<h4 id="6-11-Node异步编程"><a href="#6-11-Node异步编程" class="headerlink" title="6.11 Node异步编程"></a>6.11 Node异步编程</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.11%20Node%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">[6.11 Node异步编程]</a></p>
-<h4 id="6-12-Node客户端请求途径"><a href="#6-12-Node客户端请求途径" class="headerlink" title="6.12 Node客户端请求途径"></a>6.12 Node客户端请求途径</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.12%20Node%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82%E9%80%94%E5%BE%84/">[6.12 Node客户端请求途径]</a></p>
-<h4 id="6-13-PM2进程管理器"><a href="#6-13-PM2进程管理器" class="headerlink" title="6.13 PM2进程管理器"></a>6.13 PM2进程管理器</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/">[6.13 PM2进程管理器]</a></p>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/">[一、Node教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#97;&#110;&#x6d;&#105;&#110;&#56;&#x38;&#56;&#56;&#x40;&#111;&#117;&#116;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#121;&#117;&#97;&#110;&#x6d;&#105;&#110;&#56;&#x38;&#56;&#56;&#x40;&#111;&#117;&#116;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/" data-id="cki17g09g0000cciiahvk6ijc" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -1519,15 +1473,15 @@
           </li>
         
           <li>
-            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4%20ECMAScrip%E7%BB%A7%E6%89%BF/">5.4 ECMAScrip继承</a>
-          </li>
-        
-          <li>
             <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/5.%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.5%20JS%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">5.5 JS编程模式与设计模式</a>
           </li>
         
           <li>
-            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.2%20Prototype%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF_02/">5.4.1 Prototype原型链继承_02</a>
+            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4%20ECMAScrip%E7%BB%A7%E6%89%BF/">5.4 ECMAScrip继承</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.1%20Prototype%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF_01/">5.4.1 Prototype原型链继承_01</a>
           </li>
         
       </ul>

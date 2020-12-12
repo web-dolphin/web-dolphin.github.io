@@ -5,20 +5,20 @@
   
 
   
-  <title>South Mountain Training</title>
+  <title>Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="teaching for web development">
 <meta property="og:type" content="website">
-<meta property="og:title" content="South Mountain Training">
+<meta property="og:title" content="Coding Your Wonderful Life">
 <meta property="og:url" content="https://weboyster.github.io/page/14/index.html">
-<meta property="og:site_name" content="South Mountain Training">
+<meta property="og:site_name" content="Coding Your Wonderful Life">
 <meta property="og:description" content="teaching for web development">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="HTML5 CSS3 JavaScript Java Python C++ Node Express Nestjs MongoDB MySQL">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="South Mountain Training" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Coding Your Wonderful Life" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -39,7 +39,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">South Mountain Training</a>
+        <a href="/" id="logo">Coding Your Wonderful Life</a>
       </h1>
       
     </div>
@@ -66,61 +66,6 @@
 </header>
       <div class="outer">
         <section id="main">
-  
-    <article id="post-Node/Tags/Node Server/6.4 Node创建Web服务器" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/12/Node/Tags/Node%20Server/6.4%20Node%E5%88%9B%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="article-date">
-  <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/12/Node/Tags/Node%20Server/6.4%20Node%E5%88%9B%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8/">6.4 Node创建Web服务器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="1-创建Web服务器"><a href="#1-创建Web服务器" class="headerlink" title="1. 创建Web服务器"></a>1. 创建Web服务器</h4><ol>
-<li><p>引入系统模块http</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引用系统模块</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建web服务器</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建web服务器</span></span><br><span class="line"><span class="keyword">const</span> app = http.createServer();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>监听端口</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 监听3000端口</span></span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;服务器已启动，监听3000端口，请访问 localhost:3000&#x27;</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>响应请求</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 当客户端发送请求的时候</span></span><br><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">//  响应</span></span><br><span class="line">      res.end(<span class="string">&#x27;&lt;h1&gt;hi, user&lt;/h1&gt;&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#x75;&#97;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.4%20Node%E5%88%9B%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="cki0cmgrg000m7tiifcuveox2" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
   
     <article id="post-Node/Tags/Node Server/6.5 HTTP通信协议与响应处理" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -223,12 +168,12 @@
 </li>
 </ol>
 <p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#56;&#x38;&#x38;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#56;&#x38;&#x38;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#x75;&#97;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#x38;&#56;&#x38;&#64;&#x6f;&#117;&#116;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#x75;&#97;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#x38;&#56;&#x38;&#64;&#x6f;&#117;&#116;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.5%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/" data-id="cki0cmgrh000n7tiifjy65k07" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.5%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/" data-id="ckil24ra200cur3ii8au2823u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -285,12 +230,61 @@
 </li>
 </ul>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#x75;&#x61;&#110;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#111;&#x6d;">&#121;&#x75;&#x61;&#110;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#111;&#x6d;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#x69;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#99;&#111;&#109;">&#121;&#x75;&#97;&#x6e;&#109;&#x69;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#99;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.6%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/" data-id="cki0cmgri000o7tii09j0dpzr" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.6%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/" data-id="ckil24ra400cwr3iicsqzhlju" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Tags/Node Server/6.8Node静态资源" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/12/Node/Tags/Node%20Server/6.8Node%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/" class="article-date">
+  <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/12/Node/Tags/Node%20Server/6.8Node%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/">6.8Node静态资源</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><ol>
+<li><p>服务器端不需要处理，可以直接响应给客户端的资源就是静态资源;</p>
+</li>
+<li><p>例如CSS、JavaScript、image文件</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.dolphin.com/images/logo.png">http://www.dolphin.com/images/logo.png</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.8Node%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/" data-id="ckil24ra500cyr3iif3fod9p6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -338,61 +332,12 @@
 </li>
 </ol>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#x38;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;">&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#x38;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#x38;&#x38;&#x40;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#109;">&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#x38;&#x38;&#x40;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.7%20Node%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/" data-id="cki0cmgrj000p7tii8d48228w" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tags/Node Server/6.8Node静态资源" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/12/Node/Tags/Node%20Server/6.8Node%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/" class="article-date">
-  <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/12/Node/Tags/Node%20Server/6.8Node%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/">6.8Node静态资源</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><ol>
-<li><p>服务器端不需要处理，可以直接响应给客户端的资源就是静态资源;</p>
-</li>
-<li><p>例如CSS、JavaScript、image文件</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="http://www.dolphin.com/images/logo.png">http://www.dolphin.com/images/logo.png</a></li>
-</ul>
-</li>
-</ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#116;&#108;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#116;&#108;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.8Node%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/" data-id="cki0cmgrk000q7tii8dscdhw1" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.7%20Node%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/" data-id="ckil24ra600d0r3iigeu9gfkf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -435,12 +380,12 @@
 </li>
 </ol>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;">&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#117;&#97;&#x6e;&#x6d;&#105;&#110;&#56;&#x38;&#x38;&#x38;&#x40;&#111;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#111;&#109;">&#121;&#117;&#97;&#x6e;&#x6d;&#105;&#110;&#56;&#x38;&#x38;&#x38;&#x40;&#111;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/" data-id="cki0cmgro000r7tii5nbhgqcx" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/" data-id="ckil24ra700d2r3iihrlncunl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -452,9 +397,9 @@
 
 
   
-    <article id="post-Node/Tags/Node Server/6.13 PM2进程管理器" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/八、Ajax教程/Tags/Ajax基础/Ajax异步请求案例 - Git JSON解析" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/12/Node/Tags/Node%20Server/6.13%20PM2%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%99%A8/" class="article-date">
+    <a href="/2020/10/12/JavaScript/Tags/%E5%85%AB%E3%80%81Ajax%E6%95%99%E7%A8%8B/Tags/Ajax%E5%9F%BA%E7%A1%80/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%20-%20Git%20JSON%E8%A7%A3%E6%9E%90/" class="article-date">
   <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
 </a>
     
@@ -466,7 +411,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/12/Node/Tags/Node%20Server/6.13%20PM2%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%99%A8/">13. PM2进程管理器</a>
+      <a class="article-title" href="/2020/10/12/JavaScript/Tags/%E5%85%AB%E3%80%81Ajax%E6%95%99%E7%A8%8B/Tags/Ajax%E5%9F%BA%E7%A1%80/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%20-%20Git%20JSON%E8%A7%A3%E6%9E%90/">Ajax异步请求案例：Git JSON解析</a>
     </h1>
   
 
@@ -474,86 +419,105 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="1-PM2简介"><a href="#1-PM2简介" class="headerlink" title="1. PM2简介"></a>1. PM2简介</h4><ol>
-<li>PM2是一个进程管理工具,管理你的node进程，查看node进程的状态，当然也支持性能监控，进程守护，负载均衡等功能</li>
+        <h4 id="1-项目说明"><a href="#1-项目说明" class="headerlink" title="1. 项目说明"></a>1. 项目说明</h4><ol>
+<li><p>创建如下前端页面</p>
+<p><img src="https://s1.ax1x.com/2020/10/16/0bJuKf.png" alt="页面"></p>
+</li>
+<li><p>点击 B 按钮，通过 Ajax 从后端接收到图片的<code>src</code>、页面标题、文章内容，刷新文章部分，页面不发生刷新</p>
+<p><img src="https://s1.ax1x.com/2020/10/16/0bhYWR.png" alt="Ajax-JSON"></p>
+</li>
 </ol>
-<h4 id="2-主要特性："><a href="#2-主要特性：" class="headerlink" title="2. 主要特性："></a>2. 主要特性：</h4><ul>
-<li><p>内建负载均衡（使用 Node cluster 集群模块）</p>
-</li>
-<li><p>后台运行</p>
-</li>
-<li><p>0 秒停机重载</p>
-</li>
-<li><p>具有 Ubuntu 和 CentOS 的启动脚本</p>
-</li>
-<li><p>停止不稳定的进程（避免无限循环）</p>
-</li>
-<li><p>控制台检测</p>
-</li>
-<li><p>提供 HTTP API</p>
-</li>
-<li><p>远程控制和实时的接口API（Nodejs 模块，允许和 PM2 进程管理器交互）</p>
-<p><img src="https://static.oschina.net/uploads/space/2020/0508/160802_BSwt_3820517.gif" alt="pm2进程管理器"></p>
-</li>
-</ul>
-<h4 id="3-安装"><a href="#3-安装" class="headerlink" title="3. 安装"></a>3. 安装</h4><ul>
-<li><p>PM2安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install pm2 -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install latest pm2 version</span></span><br><span class="line">$ npm install pm2@next -g</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="4-更新"><a href="#4-更新" class="headerlink" title="4. 更新"></a>4. 更新</h4><ul>
-<li><p>PM2更新</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Save process list, exit old PM2 &amp; restore all processes</span></span><br><span class="line">$ pm2 update</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="5-使用"><a href="#5-使用" class="headerlink" title="5. 使用"></a>5. 使用</h4><ol>
-<li>进入项目根目录</li>
+<h4 id="2-步骤"><a href="#2-步骤" class="headerlink" title="2. 步骤"></a>2. 步骤</h4><ol>
+<li>后端</li>
 </ol>
 <ul>
-<li><p>启动进程/应用 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pm2 start bin/www </span><br><span class="line"><span class="comment"># OR </span></span><br><span class="line">pm2 start app.json</span><br></pre></td></tr></table></figure>
+<li><p>创建目录： <code>ajax-base-master</code> / <code>public</code></p>
 </li>
-<li><p>添加进程/应用 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">watch pm2 start bin/www --watch</span><br></pre></td></tr></table></figure>
+<li><p>初始化项目<code>root</code>:</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git install express</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>结束进程/应用 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 stop www</span><br></pre></td></tr></table></figure>
+<li><p>创建服务器/配置静态资源： <code>server.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 引入express框架</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="comment">//6. 引入路径处理模块</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="comment">//2. 创建web服务器</span></span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"><span class="comment">//5. 静态资源访问服务功能</span></span><br><span class="line">app.use(express.static(path.join(__dirname, <span class="string">&#x27;public&#x27;</span>)))</span><br><span class="line"></span><br><span class="line"><span class="comment">//3. 设置端口</span></span><br><span class="line"><span class="keyword">const</span> PORT = process.env.NODE_ENV || <span class="number">3000</span></span><br><span class="line"><span class="comment">//4. 监听端口</span></span><br><span class="line"><span class="keyword">const</span> server = app.listen(PORT, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Server running at port: http://localhost:<span class="subst">$&#123;PORT&#125;</span>...`</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>结束所有进程/应用 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 stop all</span><br></pre></td></tr></table></figure>
+<li><p>启动服务:<code> server.js</code>根目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nodemon server.js</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>列出所有进程/应用 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 list</span><br></pre></td></tr></table></figure>
+<li><p>视图</p>
+<p><img src="https://s1.ax1x.com/2020/10/16/0bNVPJ.png" alt="启动server"></p>
 </li>
-<li><p>查看某个进程/应用具体情况 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 describe www</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看进程/应用的资源消耗情况 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 monit</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看pm2的日志 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 logs</span><br></pre></td></tr></table></figure></li>
-<li><p>若要查看某个进程/应用的日志,使用 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 logs www</span><br></pre></td></tr></table></figure></li>
-<li><p>重新启动进程/应用 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 restart www</span><br></pre></td></tr></table></figure></li>
-<li><p>重新启动所有进程/应用 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 restart all</span><br></pre></td></tr></table></figure>
+<li><p>配置路由</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//6. 配置路易</span></span><br><span class="line">app.get(<span class="string">&#x27;/article&#x27;</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> res.send(&#123;</span><br><span class="line">    title: <span class="string">&#x27;滕王阁序&#x27;</span>,</span><br><span class="line">    image: <span class="string">&#x27;imgs/photo1.jpg&#x27;</span>,</span><br><span class="line">    content:</span><br><span class="line">      <span class="string">&#x27;落霞与孤鹜齐飞 秋水工厂天一色 渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#117;&#97;&#110;&#109;&#105;&#110;&#56;&#56;&#x38;&#56;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#x6d;">&#121;&#117;&#97;&#110;&#109;&#105;&#110;&#56;&#56;&#x38;&#56;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#x6d;</a></p>
+<h4 id="3-前端"><a href="#3-前端" class="headerlink" title="3. 前端"></a>3. 前端</h4><ul>
+<li><p>创建静态资源目录： 参见视图</p>
+</li>
+<li><p>创建静态文件：<code>index.html</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span></span></span><br><span class="line"><span class="tag">      <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo for ajax base master<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span></span></span><br><span class="line"><span class="tag">      <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">href</span>=<span class="string">&quot;imgs/favicon.ico&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/index.css&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h2</span>&gt;</span>Hello World!<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;imgs/photo.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;photo&quot;</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">          Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span><br><span class="line">          Perspiciatis amet consequatur eligendi, autem molestias nostrum</span><br><span class="line">          ratione animi temporibus beatae quo expedita accusamus delectus</span><br><span class="line">          sapiente distinctio! Quibusdam cumque numquam unde dolorem.</span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/index.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建静态文件： <code>less/indexless</code>，保存时自动生成<code>css/index.css</code></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.center</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">min-height</span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="selector-class">.center</span>;</span><br><span class="line">  <span class="selector-class">.card</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">280px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">2px</span> <span class="number">4px</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>);</span><br><span class="line">    <span class="selector-tag">h2</span> &#123;</span><br><span class="line">      <span class="attribute">text-align</span>: center;</span><br><span class="line">      <span class="attribute">line-height</span>: <span class="number">60px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">img</span> &#123;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">ul</span> &#123;</span><br><span class="line">      <span class="attribute">padding</span>: <span class="number">20px</span> <span class="number">0</span>;</span><br><span class="line">      <span class="selector-tag">li</span> &#123;</span><br><span class="line">        <span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">        <span class="selector-tag">&amp;</span><span class="selector-pseudo">:nth-of-type(2)</span> &#123;</span><br><span class="line">          <span class="attribute">float</span>: right;</span><br><span class="line">          <span class="attribute">margin</span>: <span class="number">10px</span> auto <span class="number">0</span>;</span><br><span class="line">          <span class="selector-tag">button</span> &#123;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">30px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">            <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">            <span class="attribute">background</span>: green;</span><br><span class="line">            <span class="attribute">outline</span>: none;</span><br><span class="line">            <span class="attribute">border</span>: <span class="number">0px</span>;</span><br><span class="line">            <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">            <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">            <span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">2px</span> <span class="number">6px</span> rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建静态文件： <code>js/index.js</code></p>
+</li>
+<li><p>Ajax 请求数据的四个步骤</p>
+<ol>
+<li><p>对象创建</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置请求方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(<span class="string">&#x27;GET&#x27;</span>, url)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用回调函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发送请求</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xml.send()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解析<code>JSON</code></p>
+<ul>
+<li><p>由于响应的数据较多，只能采用<code>JSON</code>结构的数据传输；</p>
+</li>
+<li><p>但是，数据在传输过程中，自动转换为了字符串；</p>
+</li>
+<li><p>我们可以测试以下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">xhr.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> data = xhr.responseText</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">typeof</span> data) <span class="comment">// string</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>由于在前端字符串不好操作，所以要解析为对象： <code>JSON.parse()</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 4. 获取服务端发给客户端的数据</span></span><br><span class="line">xhr.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> article = <span class="built_in">JSON</span>.parse(xhr.responseText)</span><br><span class="line">  h2.innerHTML = article.title</span><br><span class="line">  image.src = article.image</span><br><span class="line">  content.innerHTML = article.content</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>index.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 5. 设置访问路由</span></span><br><span class="line"><span class="keyword">const</span> url = <span class="string">&#x27;http://localhost:3000/article&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 6. 获取元素</span></span><br><span class="line"><span class="keyword">const</span> h2 = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;h2&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> image = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;img&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> content = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.content&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;button&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 7. 事件监听</span></span><br><span class="line">btn.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 1. 创建代理对象</span></span><br><span class="line">  <span class="keyword">let</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 2. 设置请求方式</span></span><br><span class="line">  xhr.open(<span class="string">&#x27;GET&#x27;</span>, url, <span class="literal">true</span>)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 3. 发送请求</span></span><br><span class="line">  xhr.send()</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 4. 获取服务端发给客户端的数据</span></span><br><span class="line">  xhr.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> article = <span class="built_in">JSON</span>.parse(xhr.responseText)</span><br><span class="line">    h2.innerHTML = article.title</span><br><span class="line">    image.src = article.image</span><br><span class="line">    content.innerHTML = article.content</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>浏览器<code>url</code>： <code>http://localhost:3000</code></p>
+</li>
+<li><p>点击按钮，文章更新了</p>
+</li>
+<li><p>观察<code>url</code>并没有改变；</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4. 参考文档"></a>4. 参考文档</h4><ol>
+<li><p>Ajax 技术原理简介</p>
+<p><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/15/JavaScript/Ajax/Ajax%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E7%AE%80%E4%BB%8B%20/">参考文档</a></p>
+</li>
+<li><p>Ajax 异步请求案例</p>
+<p><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/12/JavaScript/Ajax/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B/">参考文档</a></p>
+</li>
+</ol>
+<h4 id="5-源码"><a href="#5-源码" class="headerlink" title="5.源码"></a>5.源码</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-oyster/ajax-git-json-parse-master">[ajax-git-json-parse-master]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.13%20PM2%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%99%A8/" data-id="cki17g09q0001ccii0w705skz" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/12/JavaScript/Tags/%E5%85%AB%E3%80%81Ajax%E6%95%99%E7%A8%8B/Tags/Ajax%E5%9F%BA%E7%A1%80/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%20-%20Git%20JSON%E8%A7%A3%E6%9E%90/" data-id="ckil24raz00esr3ii128d8byk" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a></li></ul>
 
     </footer>
   </div>
@@ -562,102 +526,92 @@
 
 
   
-    <article id="post-Vue/Tutorial/code/cart" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/八、Ajax教程/Tags/Ajax基础/Ajax异步请求案例之一 - 基础代码" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/1970/01/01/Vue/Tutorial/code/cart/" class="article-date">
-  <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
+    <a href="/2020/10/12/JavaScript/Tags/%E5%85%AB%E3%80%81Ajax%E6%95%99%E7%A8%8B/Tags/Ajax%E5%9F%BA%E7%A1%80/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%80%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/" class="article-date">
+  <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        export const age = 18;
-export function f1(){
-    console.log("f1函数");
-}
-export default {
-    init(){
-        console.log("初始化");
-    }
-}
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Vue/Tutorial/code/cart/" data-id="ckhuajgop00bbwoiih5gi2k3d" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+      <header class="article-header">
+        
   
-</article>
-
-
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/12/JavaScript/Tags/%E5%85%AB%E3%80%81Ajax%E6%95%99%E7%A8%8B/Tags/Ajax%E5%9F%BA%E7%A1%80/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%80%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/">Ajax异步请求案例之一:基础代码</a>
+    </h1>
   
-    <article id="post-Vue/Tutorial/code/index" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/1970/01/01/Vue/Tutorial/code/index/" class="article-date">
-  <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
+
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        import cart,{ age,f1 } from "cart.js"
-cart.init();
-age,
-f1();
+        <h4 id="1-项目创建"><a href="#1-项目创建" class="headerlink" title="1. 项目创建"></a>1. 项目创建</h4><ol>
+<li><p>创建目录： <code>ajax-base-master</code> / <code>public</code></p>
+</li>
+<li><p>初始化项目<code>root</code>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git install express</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建服务器： <code>server.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置静态资源： HTML、CSS、JS、Image</span></span><br><span class="line">app.use(express.static(path.join(__dirname, <span class="string">&#x27;public&#x27;</span>)))</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> port = process.env.NODE_ENV || <span class="number">3000</span></span><br><span class="line"></span><br><span class="line">app.listen(<span class="function">() =&gt;</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Server running on port: http://localhost:<span class="subst">$&#123;port&#125;</span>...`</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建静态文件：<code>index.html</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span>&gt;</span>Ajax Demo<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Ajax 请求数据的四个步骤</p>
+<ol>
+<li><p>对象创建</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xml</span><br><span class="line"><span class="keyword">if</span> (XMLHttpRequest) &#123;</span><br><span class="line">  xml = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  xml = <span class="keyword">new</span> ActiveXObject(<span class="string">&#x27;Mircrosoft.XMLHTTP&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置请求方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xml.open(<span class="string">&#x27;GET&#x27;</span>, url, <span class="literal">true</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用回调函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xml.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (xml.readyState == <span class="number">4</span> &amp;&amp; xml.status == <span class="number">200</span>) &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发送请求</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xml.send(<span class="literal">null</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>为<code>server.js</code>添加路由</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/get&#x27;</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> res.send(<span class="string">&#x27;落霞与孤鹜齐飞 秋水共长天一色&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>为<code>indexhtml</code>注册事件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> url = <span class="string">&#x27;http://localhost:3000/get&#x27;</span></span><br><span class="line"><span class="keyword">const</span> div = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;div&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;button&#x27;</span>)</span><br><span class="line">btn.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> xml</span><br><span class="line">  <span class="keyword">if</span> (XMLHttpRequest) &#123;</span><br><span class="line">    xml = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    xml = <span class="keyword">new</span> ActiveXObject(<span class="string">&#x27;Mircrosoft.XMLHTTP&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  xml.open(<span class="string">&#x27;GET&#x27;</span>, url, <span class="literal">true</span>)</span><br><span class="line">  xml.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (xml.readyState == <span class="number">4</span> &amp;&amp; xml.status == <span class="number">200</span>) &#123;</span><br><span class="line">      div.innerHTML = xml.responseText</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  xml.send()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切换到<code>root</code>目录，启动<code>Server</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nodemon server.js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>浏览器<code>url</code>： <code>http://localhost:3000</code></p>
+<ul>
+<li>点击按钮，文件内容更换为： <code>落霞与孤鹜齐飞 秋水共长天一色</code></li>
+<li>观察<code>url</code>并没有改变；</li>
+</ul>
+</li>
+<li><p>原始代码</p>
+<ul>
+<li><code>server.js</code></li>
+<li><code>index.html</code></li>
+</ul>
+</li>
+<li><p>源码</p>
+</li>
+</ol>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/web-oyster/ajax-base-master">[ajax-base-master]</a></li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Vue/Tutorial/code/index/" data-id="ckhuajgoq00bdwoii2qjhh6ah" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/12/JavaScript/Tags/%E5%85%AB%E3%80%81Ajax%E6%95%99%E7%A8%8B/Tags/Ajax%E5%9F%BA%E7%A1%80/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%80%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/" data-id="ckil24rb000evr3ii8qz97xy9" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a></li></ul>
 
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/11.内置对象/index" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/1970/01/01/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/index/" class="article-date">
-  <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-<script>
-let name = ["George","Jhon","Thoms","James","Adrew","Martin"];
-let result = name.valueOf()
-console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
-</script>
-</body>
-</html>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/index/" data-id="ckhw0oipi000xn7iic5nj0i8p" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -707,7 +661,110 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Express/Express%20Server%20%E6%A8%A1%E6%9D%BF/" data-id="ckijzg49y000a0eiid8b300er" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Express/Express%20Server%20%E6%A8%A1%E6%9D%BF/" data-id="ckil24r9o00c2r3ii1eqi7mcs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Vue/Tutorial/code/cart" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/1970/01/01/Vue/Tutorial/code/cart/" class="article-date">
+  <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        export const age = 18;
+export function f1(){
+    console.log("f1函数");
+}
+export default {
+    init(){
+        console.log("初始化");
+    }
+}
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/1970/01/01/Vue/Tutorial/code/cart/" data-id="ckil24ra800d4r3iieflm1kjx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Vue/Tutorial/code/index" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/1970/01/01/Vue/Tutorial/code/index/" class="article-date">
+  <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        import cart,{ age,f1 } from "cart.js"
+cart.init();
+age,
+f1();
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/1970/01/01/Vue/Tutorial/code/index/" data-id="ckil24ra800d6r3iiaqzf7zoe" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/11.内置对象/index" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/1970/01/01/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/index/" class="article-date">
+  <time datetime="1970-01-01T00:00:00.000Z" itemprop="datePublished">1970-01-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+let name = ["George","Jhon","Thoms","James","Adrew","Martin"];
+let result = name.valueOf()
+console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
+</script>
+</body>
+</html>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/1970/01/01/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/index/" data-id="ckil24rbs00g2r3iihx43atlg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -861,7 +918,7 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Express/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/" data-id="ckijzg4a2000d0eiif5iv75xw" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Express/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/" data-id="ckil24rcq00hmr3iihjt595oc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -927,15 +984,15 @@ console.log(result)        //["George","Jhon","Thoms","James","Adrew","Martin"]
           </li>
         
           <li>
-            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4%20ECMAScrip%E7%BB%A7%E6%89%BF/">5.4 ECMAScrip继承</a>
-          </li>
-        
-          <li>
             <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/5.%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.5%20JS%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">5.5 JS编程模式与设计模式</a>
           </li>
         
           <li>
-            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.2%20Prototype%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF_02/">5.4.1 Prototype原型链继承_02</a>
+            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4%20ECMAScrip%E7%BB%A7%E6%89%BF/">5.4 ECMAScrip继承</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.1%20Prototype%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF_01/">5.4.1 Prototype原型链继承_01</a>
           </li>
         
       </ul>
