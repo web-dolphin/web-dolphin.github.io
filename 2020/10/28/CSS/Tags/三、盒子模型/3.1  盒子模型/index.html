@@ -5,17 +5,17 @@
   
 
   
-  <title>5.2 Position布局 | Coding Your Wonderful Life</title>
+  <title>3.1 盒子模型 | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="设置定位类型    Attribute Description    static 元素为普通布局，默认值   fixed 元素相对于浏览器窗口来定位   relative 元素相对定位   absolute 元素绝对定位，相对于 position 不是 static 的第一位祖先元素来定位    设置元素的层叠顺序： z-index 1z-index				&#x2F;*允许取负数，值越大越靠近顶层*&#x2F;">
+  <meta name="description" content="1. 内边距: padding 代码示例 12345paddingpadding-toppadding-bottompadding-leftpadding-right    2. 外边距: margin 代码示例 12345marginmargin-topmargin-bottommargin-leftmargin-right    3. 元素尺寸 代码示例 1234567width				&#x2F;*a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="5.2 Position布局">
-<meta property="og:url" content="https://weboyster.github.io/2020/11/03/CSS/Tags/%E4%BA%94%E3%80%81%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80/5.2%20Position%E5%B8%83%E5%B1%80/index.html">
+<meta property="og:title" content="3.1 盒子模型">
+<meta property="og:url" content="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%B8%89%E3%80%81%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/3.1%20%20%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="设置定位类型    Attribute Description    static 元素为普通布局，默认值   fixed 元素相对于浏览器窗口来定位   relative 元素相对定位   absolute 元素绝对定位，相对于 position 不是 static 的第一位祖先元素来定位    设置元素的层叠顺序： z-index 1z-index				&#x2F;*允许取负数，值越大越靠近顶层*&#x2F;">
+<meta property="og:description" content="1. 内边距: padding 代码示例 12345paddingpadding-toppadding-bottompadding-leftpadding-right    2. 外边距: margin 代码示例 12345marginmargin-topmargin-bottommargin-leftmargin-right    3. 元素尺寸 代码示例 1234567width				&#x2F;*a">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-13T09:16:49.429Z">
+<meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-12-13T10:20:48.950Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
@@ -67,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-CSS/Tags/五、创建布局/5.2 Position布局" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-CSS/Tags/三、盒子模型/3.1  盒子模型" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/03/CSS/Tags/%E4%BA%94%E3%80%81%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80/5.2%20Position%E5%B8%83%E5%B1%80/" class="article-date">
-  <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
+    <a href="/2020/10/28/CSS/Tags/%E4%B8%89%E3%80%81%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/3.1%20%20%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
   </div>
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      5.2 Position布局
+      3.1 盒子模型
     </h1>
   
 
@@ -89,8 +89,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><p>设置定位类型</p>
+        <h4 id="1-内边距-padding"><a href="#1-内边距-padding" class="headerlink" title="1. 内边距: padding"></a>1. 内边距: padding</h4><ul>
+<li><p>代码示例</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">padding</span></span><br><span class="line"><span class="selector-tag">padding-top</span></span><br><span class="line"><span class="selector-tag">padding-bottom</span></span><br><span class="line"><span class="selector-tag">padding-left</span></span><br><span class="line"><span class="selector-tag">padding-right</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-外边距-margin"><a href="#2-外边距-margin" class="headerlink" title="2. 外边距: margin"></a>2. 外边距: margin</h4><ul>
+<li><p>代码示例</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">margin</span></span><br><span class="line"><span class="selector-tag">margin-top</span></span><br><span class="line"><span class="selector-tag">margin-bottom</span></span><br><span class="line"><span class="selector-tag">margin-left</span></span><br><span class="line"><span class="selector-tag">margin-right</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-元素尺寸"><a href="#3-元素尺寸" class="headerlink" title="3. 元素尺寸"></a>3. 元素尺寸</h4><ul>
+<li><p>代码示例</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">width</span>				<span class="comment">/*auto、长度单位、百分比*/</span></span><br><span class="line"><span class="selector-tag">max-width</span></span><br><span class="line"><span class="selector-tag">min-width</span></span><br><span class="line"><span class="selector-tag">height</span></span><br><span class="line"><span class="selector-tag">max-height</span></span><br><span class="line"><span class="selector-tag">min-height</span></span><br><span class="line"><span class="selector-tag">box-sizing</span>		<span class="comment">/*content-box、padding-box、border-box、margin-box*/</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-溢出处理-overflow"><a href="#4-溢出处理-overflow" class="headerlink" title="4. 溢出处理: overflow"></a>4. 溢出处理: overflow</h4><ul>
+<li><p>代码示例</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">overflow</span>      	<span class="comment">/*auto、hidden、no-content、no-display、scroll、visible*/</span></span><br><span class="line"><span class="selector-tag">overflow-x</span></span><br><span class="line"><span class="selector-tag">overflow-y</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-元素的可见性-visibility"><a href="#5-元素的可见性-visibility" class="headerlink" title="5. 元素的可见性: visibility"></a>5. 元素的可见性: visibility</h4><ul>
+<li><p>代码示例</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">visibility</span> 					<span class="comment">/*visible、hidden、collapse*/</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="6-设置元素的盒子类型-display"><a href="#6-设置元素的盒子类型-display" class="headerlink" title="6. 设置元素的盒子类型: display"></a>6. 设置元素的盒子类型: display</h4><ul>
+<li><p>表 1 display 属性值</p>
 <table>
 <thead>
 <tr>
@@ -99,82 +129,123 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>static</td>
-<td>元素为普通布局，默认值</td>
+<td>block</td>
+<td>显示为块级元素</td>
 </tr>
 <tr>
-<td>fixed</td>
-<td>元素相对于浏览器窗口来定位</td>
+<td>inline</td>
+<td>显示为行级元素</td>
 </tr>
 <tr>
-<td>relative</td>
-<td>元素相对定位</td>
+<td>inline-block</td>
+<td>显示为行内块级元素</td>
 </tr>
 <tr>
-<td>absolute</td>
-<td>元素绝对定位，相对于 position 不是 static 的第一位祖先元素来定位</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>设置元素的层叠顺序： z-index</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">z-index</span>				<span class="comment">/*允许取负数，值越大越靠近顶层*/</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建多列布局</p>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>column-count</td>
-<td>指定列数：数字</td>
+<td>none</td>
+<td>元素不可见，不占空间</td>
 </tr>
 <tr>
-<td>column-fill</td>
-<td>指定内容在列之间的分布方式： balance / auto</td>
+<td>list-item</td>
+<td>显示为列表项</td>
 </tr>
 <tr>
-<td>column-gap</td>
-<td>指定列之间距离</td>
+<td>flexbox</td>
+<td>显示为弹性盒子</td>
 </tr>
 <tr>
-<td>column-rule</td>
-<td>column-rule- 属性的简写</td>
+<td>table</td>
+<td>显示为表格</td>
 </tr>
 <tr>
-<td>column-rule-color</td>
-<td>设置列之间的颜色规则</td>
+<td>inline-table</td>
+<td></td>
 </tr>
 <tr>
-<td>column-rule-style</td>
-<td>设置列之间的样式规则</td>
+<td>table-row</td>
+<td></td>
 </tr>
 <tr>
-<td>column-rule-width</td>
-<td>设置列之间的宽带</td>
+<td>table-row-group</td>
+<td></td>
 </tr>
 <tr>
-<td>columns</td>
-<td>设置 column-span、column-width 属性简写</td>
+<td>table-header-group</td>
+<td></td>
 </tr>
 <tr>
-<td>column-span</td>
-<td>指定元素横向能跨多少列</td>
+<td>table-footer-group</td>
+<td></td>
 </tr>
 <tr>
-<td>column-width</td>
-<td>指定宽度</td>
+<td>table-column</td>
+<td></td>
+</tr>
+<tr>
+<td>table-column-group</td>
+<td></td>
+</tr>
+<tr>
+<td>table-cell</td>
+<td></td>
+</tr>
+<tr>
+<td>table-caption</td>
+<td></td>
+</tr>
+<tr>
+<td>ruby</td>
+<td>显示为 ruby 注释相关的文本布局</td>
+</tr>
+<tr>
+<td>ruby-base</td>
+<td></td>
+</tr>
+<tr>
+<td>ruby-text</td>
+<td></td>
+</tr>
+<tr>
+<td>ruby-base-group</td>
+<td></td>
+</tr>
+<tr>
+<td>ruby-text-group</td>
+<td></td>
 </tr>
 </tbody></table>
 </li>
 </ul>
+<h4 id="7-创建浮动盒子：float"><a href="#7-创建浮动盒子：float" class="headerlink" title="7. 创建浮动盒子：float"></a>7. 创建浮动盒子：float</h4><ul>
+<li><p>表 2</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>左浮动</td>
+</tr>
+<tr>
+<td>right</td>
+<td>右浮动</td>
+</tr>
+<tr>
+<td>none</td>
+<td>默认样式，位置固定</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="8-参考文档"><a href="#8-参考文档" class="headerlink" title="8.参考文档"></a>8.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%B8%89%E3%80%81%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">[三、盒子模型]</a></p>
+<h4 id="9-联系方式"><a href="#9-联系方式" class="headerlink" title="9. 联系方式"></a>9. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#117;&#116;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#x6d;">&#x79;&#117;&#97;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#117;&#116;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E4%BA%94%E3%80%81%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80/5.2%20Position%E5%B8%83%E5%B1%80/" data-id="ckimxdn2z00076hiid3gj9omm" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%B8%89%E3%80%81%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/3.1%20%20%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" data-id="ckimzoi5800008iiidnaja44w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -185,19 +256,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/11/03/CSS/Tags/%E4%BA%94%E3%80%81%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80/5.1%20%20%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.8%20%20CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%BA%8C/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          5.1 创建布局
+          2.8 CSS选择器二
         
       </div>
     </a>
   
   
-    <a href="/2020/11/03/CSS/Tags/%E4%BA%94%E3%80%81%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80/5.3%20Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">5.1 创建布局</div>
+      <div class="article-nav-title">1. Git 创建与管理本地仓库</div>
     </a>
   
 </nav>

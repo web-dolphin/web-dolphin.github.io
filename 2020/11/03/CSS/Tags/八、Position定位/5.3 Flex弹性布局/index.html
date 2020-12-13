@@ -7,15 +7,15 @@
   
   <title>5.1 创建布局 | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="5.2 定位：Position[5.2 定位：Position] 5.3 弹性盒子布局： Flex[5.3 弹性盒子布局： Flex] 5.4 网格布局：Grid[5.4 网格布局：Grid]">
+  <meta name="description" content="1. Flex1 . main-axis(主轴)2. cross-axis(交叉轴)3. flex-direction: Flexbox Container    Attribute Description    row main-axis(主轴)是 row   column main-axis(主轴)是 column   row-reverse main-axis(主轴)是 row,逆序排列">
 <meta property="og:type" content="article">
 <meta property="og:title" content="5.1 创建布局">
-<meta property="og:url" content="https://weboyster.github.io/2020/11/03/CSS/Tags/%E4%BA%94%E3%80%81%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80/5.1%20%20%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80/index.html">
+<meta property="og:url" content="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%85%AB%E3%80%81Position%E5%AE%9A%E4%BD%8D/5.3%20Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="5.2 定位：Position[5.2 定位：Position] 5.3 弹性盒子布局： Flex[5.3 弹性盒子布局： Flex] 5.4 网格布局：Grid[5.4 网格布局：Grid]">
+<meta property="og:description" content="1. Flex1 . main-axis(主轴)2. cross-axis(交叉轴)3. flex-direction: Flexbox Container    Attribute Description    row main-axis(主轴)是 row   column main-axis(主轴)是 column   row-reverse main-axis(主轴)是 row,逆序排列">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-11-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-13T09:17:41.533Z">
+<meta property="article:modified_time" content="2020-12-13T09:15:21.154Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
@@ -67,9 +67,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-CSS/Tags/五、创建布局/5.1  创建布局" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-CSS/Tags/八、Position定位/5.3 Flex弹性布局" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/03/CSS/Tags/%E4%BA%94%E3%80%81%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80/5.1%20%20%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80/" class="article-date">
+    <a href="/2020/11/03/CSS/Tags/%E5%85%AB%E3%80%81Position%E5%AE%9A%E4%BD%8D/5.3%20Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" class="article-date">
   <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
 </a>
     
@@ -89,14 +89,167 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="5-2-定位：Position"><a href="#5-2-定位：Position" class="headerlink" title="5.2 定位：Position"></a>5.2 定位：Position</h3><p><a href="">[5.2 定位：Position]</a></p>
-<h3 id="5-3-弹性盒子布局：-Flex"><a href="#5-3-弹性盒子布局：-Flex" class="headerlink" title="5.3 弹性盒子布局： Flex"></a>5.3 弹性盒子布局： Flex</h3><p><a href="">[5.3 弹性盒子布局： Flex]</a></p>
-<h3 id="5-4-网格布局：Grid"><a href="#5-4-网格布局：Grid" class="headerlink" title="5.4 网格布局：Grid"></a>5.4 网格布局：Grid</h3><p><a href="">[5.4 网格布局：Grid]</a></p>
+        <h3 id="1-Flex"><a href="#1-Flex" class="headerlink" title="1. Flex"></a>1. Flex</h3><h4 id="1-main-axis-主轴"><a href="#1-main-axis-主轴" class="headerlink" title="1 . main-axis(主轴)"></a>1 . main-axis(主轴)</h4><h4 id="2-cross-axis-交叉轴"><a href="#2-cross-axis-交叉轴" class="headerlink" title="2. cross-axis(交叉轴)"></a>2. cross-axis(交叉轴)</h4><h4 id="3-flex-direction"><a href="#3-flex-direction" class="headerlink" title="3. flex-direction:"></a>3. flex-direction:</h4><ul>
+<li><p>Flexbox Container</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>row</td>
+<td>main-axis(主轴)是 row</td>
+</tr>
+<tr>
+<td>column</td>
+<td>main-axis(主轴)是 column</td>
+</tr>
+<tr>
+<td>row-reverse</td>
+<td>main-axis(主轴)是 row,逆序排列</td>
+</tr>
+<tr>
+<td>column-reverse</td>
+<td>main-axis(主轴)是 column,逆序排列</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="4-justify-content-和-align-items"><a href="#4-justify-content-和-align-items" class="headerlink" title="4. justify-content 和 align-items"></a>4. justify-content 和 align-items</h4><ul>
+<li><p>justify-content ： 主轴排列方向</p>
+</li>
+<li><p>align-items：交叉轴排列方向</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>center</td>
+<td></td>
+</tr>
+<tr>
+<td>flex-start</td>
+<td></td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="5-flex-wrap"><a href="#5-flex-wrap" class="headerlink" title="5. flex-wrap"></a>5. flex-wrap</h4><ul>
+<li><p>定义是否换行</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>nowrap</td>
+<td>不换行</td>
+</tr>
+<tr>
+<td>wrape</td>
+<td>换行</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="6-flex-flow"><a href="#6-flex-flow" class="headerlink" title="6. flex-flow"></a>6. flex-flow</h4><ul>
+<li><p>flex-direction、jflex-wrap 的简写</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">flex-flow</span>: <span class="selector-tag">row</span> <span class="selector-tag">wrap</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="7-align-content"><a href="#7-align-content" class="headerlink" title="7. align-content"></a>7. align-content</h4><ul>
+<li><p>当 flex-wrape：wrape 时，生效；用于行于行之间的对齐方式</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>center</td>
+<td></td>
+</tr>
+<tr>
+<td>flex-start</td>
+<td></td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td></td>
+</tr>
+<tr>
+<td>initial</td>
+<td></td>
+</tr>
+<tr>
+<td>space-around</td>
+<td></td>
+</tr>
+<tr>
+<td>space-evenly</td>
+<td></td>
+</tr>
+<tr>
+<td>space-between</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="2-Flexbox-Item"><a href="#2-Flexbox-Item" class="headerlink" title="2. Flexbox Item"></a>2. Flexbox Item</h3><h4 id="1-order"><a href="#1-order" class="headerlink" title="1. order"></a>1. order</h4><ul>
+<li>默认值： 0</li>
+<li>数值越大越排在后</li>
+<li>可以取负值</li>
+</ul>
+<h4 id="2-align-self"><a href="#2-align-self" class="headerlink" title="2. align-self"></a>2. align-self</h4><ul>
+<li>可以用于改写 flex container 中，align-items 中的设定值</li>
+<li>属性值与 flex container 相同</li>
+</ul>
+<h4 id="3-flex-basis-好像没有效果"><a href="#3-flex-basis-好像没有效果" class="headerlink" title="3. flex-basis: 好像没有效果"></a>3. flex-basis: 好像没有效果</h4><ul>
+<li><p>是设定 flex-item 的主轴方向上的大小</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>width: 0px;</td>
+</tr>
+<tr>
+<td>100px</td>
+<td>原值 + 100px</td>
+</tr>
+<tr>
+<td>auto</td>
+<td>原值</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="4-flex-grow"><a href="#4-flex-grow" class="headerlink" title="4. flex-grow"></a>4. flex-grow</h4><p>当主轴方向有剩余空间时，flex-item 沿主轴方向扩展的设定,flex-grow: 0；表示保持原始值，不放大；</p>
+<h4 id="5-flex-shrink"><a href="#5-flex-shrink" class="headerlink" title="5. flex-shrink"></a>5. flex-shrink</h4><p>当主轴方向空间不够时，flex-item 沿主轴方向缩小的设定,flex-shrink: 0；表示保持原始值；</p>
+<h4 id="6-Flex"><a href="#6-Flex" class="headerlink" title="6. Flex"></a>6. Flex</h4><p>Flex Item 项目中： flex-grow + flex-shrink + flex-basis 的简写形式</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E4%BA%94%E3%80%81%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80/5.1%20%20%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80/" data-id="ckimxdn2y00066hii79wc6e4a" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%85%AB%E3%80%81Position%E5%AE%9A%E4%BD%8D/5.3%20Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" data-id="ckimzoi5g00058iii9i9q2thl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -107,19 +260,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/11/04/Today's%20Excises/Today's%20Excises/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/11/03/CSS/Tags/%E5%85%AB%E3%80%81Position%E5%AE%9A%E4%BD%8D/8.1%20Position%E5%B8%83%E5%B1%80/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Today&#39;s Excises for November 8 ~ 15
+          5.2 Position布局
         
       </div>
     </a>
   
   
-    <a href="/2020/11/03/CSS/Tags/%E4%BA%94%E3%80%81%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80/5.2%20Position%E5%B8%83%E5%B1%80/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/10/28/English/1.English%20For%20HTML/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">5.2 Position布局</div>
+      <div class="article-nav-title">1.English for HTML</div>
     </a>
   
 </nav>
