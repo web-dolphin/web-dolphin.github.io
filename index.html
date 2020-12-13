@@ -886,9 +886,9 @@
 
 
   
-    <article id="post-CSS/Tags/四、边框与背景/4.1  边框与背景" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-CSS/Tags/十一、 Transform过渡/11.1 Transform 属性" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/03/CSS/Tags/%E5%9B%9B%E3%80%81%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%83%8C%E6%99%AF/4.1%20%20%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%83%8C%E6%99%AF/" class="article-date">
+    <a href="/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.1%20Transform%20%E5%B1%9E%E6%80%A7/" class="article-date">
   <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
 </a>
     
@@ -900,7 +900,693 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/03/CSS/Tags/%E5%9B%9B%E3%80%81%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%83%8C%E6%99%AF/4.1%20%20%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%83%8C%E6%99%AF/">4.1 边框与背景</a>
+      <a class="article-title" href="/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.1%20Transform%20%E5%B1%9E%E6%80%A7/">11.1 Transform 属性</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Transform-定义"><a href="#1-Transform-定义" class="headerlink" title="1.Transform 定义"></a>1.Transform 定义</h4><ol>
+<li>transform 属性向元素应用 2D 或 3D 转换；</li>
+<li>该属性允许我们对元素进行旋转、缩放、移动或倾斜操作</li>
+</ol>
+<h4 id="2-Transform-语法"><a href="#2-Transform-语法" class="headerlink" title="2.Transform 语法"></a>2.Transform 语法</h4><ul>
+<li><p>CSS 语法</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">selector</span> &gt; &#123;</span><br><span class="line">  <span class="attribute">transform</span>: &lt;value&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JS 语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object.style.transform = &lt;value&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-Transform-属性值"><a href="#3-Transform-属性值" class="headerlink" title="3.Transform 属性值"></a>3.Transform 属性值</h4><ul>
+<li><p>表一：属性</p>
+<table>
+<thead>
+<tr>
+<th>attribute</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>none</td>
+<td>进行转换</td>
+</tr>
+<tr>
+<td>matrix(n,n,n,n,n,n)</td>
+<td>2D 转换，使用六个值的矩阵</td>
+</tr>
+<tr>
+<td>matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)</td>
+<td>3D 转换，使用 16 个值的 4x4 矩阵</td>
+</tr>
+<tr>
+<td>translate(x,y)</td>
+<td>2D 转换</td>
+</tr>
+<tr>
+<td>translate3d(x,y,z)</td>
+<td>3D 转换</td>
+</tr>
+<tr>
+<td>translateX(x)</td>
+<td>定义转换，只是用 X 轴的值</td>
+</tr>
+<tr>
+<td>translateX(y)</td>
+<td>定义转换，只是用 Y 轴的值</td>
+</tr>
+<tr>
+<td>translateZ(z)</td>
+<td>定义转换，只是用 Z 轴的值</td>
+</tr>
+<tr>
+<td>scale(x,y)</td>
+<td>2D 缩放转换</td>
+</tr>
+<tr>
+<td>scale3d(x,y,z)</td>
+<td>3D 缩放转换</td>
+</tr>
+<tr>
+<td>scaleX(x)</td>
+<td>设置 X 轴的值来定义缩放转换</td>
+</tr>
+<tr>
+<td>scaleY(y)</td>
+<td>设置 Y 轴的值来定义缩放转换</td>
+</tr>
+<tr>
+<td>scaleZ(z)</td>
+<td>设置 Z 轴的值来定义缩放转换</td>
+</tr>
+<tr>
+<td>rotate(angle)</td>
+<td>2D 旋转，参数为角度</td>
+</tr>
+<tr>
+<td>rotate3d(x,y,z,angle)</td>
+<td>3D 旋转</td>
+</tr>
+<tr>
+<td>rotateX(angle)</td>
+<td>定义沿着 X 轴的 3D 旋转</td>
+</tr>
+<tr>
+<td>rotateY(angle)</td>
+<td>定义沿着 Y 轴的 3D 旋转</td>
+</tr>
+<tr>
+<td>rotateZ(angle)</td>
+<td>定义沿着 Z 轴的 3D 旋转</td>
+</tr>
+<tr>
+<td>skew(x-angle,y-angle)</td>
+<td>沿着 X 和 Y 轴的 2D 倾斜转换</td>
+</tr>
+<tr>
+<td>skewX(angle)</td>
+<td>沿着 X 轴的 2D 倾斜转换</td>
+</tr>
+<tr>
+<td>skewY(angle)</td>
+<td>沿着 Y 轴的 2D 倾斜转换</td>
+</tr>
+<tr>
+<td>perspective(n)</td>
+<td>为 3D 转换元素定义透视视图</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="4-案例"><a href="#4-案例" class="headerlink" title="4.案例"></a>4.案例</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-oyster/3d_animation">[3d_animation]</a></p>
+<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5.参考文档"></a>5.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%8D%81%E4%B8%80%E3%80%81Transition%E8%BF%87%E6%B8%A1/">[十一、Transition过渡]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#x6d;">&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.1%20Transform%20%E5%B1%9E%E6%80%A7/" data-id="ckimxn2rw0000hvii04zc1t11" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/十一、 Transform过渡/11.20 Transform案例" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.20%20Transform%E6%A1%88%E4%BE%8B/" class="article-date">
+  <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.20%20Transform%E6%A1%88%E4%BE%8B/">11.20 Transform案例</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-3d-animation"><a href="#1-3d-animation" class="headerlink" title="1. 3d_animation"></a>1. 3d_animation</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/animation-master/tree/main/3d_magic_cube">[3d_magic_cube]</a></p>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%8D%81%E4%B8%80%E3%80%81Transition%E8%BF%87%E6%B8%A1/">[十一、Transition过渡]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#111;&#x6d;">&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.20%20Transform%E6%A1%88%E4%BE%8B/" data-id="ckimxn2s00001hvii5rzg6j0t" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/十一、 Transform过渡/11.2Transform详解" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.2Transform%E8%AF%A6%E8%A7%A3/" class="article-date">
+  <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.2Transform%E8%AF%A6%E8%A7%A3/">11.2 Transform 详解</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h4><p><a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/css3-2d-transforms/">Transform</a>字面上就是变形，改变的意思。在<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/css3-roadmap/">CSS3</a>中<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/css3-2d-transforms/">transform</a>主要包括以下几种：<strong>旋转 rotate</strong>、<strong>扭曲 skew</strong>、<strong>缩放 scale</strong>和<strong>移动 translate</strong>以及<strong>矩阵变形 matrix</strong>。下面我们一起来看看 CSS3 中 transform 的旋转 rotate、扭曲 skew、缩放 scale 和移动 translate 具体如何实现，老样子，我们就从<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/css3-2d-transforms/">transform</a>的语法开始吧。</p>
+<h4 id="2-语法"><a href="#2-语法" class="headerlink" title="2.语法"></a>2.语法</h4><p>transform ： none |[]* 也就是： transform: rotate | scale | skew | translate |matrix;</p>
+<p>none:表示不进么变换；表示一个或多个变换函数，以空格分开；换句话说就是我们同时对一个元素进行 transform 的多种属性操作，例如 rotate、scale、translate 三种，但这里需要提醒大家的，以往我们叠加效果都是用逗号（“，”）隔开，但 transform 中使用多个属性时却需要有空格隔开。大家记住了是空格隔开。</p>
+<p>取值：</p>
+<p>transform 属性实现了一些可用 SVG 实现的同样的功能。它可用于内联(inline)元素和块级(block)元素。它允许我们旋转、缩放和移动元素 ，他有几个属性值参数：rotate;translate;scale;skew;matrix。下面我们分别来介绍这几个属性值参数的具体使用方法：</p>
+<h4 id="3-旋转-rotate"><a href="#3-旋转-rotate" class="headerlink" title="3.旋转 rotate"></a>3.旋转 rotate</h4><p>rotate() ：通过指定的角度参数对原元素指定一个<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#RotationDefined">2D rotation</a>（2D 旋转），需先有 transform-origin 属性的定义。transform-origin 定义的是旋转的基点，其中 angle 是指旋转角度，如果设置的值为正数表示顺时针旋转，如果设置的值为负数，则表示逆时针旋转。如：transform:rotate(30deg):</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1709462-dc029c2d0f0226bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/245/format/webp" alt="img"></p>
+<p>image</p>
+<h4 id="4-移动-translate"><a href="#4-移动-translate" class="headerlink" title="4. 移动 translate"></a>4. 移动 translate</h4><p>移动 translate 我们分为三种情况：translate(x,y)水平方向和垂直方向同时移动（也就是 X 轴和 Y 轴同时移动）；translateX(x)仅水平方向移动（X 轴移动）；translateY(Y)仅垂直方向移动（Y 轴移动），具体使用方法如下：</p>
+<ol>
+<li>translate([, ]) ：通过矢量[tx, ty]指定一个<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#TranslationDefined">2D translation</a>，tx 是第一个过渡值参数，ty 是第二个过渡值参数选项。如果未被提供，则 ty 以 0 作为其值。也就是 translate(x,y),它表示对象进行平移，按照设定的 x,y 参数值,当值为负数时，反方向移动物体，其基点默认为元素 中心点，也可以根据 transform-origin 进行改变基点。如 transform:translate(100px,20px):</li>
+</ol>
+<p><img src="https://upload-images.jianshu.io/upload_images/1709462-ea160e459f488b8f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/240/format/webp" alt="img"></p>
+<p>image</p>
+<ol start="2">
+<li>translateX() ： 通过给定一个 X 方向上的数目指定一个<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#TranslationDefined">translation</a>。只向 x 轴进行移动元素，同样其基点是元素中心点，也可以根据 transform-origin 改变基点位置。如：transform:translateX(100px):</li>
+</ol>
+<p><img src="https://upload-images.jianshu.io/upload_images/1709462-3a2171b8501bdac5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/237/format/webp" alt="img"></p>
+<p>image</p>
+<ol start="3">
+<li>translateY() ：通过给定 Y 方向的数目指定一个<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#TranslationDefined">translation</a>。只向 Y 轴进行移动，基点在元素心点，可以通过 transform-origin 改变基点位置。如：transform:translateY(20px):</li>
+</ol>
+<p><img src="https://upload-images.jianshu.io/upload_images/1709462-f46884b0594fa407.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/220/format/webp" alt="img"></p>
+<p>image</p>
+<h4 id="5-缩放-scale"><a href="#5-缩放-scale" class="headerlink" title="5. 缩放 scale"></a>5. 缩放 scale</h4><p>缩放 scale 和移动 translate 是极其相似，他也具有三种情况：scale(x,y)使元素水平方向和垂直方向同时缩放（也就是 X 轴和 Y 轴同时缩放）；scaleX(x)元素仅水平方向缩放（X 轴缩放）；scaleY(y)元素仅垂直方向缩放（Y 轴缩放），但它们具有相同的缩放中心点和基数，其中心点就是元素的中心位置，缩放基数为 1，如果其值大于 1 元素就放大，反之其值小于 1，元素缩小。下面我们具体来看看这三种情况具体使用方法：</p>
+<ol>
+<li>scale([, ])：提供执行[sx,sy]缩放矢量的两个参数指定一个<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#ScalingDefined">2D scale</a>（2D 缩放）。如果第二个参数未提供，则取与第一个参数一样的值。scale(X,Y)是用于对元素进行缩放，可以通过 transform-origin 对元素的基点进行设置，同样基点在元素中心位置；基中 X 表示水平方向缩放的倍数，Y 表示垂直方向的缩放倍数，而 Y 是一个可选参数，如果没有设置 Y 值，则表示 X，Y 两个方向的缩放倍数是一样的。并以 X 为准。如：transform:scale(2,1.5):</li>
+</ol>
+<p><img src="https://upload-images.jianshu.io/upload_images/1709462-b5f392970a477e3e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/220/format/webp" alt="img"></p>
+<p>image</p>
+<ol start="2">
+<li>scaleX() ： 使用 [sx,1] 缩放矢量执行缩放操作，sx 为所需参数。scaleX 表示元素只在 X 轴(水平方向)缩放元素，他的默认值是(1,1)，其基点一样是在元素的中心位置，我们同样是通过 transform-origin 来改变元素的基点。如：transform:scaleX(2):</li>
+</ol>
+<p><img src="https://upload-images.jianshu.io/upload_images/1709462-23f22a2f6244f17e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/182/format/webp" alt="img"></p>
+<p>image</p>
+<ol start="3">
+<li>scaleY() ： 使用 [1,sy] 缩放矢量执行缩放操作，sy 为所需参数。scaleY 表示元素只在 Y 轴（垂直方向）缩放元素，其基点同样是在元素中心位置，可以通过 transform-origin 来改变元素的基点。如 transform:scaleY(2):</li>
+</ol>
+<p><img src="https://upload-images.jianshu.io/upload_images/1709462-52dc6455845d6144.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/204/format/webp" alt="img"></p>
+<p>image</p>
+<h4 id="6-扭曲-skew"><a href="#6-扭曲-skew" class="headerlink" title="6. 扭曲 skew"></a>6. 扭曲 skew</h4><p>扭曲 skew 和 translate、scale 一样同样具有三种情况：skew(x,y)使元素在水平和垂直方向同时扭曲（X 轴和 Y 轴同时按一定的角度值进行扭曲变形）；skewX(x)仅使元素在水平方向扭曲变形（X 轴扭曲变形）；skewY(y)仅使元素在垂直方向扭曲变形（Y 轴扭曲变形），具体使用如下：</p>
+<ol>
+<li>skew( [, ]) ：X 轴 Y 轴上的<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#SkewXDefined">skew transformation</a>（斜切变换）。第一个参数对应 X 轴，第二个参数对应 Y 轴。如果第二个参数未提供，则值为 0，也就是 Y 轴方向上无斜切。skew 是用来对元素进行扭曲变行，第一个参数是水平方向扭曲角度，第二个参数是垂直方向扭曲角度。其中第二个参数是可选参数，如果没有设置第二个参数，那么 Y 轴为 0deg。同样是以元素中心为基点，我们也可以通过 transform-origin 来改变元素的基点位置。如：transform:skew(30deg,10deg):</li>
+</ol>
+<p><img src="https://upload-images.jianshu.io/upload_images/1709462-cc6a4bf0c3bc3f43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/225/format/webp" alt="img"></p>
+<p>image</p>
+<ol start="2">
+<li>skewX() ： 按给定的角度沿 X 轴指定一个<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#SkewXDefined">skew transformation</a>（斜切变换）。skewX 是使元素以其中心为基点，并在水平方向（X 轴）进行扭曲变行，同样可以通过 transform-origin 来改变元素的基点。如：transform:skewX(30deg)</li>
+</ol>
+<p><img src="https://upload-images.jianshu.io/upload_images/1709462-253a574ffe7a8a5c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/230/format/webp" alt="img"></p>
+<p>image</p>
+<ol start="3">
+<li>skewY() ： 按给定的角度沿 Y 轴指定一个<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#SkewYDefined">skew transformation</a>（斜切变换）。skewY 是用来设置元素以其中心为基点并按给定的角度在垂直方向（Y 轴）扭曲变形。同样我们可以通过 transform-origin 来改变元素的基点。如：transform:skewY（10deg）</li>
+</ol>
+<p><img src="https://upload-images.jianshu.io/upload_images/1709462-794565d46f402137.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/230/format/webp" alt="img"></p>
+<p>image</p>
+<h4 id="7-矩阵-matrix"><a href="#7-矩阵-matrix" class="headerlink" title="7.矩阵 matrix"></a>7.矩阵 matrix</h4><p>matrix(, , , , , ) ： 以一个含六值的(a,b,c,d,e,f)<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined">变换矩阵</a>的形式指定一个 2D 变换，相当于直接应用一个[a b c d e f]变换矩阵。就是基于水平方向（X 轴）和垂直方向（Y 轴）重新定位元素,此属性值使用涉及到数学中的矩阵，我在这里只是简单的说一下 CSS3 中的 transform 有这么一个属性值，如果有感兴趣的朋友可以去了解更深层次的 martix 使用方法，这里就不多说了。</p>
+<ol>
+<li>改变元素基点 transform-origin</li>
+</ol>
+<p>前面我们多次提到 transform-origin 这个东东，他的主要作用就是让我们在进行 transform 动作之前可以改变元素的基点位置，因为我们元素默认基点就是其中心位置，换句话说我们没有使用 transform-origin 改变元素基点位置的情况下，transform 进行的 rotate,translate,scale,skew,matrix 等操作都是以元素自己中心位置进行变化的。但有时候我们需要在不同的位置对元素进行这些操作，那么我们就可以使用 transform-origin 来对元素进行基点位置改变，使元素基点不在是中心位置，以达到你需要的基点位置。下面我们主要来看看其使用规则：</p>
+<p>transform-origin(X,Y):用来设置元素的运动的基点（参照点）。默认点是元素的中心点。其中 X 和 Y 的值可以是百分值,em,px，其中 X 也可以是字符参数值 left,center,right；Y 和 X 一样除了百分值外还可以设置字符值 top,center,bottom，这个看上去有点像我们 background-position 设置一样；下面我列出他们相对应的写法：</p>
+<ul>
+<li><p>top left | left top 等价于 0 0 | 0% 0%</p>
+</li>
+<li><p>top | top center | center top 等价于 50% 0</p>
+</li>
+<li><p>right top | top right 等价于 100% 0</p>
+</li>
+<li><p>left | left center | center left 等价于 0 50% | 0% 50%</p>
+</li>
+<li><p>center | center center 等价于 50% 50%（默认值）</p>
+</li>
+<li><p>right | right center | center right 等价于 100% 50%</p>
+</li>
+<li><p>bottom left | left bottom 等价于 0 100% | 0% 100%</p>
+</li>
+<li><p>bottom | bottom center | center bottom 等价于 50% 100%</p>
+</li>
+<li><p>bottom right | right bottom 等价于 100% 100%</p>
+</li>
+</ul>
+<p>其中 left,center right 是水平方向取值，对应的百分值为 left=0%;center=50%;right=100%而 top center bottom 是垂直方向的取值，其中 top=0%;center=50%;bottom=100%;如果只取一个值，表示垂直方向值不变，我们分别来看看以下几个实例</p>
+<p>(1)transform-origin:(left,top):</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1709462-c955d2fd60428980.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/190/format/webp" alt="img"></p>
+<p>image</p>
+<p>(2)transform-origin:right</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1709462-ba9a1504c2f503eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/180/format/webp" alt="img"></p>
+<p>image</p>
+<p>(3)transform-origin(25%,75%)</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1709462-2505f47589c61cac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/160/format/webp" alt="img"></p>
+<p>image</p>
+<p>更多的改变中心基点办法，大家可以在本地多测试一下，多体会一下，这里还要提醒大家一点的是，transform-origin 并不是 transform 中的属性值，他具有自己的语法，前面我也说过了，说简单一点就是类似于我们的 background-position 的用法，但又有其不一样，因为我们 background-position 不需要区别浏览器内核不同的写法，但 transform-origin 跟其他的 css3 属性一样，我们需要在不同的浏览内核中加上相应的前缀，下面列出各种浏览器内核下的语法规则：</p>
+<p>Mozilla 内核浏览器：firefox3.5+-moz-transform-origin: x y;//Webkit 内核浏览器：Safari and Chrome-webkit-transform-origin: x y;//Opera-o-transform-origin: x y ;//IE9-ms-transform-origin: x y;//W3C 标准 transform-origin: x y ;</p>
+<h4 id="8-transform-在不同浏览器内核下的书写规则"><a href="#8-transform-在不同浏览器内核下的书写规则" class="headerlink" title="8. transform 在不同浏览器内核下的书写规则"></a>8. transform 在不同浏览器内核下的书写规则</h4><p>Mozilla 内核浏览器：firefox3.5+-moz-transform: rotate | scale | skew | translate ;//Webkit 内核浏览器：Safari and Chrome-webkit-transform: rotate | scale | skew | translate ;//Opera-o-transform: rotate | scale | skew | translate ;//IE9-ms-transform: rotate | scale | skew | translate ;//W3C 标准 transform: rotate | scale | skew | translate ;</p>
+<p>上面列出是不同浏览内核 transform 的书写规则，如果需要兼容各浏览器的话，以上写法都需要调用。</p>
+<h4 id="9-参考文档"><a href="#9-参考文档" class="headerlink" title="9.参考文档"></a>9.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%8D%81%E4%B8%80%E3%80%81Transition%E8%BF%87%E6%B8%A1/">[十一、Transition过渡]</a></p>
+<h4 id="10-联系方式"><a href="#10-联系方式" class="headerlink" title="10. 联系方式"></a>10. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#110;&#109;&#105;&#110;&#56;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#110;&#109;&#105;&#110;&#56;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.2Transform%E8%AF%A6%E8%A7%A3/" data-id="ckimxr7t70000ojii8exgekgr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/十、Grid网格布局/5.4 Grid布局" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/03/CSS/Tags/%E5%8D%81%E3%80%81Grid%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80/5.4%20Grid%E5%B8%83%E5%B1%80/" class="article-date">
+  <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/03/CSS/Tags/%E5%8D%81%E3%80%81Grid%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80/5.4%20Grid%E5%B8%83%E5%B1%80/">10.1 Grid网格布局</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%8D%81%E3%80%81Grid%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80/5.4%20Grid%E5%B8%83%E5%B1%80/" data-id="ckimyd5bm0001edii2vjqcyx0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/八、Position定位/8.1 Position布局" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/03/CSS/Tags/%E5%85%AB%E3%80%81Position%E5%AE%9A%E4%BD%8D/8.1%20Position%E5%B8%83%E5%B1%80/" class="article-date">
+  <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/03/CSS/Tags/%E5%85%AB%E3%80%81Position%E5%AE%9A%E4%BD%8D/8.1%20Position%E5%B8%83%E5%B1%80/">8.1 Position布局</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-定位分类"><a href="#1-定位分类" class="headerlink" title="1. 定位分类"></a>1. 定位分类</h3><ul>
+<li><p>设置定位类型</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>static</td>
+<td>元素为普通布局，默认值</td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>元素相对于浏览器窗口来定位</td>
+</tr>
+<tr>
+<td>relative</td>
+<td>元素相对定位</td>
+</tr>
+<tr>
+<td>absolute</td>
+<td>元素绝对定位，相对于 position 不是 static 的第一位祖先元素来定位</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>设置元素的层叠顺序： z-index</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">z-index</span>				<span class="comment">/*允许取负数，值越大越靠近顶层*/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建多列布局</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>column-count</td>
+<td>指定列数：数字</td>
+</tr>
+<tr>
+<td>column-fill</td>
+<td>指定内容在列之间的分布方式： balance / auto</td>
+</tr>
+<tr>
+<td>column-gap</td>
+<td>指定列之间距离</td>
+</tr>
+<tr>
+<td>column-rule</td>
+<td>column-rule- 属性的简写</td>
+</tr>
+<tr>
+<td>column-rule-color</td>
+<td>设置列之间的颜色规则</td>
+</tr>
+<tr>
+<td>column-rule-style</td>
+<td>设置列之间的样式规则</td>
+</tr>
+<tr>
+<td>column-rule-width</td>
+<td>设置列之间的宽带</td>
+</tr>
+<tr>
+<td>columns</td>
+<td>设置 column-span、column-width 属性简写</td>
+</tr>
+<tr>
+<td>column-span</td>
+<td>指定元素横向能跨多少列</td>
+</tr>
+<tr>
+<td>column-width</td>
+<td>指定宽度</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AB%E3%80%81Position%E5%AE%9A%E4%BD%8D/">[八、Position定位]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#121;&#117;&#97;&#110;&#x6d;&#x69;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#111;&#x6d;">&#121;&#117;&#97;&#110;&#x6d;&#x69;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%85%AB%E3%80%81Position%E5%AE%9A%E4%BD%8D/8.1%20Position%E5%B8%83%E5%B1%80/" data-id="ckimzoi5f00038iii1yuybe68" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/九、Flex弹性布局/9.5 Flex弹性布局" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/03/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.5%20Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" class="article-date">
+  <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/03/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.5%20Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">9.5 Flex弹性布局</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-Flex"><a href="#1-Flex" class="headerlink" title="1. Flex"></a>1. Flex</h3><h4 id="1-main-axis-主轴"><a href="#1-main-axis-主轴" class="headerlink" title="1 . main-axis(主轴)"></a>1 . main-axis(主轴)</h4><h4 id="2-cross-axis-交叉轴"><a href="#2-cross-axis-交叉轴" class="headerlink" title="2. cross-axis(交叉轴)"></a>2. cross-axis(交叉轴)</h4><h4 id="3-flex-direction"><a href="#3-flex-direction" class="headerlink" title="3. flex-direction:"></a>3. flex-direction:</h4><ul>
+<li><p>Flexbox Container</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>row</td>
+<td>main-axis(主轴)是 row</td>
+</tr>
+<tr>
+<td>column</td>
+<td>main-axis(主轴)是 column</td>
+</tr>
+<tr>
+<td>row-reverse</td>
+<td>main-axis(主轴)是 row,逆序排列</td>
+</tr>
+<tr>
+<td>column-reverse</td>
+<td>main-axis(主轴)是 column,逆序排列</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="4-justify-content-和-align-items"><a href="#4-justify-content-和-align-items" class="headerlink" title="4. justify-content 和 align-items"></a>4. justify-content 和 align-items</h4><ul>
+<li><p>justify-content ： 主轴排列方向</p>
+</li>
+<li><p>align-items：交叉轴排列方向</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>center</td>
+<td></td>
+</tr>
+<tr>
+<td>flex-start</td>
+<td></td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="5-flex-wrap"><a href="#5-flex-wrap" class="headerlink" title="5. flex-wrap"></a>5. flex-wrap</h4><ul>
+<li><p>定义是否换行</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>nowrap</td>
+<td>不换行</td>
+</tr>
+<tr>
+<td>wrape</td>
+<td>换行</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="6-flex-flow"><a href="#6-flex-flow" class="headerlink" title="6. flex-flow"></a>6. flex-flow</h4><ul>
+<li><p>flex-direction、jflex-wrap 的简写</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">flex-flow</span>: <span class="selector-tag">row</span> <span class="selector-tag">wrap</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="7-align-content"><a href="#7-align-content" class="headerlink" title="7. align-content"></a>7. align-content</h4><ul>
+<li><p>当 flex-wrape：wrape 时，生效；用于行于行之间的对齐方式</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>center</td>
+<td></td>
+</tr>
+<tr>
+<td>flex-start</td>
+<td></td>
+</tr>
+<tr>
+<td>flex-end</td>
+<td></td>
+</tr>
+<tr>
+<td>initial</td>
+<td></td>
+</tr>
+<tr>
+<td>space-around</td>
+<td></td>
+</tr>
+<tr>
+<td>space-evenly</td>
+<td></td>
+</tr>
+<tr>
+<td>space-between</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="2-Flexbox-Item"><a href="#2-Flexbox-Item" class="headerlink" title="2. Flexbox Item"></a>2. Flexbox Item</h3><h4 id="1-order"><a href="#1-order" class="headerlink" title="1. order"></a>1. order</h4><ul>
+<li>默认值： 0</li>
+<li>数值越大越排在后</li>
+<li>可以取负值</li>
+</ul>
+<h4 id="2-align-self"><a href="#2-align-self" class="headerlink" title="2. align-self"></a>2. align-self</h4><ul>
+<li>可以用于改写 flex container 中，align-items 中的设定值</li>
+<li>属性值与 flex container 相同</li>
+</ul>
+<h4 id="3-flex-basis-好像没有效果"><a href="#3-flex-basis-好像没有效果" class="headerlink" title="3. flex-basis: 好像没有效果"></a>3. flex-basis: 好像没有效果</h4><ul>
+<li><p>是设定 flex-item 的主轴方向上的大小</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>width: 0px;</td>
+</tr>
+<tr>
+<td>100px</td>
+<td>原值 + 100px</td>
+</tr>
+<tr>
+<td>auto</td>
+<td>原值</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="4-flex-grow"><a href="#4-flex-grow" class="headerlink" title="4. flex-grow"></a>4. flex-grow</h4><p>当主轴方向有剩余空间时，flex-item 沿主轴方向扩展的设定,flex-grow: 0；表示保持原始值，不放大；</p>
+<h4 id="5-flex-shrink"><a href="#5-flex-shrink" class="headerlink" title="5. flex-shrink"></a>5. flex-shrink</h4><p>当主轴方向空间不够时，flex-item 沿主轴方向缩小的设定,flex-shrink: 0；表示保持原始值；</p>
+<h4 id="6-Flex"><a href="#6-Flex" class="headerlink" title="6. Flex"></a>6. Flex</h4><p>Flex Item 项目中： flex-grow + flex-shrink + flex-basis 的简写形式</p>
+<h3 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/CSS/Tutorial/%E4%B9%9D%E3%80%81Flex%20%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">[九、Flex 弹性布局]</a></p>
+<h3 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.5%20Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" data-id="ckimztag20000bqii7yot304p" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/六、CSS属性和特性/6.17  边框与背景" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/03/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.17%20%20%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%83%8C%E6%99%AF/" class="article-date">
+  <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/03/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.17%20%20%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%83%8C%E6%99%AF/">6.17 边框与背景</a>
     </h1>
   
 
@@ -1344,11 +2030,13 @@
 </tbody></table>
 </li>
 </ul>
+<h2 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5.参考文档"></a>5.参考文档</h2><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
+<h2 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h2><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#110;&#x38;&#56;&#56;&#56;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#109;">&#121;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#110;&#x38;&#56;&#56;&#56;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%9B%9B%E3%80%81%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%83%8C%E6%99%AF/4.1%20%20%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%83%8C%E6%99%AF/" data-id="ckimxdn34000d6hii84h79zx7" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.17%20%20%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%83%8C%E6%99%AF/" data-id="ckin19pih0000iqii6jkm42u7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -1360,9 +2048,9 @@
 
 
   
-    <article id="post-CSS/Tags/二、CSS 初探/2.6 理解CSS" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-CSS/Tags/十四、BFC/14.1 BFC" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/03/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.6%20%E7%90%86%E8%A7%A3CSS/" class="article-date">
+    <a href="/2020/11/03/CSS/Tags/%E5%8D%81%E5%9B%9B%E3%80%81BFC/14.1%20BFC/" class="article-date">
   <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
 </a>
     
@@ -1374,7 +2062,117 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/03/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.6%20%E7%90%86%E8%A7%A3CSS/">2.6 理解CSS</a>
+      <a class="article-title" href="/2020/11/03/CSS/Tags/%E5%8D%81%E5%9B%9B%E3%80%81BFC/14.1%20BFC/">14.1 BFC</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-BFC-概念与产生原因"><a href="#1-BFC-概念与产生原因" class="headerlink" title="1. BFC 概念与产生原因"></a>1. BFC 概念与产生原因</h4><ol>
+<li>何为 BFC</li>
+</ol>
+<ul>
+<li>BFC（Block Formatting Context）格式化上下文，是 Web 页面中盒模型布局的 CSS 渲染模式，指一个独立的渲染区域或者说是一个隔离的独立容器。</li>
+</ul>
+<ol start="2">
+<li>形成 BFC 的条件</li>
+</ol>
+<ul>
+<li><p>浮动元素，float 除 none 以外的值；<br>​</p>
+</li>
+<li><p>定位元素，position：（absolute，fixed）；</p>
+</li>
+<li><p>display 为以下其中之一的值 inline-block，table-cell，table-caption；</p>
+</li>
+<li><p>overflow 除了 visible 以外的值（hidden，auto，scroll）；</p>
+</li>
+</ul>
+<ol start="3">
+<li>BFC 的特性</li>
+</ol>
+<ul>
+<li><p>内部的 Box 会在垂直方向上一个接一个的放置。 2.垂直方向上的距离由 margin 决定</p>
+</li>
+<li><p>BFC 的区域不会与 float 的元素区域重叠。 4.计算 BFC 的高度时，浮动元素也参与计算</p>
+</li>
+<li><p>BFC 就是页面上的一个独立容器，容器里面的子元素不会影响外面元素。</p>
+</li>
+</ul>
+<h4 id="2-案例"><a href="#2-案例" class="headerlink" title="2. 案例"></a>2. 案例</h4><ol>
+<li> BFC 解决因为子元素浮动引起父元素塌陷问题</li>
+</ol>
+<ul>
+<li><p>父元素塌陷问题</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of BFC解决因为子元素浮动引起父元素塌陷问题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-class">.father</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#000</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>; <span class="comment">/*触发BFC*/</span></span></span><br><span class="line">        padding: 30px;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.father</span> <span class="selector-class">.son</span> &#123;</span></span><br><span class="line">        width: 260px;</span><br><span class="line">        height: 100px;</span><br><span class="line">        float: left;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.son1</span> &#123;</span></span><br><span class="line">        margin: 20px;</span><br><span class="line">        background: green;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.son2</span> &#123;</span></span><br><span class="line">        margin: 50px;</span><br><span class="line">        background: blue;</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;father&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;son son1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;son son2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="2">
+<li>外边距折叠</li>
+</ol>
+<ul>
+<li><p>外边距折叠</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-7&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=2.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of BFC 元素垂直排列<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-class">.container</span> &#123;</span></span><br><span class="line">        width: 301px;</span><br><span class="line">        margin: 201px auto;</span><br><span class="line"><span class="css">        <span class="selector-tag">border</span>: 2<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#000</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.column</span> &#123;</span></span><br><span class="line">        width: 301px;</span><br><span class="line">        height: 101px;</span><br><span class="line">        margin: 21px auto;</span><br><span class="line">        background: orange;</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- BFC触发元素垂直排列： 块级元素 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>外边距不折叠</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of BFC处理垂直元素margin塌陷<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-class">.container</span> &#123;</span></span><br><span class="line">        width: 300px;</span><br><span class="line">        margin: 200px auto;</span><br><span class="line"><span class="css">        <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#000</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.column</span> &#123;</span></span><br><span class="line">        width: 300px;</span><br><span class="line">        height: 100px;</span><br><span class="line">        margin: 20px auto;</span><br><span class="line">        background: orange;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.wrap</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>; <span class="comment">/*触发BFC*/</span></span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- BFC触发元素垂直排列： 块级元素 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;wrap&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="3">
+<li>BFC 解决两栏布局重叠问题</li>
+</ol>
+<ul>
+<li><p>左边栏固定宽度，float：left</p>
+</li>
+<li><p>右边栏 overflow: hidden</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">columntitle&gt;Demo fo BFC Two Column Layout<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.column</span> &#123;</span></span><br><span class="line">      height: 400px;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.column</span><span class="selector-pseudo">:nth-of-type(1)</span> &#123;</span></span><br><span class="line">      width: 200px;</span><br><span class="line">      background: green;</span><br><span class="line">      float: left;</span><br><span class="line">      margin-right: 20px;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.column</span><span class="selector-pseudo">:nth-of-type(2)</span>&#123;</span></span><br><span class="line">      background: red;</span><br><span class="line">      overflow: hidden;</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="4">
+<li>BFC 解决三栏布局问题</li>
+</ol>
+<ul>
+<li><p>左右两边固定宽度，</p>
+</li>
+<li><p>中间不设宽，自适应，随浏览器的大小变化而变化</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of BFC 三栏布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-class">.column</span> &#123;</span></span><br><span class="line">        height: 200px;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.column</span><span class="selector-pseudo">:nth-of-type(1)</span> &#123;</span></span><br><span class="line">        width: 200px;</span><br><span class="line">        background: red;</span><br><span class="line">        float: left;</span><br><span class="line">        margin-right: 10px;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.column</span><span class="selector-pseudo">:nth-of-type(2)</span> &#123;</span></span><br><span class="line">        width: 200px;</span><br><span class="line">        background: red;</span><br><span class="line">        float: right;</span><br><span class="line">        margin-left: 10px;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.column</span><span class="selector-pseudo">:nth-of-type(3)</span> &#123;</span></span><br><span class="line">        background: green;</span><br><span class="line"><span class="css">        <span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>; <span class="comment">/*触发BFC*/</span></span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%8D%81%E5%9B%9B%E3%80%81BFC/">[十四、BFC]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#46;&#99;&#111;&#x6d;">&#121;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#46;&#99;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%8D%81%E5%9B%9B%E3%80%81BFC/14.1%20BFC/" data-id="ckin19pil0002iqii6s1rg25l" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/一、CSS简介/1.1 理解CSS" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/03/CSS/Tags/%E4%B8%80%E3%80%81CSS%E7%AE%80%E4%BB%8B/1.1%20%E7%90%86%E8%A7%A3CSS/" class="article-date">
+  <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/03/CSS/Tags/%E4%B8%80%E3%80%81CSS%E7%AE%80%E4%BB%8B/1.1%20%E7%90%86%E8%A7%A3CSS/">2.6 理解CSS</a>
     </h1>
   
 
@@ -1409,131 +2207,8 @@
 <td>-ms-</td>
 </tr>
 </tbody></table>
-<h4 id="2-盒子模型-box-model-："><a href="#2-盒子模型-box-model-：" class="headerlink" title="2. 盒子模型(box model)："></a>2. 盒子模型(box model)：</h4><p>每一个元素在页面中都会占据一定的区域，该区域就称为元素的盒子(box),</p>
-<p><img src="https://s3.ax1x.com/2020/12/13/reswnA.jpg" alt="box-model"></p>
-<ol>
-<li>说明</li>
-</ol>
-<p><img src="https://s3.ax1x.com/2020/12/13/resc9S.png" alt="description"></p>
-<ol start="2">
-<li> Box 组成：</li>
-</ol>
-<p>Content(内容)、border(边框)、padding(内边距)，margin(外边距)</p>
-<ol start="3">
-<li>standard(标准) box</li>
-</ol>
-<p><img src="https://s3.ax1x.com/2020/12/13/resRXj.png" alt="standard box"></p>
-<ol start="4">
-<li>IE box</li>
-</ol>
-<p><img src="https://s3.ax1x.com/2020/12/13/res47q.png" alt="IE box"></p>
-<p>为了解决两者定义之间的区别，通常规定： border-size 属性(attribute)</p>
-<ol start="5">
-<li>表 2 盒子模型属性</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>Attribute(属性)</th>
-<th>Description(说明)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>box-sizing: border-box</td>
-<td>height / width = content + padding + border</td>
-</tr>
-<tr>
-<td>box-sizing: content-box</td>
-<td>height / width = content</td>
-</tr>
-<tr>
-<td>box-sizing: inherit</td>
-<td>继承父级元素属性值</td>
-</tr>
-</tbody></table>
-<h4 id="3-Block-Container-容器"><a href="#3-Block-Container-容器" class="headerlink" title="3. Block Container(容器):"></a>3. Block Container(容器):</h4><ul>
-<li>通常将父子元素关系中父元素盒子称之为<strong>容器</strong></li>
-</ul>
-<h4 id="4-外边距塌陷"><a href="#4-外边距塌陷" class="headerlink" title="4. 外边距塌陷"></a>4. 外边距塌陷</h4><ol>
-<li>外边距塌陷(margin collapse)：<ul>
-<li>块元素的外边距有时会合并为单个外边距，这样的现象称之为外边距塌陷。</li>
-</ul>
-</li>
-<li>父子元素盒子模型塌陷： 合并后最大的外边距</li>
-<li>兄弟元素间外边距塌陷： 合并后最大的外边距</li>
-</ol>
-<h4 id="5-BFC"><a href="#5-BFC" class="headerlink" title="5. BFC"></a>5. BFC</h4><ol>
-<li>何为 BFC_</li>
-</ol>
-<ul>
-<li>BFC（Block Formatting Context）格式化上下文，是 Web 页面中盒模型布局的 CSS 渲染模式，指一个独立的渲染区域或者说是一个隔离的独立容器。</li>
-</ul>
-<ol start="2">
-<li>形成 BFC 的条件</li>
-</ol>
-<ul>
-<li><p>浮动元素，float 除 none 以外的值；<br>​</p>
-</li>
-<li><p>定位元素，position：（absolute，fixed）；</p>
-</li>
-<li><p>display 为以下其中之一的值 inline-block，table-cell，table-caption；</p>
-</li>
-<li><p>overflow 除了 visible 以外的值（hidden，auto，scroll）；</p>
-</li>
-</ul>
-<ol start="3">
-<li>BFC 的特性</li>
-</ol>
-<ul>
-<li><p>内部的 Box 会在垂直方向上一个接一个的放置。 2.垂直方向上的距离由 margin 决定</p>
-</li>
-<li><p>BFC 的区域不会与 float 的元素区域重叠。 4.计算 BFC 的高度时，浮动元素也参与计算</p>
-</li>
-<li><p>BFC 就是页面上的一个独立容器，容器里面的子元素不会影响外面元素。</p>
-</li>
-</ul>
-<h4 id="6-案例"><a href="#6-案例" class="headerlink" title="6. 案例"></a>6. 案例</h4><ol>
-<li> BFC 解决因为子元素浮动引起父元素塌陷问题</li>
-</ol>
-<ul>
-<li><p>父元素塌陷问题</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of BFC解决因为子元素浮动引起父元素塌陷问题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-class">.father</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#000</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>; <span class="comment">/*触发BFC*/</span></span></span><br><span class="line">        padding: 30px;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.father</span> <span class="selector-class">.son</span> &#123;</span></span><br><span class="line">        width: 260px;</span><br><span class="line">        height: 100px;</span><br><span class="line">        float: left;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.son1</span> &#123;</span></span><br><span class="line">        margin: 20px;</span><br><span class="line">        background: green;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.son2</span> &#123;</span></span><br><span class="line">        margin: 50px;</span><br><span class="line">        background: blue;</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;father&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;son son1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;son son2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="2">
-<li>外边距折叠</li>
-</ol>
-<ul>
-<li><p>外边距折叠</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-7&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=2.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of BFC 元素垂直排列<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-class">.container</span> &#123;</span></span><br><span class="line">        width: 301px;</span><br><span class="line">        margin: 201px auto;</span><br><span class="line"><span class="css">        <span class="selector-tag">border</span>: 2<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#000</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.column</span> &#123;</span></span><br><span class="line">        width: 301px;</span><br><span class="line">        height: 101px;</span><br><span class="line">        margin: 21px auto;</span><br><span class="line">        background: orange;</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- BFC触发元素垂直排列： 块级元素 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>外边距不折叠</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of BFC处理垂直元素margin塌陷<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-class">.container</span> &#123;</span></span><br><span class="line">        width: 300px;</span><br><span class="line">        margin: 200px auto;</span><br><span class="line"><span class="css">        <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#000</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.column</span> &#123;</span></span><br><span class="line">        width: 300px;</span><br><span class="line">        height: 100px;</span><br><span class="line">        margin: 20px auto;</span><br><span class="line">        background: orange;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.wrap</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>; <span class="comment">/*触发BFC*/</span></span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- BFC触发元素垂直排列： 块级元素 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;wrap&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="3">
-<li>BFC 解决两栏布局重叠问题</li>
-</ol>
-<ul>
-<li><p>左边栏固定宽度，float：left</p>
-</li>
-<li><p>右边栏 overflow: hidden</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">columntitle&gt;Demo fo BFC Two Column Layout<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.column</span> &#123;</span></span><br><span class="line">      height: 400px;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.column</span><span class="selector-pseudo">:nth-of-type(1)</span> &#123;</span></span><br><span class="line">      width: 200px;</span><br><span class="line">      background: green;</span><br><span class="line">      float: left;</span><br><span class="line">      margin-right: 20px;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.column</span><span class="selector-pseudo">:nth-of-type(2)</span>&#123;</span></span><br><span class="line">      background: red;</span><br><span class="line">      overflow: hidden;</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="4">
-<li>BFC 解决三栏布局问题_</li>
-</ol>
-<ul>
-<li><p>左右两边固定宽度，</p>
-</li>
-<li><p>中间不设宽，自适应，随浏览器的大小变化而变化</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of BFC 三栏布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-class">.column</span> &#123;</span></span><br><span class="line">        height: 200px;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.column</span><span class="selector-pseudo">:nth-of-type(1)</span> &#123;</span></span><br><span class="line">        width: 200px;</span><br><span class="line">        background: red;</span><br><span class="line">        float: left;</span><br><span class="line">        margin-right: 10px;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.column</span><span class="selector-pseudo">:nth-of-type(2)</span> &#123;</span></span><br><span class="line">        width: 200px;</span><br><span class="line">        background: red;</span><br><span class="line">        float: right;</span><br><span class="line">        margin-left: 10px;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.column</span><span class="selector-pseudo">:nth-of-type(3)</span> &#123;</span></span><br><span class="line">        background: green;</span><br><span class="line"><span class="css">        <span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>; <span class="comment">/*触发BFC*/</span></span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;column&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="7-选择器简明参考"><a href="#7-选择器简明参考" class="headerlink" title="7. 选择器简明参考"></a>7. 选择器简明参考</h4><ul>
-<li><p>表 3 CSS Selector(选择器)</p>
+<h4 id="2-选择器简明参考"><a href="#2-选择器简明参考" class="headerlink" title="2. 选择器简明参考"></a>2. 选择器简明参考</h4><ul>
+<li><p>表 2 CSS Selector(选择器)</p>
 <table>
 <thead>
 <tr>
@@ -1544,57 +2219,57 @@
 </thead>
 <tbody><tr>
 <td>基本选择器</td>
-<td><strong>*</strong></td>
+<td>*</td>
 <td>通配符选择器</td>
 </tr>
 <tr>
 <td></td>
-<td><strong>.class</strong></td>
+<td>.class</td>
 <td>class 选择器</td>
 </tr>
 <tr>
 <td></td>
-<td><strong>#</strong></td>
+<td>#</td>
 <td>id 选择器</td>
 </tr>
 <tr>
 <td></td>
-<td><strong>element</strong></td>
+<td>element</td>
 <td>元素(标签)选择器</td>
 </tr>
 <tr>
 <td>属性选择器</td>
-<td><strong>[attr]</strong></td>
+<td>[attr]</td>
 <td>属性值任意值</td>
 </tr>
 <tr>
 <td></td>
-<td><strong>[attr=”value”]</strong></td>
+<td>[attr=”value”]</td>
 <td>属性值为 value 的元素</td>
 </tr>
 <tr>
 <td></td>
-<td><strong>[attr^=”value”]</strong></td>
+<td>[attr^=”value”]</td>
 <td>属性值以 value 开头的元素</td>
 </tr>
 <tr>
 <td></td>
-<td><strong>[attr$=”value”]</strong></td>
+<td>[attr$=”value”]</td>
 <td>属性值以 value 结尾的元素</td>
 </tr>
 <tr>
 <td></td>
-<td>*<em>[attr</em>=”value”]**</td>
+<td>[attr*=”value”]</td>
 <td>属性值包含 value 的元素</td>
 </tr>
 <tr>
 <td></td>
-<td><strong>[attr~=”value”]</strong></td>
+<td>[attr~=”value”]</td>
 <td>属性包含多个值，其中一个值 value 的元素</td>
 </tr>
 <tr>
 <td></td>
-<td><strong>[attr|=”value”]</strong></td>
+<td>[attr|=”value”]</td>
 <td>属性值是以连字符分割的一串值，且第一个为 value 的元素</td>
 </tr>
 <tr>
@@ -1785,11 +2460,11 @@
 </tbody></table>
 </li>
 </ul>
-<h4 id="9-属性简明参考"><a href="#9-属性简明参考" class="headerlink" title="9. 属性简明参考"></a>9. 属性简明参考</h4><ol>
+<h4 id="3-属性简明参考"><a href="#3-属性简明参考" class="headerlink" title="3. 属性简明参考"></a>3. 属性简明参考</h4><ol>
 <li> 边框和背景属性</li>
 </ol>
 <ul>
-<li><p>表 4 边框和背景属性</p>
+<li><p>表 3 边框和背景属性</p>
 <table>
 <thead>
 <tr>
@@ -1964,7 +2639,7 @@
 <li>盒子模型属性</li>
 </ol>
 <ul>
-<li><p>表 5 基本盒子属性</p>
+<li><p>表 4 基本盒子属性</p>
 <table>
 <thead>
 <tr>
@@ -2075,7 +2750,7 @@
 <li>布局属性</li>
 </ol>
 <ul>
-<li><p>表 6 布局属性</p>
+<li><p>表 5 布局属性</p>
 <table>
 <thead>
 <tr>
@@ -2158,7 +2833,7 @@
 <li>文本属性</li>
 </ol>
 <ul>
-<li><p>表 7 文本属性</p>
+<li><p>表 6 文本属性</p>
 <table>
 <thead>
 <tr>
@@ -2229,7 +2904,7 @@
 <li>过渡、动画和变换属性</li>
 </ol>
 <ul>
-<li>表 8 过渡、动画和变换</li>
+<li>表 7 过渡、动画和变换</li>
 </ul>
 <table>
 <thead>
@@ -2307,7 +2982,7 @@
 <li>其他属性</li>
 </ol>
 <ul>
-<li><p>表 9 其他属性</p>
+<li><p>表 8 其他属性</p>
 <table>
 <thead>
 <tr>
@@ -2390,7 +3065,7 @@
 </ul>
 </li>
 </ol>
-<h4 id="8-单位"><a href="#8-单位" class="headerlink" title="8. 单位"></a>8. 单位</h4><ol>
+<h4 id="9-单位"><a href="#9-单位" class="headerlink" title="9. 单位"></a>9. 单位</h4><ol>
 <li><p>百分比单位： 相对于父级元素的百分率单位</p>
 </li>
 <li><p>em： 相对于字体 font-size 的倍数单位</p>
@@ -2401,7 +3076,7 @@
 
 </li>
 </ol>
-<h4 id="9-颜色之的设置方法"><a href="#9-颜色之的设置方法" class="headerlink" title="9. 颜色之的设置方法"></a>9. 颜色之的设置方法</h4><ul>
+<h4 id="10-颜色之的设置方法"><a href="#10-颜色之的设置方法" class="headerlink" title="10. 颜色之的设置方法"></a>10. 颜色之的设置方法</h4><ul>
 <li><p>文本表示法</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="attribute">backgoround</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -2428,697 +3103,13 @@
 
 </li>
 </ul>
-<h4 id="10-参考文档"><a href="#10-参考文档" class="headerlink" title="10.参考文档"></a>10.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h4 id="11-联系方式"><a href="#11-联系方式" class="headerlink" title="11. 联系方式"></a>11. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#105;&#110;&#56;&#x38;&#56;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;">&#121;&#x75;&#97;&#x6e;&#109;&#105;&#110;&#56;&#x38;&#56;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
+<h4 id="9-参考文档"><a href="#9-参考文档" class="headerlink" title="9.参考文档"></a>9.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
+<h4 id="10-联系方式"><a href="#10-联系方式" class="headerlink" title="10. 联系方式"></a>10. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.6%20%E7%90%86%E8%A7%A3CSS/" data-id="ckimxdn3g000l6hiicdxhg0q9" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/十一、 Transform过渡/11.1 Transform 属性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.1%20Transform%20%E5%B1%9E%E6%80%A7/" class="article-date">
-  <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.1%20Transform%20%E5%B1%9E%E6%80%A7/">11.1 Transform 属性</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Transform-定义"><a href="#1-Transform-定义" class="headerlink" title="1.Transform 定义"></a>1.Transform 定义</h4><ol>
-<li>transform 属性向元素应用 2D 或 3D 转换；</li>
-<li>该属性允许我们对元素进行旋转、缩放、移动或倾斜操作</li>
-</ol>
-<h4 id="2-Transform-语法"><a href="#2-Transform-语法" class="headerlink" title="2.Transform 语法"></a>2.Transform 语法</h4><ul>
-<li><p>CSS 语法</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">selector</span> &gt; &#123;</span><br><span class="line">  <span class="attribute">transform</span>: &lt;value&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>JS 语法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object.style.transform = &lt;value&gt;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-Transform-属性值"><a href="#3-Transform-属性值" class="headerlink" title="3.Transform 属性值"></a>3.Transform 属性值</h4><ul>
-<li><p>表一：属性</p>
-<table>
-<thead>
-<tr>
-<th>attribute</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>none</td>
-<td>进行转换</td>
-</tr>
-<tr>
-<td>matrix(n,n,n,n,n,n)</td>
-<td>2D 转换，使用六个值的矩阵</td>
-</tr>
-<tr>
-<td>matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)</td>
-<td>3D 转换，使用 16 个值的 4x4 矩阵</td>
-</tr>
-<tr>
-<td>translate(x,y)</td>
-<td>2D 转换</td>
-</tr>
-<tr>
-<td>translate3d(x,y,z)</td>
-<td>3D 转换</td>
-</tr>
-<tr>
-<td>translateX(x)</td>
-<td>定义转换，只是用 X 轴的值</td>
-</tr>
-<tr>
-<td>translateX(y)</td>
-<td>定义转换，只是用 Y 轴的值</td>
-</tr>
-<tr>
-<td>translateZ(z)</td>
-<td>定义转换，只是用 Z 轴的值</td>
-</tr>
-<tr>
-<td>scale(x,y)</td>
-<td>2D 缩放转换</td>
-</tr>
-<tr>
-<td>scale3d(x,y,z)</td>
-<td>3D 缩放转换</td>
-</tr>
-<tr>
-<td>scaleX(x)</td>
-<td>设置 X 轴的值来定义缩放转换</td>
-</tr>
-<tr>
-<td>scaleY(y)</td>
-<td>设置 Y 轴的值来定义缩放转换</td>
-</tr>
-<tr>
-<td>scaleZ(z)</td>
-<td>设置 Z 轴的值来定义缩放转换</td>
-</tr>
-<tr>
-<td>rotate(angle)</td>
-<td>2D 旋转，参数为角度</td>
-</tr>
-<tr>
-<td>rotate3d(x,y,z,angle)</td>
-<td>3D 旋转</td>
-</tr>
-<tr>
-<td>rotateX(angle)</td>
-<td>定义沿着 X 轴的 3D 旋转</td>
-</tr>
-<tr>
-<td>rotateY(angle)</td>
-<td>定义沿着 Y 轴的 3D 旋转</td>
-</tr>
-<tr>
-<td>rotateZ(angle)</td>
-<td>定义沿着 Z 轴的 3D 旋转</td>
-</tr>
-<tr>
-<td>skew(x-angle,y-angle)</td>
-<td>沿着 X 和 Y 轴的 2D 倾斜转换</td>
-</tr>
-<tr>
-<td>skewX(angle)</td>
-<td>沿着 X 轴的 2D 倾斜转换</td>
-</tr>
-<tr>
-<td>skewY(angle)</td>
-<td>沿着 Y 轴的 2D 倾斜转换</td>
-</tr>
-<tr>
-<td>perspective(n)</td>
-<td>为 3D 转换元素定义透视视图</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h4 id="4-案例"><a href="#4-案例" class="headerlink" title="4.案例"></a>4.案例</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-oyster/3d_animation">[3d_animation]</a></p>
-<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5.参考文档"></a>5.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%8D%81%E4%B8%80%E3%80%81Transition%E8%BF%87%E6%B8%A1/">[十一、Transition过渡]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#x6d;">&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.1%20Transform%20%E5%B1%9E%E6%80%A7/" data-id="ckimxn2rw0000hvii04zc1t11" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/十一、 Transform过渡/11.20 Transform案例" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.20%20Transform%E6%A1%88%E4%BE%8B/" class="article-date">
-  <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.20%20Transform%E6%A1%88%E4%BE%8B/">11.20 Transform案例</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-3d-animation"><a href="#1-3d-animation" class="headerlink" title="1. 3d_animation"></a>1. 3d_animation</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/animation-master/tree/main/3d_magic_cube">[3d_magic_cube]</a></p>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%8D%81%E4%B8%80%E3%80%81Transition%E8%BF%87%E6%B8%A1/">[十一、Transition过渡]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#111;&#x6d;">&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.20%20Transform%E6%A1%88%E4%BE%8B/" data-id="ckimxn2s00001hvii5rzg6j0t" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/十一、 Transform过渡/11.2Transform详解" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.2Transform%E8%AF%A6%E8%A7%A3/" class="article-date">
-  <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.2Transform%E8%AF%A6%E8%A7%A3/">11.2 Transform 详解</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h4><p><a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/css3-2d-transforms/">Transform</a>字面上就是变形，改变的意思。在<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/css3-roadmap/">CSS3</a>中<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/css3-2d-transforms/">transform</a>主要包括以下几种：<strong>旋转 rotate</strong>、<strong>扭曲 skew</strong>、<strong>缩放 scale</strong>和<strong>移动 translate</strong>以及<strong>矩阵变形 matrix</strong>。下面我们一起来看看 CSS3 中 transform 的旋转 rotate、扭曲 skew、缩放 scale 和移动 translate 具体如何实现，老样子，我们就从<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/css3-2d-transforms/">transform</a>的语法开始吧。</p>
-<h4 id="2-语法"><a href="#2-语法" class="headerlink" title="2.语法"></a>2.语法</h4><p>transform ： none |[]* 也就是： transform: rotate | scale | skew | translate |matrix;</p>
-<p>none:表示不进么变换；表示一个或多个变换函数，以空格分开；换句话说就是我们同时对一个元素进行 transform 的多种属性操作，例如 rotate、scale、translate 三种，但这里需要提醒大家的，以往我们叠加效果都是用逗号（“，”）隔开，但 transform 中使用多个属性时却需要有空格隔开。大家记住了是空格隔开。</p>
-<p>取值：</p>
-<p>transform 属性实现了一些可用 SVG 实现的同样的功能。它可用于内联(inline)元素和块级(block)元素。它允许我们旋转、缩放和移动元素 ，他有几个属性值参数：rotate;translate;scale;skew;matrix。下面我们分别来介绍这几个属性值参数的具体使用方法：</p>
-<h4 id="3-旋转-rotate"><a href="#3-旋转-rotate" class="headerlink" title="3.旋转 rotate"></a>3.旋转 rotate</h4><p>rotate() ：通过指定的角度参数对原元素指定一个<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#RotationDefined">2D rotation</a>（2D 旋转），需先有 transform-origin 属性的定义。transform-origin 定义的是旋转的基点，其中 angle 是指旋转角度，如果设置的值为正数表示顺时针旋转，如果设置的值为负数，则表示逆时针旋转。如：transform:rotate(30deg):</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/1709462-dc029c2d0f0226bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/245/format/webp" alt="img"></p>
-<p>image</p>
-<h4 id="4-移动-translate"><a href="#4-移动-translate" class="headerlink" title="4. 移动 translate"></a>4. 移动 translate</h4><p>移动 translate 我们分为三种情况：translate(x,y)水平方向和垂直方向同时移动（也就是 X 轴和 Y 轴同时移动）；translateX(x)仅水平方向移动（X 轴移动）；translateY(Y)仅垂直方向移动（Y 轴移动），具体使用方法如下：</p>
-<ol>
-<li>translate([, ]) ：通过矢量[tx, ty]指定一个<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#TranslationDefined">2D translation</a>，tx 是第一个过渡值参数，ty 是第二个过渡值参数选项。如果未被提供，则 ty 以 0 作为其值。也就是 translate(x,y),它表示对象进行平移，按照设定的 x,y 参数值,当值为负数时，反方向移动物体，其基点默认为元素 中心点，也可以根据 transform-origin 进行改变基点。如 transform:translate(100px,20px):</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/1709462-ea160e459f488b8f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/240/format/webp" alt="img"></p>
-<p>image</p>
-<ol start="2">
-<li>translateX() ： 通过给定一个 X 方向上的数目指定一个<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#TranslationDefined">translation</a>。只向 x 轴进行移动元素，同样其基点是元素中心点，也可以根据 transform-origin 改变基点位置。如：transform:translateX(100px):</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/1709462-3a2171b8501bdac5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/237/format/webp" alt="img"></p>
-<p>image</p>
-<ol start="3">
-<li>translateY() ：通过给定 Y 方向的数目指定一个<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#TranslationDefined">translation</a>。只向 Y 轴进行移动，基点在元素心点，可以通过 transform-origin 改变基点位置。如：transform:translateY(20px):</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/1709462-f46884b0594fa407.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/220/format/webp" alt="img"></p>
-<p>image</p>
-<h4 id="5-缩放-scale"><a href="#5-缩放-scale" class="headerlink" title="5. 缩放 scale"></a>5. 缩放 scale</h4><p>缩放 scale 和移动 translate 是极其相似，他也具有三种情况：scale(x,y)使元素水平方向和垂直方向同时缩放（也就是 X 轴和 Y 轴同时缩放）；scaleX(x)元素仅水平方向缩放（X 轴缩放）；scaleY(y)元素仅垂直方向缩放（Y 轴缩放），但它们具有相同的缩放中心点和基数，其中心点就是元素的中心位置，缩放基数为 1，如果其值大于 1 元素就放大，反之其值小于 1，元素缩小。下面我们具体来看看这三种情况具体使用方法：</p>
-<ol>
-<li>scale([, ])：提供执行[sx,sy]缩放矢量的两个参数指定一个<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#ScalingDefined">2D scale</a>（2D 缩放）。如果第二个参数未提供，则取与第一个参数一样的值。scale(X,Y)是用于对元素进行缩放，可以通过 transform-origin 对元素的基点进行设置，同样基点在元素中心位置；基中 X 表示水平方向缩放的倍数，Y 表示垂直方向的缩放倍数，而 Y 是一个可选参数，如果没有设置 Y 值，则表示 X，Y 两个方向的缩放倍数是一样的。并以 X 为准。如：transform:scale(2,1.5):</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/1709462-b5f392970a477e3e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/220/format/webp" alt="img"></p>
-<p>image</p>
-<ol start="2">
-<li>scaleX() ： 使用 [sx,1] 缩放矢量执行缩放操作，sx 为所需参数。scaleX 表示元素只在 X 轴(水平方向)缩放元素，他的默认值是(1,1)，其基点一样是在元素的中心位置，我们同样是通过 transform-origin 来改变元素的基点。如：transform:scaleX(2):</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/1709462-23f22a2f6244f17e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/182/format/webp" alt="img"></p>
-<p>image</p>
-<ol start="3">
-<li>scaleY() ： 使用 [1,sy] 缩放矢量执行缩放操作，sy 为所需参数。scaleY 表示元素只在 Y 轴（垂直方向）缩放元素，其基点同样是在元素中心位置，可以通过 transform-origin 来改变元素的基点。如 transform:scaleY(2):</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/1709462-52dc6455845d6144.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/204/format/webp" alt="img"></p>
-<p>image</p>
-<h4 id="6-扭曲-skew"><a href="#6-扭曲-skew" class="headerlink" title="6. 扭曲 skew"></a>6. 扭曲 skew</h4><p>扭曲 skew 和 translate、scale 一样同样具有三种情况：skew(x,y)使元素在水平和垂直方向同时扭曲（X 轴和 Y 轴同时按一定的角度值进行扭曲变形）；skewX(x)仅使元素在水平方向扭曲变形（X 轴扭曲变形）；skewY(y)仅使元素在垂直方向扭曲变形（Y 轴扭曲变形），具体使用如下：</p>
-<ol>
-<li>skew( [, ]) ：X 轴 Y 轴上的<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#SkewXDefined">skew transformation</a>（斜切变换）。第一个参数对应 X 轴，第二个参数对应 Y 轴。如果第二个参数未提供，则值为 0，也就是 Y 轴方向上无斜切。skew 是用来对元素进行扭曲变行，第一个参数是水平方向扭曲角度，第二个参数是垂直方向扭曲角度。其中第二个参数是可选参数，如果没有设置第二个参数，那么 Y 轴为 0deg。同样是以元素中心为基点，我们也可以通过 transform-origin 来改变元素的基点位置。如：transform:skew(30deg,10deg):</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/1709462-cc6a4bf0c3bc3f43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/225/format/webp" alt="img"></p>
-<p>image</p>
-<ol start="2">
-<li>skewX() ： 按给定的角度沿 X 轴指定一个<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#SkewXDefined">skew transformation</a>（斜切变换）。skewX 是使元素以其中心为基点，并在水平方向（X 轴）进行扭曲变行，同样可以通过 transform-origin 来改变元素的基点。如：transform:skewX(30deg)</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/1709462-253a574ffe7a8a5c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/230/format/webp" alt="img"></p>
-<p>image</p>
-<ol start="3">
-<li>skewY() ： 按给定的角度沿 Y 轴指定一个<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#SkewYDefined">skew transformation</a>（斜切变换）。skewY 是用来设置元素以其中心为基点并按给定的角度在垂直方向（Y 轴）扭曲变形。同样我们可以通过 transform-origin 来改变元素的基点。如：transform:skewY（10deg）</li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/1709462-794565d46f402137.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/230/format/webp" alt="img"></p>
-<p>image</p>
-<h4 id="7-矩阵-matrix"><a href="#7-矩阵-matrix" class="headerlink" title="7.矩阵 matrix"></a>7.矩阵 matrix</h4><p>matrix(, , , , , ) ： 以一个含六值的(a,b,c,d,e,f)<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined">变换矩阵</a>的形式指定一个 2D 变换，相当于直接应用一个[a b c d e f]变换矩阵。就是基于水平方向（X 轴）和垂直方向（Y 轴）重新定位元素,此属性值使用涉及到数学中的矩阵，我在这里只是简单的说一下 CSS3 中的 transform 有这么一个属性值，如果有感兴趣的朋友可以去了解更深层次的 martix 使用方法，这里就不多说了。</p>
-<ol>
-<li>改变元素基点 transform-origin</li>
-</ol>
-<p>前面我们多次提到 transform-origin 这个东东，他的主要作用就是让我们在进行 transform 动作之前可以改变元素的基点位置，因为我们元素默认基点就是其中心位置，换句话说我们没有使用 transform-origin 改变元素基点位置的情况下，transform 进行的 rotate,translate,scale,skew,matrix 等操作都是以元素自己中心位置进行变化的。但有时候我们需要在不同的位置对元素进行这些操作，那么我们就可以使用 transform-origin 来对元素进行基点位置改变，使元素基点不在是中心位置，以达到你需要的基点位置。下面我们主要来看看其使用规则：</p>
-<p>transform-origin(X,Y):用来设置元素的运动的基点（参照点）。默认点是元素的中心点。其中 X 和 Y 的值可以是百分值,em,px，其中 X 也可以是字符参数值 left,center,right；Y 和 X 一样除了百分值外还可以设置字符值 top,center,bottom，这个看上去有点像我们 background-position 设置一样；下面我列出他们相对应的写法：</p>
-<ul>
-<li><p>top left | left top 等价于 0 0 | 0% 0%</p>
-</li>
-<li><p>top | top center | center top 等价于 50% 0</p>
-</li>
-<li><p>right top | top right 等价于 100% 0</p>
-</li>
-<li><p>left | left center | center left 等价于 0 50% | 0% 50%</p>
-</li>
-<li><p>center | center center 等价于 50% 50%（默认值）</p>
-</li>
-<li><p>right | right center | center right 等价于 100% 50%</p>
-</li>
-<li><p>bottom left | left bottom 等价于 0 100% | 0% 100%</p>
-</li>
-<li><p>bottom | bottom center | center bottom 等价于 50% 100%</p>
-</li>
-<li><p>bottom right | right bottom 等价于 100% 100%</p>
-</li>
-</ul>
-<p>其中 left,center right 是水平方向取值，对应的百分值为 left=0%;center=50%;right=100%而 top center bottom 是垂直方向的取值，其中 top=0%;center=50%;bottom=100%;如果只取一个值，表示垂直方向值不变，我们分别来看看以下几个实例</p>
-<p>(1)transform-origin:(left,top):</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/1709462-c955d2fd60428980.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/190/format/webp" alt="img"></p>
-<p>image</p>
-<p>(2)transform-origin:right</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/1709462-ba9a1504c2f503eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/180/format/webp" alt="img"></p>
-<p>image</p>
-<p>(3)transform-origin(25%,75%)</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/1709462-2505f47589c61cac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/160/format/webp" alt="img"></p>
-<p>image</p>
-<p>更多的改变中心基点办法，大家可以在本地多测试一下，多体会一下，这里还要提醒大家一点的是，transform-origin 并不是 transform 中的属性值，他具有自己的语法，前面我也说过了，说简单一点就是类似于我们的 background-position 的用法，但又有其不一样，因为我们 background-position 不需要区别浏览器内核不同的写法，但 transform-origin 跟其他的 css3 属性一样，我们需要在不同的浏览内核中加上相应的前缀，下面列出各种浏览器内核下的语法规则：</p>
-<p>Mozilla 内核浏览器：firefox3.5+-moz-transform-origin: x y;//Webkit 内核浏览器：Safari and Chrome-webkit-transform-origin: x y;//Opera-o-transform-origin: x y ;//IE9-ms-transform-origin: x y;//W3C 标准 transform-origin: x y ;</p>
-<h4 id="8-transform-在不同浏览器内核下的书写规则"><a href="#8-transform-在不同浏览器内核下的书写规则" class="headerlink" title="8. transform 在不同浏览器内核下的书写规则"></a>8. transform 在不同浏览器内核下的书写规则</h4><p>Mozilla 内核浏览器：firefox3.5+-moz-transform: rotate | scale | skew | translate ;//Webkit 内核浏览器：Safari and Chrome-webkit-transform: rotate | scale | skew | translate ;//Opera-o-transform: rotate | scale | skew | translate ;//IE9-ms-transform: rotate | scale | skew | translate ;//W3C 标准 transform: rotate | scale | skew | translate ;</p>
-<p>上面列出是不同浏览内核 transform 的书写规则，如果需要兼容各浏览器的话，以上写法都需要调用。</p>
-<h4 id="9-参考文档"><a href="#9-参考文档" class="headerlink" title="9.参考文档"></a>9.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%8D%81%E4%B8%80%E3%80%81Transition%E8%BF%87%E6%B8%A1/">[十一、Transition过渡]</a></p>
-<h4 id="10-联系方式"><a href="#10-联系方式" class="headerlink" title="10. 联系方式"></a>10. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#110;&#109;&#105;&#110;&#56;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#110;&#109;&#105;&#110;&#56;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.2Transform%E8%AF%A6%E8%A7%A3/" data-id="ckimxr7t70000ojii8exgekgr" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/十、Grid网格布局/5.4 Grid布局" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/03/CSS/Tags/%E5%8D%81%E3%80%81Grid%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80/5.4%20Grid%E5%B8%83%E5%B1%80/" class="article-date">
-  <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/03/CSS/Tags/%E5%8D%81%E3%80%81Grid%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80/5.4%20Grid%E5%B8%83%E5%B1%80/">10.1 Grid网格布局</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%8D%81%E3%80%81Grid%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80/5.4%20Grid%E5%B8%83%E5%B1%80/" data-id="ckimyd5bm0001edii2vjqcyx0" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/八、Position定位/8.1 Position布局" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/03/CSS/Tags/%E5%85%AB%E3%80%81Position%E5%AE%9A%E4%BD%8D/8.1%20Position%E5%B8%83%E5%B1%80/" class="article-date">
-  <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/03/CSS/Tags/%E5%85%AB%E3%80%81Position%E5%AE%9A%E4%BD%8D/8.1%20Position%E5%B8%83%E5%B1%80/">8.1 Position布局</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>设置定位类型</p>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>static</td>
-<td>元素为普通布局，默认值</td>
-</tr>
-<tr>
-<td>fixed</td>
-<td>元素相对于浏览器窗口来定位</td>
-</tr>
-<tr>
-<td>relative</td>
-<td>元素相对定位</td>
-</tr>
-<tr>
-<td>absolute</td>
-<td>元素绝对定位，相对于 position 不是 static 的第一位祖先元素来定位</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>设置元素的层叠顺序： z-index</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">z-index</span>				<span class="comment">/*允许取负数，值越大越靠近顶层*/</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建多列布局</p>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>column-count</td>
-<td>指定列数：数字</td>
-</tr>
-<tr>
-<td>column-fill</td>
-<td>指定内容在列之间的分布方式： balance / auto</td>
-</tr>
-<tr>
-<td>column-gap</td>
-<td>指定列之间距离</td>
-</tr>
-<tr>
-<td>column-rule</td>
-<td>column-rule- 属性的简写</td>
-</tr>
-<tr>
-<td>column-rule-color</td>
-<td>设置列之间的颜色规则</td>
-</tr>
-<tr>
-<td>column-rule-style</td>
-<td>设置列之间的样式规则</td>
-</tr>
-<tr>
-<td>column-rule-width</td>
-<td>设置列之间的宽带</td>
-</tr>
-<tr>
-<td>columns</td>
-<td>设置 column-span、column-width 属性简写</td>
-</tr>
-<tr>
-<td>column-span</td>
-<td>指定元素横向能跨多少列</td>
-</tr>
-<tr>
-<td>column-width</td>
-<td>指定宽度</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%85%AB%E3%80%81Position%E5%AE%9A%E4%BD%8D/8.1%20Position%E5%B8%83%E5%B1%80/" data-id="ckimzoi5f00038iii1yuybe68" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/九、Flex弹性布局/9.5 Flex弹性布局" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/03/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.5%20Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" class="article-date">
-  <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/03/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.5%20Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">9.5 Flex弹性布局</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-Flex"><a href="#1-Flex" class="headerlink" title="1. Flex"></a>1. Flex</h3><h4 id="1-main-axis-主轴"><a href="#1-main-axis-主轴" class="headerlink" title="1 . main-axis(主轴)"></a>1 . main-axis(主轴)</h4><h4 id="2-cross-axis-交叉轴"><a href="#2-cross-axis-交叉轴" class="headerlink" title="2. cross-axis(交叉轴)"></a>2. cross-axis(交叉轴)</h4><h4 id="3-flex-direction"><a href="#3-flex-direction" class="headerlink" title="3. flex-direction:"></a>3. flex-direction:</h4><ul>
-<li><p>Flexbox Container</p>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>row</td>
-<td>main-axis(主轴)是 row</td>
-</tr>
-<tr>
-<td>column</td>
-<td>main-axis(主轴)是 column</td>
-</tr>
-<tr>
-<td>row-reverse</td>
-<td>main-axis(主轴)是 row,逆序排列</td>
-</tr>
-<tr>
-<td>column-reverse</td>
-<td>main-axis(主轴)是 column,逆序排列</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h4 id="4-justify-content-和-align-items"><a href="#4-justify-content-和-align-items" class="headerlink" title="4. justify-content 和 align-items"></a>4. justify-content 和 align-items</h4><ul>
-<li><p>justify-content ： 主轴排列方向</p>
-</li>
-<li><p>align-items：交叉轴排列方向</p>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>center</td>
-<td></td>
-</tr>
-<tr>
-<td>flex-start</td>
-<td></td>
-</tr>
-<tr>
-<td>flex-end</td>
-<td></td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h4 id="5-flex-wrap"><a href="#5-flex-wrap" class="headerlink" title="5. flex-wrap"></a>5. flex-wrap</h4><ul>
-<li><p>定义是否换行</p>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>nowrap</td>
-<td>不换行</td>
-</tr>
-<tr>
-<td>wrape</td>
-<td>换行</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h4 id="6-flex-flow"><a href="#6-flex-flow" class="headerlink" title="6. flex-flow"></a>6. flex-flow</h4><ul>
-<li><p>flex-direction、jflex-wrap 的简写</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">flex-flow</span>: <span class="selector-tag">row</span> <span class="selector-tag">wrap</span>;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="7-align-content"><a href="#7-align-content" class="headerlink" title="7. align-content"></a>7. align-content</h4><ul>
-<li><p>当 flex-wrape：wrape 时，生效；用于行于行之间的对齐方式</p>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>center</td>
-<td></td>
-</tr>
-<tr>
-<td>flex-start</td>
-<td></td>
-</tr>
-<tr>
-<td>flex-end</td>
-<td></td>
-</tr>
-<tr>
-<td>initial</td>
-<td></td>
-</tr>
-<tr>
-<td>space-around</td>
-<td></td>
-</tr>
-<tr>
-<td>space-evenly</td>
-<td></td>
-</tr>
-<tr>
-<td>space-between</td>
-<td></td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h3 id="2-Flexbox-Item"><a href="#2-Flexbox-Item" class="headerlink" title="2. Flexbox Item"></a>2. Flexbox Item</h3><h4 id="1-order"><a href="#1-order" class="headerlink" title="1. order"></a>1. order</h4><ul>
-<li>默认值： 0</li>
-<li>数值越大越排在后</li>
-<li>可以取负值</li>
-</ul>
-<h4 id="2-align-self"><a href="#2-align-self" class="headerlink" title="2. align-self"></a>2. align-self</h4><ul>
-<li>可以用于改写 flex container 中，align-items 中的设定值</li>
-<li>属性值与 flex container 相同</li>
-</ul>
-<h4 id="3-flex-basis-好像没有效果"><a href="#3-flex-basis-好像没有效果" class="headerlink" title="3. flex-basis: 好像没有效果"></a>3. flex-basis: 好像没有效果</h4><ul>
-<li><p>是设定 flex-item 的主轴方向上的大小</p>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>0</td>
-<td>width: 0px;</td>
-</tr>
-<tr>
-<td>100px</td>
-<td>原值 + 100px</td>
-</tr>
-<tr>
-<td>auto</td>
-<td>原值</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h4 id="4-flex-grow"><a href="#4-flex-grow" class="headerlink" title="4. flex-grow"></a>4. flex-grow</h4><p>当主轴方向有剩余空间时，flex-item 沿主轴方向扩展的设定,flex-grow: 0；表示保持原始值，不放大；</p>
-<h4 id="5-flex-shrink"><a href="#5-flex-shrink" class="headerlink" title="5. flex-shrink"></a>5. flex-shrink</h4><p>当主轴方向空间不够时，flex-item 沿主轴方向缩小的设定,flex-shrink: 0；表示保持原始值；</p>
-<h4 id="6-Flex"><a href="#6-Flex" class="headerlink" title="6. Flex"></a>6. Flex</h4><p>Flex Item 项目中： flex-grow + flex-shrink + flex-basis 的简写形式</p>
-<h3 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/CSS/Tutorial/%E4%B9%9D%E3%80%81Flex%20%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">[九、Flex 弹性布局]</a></p>
-<h3 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.5%20Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" data-id="ckimztag20000bqii7yot304p" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E4%B8%80%E3%80%81CSS%E7%AE%80%E4%BB%8B/1.1%20%E7%90%86%E8%A7%A3CSS/" data-id="ckin19pis0004iqii0rk4dlhd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -3196,77 +3187,6 @@
 
 
   
-    <article id="post-English/2.English For CSS" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/English/2.English%20For%20CSS/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/English/2.English%20For%20CSS/">2.English for CSS</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-Vocabulary"><a href="#1-Vocabulary" class="headerlink" title="1.Vocabulary"></a>1.Vocabulary</h3><h4 id="1-1-CSS"><a href="#1-1-CSS" class="headerlink" title="1.1 CSS"></a>1.1 CSS</h4><ol>
-<li><p>hue： 色相</p>
-</li>
-<li><p>saturation： 饱和度</p>
-</li>
-<li><p>lightness： 亮度</p>
-</li>
-<li><p>drop-down menu： 下拉菜单</p>
-</li>
-<li><p>upper-left corner： 左上角 </p>
-</li>
-</ol>
-<h4 id="1-9-Flex-Layout弹性布局"><a href="#1-9-Flex-Layout弹性布局" class="headerlink" title="1.9 Flex Layout弹性布局"></a>1.9 Flex Layout弹性布局</h4><ol>
-<li><p>Flexible: 柔韧的; 灵活的; 易弯曲的</p>
-</li>
-<li><p>Flex： Flexible Box的缩写，意为”弹性布局”</p>
-</li>
-<li><p>layout: 布局</p>
-</li>
-<li><p>Flex Layout： Flex 布局，详见<a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/CSS/Tutorial/%E4%B9%9D%E3%80%81Flex%20%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">[九、Flex布局]</a></p>
-</li>
-</ol>
-<ul>
-<li>CSS3中的一种布局方式，又称弹性布局</li>
-</ul>
-<ol start="5">
-<li><p>main axis: flex布局主轴；</p>
-</li>
-<li><p>cross axis: flex布局交叉轴；</p>
-</li>
-</ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/English/English%20For%20Programming/">[English for Programming]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/English/2.English%20For%20CSS/" data-id="ckil24r1j0001r3iifvc49o4i" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/English/" rel="tag">English</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -3292,7 +3212,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">39</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">40</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
     </div>
   </div>
 
@@ -3302,7 +3222,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">269</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">269</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 

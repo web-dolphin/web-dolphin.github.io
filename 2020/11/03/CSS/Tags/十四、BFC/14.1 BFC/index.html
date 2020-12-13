@@ -5,25 +5,20 @@
   
 
   
-  <title>2.6 理解CSS | Coding Your Wonderful Life</title>
+  <title>14.1 BFC | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是 CSS: Cascadding Style Sheet 层叠样式表， 1. CSS 标准化由于个浏览器厂商的存在兼容问题，统一代码在不同浏览器之间展现的样式各不相同，为类提高开发效率，个浏览器厂商必须要实现 CSS 统一标准化 表 1 浏览器厂商及其特定前缀    Browser(浏览器) prefix(前缀)    Chrome，Safar -bebkit-   Opera -o-">
+  <meta name="description" content="1. BFC 概念与产生原因 何为 BFC   BFC（Block Formatting Context）格式化上下文，是 Web 页面中盒模型布局的 CSS 渲染模式，指一个独立的渲染区域或者说是一个隔离的独立容器。   形成 BFC 的条件   浮动元素，float 除 none 以外的值；​  定位元素，position：（absolute，fixed）；  display 为以下其中之一的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2.6 理解CSS">
-<meta property="og:url" content="https://weboyster.github.io/2020/11/03/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.6%20%E7%90%86%E8%A7%A3CSS/index.html">
+<meta property="og:title" content="14.1 BFC">
+<meta property="og:url" content="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%8D%81%E5%9B%9B%E3%80%81BFC/14.1%20BFC/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="什么是 CSS: Cascadding Style Sheet 层叠样式表， 1. CSS 标准化由于个浏览器厂商的存在兼容问题，统一代码在不同浏览器之间展现的样式各不相同，为类提高开发效率，个浏览器厂商必须要实现 CSS 统一标准化 表 1 浏览器厂商及其特定前缀    Browser(浏览器) prefix(前缀)    Chrome，Safar -bebkit-   Opera -o-">
+<meta property="og:description" content="1. BFC 概念与产生原因 何为 BFC   BFC（Block Formatting Context）格式化上下文，是 Web 页面中盒模型布局的 CSS 渲染模式，指一个独立的渲染区域或者说是一个隔离的独立容器。   形成 BFC 的条件   浮动元素，float 除 none 以外的值；​  定位元素，position：（absolute，fixed）；  display 为以下其中之一的">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://s3.ax1x.com/2020/12/13/reswnA.jpg">
-<meta property="og:image" content="https://s3.ax1x.com/2020/12/13/resc9S.png">
-<meta property="og:image" content="https://s3.ax1x.com/2020/12/13/resRXj.png">
-<meta property="og:image" content="https://s3.ax1x.com/2020/12/13/res47q.png">
 <meta property="article:published_time" content="2020-11-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-13T08:09:52.705Z">
+<meta property="article:modified_time" content="2020-12-13T11:03:50.531Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s3.ax1x.com/2020/12/13/reswnA.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Coding Your Wonderful Life" type="application/atom+xml">
   
@@ -72,9 +67,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-CSS/Tags/二、CSS 初探/2.6 理解CSS" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-CSS/Tags/十四、BFC/14.1 BFC" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/03/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.6%20%E7%90%86%E8%A7%A3CSS/" class="article-date">
+    <a href="/2020/11/03/CSS/Tags/%E5%8D%81%E5%9B%9B%E3%80%81BFC/14.1%20BFC/" class="article-date">
   <time datetime="2020-11-02T16:00:00.000Z" itemprop="datePublished">2020-11-03</time>
 </a>
     
@@ -86,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      2.6 理解CSS
+      14.1 BFC
     </h1>
   
 
@@ -94,88 +89,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>什么是 CSS: Cascadding Style Sheet 层叠样式表，</p>
-<h4 id="1-CSS-标准化"><a href="#1-CSS-标准化" class="headerlink" title="1. CSS 标准化"></a>1. CSS 标准化</h4><p>由于个浏览器厂商的存在兼容问题，统一代码在不同浏览器之间展现的样式各不相同，为类提高开发效率，个浏览器厂商必须要实现 CSS 统一标准化</p>
-<p>表 1 浏览器厂商及其特定前缀</p>
-<table>
-<thead>
-<tr>
-<th>Browser(浏览器)</th>
-<th>prefix(前缀)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Chrome，Safar</td>
-<td>-bebkit-</td>
-</tr>
-<tr>
-<td>Opera</td>
-<td>-o-</td>
-</tr>
-<tr>
-<td>firefox</td>
-<td>-moz-</td>
-</tr>
-<tr>
-<td>Internate Explore</td>
-<td>-ms-</td>
-</tr>
-</tbody></table>
-<h4 id="2-盒子模型-box-model-："><a href="#2-盒子模型-box-model-：" class="headerlink" title="2. 盒子模型(box model)："></a>2. 盒子模型(box model)：</h4><p>每一个元素在页面中都会占据一定的区域，该区域就称为元素的盒子(box),</p>
-<p><img src="https://s3.ax1x.com/2020/12/13/reswnA.jpg" alt="box-model"></p>
-<ol>
-<li>说明</li>
-</ol>
-<p><img src="https://s3.ax1x.com/2020/12/13/resc9S.png" alt="description"></p>
-<ol start="2">
-<li> Box 组成：</li>
-</ol>
-<p>Content(内容)、border(边框)、padding(内边距)，margin(外边距)</p>
-<ol start="3">
-<li>standard(标准) box</li>
-</ol>
-<p><img src="https://s3.ax1x.com/2020/12/13/resRXj.png" alt="standard box"></p>
-<ol start="4">
-<li>IE box</li>
-</ol>
-<p><img src="https://s3.ax1x.com/2020/12/13/res47q.png" alt="IE box"></p>
-<p>为了解决两者定义之间的区别，通常规定： border-size 属性(attribute)</p>
-<ol start="5">
-<li>表 2 盒子模型属性</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>Attribute(属性)</th>
-<th>Description(说明)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>box-sizing: border-box</td>
-<td>height / width = content + padding + border</td>
-</tr>
-<tr>
-<td>box-sizing: content-box</td>
-<td>height / width = content</td>
-</tr>
-<tr>
-<td>box-sizing: inherit</td>
-<td>继承父级元素属性值</td>
-</tr>
-</tbody></table>
-<h4 id="3-Block-Container-容器"><a href="#3-Block-Container-容器" class="headerlink" title="3. Block Container(容器):"></a>3. Block Container(容器):</h4><ul>
-<li>通常将父子元素关系中父元素盒子称之为<strong>容器</strong></li>
-</ul>
-<h4 id="4-外边距塌陷"><a href="#4-外边距塌陷" class="headerlink" title="4. 外边距塌陷"></a>4. 外边距塌陷</h4><ol>
-<li>外边距塌陷(margin collapse)：<ul>
-<li>块元素的外边距有时会合并为单个外边距，这样的现象称之为外边距塌陷。</li>
-</ul>
-</li>
-<li>父子元素盒子模型塌陷： 合并后最大的外边距</li>
-<li>兄弟元素间外边距塌陷： 合并后最大的外边距</li>
-</ol>
-<h4 id="5-BFC"><a href="#5-BFC" class="headerlink" title="5. BFC"></a>5. BFC</h4><ol>
-<li>何为 BFC_</li>
+        <h4 id="1-BFC-概念与产生原因"><a href="#1-BFC-概念与产生原因" class="headerlink" title="1. BFC 概念与产生原因"></a>1. BFC 概念与产生原因</h4><ol>
+<li>何为 BFC</li>
 </ol>
 <ul>
 <li>BFC（Block Formatting Context）格式化上下文，是 Web 页面中盒模型布局的 CSS 渲染模式，指一个独立的渲染区域或者说是一个隔离的独立容器。</li>
@@ -204,7 +119,7 @@
 <li><p>BFC 就是页面上的一个独立容器，容器里面的子元素不会影响外面元素。</p>
 </li>
 </ul>
-<h4 id="6-案例"><a href="#6-案例" class="headerlink" title="6. 案例"></a>6. 案例</h4><ol>
+<h4 id="2-案例"><a href="#2-案例" class="headerlink" title="2. 案例"></a>2. 案例</h4><ol>
 <li> BFC 解决因为子元素浮动引起父元素塌陷问题</li>
 </ol>
 <ul>
@@ -234,7 +149,7 @@
 </li>
 </ul>
 <ol start="4">
-<li>BFC 解决三栏布局问题_</li>
+<li>BFC 解决三栏布局问题</li>
 </ol>
 <ul>
 <li><p>左右两边固定宽度，</p>
@@ -244,909 +159,13 @@
 
 </li>
 </ul>
-<h4 id="7-选择器简明参考"><a href="#7-选择器简明参考" class="headerlink" title="7. 选择器简明参考"></a>7. 选择器简明参考</h4><ul>
-<li><p>表 3 CSS Selector(选择器)</p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>Selector</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>基本选择器</td>
-<td><strong>*</strong></td>
-<td>通配符选择器</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>.class</strong></td>
-<td>class 选择器</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>#</strong></td>
-<td>id 选择器</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>element</strong></td>
-<td>元素(标签)选择器</td>
-</tr>
-<tr>
-<td>属性选择器</td>
-<td><strong>[attr]</strong></td>
-<td>属性值任意值</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>[attr=”value”]</strong></td>
-<td>属性值为 value 的元素</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>[attr^=”value”]</strong></td>
-<td>属性值以 value 开头的元素</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>[attr$=”value”]</strong></td>
-<td>属性值以 value 结尾的元素</td>
-</tr>
-<tr>
-<td></td>
-<td>*<em>[attr</em>=”value”]**</td>
-<td>属性值包含 value 的元素</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>[attr~=”value”]</strong></td>
-<td>属性包含多个值，其中一个值 value 的元素</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>[attr|=”value”]</strong></td>
-<td>属性值是以连字符分割的一串值，且第一个为 value 的元素</td>
-</tr>
-<tr>
-<td>组合选择器</td>
-<td>selector，slelctor</td>
-<td>分组选择器</td>
-</tr>
-<tr>
-<td></td>
-<td>selector slelctor</td>
-<td>后代选择器</td>
-</tr>
-<tr>
-<td></td>
-<td>selector&gt;slelctor</td>
-<td>子代选择器</td>
-</tr>
-<tr>
-<td></td>
-<td>selector+slelctor</td>
-<td>相邻兄弟选择器</td>
-</tr>
-<tr>
-<td></td>
-<td>selector ～ slelctor</td>
-<td>普通兄弟选择器</td>
-</tr>
-<tr>
-<td>伪元素选择器</td>
-<td>::first-line</td>
-<td>选取块级元素首行</td>
-</tr>
-<tr>
-<td></td>
-<td>::first-letter</td>
-<td>选取块级元素首字母</td>
-</tr>
-<tr>
-<td></td>
-<td>:before</td>
-<td>在选取元素之前插入元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:after</td>
-<td>在选取元素之后插入元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:root</td>
-<td>选取文档的根元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:first-child</td>
-<td>选取元素的第一个子元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:last-child</td>
-<td>选取元素的最后一个子元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:only-child</td>
-<td>选取父元素的唯一一个子元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:nth-child(n)</td>
-<td>选取父元素的第 n 个子元素</td>
-</tr>
-<tr>
-<td></td>
-<td>nth-last-child(n)</td>
-<td>选取父元素倒数第 n 个子元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:only-of-type</td>
-<td>选取属于父元素的特定类型元素的唯一子元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:nth-of-type(n)</td>
-<td>选取属于父元素的特定类型元素的第 n 个子元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:nth-last-of-type(n)</td>
-<td>选取属于父元素的特定类型元素倒数的第 n 个子元素</td>
-</tr>
-<tr>
-<td>伪类选择器</td>
-<td>:enabled</td>
-<td>选取以启用的元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:disabled</td>
-<td>选取被禁用的元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:checked</td>
-<td>先取所有选中的复选框 or 单选框</td>
-</tr>
-<tr>
-<td></td>
-<td>:default</td>
-<td>选取默认元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:valid</td>
-<td>选取基于输入验证判定有效的 input 元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:invalid</td>
-<td>选取基于输入验证判定无效的 input 元素</td>
-</tr>
-<tr>
-<td></td>
-<td>in-range</td>
-<td>选取被限定在制定范围之内的 input 元素</td>
-</tr>
-<tr>
-<td></td>
-<td>out-of-range</td>
-<td>选取被限定在制定范围之外的 input 元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:required</td>
-<td>选取属性包含 required 的元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:optional</td>
-<td>选取属性包含 optional 的元素</td>
-</tr>
-<tr>
-<td>伪类选择器</td>
-<td>:link</td>
-<td>选取未访问的连接元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:visited</td>
-<td>选取以访问的连接元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:hover</td>
-<td>选取鼠标指针悬停其上的元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:active</td>
-<td>选取当前被激活的元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:focus</td>
-<td>选取获取焦点的元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:not(selector)</td>
-<td>否定选择</td>
-</tr>
-<tr>
-<td></td>
-<td>:empty</td>
-<td>选取不包含任何子元素或文本的元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:lang(语言)</td>
-<td>选取 lang 属性为指定语言的元素</td>
-</tr>
-<tr>
-<td></td>
-<td>:target</td>
-<td>选取 URL 标识符指向的元素</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h4 id="9-属性简明参考"><a href="#9-属性简明参考" class="headerlink" title="9. 属性简明参考"></a>9. 属性简明参考</h4><ol>
-<li> 边框和背景属性</li>
-</ol>
-<ul>
-<li><p>表 4 边框和背景属性</p>
-<table>
-<thead>
-<tr>
-<th>Attribute(属性)</th>
-<th>Description(说明)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>background</td>
-<td>背景简写</td>
-</tr>
-<tr>
-<td>background-attachment</td>
-<td>背景是否随页面一起滚动</td>
-</tr>
-<tr>
-<td>background-clip</td>
-<td>设置裁剪区域</td>
-</tr>
-<tr>
-<td>background-color</td>
-<td>背景颜色</td>
-</tr>
-<tr>
-<td>background-image</td>
-<td>背景图像</td>
-</tr>
-<tr>
-<td>background-origin</td>
-<td>背景图像的起始位置</td>
-</tr>
-<tr>
-<td>background-position</td>
-<td>背景图片在元素盒子中的位置</td>
-</tr>
-<tr>
-<td>background-repeat</td>
-<td>设置是否重复</td>
-</tr>
-<tr>
-<td>background-size</td>
-<td>背景图片的尺寸</td>
-</tr>
-<tr>
-<td>border</td>
-<td>边框属性简写</td>
-</tr>
-<tr>
-<td>border-top</td>
-<td></td>
-</tr>
-<tr>
-<td>border-left</td>
-<td></td>
-</tr>
-<tr>
-<td>border-right</td>
-<td></td>
-</tr>
-<tr>
-<td>border-bottom</td>
-<td></td>
-</tr>
-<tr>
-<td>border-radius</td>
-<td>设置边框圆角属性</td>
-</tr>
-<tr>
-<td>border-top-left-radius</td>
-<td></td>
-</tr>
-<tr>
-<td>border-top-right-radius</td>
-<td></td>
-</tr>
-<tr>
-<td>border-bottom-left-radius</td>
-<td></td>
-</tr>
-<tr>
-<td>border-bottom-right-radius</td>
-<td></td>
-</tr>
-<tr>
-<td>border-color</td>
-<td>设置边框颜色属性</td>
-</tr>
-<tr>
-<td>border-left-color</td>
-<td></td>
-</tr>
-<tr>
-<td>border-right-color</td>
-<td></td>
-</tr>
-<tr>
-<td>border-top-color</td>
-<td></td>
-</tr>
-<tr>
-<td>border-bottom-color</td>
-<td></td>
-</tr>
-<tr>
-<td>border-stype</td>
-<td>设置边框样式属性</td>
-</tr>
-<tr>
-<td>border-top-style</td>
-<td></td>
-</tr>
-<tr>
-<td>border-bottom-stype</td>
-<td></td>
-</tr>
-<tr>
-<td>border-left-style</td>
-<td></td>
-</tr>
-<tr>
-<td>border-right-style</td>
-<td></td>
-</tr>
-<tr>
-<td>border-width</td>
-<td>设置边框宽度属性</td>
-</tr>
-<tr>
-<td>border-top-width</td>
-<td></td>
-</tr>
-<tr>
-<td>border-bottom-width</td>
-<td></td>
-</tr>
-<tr>
-<td>border-left-width</td>
-<td></td>
-</tr>
-<tr>
-<td>border-right-width</td>
-<td></td>
-</tr>
-<tr>
-<td>box-shadow</td>
-<td></td>
-</tr>
-<tr>
-<td>outline</td>
-<td>设置轮廓的简写属性</td>
-</tr>
-<tr>
-<td>outline-color</td>
-<td>轮廓颜色</td>
-</tr>
-<tr>
-<td>outline-offset</td>
-<td>轮廓偏移量</td>
-</tr>
-<tr>
-<td>outline-style</td>
-<td>轮廓样式</td>
-</tr>
-<tr>
-<td>outline-width</td>
-<td>轮廓宽度</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<ol start="2">
-<li>盒子模型属性</li>
-</ol>
-<ul>
-<li><p>表 5 基本盒子属性</p>
-<table>
-<thead>
-<tr>
-<th>Attribute(属性)</th>
-<th>Description(说明)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>width</td>
-<td>宽度</td>
-</tr>
-<tr>
-<td>height</td>
-<td>高度</td>
-</tr>
-<tr>
-<td>box-sizing</td>
-<td>盒子尺寸属性</td>
-</tr>
-<tr>
-<td>clear</td>
-<td>清除浮动</td>
-</tr>
-<tr>
-<td>display</td>
-<td>设置盒子类型</td>
-</tr>
-<tr>
-<td>float</td>
-<td>浮动</td>
-</tr>
-<tr>
-<td>max-width</td>
-<td>最大宽带</td>
-</tr>
-<tr>
-<td>min-width</td>
-<td>最小宽度</td>
-</tr>
-<tr>
-<td>max-height</td>
-<td>最大高度</td>
-</tr>
-<tr>
-<td>min-height</td>
-<td>最小高度</td>
-</tr>
-<tr>
-<td>overflow</td>
-<td>盒子溢出的属性简写</td>
-</tr>
-<tr>
-<td>overflow-x</td>
-<td>盒子横向溢出属性</td>
-</tr>
-<tr>
-<td>overflow-y</td>
-<td>盒子纵向溢出属性</td>
-</tr>
-<tr>
-<td>padding</td>
-<td>内边距</td>
-</tr>
-<tr>
-<td>padding-left</td>
-<td></td>
-</tr>
-<tr>
-<td>padding-right</td>
-<td></td>
-</tr>
-<tr>
-<td>padding-top</td>
-<td></td>
-</tr>
-<tr>
-<td>padding-bottom</td>
-<td></td>
-</tr>
-<tr>
-<td>margin</td>
-<td>外边距</td>
-</tr>
-<tr>
-<td>margin-left</td>
-<td></td>
-</tr>
-<tr>
-<td>margin-right</td>
-<td></td>
-</tr>
-<tr>
-<td>maigin-top</td>
-<td></td>
-</tr>
-<tr>
-<td>maigin-bottom</td>
-<td></td>
-</tr>
-<tr>
-<td>visibility</td>
-<td>设置元素的可见性</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<ol start="3">
-<li>布局属性</li>
-</ol>
-<ul>
-<li><p>表 6 布局属性</p>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>top</td>
-<td></td>
-</tr>
-<tr>
-<td>bottom</td>
-<td></td>
-</tr>
-<tr>
-<td>left</td>
-<td></td>
-</tr>
-<tr>
-<td>right</td>
-<td></td>
-</tr>
-<tr>
-<td>display</td>
-<td>制定元素在页面中的显示方式</td>
-</tr>
-<tr>
-<td>position</td>
-<td>元素的定位方法</td>
-</tr>
-<tr>
-<td>z-index</td>
-<td>元素的堆叠顺序</td>
-</tr>
-<tr>
-<td>columns</td>
-<td>多列布局中属性简写</td>
-</tr>
-<tr>
-<td>column-span</td>
-<td>多列布局中元素能跨多少列</td>
-</tr>
-<tr>
-<td>column-width</td>
-<td>指定列宽</td>
-</tr>
-<tr>
-<td>column-count</td>
-<td>多列布局列数</td>
-</tr>
-<tr>
-<td>column-fill</td>
-<td>列与列之间内容分布方式</td>
-</tr>
-<tr>
-<td>column-gap</td>
-<td>列间隙</td>
-</tr>
-<tr>
-<td>column-rule</td>
-<td>列与列之间规则属性简写</td>
-</tr>
-<tr>
-<td>column-rule-color</td>
-<td>颜色规则</td>
-</tr>
-<tr>
-<td>column-rule-style</td>
-<td>样式规则</td>
-</tr>
-<tr>
-<td>column-rule-width</td>
-<td>宽度规则</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<ol start="4">
-<li>文本属性</li>
-</ol>
-<ul>
-<li><p>表 7 文本属性</p>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>@font-face</td>
-<td>指定网页字体</td>
-</tr>
-<tr>
-<td>font</td>
-<td>声明文本属性的简写</td>
-</tr>
-<tr>
-<td>font-style</td>
-<td>文本样式</td>
-</tr>
-<tr>
-<td>font-size</td>
-<td>文本大小</td>
-</tr>
-<tr>
-<td>font-weight</td>
-<td>文本粗细</td>
-</tr>
-<tr>
-<td>font-family</td>
-<td>文本字体系列</td>
-</tr>
-<tr>
-<td>font-variant</td>
-<td>是否以小型大写字母显示</td>
-</tr>
-<tr>
-<td>letter-spacing</td>
-<td>字母间距</td>
-</tr>
-<tr>
-<td>line-height</td>
-<td>行高</td>
-</tr>
-<tr>
-<td>text-align</td>
-<td>文本对齐方式</td>
-</tr>
-<tr>
-<td>text-indent</td>
-<td>文本首行缩进</td>
-</tr>
-<tr>
-<td>text-shadow</td>
-<td>文本阴影效果</td>
-</tr>
-<tr>
-<td>text-transform</td>
-<td>控制文本字母大小写</td>
-</tr>
-<tr>
-<td>word-spacing</td>
-<td>单词间距</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<ol start="5">
-<li>过渡、动画和变换属性</li>
-</ol>
-<ul>
-<li>表 8 过渡、动画和变换</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>@keyframes</td>
-<td>为动画指定关键帧</td>
-</tr>
-<tr>
-<td>animation</td>
-<td>动画的简写属性</td>
-</tr>
-<tr>
-<td>animation-delay</td>
-<td>动画开始的延迟时间</td>
-</tr>
-<tr>
-<td>animation-direction</td>
-<td>动画重复方向</td>
-</tr>
-<tr>
-<td>animation-duration</td>
-<td>动画持续时间</td>
-</tr>
-<tr>
-<td>animation-iteration-count</td>
-<td>指定动画的循环次数</td>
-</tr>
-<tr>
-<td>animation-name</td>
-<td>关键帧集合的名称</td>
-</tr>
-<tr>
-<td>animation-play-state</td>
-<td>指定动画状态</td>
-</tr>
-<tr>
-<td>animation-timing-function</td>
-<td>指定关键帧动画函数</td>
-</tr>
-<tr>
-<td>transform</td>
-<td>指定应用与元素的变换</td>
-</tr>
-<tr>
-<td>transform-origin</td>
-<td>元素变换的起点</td>
-</tr>
-<tr>
-<td>transition</td>
-<td>CSS 属性过渡的简写</td>
-</tr>
-<tr>
-<td>transition-delay</td>
-<td>触发过渡的延迟时间</td>
-</tr>
-<tr>
-<td>transition-duration</td>
-<td>过渡的持续时间</td>
-</tr>
-<tr>
-<td>tansition-property</td>
-<td>指定带有过渡效果的属性</td>
-</tr>
-<tr>
-<td>transition-timing-function</td>
-<td>指定过渡函数</td>
-</tr>
-</tbody></table>
-<ol start="6">
-<li>其他属性</li>
-</ol>
-<ul>
-<li><p>表 9 其他属性</p>
-<table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>border-collapse</td>
-<td>表格相邻单元格边框合并</td>
-</tr>
-<tr>
-<td>border-spacing</td>
-<td>相邻单元格边框距离</td>
-</tr>
-<tr>
-<td>caption-side</td>
-<td>表格标题的位置</td>
-</tr>
-<tr>
-<td>color</td>
-<td>元素颜色</td>
-</tr>
-<tr>
-<td>cursor</td>
-<td>指定光标形状</td>
-</tr>
-<tr>
-<td>opacity</td>
-<td>元素透明度</td>
-</tr>
-<tr>
-<td>empty-cell</td>
-<td>指定是否显示表格中的空单元格</td>
-</tr>
-<tr>
-<td>list-style</td>
-<td>列表样式属性的简写</td>
-</tr>
-<tr>
-<td>list-style-position</td>
-<td>指定列表标记相对于内容的位置</td>
-</tr>
-<tr>
-<td>list-style-type</td>
-<td>列表标记样式</td>
-</tr>
-<tr>
-<td>table-layout</td>
-<td>表格单元格、行和列的计算规则</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<ol start="7">
-<li><p>像素</p>
-<p>7.1 像素</p>
-<ul>
-<li><p>屏幕色块最小单位，</p>
-</li>
-<li><p>像素的大小是没有固定长度的</p>
-</li>
-<li><p>不同设备上一个单位像素色块的大小是不一样的</p>
-</li>
-<li><p>尺寸面积大小相同的两块屏幕，分辨率大小可以是不一样的</p>
-<p>7.2 分辨率</p>
-</li>
-<li><p>屏幕分辨率： 屏幕水平像素点个数 x 垂直像素点个数</p>
-</li>
-<li><p>例如： 1204 x 768 像素，就是说设备屏幕的水平方向上有 1024 个像素点，垂直方向上有 768 个像素点</p>
-<p>7.3 图像分辨率：</p>
-</li>
-<li><p>例如： 图像分辨率是 500 x 200 像素， 就是说这张图片按 1：1 放大时，水平方向有 500 个像素点（色块），垂直方向有 200 个像素点（色块）</p>
-<p>7.4 相同尺寸的屏幕，屏幕分辨率变化的影响</p>
-</li>
-<li><p>分辨率越高，像素色块越小，</p>
-</li>
-<li><p>反之，越大；</p>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="8-单位"><a href="#8-单位" class="headerlink" title="8. 单位"></a>8. 单位</h4><ol>
-<li><p>百分比单位： 相对于父级元素的百分率单位</p>
-</li>
-<li><p>em： 相对于字体 font-size 的倍数单位</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">box</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="comment">/* font-size: 10px;*/</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10em</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10em</span>;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>rem： 相对于网页根节点 font-size 的倍数单位</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10rem</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10rem</span>;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="9-颜色之的设置方法"><a href="#9-颜色之的设置方法" class="headerlink" title="9. 颜色之的设置方法"></a>9. 颜色之的设置方法</h4><ul>
-<li><p>文本表示法</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="attribute">backgoround</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>十六进制表示法</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#f00000</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>RGBA 表示法</p>
-<ol>
-<li> R： red(0~255)</li>
-<li> G: green(0~255)</li>
-<li> B: blue(0~255)</li>
-<li> A: opacity(0~1)</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>);</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.5</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>HSLA 表示法</p>
-<ol>
-<li> H: 色相(0~360)</li>
-<li> S: 饱和度(0~100%)</li>
-<li> L： 亮度(0~100%)</li>
-<li> A： 透明度(0~1)</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">hsla</span>(<span class="number">0</span>, <span class="number">50%</span>, <span class="number">50%</span>, <span class="number">0.5</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="10-参考文档"><a href="#10-参考文档" class="headerlink" title="10.参考文档"></a>10.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h4 id="11-联系方式"><a href="#11-联系方式" class="headerlink" title="11. 联系方式"></a>11. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#105;&#110;&#56;&#x38;&#56;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;">&#121;&#x75;&#97;&#x6e;&#109;&#105;&#110;&#56;&#x38;&#56;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%8D%81%E5%9B%9B%E3%80%81BFC/">[十四、BFC]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#46;&#99;&#111;&#x6d;">&#121;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#46;&#99;&#111;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.6%20%E7%90%86%E8%A7%A3CSS/" data-id="ckimxdn3g000l6hiicdxhg0q9" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/11/03/CSS/Tags/%E5%8D%81%E5%9B%9B%E3%80%81BFC/14.1%20BFC/" data-id="ckin19pil0002iqii6s1rg25l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -1157,19 +176,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/11/03/CSS/Tags/%E5%9B%9B%E3%80%81%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%83%8C%E6%99%AF/4.1%20%20%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%83%8C%E6%99%AF/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/11/03/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.17%20%20%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%83%8C%E6%99%AF/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          4.1 边框与背景
+          6.17 边框与背景
         
       </div>
     </a>
   
   
-    <a href="/2020/11/03/CSS/Tags/%E5%8D%81%E4%B8%80%E3%80%81%20Transform%E8%BF%87%E6%B8%A1/11.1%20Transform%20%E5%B1%9E%E6%80%A7/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/11/03/CSS/Tags/%E4%B8%80%E3%80%81CSS%E7%AE%80%E4%BB%8B/1.1%20%E7%90%86%E8%A7%A3CSS/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">11.1 Transform 属性</div>
+      <div class="article-nav-title">2.6 理解CSS</div>
     </a>
   
 </nav>
@@ -1195,7 +214,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">39</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">40</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
     </div>
   </div>
 
@@ -1205,7 +224,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">269</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">269</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 

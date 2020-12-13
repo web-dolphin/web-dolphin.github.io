@@ -7,15 +7,15 @@
   
   <title>9.4 项目属性 | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.项目属性说明1. order属性 order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0    123.item&amp;#123;  order: integer;&amp;#125; 2. flex-grow属性  123.item&amp;#123;  flex-grow&amp;#125; 3. flex-shrink属性  123.item&amp;#123;  flex-shrink&amp;#125; 4. flex">
+  <meta name="description" content="1.项目属性说明1. order 属性 order 属性定义项目的排列顺序。数值越小，排列越靠前，默认为 0   CSS 代码 123.item &amp;#123;  order: integer;&amp;#125;    2. flex-grow 属性 CSS 代码 123.item&amp;#123;  flex-grow&amp;#125;    3. flex-shrink 属性 CSS 代码 123.item&amp;#1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="9.4 项目属性">
 <meta property="og:url" content="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.4%20%E9%A1%B9%E7%9B%AE%E5%B1%9E%E6%80%A7/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="1.项目属性说明1. order属性 order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0    123.item&amp;#123;  order: integer;&amp;#125; 2. flex-grow属性  123.item&amp;#123;  flex-grow&amp;#125; 3. flex-shrink属性  123.item&amp;#123;  flex-shrink&amp;#125; 4. flex">
+<meta property="og:description" content="1.项目属性说明1. order 属性 order 属性定义项目的排列顺序。数值越小，排列越靠前，默认为 0   CSS 代码 123.item &amp;#123;  order: integer;&amp;#125;    2. flex-grow 属性 CSS 代码 123.item&amp;#123;  flex-grow&amp;#125;    3. flex-shrink 属性 CSS 代码 123.item&amp;#1">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-24T15:43:16.344Z">
+<meta property="article:modified_time" content="2020-12-13T10:50:56.565Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
@@ -89,17 +89,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-项目属性说明"><a href="#1-项目属性说明" class="headerlink" title="1.项目属性说明"></a>1.项目属性说明</h3><h4 id="1-order属性"><a href="#1-order属性" class="headerlink" title="1. order属性"></a>1. order属性</h4><ol>
-<li>order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0</li>
+        <h3 id="1-项目属性说明"><a href="#1-项目属性说明" class="headerlink" title="1.项目属性说明"></a>1.项目属性说明</h3><h4 id="1-order-属性"><a href="#1-order-属性" class="headerlink" title="1. order 属性"></a>1. order 属性</h4><ol>
+<li>order 属性定义项目的排列顺序。数值越小，排列越靠前，默认为 0</li>
 </ol>
-<pre><code>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  <span class="attribute">order</span>: integer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre>
-<h4 id="2-flex-grow属性"><a href="#2-flex-grow属性" class="headerlink" title="2. flex-grow属性"></a>2. flex-grow属性</h4><pre><code>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  flex-grow</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre>
-<h4 id="3-flex-shrink属性"><a href="#3-flex-shrink属性" class="headerlink" title="3. flex-shrink属性"></a>3. flex-shrink属性</h4><pre><code>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  flex-shrink</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre>
-<h4 id="4-flex-basis属性"><a href="#4-flex-basis属性" class="headerlink" title="4. flex-basis属性"></a>4. flex-basis属性</h4><pre><code>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  flex-basis</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre>
-<h4 id="5-flex属性"><a href="#5-flex属性" class="headerlink" title="5. flex属性"></a>5. flex属性</h4><pre><code>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  <span class="attribute">flex</span>:</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre>
-<h4 id="6-align-self属性"><a href="#6-align-self属性" class="headerlink" title="6. align-self属性"></a>6. align-self属性</h4><pre><code>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  align-self</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre>
+<ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">order</span>: integer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-flex-grow-属性"><a href="#2-flex-grow-属性" class="headerlink" title="2. flex-grow 属性"></a>2. flex-grow 属性</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  flex-grow</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-flex-shrink-属性"><a href="#3-flex-shrink-属性" class="headerlink" title="3. flex-shrink 属性"></a>3. flex-shrink 属性</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  flex-shrink</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-flex-basis-属性"><a href="#4-flex-basis-属性" class="headerlink" title="4. flex-basis 属性"></a>4. flex-basis 属性</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  flex-basis</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-flex-属性"><a href="#5-flex-属性" class="headerlink" title="5. flex 属性"></a>5. flex 属性</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">flex</span>: ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="6-align-self-属性"><a href="#6-align-self-属性" class="headerlink" title="6. align-self 属性"></a>6. align-self 属性</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  align-self</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/CSS/Tutorial/%E4%B9%9D%E3%80%81Flex%20%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">[九、Flex 弹性布局]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#x38;&#56;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#x6d;">&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#x38;&#56;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#116;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#116;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 
       
     </div>
@@ -153,7 +183,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">39</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">40</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
     </div>
   </div>
 
@@ -163,7 +193,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">269</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">269</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 
