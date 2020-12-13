@@ -67,6 +67,468 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Linux/Ubuntu/13.Ububtu20.04 Windows双系统时间同步" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Linux/Ubuntu/13.Ububtu20.04%20Windows%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Linux/Ubuntu/13.Ububtu20.04%20Windows%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/">13.Ububtu20.04 Windows双系统时间同步</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><ul>
+<li><p>执行以下命令</p>
+<pre><code class="bash">sudo apt-get update
+timedatectl set-local-rtc 1 --adjust-system-clock
+sudo apt-get install ntpdate
+sudo ntpdate time.windows.com
+sudo hwclock --localtime --systohc</code></pre>
+</li>
+<li><p>重新开机</p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email：<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#56;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#107;&#46;&#x63;&#111;&#x6d;">&#121;&#117;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#56;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#107;&#46;&#x63;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Linux/Ubuntu/13.Ububtu20.04%20Windows%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/" data-id="ckil24r4l003nr3iiafmx4p28" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Linux/Ubuntu/2.Ubuntu20.04配置国内镜像源" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Linux/Ubuntu/2.Ubuntu20.04%E9%85%8D%E7%BD%AE%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%BA%90/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Linux/Ubuntu/2.Ubuntu20.04%E9%85%8D%E7%BD%AE%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%BA%90/">2.Ubuntu20.04配置国内镜像源</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-国内镜像源配置"><a href="#1-国内镜像源配置" class="headerlink" title="1. 国内镜像源配置"></a>1. 国内镜像源配置</h4><ul>
+<li><p>获取文件编辑权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 777 /etc/apt/sources.list</span><br><span class="line">gedit /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>复制粘贴镜像源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#tsinghua mirrors</span></span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line"><span class="comment"># aliyun mirrors</span></span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-系统更新"><a href="#2-系统更新" class="headerlink" title="2. 系统更新"></a>2. 系统更新</h4><ul>
+<li><p>更新</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;">&#x79;&#x75;&#97;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Linux/Ubuntu/2.Ubuntu20.04%E9%85%8D%E7%BD%AE%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%BA%90/" data-id="ckil24r4o003sr3iih7k60jni" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Linux/Ubuntu/5.Ubuntu20.04安装第三方软件" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Linux/Ubuntu/5.Ubuntu20.04%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BD%AF%E4%BB%B6/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Linux/Ubuntu/5.Ubuntu20.04%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BD%AF%E4%BB%B6/">5.Ubuntu20.04安装第三方软件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-安装第三方软件"><a href="#1-安装第三方软件" class="headerlink" title="1. 安装第三方软件"></a>1. 安装第三方软件</h4><ul>
+<li><p>Ubuntu Tree</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install tree</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Ubuntu Git</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>curl</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install curl</span><br></pre></td></tr></table></figure></li>
+<li><p>serve静态服务器</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g serve</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#110;&#x6d;&#x69;&#110;&#56;&#x38;&#56;&#x38;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#x6d;">&#x79;&#x75;&#97;&#110;&#x6d;&#x69;&#110;&#56;&#x38;&#56;&#x38;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Linux/Ubuntu/5.Ubuntu20.04%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BD%AF%E4%BB%B6/" data-id="ckil24r4t0041r3ii9flx85ns" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Linux/Ubuntu/6.Ubuntu20.04安装MongoDB" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Linux/Ubuntu/6.Ubuntu20.04%E5%AE%89%E8%A3%85MongoDB/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Linux/Ubuntu/6.Ubuntu20.04%E5%AE%89%E8%A3%85MongoDB/">6.Ububtu20.04 安装MongoDB</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-下载"><a href="#1-下载" class="headerlink" title="1.下载"></a>1.下载</h4><ol>
+<li>MongoDB官网： </li>
+</ol>
+<ul>
+<li><p>Software &gt; Community Server &gt; Available Downloads &gt; </p>
+</li>
+<li><p>Plateform: 选择Ubuntu20.04 ARM64,下载</p>
+</li>
+</ul>
+<h4 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h4><ol>
+<li><p>参见官网：<a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/</a></p>
+</li>
+<li><p>安装</p>
+</li>
+</ol>
+<ul>
+<li><p>下载mongodb-org公钥</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">  wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -</span><br><span class="line">  ``` </span><br><span class="line">- The operation should respond with an `OK`.</span><br><span class="line"></span><br><span class="line">- 如果返回错误信息：  gnupg， 执行下列安装，安装成功后，重复安装以上公钥</span><br><span class="line"></span><br><span class="line"> ```bash</span><br><span class="line">  sudo apt-get install gnupg</span><br><span class="line">  ``` </span><br><span class="line"></span><br><span class="line">- 创建MongoDB列表文件： `/etc/apt/sources.list.d/mongodb-org-4.4.list`</span><br><span class="line"></span><br><span class="line">  ```bash</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse&quot;</span> | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list</span><br><span class="line">  ``` </span><br><span class="line"></span><br><span class="line">- 查看列表文件内容</span><br><span class="line"></span><br><span class="line">  ```bash</span><br><span class="line">  gedit /etc/apt/sources.list.d/mongodb-org-4.4.list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新apt下载包源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装稳定版MongoDB</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y mongodb-org</span><br></pre></td></tr></table></figure></li>
+<li><p>阻止系统自动更新MongoDB版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;mongodb-org hold&quot;</span> | sudo dpkg --set-selections</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;mongodb-org-server hold&quot;</span> | sudo dpkg --set-selections</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;mongodb-org-shell hold&quot;</span> | sudo dpkg --set-selections</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;mongodb-org-mongos hold&quot;</span> | sudo dpkg --set-selections</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;mongodb-org-tools hold&quot;</span> | sudo dpkg --set-selections</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-测试"><a href="#3-测试" class="headerlink" title="3. 测试"></a>3. 测试</h4><ul>
+<li><p>查看数据库目录<code>/var/lib/mongodb</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls /var/lib| grep mongodb</span><br><span class="line">gedit /var/lib/mongodb </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看日志目录: <code>/var/log/mongodb </code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls /var/<span class="built_in">log</span> | grep mongodb </span><br><span class="line">gedit /var/<span class="built_in">log</span>/mongodb</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看配置目录<code>/etc/mongod.conf</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls /etc | grep mongod.conf</span><br><span class="line">gedit /etc/mongod.conf</span><br></pre></td></tr></table></figure>
+<h4 id="4-运行数据库"><a href="#4-运行数据库" class="headerlink" title="4. 运行数据库"></a>4. 运行数据库</h4></li>
+<li><p>Init System： 系统初始化</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps --no-headers -o comm 1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>根据运行提示选择运行版本</p>
+<p><code>systemd</code> - select the systemd (<code>systemctl</code>) tab below.<br><code>init</code> - select the System V Init (<code>service</code>) tab below.</p>
+</li>
+<li><p>启动MongoDB： Start MongoDB</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start mongod</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果安装没有提示，证明数据库启动成功，执行状态查看命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status mongod</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://s3.ax1x.com/2020/11/26/Dw5ogf.png">[MongoDB启动成功]</a></p>
+</li>
+<li><p>如果出现错误提示，<code>Failed to start mongod.service: Unit mongod.service not found.</code>请执行下列命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动MongoDB: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start mongod</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>退出命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">q</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>停止MongoDB</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl stop mongod</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启MongoDB</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart mongod</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-开始使用MongoDB"><a href="#5-开始使用MongoDB" class="headerlink" title="5. 开始使用MongoDB"></a>5. 开始使用MongoDB</h4><h4 id="6-卸载MongoDB"><a href="#6-卸载MongoDB" class="headerlink" title="6. 卸载MongoDB"></a>6. 卸载MongoDB</h4><ul>
+<li><p>停止运行MongoDB</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mongod stop</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>卸载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get purge mongodb-org*</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>移除数据库目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -r /var/<span class="built_in">log</span>/mongodb</span><br><span class="line">sudo rm -r /var/lib/mongodb</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7. 参考文档"></a>7. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#109;&#x69;&#110;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#111;&#109;">&#x79;&#x75;&#97;&#x6e;&#109;&#x69;&#110;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#111;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Linux/Ubuntu/6.Ubuntu20.04%E5%AE%89%E8%A3%85MongoDB/" data-id="ckil24r4v0045r3iig3e14dfs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Programming/Tutorial/1. 什么是计算机，微处理器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Programming/Tutorial/1.%20%E4%BB%80%E4%B9%88%E6%98%AF%E8%AE%A1%E7%AE%97%E6%9C%BA%EF%BC%8C%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Programming/Tutorial/1.%20%E4%BB%80%E4%B9%88%E6%98%AF%E8%AE%A1%E7%AE%97%E6%9C%BA%EF%BC%8C%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/">1. 什么是计算机，微处理器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-什么是计算机"><a href="#1-什么是计算机" class="headerlink" title="1.什么是计算机"></a>1.什么是计算机</h4><ol>
+<li>计算机概念：</li>
+</ol>
+<ul>
+<li><p>计算机（computer）俗称电脑，是现代一种用于高速计算的电子计算机器，可以进行数值计算，又可以进行逻辑计算，还具有存储记忆功能；</p>
+</li>
+<li><p>是能够按照程序运行，自动、高速处理海量数据的现代化智能电子设备；</p>
+</li>
+</ul>
+<ol start="2">
+<li>分类</li>
+</ol>
+<ul>
+<li><p>可分为超级计算机、工业控制计算机、网络计算机、个人计算机、嵌入式计算机五类；</p>
+</li>
+<li><p>较先进的计算机有生物计算机、光子计算机、量子计算机等；</p>
+</li>
+</ul>
+<h4 id="2-微处理器"><a href="#2-微处理器" class="headerlink" title="2.微处理器"></a>2.微处理器</h4><ul>
+<li><p>就是 CPU；</p>
+</li>
+<li><p>微处理器由一片或少数几片大规模集成电路组成的中央处理器；</p>
+</li>
+<li><p>这些电路执行控制部件和算术逻辑部件的功能；</p>
+</li>
+<li><p>微处理器能完成取指令、执行指令，以及与外界存储器和逻辑部件交换信息等操作；</p>
+</li>
+<li><p>是微型计算机的运算控制部分。它可与存储器和外围电路芯片组成微型计算机；</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/Assembly/2.%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E7%BB%84%E6%88%90%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/">[参考文档]</a></p>
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/Assembly/Programming/">[Programming]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Programming/Tutorial/1.%20%E4%BB%80%E4%B9%88%E6%98%AF%E8%AE%A1%E7%AE%97%E6%9C%BA%EF%BC%8C%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/" data-id="ckil24r58004tr3ii0djzfmls" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Programming/" rel="tag">Programming</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Programming/Tutorial/2. 计算机的组成与工作原理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Programming/Tutorial/2.%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E7%BB%84%E6%88%90%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Programming/Tutorial/2.%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E7%BB%84%E6%88%90%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/">2. 计算机的组成与工作原理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-计算机的组成"><a href="#1-计算机的组成" class="headerlink" title="1.计算机的组成"></a>1.计算机的组成</h4><ol>
+<li>计算机组成</li>
+</ol>
+<ul>
+<li><p>由硬件系统和软件系统所组成；</p>
+</li>
+<li><p>没有安装任何软件的计算机称为裸机；</p>
+</li>
+</ul>
+<ol start="2">
+<li>硬件组成</li>
+</ol>
+<ul>
+<li>CPU、内存储器、硬盘、声卡、显卡、显示器、键盘、鼠标等</li>
+</ul>
+<h4 id="2-计算机的工作原理"><a href="#2-计算机的工作原理" class="headerlink" title="2.计算机的工作原理"></a>2.计算机的工作原理</h4><ul>
+<li><p>计算机的基本原理主要分为存储程序和程序控制；</p>
+</li>
+<li><p>预先要把控制计算机如何进行操作的指令序列（称为程序）和原始数据通过输入设备输送到计算机内存中；</p>
+</li>
+<li><p>每一条指令中明确规定了计算机从哪个地址取数，进行什么操作，然后送到什么地址去等步骤；</p>
+</li>
+<li><p>通俗说来计算机的工作就是完成和实现数据的存储和数据操作；</p>
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/Assembly/Programming/">[Programming]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Programming/Tutorial/2.%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E7%BB%84%E6%88%90%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/" data-id="ckil24r5a004ur3ii0bxihpwz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Programming/" rel="tag">Programming</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Programming/Tutorial/3. 什么是编程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Programming/Tutorial/3.%20%E4%BB%80%E4%B9%88%E6%98%AF%E7%BC%96%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Programming/Tutorial/3.%20%E4%BB%80%E4%B9%88%E6%98%AF%E7%BC%96%E7%A8%8B/">3. 什么是编程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><ul>
+<li><p>编程（Programming）是编定程序的中文简称；</p>
+</li>
+<li><p>就是让计算机代码解决某个问题，对某个计算体系规定一定的运算方式，使计算体系按照该计算方式运行，并最终得到相应结果的过程；</p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/Assembly/Programming/">[Programming]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Programming/Tutorial/3.%20%E4%BB%80%E4%B9%88%E6%98%AF%E7%BC%96%E7%A8%8B/" data-id="ckil24r5c004yr3iibhrh79ge" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Programming/" rel="tag">Programming</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Programming/Tutorial/4. 常用现代程序编程语言有哪些" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/28/Programming/Tutorial/4.%20%E5%B8%B8%E7%94%A8%E7%8E%B0%E4%BB%A3%E7%A8%8B%E5%BA%8F%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E6%9C%89%E5%93%AA%E4%BA%9B/" class="article-date">
@@ -950,7 +1412,7 @@
 </li>
 </ul>
 <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#97;&#110;&#109;&#x69;&#x6e;&#56;&#56;&#x38;&#56;&#64;&#111;&#117;&#116;&#108;&#x6f;&#111;&#107;&#46;&#x63;&#x6f;&#109;">&#121;&#117;&#97;&#110;&#109;&#x69;&#x6e;&#56;&#56;&#x38;&#56;&#64;&#111;&#117;&#116;&#108;&#x6f;&#111;&#107;&#46;&#x63;&#x6f;&#109;</a></p>
 
       
     </div>
@@ -1077,7 +1539,7 @@
 </li>
 </ul>
 <h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5.参考文档"></a>5.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#56;&#x38;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#109;">&#121;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#56;&#x38;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#109;</a></p>
 
       
     </div>
@@ -1117,1006 +1579,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#x6f;&#x6d;">&#121;&#x75;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
       <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.20%E6%A1%88%E4%BE%8B/" data-id="ckil24r76007ur3ii3umtfvjz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/二、CSS 初探/2.3 CSS 中的颜色" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.3%20CSS%20%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.3%20CSS%20%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2/">2.3 CSS 中的颜色</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-CSS-中颜色的表示方法有四种"><a href="#1-CSS-中颜色的表示方法有四种" class="headerlink" title="1. CSS 中颜色的表示方法有四种"></a>1. CSS 中颜色的表示方法有四种</h4><ul>
-<li><p>英文单词表示颜色</p>
-</li>
-<li><p>十六进制表示颜色</p>
-<p>十六进制颜色的组成部分是：＃RRGGBB，其中 RR（红色），GG（绿色）和 BB（蓝色），所有值都必须介于 00 和 FF 之间；</p>
-</li>
-<li><p>RGB 表示颜色： 十进制表示法</p>
-<p>RGB 写法：rgb(0,0,0)，它的取值范围都在 0-255 之间，值越大越颜色越深；<br>RGB 除了可以用数值以外，它还可以用百分百，取值在 0%到 100%之间；<br>比如：RGB(0,0,255)和 RGB(0％，0％，100％)表示的是同一种颜色；<br>RGBA： 是 RGB 外加了一个透明度之 α 值；取值范围： 0-1 之间</p>
-</li>
-<li><p>HSL 表示颜色：</p>
-<ul>
-<li>HSL 颜色值分别代表：色相(hue)，饱和度(saturation)，亮度(lightness)；</li>
-<li>色相是在色轮上的程度：（从 0 到 360）；</li>
-<li>-0（或 360）是红色，120 是绿色，240 是蓝色；</li>
-<li>60 是黄色，180 是青色，300 是洋红色</li>
-<li>饱和度：是一个百分比值，0％意味着灰色和 100％的阴影是全彩；</li>
-<li>亮度：也是一个百分比，0％是黑色的，100％是白色的；<br>HSLA： 是 HSL 外加了一个透明度之 α 值；</li>
-</ul>
-<p>表二： CSS 颜色</p>
-<table>
-<thead>
-<tr>
-<th>颜色名称</th>
-<th>十六进制颜色</th>
-<th>RGB</th>
-<th>HSL</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>black</td>
-<td>#000000</td>
-<td>0,0,0</td>
-<td></td>
-</tr>
-<tr>
-<td>white</td>
-<td>#FFFFFF</td>
-<td>255,255,255</td>
-<td></td>
-</tr>
-<tr>
-<td>gray</td>
-<td>#808080</td>
-<td>128,128,128</td>
-<td></td>
-</tr>
-<tr>
-<td>maroon</td>
-<td>#800000</td>
-<td>128,0,0</td>
-<td></td>
-</tr>
-<tr>
-<td>red</td>
-<td>#FF0000</td>
-<td>255,0,0</td>
-<td>0 100% 50%</td>
-</tr>
-<tr>
-<td>purple</td>
-<td>#800080</td>
-<td>128,0,128</td>
-<td></td>
-</tr>
-<tr>
-<td>fushia</td>
-<td>#FF00FF</td>
-<td>255,0,255</td>
-<td></td>
-</tr>
-<tr>
-<td>green</td>
-<td>#008000</td>
-<td>0,128,0</td>
-<td>120 100% 50%</td>
-</tr>
-<tr>
-<td>lime</td>
-<td>#00FF00</td>
-<td>0,255,0</td>
-<td></td>
-</tr>
-<tr>
-<td>olive</td>
-<td>#808000</td>
-<td>128,128,0</td>
-<td></td>
-</tr>
-<tr>
-<td>yellow</td>
-<td>#FFFF00</td>
-<td>255,255,0</td>
-<td>60 100% 50%</td>
-</tr>
-<tr>
-<td>navy</td>
-<td>#000080</td>
-<td>0,0,128</td>
-<td></td>
-</tr>
-<tr>
-<td>blue</td>
-<td>#0000FF</td>
-<td>0,0,128</td>
-<td>240 100% 50%</td>
-</tr>
-<tr>
-<td>teal</td>
-<td>#008080</td>
-<td>0,128,128</td>
-<td></td>
-</tr>
-<tr>
-<td>aqua</td>
-<td>#00FFFF</td>
-<td>0,255,255</td>
-<td></td>
-</tr>
-<tr>
-<td>darkgray</td>
-<td>#A9A9A9</td>
-<td>169,169,169</td>
-<td></td>
-</tr>
-<tr>
-<td>gray</td>
-<td>#808080</td>
-<td>128,128,128</td>
-<td></td>
-</tr>
-<tr>
-<td>dimgray</td>
-<td>#696969</td>
-<td>105,105,105</td>
-<td></td>
-</tr>
-<tr>
-<td>lightgray</td>
-<td>#D3D3D3</td>
-<td>211,211,211</td>
-<td></td>
-</tr>
-</tbody></table>
-</li>
-<li><p>例如：</p>
-<ul>
-<li>紫色在蓝色（240°）和洋红（300°）之间，所以他的 HSL 颜色是<code>hsl(270,100%,50%)</code>。如果想要紫色偏蓝，就要往色盘蓝色方向移动角度值，得到<code>hsl(255,100%,50%)</code>。</li>
-</ul>
-</li>
-<li><p>Example</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>CSS 的颜色<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">      div &#123;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        margin: 10px;</span><br><span class="line">        float: left;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.one</span> &#123;</span></span><br><span class="line">        background: red;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.two</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-id">#00ff00</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.three</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-tag">rgba</span>(0, 0, 0, 0<span class="selector-class">.5</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.four</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-tag">hsla</span>(120, 100%, 50%, 0<span class="selector-class">.8</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;one&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;two&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;three&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;four&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a>、</p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.3%20CSS%20%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2/" data-id="ckil24r77007wr3iidojz40iq" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/二、CSS 初探/2.4  CSS 中的长度" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.4%20%20CSS%20%E4%B8%AD%E7%9A%84%E9%95%BF%E5%BA%A6/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.4%20%20CSS%20%E4%B8%AD%E7%9A%84%E9%95%BF%E5%BA%A6/">2.4 CSS 中的长度</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-绝对长度：-cm（厘米），pt-（磅）"><a href="#1-绝对长度：-cm（厘米），pt-（磅）" class="headerlink" title="1. 绝对长度： cm（厘米），pt （磅）"></a>1. 绝对长度： cm（厘米），pt （磅）</h4><h4 id="2-相对单位："><a href="#2-相对单位：" class="headerlink" title="2. 相对单位："></a>2. 相对单位：</h4><ul>
-<li><p>与元素字号挂钩的单位： em;</p>
-</li>
-<li><p>与元素字体 x 高度挂钩的单位： ex， 即字体基线到中线之间的距离，通常 1 ex = 0.5em;</p>
-</li>
-<li><p>与根元素(html 元素)挂钩的单位： rem;</p>
-</li>
-<li><p>与像素挂钩的单位： px；</p>
-</li>
-<li><p>与元素属性的值得百分比挂钩的单位： %;</p>
-</li>
-<li><p>Example</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>CSS 的颜色<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">      body &#123;</span><br><span class="line">        height: 100vh;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.container</span> &#123;</span></span><br><span class="line">        width: 80%;</span><br><span class="line">        height: 80%;</span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-id">#690</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line">      div &#123;</span><br><span class="line">        margin: 10px;</span><br><span class="line">        float: left;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.one</span> &#123;</span></span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        background: red;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.two</span> &#123;</span></span><br><span class="line">        width: 10em;</span><br><span class="line">        height: 10em;</span><br><span class="line">        font-size: 2rem;</span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-id">#00ff00</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.three</span> &#123;</span></span><br><span class="line">        width: 10rem;</span><br><span class="line">        height: 10rem;</span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-tag">rgba</span>(0, 0, 0, 0<span class="selector-class">.5</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.four</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-tag">hsla</span>(120, 100%, 50%, 0<span class="selector-class">.8</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;one&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;two&quot;</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;three&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;four&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.4%20%20CSS%20%E4%B8%AD%E7%9A%84%E9%95%BF%E5%BA%A6/" data-id="ckil24r77007yr3ii0ads1xvy" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/二、CSS 初探/2.5 其他 CSS 单位" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.5%20%E5%85%B6%E4%BB%96%20CSS%20%E5%8D%95%E4%BD%8D/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.5%20%E5%85%B6%E4%BB%96%20CSS%20%E5%8D%95%E4%BD%8D/">2.5 其他 CSS 单位</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>计算单位：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p &#123; width: calc(80% -20px)&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>角度</p>
-<p>|单位标识符|说明|<br>|deg|角度：取值 0 ~ 360 deg|<br>|grad|百分度：取值 0 ~ 400 grad|<br>|rag|弧度 : 取值 0 ～ 6.28rad|<br>|turn|圆周：1turn = 360 deg|</p>
-</li>
-<li><p>时间</p>
-<p>|单位标识符|说明|<br>|s|秒：1s = 1000ms|<br>|ms|毫秒：1000ms=1s|</p>
-</li>
-</ul>
-<h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.5%20%E5%85%B6%E4%BB%96%20CSS%20%E5%8D%95%E4%BD%8D/" data-id="ckil24r780080r3ii1wakhm5h" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/六、CSS属性和特性/6.1 CSS-Background背景属性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.1%20CSS-Background%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.1%20CSS-Background%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7/">6.1 CSS Background背景属性</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-CSS-Background背景属性"><a href="#1-CSS-Background背景属性" class="headerlink" title="1. CSS Background背景属性"></a>1. CSS Background背景属性</h4><ul>
-<li><p>汇总表</p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-<th>CSS</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>background</td>
-<td>在一个声明中设置所有的背景属性。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>background-attachment</td>
-<td>设置背景图像是否固定或者随着页面的其余部分滚动。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>background-color</td>
-<td>设置元素的背景颜色。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>background-image</td>
-<td>设置元素的背景图像。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>background-position</td>
-<td>设置背景图像的开始位置。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>background-repeat</td>
-<td>设置是否及如何重复背景图像。</td>
-<td>1</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h4 id="2-background属性"><a href="#2-background属性" class="headerlink" title="2.  background属性"></a>2.  background属性</h4><p>background 简写属性在一个声明中设置所有的背景属性。可以按顺序设置如下属性：</p>
-<p>background-color , background-image , background-repeat , background-attachment , background-position。</p>
-<p>如果不设置其中的某个值，也不会出问题。</p>
-<p>通常建议使用这个属性，而不是分别使用单个属性，因为这个属性在较老的浏览器中能够得到更好的支持，而且需要键入的字母也更少。</p>
-<ul>
-<li><p>默认值：  </p>
-<table>
-<thead>
-<tr>
-<th>默认值：</th>
-<th>not specified</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>继承性：</td>
-<td>no</td>
-</tr>
-<tr>
-<td>版本：</td>
-<td>CSS1</td>
-</tr>
-<tr>
-<td>JavaScript语法：</td>
-<td>object.style.background = “white url(paper.gif) repeat-y”</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>可能的值：</p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>background-color</td>
-<td>规定要使用的背景颜色。参阅：background-color中可能的值。</td>
-</tr>
-<tr>
-<td>background-image</td>
-<td>规定要使用的背景图像。参阅：background-image 中可能的值。</td>
-</tr>
-<tr>
-<td>background-repeat</td>
-<td>规定如何重复背景图像。参阅：background-repeat中可能的值。</td>
-</tr>
-<tr>
-<td>background-attachment</td>
-<td>规定背景图像是否固定或者随着页面的其余部分滚动。参阅：background-attachment中可能的值。</td>
-</tr>
-<tr>
-<td>background-position</td>
-<td>规定背景图像的位置。参阅：background-position 中可能的值。</td>
-</tr>
-<tr>
-<td>inherit</td>
-<td>规定应该从父元素继承 background 属性的设置。</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<p>所有浏览器都支持 background 属性。任何的版本的 IE（包括 IE8）都不支持属性值 “inherit”。</p>
-<h4 id="3-background-attachment属性"><a href="#3-background-attachment属性" class="headerlink" title="3. background-attachment属性"></a>3. background-attachment属性</h4><p>background-attachment 属性设置背景图像是否固定或者随着页面的其余部分滚动。</p>
-<ul>
-<li><p>默认值：</p>
-<table>
-<thead>
-<tr>
-<th>默认值：</th>
-<th>scroll</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>继承性：</td>
-<td>no</td>
-</tr>
-<tr>
-<td>版本：</td>
-<td>CSS1</td>
-</tr>
-<tr>
-<td>JavaScript语法：</td>
-<td>object.style.backgroundAttachment=”fixed”</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>可能的值：</p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>scroll</td>
-<td>默认值。背景图像会随着页面其余部分的滚动而移动。</td>
-</tr>
-<tr>
-<td>fixed</td>
-<td>当页面的其余部分滚动时，背景图像不会移动。</td>
-</tr>
-<tr>
-<td>inherit</td>
-<td>规定应该从父元素继承 background-attachment 属性的设置。</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<p>所有浏览器都支持 background-attachment 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
-<h4 id="4-background-color属性"><a href="#4-background-color属性" class="headerlink" title="4. background-color属性"></a>4. background-color属性</h4><p>background-color 属性设置元素的背景颜色。</p>
-<p>background-color 属性为元素设置一种纯色。这种颜色会填充元素的内容、内边距和边框区域，扩展到元素边框的外边界（但不包括外边距）。如果边框有透明部分（如虚线边框），会透过这些透明部分显示出背景色。</p>
-<ul>
-<li><p>默认值：</p>
-<table>
-<thead>
-<tr>
-<th>默认值：</th>
-<th>transparent</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>继承性：</td>
-<td>no</td>
-</tr>
-<tr>
-<td>版本：</td>
-<td>CSS1</td>
-</tr>
-<tr>
-<td>JavaScript语法：</td>
-<td>object.style.backgroundColor=”#00FF00”</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>可能的值：</p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>color_name</td>
-<td>规定颜色值为颜色名称的背景颜色（比如 red）。</td>
-</tr>
-<tr>
-<td>hex_number</td>
-<td>规定颜色值为十六进制值的背景颜色（比如 #ff0000）。</td>
-</tr>
-<tr>
-<td>rgb_number</td>
-<td>规定颜色值为 rgb 代码的背景颜色（比如 rgb(255,0,0)）。</td>
-</tr>
-<tr>
-<td>transparent</td>
-<td>默认。背景颜色为透明。</td>
-</tr>
-<tr>
-<td>inherit</td>
-<td>规定应该从父元素继承 background-color 属性的设置。</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<p>所有浏览器都支持 background-color 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
-<h4 id="5-background-image属性"><a href="#5-background-image属性" class="headerlink" title="5.background-image属性"></a>5.background-image属性</h4><p>background-image 属性为元素设置背景图像。</p>
-<p>元素的背景占据了元素的全部尺寸，包括内边距和边框，但不包括外边距。默认地，背景图像位于元素的左上角，并在水平和垂直方向上重复。</p>
-<p>background-image 属性会在元素的背景中设置一个图像。根据 background-repeat 属性的值，图像可以无限平铺、沿着某个轴（x轴或y轴）平铺，或者根本不平铺。初始背景图像（原图像）根据 background-position属性的值放置。</p>
-<ul>
-<li><p>默认值：</p>
-<table>
-<thead>
-<tr>
-<th>默认值：</th>
-<th>none</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>继承性：</td>
-<td>no</td>
-</tr>
-<tr>
-<td>版本：</td>
-<td>CSS1</td>
-</tr>
-<tr>
-<td>JavaScript语法：</td>
-<td>object.style.backgroundImage=”url(stars.gif)”</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>可能值</p>
-<table>
-<thead>
-<tr>
-<th>可能值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>url(‘URL’)</td>
-<td>指向图像的路径。</td>
-</tr>
-<tr>
-<td>none</td>
-<td>默认值。不显示背景图像。</td>
-</tr>
-<tr>
-<td>inherit</td>
-<td>规定应该从父元素继承 background-image 属性的设置。</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<p>所有浏览器都支持 background-image 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
-<h4 id="6-background-position属性"><a href="#6-background-position属性" class="headerlink" title="6. background-position属性"></a>6. background-position属性</h4><p>background-position 属性设置背景图像的起始位置。</p>
-<p>这个属性设置背景原图像（ background-image定义）的位置，背景图像如果要重复，从这一点开始。</p>
-<ul>
-<li><p>默认值：</p>
-<table>
-<thead>
-<tr>
-<th>默认值：</th>
-<th>0% 0%</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>继承性：</td>
-<td>no</td>
-</tr>
-<tr>
-<td>版本：</td>
-<td>CSS1</td>
-</tr>
-<tr>
-<td>JavaScript语法：</td>
-<td>object.style.backgroundPosition=”center”</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<p>需要把 background-attachment 属性设置为 “fixed”，才能保证该属性在 Firefox 和 Opera 中正常工作。</p>
-<ul>
-<li><p>可能的值：</p>
-<table>
-<thead>
-<tr>
-<th>可能值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>top left    top center    top rightcenter left  center center   center rightbottom left  bottom center   bottom right</td>
-<td>如果您仅规定了一个关键词，那么第二个值将是”center”。默认值：0% 0%。</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>x% y%</th>
-<th>第一个值是水平位置，第二个值是垂直位置。左上角是 0% 0%。右下角是 100% 100%。如果仅规定了一个值，另一个值将是 50%。</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>x px y px</td>
-<td>第一个值是水平位置，第二个值是垂直位置。左上角是 0 0。单位是像素 (0px 0px) 或任何其他的 CSS 单位。如果仅规定了一个值，另一个值将是50%。您可以混合使用 % 和 position 值。</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<p>所有浏览器都支持 background-position 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
-<h4 id="7-background-repeat属性"><a href="#7-background-repeat属性" class="headerlink" title="7. background-repeat属性"></a>7. background-repeat属性</h4><p>background-repeat 属性设置是否及如何重复背景图像。默认地，背景图像在水平和垂直方向上重复。</p>
-<p>background-repeat 属性定义了图像的平铺模式。</p>
-<p>从原图像开始重复，原图像由 background-image定义，根据 background-position 放置。</p>
-<ul>
-<li><p>默认值： </p>
-<table>
-<thead>
-<tr>
-<th>默认值：</th>
-<th>repeat</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>继承性：</td>
-<td>no</td>
-</tr>
-<tr>
-<td>版本：</td>
-<td>CSS1</td>
-</tr>
-<tr>
-<td>JavaScript语法：</td>
-<td>object.style.backgroundPosition=”center”</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>可能的值：</p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>repeat</td>
-<td>默认。背景图像将在垂直方向和水平方向重复。</td>
-</tr>
-<tr>
-<td>repeat-x</td>
-<td>背景图像将在水平方向重复。</td>
-</tr>
-<tr>
-<td>repeat-y</td>
-<td>背景图像将在垂直方向重复。</td>
-</tr>
-<tr>
-<td>no-repeat</td>
-<td>背景图像将仅显示一次。</td>
-</tr>
-<tr>
-<td>inherit</td>
-<td>规定应该从父元素继承 background-repeat 属性的设置。</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<p>所有浏览器都支持 background-repeat 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
-<h4 id="8-参考文档"><a href="#8-参考文档" class="headerlink" title="8.参考文档"></a>8.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="9-联系方式"><a href="#9-联系方式" class="headerlink" title="9. 联系方式"></a>9. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#111;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#111;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.1%20CSS-Background%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7/" data-id="ckil24r790082r3iia79pa4zr" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/六、CSS属性和特性/6.10 CSS-Positioning定位属性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.10%20CSS-Positioning%E5%AE%9A%E4%BD%8D%E5%B1%9E%E6%80%A7/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.10%20CSS-Positioning%E5%AE%9A%E4%BD%8D%E5%B1%9E%E6%80%A7/">6.10 CSS-Positioning定位属性</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-CSS-Positioning定位属性汇总"><a href="#1-CSS-Positioning定位属性汇总" class="headerlink" title="1. CSS Positioning定位属性汇总"></a>1. CSS Positioning定位属性汇总</h4><ul>
-<li><p>汇总表</p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-<th>CSS</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>bottom</td>
-<td>设置定位元素下外边距边界与其包含块下边界之间的偏移。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>clear</td>
-<td>规定元素的哪一侧不允许其他浮动元素。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>clip</td>
-<td>剪裁绝对定位元素。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>cursor</td>
-<td>规定要显示的光标的类型（形状）。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>display</td>
-<td>规定元素应该生成的框的类型。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>float</td>
-<td>规定框是否应该浮动。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>left</td>
-<td>设置定位元素左外边距边界与其包含块左边界之间的偏移。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>overflow</td>
-<td>规定当内容溢出元素框时发生的事情。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>position</td>
-<td>规定元素的定位类型。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>right</td>
-<td>设置定位元素右外边距边界与其包含块右边界之间的偏移。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>top</td>
-<td>设置定位元素的上外边距边界与其包含块上边界之间的偏移。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>vertical-align</td>
-<td>设置元素的垂直对齐方式。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>visibility</td>
-<td>规定元素是否可见。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>z-index</td>
-<td>设置元素的堆叠顺序。</td>
-<td>2</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#56;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#x6c;&#111;&#111;&#107;&#46;&#99;&#111;&#109;">&#121;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#56;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#x6c;&#111;&#111;&#107;&#46;&#99;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.10%20CSS-Positioning%E5%AE%9A%E4%BD%8D%E5%B1%9E%E6%80%A7/" data-id="ckil24r7a0084r3ii68k942tu" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/六、CSS属性和特性/6.11 CSS-Print打印属性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.11%20CSS-Print%E6%89%93%E5%8D%B0%E5%B1%9E%E6%80%A7/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.11%20CSS-Print%E6%89%93%E5%8D%B0%E5%B1%9E%E6%80%A7/">6.11 CSS-Print打印属性</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-CSS-Print打印属性汇总"><a href="#1-CSS-Print打印属性汇总" class="headerlink" title="1. CSS Print打印属性汇总"></a>1. CSS Print打印属性汇总</h4><ul>
-<li><p>汇总表</p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-<th>CSS</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>orphans</td>
-<td>设置当元素内部发生分页时必须在页面底部保留的最少行数。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>page-break-after</td>
-<td>设置元素后的分页行为。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>page-break-before</td>
-<td>设置元素前的分页行为。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>page-break-inside</td>
-<td>设置元素内部的分页行为。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>widows</td>
-<td>设置当元素内部发生分页时必须在页面顶部保留的最少行数。</td>
-<td>2</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#110;&#x6d;&#x69;&#x6e;&#56;&#56;&#56;&#x38;&#64;&#x6f;&#x75;&#116;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#x75;&#97;&#110;&#x6d;&#x69;&#x6e;&#56;&#56;&#56;&#x38;&#64;&#x6f;&#x75;&#116;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.11%20CSS-Print%E6%89%93%E5%8D%B0%E5%B1%9E%E6%80%A7/" data-id="ckil24r7b0086r3iidb0a5uuq" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/六、CSS属性和特性/6.12 CSS-Table表格属性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.12%20CSS-Table%E8%A1%A8%E6%A0%BC%E5%B1%9E%E6%80%A7/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.12%20CSS-Table%E8%A1%A8%E6%A0%BC%E5%B1%9E%E6%80%A7/">6.12 CSS-Table表格属性</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-CSS-Table表格属性汇总"><a href="#1-CSS-Table表格属性汇总" class="headerlink" title="1. CSS Table表格属性汇总"></a>1. CSS Table表格属性汇总</h4><ul>
-<li>汇总表</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-<th>CSS</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>border-collapse</td>
-<td>规定是否合并表格边框。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>border-spacing</td>
-<td>规定相邻单元格边框之间的距离。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>caption-side</td>
-<td>规定表格标题的位置。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>empty-cells</td>
-<td>规定是否显示表格中的空单元格上的边框和背景。</td>
-<td>2</td>
-</tr>
-<tr>
-<td>table-layout</td>
-<td>设置用于表格的布局算法。</td>
-<td>2</td>
-</tr>
-</tbody></table>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;">&#x79;&#x75;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.12%20CSS-Table%E8%A1%A8%E6%A0%BC%E5%B1%9E%E6%80%A7/" data-id="ckil24r7c0088r3iifeby2wyo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -2153,7 +1621,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">40</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
     </div>
   </div>
 
@@ -2163,7 +1631,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">267</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">269</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 

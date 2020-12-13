@@ -67,6 +67,1119 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-DataBase/MongoDB/Tags/1.1Windows安装MongoDB" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/DataBase/MongoDB/Tags/1.1Windows%E5%AE%89%E8%A3%85MongoDB/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/DataBase/MongoDB/Tags/1.1Windows%E5%AE%89%E8%A3%85MongoDB/">1.1 Windows安装MongoDB</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-下载"><a href="#1-下载" class="headerlink" title="1.下载"></a>1.下载</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://www.mongodb.com/">[下载地址]</a></li>
+</ul>
+<h4 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h4><ul>
+<li>常规安装，在此省略；</li>
+</ul>
+<h4 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h4><p>3.1 创建 mongodb 数据库存放目录</p>
+<ul>
+<li><p>数据存放目录： D:\mongodb\data</p>
+</li>
+<li><p>创建配置文件： D:\mongodb\mongodb.config</p>
+</li>
+<li><p>mongodb.config 文件配置内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dbpath=D:\mongodb\data\db</span><br><span class="line">logpath=D:\mongodb\data\<span class="built_in">log</span>\mongodb.log</span><br></pre></td></tr></table></figure>
+
+<p>3.2 创建日志目录</p>
+</li>
+<li><p>创建日志目录： D:\mongodb\data\log</p>
+</li>
+<li><p>创建日志文件：D:\mongodb\data\log\mongodb.log</p>
+<p>3.3 开启服务器</p>
+</li>
+<li><p>方法一</p>
+<p>MongoDB 使用引擎 mmapv1 启动服务器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\Applications\MongoDB\bin&gt;mongod --dbpath D:\mongodb\data\db --storageEngine=mmapv1</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s1.ax1x.com/2020/07/19/U2zqiD.png" alt="[示意图]"></p>
+</li>
+<li><p>方法二</p>
+<p>管理员身份命令行输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --config E:\mongodb\mongodb.config  --install --serviceName <span class="string">&quot;MongoDB&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s1.ax1x.com/2020/07/19/U2zLJe.png" alt="[示意图]"></p>
+</li>
+<li><p>查看配置结果</p>
+</li>
+</ul>
+<p><code>windows</code> + <code>R</code>输入： services.msc 开启服务；</p>
+<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/DataBase/MongoDB/Tutorial/%E4%B8%80%E3%80%81MongoDB%E6%95%99%E7%A8%8B/">[一、MongoDB教程]</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#111;&#109;">&#121;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#111;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.1Windows%E5%AE%89%E8%A3%85MongoDB/" data-id="ckil24r7t0096r3ii22yqgdtg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-DataBase/MongoDB/Tags/1.3 .Mongoose建模与关联设置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/DataBase/MongoDB/Tags/1.3%20.Mongoose%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%85%B3%E8%81%94%E8%AE%BE%E7%BD%AE/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/DataBase/MongoDB/Tags/1.3%20.Mongoose%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%85%B3%E8%81%94%E8%AE%BE%E7%BD%AE/">1.3 Mongoose建模与关联设置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-创建数据库"><a href="#1-创建数据库" class="headerlink" title="1.创建数据库"></a>1.创建数据库</h3><ul>
+<li><p>1.1 创建目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir demo-mongoose_Schema</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.2 安装mongoose</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ yarn init </span><br><span class="line">$ yarn add mongoose</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.3 创建post.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//require mongoode</span></span><br><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"><span class="comment">//connect to mongodb</span></span><br><span class="line">mongoose.connect(<span class="string">&#x27;mongodb://localhost:27017/mongo-relation&#x27;</span>, &#123;</span><br><span class="line">  useNewUrlParser: <span class="literal">true</span>,</span><br><span class="line">  useUnifiedTopology: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.4 创建post模型(Schema)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Post = mongoose.model(<span class="string">&#x27;Post&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    title: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    content: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.5 post 增删改查操作</p>
+<ul>
+<li><p>1.5.1 创建测试函数 和 调用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.5.2 post 插入数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">await</span> Post.insertMany([&#123;</span><br><span class="line">  title: <span class="string">&quot;岳阳楼记&quot;</span>,</span><br><span class="line">  content: <span class="string">&quot;先天下之忧而忧 后天下之乐而乐&quot;</span>,</span><br><span class="line">&#125;, &#123;</span><br><span class="line">  title: <span class="string">&quot;离骚&quot;</span>,</span><br><span class="line">  content: <span class="string">&quot;朝饮木兰之坠露兮 夕餐秋菊之落英&quot;</span>,</span><br><span class="line">&#125;, &#123;</span><br><span class="line">  title: <span class="string">&quot;滕王阁序&quot;</span>,</span><br><span class="line">  content: <span class="string">&quot;落霞与孤鹜齐飞 秋水共长天一色&quot;</span>,</span><br><span class="line">&#125;])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.5.3 post查询数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="keyword">const</span> posts = <span class="keyword">await</span> Post.find()</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="string">``</span></span><br><span class="line"></span><br><span class="line">- <span class="number">1.5</span><span class="number">.4</span> post删除数据</span><br><span class="line"></span><br><span class="line">   <span class="string">``</span><span class="string">`js</span></span><br><span class="line"><span class="string">   await Post.db.dropCollection(&#x27;posts&#x27;)</span></span><br><span class="line"><span class="string">   console.log(posts)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.5.5 post条件查询</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> post1 = <span class="keyword">await</span> Post.findOne(&#123;</span><br><span class="line">  title: <span class="string">&#x27;岳阳楼记&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(post1)</span><br><span class="line"><span class="keyword">const</span> post2 = <span class="keyword">await</span> Post.findOne(&#123;</span><br><span class="line">  title: <span class="string">&#x27;离骚&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(post2)</span><br><span class="line"><span class="keyword">const</span> post3 = <span class="keyword">await</span> Post.findOne(&#123;</span><br><span class="line">  title: <span class="string">&#x27;滕王阁序&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(post3)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.6 创建Category模型(Schema)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Category = mongoose.model(<span class="string">&#x27;Category&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    name: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>1.7 Category 增删改查操作</p>
+<ul>
+<li><p>1.7.1 category 插入数据 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">await</span> Category.insertMany([</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;散文&#x27;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">&#x27;诗歌&#x27;</span> &#125;</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.7.2 category 查询数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> categories = <span class="keyword">await</span> Category.find()</span><br><span class="line"><span class="built_in">console</span>.log(categories)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.7.3 category 删除数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">await</span> Category.db.dropCollection(<span class="string">&#x27;categories&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1.7.4 category 条件查询</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> category1 = <span class="keyword">await</span> Category.findOne(&#123;</span><br><span class="line">  name: <span class="string">&#x27;散文&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// console.log(category1)</span></span><br><span class="line"><span class="keyword">const</span> category2 = <span class="keyword">await</span> Category.findOne(&#123;</span><br><span class="line">  name: <span class="string">&#x27;诗歌&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// console.log(category2)</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-代码汇总"><a href="#2-代码汇总" class="headerlink" title="2. 代码汇总"></a>2. 代码汇总</h3><ul>
+<li><p>源代码</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"></span><br><span class="line">mongoose.connect(<span class="string">&#x27;mongodb://localhost:27017/mongo-relation&#x27;</span>, &#123;</span><br><span class="line">    useNewUrlParser: <span class="literal">true</span>,</span><br><span class="line">    useUnifiedTopology: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//1. category</span></span><br><span class="line"><span class="keyword">const</span> Category = mongoose.model(<span class="string">&#x27;Category&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    name: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. post</span></span><br><span class="line"><span class="keyword">const</span> Post = mongoose.model(<span class="string">&#x27;Post&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    title: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    content: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//1.1 category插入数据</span></span><br><span class="line">    <span class="keyword">await</span> Category.insertMany([</span><br><span class="line">    	&#123; <span class="attr">name</span>: <span class="string">&#x27;散文&#x27;</span> &#125;,</span><br><span class="line">    	&#123; <span class="attr">name</span>: <span class="string">&#x27;诗歌&#x27;</span> &#125;</span><br><span class="line">    ])</span><br><span class="line"></span><br><span class="line">    <span class="comment">//1.2 category查询数据</span></span><br><span class="line">    <span class="keyword">const</span> categories = <span class="keyword">await</span> Category.find()</span><br><span class="line">    <span class="comment">// console.log(categories)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//1.3 category删除数据</span></span><br><span class="line">    <span class="keyword">await</span> Category.db.dropCollection(<span class="string">&#x27;categories&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// -------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.1 post 插入数据</span></span><br><span class="line">    <span class="keyword">await</span> Post.insertMany([&#123;</span><br><span class="line">   		title: <span class="string">&quot;岳阳楼记&quot;</span>,</span><br><span class="line">  		content: <span class="string">&quot;先天下之忧而忧 后天下之乐而乐&quot;</span>,</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">   		title: <span class="string">&quot;离骚&quot;</span>,</span><br><span class="line">      content: <span class="string">&quot;朝饮木兰之坠露兮 夕餐秋菊之落英&quot;</span>,</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">   		title: <span class="string">&quot;滕王阁序&quot;</span>,</span><br><span class="line">   		content: <span class="string">&quot;落霞与孤鹜齐飞 秋水共长天一色&quot;</span>,</span><br><span class="line">    &#125;])</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2.2 post查询数据</span></span><br><span class="line">    <span class="keyword">const</span> posts = <span class="keyword">await</span> Post.find()</span><br><span class="line">    <span class="comment">//console.log(posts)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.3 post删除数据</span></span><br><span class="line">    <span class="keyword">await</span> Post.db.dropCollection(<span class="string">&#x27;posts&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="3-模型关联"><a href="#3-模型关联" class="headerlink" title="3. 模型关联"></a>3. 模型关联</h3><ul>
+<li><p>3.1 关联一对多字段： 对象</p>
+<ul>
+<li><p>关联方式： 一篇文章关联： 分类，而不是分类关联文章；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Post = mongoose.model(<span class="string">&#x27;Post&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    title: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    body: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">  <span class="comment">//1. 关联一对多字段： 对象</span></span><br><span class="line">    category: &#123; <span class="attr">type</span>: mongoose.SchemaTypes.ObjectId, <span class="attr">ref</span>: <span class="string">&#x27;Category&#x27;</span> &#125;,</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3.2 关联多个分类： 数组</p>
+</li>
+<li><p>关联方式： 一篇文章关联： 多个分类，而不是分类关联文章；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">//2. 关联多个分类： 数组</span></span><br><span class="line">categories: [&#123; <span class="attr">type</span>: mongoose.SchemaTypes.ObjectId, <span class="attr">ref</span>: <span class="string">&#x27;Category&#x27;</span> &#125;]</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-关联模型的查询"><a href="#4-关联模型的查询" class="headerlink" title="4.关联模型的查询"></a>4.关联模型的查询</h3><ul>
+<li><p>4.1 一对多查询</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//2.5 一对多设置关联</span></span><br><span class="line">post1.category = category1</span><br><span class="line">post1.save()</span><br><span class="line"><span class="built_in">console</span>.log(post1)</span><br><span class="line"></span><br><span class="line">post2.category = category2</span><br><span class="line">post2.save()</span><br><span class="line"><span class="built_in">console</span>.log(post2)</span><br><span class="line"></span><br><span class="line">post3.category = category1</span><br><span class="line">post3.save()</span><br><span class="line"><span class="built_in">console</span>.log(post3)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>完整代码</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"></span><br><span class="line">mongoose.connect(<span class="string">&#x27;mongodb://localhost:27017/mongo-relation&#x27;</span>, &#123;</span><br><span class="line">    useNewUrlParser: <span class="literal">true</span>,</span><br><span class="line">    useUnifiedTopology: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//1. category</span></span><br><span class="line"><span class="keyword">const</span> Category = mongoose.model(<span class="string">&#x27;Category&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    name: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. post</span></span><br><span class="line"><span class="keyword">const</span> Post = mongoose.model(<span class="string">&#x27;Post&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    title: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    content: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    <span class="comment">//1. 关联一对多字段： 对象</span></span><br><span class="line">    category: &#123; <span class="attr">type</span>: mongoose.SchemaTypes.ObjectId, <span class="attr">ref</span>: <span class="string">&#x27;Category&#x27;</span> &#125;,</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//1.4 category 条件查询</span></span><br><span class="line">    <span class="keyword">const</span> category1 = <span class="keyword">await</span> Category.findOne(&#123;<span class="attr">name</span>: <span class="string">&#x27;散文&#x27;</span>&#125;)</span><br><span class="line">    <span class="keyword">const</span> category2 = <span class="keyword">await</span> Category.findOne(&#123;<span class="attr">name</span>: <span class="string">&#x27;诗歌&#x27;</span>&#125;)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//2.4 post条件查询</span></span><br><span class="line">    <span class="keyword">const</span> post1 = <span class="keyword">await</span> Post.findOne(&#123;<span class="attr">title</span>: <span class="string">&#x27;岳阳楼记&#x27;</span>&#125;)</span><br><span class="line">    <span class="keyword">const</span> post2 = <span class="keyword">await</span> Post.findOne(&#123;<span class="attr">title</span>: <span class="string">&#x27;离骚&#x27;</span>&#125;)</span><br><span class="line">    <span class="keyword">const</span> post3 = <span class="keyword">await</span> Post.findOne(&#123;<span class="attr">title</span>: <span class="string">&#x27;滕王阁序&#x27;</span>&#125;)</span><br><span class="line">  </span><br><span class="line">    <span class="comment">//2.5 一对多设置关联</span></span><br><span class="line">    post1.category = category1</span><br><span class="line">    post1.save()</span><br><span class="line"></span><br><span class="line">    post2.category = category2</span><br><span class="line">    post2.save()</span><br><span class="line">    </span><br><span class="line">    post3.category = category1</span><br><span class="line">    post3.save()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> posts = <span class="keyword">await</span> Post.find().populate(<span class="string">&#x27;category&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(posts)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    _id: <span class="number">5</span>eb643084360c02e14eb5f59,</span><br><span class="line">    title: <span class="string">&#x27;岳阳楼记&#x27;</span>,</span><br><span class="line">    content: <span class="string">&#x27;先天下之忧而忧 后天下之乐而乐&#x27;</span>,</span><br><span class="line">    __v: <span class="number">0</span>,</span><br><span class="line">    category: &#123; <span class="attr">_id</span>: <span class="number">5</span>eb63520cb4fdf34f0386040, <span class="attr">name</span>: <span class="string">&#x27;散文&#x27;</span>, <span class="attr">__v</span>: <span class="number">0</span> &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    _id: <span class="number">5</span>eb643084360c02e14eb5f5a,</span><br><span class="line">    title: <span class="string">&#x27;离骚&#x27;</span>,</span><br><span class="line">    content: <span class="string">&#x27;朝饮木兰之坠露兮 夕餐秋菊之落英&#x27;</span>,</span><br><span class="line">    __v: <span class="number">0</span>,</span><br><span class="line">    category: &#123; <span class="attr">_id</span>: <span class="number">5</span>eb63520cb4fdf34f0386041, <span class="attr">name</span>: <span class="string">&#x27;诗歌&#x27;</span>, <span class="attr">__v</span>: <span class="number">0</span> &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    _id: <span class="number">5</span>eb643084360c02e14eb5f5b,</span><br><span class="line">    title: <span class="string">&#x27;滕王阁序&#x27;</span>,</span><br><span class="line">    content: <span class="string">&#x27;落霞与孤鹜齐飞 秋水共长天一色&#x27;</span>,</span><br><span class="line">    __v: <span class="number">0</span>,</span><br><span class="line">    category: &#123; <span class="attr">_id</span>: <span class="number">5</span>eb63520cb4fdf34f0386040, <span class="attr">name</span>: <span class="string">&#x27;散文&#x27;</span>, <span class="attr">__v</span>: <span class="number">0</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>4.2 多对多查询</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"></span><br><span class="line">mongoose.connect(<span class="string">&#x27;mongodb://localhost:27017/mongo-posts&#x27;</span>, &#123;</span><br><span class="line">    useNewUrlParser: <span class="literal">true</span>,</span><br><span class="line">    useUnifiedTopology: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//1. category</span></span><br><span class="line"><span class="keyword">const</span> Category = mongoose.model(<span class="string">&#x27;Category&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    name: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. post</span></span><br><span class="line"><span class="keyword">const</span> Post = mongoose.model(<span class="string">&#x27;Post&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    title: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    content: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    <span class="comment">//2. 关联多个分类： 数组</span></span><br><span class="line">    categories: [&#123; <span class="attr">type</span>: mongoose.SchemaTypes.ObjectId, <span class="attr">ref</span>: <span class="string">&#x27;Category&#x27;</span> &#125;]</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//1.4 category 条件查询</span></span><br><span class="line">    <span class="keyword">const</span> category1 = <span class="keyword">await</span> Category.findOne(&#123;<span class="attr">name</span>: <span class="string">&#x27;散文&#x27;</span>&#125;)</span><br><span class="line">    <span class="keyword">const</span> category2 = <span class="keyword">await</span> Category.findOne(&#123;<span class="attr">name</span>: <span class="string">&#x27;诗歌&#x27;</span>&#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">//2.4 post条件查询</span></span><br><span class="line">    <span class="keyword">const</span> post1 = <span class="keyword">await</span> Post.findOne(&#123;<span class="attr">title</span>: <span class="string">&#x27;岳阳楼记&#x27;</span>&#125;)</span><br><span class="line">    <span class="keyword">const</span> post2 = <span class="keyword">await</span> Post.findOne(&#123;<span class="attr">title</span>: <span class="string">&#x27;离骚&#x27;</span>&#125;)</span><br><span class="line">    <span class="keyword">const</span> post3 = <span class="keyword">await</span> Post.findOne(&#123;<span class="attr">title</span>: <span class="string">&#x27;滕王阁序&#x27;</span>&#125;)</span><br><span class="line">  </span><br><span class="line">    <span class="comment">//2.5 多对多设置关联</span></span><br><span class="line">    post1.categories = category1</span><br><span class="line">    post1.save()</span><br><span class="line"></span><br><span class="line">    post2.categories = category2</span><br><span class="line">    post2.save()</span><br><span class="line">        </span><br><span class="line">    post3.categories = [category1, category2]</span><br><span class="line">    post3.save()</span><br><span class="line">    <span class="comment">//查询</span></span><br><span class="line">    <span class="keyword">const</span> posts = <span class="keyword">await</span> Post.find().populate(<span class="string">&#x27;categories&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(posts[<span class="number">0</span>],posts[<span class="number">1</span>],posts[<span class="number">2</span>])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>测试</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">_id</span>: <span class="number">5</span>eb64ad2133f812324f6de5b, <span class="attr">name</span>: <span class="string">&#x27;散文&#x27;</span>, <span class="attr">__v</span>: <span class="number">0</span> &#125;</span><br><span class="line">&#123; <span class="attr">_id</span>: <span class="number">5</span>eb64ad2133f812324f6de5c, <span class="attr">name</span>: <span class="string">&#x27;诗歌&#x27;</span>, <span class="attr">__v</span>: <span class="number">0</span> &#125;</span><br><span class="line">&#123;</span><br><span class="line">  categories: [ <span class="number">5</span>eb64ad2133f812324f6de5b ],</span><br><span class="line">  _id: <span class="number">5</span>eb64a655ef4f1055c462059,</span><br><span class="line">  title: <span class="string">&#x27;岳阳楼记&#x27;</span>,</span><br><span class="line">  content: <span class="string">&#x27;先天下之忧而忧 后天下之乐而乐&#x27;</span>,</span><br><span class="line">  __v: <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  categories: [ <span class="number">5</span>eb64ad2133f812324f6de5c ],</span><br><span class="line">  _id: <span class="number">5</span>eb64a655ef4f1055c46205a,</span><br><span class="line">  title: <span class="string">&#x27;离骚&#x27;</span>,</span><br><span class="line">  content: <span class="string">&#x27;朝饮木兰之坠露兮 夕餐秋菊之落英&#x27;</span>,</span><br><span class="line">  __v: <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  categories: [</span><br><span class="line">    &#123; <span class="attr">_id</span>: <span class="number">5</span>eb64ad2133f812324f6de5b, <span class="attr">name</span>: <span class="string">&#x27;散文&#x27;</span>, <span class="attr">__v</span>: <span class="number">0</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">_id</span>: <span class="number">5</span>eb64ad2133f812324f6de5c, <span class="attr">name</span>: <span class="string">&#x27;诗歌&#x27;</span>, <span class="attr">__v</span>: <span class="number">0</span> &#125;</span><br><span class="line">  ],</span><br><span class="line">  _id: <span class="number">5</span>eb64a655ef4f1055c46205b,</span><br><span class="line">  title: <span class="string">&#x27;滕王阁序&#x27;</span>,</span><br><span class="line">  content: <span class="string">&#x27;落霞与孤鹜齐飞 秋水共长天一色&#x27;</span>,</span><br><span class="line">  __v: <span class="number">3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-从被关联模型中查询关联模型"><a href="#5-从被关联模型中查询关联模型" class="headerlink" title="5. 从被关联模型中查询关联模型"></a>5. 从被关联模型中查询关联模型</h3><ul>
+<li><p>5.1 定义虚拟字段</p>
+<ul>
+<li><p>指定关联模型</p>
+</li>
+<li><p>指定本地模型的id字段</p>
+</li>
+<li><p>定义外键： Post的categories字段</p>
+</li>
+<li><p>justOne: false, 查询多条数据</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> CategorySchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    name: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;</span><br><span class="line">&#125;)</span><br><span class="line">CategorySchema.virtual(<span class="string">&#x27;posts&#x27;</span>, &#123;  <span class="comment">// 定义虚拟字段</span></span><br><span class="line">  ref: <span class="string">&#x27;Post&#x27;</span>,                      <span class="comment">// 关联的模型</span></span><br><span class="line">  localField: <span class="string">&#x27;_id&#x27;</span>,                <span class="comment">// 内键，Category模型的id字段</span></span><br><span class="line">  foreignField: <span class="string">&#x27;categories&#x27;</span>,       <span class="comment">// 外键，关联模型的category字段</span></span><br><span class="line">  justOne: <span class="literal">false</span>                    <span class="comment">// 不是只查询一条数据</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//1. category</span></span><br><span class="line"><span class="keyword">const</span> Category = mongoose.model(<span class="string">&#x27;Category&#x27;</span>, CategorySchema)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>5.2 查询关联模型</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> categories = <span class="keyword">await</span> Category.find().populate(<span class="string">&#x27;posts&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(categories[<span class="number">0</span>].posts)</span><br><span class="line">    <span class="built_in">console</span>.log(categories[<span class="number">1</span>].posts)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="6-源码汇总"><a href="#6-源码汇总" class="headerlink" title="6. 源码汇总"></a>6. 源码汇总</h3><ul>
+<li><p>源代码</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"></span><br><span class="line">mongoose.connect(<span class="string">&#x27;mongodb://localhost:27017/mongo-posts&#x27;</span>, &#123;</span><br><span class="line">    useNewUrlParser: <span class="literal">true</span>,</span><br><span class="line">    useUnifiedTopology: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> CategorySchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    name: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;</span><br><span class="line">&#125;)</span><br><span class="line">CategorySchema.virtual(<span class="string">&#x27;posts&#x27;</span>, &#123;  <span class="comment">// 定义虚拟字段</span></span><br><span class="line">  ref: <span class="string">&#x27;Post&#x27;</span>,                      <span class="comment">// 关联的模型</span></span><br><span class="line">  localField: <span class="string">&#x27;_id&#x27;</span>,                <span class="comment">// 内键，Category模型的id字段</span></span><br><span class="line">  foreignField: <span class="string">&#x27;categories&#x27;</span>,       <span class="comment">// 外键，关联模型的category字段</span></span><br><span class="line">  justOne: <span class="literal">false</span>                    <span class="comment">// 不是只查询一条数据</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//1. category</span></span><br><span class="line"><span class="keyword">const</span> Category = mongoose.model(<span class="string">&#x27;Category&#x27;</span>, CategorySchema)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. post</span></span><br><span class="line"><span class="keyword">const</span> Post = mongoose.model(<span class="string">&#x27;Post&#x27;</span>, <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">    title: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    content: &#123; <span class="attr">type</span>: <span class="built_in">String</span> &#125;,</span><br><span class="line">    <span class="comment">//2. 关联多个分类： 数组</span></span><br><span class="line">    categories: [&#123; <span class="attr">type</span>: mongoose.SchemaTypes.ObjectId, <span class="attr">ref</span>: <span class="string">&#x27;Category&#x27;</span> &#125;]</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> categories = <span class="keyword">await</span> Category.find().populate(<span class="string">&#x27;posts&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(categories[<span class="number">0</span>].posts)</span><br><span class="line">    <span class="built_in">console</span>.log(categories[<span class="number">1</span>].posts)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/DataBase/MongoDB/Tutorial/%E4%B8%80%E3%80%81MongoDB%E6%95%99%E7%A8%8B/">[一、MongoDB教程]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#x2e;&#99;&#x6f;&#109;">&#x79;&#117;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#x2e;&#99;&#x6f;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.3%20.Mongoose%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%85%B3%E8%81%94%E8%AE%BE%E7%BD%AE/" data-id="ckil24r7u0099r3iib1wi1og8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-DataBase/MongoDB/Tags/1.4 MongoDB常见操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/DataBase/MongoDB/Tags/1.4%20MongoDB%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/DataBase/MongoDB/Tags/1.4%20MongoDB%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/">1.4 MongoDB常见操作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-常用的命令"><a href="#1-常用的命令" class="headerlink" title="1.常用的命令"></a>1.常用的命令</h3><h4 id="1-查阅数据库和集合"><a href="#1-查阅数据库和集合" class="headerlink" title="1. 查阅数据库和集合"></a>1. 查阅数据库和集合</h4><ul>
+<li><p>show dbs    显示数据库列表</p>
+</li>
+<li><p>use dbname    进入dbname数据库，大小写敏感，没有这个数据库也不要紧</p>
+</li>
+<li><p>show collections    显示数据库中的集合，相当于表格</p>
+</li>
+</ul>
+<h4 id="2-创建-amp-新增集合-数据"><a href="#2-创建-amp-新增集合-数据" class="headerlink" title="2.创建&amp;新增集合 / 数据"></a>2.创建&amp;新增集合 / 数据</h4><ul>
+<li><p>db.users.save({“name”:”lecaf”})    创建了名为users的集合，并新增了一条{“name”:”lecaf”}的数据</p>
+</li>
+<li><p>db.users.insert({“name”:”ghost”, “age”:10})    在users集合中插入一条新数据，，如果没有users这个集合，mongodb会自动创建</p>
+</li>
+<li><p>save()和insert()也存在着些许区别：若新增的数据主键已经存在，insert()会不做操作并提示错误，而save() 则更改原来的内容为新内容。</p>
+<ul>
+<li><ul>
+<li><p>存在数据：{ _id : 1, “ name “ : “ n1 “} ，_id是主键</p>
+</li>
+<li><p>insert({ _id : 1, “ name “ : “ n2 “ })    会提示错误</p>
+</li>
+<li><p>save({ _id : 1, “ name “ : “ n2 “ })     会把 n1 改为  n2 ，有update的作用。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-删除数据"><a href="#3-删除数据" class="headerlink" title="3.删除数据"></a>3.删除数据</h4><ul>
+<li>db.users.remove()    删除users集合下所有数据</li>
+<li>db.users.remove({“name”: “lecaf”})    删除users集合下name=lecaf的数据</li>
+<li>db.users.drop()或db.runCommand({“drop”,”users”})    删除集合users</li>
+<li>db.runCommand({“dropDatabase”: 1})    删除当前数据库</li>
+</ul>
+<h4 id="4-查找数据"><a href="#4-查找数据" class="headerlink" title="4.查找数据"></a>4.查找数据</h4><ul>
+<li>db.users.find()    查找users集合中所有数据</li>
+<li>db.users.findOne()    查找users集合中的第一条数据</li>
+</ul>
+<h4 id="5-修改数据"><a href="#5-修改数据" class="headerlink" title="5.修改数据"></a>5.修改数据</h4><ul>
+<li>db.users.update({“name”:”lecaf”}, {“age”:10})    修改name=lecaf的数据为age=10，第一个参数是查找条件，第二个参数是修改内容，除了主键，其他内容会被第二个参数的内容替换，主键不能修改</li>
+</ul>
+<h4 id="6-高级使用"><a href="#6-高级使用" class="headerlink" title="6.高级使用"></a>6.高级使用</h4><ol>
+<li>条件查找</li>
+</ol>
+<ul>
+<li><p>db.collection.find({ “key” : value })    查找key=value的数据</p>
+</li>
+<li><p>db.collection.find({ “key” : { $gt: value } })    key &gt; value</p>
+</li>
+<li><p>db.collection.find({ “key” : { $lt: value } })    key &lt; value</p>
+</li>
+<li><p>db.collection.find({ “key” : { $gte: value } })    key &gt;= value</p>
+</li>
+<li><p>db.collection.find({ “key” : { $lte: value } })    key &lt;= value</p>
+</li>
+<li><p>db.collection.find({ “key” : { $gt: value1 , $lt: value2 } })    value1 &lt; key &lt;value2</p>
+</li>
+<li><p>db.collection.find({ “key” : { $ne: value } })    key &lt;&gt; value</p>
+</li>
+<li><p>db.collection.find({ “key” : { $mod : [ 10 , 1 ] } })    取模运算，条件相当于key % 10 == 1 即key除以10余数为1的</p>
+</li>
+<li><p>db.collection.find({ “key” : { $nin: [ 1, 2, 3 ] } })    不属于，条件相当于key的值不属于[ 1, 2, 3 ]中任何一个</p>
+</li>
+<li><p>db.collection.find({ “key” : { $in: [ 1, 2, 3 ] } })    属于，条件相当于key等于[ 1, 2, 3 ]中任何一个</p>
+</li>
+<li><p>db.collection.find({ “key” : { $size: 1 } })    $size 数量、尺寸，条件相当于key的值的数量是1（key必须是数组，一个值的情况不能算是数量为1的数组）</p>
+</li>
+<li><p>db.collection.find({ “key” : { $exists : true|false } })    $exists 字段存在，true返回存在字段key的数据，false返回不存在字度key的数据</p>
+</li>
+<li><p>db.collection.find({ “key”: /^val.*val$/i })    正则，类似like；“i”忽略大小写，“m”支持多行</p>
+</li>
+<li><p>db.collection.find({ $or : [{a : 1}, {b : 2} ] })    $or或 （注意：MongoDB 1.5.3后版本可用），符合条件a=1的或者符合条件b=2的数据都会查询出来</p>
+</li>
+<li><p>db.collection.find({ “key”: value , $or : [{ a : 1 } , { b : 2 }] })    符合条件key=value ，同时符合其他两个条件中任意一个的数据</p>
+</li>
+<li><p>db.collection.find({ “key.subkey” :value })    内嵌对象中的值匹配，注意：”key.subkey”必须加引号</p>
+</li>
+<li><p>db.collection.find({ “key”: { $not : /^val.*val$/i } })    这是一个与其他查询条件组合使用的操作符，不会单独使用。上述查询条件得到的结果集加上$not之后就能获得相反的集合。</p>
+</li>
+</ul>
+<ol start="2">
+<li>排序</li>
+</ol>
+<ul>
+<li>db.collection.find().sort({ “key1” : -1 ,”key2” : 1 })    这里的1代表升序，-1代表降序</li>
+</ul>
+<ol start="3">
+<li>其他</li>
+</ol>
+<ul>
+<li><p>db.collection.find().limit(5)    控制返回结果数量，如果参数是0，则当作没有约束，limit()将不起作用</p>
+</li>
+<li><p>db.collection.find().skip(5)    控制返回结果跳过多少数量，如果参数是0，则当作没有约束，skip()将不起作用，或者说跳过了0条</p>
+</li>
+<li><p>db.collection.find().skip(5).limit(5)    可用来做分页，跳过5条数据再取5条数据</p>
+</li>
+<li><p>db.collection.find().count(true)    count()返回结果集的条数</p>
+</li>
+<li><p>db.collection.find().skip(5).limit(5).count(true)    在加入skip()和limit()这两个操作时，要获得实际返回的结果数，需要一个参数true，否则返回的是符合查询条件的结果总数</p>
+</li>
+</ul>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/DataBase/MongoDB/Tutorial/%E4%B8%80%E3%80%81MongoDB%E6%95%99%E7%A8%8B/">[一、MongoDB教程]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#x79;&#117;&#97;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#56;&#x38;&#x38;&#64;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#x2e;&#99;&#111;&#x6d;">&#x79;&#117;&#97;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#56;&#x38;&#x38;&#64;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#x2e;&#99;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.4%20MongoDB%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/" data-id="ckil24r7w009br3iigkuz9ili" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-DataBase/MongoDB/Tutorial/一、MongoDB教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/DataBase/MongoDB/Tutorial/%E4%B8%80%E3%80%81MongoDB%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DataBase/">DataBase</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/DataBase/MongoDB/Tutorial/%E4%B8%80%E3%80%81MongoDB%E6%95%99%E7%A8%8B/">一、 MongoDB教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-MongoDB-安装"><a href="#1-MongoDB-安装" class="headerlink" title="1.MongoDB 安装"></a>1.MongoDB 安装</h4><ol>
+<li>Windows 安装MongoDB</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/DataBase/MongoDB/Tags/1.1Windows%E5%AE%89%E8%A3%85MongoDB/">[1.1 Windows 安装 MongoDB]</a></p>
+<ol start="2">
+<li>Mongodb安装为32位windows服务</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/DataBase/MongoDB/Tags/1.2%20Mongodb%E5%AE%89%E8%A3%85%E4%B8%BA32%E4%BD%8Dwindows%E6%9C%8D%E5%8A%A1/">[1.2 Mongodb安装为32位windows服务]</a></p>
+<ol start="3">
+<li>Mongoose建模与关联设置</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/DataBase/MongoDB/Tags/1.3%20.Mongoose%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%85%B3%E8%81%94%E8%AE%BE%E7%BD%AE/">[1.3.Mongoose建模与关联设置]</a></p>
+<ol start="4">
+<li>Ubuntu20.04 安装MongoDB</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Linux/Ubuntu/6.Ubuntu20.04%E5%AE%89%E8%A3%85MongoDB/">[6. Ubuntu20.04 安装MongoDB]</a></p>
+<ol start="5">
+<li>MongoDB常见操作</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/DataBase/MongoDB/Tags/1.4%20MongoDB%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/">[1.4 MongoDB常见操作]</a></p>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/DataBase/Tutorial/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%99%E7%A8%8B/">[数据库教程]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tutorial/%E4%B8%80%E3%80%81MongoDB%E6%95%99%E7%A8%8B/" data-id="ckil24r7x009dr3ii2q1eata3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/一、HTML初探/1.1 HTML发展简史" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/1.1%20HTML%E5%8F%91%E5%B1%95%E7%AE%80%E5%8F%B2/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/1.1%20HTML%E5%8F%91%E5%B1%95%E7%AE%80%E5%8F%B2/">1.1 HTML发展简史</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-HTML-的发展简史"><a href="#1-HTML-的发展简史" class="headerlink" title="1. HTML 的发展简史"></a>1. HTML 的发展简史</h4><ul>
+<li><p>HTML(Hypertext Markup Language,超文本标记语言)： 诞生于 20 世纪 90 年代初期，是由网景公司拥有，并成为其旗下 Netscape Navigator 的开发语言;</p>
+</li>
+<li><p>后来 Microsoft 也开始利用这种技术开发自己的浏览器；</p>
+</li>
+<li><p>HTML 从诞生到 HTML5 版本，共经历以下版本号和发展时期：</p>
+<p>表一： HTML 各版本发布时间</p>
+<table>
+<thead>
+<tr>
+<th>版本号</th>
+<th>发布时间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HTML2.0</td>
+<td>1995 年 11 月</td>
+</tr>
+<tr>
+<td>HTML3.2</td>
+<td>1996 年 1 月 14 日，W3C 推荐标准</td>
+</tr>
+<tr>
+<td>HTML4.0</td>
+<td>1997 年 12 月 18 日，W3C 推荐标准</td>
+</tr>
+<tr>
+<td>HTML4.1</td>
+<td>1999 年 12 月 24 日，W3C 推荐标准</td>
+</tr>
+<tr>
+<td>HTML5</td>
+<td>2008 年 1 月 22 日，W3C 推荐标准</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="2-JavaScript-的发明"><a href="#2-JavaScript-的发明" class="headerlink" title="2.JavaScript 的发明"></a>2.JavaScript 的发明</h4><ul>
+<li>JavaScript 是网景公司(Netscape)的工程师，Brendan Eich 于 1995 年用十天时间，编写的一个公司内部脚本语言，很快就在 Web 开发领域得到广泛的应用，由于 Brendan 的轻率，致使这种语言很多地方都存在 BUG，因此，W3C 和 ECMA(欧洲计算机制造商协会)不得不多次对这种语言进行规范化，因此，后期出现了 ECMA-2015，ECMA-2016，ECMA-2017 等不同的规范；</li>
+</ul>
+<h4 id="3-第一次浏览器大战"><a href="#3-第一次浏览器大战" class="headerlink" title="3. 第一次浏览器大战"></a>3. 第一次浏览器大战</h4><ul>
+<li>1994 年开始，Netscape 和 Microsoft 为了 争夺市场份额，掀起了第一次浏览器大战；</li>
+<li>1997 年 Microsoft 将 IE 于 Window95 操作系统捆绑销售，网景最终宣布破产；</li>
+<li>1998 年网景公开了它的浏览器源码，并重新命名为 Mozilla，全部程序进行了重写；</li>
+</ul>
+<h4 id="4-第二次浏览器大战"><a href="#4-第二次浏览器大战" class="headerlink" title="4. 第二次浏览器大战"></a>4. 第二次浏览器大战</h4><ul>
+<li>网景公司虽然破产，但是，这帮骨干最终成立了 Firefox 基金，2002 年发布了第一个版本；</li>
+<li>2004 年基于 Mozilla 源码的 Firefox 首次登台，拉开了第二次浏览器大战的序幕；</li>
+<li>第二次大战并不像第一次那么简单，除了火狐狸外，还有挪威的 Opera，Google 也以他的 Chrome 投入了大战；</li>
+<li>2009 年 Apple 的 Safari 也投入到这场残酷的大战；</li>
+<li>浏览器大战造成的结果，就是各个厂家之间的浏览器互不兼容。无论是 HTML，还是 CSS，或者是 JavaScript 都是这样。这就给开发工作带来很大的工作量，需要写很多不必要的代码；</li>
+<li>在这种情况下，行业内部要求统一规范和标准呼声越来越高，HTML 最终发布了 HTML5；CSS 最终制定了 CSS3 标准；</li>
+<li>JavaScript 则一直在不断制定新的标准，目前，还在使用的有 ES4，ES5，ES6，ES7，ES8，ES9，以及 Microsoft 发布的 TypeScrip；</li>
+<li>Google 采用了兼容所厂家的策略，最终，成为了最大赢家；</li>
+</ul>
+<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%B8%80%E3%80%81HTML%20%E5%88%9D%E6%8E%A2/">[一、HTML 初探]</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#99;&#x6f;&#x6d;">&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#99;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/1.1%20HTML%E5%8F%91%E5%B1%95%E7%AE%80%E5%8F%B2/" data-id="ckil24r80009gr3ii6vvhbp27" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/一、HTML初探/1.2 HTML元素初探" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/1.2%20HTML%E5%85%83%E7%B4%A0%E5%88%9D%E6%8E%A2/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/1.2%20HTML%E5%85%83%E7%B4%A0%E5%88%9D%E6%8E%A2/">1.2 HTML元素初探</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-HTML5中的标记方法"><a href="#1-HTML5中的标记方法" class="headerlink" title="1. HTML5中的标记方法"></a>1. HTML5中的标记方法</h4><ol>
+<li><p>内容类型(ContentType)</p>
+</li>
+<li><p>DOCTYPE声明</p>
+</li>
+<li><p>指定字符编码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> <span class="attr">http-equiv</span>=<span class="string">&quot;Content-Type&quot;</span> <span class="attr">content</span>=<span class="string">&quot;text/html;chartset=UTF-8&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="2-可以省略标记的元素"><a href="#2-可以省略标记的元素" class="headerlink" title="2.可以省略标记的元素"></a>2.可以省略标记的元素</h4><ol>
+<li>不允许写结束标签的元素： area、base、br、clo、command、embed、hr、img、input、keygen、link、meta、param、source、track、wbr</li>
+<li>可以省略结束标签的元素：li、dt、dd、p、rt、rp、optgroup、option、colgroup、thead、tbody、tfoot、tr、td、th</li>
+<li>可以省略全部标签的元素： html、head、body、colgroup、tbody</li>
+</ol>
+<h4 id="3-省略引号"><a href="#3-省略引号" class="headerlink" title="3. 省略引号"></a>3. 省略引号</h4><ol>
+<li><p>当属性值不包括空字符串、”&lt;”、”&gt;”、”=”、单引号、双引号时，属性值两边的引号可以省略</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&#x27;text&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">text</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>example</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of 省略标签<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这段代码是根据HTML5语法编写的</span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="4-HTML-元素规范"><a href="#4-HTML-元素规范" class="headerlink" title="4. HTML 元素规范"></a>4. HTML 元素规范</h4><ol>
+<li><p> 元素不区分大小写；</p>
+</li>
+<li><p>内容与呈现分离</p>
+<p> 表一： HTML 主体结构元素</p>
+<table>
+<thead>
+<tr>
+<th>element</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>!DOCTYPE</td>
+<td>声明当前文档为 HTML5 文档</td>
+</tr>
+<tr>
+<td>html</td>
+<td>文档根目录</td>
+</tr>
+<tr>
+<td>head</td>
+<td>文档头部标签</td>
+</tr>
+<tr>
+<td>title</td>
+<td>文档标题标签</td>
+</tr>
+<tr>
+<td>mate</td>
+<td>文档元数据标签</td>
+</tr>
+<tr>
+<td>link</td>
+<td>文档外链接标签</td>
+</tr>
+<tr>
+<td>script</td>
+<td>文档外部资源标签</td>
+</tr>
+<tr>
+<td>style</td>
+<td>文档内联样式标签</td>
+</tr>
+<tr>
+<td>body</td>
+<td>文档主题标签</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h4 id="5-元素简介"><a href="#5-元素简介" class="headerlink" title="5.元素简介"></a>5.元素简介</h4><ol>
+<li><p>空元素</p>
+<p>没有内容的元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I like</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">apples and oranges</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自闭合元素</p>
+<p>对于空元素，可以用一个标签代替，以简洁标签，称为自闭合标签；</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I like</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> /&gt;</span></span><br><span class="line">apples and oranges</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>虚元素：void element</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">I like apples and oranges</span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line">Today was warm and sunny <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">I would like go fishing;</span><br></pre></td></tr></table></figure>
+
+<p>表二： HTML 常用元素</p>
+<table>
+<thead>
+<tr>
+<th>element</th>
+<th>description</th>
+<th>元素类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>div</td>
+<td>定义文档中的节(容器)</td>
+<td>block</td>
+</tr>
+<tr>
+<td>p</td>
+<td>段落</td>
+<td>block</td>
+</tr>
+<tr>
+<td>ul</td>
+<td>无序列表</td>
+<td>block</td>
+</tr>
+<tr>
+<td>ol</td>
+<td>有序列表</td>
+<td>block</td>
+</tr>
+<tr>
+<td>li</td>
+<td>列表项</td>
+<td>block</td>
+</tr>
+<tr>
+<td>table</td>
+<td>表格元素</td>
+<td>block</td>
+</tr>
+<tr>
+<td>input</td>
+<td>输入框</td>
+<td>block</td>
+</tr>
+<tr>
+<td>textarea</td>
+<td>多行输入框</td>
+<td>block</td>
+</tr>
+<tr>
+<td>label</td>
+<td>输入框说明</td>
+<td>inline</td>
+</tr>
+<tr>
+<td>hr</td>
+<td>水平线 (自闭标签)</td>
+<td>block</td>
+</tr>
+<tr>
+<td>span</td>
+<td>普通文本</td>
+<td>inline</td>
+</tr>
+<tr>
+<td>b</td>
+<td>粗体文本</td>
+<td>inline</td>
+</tr>
+<tr>
+<td>i</td>
+<td>斜体文本</td>
+<td>inline</td>
+</tr>
+<tr>
+<td>br</td>
+<td>折行(自闭标签)</td>
+<td>inline</td>
+</tr>
+<tr>
+<td>a</td>
+<td>链接元素</td>
+<td>inline</td>
+</tr>
+<tr>
+<td>img</td>
+<td>图片 (自闭标签)</td>
+<td>inline-block</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<p>   表三： 表格元素</p>
+<table>
+<thead>
+<tr>
+<th>element</th>
+<th>description</th>
+<th>元素类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>table</td>
+<td>表格</td>
+<td>block</td>
+</tr>
+<tr>
+<td>caption</td>
+<td>表格标题</td>
+<td>inline</td>
+</tr>
+<tr>
+<td>thead</td>
+<td>表格头部</td>
+<td>inline</td>
+</tr>
+<tr>
+<td>tbody</td>
+<td>表格体部</td>
+<td>inline</td>
+</tr>
+<tr>
+<td>tfooter</td>
+<td>表格脚部</td>
+<td>inline</td>
+</tr>
+<tr>
+<td>tr</td>
+<td>表格的行元素</td>
+<td>inline</td>
+</tr>
+<tr>
+<td>th</td>
+<td>头部单元格元素</td>
+<td>inline</td>
+</tr>
+<tr>
+<td>td</td>
+<td>表格单元格元素</td>
+<td>inline</td>
+</tr>
+</tbody></table>
+<h4 id="6-参考文档"><a href="#6-参考文档" class="headerlink" title="6.参考文档"></a>6.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%B8%80%E3%80%81HTML%20%E5%88%9D%E6%8E%A2/">[一、HTML 初探]</a></p>
+<h4 id="7-联系方式"><a href="#7-联系方式" class="headerlink" title="7. 联系方式"></a>7. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#110;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#x6f;&#x6d;">&#x79;&#x75;&#97;&#110;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/1.2%20HTML%E5%85%83%E7%B4%A0%E5%88%9D%E6%8E%A2/" data-id="ckil24r81009ir3iia26nbih5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/三、HTML5元素/3.1 HTML5新增元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.1%20HTML5%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.1%20HTML5%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0/">3.1 HTML5 新增元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-HTML5-新增元素"><a href="#1-HTML5-新增元素" class="headerlink" title="1. HTML5 新增元素"></a>1. HTML5 新增元素</h3><ol>
+<li><p>HTML5 定义的许多元素 HTML4 中也存在，但是，元素的含义已经发生了很大的变化，或者，其使用方式已经不同；</p>
+</li>
+<li><p>HTML5 本身还新增了许多新的元素；</p>
+</li>
+</ol>
+<ul>
+<li><p>HTML5 元素主要变化： 将元素语义与其内容呈现结果的影响分开；</p>
+</li>
+<li><p>HTML元素负责文档内容的结构和含义，而内容的呈现则由 CSS 样式控制；</p>
+</li>
+<li><p>HTML5 中新增的大多数元素都具有含义；</p>
+<table>
+<thead>
+<tr>
+<th>element</th>
+<th>discription</th>
+<th>type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>section</td>
+<td>文档节</td>
+<td></td>
+</tr>
+<tr>
+<td>nav</td>
+<td>导航</td>
+<td></td>
+</tr>
+<tr>
+<td>header</td>
+<td>页眉</td>
+<td></td>
+</tr>
+<tr>
+<td>article</td>
+<td>文章</td>
+<td></td>
+</tr>
+<tr>
+<td>aside</td>
+<td>文章侧栏</td>
+<td></td>
+</tr>
+<tr>
+<td>main</td>
+<td>网页主项</td>
+<td></td>
+</tr>
+<tr>
+<td>footer</td>
+<td>页脚</td>
+<td></td>
+</tr>
+<tr>
+<td>details</td>
+<td>元素的细节</td>
+<td></td>
+</tr>
+<tr>
+<td>summary</td>
+<td>元素可见的标题</td>
+<td></td>
+</tr>
+<tr>
+<td>dialog</td>
+<td>对话框窗口</td>
+<td></td>
+</tr>
+<tr>
+<td>bdi</td>
+<td>设置一段文本，使其脱离父元素的文本方向设置</td>
+<td></td>
+</tr>
+<tr>
+<td>meter</td>
+<td>定义度量衡</td>
+<td></td>
+</tr>
+<tr>
+<td>ruby</td>
+<td>定义ruby注释</td>
+<td></td>
+</tr>
+<tr>
+<td>rt</td>
+<td>定义字符的解释和发音</td>
+<td></td>
+</tr>
+<tr>
+<td>rp</td>
+<td>定义不支持ruby元素的浏览器所显示的内容</td>
+<td></td>
+</tr>
+<tr>
+<td>wbr</td>
+<td>规定在文本的何处适合添加换行符</td>
+<td></td>
+</tr>
+<tr>
+<td>time</td>
+<td>定义时间和日期</td>
+<td></td>
+</tr>
+<tr>
+<td>mark</td>
+<td>定义有记号的文本</td>
+<td></td>
+</tr>
+<tr>
+<td>progress</td>
+<td>定义任何类型的任务进度</td>
+<td></td>
+</tr>
+<tr>
+<td>output</td>
+<td>定义不同类型的输出</td>
+<td></td>
+</tr>
+<tr>
+<td>dir</td>
+<td>目录列表</td>
+<td></td>
+</tr>
+<tr>
+<td>menu</td>
+<td>命令的菜单,列表</td>
+<td></td>
+</tr>
+<tr>
+<td>menuitem</td>
+<td>菜单项目</td>
+<td></td>
+</tr>
+<tr>
+<td>command</td>
+<td>命令按钮</td>
+<td></td>
+</tr>
+<tr>
+<td>fieldset</td>
+<td>围绕元素的边框(可用于表单内元素分组)</td>
+<td></td>
+</tr>
+<tr>
+<td>legend</td>
+<td>在边框上的标题</td>
+<td></td>
+</tr>
+<tr>
+<td>select</td>
+<td>选择列表(内联元素)</td>
+<td></td>
+</tr>
+<tr>
+<td>optgroup</td>
+<td>组合选择列表选项</td>
+<td></td>
+</tr>
+<tr>
+<td>option</td>
+<td>选择列表选项(也可做 datalist 选项)</td>
+<td></td>
+</tr>
+<tr>
+<td>iframe</td>
+<td>内联框架(不推荐)</td>
+<td></td>
+</tr>
+<tr>
+<td>figure</td>
+<td>媒介内容分组，与figcaption一同使用</td>
+<td></td>
+</tr>
+<tr>
+<td>figcaption</td>
+<td>图像标题，与figure一同使用</td>
+<td></td>
+</tr>
+<tr>
+<td>map</td>
+<td>图像映射</td>
+<td></td>
+</tr>
+<tr>
+<td>area</td>
+<td>图像区域</td>
+<td></td>
+</tr>
+<tr>
+<td>canvas</td>
+<td>图形容器(脚本来绘制图形)</td>
+<td></td>
+</tr>
+<tr>
+<td>svg</td>
+<td>svg矢量图元素</td>
+<td></td>
+</tr>
+<tr>
+<td>video</td>
+<td>视频</td>
+<td></td>
+</tr>
+<tr>
+<td>audio</td>
+<td>音频</td>
+<td></td>
+</tr>
+<tr>
+<td>source</td>
+<td>媒介源</td>
+<td></td>
+</tr>
+<tr>
+<td>track</td>
+<td>文本轨道</td>
+<td></td>
+</tr>
+<tr>
+<td>embed</td>
+<td>嵌入内容</td>
+<td></td>
+</tr>
+<tr>
+<td>blockquote</td>
+<td>块引用</td>
+<td></td>
+</tr>
+<tr>
+<td>address</td>
+<td>文档联系信息</td>
+<td></td>
+</tr>
+<tr>
+<td>center</td>
+<td>居中文本(不赞成使用)</td>
+<td></td>
+</tr>
+<tr>
+<td>spacer</td>
+<td>在水平和垂直方向插入空间(空元素)</td>
+<td></td>
+</tr>
+<tr>
+<td>pre</td>
+<td>预定义元素</td>
+<td><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/14/HTML/Elements%20Description/Pr%20Element/">参考文档</a></td>
+</tr>
+<tr>
+<td>caption</td>
+<td>标题</td>
+<td><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/14/HTML/Elements%20Description/Caption%20Element/">参考文档</a></td>
+</tr>
+<tr>
+<td>blockquote</td>
+<td>引自他处的内容</td>
+<td><a target="_blank" rel="noopener" href="https://yuanmin650304.github.io/2020/10/14/HTML/Elements%20Description/Blockquote%20Element/">参考文档</a></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="2-HTML5新增元素分类"><a href="#2-HTML5新增元素分类" class="headerlink" title="2. HTML5新增元素分类"></a>2. HTML5新增元素分类</h3><h4 id="2-1-主体结构元素"><a href="#2-1-主体结构元素" class="headerlink" title="2.1 主体结构元素"></a>2.1 主体结构元素</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.2%20HTML5%E6%96%B0%E5%A2%9E%E4%B8%BB%E4%BD%93%E5%85%83%E7%B4%A0/">[3.2 HTML5 新增主体元素]</a></p>
+<h4 id="2-2-HTML5-新增表单元素"><a href="#2-2-HTML5-新增表单元素" class="headerlink" title="2.2 HTML5 新增表单元素"></a>2.2 HTML5 新增表单元素</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.3%20HTML5%20%E6%96%B0%E5%A2%9E%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/">[3.3 HTML5 新增表单元素]</a></p>
+<h4 id="2-3-HTML5-新增文本元素"><a href="#2-3-HTML5-新增文本元素" class="headerlink" title="2.3 HTML5 新增文本元素"></a>2.3 HTML5 新增文本元素</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.10%20HTML5%E6%96%B0%E5%A2%9E%E6%96%87%E6%9C%AC%E5%85%83%E7%B4%A0/">[3.10 HTML5新增文本元素]</a></p>
+<h4 id="2-4-HTML5新增其他元素"><a href="#2-4-HTML5新增其他元素" class="headerlink" title="2.4 HTML5新增其他元素"></a>2.4 HTML5新增其他元素</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.11%20HTML5%E6%96%B0%E5%A2%9E%E5%85%B6%E4%BB%96%E5%85%83%E7%B4%A0/">[3.11 HTML5新增其他元素]</a></p>
+<h4 id="2-5-HTML5-新增头部元素"><a href="#2-5-HTML5-新增头部元素" class="headerlink" title="2.5 HTML5 新增头部元素"></a>2.5 HTML5 新增头部元素</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.12%20HTML5%E6%96%B0%E5%A2%9E%E5%A4%B4%E9%83%A8%E5%85%83%E7%B4%A0/">[3.12 HTML5新增头部元素]</a></p>
+<h4 id="2-6-HTML5多媒体元素"><a href="#2-6-HTML5多媒体元素" class="headerlink" title="2.6 HTML5多媒体元素"></a>2.6 HTML5多媒体元素</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.9%20HTML5%E5%A4%9A%E5%AA%92%E4%BD%93%E5%85%83%E7%B4%A0/">[3.9 HTML5多媒体元素]</a></p>
+<h3 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%B8%89%E3%80%81HTML5%20%E5%85%83%E7%B4%A0/">[三、HTML5元素]</a></p>
+<h3 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h3><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#x38;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#x79;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#x38;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.1%20HTML5%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0/" data-id="ckil24r83009lr3iig6e09mrq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-HTML/HTML Tags/三、HTML5元素/3.11 HTML5新增其他元素" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/28/HTML/HTML%20Tags/%E4%B8%89%E3%80%81HTML5%E5%85%83%E7%B4%A0/3.11%20HTML5%E6%96%B0%E5%A2%9E%E5%85%B6%E4%BB%96%E5%85%83%E7%B4%A0/" class="article-date">
@@ -1170,628 +2283,6 @@
 
 
   
-    <article id="post-HTML/HTML Tags/二、HTML元素/2.11  HTML 特殊字符" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.11%20%20HTML%20%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.11%20%20HTML%20%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/">2.11 HTML特殊字符</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>HTML 特殊字体： HTML 预留字符</p>
-</li>
-<li><p>在 HTML 中不能使用小于号（&lt;）和大于号（&gt;），这是因为浏览器会误认为它们是标签；</p>
-</li>
-<li><p>如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符特殊字体（character entities）</p>
-</li>
-<li><p>字符特殊字体类似这样：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="symbol">&amp;lt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- or --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="symbol">&amp;#60;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>表一： HTML 特殊字体</p>
-<table>
-<thead>
-<tr>
-<th align="center">字符</th>
-<th align="center">特殊字体名称</th>
-<th align="center">特殊字体编码</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">‘ ‘</td>
-<td align="center"><code>&amp;nbsp</code></td>
-<td align="center"><code>&amp;#160</code></td>
-</tr>
-<tr>
-<td align="center">&lt;</td>
-<td align="center"><code>&amp;lt</code></td>
-<td align="center"><code>&amp;#60</code></td>
-</tr>
-<tr>
-<td align="center">&gt;</td>
-<td align="center"><code>&amp;gt</code></td>
-<td align="center"><code>&amp;#62</code></td>
-</tr>
-<tr>
-<td align="center">&amp;</td>
-<td align="center"><code>&amp;amp</code></td>
-<td align="center"><code>&amp;#38</code></td>
-</tr>
-<tr>
-<td align="center">“</td>
-<td align="center"><code>&amp;quot</code></td>
-<td align="center"><code>&amp;#34</code></td>
-</tr>
-<tr>
-<td align="center">￠</td>
-<td align="center"><code>&amp;cent</code></td>
-<td align="center"><code>&amp;#162</code></td>
-</tr>
-<tr>
-<td align="center">‘</td>
-<td align="center"><code>&amp;apos</code></td>
-<td align="center"><code>&amp;#39</code></td>
-</tr>
-<tr>
-<td align="center">€</td>
-<td align="center"><code>&amp;euro</code></td>
-<td align="center"><code>&amp;#8364</code></td>
-</tr>
-<tr>
-<td align="center">£</td>
-<td align="center"><code>&amp;pound</code></td>
-<td align="center"><code>&amp;#163</code></td>
-</tr>
-<tr>
-<td align="center">¥</td>
-<td align="center"><code>&amp;yen</code></td>
-<td align="center"><code>&amp;#165</code></td>
-</tr>
-<tr>
-<td align="center">©</td>
-<td align="center"><code>&amp;copy</code></td>
-<td align="center"><code>&amp;#169</code></td>
-</tr>
-<tr>
-<td align="center">®</td>
-<td align="center"><code>&amp;reg</code></td>
-<td align="center"><code>&amp;#174</code></td>
-</tr>
-<tr>
-<td align="center">™</td>
-<td align="center"><code>&amp;trade</code></td>
-<td align="center"><code>&amp;#8482</code></td>
-</tr>
-<tr>
-<td align="center">×</td>
-<td align="center"><code>&amp;times</code></td>
-<td align="center"><code>&amp;#215</code></td>
-</tr>
-<tr>
-<td align="center">÷</td>
-<td align="center"><code>&amp;divide</code></td>
-<td align="center"><code>&amp;#247</code></td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sunbocong/article/details/81032758">[html中显示特殊符号]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.11%20%20HTML%20%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/" data-id="ckil24r8p00air3iids2j9f5e" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML/HTML Tags/二、HTML元素/2.14 HTML 表单[type=radio]属性的特性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.14%20HTML%20%E8%A1%A8%E5%8D%95%5Btype=radio%5D%E5%B1%9E%E6%80%A7%E7%9A%84%E7%89%B9%E6%80%A7/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.14%20HTML%20%E8%A1%A8%E5%8D%95%5Btype=radio%5D%E5%B1%9E%E6%80%A7%E7%9A%84%E7%89%B9%E6%80%A7/">2.14 HTML 表单Radio属性的特性</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-type-radio属性"><a href="#1-type-radio属性" class="headerlink" title="1. type=radio属性"></a>1. type=radio属性</h4><ul>
-<li><p>单选项</p>
-</li>
-<li><p>控制单选的属性： name</p>
-</li>
-<li><p>测试</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;slider&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>你会发现不能选取单选项</p>
-</li>
-<li><p>将name属性设置为相同属性值</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;slider&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>现在可以实现单选效果</p>
-</li>
-<li><p>如果用三个label分别控制三个input项，会发生什么？我们把代码修改一下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;slider&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-2&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-3&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;control-2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;control-3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>利用这个特性可以实现css轮播效果</p>
-</li>
-</ul>
-<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.9%20%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/">[2.9 表单元素]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email： <a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#109;">&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.14%20HTML%20%E8%A1%A8%E5%8D%95[type=radio]%E5%B1%9E%E6%80%A7%E7%9A%84%E7%89%B9%E6%80%A7/" data-id="ckil24r8q00akr3ii2532106q" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML/HTML Tags/二、HTML元素/2.12 HTML元素属性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.12%20HTML%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.12%20HTML%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/">2.12 HTML元素属性</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-元素属性-attribute"><a href="#1-元素属性-attribute" class="headerlink" title="1.元素属性(attribute)"></a>1.元素属性(attribute)</h4><ol>
-<li><p>一个元素可以有多个属性</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">I like <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;link&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/apple.html&quot;</span> <span class="attr">id</span>=<span class="string">&quot;firstlink&quot;</span>&gt;</span>apples<span class="tag">&lt;/<span class="name">a</span>&gt;</span> and</span><br><span class="line">oranges</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用布尔属性:</p>
-<ul>
-<li> <code>readonly</code></li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;form_action.asp&quot;</span> <span class="attr">method</span>=<span class="string">&quot;get&quot;</span>&gt;</span></span><br><span class="line">  Name:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;email&quot;</span> /&gt;</span></span><br><span class="line">  Country:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;country&quot;</span> <span class="attr">value</span>=<span class="string">&quot;China&quot;</span> <span class="attr">readonly</span>=<span class="string">&quot;readonly&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Submit&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>disabled</code></li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter your name <span class="tag">&lt;<span class="name">input</span> <span class="attr">disabled</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>自定义属性</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter your name</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">disabled</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-creator</span>=<span class="string">&quot;adam&quot;</span> <span class="attr">data-purpose</span>=<span class="string">&quot;collection&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.12%20HTML%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/" data-id="ckil24r8r00amr3iiezaw6m6d" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML/HTML Tags/二、HTML元素/2.2 HTML行内元素" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.2%20HTML%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.2%20HTML%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/">2.2HTML行内元素</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.2%20HTML%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/" data-id="ckil24r8s00aor3ii0uiua6vn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML/HTML Tags/二、HTML元素/2.4 创建 HTML 文档" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.4%20%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.4%20%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3/">2.4 创建HTML文档</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-元素介绍"><a href="#1-元素介绍" class="headerlink" title="1. 元素介绍"></a>1. 元素介绍</h3><h4 id="1-元素汇总表"><a href="#1-元素汇总表" class="headerlink" title="1. 元素汇总表"></a>1. 元素汇总表</h4><ol>
-<li>创建 HTML 文档元素： 是指构建网页文档的基本组成元素</li>
-</ol>
-<ul>
-<li>包括：</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Element(元素)</th>
-<th>Description(说明)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>！DOCTYPE</td>
-<td>定义文档规范采用的是 HTML5</td>
-</tr>
-<tr>
-<td>html</td>
-<td>定义 html 标记的开始</td>
-</tr>
-<tr>
-<td>head</td>
-<td>表示文档中原数据部分的开始</td>
-</tr>
-<tr>
-<td>body</td>
-<td>表示文档主体内容的开始</td>
-</tr>
-<tr>
-<td>title</td>
-<td>文档标题</td>
-</tr>
-<tr>
-<td>base</td>
-<td>设置文档中相对与 URL 解析基础的 URL</td>
-</tr>
-<tr>
-<td>meta</td>
-<td>添加对 HTML 文档所含数据的说明</td>
-</tr>
-<tr>
-<td>带 charset 属性的 meta</td>
-<td>声明 HTML 文档的字符编码</td>
-</tr>
-<tr>
-<td>style</td>
-<td>定义文档内嵌样式</td>
-</tr>
-<tr>
-<td>link</td>
-<td>载入包括样式表和网站标志在内的外部资源</td>
-</tr>
-<tr>
-<td>带 http-equiv 属性的 meta</td>
-<td>设置 HTML 文档的默认样式表或周期性刷新页面内容</td>
-</tr>
-<tr>
-<td>带 rel=”prefetch”属性的 link</td>
-<td>预先载入预计马上就会用到的资源</td>
-</tr>
-<tr>
-<td>script</td>
-<td>定义文档内嵌脚本</td>
-</tr>
-<tr>
-<td>带 src 属性的 script</td>
-<td>载入外部脚本</td>
-</tr>
-<tr>
-<td>带 async 或 defer 属性的 script</td>
-<td>控制外部脚本的执行时机或执行方式</td>
-</tr>
-<tr>
-<td>noscript</td>
-<td>显示浏览器不支持或禁用时 JavaScript 准备的内容提示信息</td>
-</tr>
-</tbody></table>
-<h4 id="2-元素详述"><a href="#2-元素详述" class="headerlink" title="2. 元素详述"></a>2. 元素详述</h4><ol>
-<li>！DOCTYPE</li>
-</ol>
-<ul>
-<li><p>代码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="2">
-<li>html</li>
-</ol>
-<ul>
-<li><p>代码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="3">
-<li>head</li>
-</ol>
-<ul>
-<li><p>代码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="4">
-<li>body</li>
-</ol>
-<ul>
-<li><p>代码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="5">
-<li>base</li>
-</ol>
-<ul>
-<li><p>代码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">&quot;https://www.baidu.com&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="6">
-<li>meta</li>
-</ol>
-<ul>
-<li><p>代码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;author&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Jhon Don&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;phone TV refrigerator&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;keyword&quot;</span> <span class="attr">content</span>=<span class="string">&quot;TV phone computer&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;refresh&quot;</span> <span class="attr">content</span>=<span class="string">&quot;30&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>http-equiv=&quot;refresh&quot;</code>定义每 30 秒刷新一次</p>
-</li>
-</ul>
-<ol start="7">
-<li>style</li>
-</ol>
-<ul>
-<li><p>代码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">  body &#123;</span><br><span class="line"><span class="css">    <span class="selector-tag">background</span>: <span class="selector-id">#000</span>;</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="8">
-<li>link</li>
-</ol>
-<ul>
-<li><p>代码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;imgs/favicon.ico&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/index.css&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="9">
-<li>script</li>
-</ol>
-<ul>
-<li><p>代码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/jquery.js&quot;</span> <span class="attr">defer</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/index.js&quot;</span> <span class="attr">async</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="10">
-<li>总结</li>
-</ol>
-<ul>
-<li><p>代码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;author&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Jhon Don&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;phone TV refrigerator&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;keyword&quot;</span> <span class="attr">content</span>=<span class="string">&quot;TV phone computer&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;refresh&quot;</span> <span class="attr">content</span>=<span class="string">&quot;30&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo for html<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;imgs/favicon.ico&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/index.css&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/jquery.js&quot;</span> <span class="attr">defer</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/index.js&quot;</span> <span class="attr">async</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">&quot;https://www.baidu.com&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">      body &#123;</span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-id">#000</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/imgs/banner.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;banner&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#121;&#x75;&#97;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x75;&#97;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.4%20%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3/" data-id="ckil24r8t00aqr3ii7cdib3zo" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML/HTML Tags/二、HTML元素/2.13 HTML列表元素" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.13%20HTML%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.13%20HTML%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0/">2.13 HTML列表元素</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Ul无序列表元素"><a href="#1-Ul无序列表元素" class="headerlink" title="1. Ul无序列表元素"></a>1. Ul无序列表元素</h4><ul>
-<li><p>HTML</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>君不见黄河之水天上来，奔流到海不复回。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>君不见高堂明镜悲白发，朝如青丝暮成雪。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>css修改默认样式</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123; <span class="attribute">list-style</span>: none; &#125;</span><br><span class="line"><span class="selector-tag">li</span> &#123; <span class="attribute">list-style</span>: none; &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>参考文档</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/html-element/blob/main/12-block_elements/demo/14.0-ul_element.html">[14.0-ul_element.html]</a></p>
-<h4 id="2-Ol有序列表元素"><a href="#2-Ol有序列表元素" class="headerlink" title="2. Ol有序列表元素"></a>2. Ol有序列表元素</h4><ul>
-<li><p>HTML</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-CN&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of ol element with Vue<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;imgs/favicon.ico&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/index_ol.css&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span> <span class="attr">start</span>=<span class="string">&quot;5&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet1&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet2&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet3&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet4&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>&#123;&#123;about&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span> <span class="attr">reversed</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet1&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet2&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet3&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet4&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>&#123;&#123;about&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span> <span class="attr">type</span>=<span class="string">&quot;I&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet1&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet2&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet3&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet4&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>&#123;&#123;about&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">      el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line"><span class="javascript">        title: <span class="string">&quot;唐诗名句选&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet1: <span class="string">&quot;独坐幽篁里 弹琴复长啸 深林人不知 明月来相照&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet2: <span class="string">&quot;君不见黄河之水天上来 奔流到海不复回&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet3: <span class="string">&quot;君不见高堂明镜悲白发 朝如青丝暮成雪&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet4: <span class="string">&quot;秦时明月汉时关 万里长征人未还&quot;</span>,</span></span><br><span class="line"><span class="javascript">        img: <span class="string">&quot;imgs/photo1.jpg&quot;</span>,</span></span><br><span class="line"><span class="javascript">        link: <span class="string">&quot;https://www.shicimingju.com/shicimark/tangshisanbaishou.html&quot;</span>,</span></span><br><span class="line"><span class="javascript">        about: <span class="string">&quot;唐诗三百首&quot;</span></span></span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>参考文档</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/html-element/blob/main/12-block_elements/demo/7.0-ol_element.html">[7.0-ol_element.html]</a></p>
-<ul>
-<li><p>css设置列表标记类型</p>
-</li>
-<li><p>list-style-type: none、box/check/circle/diamond/disc/dash/square/decimal 、decimal、binary、lower-alpha、upper-alpha</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Attribute<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">&quot;http://titan/listings/&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">ol</span> &#123;<span class="attribute">list-style-type</span>: lower-alpha&#125;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>I like apples and oranges<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h5</span>&gt;</span>I also like<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>bananas<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>mangoes<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span> <span class="attr">style</span>=<span class="string">&quot;list-style-type: decimal&quot;</span>&gt;</span>cherries<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>plums<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>peaches<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>grapes<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-Dl自定义列表"><a href="#3-Dl自定义列表" class="headerlink" title="3. Dl自定义列表"></a>3. Dl自定义列表</h4><ul>
-<li><p>HTML文档</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-CN&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of div element with Vue<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;imgs/favicon.ico&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/index_dl.css&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">dl</span> <span class="attr">class</span>=<span class="string">&quot;dl&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span>&#123;&#123;title1&#125;&#125;<span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dd</span>&gt;</span>&#123;&#123;content1&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">dl</span> <span class="attr">class</span>=<span class="string">&quot;dl&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span>&#123;&#123;title2&#125;&#125;<span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dd</span>&gt;</span>&#123;&#123;content2&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">dl</span> <span class="attr">class</span>=<span class="string">&quot;dl&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span>&#123;&#123;title3&#125;&#125;<span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dd</span>&gt;</span>&#123;&#123;content3&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>竹里馆<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">      el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line"><span class="javascript">        title: <span class="string">&quot;唐诗名句选&quot;</span>,</span></span><br><span class="line"><span class="javascript">        title1: <span class="string">&quot;滕王阁序&quot;</span>,</span></span><br><span class="line"><span class="javascript">        content1: <span class="string">&quot;渔舟晚唱 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&quot;</span>,</span></span><br><span class="line"><span class="javascript">        title2: <span class="string">&quot;春晓&quot;</span>,</span></span><br><span class="line"><span class="javascript">        content2: <span class="string">&quot;春眠不觉晓 处处闻啼鸟 夜来风雨声 花落知多少&quot;</span>,</span></span><br><span class="line"><span class="javascript">        title3: <span class="string">&quot;竹馆里&quot;</span>,</span></span><br><span class="line"><span class="javascript">        content3: <span class="string">&quot;独坐幽篁里 弹琴复长啸 深林人不知 明月来相照&quot;</span>,</span></span><br><span class="line"><span class="javascript">        img: <span class="string">&quot;imgs/photo1.jpg&quot;</span>,</span></span><br><span class="line"><span class="javascript">        link: <span class="string">&quot;https://www.shicimingju.com/shicimark/tangshisanbaishou.html&quot;</span>,</span></span><br><span class="line"><span class="javascript">        about: <span class="string">&quot;唐诗三百首&quot;</span>&#125;,</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>参考文档</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/html-element/blob/main/12-block_elements/demo/5.0-dl_serial_element.html">[5.0-dl_serial_element.html]</a></p>
-<h4 id="4-列表相关CSS属性"><a href="#4-列表相关CSS属性" class="headerlink" title="4. 列表相关CSS属性"></a>4. 列表相关CSS属性</h4><ul>
-<li><p>使用图像作为列表标记</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123;<span class="attribute">list-style-image</span>: <span class="built_in">url</span>(<span class="string">&#x27;banana.jpg&#x27;</span>)&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置列表标记的位置</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123;  <span class="attribute">list-style-position</span>: inside/outside; &#125;</span><br></pre></td></tr></table></figure>
-<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4></li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email： <a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.13%20HTML%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0/" data-id="ckil24r8u00asr3iifnsv8uko" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML/HTML Tags/二、HTML元素/2.5 标记文字" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.5%20%E6%A0%87%E8%AE%B0%E6%96%87%E5%AD%97/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.5%20%E6%A0%87%E8%AE%B0%E6%96%87%E5%AD%97/">2. 5 HTML标记文字</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.5%20%E6%A0%87%E8%AE%B0%E6%96%87%E5%AD%97/" data-id="ckil24r8v00aur3iiej5v7b4u" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -1817,7 +2308,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">40</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
     </div>
   </div>
 
@@ -1827,7 +2318,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">267</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">269</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 

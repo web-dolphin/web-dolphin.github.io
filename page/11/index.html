@@ -67,6 +67,841 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/9.对象/2.9.2JS函数中this指向问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/9.%E5%AF%B9%E8%B1%A1/2.9.2JS%E5%87%BD%E6%95%B0%E4%B8%ADthis%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/9.%E5%AF%B9%E8%B1%A1/2.9.2JS%E5%87%BD%E6%95%B0%E4%B8%ADthis%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/">2.9.2 JS 函数中 This 指向</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7. 参考文档"></a>7. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/9.%E5%AF%B9%E8%B1%A1/2.9.1%20ECMAScript%E5%AF%B9%E8%B1%A1/">[2.9 ECMAScript对象]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/9.%E5%AF%B9%E8%B1%A1/2.9.2JS%E5%87%BD%E6%95%B0%E4%B8%ADthis%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/" data-id="ckil24rch00hcr3ii5whd105i" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/2.数据类型/引用类型/2.2  ECMA引用数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/2.2%20%20ECMA%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/2.2%20%20ECMA%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">2.2.2ECMAScript引用数据类型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/2.2%20%20ECMA%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-id="ckil24rci00her3ii0pkvgsx3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/2.数据类型/基本类型/2.2 ECMA基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/2.2%20ECMA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/2.2%20ECMA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">2.2.1 ECMAScript基本数据类型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/2.2%20ECMA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-id="ckil24rcj00hgr3ii0lus673m" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/5.运算符/2.4 ECMAScript运算符" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/5.%E8%BF%90%E7%AE%97%E7%AC%A6/2.4%20ECMAScript%E8%BF%90%E7%AE%97%E7%AC%A6/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/5.%E8%BF%90%E7%AE%97%E7%AC%A6/2.4%20ECMAScript%E8%BF%90%E7%AE%97%E7%AC%A6/">2.5 ECMAScript运算符</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/5.%E8%BF%90%E7%AE%97%E7%AC%A6/2.4%20ECMAScript%E8%BF%90%E7%AE%97%E7%AC%A6/" data-id="ckil24rcp00hlr3ii11utcnhv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/一、盒子模型/1.1  盒子模型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/CSS/Tags/%E4%B8%80%E3%80%81%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/1.1%20%20%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%B8%80%E3%80%81%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/1.1%20%20%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">1.1 盒子模型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-内边距-padding"><a href="#1-内边距-padding" class="headerlink" title="1. 内边距: padding"></a>1. 内边距: padding</h4><ul>
+<li><p>代码示例</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">padding</span></span><br><span class="line"><span class="selector-tag">padding-top</span></span><br><span class="line"><span class="selector-tag">padding-bottom</span></span><br><span class="line"><span class="selector-tag">padding-left</span></span><br><span class="line"><span class="selector-tag">padding-right</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-外边距-margin"><a href="#2-外边距-margin" class="headerlink" title="2. 外边距: margin"></a>2. 外边距: margin</h4><ul>
+<li><p>代码示例</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">margin</span></span><br><span class="line"><span class="selector-tag">margin-top</span></span><br><span class="line"><span class="selector-tag">margin-bottom</span></span><br><span class="line"><span class="selector-tag">margin-left</span></span><br><span class="line"><span class="selector-tag">margin-right</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-元素尺寸"><a href="#3-元素尺寸" class="headerlink" title="3. 元素尺寸"></a>3. 元素尺寸</h4><ul>
+<li><p>代码示例</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">width</span>				<span class="comment">/*auto、长度单位、百分比*/</span></span><br><span class="line"><span class="selector-tag">max-width</span></span><br><span class="line"><span class="selector-tag">min-width</span></span><br><span class="line"><span class="selector-tag">height</span></span><br><span class="line"><span class="selector-tag">max-height</span></span><br><span class="line"><span class="selector-tag">min-height</span></span><br><span class="line"><span class="selector-tag">box-sizing</span>		<span class="comment">/*content-box、padding-box、border-box、margin-box*/</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-溢出处理-overflow"><a href="#4-溢出处理-overflow" class="headerlink" title="4. 溢出处理: overflow"></a>4. 溢出处理: overflow</h4><ul>
+<li><p>代码示例</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">overflow</span>      	<span class="comment">/*auto、hidden、no-content、no-display、scroll、visible*/</span></span><br><span class="line"><span class="selector-tag">overflow-x</span></span><br><span class="line"><span class="selector-tag">overflow-y</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-元素的可见性-visibility"><a href="#5-元素的可见性-visibility" class="headerlink" title="5. 元素的可见性: visibility"></a>5. 元素的可见性: visibility</h4><ul>
+<li><p>代码示例</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">visibility</span> 					<span class="comment">/*visible、hidden、collapse*/</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="6-设置元素的盒子类型-display"><a href="#6-设置元素的盒子类型-display" class="headerlink" title="6. 设置元素的盒子类型: display"></a>6. 设置元素的盒子类型: display</h4><ul>
+<li><p>表 1 display 属性值</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>block</td>
+<td>显示为块级元素</td>
+</tr>
+<tr>
+<td>inline</td>
+<td>显示为行级元素</td>
+</tr>
+<tr>
+<td>inline-block</td>
+<td>显示为行内块级元素</td>
+</tr>
+<tr>
+<td>none</td>
+<td>元素不可见，不占空间</td>
+</tr>
+<tr>
+<td>list-item</td>
+<td>显示为列表项</td>
+</tr>
+<tr>
+<td>flexbox</td>
+<td>显示为弹性盒子</td>
+</tr>
+<tr>
+<td>table</td>
+<td>显示为表格</td>
+</tr>
+<tr>
+<td>inline-table</td>
+<td></td>
+</tr>
+<tr>
+<td>table-row</td>
+<td></td>
+</tr>
+<tr>
+<td>table-row-group</td>
+<td></td>
+</tr>
+<tr>
+<td>table-header-group</td>
+<td></td>
+</tr>
+<tr>
+<td>table-footer-group</td>
+<td></td>
+</tr>
+<tr>
+<td>table-column</td>
+<td></td>
+</tr>
+<tr>
+<td>table-column-group</td>
+<td></td>
+</tr>
+<tr>
+<td>table-cell</td>
+<td></td>
+</tr>
+<tr>
+<td>table-caption</td>
+<td></td>
+</tr>
+<tr>
+<td>ruby</td>
+<td>显示为 ruby 注释相关的文本布局</td>
+</tr>
+<tr>
+<td>ruby-base</td>
+<td></td>
+</tr>
+<tr>
+<td>ruby-text</td>
+<td></td>
+</tr>
+<tr>
+<td>ruby-base-group</td>
+<td></td>
+</tr>
+<tr>
+<td>ruby-text-group</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="7-创建浮动盒子：float"><a href="#7-创建浮动盒子：float" class="headerlink" title="7. 创建浮动盒子：float"></a>7. 创建浮动盒子：float</h4><ul>
+<li><p>表 2</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>左浮动</td>
+</tr>
+<tr>
+<td>right</td>
+<td>右浮动</td>
+</tr>
+<tr>
+<td>none</td>
+<td>默认样式，位置固定</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="8-参考文档"><a href="#8-参考文档" class="headerlink" title="8.参考文档"></a>8.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
+<h4 id="9-联系方式"><a href="#9-联系方式" class="headerlink" title="9. 联系方式"></a>9. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#x38;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#109;">&#121;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#x38;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%B8%80%E3%80%81%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/1.1%20%20%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" data-id="ckimxdn2600006hii7wt4a04i" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/三、CSS选择器/3.1 CSS选择器一" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/CSS/Tags/%E4%B8%89%E3%80%81CSS%E9%80%89%E6%8B%A9%E5%99%A8/3.1%20CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%B8%80/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%B8%89%E3%80%81CSS%E9%80%89%E6%8B%A9%E5%99%A8/3.1%20CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%B8%80/">3.1 CSS选择器一</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-CSS-基本选择器"><a href="#1-CSS-基本选择器" class="headerlink" title="1. CSS 基本选择器"></a>1. CSS 基本选择器</h3><h4 id="1-通配符选择器"><a href="#1-通配符选择器" class="headerlink" title="1. 通配符选择器"></a>1. 通配符选择器</h4><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line">*<span class="selector-attr">[lang^=<span class="string">&#x27;en&#x27;</span>]</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br><span class="line">*<span class="selector-class">.warning</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line">*<span class="selector-id">#maincontent</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;warning&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">lang</span>=<span class="string">&quot;en-us&quot;</span>&gt;</span>A green span<span class="tag">&lt;/<span class="name">span</span>&gt;</span> in a red paragraph.</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;maincontent&quot;</span> <span class="attr">lang</span>=<span class="string">&quot;en-gb&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;warning&quot;</span>&gt;</span>A red span<span class="tag">&lt;/<span class="name">span</span>&gt;</span> in a green paragraph.</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-元素选择器"><a href="#2-元素选择器" class="headerlink" title="2. 元素选择器"></a>2. 元素选择器</h4><ul>
+<li><p>语法: 标签选择器</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-类选择器"><a href="#3-类选择器" class="headerlink" title="3. 类选择器"></a>3. 类选择器</h4><ul>
+<li><p>语法</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-ID-选择器"><a href="#4-ID-选择器" class="headerlink" title="4. ID 选择器"></a>4. ID 选择器</h4><ul>
+<li><p>语法</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#code</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-属性选择器"><a href="#5-属性选择器" class="headerlink" title="5. 属性选择器"></a>5. 属性选择器</h4><ul>
+<li><p>语法</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-attr">[href]</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">&#x27;text&#x27;</span>]</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-attr">[title]</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-attr">[href=<span class="string">&quot;https://baidu.com&quot;</span>]</span></span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-attr">[href$=<span class="string">&#x27;.org&#x27;</span>]</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-attr">[class~=<span class="string">&#x27;logo&#x27;</span>]</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-attr">[href*=<span class="string">&#x27;example&#x27;</span>]</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-attr">[href^=<span class="string">&#x27;https&#x27;</span>]</span><span class="selector-attr">[href$=<span class="string">&#x27;.org&#x27;</span>]</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-attr">[lang]</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:not(</span><span class="selector-attr">[lang]</span>) &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-attr">[lang=<span class="string">&#x27;pt&#x27;</span>]</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-attr">[lang~=<span class="string">&#x27;en-us&#x27;</span>]</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-attr">[lang|=<span class="string">&#x27;zh&#x27;</span>]</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-attr">[data-lang=<span class="string">&#x27;zh-TW&#x27;</span>]</span> &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#internal&quot;</span>&gt;</span>Internal link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://example.com&quot;</span>&gt;</span>Example link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#InSensitive&quot;</span>&gt;</span>Insensitive internal link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://example.org&quot;</span>&gt;</span>Example org link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://example.org&quot;</span>&gt;</span>Example https org link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">lang</span>=<span class="string">&quot;en-us en-gb en-au en-nz&quot;</span>&gt;</span>Hello World!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">lang</span>=<span class="string">&quot;pt&quot;</span>&gt;</span>Olá Mundo!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">lang</span>=<span class="string">&quot;zh-CN&quot;</span>&gt;</span>世界您好！<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">lang</span>=<span class="string">&quot;zh-TW&quot;</span>&gt;</span>世界您好！<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">data-lang</span>=<span class="string">&quot;zh-TW&quot;</span>&gt;</span>世界您好！<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-CSS-复合选择器"><a href="#2-CSS-复合选择器" class="headerlink" title="2. CSS 复合选择器"></a>2. CSS 复合选择器</h3><h4 id="1-并集选择器"><a href="#1-并集选择器" class="headerlink" title="1. 并集选择器"></a>1. 并集选择器</h4><ul>
+<li><p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;nav&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.nav</span>,</span><br><span class="line"><span class="selector-tag">main</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">600px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-后代选择器"><a href="#2-后代选择器" class="headerlink" title="2. 后代选择器"></a>2. 后代选择器</h4><ul>
+<li><p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>疏影横斜水清浅 暗香浮动月黄昏<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤乌齐飞 秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>疏影横斜水清浅 暗香浮动月黄昏<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤乌齐飞 秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">  <span class="attribute">list-style</span>: none;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-子代选择器"><a href="#3-子代选择器" class="headerlink" title="3. 子代选择器"></a>3. 子代选择器</h4><ul>
+<li><p>HTML： 同后代选择器</p>
+</li>
+<li><p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &gt; <span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">  <span class="attribute">list-style</span>: none;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-兄弟选择器"><a href="#4-兄弟选择器" class="headerlink" title="4. 兄弟选择器"></a>4. 兄弟选择器</h4><ul>
+<li><p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h3</span>&gt;</span>唐诗三百首<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>疏影横斜水清浅 暗香浮动月黄昏<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>疏影横斜水清浅 暗香浮动月黄昏<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>落霞与孤乌齐飞 秋水共长天一色<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> + <span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">  <span class="attribute">padding-left</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-普通兄弟选择器"><a href="#5-普通兄弟选择器" class="headerlink" title="5. 普通兄弟选择器"></a>5. 普通兄弟选择器</h4><ul>
+<li>HTML</li>
+</ul>
+<p>同兄弟选择器</p>
+<ul>
+<li><p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> ～ <span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">  <span class="attribute">padding-left</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="6-交集选择器"><a href="#6-交集选择器" class="headerlink" title="6. 交集选择器"></a>6. 交集选择器</h4><ul>
+<li>HTML</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span>疏影横斜水清浅 暗香浮动月黄昏<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-class">.content</span> &#123;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">padding-left</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="3-CSS-为元素选择器"><a href="#3-CSS-为元素选择器" class="headerlink" title="3. CSS 为元素选择器"></a>3. CSS 为元素选择器</h3><h4 id="1-first-line-选择器"><a href="#1-first-line-选择器" class="headerlink" title="1. ::first-line 选择器"></a>1. ::first-line 选择器</h4><ul>
+<li><p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;one&quot;</span>&gt;</span></span><br><span class="line">  落霞与孤鹜齐飞 秋水共长天一色 渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  落霞与孤鹜齐飞 秋水共长天一色 渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  落霞与孤鹜齐飞 秋水共长天一色 渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>CSS</p>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:first-line</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-first-letter-选择器"><a href="#2-first-letter-选择器" class="headerlink" title="2. ::first-letter 选择器"></a>2. ::first-letter 选择器</h4><ul>
+<li>HTML</li>
+</ul>
+<p>同 first-line</p>
+<ul>
+<li><p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.one</span><span class="selector-pseudo">:first-letter</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">70px</span>;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-before-和-after-选择器"><a href="#3-before-和-after-选择器" class="headerlink" title="3. :before 和;after 选择器"></a>3. :before 和;after 选择器</h4><ul>
+<li><p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">200px</span> auto;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">left</span>: -<span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">border-top-left-radius</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">border-bottom-left-radius</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">right</span>: -<span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">border-top-right-radius</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">border-bottom-right-radius</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-CSS-计数器"><a href="#4-CSS-计数器" class="headerlink" title="4. CSS 计数器"></a>4. CSS 计数器</h4><ol>
+<li>设置计数器名称： counter-reset</li>
+</ol>
+<ul>
+<li><p>counter-reset: 重置</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">counter-reset</span>: section;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">counter-reset</span>: subsection;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*初始化默认设置为1，也可设置其它数值，例如： */</span></span><br><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">counter-reset</span>: subsection <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*如果想同时定义多个计数器，可以在声明中添加就行*/</span></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">counter-reset</span>: count othercount <span class="number">10</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="2">
+<li>设置计数器增量</li>
+</ol>
+<ul>
+<li><p>counter-increment 属性</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">counter-increment</span>: <span class="selector-tag">section</span> 2;</span><br><span class="line"><span class="comment">/*默认值为1*/</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="3">
+<li>设置:before 或者:after 的 content 属性</li>
+</ol>
+<ul>
+<li><p>content 属性</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">content: counter(section, lower-alpha) &#x27;.&#x27;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>HTML tutorials<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>HTML Tutorial<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>XHTML Tutorial<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>CSS Tutorial<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Scripting tutorials<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>JavaScript<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>VBScript<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>XML tutorials<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>XML<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>XSL<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">counter-reset</span>: section;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">counter-reset</span>: subsection;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">counter-increment</span>: section;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;Section &#x27;</span> <span class="built_in">counter</span>(section) <span class="string">&#x27;. &#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h2</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">counter-increment</span>: subsection;</span><br><span class="line">  <span class="attribute">content</span>: <span class="built_in">counter</span>(section) <span class="string">&#x27;.&#x27;</span> <span class="built_in">counter</span>(subsection) <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
+<h3 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h3><p>Email:<a href="mailto:&#x79;&#x75;&#x61;&#x6e;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#116;&#108;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#x75;&#x61;&#x6e;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#116;&#108;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%B8%89%E3%80%81CSS%E9%80%89%E6%8B%A9%E5%99%A8/3.1%20CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%B8%80/" data-id="ckimxdn2f00016hii1dq0blol" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/三、CSS选择器/3.2 CSS选择器二" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/CSS/Tags/%E4%B8%89%E3%80%81CSS%E9%80%89%E6%8B%A9%E5%99%A8/3.2%20CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%BA%8C/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%B8%89%E3%80%81CSS%E9%80%89%E6%8B%A9%E5%99%A8/3.2%20CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%BA%8C/">3.1 CSS选择器一</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-结构伪类选择器"><a href="#1-结构伪类选择器" class="headerlink" title="1. 结构伪类选择器"></a>1. 结构伪类选择器</h3><h4 id="1-根元素选择器"><a href="#1-根元素选择器" class="headerlink" title="1. 根元素选择器"></a>1. 根元素选择器</h4><ul>
+<li><p>根元素选择器： html</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">root</span> &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-子元素选择器"><a href="#2-子元素选择器" class="headerlink" title="2. 子元素选择器"></a>2. 子元素选择器</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:first-child</span> &#123;</span><br><span class="line">&#125; <span class="comment">/*选择元素的第一个子元素*/</span></span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:last-child</span> &#123;</span><br><span class="line">&#125; <span class="comment">/*选择元素的最后一个子元素*/</span></span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:only-child</span> &#123;</span><br><span class="line">&#125; <span class="comment">/*选择元素的唯一子元素*/</span></span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:only-of-type</span> &#123;</span><br><span class="line">&#125; <span class="comment">/*选择元素指定类型的唯一子元素*/</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-nth-child-选择器"><a href="#3-nth-child-选择器" class="headerlink" title="3. :nth-child 选择器"></a>3. :nth-child 选择器</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:nth-child(n)</span>       		 <span class="comment">/*选择父元素的第n个子元素*/</span></span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:nth-last-child(n)</span>        <span class="comment">/*选择父元素的倒数第n个子元素*/</span></span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:nth-of-type(n)</span> 			 <span class="comment">/*选择父元素定义类型的第n个子元素*/</span></span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:nth-last-of-type(n)</span>		 <span class="comment">/*选择父元素定义类型的第n个子元素*/</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-UI-伪类选择器"><a href="#2-UI-伪类选择器" class="headerlink" title="2. UI 伪类选择器"></a>2. UI 伪类选择器</h3><h4 id="1-选择启用或禁用元素"><a href="#1-选择启用或禁用元素" class="headerlink" title="1. 选择启用或禁用元素"></a>1. 选择启用或禁用元素</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:enabled</span> 				<span class="comment">/*选择启用状态的元素*/</span></span><br><span class="line"><span class="selector-pseudo">:disabled</span> 				<span class="comment">/*选择禁用状态的元素*/</span></span><br><span class="line"><span class="selector-pseudo">:checked</span>				<span class="comment">/**选择被选中的input元素*/</span></span><br><span class="line"><span class="selector-pseudo">:default</span>				<span class="comment">/*选择默认元素*/</span></span><br><span class="line"><span class="selector-pseudo">:valid</span>					<span class="comment">/*根据输入验证选择有效的input元素*/</span></span><br><span class="line"><span class="selector-pseudo">:invalid</span>				<span class="comment">/*根据输入验证选择无效的input元素*/</span></span><br><span class="line"><span class="selector-pseudo">:in-range</span>				<span class="comment">/*选择在指定范围之内的input元素*/</span></span><br><span class="line"><span class="selector-pseudo">:out-of-range</span>			<span class="comment">/*选择在指定范围之外的input元素*/</span></span><br><span class="line"><span class="selector-pseudo">:required</span>				<span class="comment">/*根据是否允许:required属性选择元素*/</span></span><br><span class="line"><span class="selector-pseudo">:optional</span>				<span class="comment">/*根据是否允许:required属性选择元素*/</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-选择已勾选的元素"><a href="#2-选择已勾选的元素" class="headerlink" title="2. 选择已勾选的元素"></a>2. 选择已勾选的元素</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:checked</span> ; <span class="comment">/**/</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-选择默认元素"><a href="#3-选择默认元素" class="headerlink" title="3. 选择默认元素"></a>3. 选择默认元素</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:default</span> ;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-选择有效和无效的-input-元素"><a href="#4-选择有效和无效的-input-元素" class="headerlink" title="4. 选择有效和无效的 input 元素"></a>4. 选择有效和无效的 input 元素</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:valid</span>: <span class="selector-tag">invalid</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-选择限定范围的-input-元素"><a href="#5-选择限定范围的-input-元素" class="headerlink" title="5. 选择限定范围的 input 元素"></a>5. 选择限定范围的 input 元素</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:in-range</span>: <span class="selector-tag">out-of-range</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="6-选择必需和可选的-input-元素"><a href="#6-选择必需和可选的-input-元素" class="headerlink" title="6. 选择必需和可选的 input 元素"></a>6. 选择必需和可选的 input 元素</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:required</span>: <span class="selector-tag">optional</span>; <span class="comment">/*匹配没有：required属性的input元素*/</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="3-动态伪类选择器"><a href="#3-动态伪类选择器" class="headerlink" title="3. 动态伪类选择器"></a>3. 动态伪类选择器</h3><h4 id="1-使用-link-和-visted-选择器"><a href="#1-使用-link-和-visted-选择器" class="headerlink" title="1. 使用:link 和:visted 选择器"></a>1. 使用:link 和:visted 选择器</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:link</span>: <span class="selector-tag">visited</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-使用-actived-选择器"><a href="#2-使用-actived-选择器" class="headerlink" title="2. 使用:actived 选择器"></a>2. 使用:actived 选择器</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:actived</span> &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-使用-focus-选择器"><a href="#3-使用-focus-选择器" class="headerlink" title="3. 使用:focus 选择器"></a>3. 使用:focus 选择器</h4><ul>
+<li>CSS 代码</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:focus</span> &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-使用-hover-选择器"><a href="#4-使用-hover-选择器" class="headerlink" title="4.使用:hover 选择器"></a>4.使用:hover 选择器</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="4-其他伪类选择器"><a href="#4-其他伪类选择器" class="headerlink" title="4. 其他伪类选择器"></a>4. 其他伪类选择器</h3><h4 id="1-使用否定选择器"><a href="#1-使用否定选择器" class="headerlink" title="1. 使用否定选择器"></a>1. 使用否定选择器</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:not(</span><span class="selector-attr">[href*=<span class="string">&#x27;apress&#x27;</span>]</span>) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-使用-empty-选择器"><a href="#2-使用-empty-选择器" class="headerlink" title="2. 使用:empty 选择器"></a>2. 使用:empty 选择器</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:empty</span> &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-使用-lang-选择器"><a href="#3-使用-lang-选择器" class="headerlink" title="3. 使用:lang 选择器"></a>3. 使用:lang 选择器</h4><ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:lang(</span>语言) ;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-使用-target-选择器"><a href="#4-使用-target-选择器" class="headerlink" title="4. 使用:target 选择器"></a>4. 使用:target 选择器</h4><p>选择器匹配 URL 片段标识符指向的元素</p>
+<ul>
+<li><p>CSS 代码</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span>: <span class="selector-tag">target</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5.参考文档"></a>5.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
+<h3 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h3><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#56;&#56;&#56;&#x38;&#64;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#x79;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#56;&#56;&#56;&#x38;&#64;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%B8%89%E3%80%81CSS%E9%80%89%E6%8B%A9%E5%99%A8/3.2%20CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%BA%8C/" data-id="ckimxdn2k00036hii8q872l7j" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Git/Local Repostories/1. Git 创建与管理本地仓库" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" class="article-date">
+  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">1. Git 创建与管理本地仓库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-创建本地仓库"><a href="#1-创建本地仓库" class="headerlink" title="1.创建本地仓库"></a>1.创建本地仓库</h4><ol>
+<li><p>创建工作区(Work Space)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir project &amp; <span class="built_in">cd</span> project</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化本地仓库()</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新建文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch index.html</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将项目添加到暂存区</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将暂存区项目提交至本地仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;&lt;message&gt;&quot;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="2-创建与管理分区"><a href="#2-创建与管理分区" class="headerlink" title="2.创建与管理分区"></a>2.创建与管理分区</h4><ol>
+<li><p>查询分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建分支： dev</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切换分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>合并分支：主分支合并 dev 分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge dev</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="3-参考文当"><a href="#3-参考文当" class="headerlink" title="3.参考文当"></a>3.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#111;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#111;&#x6d;">&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#111;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" data-id="ckil24r37001pr3iiebpm0y58" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Git/Local Repostories/4.Git command 操作命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/25/Git/Local%20Repostories/4.Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/4.Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/">4.Git Command 操作命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-初始化操作命令"><a href="#1-初始化操作命令" class="headerlink" title="1.初始化操作命令"></a>1.初始化操作命令</h4><ul>
+<li><p>初始化操作</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-查看资源操作命令"><a href="#2-查看资源操作命令" class="headerlink" title="2.查看资源操作命令"></a>2.查看资源操作命令</h4><ul>
+<li><p>查看资源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看隐藏资源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分屏查看资源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ll | less</span><br><span class="line">ls -l | less</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看 git 本地仓库的子目录和文件</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll .git/</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Git-设置签名"><a href="#3-Git-设置签名" class="headerlink" title="3. Git 设置签名"></a>3. Git 设置签名</h4><ul>
+<li>Git 设置系统签名</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name andy</span><br><span class="line">git config --global user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>Git 设置项目签名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name andy</span><br><span class="line">git config user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-Git-删除更改退回到修改前的状态"><a href="#4-Git-删除更改退回到修改前的状态" class="headerlink" title="4. Git 删除更改退回到修改前的状态"></a>4. Git 删除更改退回到修改前的状态</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-参考文当"><a href="#5-参考文当" class="headerlink" title="5.参考文当"></a>5.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#x38;&#x40;&#x6f;&#117;&#116;&#108;&#x6f;&#x6f;&#107;&#x2e;&#99;&#x6f;&#x6d;">&#121;&#x75;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#x38;&#x40;&#x6f;&#117;&#116;&#108;&#x6f;&#x6f;&#107;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/4.Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" data-id="ckil24r3c001sr3ii2v75hu4g" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Git/Local Repostories/5.Git日志与回退版本号" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/25/Git/Local%20Repostories/5.Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/" class="article-date">
@@ -881,542 +1716,6 @@
 
 
   
-    <article id="post-Node/Tutorial/一、Node教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Node/">Node</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/">一、Node教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="二、-NPM-包管理器教程"><a href="#二、-NPM-包管理器教程" class="headerlink" title="二、 NPM 包管理器教程"></a>二、 NPM 包管理器教程</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/">[二、NPM 包管理器]</a></p>
-<h4 id="三、Express教程"><a href="#三、Express教程" class="headerlink" title="三、Express教程"></a>三、Express教程</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h4 id="四、Koa教程"><a href="#四、Koa教程" class="headerlink" title="四、Koa教程"></a>四、Koa教程</h4><p><a href="">[四、Koa教程]</a></p>
-<h4 id="五、Nest教程"><a href="#五、Nest教程" class="headerlink" title="五、Nest教程"></a>五、Nest教程</h4><p><a href="">[五、Nest教程]</a></p>
-<h4 id="六、Node-Server教程"><a href="#六、Node-Server教程" class="headerlink" title="六、Node Server教程"></a>六、Node Server教程</h4><p><a href="">[六、Node Server教程]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p>Email：<a href="mailto:&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/" data-id="ckil24r52004hr3iifk9r0p79" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tutorial/三、Expess 教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Node/">Node</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">三、Expess 教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="3-1-Express创建项目目录"><a href="#3-1-Express创建项目目录" class="headerlink" title="3.1  Express创建项目目录"></a>3.1  Express创建项目目录</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.1%20%20Express%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95/">[3.1  Express创建项目目录]</a></p>
-<h4 id="3-2-Express创建服务器"><a href="#3-2-Express创建服务器" class="headerlink" title="3.2 Express创建服务器"></a>3.2 Express创建服务器</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.2%20Express%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/">[3.2 Express创建服务器]</a></p>
-<h4 id="3-3-Express构建模块化路由"><a href="#3-3-Express构建模块化路由" class="headerlink" title="3.3 Express构建模块化路由"></a>3.3 Express构建模块化路由</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.3%20Express%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E8%B7%AF%E7%94%B1/">[3.3 Express构建模块化路由]</a></p>
-<h4 id="3-4-Express配置静态资源"><a href="#3-4-Express配置静态资源" class="headerlink" title="3.4 Express配置静态资源"></a>3.4 Express配置静态资源</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.4%20%20Express%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/">[3.4 Express配置静态资源]</a></p>
-<h4 id="3-5-配置mongoose链接"><a href="#3-5-配置mongoose链接" class="headerlink" title="3.5 配置mongoose链接"></a>3.5 配置mongoose链接</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/">[3.5 配置mongoose链接]</a></p>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/">[一、Node教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#x61;&#x6e;&#109;&#105;&#110;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#46;&#99;&#x6f;&#109;">&#121;&#117;&#x61;&#x6e;&#109;&#105;&#110;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/" data-id="ckil24r54004jr3ii6ouo4ph0" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tutorial/二、NPM包管理教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Node/">Node</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/">二、NPM包管理教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="2-1-Express创建项目目录"><a href="#2-1-Express创建项目目录" class="headerlink" title="2.1  Express创建项目目录"></a>2.1  Express创建项目目录</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tags/Npm/2.1%20Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/">[2.1  Express创建项目目录]</a></p>
-<h4 id="2-2-Windows-安装与配置-Nvm"><a href="#2-2-Windows-安装与配置-Nvm" class="headerlink" title="2.2 Windows 安装与配置 Nvm"></a>2.2 Windows 安装与配置 Nvm</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tags/Npm/2.2%20%20Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/">[2.2 Windows 安装与配置 Nvm]</a></p>
-<h4 id="2-3-NPM-镜像源配置"><a href="#2-3-NPM-镜像源配置" class="headerlink" title="2.3 NPM 镜像源配置"></a>2.3 NPM 镜像源配置</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tags/Npm/2.3%20%20NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">[2.3 NPM 镜像源配置]</a></p>
-<h4 id="2-4-Noder-Serve-静态服务器的安装"><a href="#2-4-Noder-Serve-静态服务器的安装" class="headerlink" title="2.4 Noder Serve 静态服务器的安装"></a>2.4 Noder Serve 静态服务器的安装</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tags/Npm/2.4%20Noder%20%E9%9D%99%E6%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85/">[2.4 Noder Serve 静态服务器的安装]</a></p>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a href="%5B%5B%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B%5D%5D(https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/)">[一、Node教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#110;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#109;">&#x79;&#x75;&#97;&#110;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/" data-id="ckil24r55004nr3ii0eju0op5" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tutorial/六、Node Server教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Node/">Node</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">六、Node Server教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="6-1-Node的安装与环境变量配置"><a href="#6-1-Node的安装与环境变量配置" class="headerlink" title="6.1 Node的安装与环境变量配置"></a>6.1 Node的安装与环境变量配置</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.1%20Node%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/">[6.1 Node的安装与环境变量配置]</a></p>
-<h4 id="6-2-Node的模块化开发"><a href="#6-2-Node的模块化开发" class="headerlink" title="6.2 Node的模块化开发"></a>6.2 Node的模块化开发</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.2%20Node%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/">[6.2 Node的模块化开发]</a></p>
-<h4 id="6-3-Node服务器端基本概念"><a href="#6-3-Node服务器端基本概念" class="headerlink" title="6.3 Node服务器端基本概念"></a>6.3 Node服务器端基本概念</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.3%20Node%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">[6.3 Node服务器端基本概念]</a></p>
-<h4 id="6-4-Node创建Web服务器"><a href="#6-4-Node创建Web服务器" class="headerlink" title="6.4 Node创建Web服务器"></a>6.4 Node创建Web服务器</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.4%20Node%E5%88%9B%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8/">[6.4 Node创建Web服务器]</a></p>
-<h4 id="6-5-HTTP通信协议与响应处理"><a href="#6-5-HTTP通信协议与响应处理" class="headerlink" title="6.5 HTTP通信协议与响应处理"></a>6.5 HTTP通信协议与响应处理</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.5%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/">[6.5 HTTP通信协议与响应处理]</a></p>
-<h4 id="6-6-Node请求参数"><a href="#6-6-Node请求参数" class="headerlink" title="6.6 Node请求参数"></a>6.6 Node请求参数</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.6%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/">[6.6 Node请求参数]</a></p>
-<h4 id="6-7-Node路由设置"><a href="#6-7-Node路由设置" class="headerlink" title="6.7 Node路由设置"></a>6.7 Node路由设置</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.7%20Node%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/">[6.7 Node路由设置]</a></p>
-<h4 id="6-8Node静态资源"><a href="#6-8Node静态资源" class="headerlink" title="6.8Node静态资源"></a>6.8Node静态资源</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.8Node%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/">[6.8Node静态资源]</a></p>
-<h4 id="6-9-Node动态资源"><a href="#6-9-Node动态资源" class="headerlink" title="6.9 Node动态资源"></a>6.9 Node动态资源</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/">[6.9 Node动态资源]</a></p>
-<h4 id="6-10-Node回调函数"><a href="#6-10-Node回调函数" class="headerlink" title="6.10 Node回调函数"></a>6.10 Node回调函数</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.10%20Node%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/">[6.10 Node回调函数]</a></p>
-<h4 id="6-11-Node异步编程"><a href="#6-11-Node异步编程" class="headerlink" title="6.11 Node异步编程"></a>6.11 Node异步编程</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.11%20Node%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">[6.11 Node异步编程]</a></p>
-<h4 id="6-12-Node客户端请求途径"><a href="#6-12-Node客户端请求途径" class="headerlink" title="6.12 Node客户端请求途径"></a>6.12 Node客户端请求途径</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.12%20Node%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82%E9%80%94%E5%BE%84/">[6.12 Node客户端请求途径]</a></p>
-<h4 id="6-13-PM2进程管理器"><a href="#6-13-PM2进程管理器" class="headerlink" title="6.13 PM2进程管理器"></a>6.13 PM2进程管理器</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/">[6.13 PM2进程管理器]</a></p>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/">[一、Node教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#117;&#97;&#110;&#109;&#105;&#110;&#56;&#56;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#117;&#97;&#110;&#109;&#105;&#110;&#56;&#56;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/" data-id="ckil24r56004pr3ii5tzc6frh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Python/Tutorial/Python基础教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">Python基础教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" data-id="ckil24r5m0059r3iiggtp2bzl" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Vue/Tutorial/Vue教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Vue/">Vue</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/">Vue教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/" data-id="ckil24r6v007ar3ii1vyxgfag" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tags/Npm/2.1 Windows安装与配置Node" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Tags/Npm/2.1%20Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tags/Npm/2.1%20Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/">2.1 Windows安装与配置Node</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h4><ul>
-<li><p><a target="_blank" rel="noopener" href="http://nodejs.cn/download/">[Node 官网下载：]</a></p>
-</li>
-<li><p>下载 Windows 安装包 (.msi)</p>
-</li>
-</ul>
-<h4 id="2-安装目录"><a href="#2-安装目录" class="headerlink" title="2. 安装目录"></a>2. 安装目录</h4><ul>
-<li>D：/Applications/node</li>
-</ul>
-<h4 id="3-安装"><a href="#3-安装" class="headerlink" title="3. 安装"></a>3. 安装</h4><ul>
-<li>省略</li>
-</ul>
-<h4 id="4-配置环境变量"><a href="#4-配置环境变量" class="headerlink" title="4. 配置环境变量"></a>4. 配置环境变量</h4><ul>
-<li>环境配置主要是配置 npm 安装的全局模块所在的路径，以及缓存 cache 的路径；</li>
-</ul>
-<ol>
-<li>为什么要配置环境变量</li>
-</ol>
-<ul>
-<li>全局安装 Node 依赖包时，系统默认会将安装的模块置于<code>C:\Users\Adminstration\AppData\Roaming\npm</code>，从而占用 C 盘空间；</li>
-</ul>
-<ol start="2">
-<li>配置环境变量</li>
-</ol>
-<ul>
-<li><p>创建两个目录： <code>node_cache</code>, <code>node_global</code></p>
-</li>
-<li><p>其中<code>node_cache</code>为下载包时缓存目录</p>
-</li>
-<li><p><code>node_global</code>全局安装包就置于此；</p>
-</li>
-</ul>
-<ol>
-<li>npm 配置 config</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> prefix <span class="string">&quot;D:\Applications\node\node_global&quot;</span></span><br><span class="line">npm config <span class="built_in">set</span> cache :<span class="string">&quot;D:\Applications\node\node_cache&quot;</span></span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>配置环境变量</li>
-</ol>
-<ul>
-<li><p>配置用户环境变量:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\Applications\node\node_global</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置系统环境变量</p>
-</li>
-<li><p>新建 PATH：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%NODE_PATH%</span><br><span class="line">D:\Applications\node\node_global\node_modules</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install yarn -g</span><br><span class="line">yarn -v</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/">[二、NPM 包管理器]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;">&#x79;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tags/Npm/2.1%20Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" data-id="ckil24r9p00c6r3ii8serheex" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tags/Npm/2.2  Windows安装与配置Nvm" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Tags/Npm/2.2%20%20Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tags/Npm/2.2%20%20Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/">2.2 Windows安装与配置Nvm</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-卸载node"><a href="#1-卸载node" class="headerlink" title="1. 卸载node"></a>1. 卸载node</h4><ul>
-<li>将安装的node卸载；</li>
-</ul>
-<h4 id="2-下载"><a href="#2-下载" class="headerlink" title="2.下载"></a>2.下载</h4><p><a target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows/releases">[下载地址]</a></p>
-<ul>
-<li><p>下载版本： <code>nvm-noinstall.zip</code></p>
-</li>
-<li><p>解压</p>
-</li>
-</ul>
-<h4 id="3-安装"><a href="#3-安装" class="headerlink" title="3. 安装"></a>3. 安装</h4><ul>
-<li><p>安装目录： <code>F:/Application/Nvm/nvm</code></p>
-<p><img src="https://s1.ax1x.com/2020/10/15/0TAl59.png" alt="[安装目录]"></p>
-</li>
-<li><p>创建目录<code>node</code>存放Node依赖包: <code>F:/Application/Nvm/node</code></p>
-</li>
-<li><p>打开nvm目录，点击<code>install.exe</code>文件，生成settings.text文件</p>
-<p><img src="https://s1.ax1x.com/2020/10/15/0TAtKK.png" alt="[安装nvm]"></p>
-</li>
-<li><p>转贴安装目录和Node依赖包目录，如下图：</p>
-<p><img src="https://s1.ax1x.com/2020/10/15/0TERQx.png" alt="[配置文件]"></p>
-</li>
-</ul>
-<h4 id="4-配置NPM环境变量"><a href="#4-配置NPM环境变量" class="headerlink" title="4. 配置NPM环境变量"></a>4. 配置NPM环境变量</h4><ul>
-<li><p>npm 配置镜像源: settings文件配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node_mirror: https://npm.taobao.org/mirrors/node/</span><br><span class="line">npm_mirror: https://npm.taobao.org/mirrors/npm/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置图</p>
-<p><img src="https://s1.ax1x.com/2020/10/27/BMA8Rs.jpg" alt="[Nvm配置图]"></p>
-</li>
-</ul>
-<h4 id="5-使用"><a href="#5-使用" class="headerlink" title="5. 使用"></a>5. 使用</h4><ol>
-<li>安装不同版本 Node</li>
-</ol>
-<ul>
-<li><p>查看node版本号</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm list</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装指定版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install node &lt;version&gt;</span><br></pre></td></tr></table></figure></li>
-<li><p>查看安装node不同版本</p>
-<p><img src="https://s1.ax1x.com/2020/10/15/0TAVg0.png" alt="[使用]"></p>
-</li>
-<li><p>使用特定版本的node</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 12.0.0</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试node使用版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="6-参考文档"><a href="#6-参考文档" class="headerlink" title="6. 参考文档"></a>6. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/">[二、NPM 包管理器]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#x6d;">&#x79;&#117;&#97;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tags/Npm/2.2%20%20Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" data-id="ckil24r9q00c8r3ii0wmf0a5q" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tags/Npm/2.3  NPM镜像源配置" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Tags/Npm/2.3%20%20NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tags/Npm/2.3%20%20NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">2.3 NPM镜像源配置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-单次使用"><a href="#1-单次使用" class="headerlink" title="1. 单次使用"></a>1. 单次使用</h4><ul>
-<li><p>command line 配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-永久使用"><a href="#2-永久使用" class="headerlink" title="2. 永久使用"></a>2. 永久使用</h4><ol>
-<li><p>设置成全局下载镜像站点，每次安装软件默认从淘宝镜像下载：</p>
-</li>
-<li><p>方法一</p>
-</li>
-</ol>
-<ul>
-<li><p>打开.npmrc 文件： <code>nodejs\node_modules\npm\npmrc</code></p>
-</li>
-<li><p>没有的话可以使用 git 命令行新建：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .npmrc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>增加一行: <code>registry =https://registry.npm.taobao.org</code> 即可；</p>
-</li>
-</ul>
-<ol start="3">
-<li>方法二</li>
-</ol>
-<ul>
-<li><p>命令行设置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry    // 或</span><br><span class="line">npm info express    //输出：https://registry.npm.taobao.org/  ok</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/">[二、NPM 包管理器]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#56;&#56;&#x38;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#x79;&#117;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#56;&#56;&#x38;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tags/Npm/2.3%20%20NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/" data-id="ckil24r9r00car3ii2tcr2vt6" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -1442,7 +1741,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">31</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">40</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
     </div>
   </div>
 
@@ -1452,7 +1751,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">267</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">269</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 
