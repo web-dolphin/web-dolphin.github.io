@@ -67,112 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Node/Tags/Express/3.8 Express Register功能实现未完成" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/Node/Tags/Express/3.8%20Express%20Register%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E6%9C%AA%E5%AE%8C%E6%88%90/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/Node/Tags/Express/3.8%20Express%20Register%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E6%9C%AA%E5%AE%8C%E6%88%90/">3.8 Express Register功能实现</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-项目分析"><a href="#1-项目分析" class="headerlink" title="1.项目分析"></a>1.项目分析</h3><h4 id="1-创建集合文件"><a href="#1-创建集合文件" class="headerlink" title="1. 创建集合文件"></a>1. 创建集合文件</h4><ul>
-<li><p>路径: models</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Linux</span></span><br><span class="line">touch user.js</span><br><span class="line"><span class="comment"># windows</span></span><br><span class="line"><span class="built_in">cd</span> &gt; user.js</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-引入mongoose第三方插件"><a href="#2-引入mongoose第三方插件" class="headerlink" title="2. 引入mongoose第三方插件"></a>2. 引入mongoose第三方插件</h4><ul>
-<li><p>mongoose第三方插件</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mongose = <span class="built_in">require</span>(<span class="string">&quot;mongose&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-创建mongoose-Schema实例"><a href="#3-创建mongoose-Schema实例" class="headerlink" title="3. 创建mongoose.Schema实例"></a>3. 创建<code>mongoose.Schema</code>实例</h4><ul>
-<li><p>例如user instance </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userSchema = <span class="keyword">new</span> mongoose Schema(&#123;&#125;);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="4-设置集合规则"><a href="#4-设置集合规则" class="headerlink" title="4. 设置集合规则"></a>4. 设置集合规则</h4><ul>
-<li><p>例如user</p>
-</li>
-<li><p>user集合属性</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">  username: &#123;&#125;,</span><br><span class="line">  email: &#123;&#125;,</span><br><span class="line">  password: &#123;&#125;,</span><br><span class="line">  role: &#123;&#125;,</span><br><span class="line">  state: &#123;&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>username集合规则</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">   username: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    required: <span class="literal">true</span>,</span><br><span class="line">    minlength: <span class="number">2</span>,</span><br><span class="line">    maxlength: <span class="number">20</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>email集合规则</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">   email: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    unique: <span class="literal">true</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>password集合规则</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">  password: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    required: <span class="literal">true</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>role集合规则</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">  role: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    required: <span class="literal">true</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>state集合规则</p>
-</li>
-</ul>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">    type: <span class="built_in">Number</span>,</span><br><span class="line">    <span class="keyword">default</span>: <span class="number">0</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-创建集合"><a href="#5-创建集合" class="headerlink" title="5. 创建集合"></a>5. 创建集合</h4>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> User = mongoose.model(<span class="string">&quot;User&quot;</span>,userSchema);</span><br></pre></td></tr></table></figure>
-
-<h4 id="6-以对象导出集合"><a href="#6-以对象导出集合" class="headerlink" title="6. 以对象导出集合"></a>6. 以对象导出集合</h4>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123; User &#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-测试"><a href="#2-测试" class="headerlink" title="2. 测试"></a>2. 测试</h3>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">User.create(&#123;</span><br><span class="line">  username: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">  email: <span class="string">&quot;andy@gmail.com&quot;</span>,</span><br><span class="line">  password: <span class="string">&quot;123456&quot;</span>,</span><br><span class="line">  role: <span class="string">&quot;admin&quot;</span>,   <span class="comment">// or normal</span></span><br><span class="line">  state: <span class="number">0</span></span><br><span class="line">&#125;).then(<span class="function">() =&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;用户创建成功！&quot;</span>);</span><br><span class="line">&#125;).catch(<span class="function">() =&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;用户创建失败！&quot;</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-导入User"><a href="#3-导入User" class="headerlink" title="3. 导入User"></a>3. 导入User</h3><ul>
-<li><p>app.js</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; User &#125; = <span class="built_in">require</span>(<span class="string">&quot;./models/user&quot;</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>or route/admin.js</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; User &#125; = <span class="built_in">require</span>(<span class="string">&quot;../models/user&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="4-MongoDB-Compass"><a href="#4-MongoDB-Compass" class="headerlink" title="4. MongoDB Compass"></a>4. MongoDB Compass</h3><p><a target="_blank" rel="noopener" href="https://www.mongodb.com/try/download/compass">[MongoDB Compass图形工具]</a></p>
-<h3 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h3 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#97;&#110;&#109;&#x69;&#110;&#56;&#56;&#56;&#56;&#64;&#x6f;&#x75;&#116;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#109;">&#121;&#117;&#97;&#110;&#109;&#x69;&#110;&#56;&#56;&#56;&#56;&#64;&#x6f;&#x75;&#116;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#109;</a></p>
-<hr>
-<p>[<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/9075c15c2b88">node+passport+express进行登录认证 （part 1）</a>]</p>
-<hr>
-<p>[<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/dc9a3302b92a">JWT上手: Express+Passport</a>]</p>
-<blockquote>
-<p>[<a target="_blank" rel="noopener" href="https://www.cnblogs.com/wuwanyu/p/7008713.html">express搭建权限管理系统</a>]</p>
-<p>[<a target="_blank" rel="noopener" href="http://blog.fens.me/nodejs-express-passport/">Express结合Passport实现登陆认证</a>]</p>
-<p>[[<a target="_blank" rel="noopener" href="https://www.cnblogs.com/y-yxh/p/5859937.html">nodeJS—express4+passport实现用户注册登录验证</a>]]</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.8%20Express%20Register%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E6%9C%AA%E5%AE%8C%E6%88%90/" data-id="ckil24r9i00bsr3iigsqva918" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-Node/Tags/Express/3.9 Express Login功能实现" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/28/Node/Tags/Express/3.9%20Express%20Login%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0/" class="article-date">
@@ -1707,6 +1601,46 @@
     </div>
     <footer class="article-footer">
       <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.5%20ECMAScript%E8%BF%90%E7%AE%97%E7%AC%A6/" data-id="ckil24rap00e4r3iigjgx11yw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tutorial/2.6 ECMAScript语句" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.6%20ECMAScript%E8%AF%AD%E5%8F%A5/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.6%20ECMAScript%E8%AF%AD%E5%8F%A5/">2.6 ECMAScript语句</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.6%20ECMAScript%E8%AF%AD%E5%8F%A5/" data-id="ckil24raq00e6r3ii5mse9jm7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>

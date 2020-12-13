@@ -67,84 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-DataBase/MongoDB/Tags/1.1Windows安装MongoDB" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/DataBase/MongoDB/Tags/1.1Windows%E5%AE%89%E8%A3%85MongoDB/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/DataBase/MongoDB/Tags/1.1Windows%E5%AE%89%E8%A3%85MongoDB/">1.1 Windows安装MongoDB</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-下载"><a href="#1-下载" class="headerlink" title="1.下载"></a>1.下载</h4><ul>
-<li><a target="_blank" rel="noopener" href="https://www.mongodb.com/">[下载地址]</a></li>
-</ul>
-<h4 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h4><ul>
-<li>常规安装，在此省略；</li>
-</ul>
-<h4 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h4><p>3.1 创建 mongodb 数据库存放目录</p>
-<ul>
-<li><p>数据存放目录： D:\mongodb\data</p>
-</li>
-<li><p>创建配置文件： D:\mongodb\mongodb.config</p>
-</li>
-<li><p>mongodb.config 文件配置内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dbpath=D:\mongodb\data\db</span><br><span class="line">logpath=D:\mongodb\data\<span class="built_in">log</span>\mongodb.log</span><br></pre></td></tr></table></figure>
-
-<p>3.2 创建日志目录</p>
-</li>
-<li><p>创建日志目录： D:\mongodb\data\log</p>
-</li>
-<li><p>创建日志文件：D:\mongodb\data\log\mongodb.log</p>
-<p>3.3 开启服务器</p>
-</li>
-<li><p>方法一</p>
-<p>MongoDB 使用引擎 mmapv1 启动服务器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\Applications\MongoDB\bin&gt;mongod --dbpath D:\mongodb\data\db --storageEngine=mmapv1</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s1.ax1x.com/2020/07/19/U2zqiD.png" alt="[示意图]"></p>
-</li>
-<li><p>方法二</p>
-<p>管理员身份命令行输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --config E:\mongodb\mongodb.config  --install --serviceName <span class="string">&quot;MongoDB&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s1.ax1x.com/2020/07/19/U2zLJe.png" alt="[示意图]"></p>
-</li>
-<li><p>查看配置结果</p>
-</li>
-</ul>
-<p><code>windows</code> + <code>R</code>输入： services.msc 开启服务；</p>
-<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/DataBase/MongoDB/Tutorial/%E4%B8%80%E3%80%81MongoDB%E6%95%99%E7%A8%8B/">[一、MongoDB教程]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#111;&#109;">&#121;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.1Windows%E5%AE%89%E8%A3%85MongoDB/" data-id="ckil24r7t0096r3ii22yqgdtg" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-DataBase/MongoDB/Tags/1.3 .Mongoose建模与关联设置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/28/DataBase/MongoDB/Tags/1.3%20.Mongoose%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%85%B3%E8%81%94%E8%AE%BE%E7%BD%AE/" class="article-date">
@@ -2272,6 +2194,144 @@
     </div>
     <footer class="article-footer">
       <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.1%20HTML%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" data-id="ckil24r8o00agr3iicuodgcgm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.11  HTML 特殊字符" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.11%20%20HTML%20%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.11%20%20HTML%20%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/">2.11 HTML特殊字符</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>HTML 特殊字体： HTML 预留字符</p>
+</li>
+<li><p>在 HTML 中不能使用小于号（&lt;）和大于号（&gt;），这是因为浏览器会误认为它们是标签；</p>
+</li>
+<li><p>如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符特殊字体（character entities）</p>
+</li>
+<li><p>字符特殊字体类似这样：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="symbol">&amp;lt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- or --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="symbol">&amp;#60;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>表一： HTML 特殊字体</p>
+<table>
+<thead>
+<tr>
+<th align="center">字符</th>
+<th align="center">特殊字体名称</th>
+<th align="center">特殊字体编码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">‘ ‘</td>
+<td align="center"><code>&amp;nbsp</code></td>
+<td align="center"><code>&amp;#160</code></td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center"><code>&amp;lt</code></td>
+<td align="center"><code>&amp;#60</code></td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="center"><code>&amp;gt</code></td>
+<td align="center"><code>&amp;#62</code></td>
+</tr>
+<tr>
+<td align="center">&amp;</td>
+<td align="center"><code>&amp;amp</code></td>
+<td align="center"><code>&amp;#38</code></td>
+</tr>
+<tr>
+<td align="center">“</td>
+<td align="center"><code>&amp;quot</code></td>
+<td align="center"><code>&amp;#34</code></td>
+</tr>
+<tr>
+<td align="center">￠</td>
+<td align="center"><code>&amp;cent</code></td>
+<td align="center"><code>&amp;#162</code></td>
+</tr>
+<tr>
+<td align="center">‘</td>
+<td align="center"><code>&amp;apos</code></td>
+<td align="center"><code>&amp;#39</code></td>
+</tr>
+<tr>
+<td align="center">€</td>
+<td align="center"><code>&amp;euro</code></td>
+<td align="center"><code>&amp;#8364</code></td>
+</tr>
+<tr>
+<td align="center">£</td>
+<td align="center"><code>&amp;pound</code></td>
+<td align="center"><code>&amp;#163</code></td>
+</tr>
+<tr>
+<td align="center">¥</td>
+<td align="center"><code>&amp;yen</code></td>
+<td align="center"><code>&amp;#165</code></td>
+</tr>
+<tr>
+<td align="center">©</td>
+<td align="center"><code>&amp;copy</code></td>
+<td align="center"><code>&amp;#169</code></td>
+</tr>
+<tr>
+<td align="center">®</td>
+<td align="center"><code>&amp;reg</code></td>
+<td align="center"><code>&amp;#174</code></td>
+</tr>
+<tr>
+<td align="center">™</td>
+<td align="center"><code>&amp;trade</code></td>
+<td align="center"><code>&amp;#8482</code></td>
+</tr>
+<tr>
+<td align="center">×</td>
+<td align="center"><code>&amp;times</code></td>
+<td align="center"><code>&amp;#215</code></td>
+</tr>
+<tr>
+<td align="center">÷</td>
+<td align="center"><code>&amp;divide</code></td>
+<td align="center"><code>&amp;#247</code></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sunbocong/article/details/81032758">[html中显示特殊符号]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.11%20%20HTML%20%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/" data-id="ckil24r8p00air3iids2j9f5e" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
