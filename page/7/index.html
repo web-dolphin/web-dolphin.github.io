@@ -67,66 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-HTML/HTML Tags/二、HTML元素/2.14 HTML 表单[type=radio]属性的特性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.14%20HTML%20%E8%A1%A8%E5%8D%95%5Btype=radio%5D%E5%B1%9E%E6%80%A7%E7%9A%84%E7%89%B9%E6%80%A7/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.14%20HTML%20%E8%A1%A8%E5%8D%95%5Btype=radio%5D%E5%B1%9E%E6%80%A7%E7%9A%84%E7%89%B9%E6%80%A7/">2.14 HTML 表单Radio属性的特性</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-type-radio属性"><a href="#1-type-radio属性" class="headerlink" title="1. type=radio属性"></a>1. type=radio属性</h4><ul>
-<li><p>单选项</p>
-</li>
-<li><p>控制单选的属性： name</p>
-</li>
-<li><p>测试</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;slider&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>你会发现不能选取单选项</p>
-</li>
-<li><p>将name属性设置为相同属性值</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;slider&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>现在可以实现单选效果</p>
-</li>
-<li><p>如果用三个label分别控制三个input项，会发生什么？我们把代码修改一下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;slider&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-2&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-3&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;control-2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;control-3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>利用这个特性可以实现css轮播效果</p>
-</li>
-</ul>
-<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.9%20%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/">[2.9 表单元素]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email： <a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#109;">&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.14%20HTML%20%E8%A1%A8%E5%8D%95[type=radio]%E5%B1%9E%E6%80%A7%E7%9A%84%E7%89%B9%E6%80%A7/" data-id="ckil24r8q00akr3ii2532106q" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-HTML/HTML Tags/二、HTML元素/2.12 HTML元素属性" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.12%20HTML%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/" class="article-date">
@@ -175,7 +115,150 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.12%20HTML%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/" data-id="ckil24r8r00amr3iiezaw6m6d" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.12%20HTML%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7/" data-id="ckiqwwf8j00bbmsii96wm83fv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.13 HTML列表元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.13%20HTML%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.13%20HTML%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0/">2.13 HTML列表元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Ul无序列表元素"><a href="#1-Ul无序列表元素" class="headerlink" title="1. Ul无序列表元素"></a>1. Ul无序列表元素</h4><ul>
+<li><p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>君不见黄河之水天上来，奔流到海不复回。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>君不见高堂明镜悲白发，朝如青丝暮成雪。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>css修改默认样式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123; <span class="attribute">list-style</span>: none; &#125;</span><br><span class="line"><span class="selector-tag">li</span> &#123; <span class="attribute">list-style</span>: none; &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参考文档</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/html-element/blob/main/12-block_elements/demo/14.0-ul_element.html">[14.0-ul_element.html]</a></p>
+<h4 id="2-Ol有序列表元素"><a href="#2-Ol有序列表元素" class="headerlink" title="2. Ol有序列表元素"></a>2. Ol有序列表元素</h4><ul>
+<li><p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-CN&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of ol element with Vue<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;imgs/favicon.ico&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/index_ol.css&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span> <span class="attr">start</span>=<span class="string">&quot;5&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet1&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet2&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet3&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet4&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>&#123;&#123;about&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span> <span class="attr">reversed</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet1&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet2&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet3&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet4&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>&#123;&#123;about&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span> <span class="attr">type</span>=<span class="string">&quot;I&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet1&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet2&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet3&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet4&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>&#123;&#123;about&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">      el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line"><span class="javascript">        title: <span class="string">&quot;唐诗名句选&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet1: <span class="string">&quot;独坐幽篁里 弹琴复长啸 深林人不知 明月来相照&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet2: <span class="string">&quot;君不见黄河之水天上来 奔流到海不复回&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet3: <span class="string">&quot;君不见高堂明镜悲白发 朝如青丝暮成雪&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet4: <span class="string">&quot;秦时明月汉时关 万里长征人未还&quot;</span>,</span></span><br><span class="line"><span class="javascript">        img: <span class="string">&quot;imgs/photo1.jpg&quot;</span>,</span></span><br><span class="line"><span class="javascript">        link: <span class="string">&quot;https://www.shicimingju.com/shicimark/tangshisanbaishou.html&quot;</span>,</span></span><br><span class="line"><span class="javascript">        about: <span class="string">&quot;唐诗三百首&quot;</span></span></span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参考文档</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/html-element/blob/main/12-block_elements/demo/7.0-ol_element.html">[7.0-ol_element.html]</a></p>
+<ul>
+<li><p>css设置列表标记类型</p>
+</li>
+<li><p>list-style-type: none、box/check/circle/diamond/disc/dash/square/decimal 、decimal、binary、lower-alpha、upper-alpha</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Attribute<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">&quot;http://titan/listings/&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">ol</span> &#123;<span class="attribute">list-style-type</span>: lower-alpha&#125;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>I like apples and oranges<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h5</span>&gt;</span>I also like<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>bananas<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>mangoes<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span> <span class="attr">style</span>=<span class="string">&quot;list-style-type: decimal&quot;</span>&gt;</span>cherries<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>plums<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>peaches<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>grapes<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-Dl自定义列表"><a href="#3-Dl自定义列表" class="headerlink" title="3. Dl自定义列表"></a>3. Dl自定义列表</h4><ul>
+<li><p>HTML文档</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-CN&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of div element with Vue<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;imgs/favicon.ico&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/index_dl.css&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">dl</span> <span class="attr">class</span>=<span class="string">&quot;dl&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span>&#123;&#123;title1&#125;&#125;<span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dd</span>&gt;</span>&#123;&#123;content1&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">dl</span> <span class="attr">class</span>=<span class="string">&quot;dl&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span>&#123;&#123;title2&#125;&#125;<span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dd</span>&gt;</span>&#123;&#123;content2&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">dl</span> <span class="attr">class</span>=<span class="string">&quot;dl&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span>&#123;&#123;title3&#125;&#125;<span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dd</span>&gt;</span>&#123;&#123;content3&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>竹里馆<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">      el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line"><span class="javascript">        title: <span class="string">&quot;唐诗名句选&quot;</span>,</span></span><br><span class="line"><span class="javascript">        title1: <span class="string">&quot;滕王阁序&quot;</span>,</span></span><br><span class="line"><span class="javascript">        content1: <span class="string">&quot;渔舟晚唱 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&quot;</span>,</span></span><br><span class="line"><span class="javascript">        title2: <span class="string">&quot;春晓&quot;</span>,</span></span><br><span class="line"><span class="javascript">        content2: <span class="string">&quot;春眠不觉晓 处处闻啼鸟 夜来风雨声 花落知多少&quot;</span>,</span></span><br><span class="line"><span class="javascript">        title3: <span class="string">&quot;竹馆里&quot;</span>,</span></span><br><span class="line"><span class="javascript">        content3: <span class="string">&quot;独坐幽篁里 弹琴复长啸 深林人不知 明月来相照&quot;</span>,</span></span><br><span class="line"><span class="javascript">        img: <span class="string">&quot;imgs/photo1.jpg&quot;</span>,</span></span><br><span class="line"><span class="javascript">        link: <span class="string">&quot;https://www.shicimingju.com/shicimark/tangshisanbaishou.html&quot;</span>,</span></span><br><span class="line"><span class="javascript">        about: <span class="string">&quot;唐诗三百首&quot;</span>&#125;,</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参考文档</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/html-element/blob/main/12-block_elements/demo/5.0-dl_serial_element.html">[5.0-dl_serial_element.html]</a></p>
+<h4 id="4-列表相关CSS属性"><a href="#4-列表相关CSS属性" class="headerlink" title="4. 列表相关CSS属性"></a>4. 列表相关CSS属性</h4><ul>
+<li><p>使用图像作为列表标记</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123;<span class="attribute">list-style-image</span>: <span class="built_in">url</span>(<span class="string">&#x27;banana.jpg&#x27;</span>)&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置列表标记的位置</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123;  <span class="attribute">list-style-position</span>: inside/outside; &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4></li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email： <a href="mailto:&#x79;&#117;&#97;&#110;&#109;&#x69;&#x6e;&#x38;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#111;&#x6d;">&#x79;&#117;&#97;&#110;&#109;&#x69;&#x6e;&#x38;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.13%20HTML%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0/" data-id="ckiqwwf8k00bdmsii3nyx1e4r" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.14 HTML 表单[type=radio]属性的特性" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.14%20HTML%20%E8%A1%A8%E5%8D%95%5Btype=radio%5D%E5%B1%9E%E6%80%A7%E7%9A%84%E7%89%B9%E6%80%A7/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.14%20HTML%20%E8%A1%A8%E5%8D%95%5Btype=radio%5D%E5%B1%9E%E6%80%A7%E7%9A%84%E7%89%B9%E6%80%A7/">2.14 HTML 表单Radio属性的特性</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-type-radio属性"><a href="#1-type-radio属性" class="headerlink" title="1. type=radio属性"></a>1. type=radio属性</h4><ul>
+<li><p>单选项</p>
+</li>
+<li><p>控制单选的属性： name</p>
+</li>
+<li><p>测试</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;slider&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>你会发现不能选取单选项</p>
+</li>
+<li><p>将name属性设置为相同属性值</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;slider&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>现在可以实现单选效果</p>
+</li>
+<li><p>如果用三个label分别控制三个input项，会发生什么？我们把代码修改一下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;slider&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-2&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;control-3&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;control-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;control-2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;control-3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>利用这个特性可以实现css轮播效果</p>
+</li>
+</ul>
+<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.9%20%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/">[2.9 表单元素]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email： <a href="mailto:&#x79;&#117;&#x61;&#x6e;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#x38;&#64;&#x6f;&#x75;&#116;&#x6c;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#x6d;">&#x79;&#117;&#x61;&#x6e;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#x38;&#64;&#x6f;&#x75;&#116;&#x6c;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.14%20HTML%20%E8%A1%A8%E5%8D%95[type=radio]%E5%B1%9E%E6%80%A7%E7%9A%84%E7%89%B9%E6%80%A7/" data-id="ckiqwwf8k00bfmsii7qnfex5c" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -215,7 +298,47 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.2%20HTML%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/" data-id="ckil24r8s00aor3ii0uiua6vn" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.2%20HTML%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/" data-id="ckiqwwf8l00bhmsii2kx9cyoq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.3 HTML行内块级元素" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.3%20HTML%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.3%20HTML%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/">2.3 HTML行内块级元素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.3%20HTML%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" data-id="ckiqwwf8m00bjmsii76rjc2vc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -411,95 +534,12 @@
 </li>
 </ul>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#121;&#x75;&#97;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x75;&#97;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#x79;&#117;&#97;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#117;&#97;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.4%20%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3/" data-id="ckil24r8t00aqr3ii7cdib3zo" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML/HTML Tags/二、HTML元素/2.13 HTML列表元素" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.13%20HTML%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.13%20HTML%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0/">2.13 HTML列表元素</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Ul无序列表元素"><a href="#1-Ul无序列表元素" class="headerlink" title="1. Ul无序列表元素"></a>1. Ul无序列表元素</h4><ul>
-<li><p>HTML</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span>君不见黄河之水天上来，奔流到海不复回。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>君不见高堂明镜悲白发，朝如青丝暮成雪。<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>css修改默认样式</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123; <span class="attribute">list-style</span>: none; &#125;</span><br><span class="line"><span class="selector-tag">li</span> &#123; <span class="attribute">list-style</span>: none; &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>参考文档</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/html-element/blob/main/12-block_elements/demo/14.0-ul_element.html">[14.0-ul_element.html]</a></p>
-<h4 id="2-Ol有序列表元素"><a href="#2-Ol有序列表元素" class="headerlink" title="2. Ol有序列表元素"></a>2. Ol有序列表元素</h4><ul>
-<li><p>HTML</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-CN&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of ol element with Vue<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;imgs/favicon.ico&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/index_ol.css&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span> <span class="attr">start</span>=<span class="string">&quot;5&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet1&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet2&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet3&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet4&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>&#123;&#123;about&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span> <span class="attr">reversed</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet1&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet2&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet3&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet4&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>&#123;&#123;about&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span> <span class="attr">type</span>=<span class="string">&quot;I&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet1&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet2&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet3&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123;poet4&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>&#123;&#123;about&#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">      el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line"><span class="javascript">        title: <span class="string">&quot;唐诗名句选&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet1: <span class="string">&quot;独坐幽篁里 弹琴复长啸 深林人不知 明月来相照&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet2: <span class="string">&quot;君不见黄河之水天上来 奔流到海不复回&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet3: <span class="string">&quot;君不见高堂明镜悲白发 朝如青丝暮成雪&quot;</span>,</span></span><br><span class="line"><span class="javascript">        poet4: <span class="string">&quot;秦时明月汉时关 万里长征人未还&quot;</span>,</span></span><br><span class="line"><span class="javascript">        img: <span class="string">&quot;imgs/photo1.jpg&quot;</span>,</span></span><br><span class="line"><span class="javascript">        link: <span class="string">&quot;https://www.shicimingju.com/shicimark/tangshisanbaishou.html&quot;</span>,</span></span><br><span class="line"><span class="javascript">        about: <span class="string">&quot;唐诗三百首&quot;</span></span></span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>参考文档</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/html-element/blob/main/12-block_elements/demo/7.0-ol_element.html">[7.0-ol_element.html]</a></p>
-<ul>
-<li><p>css设置列表标记类型</p>
-</li>
-<li><p>list-style-type: none、box/check/circle/diamond/disc/dash/square/decimal 、decimal、binary、lower-alpha、upper-alpha</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Attribute<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">&quot;http://titan/listings/&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">ol</span> &#123;<span class="attribute">list-style-type</span>: lower-alpha&#125;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>I like apples and oranges<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h5</span>&gt;</span>I also like<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>bananas<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>mangoes<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span> <span class="attr">style</span>=<span class="string">&quot;list-style-type: decimal&quot;</span>&gt;</span>cherries<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>plums<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>peaches<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>grapes<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-Dl自定义列表"><a href="#3-Dl自定义列表" class="headerlink" title="3. Dl自定义列表"></a>3. Dl自定义列表</h4><ul>
-<li><p>HTML文档</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-CN&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo of div element with Vue<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;imgs/favicon.ico&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/index_dl.css&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;poet&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;img&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;#&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">dl</span> <span class="attr">class</span>=<span class="string">&quot;dl&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span>&#123;&#123;title1&#125;&#125;<span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dd</span>&gt;</span>&#123;&#123;content1&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">dl</span> <span class="attr">class</span>=<span class="string">&quot;dl&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span>&#123;&#123;title2&#125;&#125;<span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dd</span>&gt;</span>&#123;&#123;content2&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">dl</span> <span class="attr">class</span>=<span class="string">&quot;dl&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">h4</span>&gt;</span>&#123;&#123;title3&#125;&#125;<span class="tag">&lt;/<span class="name">h4</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dd</span>&gt;</span>&#123;&#123;content3&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>友情链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">&quot;link&quot;</span>&gt;</span>竹里馆<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">      el: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line"><span class="javascript">        title: <span class="string">&quot;唐诗名句选&quot;</span>,</span></span><br><span class="line"><span class="javascript">        title1: <span class="string">&quot;滕王阁序&quot;</span>,</span></span><br><span class="line"><span class="javascript">        content1: <span class="string">&quot;渔舟晚唱 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&quot;</span>,</span></span><br><span class="line"><span class="javascript">        title2: <span class="string">&quot;春晓&quot;</span>,</span></span><br><span class="line"><span class="javascript">        content2: <span class="string">&quot;春眠不觉晓 处处闻啼鸟 夜来风雨声 花落知多少&quot;</span>,</span></span><br><span class="line"><span class="javascript">        title3: <span class="string">&quot;竹馆里&quot;</span>,</span></span><br><span class="line"><span class="javascript">        content3: <span class="string">&quot;独坐幽篁里 弹琴复长啸 深林人不知 明月来相照&quot;</span>,</span></span><br><span class="line"><span class="javascript">        img: <span class="string">&quot;imgs/photo1.jpg&quot;</span>,</span></span><br><span class="line"><span class="javascript">        link: <span class="string">&quot;https://www.shicimingju.com/shicimark/tangshisanbaishou.html&quot;</span>,</span></span><br><span class="line"><span class="javascript">        about: <span class="string">&quot;唐诗三百首&quot;</span>&#125;,</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>参考文档</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/html-element/blob/main/12-block_elements/demo/5.0-dl_serial_element.html">[5.0-dl_serial_element.html]</a></p>
-<h4 id="4-列表相关CSS属性"><a href="#4-列表相关CSS属性" class="headerlink" title="4. 列表相关CSS属性"></a>4. 列表相关CSS属性</h4><ul>
-<li><p>使用图像作为列表标记</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123;<span class="attribute">list-style-image</span>: <span class="built_in">url</span>(<span class="string">&#x27;banana.jpg&#x27;</span>)&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置列表标记的位置</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &#123;  <span class="attribute">list-style-position</span>: inside/outside; &#125;</span><br></pre></td></tr></table></figure>
-<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4></li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email： <a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.13%20HTML%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0/" data-id="ckil24r8u00asr3iifnsv8uko" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.4%20%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3/" data-id="ckiqwwf8n00blmsii6bjiasm7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -539,47 +579,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.5%20%E6%A0%87%E8%AE%B0%E6%96%87%E5%AD%97/" data-id="ckil24r8v00aur3iiej5v7b4u" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML/HTML Tags/二、HTML元素/2.7  文档分节" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.7%20%20%E6%96%87%E6%A1%A3%E5%88%86%E8%8A%82/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.7%20%20%E6%96%87%E6%A1%A3%E5%88%86%E8%8A%82/">2.7 HTML文档分节</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.7%20%20%E6%96%87%E6%A1%A3%E5%88%86%E8%8A%82/" data-id="ckil24r8v00awr3iieq1l570a" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.5%20%E6%A0%87%E8%AE%B0%E6%96%87%E5%AD%97/" data-id="ckiqwwf8o00bnmsii6p3m1qtz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -619,7 +619,47 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.6%20HTML%E7%BB%84%E7%BB%87%E5%86%85%E5%AE%B9/" data-id="ckil24r8w00ayr3ii905b0j4x" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.6%20HTML%E7%BB%84%E7%BB%87%E5%86%85%E5%AE%B9/" data-id="ckiqwwf8o00bpmsii8e0p3hdr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML/HTML Tags/二、HTML元素/2.7  文档分节" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.7%20%20%E6%96%87%E6%A1%A3%E5%88%86%E8%8A%82/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.7%20%20%E6%96%87%E6%A1%A3%E5%88%86%E8%8A%82/">2.7 HTML文档分节</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.7%20%20%E6%96%87%E6%A1%A3%E5%88%86%E8%8A%82/" data-id="ckiqwwf8p00brmsii153lg7bu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -767,12 +807,12 @@
 </li>
 </ul>
 <h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4. 参考文档"></a>4. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5.联系方式"></a>5.联系方式</h4><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#110;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x75;&#x61;&#110;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5.联系方式"></a>5.联系方式</h4><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#110;&#109;&#105;&#x6e;&#x38;&#56;&#56;&#x38;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#111;&#109;">&#x79;&#x75;&#97;&#110;&#109;&#105;&#x6e;&#x38;&#56;&#56;&#x38;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.8%20%E8%A1%A8%E6%A0%BC%E5%85%83%E7%B4%A0/" data-id="ckil24r8x00b0r3ii9p202qxx" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.8%20%E8%A1%A8%E6%A0%BC%E5%85%83%E7%B4%A0/" data-id="ckiqwwf8q00btmsii7fnghcei" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -920,10 +960,67 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.9%20%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/" data-id="ckil24r8y00b2r3ii6q394yi8" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.9%20%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/" data-id="ckiqwwf8r00bvmsii472v4lxa" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/一、JavaScript简介/2.JavaScript实现" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/">1.2 JavaScript 实现</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-JavaScript-宿主环境"><a href="#1-JavaScript-宿主环境" class="headerlink" title="1.JavaScript 宿主环境"></a>1.JavaScript 宿主环境</h3><h3 id="2-JavaScript-组成"><a href="#2-JavaScript-组成" class="headerlink" title="2. JavaScript 组成"></a>2. JavaScript 组成</h3><ul>
+<li><p>ECMAScript</p>
+</li>
+<li><p>DOM：</p>
+</li>
+</ul>
+<p>DOM 经过扩展用于 HTML 的应用程序编程接口(API: Application Programming Interface),DOM 把整个页面映射为一个多层节点结构</p>
+<ul>
+<li>BOM</li>
+</ul>
+<h4 id="2-1ECMAScript"><a href="#2-1ECMAScript" class="headerlink" title="2.1ECMAScript"></a>2.1ECMAScript</h4><p><a href="">[2.1ECMAScript]</a></p>
+<h4 id="2-2DOM"><a href="#2-2DOM" class="headerlink" title="2.2DOM"></a>2.2DOM</h4><p><a href="">[2.2DOM]</a></p>
+<h4 id="2-3BOM"><a href="#2-3BOM" class="headerlink" title="2.3BOM"></a>2.3BOM</h4><p><a href="">[2.3BOM]</a></p>
+<h3 id="3-Node"><a href="#3-Node" class="headerlink" title="3.Node"></a>3.Node</h3><h4 id="3-1-Node-基础"><a href="#3-1-Node-基础" class="headerlink" title="3.1 Node 基础"></a>3.1 Node 基础</h4><p><a href="">[3.1 Node 基础]</a></p>
+<h4 id="3-2-Express-框架"><a href="#3-2-Express-框架" class="headerlink" title="3.2 Express 框架"></a>3.2 Express 框架</h4><p><a href="">[3.2 Express 框架]</a></p>
+<h4 id="3-3-Koa-框架"><a href="#3-3-Koa-框架" class="headerlink" title="3.3 Koa 框架"></a>3.3 Koa 框架</h4><p><a href="">[3.3 Koa 框架]</a></p>
+<h4 id="3-4-Nest-框架"><a href="#3-4-Nest-框架" class="headerlink" title="3.4 Nest 框架"></a>3.4 Nest 框架</h4><p><a href="">[3.4 Nest 框架]</a></p>
+<h3 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4. 参考文档"></a>4. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[JavaScript 简介]</a></p>
+<h3 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/" data-id="ckiqwwf8s00bxmsiib0wt30pl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
 
     </footer>
   </div>
@@ -986,104 +1083,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/1.JavaScript%E7%AE%80%E5%8F%B2/" data-id="ckil24r9200b4r3ii1bv03k5e" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML/HTML Tags/二、HTML元素/2.3 HTML行内块级元素" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.3%20HTML%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.3%20HTML%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/">2.3 HTML行内块级元素</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/HTML/Tutorial/%E4%BA%8C%E3%80%81HTML%20%E5%85%83%E7%B4%A0/">[二、HTML 元素]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.3%20HTML%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/" data-id="ckil24r9300b6r3iihfts7b85" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/一、JavaScript简介/2.JavaScript实现" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/">1.2 JavaScript 实现</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-JavaScript-宿主环境"><a href="#1-JavaScript-宿主环境" class="headerlink" title="1.JavaScript 宿主环境"></a>1.JavaScript 宿主环境</h3><h3 id="2-JavaScript-组成"><a href="#2-JavaScript-组成" class="headerlink" title="2. JavaScript 组成"></a>2. JavaScript 组成</h3><ul>
-<li><p>ECMAScript</p>
-</li>
-<li><p>DOM：</p>
-</li>
-</ul>
-<p>DOM 经过扩展用于 HTML 的应用程序编程接口(API: Application Programming Interface),DOM 把整个页面映射为一个多层节点结构</p>
-<ul>
-<li>BOM</li>
-</ul>
-<h4 id="2-1ECMAScript"><a href="#2-1ECMAScript" class="headerlink" title="2.1ECMAScript"></a>2.1ECMAScript</h4><p><a href="">[2.1ECMAScript]</a></p>
-<h4 id="2-2DOM"><a href="#2-2DOM" class="headerlink" title="2.2DOM"></a>2.2DOM</h4><p><a href="">[2.2DOM]</a></p>
-<h4 id="2-3BOM"><a href="#2-3BOM" class="headerlink" title="2.3BOM"></a>2.3BOM</h4><p><a href="">[2.3BOM]</a></p>
-<h3 id="3-Node"><a href="#3-Node" class="headerlink" title="3.Node"></a>3.Node</h3><h4 id="3-1-Node-基础"><a href="#3-1-Node-基础" class="headerlink" title="3.1 Node 基础"></a>3.1 Node 基础</h4><p><a href="">[3.1 Node 基础]</a></p>
-<h4 id="3-2-Express-框架"><a href="#3-2-Express-框架" class="headerlink" title="3.2 Express 框架"></a>3.2 Express 框架</h4><p><a href="">[3.2 Express 框架]</a></p>
-<h4 id="3-3-Koa-框架"><a href="#3-3-Koa-框架" class="headerlink" title="3.3 Koa 框架"></a>3.3 Koa 框架</h4><p><a href="">[3.3 Koa 框架]</a></p>
-<h4 id="3-4-Nest-框架"><a href="#3-4-Nest-框架" class="headerlink" title="3.4 Nest 框架"></a>3.4 Nest 框架</h4><p><a href="">[3.4 Nest 框架]</a></p>
-<h3 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4. 参考文档"></a>4. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[JavaScript 简介]</a></p>
-<h3 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/" data-id="ckil24r9500b9r3iiaj2o4fwt" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/1.JavaScript%E7%AE%80%E5%8F%B2/" data-id="ckiqwwf8t00bzmsii89li51om" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -1172,12 +1172,12 @@
 </li>
 </ul>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email：<a href="mailto:&#121;&#117;&#97;&#110;&#x6d;&#x69;&#x6e;&#56;&#56;&#56;&#x38;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#x2e;&#99;&#111;&#109;">&#121;&#117;&#97;&#110;&#x6d;&#x69;&#x6e;&#56;&#56;&#56;&#x38;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#x2e;&#99;&#111;&#109;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email：<a href="mailto:&#x79;&#x75;&#x61;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#x6d;">&#x79;&#x75;&#x61;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.1%20%20Express%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95/" data-id="ckil24r9600bbr3ii62z7det9" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.1%20%20Express%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95/" data-id="ckiqwwf8v00c2msiihblfg7qb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -1230,12 +1230,12 @@
 </li>
 </ul>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#97;&#110;&#109;&#105;&#110;&#x38;&#x38;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#x6d;">&#121;&#117;&#97;&#110;&#109;&#105;&#110;&#x38;&#x38;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#x6d;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#97;&#x6e;&#109;&#x69;&#x6e;&#x38;&#56;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#111;&#111;&#x6b;&#46;&#99;&#111;&#x6d;">&#121;&#117;&#97;&#x6e;&#109;&#x69;&#x6e;&#x38;&#56;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#111;&#111;&#x6b;&#46;&#99;&#111;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.2%20Express%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="ckil24r9700bdr3iiabgndoex" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.2%20Express%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="ckiqwwf8w00c4msiianjbdqyg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -1319,12 +1319,12 @@
 </li>
 </ul>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#x6f;&#107;&#x2e;&#99;&#x6f;&#109;">&#121;&#x75;&#97;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#x6f;&#107;&#x2e;&#99;&#x6f;&#109;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#111;&#x6d;">&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#111;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.3%20Express%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E8%B7%AF%E7%94%B1/" data-id="ckil24r9900bgr3iid1g30dau" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.3%20Express%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E8%B7%AF%E7%94%B1/" data-id="ckiqwwf8x00c6msii6hbxg20b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -1383,12 +1383,12 @@
 </li>
 </ul>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#x38;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#109;">&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#x38;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#109;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#x75;&#97;&#x6e;&#x6d;&#x69;&#110;&#56;&#56;&#x38;&#56;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#121;&#x75;&#97;&#x6e;&#x6d;&#x69;&#110;&#56;&#56;&#x38;&#56;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.4%20%20Express%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/" data-id="ckil24r9b00bir3iiekkj2dfm" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.4%20%20Express%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/" data-id="ckiqwwf8y00c9msii8hiz01ke" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -1438,12 +1438,12 @@
 </li>
 </ul>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#99;&#111;&#x6d;">&#x79;&#x75;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#99;&#111;&#x6d;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#109;&#x69;&#x6e;&#x38;&#56;&#56;&#x38;&#64;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;">&#121;&#x75;&#x61;&#x6e;&#109;&#x69;&#x6e;&#x38;&#56;&#56;&#x38;&#64;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/" data-id="ckil24r9d00blr3iiakwqe6ui" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/" data-id="ckiqwwf8z00camsii5wvc83ry" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -1550,12 +1550,12 @@
 </li>
 </ul>
 <h3 id="4-express-hbs模板引擎"><a href="#4-express-hbs模板引擎" class="headerlink" title="4. express-hbs模板引擎"></a>4. express-hbs模板引擎</h3><h3 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h3 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#117;&#97;&#x6e;&#x6d;&#105;&#x6e;&#56;&#56;&#56;&#56;&#64;&#111;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#109;">&#x79;&#117;&#97;&#x6e;&#x6d;&#105;&#x6e;&#56;&#56;&#56;&#56;&#64;&#111;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#109;</a></p>
+<h3 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;">&#121;&#117;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.6%20Express%E6%A8%A1%E6%9D%BF%E6%96%87%E4%BB%B6/" data-id="ckil24r9e00bnr3iibkoceuwe" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.6%20Express%E6%A8%A1%E6%9D%BF%E6%96%87%E4%BB%B6/" data-id="ckiqwwf9000cdmsiicgk4f969" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -1647,12 +1647,12 @@
 </ul>
 <h3 id="4-MongoDB-Compass"><a href="#4-MongoDB-Compass" class="headerlink" title="4. MongoDB Compass"></a>4. MongoDB Compass</h3><p><a target="_blank" rel="noopener" href="https://www.mongodb.com/try/download/compass">[MongoDB Compass图形工具]</a></p>
 <h3 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h3 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#56;&#56;&#56;&#x40;&#x6f;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#46;&#99;&#x6f;&#109;">&#x79;&#x75;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#56;&#56;&#56;&#x40;&#x6f;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#46;&#99;&#x6f;&#109;</a></p>
+<h3 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#64;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#109;">&#x79;&#x75;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#64;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.7%20%E5%88%9B%E5%BB%BA%E9%9B%86%E5%90%88/" data-id="ckil24r9h00bqr3iid01p8t4e" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.7%20%E5%88%9B%E5%BB%BA%E9%9B%86%E5%90%88/" data-id="ckiqwwf9100cemsiib58lgpwg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -1744,7 +1744,7 @@
 </ul>
 <h3 id="4-MongoDB-Compass"><a href="#4-MongoDB-Compass" class="headerlink" title="4. MongoDB Compass"></a>4. MongoDB Compass</h3><p><a target="_blank" rel="noopener" href="https://www.mongodb.com/try/download/compass">[MongoDB Compass图形工具]</a></p>
 <h3 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h3 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#97;&#110;&#109;&#x69;&#110;&#56;&#56;&#56;&#56;&#64;&#x6f;&#x75;&#116;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#109;">&#121;&#117;&#97;&#110;&#109;&#x69;&#110;&#56;&#56;&#56;&#56;&#64;&#x6f;&#x75;&#116;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#109;</a></p>
+<h3 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#110;&#109;&#x69;&#110;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#111;&#x6b;&#46;&#99;&#x6f;&#109;">&#x79;&#x75;&#97;&#110;&#109;&#x69;&#110;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#111;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
 <hr>
 <p>[<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/9075c15c2b88">node+passport+express进行登录认证 （part 1）</a>]</p>
 <hr>
@@ -1758,7 +1758,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.8%20Express%20Register%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E6%9C%AA%E5%AE%8C%E6%88%90/" data-id="ckil24r9i00bsr3iigsqva918" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.8%20Express%20Register%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0%E6%9C%AA%E5%AE%8C%E6%88%90/" data-id="ckiqwwf9300chmsii9bpu48h6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -1774,7 +1774,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/6/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/8/">Next &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/6/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/8/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -1785,7 +1785,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DataBase/">DataBase</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Full-Stack-Development/">Full Stack Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Github/">Github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS-Code/">VS Code</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DataBase/">DataBase</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Full-Stack-Development/">Full Stack Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Github/">Github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS-Code/">VS Code</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -1795,7 +1795,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">40</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a><span class="tag-list-count">5</span></li></ul>
     </div>
   </div>
 
@@ -1805,7 +1805,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">269</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">278</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">6</span></li></ul>
     </div>
   </div>
 
@@ -1826,15 +1826,15 @@
           </li>
         
           <li>
-            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/5.%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.5%20JS%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">5.5 JS编程模式与设计模式</a>
+            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.2%20Prototype%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF_02/">5.4.1 Prototype原型链继承_02</a>
           </li>
         
           <li>
-            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4%20ECMAScrip%E7%BB%A7%E6%89%BF/">5.4 ECMAScrip继承</a>
+            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.3%20%E6%8B%B7%E8%B4%9D%E7%BB%A7%E6%89%BF/">5.4.3 拷贝继承</a>
           </li>
         
           <li>
-            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.1%20Prototype%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF_01/">5.4.1 Prototype原型链继承_01</a>
+            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.4%20%20%E5%8E%9F%E5%9E%8B%E5%BC%8F%E7%BB%A7%E6%89%BF/">5.4.3 拷贝继承</a>
           </li>
         
       </ul>
