@@ -5,19 +5,19 @@
   
 
   
-  <title>Vue组件之间通信方式： Provide/inject | Coding Your Wonderful Life</title>
+  <title>Vue组件之间通信方式： Vuex | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="teaching for web development">
+  <meta name="description" content="date: December 16 2020title: Vue 组件之间通信方式： Attrs &#x2F; Listenerstags: Vuecomment: true">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue组件之间通信方式： Provide&#x2F;inject">
-<meta property="og:url" content="https://weboyster.github.io/2020/10/01/Vue/Tags/Vue%20%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%EF%BC%9A%20Provide_inject/index.html">
+<meta property="og:title" content="Vue组件之间通信方式： Vuex">
+<meta property="og:url" content="https://weboyster.github.io/2020/10/01/Vue/Tags/%E5%9B%9B%E3%80%81Vue%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/Vue%20%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%EF%BC%9A%20Vuex/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="teaching for web development">
+<meta property="og:description" content="date: December 16 2020title: Vue 组件之间通信方式： Attrs &#x2F; Listenerstags: Vuecomment: true">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-30T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-14T05:04:42.112Z">
+<meta property="article:modified_time" content="2020-12-16T04:57:47.758Z">
 <meta property="article:author" content="Yuan Min">
-<meta property="article:tag" content="Vue">
+<meta property="article:tag" content="HTML5 CSS3 JavaScript Java Python C++ Node Express Nestjs MongoDB MySQL">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Coding Your Wonderful Life" type="application/atom+xml">
@@ -67,9 +67,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Vue/Tags/Vue 组件之间通信方式： Provide_inject" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Vue/Tags/四、Vue组件之间的通信方式/Vue 组件之间通信方式： Vuex" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/01/Vue/Tags/Vue%20%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%EF%BC%9A%20Provide_inject/" class="article-date">
+    <a href="/2020/10/01/Vue/Tags/%E5%9B%9B%E3%80%81Vue%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/Vue%20%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%EF%BC%9A%20Vuex/" class="article-date">
   <time datetime="2020-09-30T16:00:00.000Z" itemprop="datePublished">2020-10-01</time>
 </a>
     
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Vue组件之间通信方式： Provide/inject
+      Vue组件之间通信方式： Vuex
     </h1>
   
 
@@ -89,34 +89,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>date: December 16 2020<br>title: Vue 组件之间通信方式： Attrs / Listeners<br>tags: Vue<br>comment: true</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/01/Vue/Tags/Vue%20%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%EF%BC%9A%20Provide_inject/" data-id="ckiqwwf6n0078msii5ism5c0i" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/01/Vue/Tags/%E5%9B%9B%E3%80%81Vue%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/Vue%20%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%EF%BC%9A%20Vuex/" data-id="ckiqxznze00e76eii9ng522da" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2020/10/01/Vue/Tags/Vue%20%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%EF%BC%9A%20Parent_Children/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/10/01/Vue/Tags/%E5%9B%9B%E3%80%81Vue%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/Vue%20%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%EF%BC%9A%20Provide_inject/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Vue组件之间通信方式： Parent_Children
+          Vue组件之间通信方式： Provide/inject
         
       </div>
     </a>
   
   
-    <a href="/2020/10/01/Vue/Tags/Vue%20%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%EF%BC%9A%20Vuex/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/1970/01/01/CSS/Tags/%E4%B8%89%E3%80%81%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/3.2%20%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E8%AF%A6%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Vue组件之间通信方式： Vuex</div>
+      <div class="article-nav-title">3.2 盒子模型详解</div>
     </a>
   
 </nav>
@@ -173,15 +172,15 @@
           </li>
         
           <li>
+            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4%20ECMAScrip%E7%BB%A7%E6%89%BF/">5.4 ECMAScrip继承</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.1%20Prototype%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF_01/">5.4.1 Prototype原型链继承_01</a>
+          </li>
+        
+          <li>
             <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.2%20Prototype%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF_02/">5.4.1 Prototype原型链继承_02</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.3%20%E6%8B%B7%E8%B4%9D%E7%BB%A7%E6%89%BF/">5.4.3 拷贝继承</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.4%20%20%E5%8E%9F%E5%9E%8B%E5%BC%8F%E7%BB%A7%E6%89%BF/">5.4.3 拷贝继承</a>
           </li>
         
       </ul>
