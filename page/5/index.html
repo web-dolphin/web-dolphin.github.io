@@ -67,9 +67,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-CSS/Tags/二、CSS 初探/2.1  定义和应用样式" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-CSS/Tags/二、CSS 初探/2.20案例" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.1%20%20%E5%AE%9A%E4%B9%89%E5%92%8C%E5%BA%94%E7%94%A8%E6%A0%B7%E5%BC%8F/" class="article-date">
+    <a href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.20%E6%A1%88%E4%BE%8B/" class="article-date">
   <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
@@ -81,7 +81,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.1%20%20%E5%AE%9A%E4%B9%89%E5%92%8C%E5%BA%94%E7%94%A8%E6%A0%B7%E5%BC%8F/">2.1 定义和应用样式</a>
+      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.20%E6%A1%88%E4%BE%8B/">2.20 案例</a>
     </h1>
   
 
@@ -89,98 +89,84 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-CSS-样式"><a href="#1-CSS-样式" class="headerlink" title="1.CSS 样式"></a>1.CSS 样式</h4><ul>
-<li><p>一条或多条以分号分隔的样式声明组成；<br>表一： 初始 CSS 样式</p>
-<table>
-<thead>
-<tr>
-<th>Style</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>width</td>
-<td>元素宽度</td>
-</tr>
-<tr>
-<td>height</td>
-<td>元素高度</td>
-</tr>
-<tr>
-<td>margin</td>
-<td>元素外边距： 元素与元素之间的距离</td>
-</tr>
-<tr>
-<td>padding</td>
-<td>元素内边距： 元素内容与边框之间的距离</td>
-</tr>
-<tr>
-<td>text-align</td>
-<td>元素水平居中对齐</td>
-</tr>
-<tr>
-<td>inline-height</td>
-<td>元素垂直对齐方式</td>
-</tr>
-<tr>
-<td>background</td>
-<td>元素背景颜色</td>
-</tr>
-<tr>
-<td>color</td>
-<td>元素文本颜色</td>
-</tr>
-<tr>
-<td>border</td>
-<td>元素边框</td>
-</tr>
-<tr>
-<td>text-decoration</td>
-<td>元素文字的装饰效果</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h4 id="2-元素的内嵌样式"><a href="#2-元素的内嵌样式" class="headerlink" title="2. 元素的内嵌样式"></a>2. 元素的内嵌样式</h4><ul>
-<li><p>又称为元素行内样式，全局属性 style 定义样式</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>元素的行内样式<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://apress.com&quot;</span> <span class="attr">style</span>=<span class="string">&quot;background-color: grey;color: white;&quot;</span>&gt;</span></span><br><span class="line">      Visit the Apress websit</span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>I like <span class="tag">&lt;<span class="name">span</span>&gt;</span>apples<span class="tag">&lt;/<span class="name">span</span>&gt;</span> and oranges<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https:/baidu.com&quot;</span>&gt;</span>Visit the Baidu Website<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;width:800px;height:30px;inline-height:30px&quot;</span>&gt;</span></span><br><span class="line">      落霞与孤鹜齐飞 秋水共长天一色</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>参考文档(Reference)</p>
-<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/HTML/HTML%20Tags/%E4%B8%80%E3%80%81HTML%E5%88%9D%E6%8E%A2/5.%20HTML5%20%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7/">[5.HTML5 全局属性]</a></p>
-</li>
-</ul>
-<h4 id="3-文档样式"><a href="#3-文档样式" class="headerlink" title="3. 文档样式"></a>3. 文档样式</h4><ul>
-<li><p>页面的文档定义 CSS 样式</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>文档内联样式<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">      a &#123;</span><br><span class="line">        background-color: grey;</span><br><span class="line">        color: white;</span><br><span class="line">      &#125;</span><br><span class="line">      span &#123;</span><br><span class="line">        border: thin solid black;</span><br><span class="line">        padding: 10px;</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://apress.com&quot;</span>&gt;</span> Visit the Apress websit <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>I like <span class="tag">&lt;<span class="name">span</span>&gt;</span>apples<span class="tag">&lt;/<span class="name">span</span>&gt;</span> and oranges<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https:/baidu.com&quot;</span>&gt;</span>Visit the Baidu Website<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="4-外链样式"><a href="#4-外链样式" class="headerlink" title="4. 外链样式"></a>4. 外链样式</h4><ul>
-<li><p>在页面之外新建<code>.css</code>文件，通过<code>&lt;link href=&quot;css/index.css&quot;&gt;&lt;/link&gt;</code>在页面引入；</p>
-</li>
-<li><p>index.html 文件</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Demo for CSS<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/index.css&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span>落霞与孤鹜齐飞 秋水共长天一色<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>index.css 文件</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.content</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Example</p>
-</li>
-<li><p>index.html</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>文档内联样式<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/index.css&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://apress.com&quot;</span>&gt;</span> Visit the Apress websit <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>I like <span class="tag">&lt;<span class="name">span</span>&gt;</span>apples<span class="tag">&lt;/<span class="name">span</span>&gt;</span> and oranges<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https:/baidu.com&quot;</span>&gt;</span>Visit the Baidu Website<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>index.css</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: grey;</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: thin solid black;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#110;&#56;&#56;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#109;">&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#110;&#56;&#56;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#109;</a></p>
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#x38;&#56;&#x38;&#64;&#111;&#117;&#116;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#x6d;">&#x79;&#x75;&#97;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#x38;&#56;&#x38;&#64;&#111;&#117;&#116;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.1%20%20%E5%AE%9A%E4%B9%89%E5%92%8C%E5%BA%94%E7%94%A8%E6%A0%B7%E5%BC%8F/" data-id="ckiqxznwh00816eii3vpi3rpc" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.20%E6%A1%88%E4%BE%8B/" data-id="ckitp9rk9008inhii34y4b5hh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/二、CSS 初探/2.3 CSS 中的颜色" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.3%20CSS%20%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.3%20CSS%20%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2/">2.3 CSS 中的颜色</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-CSS-中颜色的表示方法有四种"><a href="#1-CSS-中颜色的表示方法有四种" class="headerlink" title="1. CSS 中颜色的表示方法有四种"></a>1. CSS 中颜色的表示方法有四种</h4><ul>
+<li><p>英文单词表示颜色</p>
+</li>
+<li><p>十六进制表示颜色</p>
+<p>十六进制颜色的组成部分是：＃RRGGBB，其中 RR（红色），GG（绿色）和 BB（蓝色），所有值都必须介于 00 和 FF 之间；</p>
+</li>
+<li><p>RGB 表示颜色： 十进制表示法</p>
+<p>RGB 写法：rgb(0,0,0)，它的取值范围都在 0-255 之间，值越大越颜色越深；<br>RGB 除了可以用数值以外，它还可以用百分百，取值在 0%到 100%之间；<br>比如：RGB(0,0,255)和 RGB(0％，0％，100％)表示的是同一种颜色；<br>RGBA： 是 RGB 外加了一个透明度之 α 值；取值范围： 0-1 之间</p>
+</li>
+<li><p>HSL 表示颜色：</p>
+<ul>
+<li>HSL 颜色值分别代表：色相(hue)，饱和度(saturation)，亮度(lightness)；</li>
+<li>色相是在色轮上的程度：（从 0 到 360）；</li>
+<li>-0（或 360）是红色，120 是绿色，240 是蓝色；</li>
+<li>60 是黄色，180 是青色，300 是洋红色</li>
+<li>饱和度：是一个百分比值，0％意味着灰色和 100％的阴影是全彩；</li>
+<li>亮度：也是一个百分比，0％是黑色的，100％是白色的；<br>HSLA： 是 HSL 外加了一个透明度之 α 值；</li>
+</ul>
+<p>表二： CSS 颜色</p>
+<p>| 颜色名称  | 十六进制颜色 | RGB         | HSL          |<br>| ——— | ———— | ———– | ———— | —— | ——- | ———– | — |<br>| black     | #000000      | 0,0,0       |              |<br>| white     | #FFFFFF      | 255,255,255 |              | silver | #C0C0C0 | 192,192,192 |     |<br>| gray      | #808080      | 128,128,128 |              |<br>| maroon    | #800000      | 128,0,0     |              |<br>| red       | #FF0000      | 255,0,0     | 0 100% 50%   |<br>| purple    | #800080      | 128,0,128   |              |<br>| fushia    | #FF00FF      | 255,0,255   |              |<br>| green     | #008000      | 0,128,0     | 120 100% 50% |<br>| lime      | #00FF00      | 0,255,0     |              |<br>| olive     | #808000      | 128,128,0   |              |<br>| yellow    | #FFFF00      | 255,255,0   | 60 100% 50%  |<br>| navy      | #000080      | 0,0,128     |              |<br>| blue      | #0000FF      | 0,0,128     | 240 100% 50% |<br>| teal      | #008080      | 0,128,128   |              |<br>| aqua      | #00FFFF      | 0,255,255   |              |<br>| darkgray  | #A9A9A9      | 169,169,169 |              |<br>| gray      | #808080      | 128,128,128 |<br>| dimgray   | #696969      | 105,105,105 |              |<br>| lightgray | #D3D3D3      | 211,211,211 |              |</p>
+</li>
+<li><p>例如：</p>
+<ul>
+<li>紫色在蓝色（240°）和洋红（300°）之间，所以他的 HSL 颜色是<code>hsl(270,100%,50%)</code>。如果想要紫色偏蓝，就要往色盘蓝色方向移动角度值，得到<code>hsl(255,100%,50%)</code>。</li>
+</ul>
+</li>
+<li><p>Example</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>CSS 的颜色<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">      div &#123;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        margin: 10px;</span><br><span class="line">        float: left;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.one</span> &#123;</span></span><br><span class="line">        background: red;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.two</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-id">#00ff00</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.three</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-tag">rgba</span>(0, 0, 0, 0<span class="selector-class">.5</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.four</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-tag">hsla</span>(120, 100%, 50%, 0<span class="selector-class">.8</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;one&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;two&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;three&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;four&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;">&#121;&#x75;&#97;&#x6e;&#109;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.3%20CSS%20%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2/" data-id="ckitp9rka008knhiiap6t1eam" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -302,123 +288,12 @@
 </li>
 </ul>
 <h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5.参考文档"></a>5.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#105;&#110;&#56;&#x38;&#56;&#x38;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#x6d;">&#121;&#117;&#x61;&#x6e;&#x6d;&#105;&#110;&#56;&#x38;&#56;&#x38;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#x6d;</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#x6d;">&#121;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.2%20%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%B1%82%E5%8F%A0%E5%92%8C%E7%BB%A7%E6%89%BF/" data-id="ckiqxznwi00836eii1fsd1j0f" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/二、CSS 初探/2.20案例" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.20%E6%A1%88%E4%BE%8B/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.20%E6%A1%88%E4%BE%8B/">2.20 案例</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#56;&#x38;&#x38;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#111;&#x6d;">&#121;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#56;&#x38;&#x38;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.20%E6%A1%88%E4%BE%8B/" data-id="ckiqxznwj00866eii2bof3pg3" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/二、CSS 初探/2.3 CSS 中的颜色" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.3%20CSS%20%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.3%20CSS%20%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2/">2.3 CSS 中的颜色</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-CSS-中颜色的表示方法有四种"><a href="#1-CSS-中颜色的表示方法有四种" class="headerlink" title="1. CSS 中颜色的表示方法有四种"></a>1. CSS 中颜色的表示方法有四种</h4><ul>
-<li><p>英文单词表示颜色</p>
-</li>
-<li><p>十六进制表示颜色</p>
-<p>十六进制颜色的组成部分是：＃RRGGBB，其中 RR（红色），GG（绿色）和 BB（蓝色），所有值都必须介于 00 和 FF 之间；</p>
-</li>
-<li><p>RGB 表示颜色： 十进制表示法</p>
-<p>RGB 写法：rgb(0,0,0)，它的取值范围都在 0-255 之间，值越大越颜色越深；<br>RGB 除了可以用数值以外，它还可以用百分百，取值在 0%到 100%之间；<br>比如：RGB(0,0,255)和 RGB(0％，0％，100％)表示的是同一种颜色；<br>RGBA： 是 RGB 外加了一个透明度之 α 值；取值范围： 0-1 之间</p>
-</li>
-<li><p>HSL 表示颜色：</p>
-<ul>
-<li>HSL 颜色值分别代表：色相(hue)，饱和度(saturation)，亮度(lightness)；</li>
-<li>色相是在色轮上的程度：（从 0 到 360）；</li>
-<li>-0（或 360）是红色，120 是绿色，240 是蓝色；</li>
-<li>60 是黄色，180 是青色，300 是洋红色</li>
-<li>饱和度：是一个百分比值，0％意味着灰色和 100％的阴影是全彩；</li>
-<li>亮度：也是一个百分比，0％是黑色的，100％是白色的；<br>HSLA： 是 HSL 外加了一个透明度之 α 值；</li>
-</ul>
-<p>表二： CSS 颜色</p>
-<p>| 颜色名称  | 十六进制颜色 | RGB         | HSL          |<br>| ——— | ———— | ———– | ———— | —— | ——- | ———– | — |<br>| black     | #000000      | 0,0,0       |              |<br>| white     | #FFFFFF      | 255,255,255 |              | silver | #C0C0C0 | 192,192,192 |     |<br>| gray      | #808080      | 128,128,128 |              |<br>| maroon    | #800000      | 128,0,0     |              |<br>| red       | #FF0000      | 255,0,0     | 0 100% 50%   |<br>| purple    | #800080      | 128,0,128   |              |<br>| fushia    | #FF00FF      | 255,0,255   |              |<br>| green     | #008000      | 0,128,0     | 120 100% 50% |<br>| lime      | #00FF00      | 0,255,0     |              |<br>| olive     | #808000      | 128,128,0   |              |<br>| yellow    | #FFFF00      | 255,255,0   | 60 100% 50%  |<br>| navy      | #000080      | 0,0,128     |              |<br>| blue      | #0000FF      | 0,0,128     | 240 100% 50% |<br>| teal      | #008080      | 0,128,128   |              |<br>| aqua      | #00FFFF      | 0,255,255   |              |<br>| darkgray  | #A9A9A9      | 169,169,169 |              |<br>| gray      | #808080      | 128,128,128 |<br>| dimgray   | #696969      | 105,105,105 |              |<br>| lightgray | #D3D3D3      | 211,211,211 |              |</p>
-</li>
-<li><p>例如：</p>
-<ul>
-<li>紫色在蓝色（240°）和洋红（300°）之间，所以他的 HSL 颜色是<code>hsl(270,100%,50%)</code>。如果想要紫色偏蓝，就要往色盘蓝色方向移动角度值，得到<code>hsl(255,100%,50%)</code>。</li>
-</ul>
-</li>
-<li><p>Example</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>CSS 的颜色<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">      div &#123;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        margin: 10px;</span><br><span class="line">        float: left;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.one</span> &#123;</span></span><br><span class="line">        background: red;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.two</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-id">#00ff00</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.three</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-tag">rgba</span>(0, 0, 0, 0<span class="selector-class">.5</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-class">.four</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-tag">hsla</span>(120, 100%, 50%, 0<span class="selector-class">.8</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;one&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;two&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;three&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;four&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#x38;&#x38;&#64;&#x6f;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#x63;&#111;&#109;">&#x79;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#x38;&#x38;&#64;&#x6f;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#x63;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.3%20CSS%20%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2/" data-id="ckiqxznwj00886eii6lwebtwa" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.2%20%E6%A0%B7%E5%BC%8F%E7%9A%84%E5%B1%82%E5%8F%A0%E5%92%8C%E7%BB%A7%E6%89%BF/" data-id="ckitp9rkb008mnhii4bj78tb0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -469,12 +344,63 @@
 </li>
 </ul>
 <h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email：<a href="mailto:&#x79;&#117;&#97;&#110;&#x6d;&#x69;&#x6e;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#111;&#109;">&#x79;&#117;&#97;&#110;&#x6d;&#x69;&#x6e;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#111;&#109;</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.4%20%20CSS%20%E4%B8%AD%E7%9A%84%E9%95%BF%E5%BA%A6/" data-id="ckiqxznwl008a6eii1kw60yh8" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.4%20%20CSS%20%E4%B8%AD%E7%9A%84%E9%95%BF%E5%BA%A6/" data-id="ckitp9rkc008onhiiagqo20ps" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/二、CSS 初探/2.5 其他 CSS 单位" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.5%20%E5%85%B6%E4%BB%96%20CSS%20%E5%8D%95%E4%BD%8D/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.5%20%E5%85%B6%E4%BB%96%20CSS%20%E5%8D%95%E4%BD%8D/">2.5 其他 CSS 单位</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>计算单位：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p &#123; width: calc(80% -20px)&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>角度</p>
+<p>|单位标识符|说明|<br>|deg|角度：取值 0 ~ 360 deg|<br>|grad|百分度：取值 0 ~ 400 grad|<br>|rag|弧度 : 取值 0 ～ 6.28rad|<br>|turn|圆周：1turn = 360 deg|</p>
+</li>
+<li><p>时间</p>
+<p>|单位标识符|说明|<br>|s|秒：1s = 1000ms|<br>|ms|毫秒：1000ms=1s|</p>
+</li>
+</ul>
+<h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#x38;&#64;&#x6f;&#117;&#x74;&#108;&#x6f;&#x6f;&#107;&#46;&#x63;&#111;&#109;">&#121;&#x75;&#x61;&#x6e;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#x38;&#64;&#x6f;&#117;&#x74;&#108;&#x6f;&#x6f;&#107;&#46;&#x63;&#111;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.5%20%E5%85%B6%E4%BB%96%20CSS%20%E5%8D%95%E4%BD%8D/" data-id="ckitp9rkd008qnhiihqe81044" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -662,63 +588,12 @@
 </li>
 </ul>
 <h3 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h3 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h3><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#110;&#x6d;&#105;&#x6e;&#x38;&#56;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#111;&#111;&#107;&#46;&#99;&#111;&#x6d;">&#121;&#x75;&#x61;&#110;&#x6d;&#105;&#x6e;&#x38;&#56;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#111;&#111;&#107;&#46;&#99;&#111;&#x6d;</a></p>
+<h3 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h3><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#109;">&#x79;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.7%20%20CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%B8%80/" data-id="ckiqxznwm008c6eiif4eja317" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/二、CSS 初探/2.5 其他 CSS 单位" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.5%20%E5%85%B6%E4%BB%96%20CSS%20%E5%8D%95%E4%BD%8D/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.5%20%E5%85%B6%E4%BB%96%20CSS%20%E5%8D%95%E4%BD%8D/">2.5 其他 CSS 单位</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>计算单位：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p &#123; width: calc(80% -20px)&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>角度</p>
-<p>|单位标识符|说明|<br>|deg|角度：取值 0 ~ 360 deg|<br>|grad|百分度：取值 0 ~ 400 grad|<br>|rag|弧度 : 取值 0 ～ 6.28rad|<br>|turn|圆周：1turn = 360 deg|</p>
-</li>
-<li><p>时间</p>
-<p>|单位标识符|说明|<br>|s|秒：1s = 1000ms|<br>|ms|毫秒：1000ms=1s|</p>
-</li>
-</ul>
-<h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p>Email：<a href="mailto:&#x79;&#117;&#97;&#x6e;&#109;&#x69;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#109;">&#x79;&#117;&#97;&#x6e;&#109;&#x69;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.5%20%E5%85%B6%E4%BB%96%20CSS%20%E5%8D%95%E4%BD%8D/" data-id="ckiqxznwn008e6eii3zn8btjk" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.7%20%20CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%B8%80/" data-id="ckitp9rke008snhiifczb88um" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -855,12 +730,12 @@
 </li>
 </ul>
 <h3 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5.参考文档"></a>5.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/">[二、CSS 初探]</a></p>
-<h3 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h3><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#56;&#x38;&#x38;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#x6d;">&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#56;&#x38;&#x38;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#x6d;</a></p>
+<h3 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h3><p>Email:<a href="mailto:&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#110;&#x38;&#56;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#110;&#x38;&#56;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.8%20%20CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%BA%8C/" data-id="ckiqxznwn008g6eii06rjeqml" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%BA%8C%E3%80%81CSS%20%E5%88%9D%E6%8E%A2/2.8%20%20CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%BA%8C/" data-id="ckitp9rkf008unhiic0or529g" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -1270,12 +1145,12 @@
 </ul>
 <p>所有浏览器都支持 background-repeat 属性。任何版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
 <h4 id="8-参考文档"><a href="#8-参考文档" class="headerlink" title="8.参考文档"></a>8.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="9-联系方式"><a href="#9-联系方式" class="headerlink" title="9. 联系方式"></a>9. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#x2e;&#99;&#111;&#x6d;">&#x79;&#x75;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#x2e;&#99;&#111;&#x6d;</a></p>
+<h4 id="9-联系方式"><a href="#9-联系方式" class="headerlink" title="9. 联系方式"></a>9. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#x38;&#64;&#111;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;">&#x79;&#117;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#x38;&#64;&#111;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.1%20CSS-Background%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7/" data-id="ckiqxznwq008m6eiigulmh93v" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.1%20CSS-Background%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7/" data-id="ckitp9rkf008wnhii5qf20ztv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -1393,12 +1268,12 @@
 </li>
 </ul>
 <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#110;&#109;&#105;&#110;&#56;&#56;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#111;&#109;">&#121;&#x75;&#x61;&#110;&#109;&#105;&#110;&#56;&#56;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#111;&#109;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#x6e;&#109;&#105;&#x6e;&#x38;&#x38;&#x38;&#56;&#64;&#111;&#117;&#x74;&#108;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#x6d;">&#121;&#117;&#x61;&#x6e;&#109;&#105;&#x6e;&#x38;&#x38;&#x38;&#56;&#64;&#111;&#117;&#x74;&#108;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.10%20CSS-Positioning%E5%AE%9A%E4%BD%8D%E5%B1%9E%E6%80%A7/" data-id="ckiqxznwq008o6eiiai562e9x" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.10%20CSS-Positioning%E5%AE%9A%E4%BD%8D%E5%B1%9E%E6%80%A7/" data-id="ckitp9rkg008ynhiidh7c64iy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -1471,12 +1346,12 @@
 </li>
 </ul>
 <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#x6d;">&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#x6d;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#x61;&#110;&#109;&#x69;&#110;&#56;&#x38;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#109;">&#x79;&#x75;&#x61;&#110;&#109;&#x69;&#110;&#56;&#x38;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.11%20CSS-Print%E6%89%93%E5%8D%B0%E5%B1%9E%E6%80%A7/" data-id="ckiqxznwr008q6eii5o0r9j1b" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.11%20CSS-Print%E6%89%93%E5%8D%B0%E5%B1%9E%E6%80%A7/" data-id="ckitp9rkh0090nhiicytmbe24" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -1548,12 +1423,12 @@
 </tr>
 </tbody></table>
 <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#110;&#x6d;&#x69;&#110;&#56;&#x38;&#x38;&#x38;&#64;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;">&#121;&#x75;&#97;&#110;&#x6d;&#x69;&#110;&#56;&#x38;&#x38;&#x38;&#64;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#110;&#x6d;&#105;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#x6f;&#117;&#116;&#x6c;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;">&#121;&#x75;&#97;&#110;&#x6d;&#105;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#x6f;&#117;&#116;&#x6c;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.12%20CSS-Table%E8%A1%A8%E6%A0%BC%E5%B1%9E%E6%80%A7/" data-id="ckiqxznws008s6eiia5jg3m8s" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.12%20CSS-Table%E8%A1%A8%E6%A0%BC%E5%B1%9E%E6%80%A7/" data-id="ckitp9rki0092nhii0xn0a9q8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -1635,12 +1510,12 @@
 </tr>
 </tbody></table>
 <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#56;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#121;&#x75;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#56;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#56;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#x6d;">&#121;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#56;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.13%20CSS-Pseudo-classes%E4%BC%AA%E7%B1%BB/" data-id="ckiqxznwt008u6eiihoyg32ra" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.13%20CSS-Pseudo-classes%E4%BC%AA%E7%B1%BB/" data-id="ckitp9rkj0094nhii5dqs58ci" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -1707,12 +1582,12 @@
 </tr>
 </tbody></table>
 <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#56;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;">&#x79;&#x75;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#56;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#56;&#56;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#56;&#56;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.14%20CSS-Pseudo-element%E4%BC%AA%E5%85%83%E7%B4%A0/" data-id="ckiqxznwt008w6eii0qjgazka" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.14%20CSS-Pseudo-element%E4%BC%AA%E5%85%83%E7%B4%A0/" data-id="ckitp9rkk0096nhii1e20994v" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -1785,12 +1660,12 @@
 <p>取值：<br>none：无遮罩图像：<br>使用绝对或相对地址指定遮罩图像；<br>使用线性渐变创建遮罩图像；<br>使用径向(放射性)渐变创建遮罩图像；<br>使用重复的线性渐变创建背遮罩像；<br>使用重复的径向(放射性)渐变创建遮罩图像；</p>
 <h4 id="3-案例"><a href="#3-案例" class="headerlink" title="3.案例"></a>3.案例</h4><p><a href="">[文字特效倒影效果]</a></p>
 <h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#110;&#56;&#x38;&#56;&#56;&#64;&#111;&#117;&#116;&#x6c;&#111;&#111;&#107;&#46;&#x63;&#111;&#x6d;">&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#110;&#56;&#x38;&#56;&#56;&#64;&#111;&#117;&#116;&#x6c;&#111;&#111;&#107;&#46;&#x63;&#111;&#x6d;</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#x63;&#x6f;&#109;">&#121;&#x75;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#x63;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.15%20%20webkit-box-reflect%E5%B1%9E%E6%80%A7/" data-id="ckiqxznwu008y6eii8ssa8zqe" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.15%20%20webkit-box-reflect%E5%B1%9E%E6%80%A7/" data-id="ckitp9rkl0098nhii9rpj35fk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -1860,12 +1735,54 @@
 <h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><h4 id="3-案例"><a href="#3-案例" class="headerlink" title="3.案例"></a>3.案例</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-oyster/calc_var/tree/main/assert/wave_effective">[wave_effective]</a></p>
 <p><a target="_blank" rel="noopener" href="https://github.com/web-oyster/calc_var/tree/main/assert/word_special_effection">[word_special_effection]</a></p>
 <h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS 属性和特性]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#x38;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#x63;&#111;&#109;">&#121;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#x38;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#x63;&#111;&#109;</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#x6d;&#105;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#111;&#109;">&#x79;&#x75;&#97;&#x6e;&#x6d;&#105;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.16%20Calc%E5%87%BD%E6%95%B0%E4%B8%8EVar%E5%8F%98%E9%87%8F/" data-id="ckiqxznwv00906eii7tw5ctgj" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.16%20Calc%E5%87%BD%E6%95%B0%E4%B8%8EVar%E5%8F%98%E9%87%8F/" data-id="ckitp9rkm009anhii7laeasyu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/六、CSS属性和特性/6.20 CSS属性和特性案例" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.20%20CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7%E6%A1%88%E4%BE%8B/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.20%20CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7%E6%A1%88%E4%BE%8B/">6.20 CSS属性和特性案例</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-wave-effective"><a href="#1-wave-effective" class="headerlink" title="1. wave_effective"></a>1. wave_effective</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/calc_var/tree/main/assert/wave_effective">[源码]</a></p>
+<h4 id="2-word-special-effection"><a href="#2-word-special-effection" class="headerlink" title="2. word_special_effection"></a>2. word_special_effection</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/calc_var/tree/main/assert/word_special_effection">[源码]</a></p>
+<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS 属性和特性]</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#56;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#56;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.20%20CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7%E6%A1%88%E4%BE%8B/" data-id="ckitp9rln009enhii3xig106x" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -2395,147 +2312,12 @@
 </li>
 </ul>
 <h4 id="10-参考文档"><a href="#10-参考文档" class="headerlink" title="10.参考文档"></a>10.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="11-联系方式"><a href="#11-联系方式" class="headerlink" title="11. 联系方式"></a>11. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#110;&#109;&#x69;&#110;&#56;&#x38;&#56;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#x6d;">&#121;&#x75;&#x61;&#110;&#109;&#x69;&#110;&#56;&#x38;&#56;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#x6d;</a></p>
+<h4 id="11-联系方式"><a href="#11-联系方式" class="headerlink" title="11. 联系方式"></a>11. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#109;">&#x79;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.2%20CSS-Text%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/" data-id="ckiqxznww00946eiifl1n0y5i" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/六、CSS属性和特性/6.20 CSS属性和特性案例" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.20%20CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7%E6%A1%88%E4%BE%8B/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.20%20CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7%E6%A1%88%E4%BE%8B/">6.20 CSS属性和特性案例</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-wave-effective"><a href="#1-wave-effective" class="headerlink" title="1. wave_effective"></a>1. wave_effective</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/calc_var/tree/main/assert/wave_effective">[源码]</a></p>
-<h4 id="2-word-special-effection"><a href="#2-word-special-effection" class="headerlink" title="2. word_special_effection"></a>2. word_special_effection</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/calc_var/tree/main/assert/word_special_effection">[源码]</a></p>
-<h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS 属性和特性]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#64;&#x6f;&#x75;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#99;&#111;&#x6d;">&#x79;&#x75;&#x61;&#110;&#x6d;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#64;&#x6f;&#x75;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#99;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.20%20CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7%E6%A1%88%E4%BE%8B/" data-id="ckiqxznwx00966eii1vkb7oof" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/六、CSS属性和特性/6.3 CSS-Font字体属性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.3%20CSS-Font%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.3%20CSS-Font%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7/">6.3 CSS-Font字体属性</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-CSS-Font字体属性汇总"><a href="#1-CSS-Font字体属性汇总" class="headerlink" title="1. CSS-Font字体属性汇总"></a>1. CSS-Font字体属性汇总</h4><ul>
-<li><p>汇总表</p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-<th>CSS</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>font</td>
-<td>在一个声明中设置所有字体属性。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>font-family</td>
-<td>规定文本的字体系列。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>font-size</td>
-<td>规定文本的字体尺寸。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>font-size-adjust</td>
-<td>为元素规定 aspect 值。（CSS2.1已删除该属性）</td>
-<td>2</td>
-</tr>
-<tr>
-<td>font-stretch</td>
-<td>收缩或拉伸当前的字体系列。（CSS2.1已删除该属性）</td>
-<td>2</td>
-</tr>
-<tr>
-<td>font-style</td>
-<td>规定文本的字体样式。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>font-variant</td>
-<td>规定文本的字体样式。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>font-weight</td>
-<td>规定字体的粗细。</td>
-<td>1</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#x6d;&#105;&#110;&#56;&#56;&#x38;&#56;&#x40;&#x6f;&#117;&#116;&#108;&#111;&#111;&#107;&#x2e;&#99;&#111;&#x6d;">&#x79;&#117;&#x61;&#x6e;&#x6d;&#105;&#110;&#56;&#56;&#x38;&#56;&#x40;&#x6f;&#117;&#116;&#108;&#111;&#111;&#107;&#x2e;&#99;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.3%20CSS-Font%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7/" data-id="ckiqxznwy00986eiidufu098h" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.2%20CSS-Text%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/" data-id="ckitp9rlo009gnhii9hi87tl3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -2703,12 +2485,105 @@
 </li>
 </ul>
 <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#97;&#110;&#109;&#x69;&#110;&#56;&#56;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#109;">&#121;&#117;&#97;&#110;&#109;&#x69;&#110;&#56;&#56;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#109;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#110;&#x6d;&#x69;&#110;&#56;&#x38;&#x38;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;">&#121;&#117;&#x61;&#110;&#x6d;&#x69;&#110;&#56;&#x38;&#x38;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.4%20CSS-Border-Outline%E8%BE%B9%E6%A1%86%E5%92%8C%E8%BD%AE%E5%BB%93%E5%B1%9E%E6%80%A7/" data-id="ckiqxznwz009a6eiidaobeoyw" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.4%20CSS-Border-Outline%E8%BE%B9%E6%A1%86%E5%92%8C%E8%BD%AE%E5%BB%93%E5%B1%9E%E6%80%A7/" data-id="ckitp9rlq009inhii9m0573xm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/六、CSS属性和特性/6.3 CSS-Font字体属性" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.3%20CSS-Font%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.3%20CSS-Font%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7/">6.3 CSS-Font字体属性</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-CSS-Font字体属性汇总"><a href="#1-CSS-Font字体属性汇总" class="headerlink" title="1. CSS-Font字体属性汇总"></a>1. CSS-Font字体属性汇总</h4><ul>
+<li><p>汇总表</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>font</td>
+<td>在一个声明中设置所有字体属性。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>规定文本的字体系列。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>规定文本的字体尺寸。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>font-size-adjust</td>
+<td>为元素规定 aspect 值。（CSS2.1已删除该属性）</td>
+<td>2</td>
+</tr>
+<tr>
+<td>font-stretch</td>
+<td>收缩或拉伸当前的字体系列。（CSS2.1已删除该属性）</td>
+<td>2</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>规定文本的字体样式。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>font-variant</td>
+<td>规定文本的字体样式。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>规定字体的粗细。</td>
+<td>1</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#x38;&#x38;&#64;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;">&#121;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#x38;&#x38;&#64;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.3%20CSS-Font%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7/" data-id="ckitp9rlr009knhiig32aaj64" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -2781,16 +2656,59 @@
 </li>
 </ul>
 <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#110;&#109;&#105;&#x6e;&#56;&#56;&#56;&#56;&#64;&#x6f;&#x75;&#116;&#x6c;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#117;&#97;&#110;&#109;&#105;&#x6e;&#56;&#56;&#56;&#56;&#64;&#x6f;&#x75;&#116;&#x6c;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#97;&#110;&#x6d;&#105;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#117;&#97;&#110;&#x6d;&#105;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.5%20CSS-Margin%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%B1%9E%E6%80%A7/" data-id="ckiqxznwz009c6eii9dov1j3t" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.5%20CSS-Margin%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%B1%9E%E6%80%A7/" data-id="ckitp9rlt009mnhii7x3l0o2p" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
 
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tutorial/十四、BFC" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/CSS/Tutorial/%E5%8D%81%E5%9B%9B%E3%80%81BFC/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CSS/">CSS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/CSS/Tutorial/%E5%8D%81%E5%9B%9B%E3%80%81BFC/">十四、BFC</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-BFE"><a href="#1-BFE" class="headerlink" title="1.BFE"></a>1.BFE</h3><h4 id="1-BFC-简介"><a href="#1-BFC-简介" class="headerlink" title="1. BFC 简介"></a>1. BFC 简介</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/11/03/CSS/Tags/%E5%8D%81%E5%9B%9B%E3%80%81BFC/14.1%20BFC%E5%B8%83%E5%B1%80/">[14.1 BFC简介]</a>%80/)</p>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/CSS%E6%95%99%E7%A8%8B/">[CSS教程]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tutorial/%E5%8D%81%E5%9B%9B%E3%80%81BFC/" data-id="ckitp9rlv009onhiiamm0665t" class="article-share-link">Share</a>
+      
+      
     </footer>
   </div>
   
