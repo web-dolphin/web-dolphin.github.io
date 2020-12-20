@@ -705,8 +705,44 @@
 <li><p>元素的默认位置，此时无论是否将父元素的相对定位取消，元素的位置与没有<code>position</code>属性时相同；</p>
 </li>
 </ul>
-<h3 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h3><p><a href="">[]</a></p>
-<h3 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h3><p>email: <a href="mailto:&#121;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#111;&#x6d;">&#121;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#111;&#x6d;</a><br>微信： 15879282859</p>
+<h4 id="6-sticky-粘性定位"><a href="#6-sticky-粘性定位" class="headerlink" title="6. sticky 粘性定位"></a>6. sticky 粘性定位</h4><ol>
+<li><p>sticky是CSS3 position属性中新添的一个属性，可以说是fixed和relative的结合；</p>
+</li>
+<li><p>它主要作用在scroll的监听上，在滚动过程中，当某元素的距离其父元素的距离达到设定的sticky值的时候，这时position：sticky的作用就相当于fixed固定定位，固定在适当的位置，不随滚动条的滚动而发生变化；</p>
+</li>
+<li><p>使用条件</p>
+</li>
+</ol>
+<ul>
+<li><p>父元素不能设置 overflow:hidden; 或者 overflow:auto 属性；</p>
+</li>
+<li><p>必须设置 top、bottom 、left 、 right 4个值之一，否则只会处于相对定位；</p>
+</li>
+<li><p>父元素的高度不能低于sticky元素的高度，否则还没有开始滚动的时候sticky元素就在父元素的底部，不会有任何的作用；</p>
+</li>
+<li><p>sticky元素仅在其父元素内生效，如果父元素都不能滚动的话，那么只能对视口起作用；</p>
+</li>
+</ul>
+<ol start="4">
+<li>特点</li>
+</ol>
+<ul>
+<li><p>该元素并不脱离文档流，仍然保留元素原本在文档流中的位置；</p>
+</li>
+<li><p>当元素在容器中被滚动超过指定的偏移值时，元素在容器内固定在指定位置。</p>
+</li>
+<li><p>案例</p>
+</li>
+<li><p>HTML</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;container&quot;&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;item&quot;&gt;我是内容一&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;item&quot;&gt;我是内容二&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;sticky&quot;&gt;我是sticky&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;item&quot;&gt;我是内容三&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;item&quot;&gt;我是内容四&lt;&#x2F;div&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;item&quot;&gt;我是内容五&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@charset</span> <span class="string">&quot;utf-8&quot;</span>;</span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">8100vw</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">background</span>: orange;</span><br><span class="line">    <span class="attribute">overflow</span>: scroll;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.sticky</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: inherit;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">35px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="attribute">position</span>: sticky;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: inherit;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">238</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="attribute">font-family</span>: Helvetica;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AB%E3%80%81CSS%E5%B8%83%E5%B1%80/">[八、CSS 布局]</a></p>
+<h3 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h3><p>email: <a href="mailto:&#121;&#x75;&#97;&#110;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;">&#121;&#x75;&#97;&#110;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;</a><br>微信： 15879282859</p>
 
       
     </div>
