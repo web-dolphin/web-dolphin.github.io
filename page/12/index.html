@@ -67,506 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Linux/Ubuntu/4.Ubuntu安装与配置Nvm" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Linux/Ubuntu/4.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Linux/Ubuntu/4.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/">4.Ubuntu20.04 安装与配置 Nvm</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Nvm简介"><a href="#1-Nvm简介" class="headerlink" title="1.Nvm简介"></a>1.Nvm简介</h4><ul>
-<li>Node 的一种版本管理器，它可以管理多版本 Node 以及 npm</li>
-</ul>
-<h4 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h4><ul>
-<li><p>下载</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/creationix/nvm">[nvm 的仓库地址]</a></p>
-<p><img src="https://s1.ax1x.com/2020/10/24/BVoBHs.png" alt="nvm github repository"></p>
-</li>
-<li><p>克隆</p>
-<p>终端 Home 目录执行如下命令，克隆 nvm：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/opt</span><br><span class="line">sudo git <span class="built_in">clone</span> https://github.com/creationix/nvm .nvm</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>克隆示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/24/BVT5QS.png" alt="nvm clone"></p>
-</li>
-<li><p>安装 nvm</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> nvm</span><br><span class="line">bash install.sh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/24/BV7kJx.png" alt="install nvm"></p>
-</li>
-<li><p>测试安装版本: 关闭终端，重启终端</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm -v</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-使用"><a href="#3-使用" class="headerlink" title="3. 使用"></a>3. 使用</h4><ul>
-<li><p>查看 Node 远程仓库版本号: 耐心等待</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm ls-remote</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="2">
-<li>安装 Node</li>
-</ol>
-<ul>
-<li><p>安装 Node 14.14.0</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvm install 14.14.0</span><br><span class="line">nvm install 13.0.0</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="3">
-<li>查看 Node 版本号</li>
-</ol>
-<ul>
-<li><p>查看本地安装不同版本 Node</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm list</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看当前使用版本号</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm current</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="4">
-<li>使用 Node</li>
-</ol>
-<ul>
-<li><p>不同版本 Node 切换</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 14.14.0</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="5">
-<li>卸载 Node</li>
-</ol>
-<ul>
-<li><p>卸载不需要版本的 Node</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm uninstall node-version</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>下载当前版本 Node</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvm deactivate</span><br><span class="line">nvm uninstall node_version</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="6">
-<li>切换使用的 Node</li>
-</ol>
-<ul>
-<li><p>选择使用的版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 14.14.0</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="4-npm-配置镜像源"><a href="#4-npm-配置镜像源" class="headerlink" title="4. npm 配置镜像源"></a>4. npm 配置镜像源</h4><ul>
-<li><p>npm 配置镜像源<br><img src="https://s1.ax1x.com/2020/10/24/BZCbT0.png" alt="npm配置镜像源"></p>
-</li>
-<li><p>参考文档</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">[NPM 镜像源配置]</a></p>
-<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
-<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email：<a href="mailto:&#121;&#117;&#x61;&#110;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;">&#121;&#117;&#x61;&#110;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Ubuntu/4.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" data-id="ckitp9rhw0045nhiigoru1z7h" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Linux/Tutorial/Ubuntu教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Linux/Tutorial/Ubuntu%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Ubuntu/">Ubuntu</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Linux/Tutorial/Ubuntu%E6%95%99%E7%A8%8B/">1.Ubuntu教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/Linux/Ubuntu/1.Ubuntu20.04%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/">[1.Ubuntu20.04系统安装]</a></p>
-<h4 id="2-Ubuntu-系统及应用软件安装与配置"><a href="#2-Ubuntu-系统及应用软件安装与配置" class="headerlink" title="2. Ubuntu 系统及应用软件安装与配置"></a>2. Ubuntu 系统及应用软件安装与配置</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Linux/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E6%95%99%E7%A8%8B/" data-id="ckitp9ri5004onhii53pj8pqy" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tutorial/一、Node教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Node/">Node</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/">一、Node教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="二、-NPM-包管理器教程"><a href="#二、-NPM-包管理器教程" class="headerlink" title="二、 NPM 包管理器教程"></a>二、 NPM 包管理器教程</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/">[二、NPM 包管理器]</a></p>
-<h4 id="三、Express教程"><a href="#三、Express教程" class="headerlink" title="三、Express教程"></a>三、Express教程</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h4 id="四、Koa教程"><a href="#四、Koa教程" class="headerlink" title="四、Koa教程"></a>四、Koa教程</h4><p><a href="">[四、Koa教程]</a></p>
-<h4 id="五、Nest教程"><a href="#五、Nest教程" class="headerlink" title="五、Nest教程"></a>五、Nest教程</h4><p><a href="">[五、Nest教程]</a></p>
-<h4 id="六、Node-Server教程"><a href="#六、Node-Server教程" class="headerlink" title="六、Node Server教程"></a>六、Node Server教程</h4><p><a href="">[六、Node Server教程]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p>Email：<a href="mailto:&#x79;&#117;&#97;&#110;&#109;&#x69;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#107;&#x2e;&#99;&#111;&#109;">&#x79;&#117;&#97;&#110;&#109;&#x69;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#107;&#x2e;&#99;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/" data-id="ckitp9ri9004unhiifw4sey5x" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tutorial/三、Expess 教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Node/">Node</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">三、Expess 教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="3-1-Express创建项目目录"><a href="#3-1-Express创建项目目录" class="headerlink" title="3.1  Express创建项目目录"></a>3.1  Express创建项目目录</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.1%20%20Express%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95/">[3.1  Express创建项目目录]</a></p>
-<h4 id="3-2-Express创建服务器"><a href="#3-2-Express创建服务器" class="headerlink" title="3.2 Express创建服务器"></a>3.2 Express创建服务器</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.2%20Express%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/">[3.2 Express创建服务器]</a></p>
-<h4 id="3-3-Express构建模块化路由"><a href="#3-3-Express构建模块化路由" class="headerlink" title="3.3 Express构建模块化路由"></a>3.3 Express构建模块化路由</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.3%20Express%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E8%B7%AF%E7%94%B1/">[3.3 Express构建模块化路由]</a></p>
-<h4 id="3-4-Express配置静态资源"><a href="#3-4-Express配置静态资源" class="headerlink" title="3.4 Express配置静态资源"></a>3.4 Express配置静态资源</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.4%20%20Express%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/">[3.4 Express配置静态资源]</a></p>
-<h4 id="3-5-配置mongoose链接"><a href="#3-5-配置mongoose链接" class="headerlink" title="3.5 配置mongoose链接"></a>3.5 配置mongoose链接</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Node/Tags/Express/Tags/3.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/">[3.5 配置mongoose链接]</a></p>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/">[一、Node教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#x38;&#56;&#64;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#109;">&#121;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#x38;&#56;&#64;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/" data-id="ckitp9rib004wnhiiba46cyl9" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tutorial/二、NPM包管理教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Node/">Node</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/">二、NPM包管理教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="2-1-Express创建项目目录"><a href="#2-1-Express创建项目目录" class="headerlink" title="2.1  Express创建项目目录"></a>2.1  Express创建项目目录</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tags/Npm/2.1%20Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/">[2.1  Express创建项目目录]</a></p>
-<h4 id="2-2-Windows-安装与配置-Nvm"><a href="#2-2-Windows-安装与配置-Nvm" class="headerlink" title="2.2 Windows 安装与配置 Nvm"></a>2.2 Windows 安装与配置 Nvm</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tags/Npm/2.2%20%20Windows%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/">[2.2 Windows 安装与配置 Nvm]</a></p>
-<h4 id="2-3-NPM-镜像源配置"><a href="#2-3-NPM-镜像源配置" class="headerlink" title="2.3 NPM 镜像源配置"></a>2.3 NPM 镜像源配置</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tags/Npm/2.3%20%20NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">[2.3 NPM 镜像源配置]</a></p>
-<h4 id="2-4-Noder-Serve-静态服务器的安装"><a href="#2-4-Noder-Serve-静态服务器的安装" class="headerlink" title="2.4 Noder Serve 静态服务器的安装"></a>2.4 Noder Serve 静态服务器的安装</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tags/Npm/2.4%20Noder%20%E9%9D%99%E6%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85/">[2.4 Noder Serve 静态服务器的安装]</a></p>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a href="%5B%5B%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B%5D%5D(https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/)">[一、Node教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#117;&#97;&#x6e;&#109;&#x69;&#110;&#x38;&#56;&#x38;&#56;&#64;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;">&#x79;&#117;&#97;&#x6e;&#109;&#x69;&#110;&#x38;&#56;&#x38;&#56;&#64;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/" data-id="ckitp9ric004znhiihea52g22" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tutorial/六、Node Server教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Node/">Node</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">六、Node Server教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="6-1-Node的安装与环境变量配置"><a href="#6-1-Node的安装与环境变量配置" class="headerlink" title="6.1 Node的安装与环境变量配置"></a>6.1 Node的安装与环境变量配置</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.1%20Node%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/">[6.1 Node的安装与环境变量配置]</a></p>
-<h4 id="6-2-Node的模块化开发"><a href="#6-2-Node的模块化开发" class="headerlink" title="6.2 Node的模块化开发"></a>6.2 Node的模块化开发</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.2%20Node%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/">[6.2 Node的模块化开发]</a></p>
-<h4 id="6-3-Node服务器端基本概念"><a href="#6-3-Node服务器端基本概念" class="headerlink" title="6.3 Node服务器端基本概念"></a>6.3 Node服务器端基本概念</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.3%20Node%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">[6.3 Node服务器端基本概念]</a></p>
-<h4 id="6-4-Node创建Web服务器"><a href="#6-4-Node创建Web服务器" class="headerlink" title="6.4 Node创建Web服务器"></a>6.4 Node创建Web服务器</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.4%20Node%E5%88%9B%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8/">[6.4 Node创建Web服务器]</a></p>
-<h4 id="6-5-HTTP通信协议与响应处理"><a href="#6-5-HTTP通信协议与响应处理" class="headerlink" title="6.5 HTTP通信协议与响应处理"></a>6.5 HTTP通信协议与响应处理</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.5%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/">[6.5 HTTP通信协议与响应处理]</a></p>
-<h4 id="6-6-Node请求参数"><a href="#6-6-Node请求参数" class="headerlink" title="6.6 Node请求参数"></a>6.6 Node请求参数</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.6%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/">[6.6 Node请求参数]</a></p>
-<h4 id="6-7-Node路由设置"><a href="#6-7-Node路由设置" class="headerlink" title="6.7 Node路由设置"></a>6.7 Node路由设置</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.7%20Node%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/">[6.7 Node路由设置]</a></p>
-<h4 id="6-8Node静态资源"><a href="#6-8Node静态资源" class="headerlink" title="6.8Node静态资源"></a>6.8Node静态资源</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.8Node%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/">[6.8Node静态资源]</a></p>
-<h4 id="6-9-Node动态资源"><a href="#6-9-Node动态资源" class="headerlink" title="6.9 Node动态资源"></a>6.9 Node动态资源</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/">[6.9 Node动态资源]</a></p>
-<h4 id="6-10-Node回调函数"><a href="#6-10-Node回调函数" class="headerlink" title="6.10 Node回调函数"></a>6.10 Node回调函数</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.10%20Node%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/">[6.10 Node回调函数]</a></p>
-<h4 id="6-11-Node异步编程"><a href="#6-11-Node异步编程" class="headerlink" title="6.11 Node异步编程"></a>6.11 Node异步编程</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.11%20Node%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">[6.11 Node异步编程]</a></p>
-<h4 id="6-12-Node客户端请求途径"><a href="#6-12-Node客户端请求途径" class="headerlink" title="6.12 Node客户端请求途径"></a>6.12 Node客户端请求途径</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.12%20Node%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%B7%E6%B1%82%E9%80%94%E5%BE%84/">[6.12 Node客户端请求途径]</a></p>
-<h4 id="6-13-PM2进程管理器"><a href="#6-13-PM2进程管理器" class="headerlink" title="6.13 PM2进程管理器"></a>6.13 PM2进程管理器</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/">[6.13 PM2进程管理器]</a></p>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/">[一、Node教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#99;&#111;&#109;">&#x79;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#99;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/" data-id="ckitp9rie0051nhii63lo0col" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Python/Tutorial/Python基础教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">Python基础教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Python/Tutorial/Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" data-id="ckitp9rit005inhiidinpb84q" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Vue/Tutorial/Vue教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Vue/">Vue</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/">Vue教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程介绍"><a href="#1-教程介绍" class="headerlink" title="1.  教程介绍"></a>1.  教程介绍</h3><h4 id="1-Vue基础核心"><a href="#1-Vue基础核心" class="headerlink" title="1. Vue基础核心"></a>1. Vue基础核心</h4><ol>
-<li>参考文档</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://www.vue3js.cn/docs/zh/">[Vue3.0]</a></p>
-<p><a href="">[一、Vue基础核心]</a></p>
-<h4 id="2-Vue-Router前端由"><a href="#2-Vue-Router前端由" class="headerlink" title="2. Vue Router前端由"></a>2. Vue Router前端由</h4><p><a href="">[]</a></p>
-<h4 id="3-Vue-Cli3"><a href="#3-Vue-Cli3" class="headerlink" title="3. Vue Cli3"></a>3. Vue Cli3</h4><p><a href="">[]</a></p>
-<h4 id="4-Vue-通信方式"><a href="#4-Vue-通信方式" class="headerlink" title="4. Vue 通信方式"></a>4. Vue 通信方式</h4><p><a href="">[]</a></p>
-<h4 id="5-Vuex"><a href="#5-Vuex" class="headerlink" title="5. Vuex"></a>5. Vuex</h4><p><a href="">[]</a></p>
-<h4 id="6-Vue服务端渲染"><a href="#6-Vue服务端渲染" class="headerlink" title="6. Vue服务端渲染"></a>6. Vue服务端渲染</h4><p><a href="">[]</a></p>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.  参考文档"></a>2.  参考文档</h3><p><a href="">[]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/" data-id="ckitp9rju007jnhiiejr19xd2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Vue/Tutorial/一、Vue基础核心" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Vue/Tutorial/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Vue/">Vue</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Vue/Tutorial/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/">一、Vue基础核心</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[]</a></p>
-<h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><p><a href="">[]</a></p>
-<h4 id="3-Vue"><a href="#3-Vue" class="headerlink" title="3. Vue"></a>3. Vue</h4><h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Vue/Tutorial/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/" data-id="ckitp9rjv007lnhii0n2ebdt7" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-Vue/Tutorial/四、Vue通信方式" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/24/Vue/Tutorial/%E5%9B%9B%E3%80%81Vue%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F/" class="article-date">
@@ -623,8 +123,9 @@
 <h4 id="4-Vue-通信方式"><a href="#4-Vue-通信方式" class="headerlink" title="4. Vue 通信方式"></a>4. Vue 通信方式</h4><p><a href="">[]</a></p>
 <h4 id="5-Vuex"><a href="#5-Vuex" class="headerlink" title="5. Vuex"></a>5. Vuex</h4><p><a href="">[]</a></p>
 <h4 id="6-Vue-服务端渲染"><a href="#6-Vue-服务端渲染" class="headerlink" title="6. Vue 服务端渲染"></a>6. Vue 服务端渲染</h4><p><a href="">[]</a></p>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a href="">[]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Vue/Tutorial/Vue%E6%95%99%E7%A8%8B/">[Vue教程]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#x6d;">&#x79;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#x6d;</a></p>
+<p>微信： 15872982855</p>
 
       
     </div>
@@ -973,9 +474,9 @@
 
 
   
-    <article id="post-Vue/Tags/一、Vue基础核心/1.2 Vue组件" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Vue/Tags/一、Vue基础核心/1.1 Vue 安装方式" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/24/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/1.2%20Vue%E7%BB%84%E4%BB%B6/" class="article-date">
+    <a href="/2020/10/24/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/1.1%20Vue%20%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F/" class="article-date">
   <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
 </a>
     
@@ -987,7 +488,145 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/1.2%20Vue%E7%BB%84%E4%BB%B6/">1.2 Vue组件</a>
+      <a class="article-title" href="/2020/10/24/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/1.1%20Vue%20%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F/">1.1 Vue 安装方式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-文档"><a href="#1-文档" class="headerlink" title="1. 文档"></a>1. 文档</h3><ol>
+<li>Vue.js 添加到项目中有三种主要方式： </li>
+</ol>
+<ul>
+<li>CDN package的形式导入</li>
+<li>插件形式引入</li>
+<li>npm 安装</li>
+<li>CLI构建</li>
+</ul>
+<h4 id="1-CDN-package的形式导入"><a href="#1-CDN-package的形式导入" class="headerlink" title="1. CDN package的形式导入"></a>1. CDN package的形式导入</h4><ul>
+<li><p>Vue 2.6.12版本安装</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Vue 3.0.4版本安装</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/vue@next&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-插件形式引入"><a href="#2-插件形式引入" class="headerlink" title="2. 插件形式引入"></a>2. 插件形式引入</h4><ul>
+<li>Vue 2.6.12版本安装</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">[下载网址]</a></p>
+<ul>
+<li>Vue 3.0.4版本安装</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://unpkg.com/vue@3.0.4/dist/vue.global.js">[下载网址]</a></p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-npm-安装"><a href="#3-npm-安装" class="headerlink" title="3. npm 安装"></a>3. npm 安装</h4><ul>
+<li><p>npm安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue@next</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-CLI构建"><a href="#4-CLI构建" class="headerlink" title="4. CLI构建"></a>4. CLI构建</h4><ul>
+<li><p>Vue CLI 3.0</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yarn global add @vue/cli@next</span><br><span class="line"></span><br><span class="line"><span class="comment"># OR</span></span><br><span class="line"></span><br><span class="line">npm install -g @vue/cli@next</span><br></pre></td></tr></table></figure></li>
+<li><p>更新Vue版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue upgrade --next</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-Vite"><a href="#5-Vite" class="headerlink" title="5. Vite"></a>5. Vite</h4><ol>
+<li>Vite是一个web开发构建工具，由于其原生 ES 模块导入方法，它允许快速提供代码</li>
+</ol>
+<ul>
+<li><p>使用yarn 安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yarn create vite-app [project-name]</span><br><span class="line"><span class="built_in">cd</span> [project-name]</span><br><span class="line">yarn </span><br><span class="line">yarn dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用npm安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm init vite-app [project-name]</span><br><span class="line"><span class="built_in">cd</span> [project-name]</span><br><span class="line">npm install </span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure></li>
+<li><p>在 npm 包的 dist/ 目录你将会找到很多不同的 Vue.js 构建版本</p>
+</li>
+</ul>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a href="">[一、Vue基础核心]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#x74;&#108;&#111;&#111;&#107;&#x2e;&#x63;&#x6f;&#109;">&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#x74;&#108;&#111;&#111;&#107;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p>微信： 15872982855</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/24/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/1.1%20Vue%20%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F/" data-id="ckiz97q5o0002loiidiesd436" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Vue/Tags/一、Vue基础核心/1.2 Vue 实例" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/24/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/1.2%20Vue%20%E5%AE%9E%E4%BE%8B/" class="article-date">
+  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/24/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/1.2%20Vue%20%E5%AE%9E%E4%BE%8B/">1.2 Vue实例</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[]</a></p>
+<h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4><p><a href="">[]</a></p>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a href="">[一、Vue核心基础]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#109;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#109;">&#x79;&#117;&#x61;&#110;&#109;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#109;</a></p>
+<p>微信： 15872982855</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/24/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/1.2%20Vue%20%E5%AE%9E%E4%BE%8B/" data-id="ckiz97q5r0004loiidu0a3832" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Vue/Tags/一、Vue基础核心/1.3 Vue组件" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/24/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/1.3%20Vue%E7%BB%84%E4%BB%B6/" class="article-date">
+  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/24/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/1.3%20Vue%E7%BB%84%E4%BB%B6/">1.3 Vue组件</a>
     </h1>
   
 
@@ -997,12 +636,14 @@
       
         <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[]</a></p>
 <h4 id="2-Component-组件"><a href="#2-Component-组件" class="headerlink" title="2. Component 组件"></a>2. Component 组件</h4><p><a href="">[]</a></p>
-<h4 id="3-Vue"><a href="#3-Vue" class="headerlink" title="3. Vue"></a>3. Vue</h4><h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a href="">[一、Vue核心基础]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#121;&#117;&#x61;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#x38;&#x38;&#64;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#111;&#109;">&#121;&#117;&#x61;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#x38;&#x38;&#64;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#111;&#109;</a></p>
+<p>微信： 15872982855</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/1.2%20Vue%E7%BB%84%E4%BB%B6/" data-id="ckitp9ro800e8nhiibbn3h0ke" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/24/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/1.3%20Vue%E7%BB%84%E4%BB%B6/" data-id="ckiz97q5t0006loiidspqh7u6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul>
@@ -1369,11 +1010,382 @@
 
 
   
+    <article id="post-VSCode/Tags/10. CSS Peek" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/10.%20CSS%20Peek/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/10.%20CSS%20Peek/">10. CSS Peek</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-CSS-Peek"><a href="#1-CSS-Peek" class="headerlink" title="1. CSS Peek"></a>1. CSS Peek</h4><ul>
+<li><p>可以追踪至样式表中 CSS 类和 ids 定义的地方;</p>
+</li>
+<li><p>当你在 HTML 文件中右键，单击选择Go to Definition 或者 Peek definition 选项，它便会给你发送样式设置的 CSS 代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSS Peek</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/05/0t0ukT.gif" alt="使用示意图"></p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#110;&#56;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#109;">&#x79;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#110;&#56;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/10.%20CSS%20Peek/" data-id="ckitp9rj3005wnhii45wnd474" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/11. Color Info" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/11.%20Color%20Info/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/11.%20Color%20Info/">11. Color Info</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Color-Info"><a href="#1-Color-Info" class="headerlink" title="1. Color Info"></a>1. Color Info</h4><ul>
+<li><p>获取颜色相关信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Color Info</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/05/0t0e00.gif" alt="使用示意图"></p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/11.%20Color%20Info/" data-id="ckitp9rj50060nhii628mdhhb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/13. HTML Boilerplate" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/13.%20HTML%20Boilerplate/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/13.%20HTML%20Boilerplate/">13. HTML Boilerplate</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-HTML-Boilerplate"><a href="#1-HTML-Boilerplate" class="headerlink" title="1.HTML Boilerplate"></a>1.HTML Boilerplate</h4><ul>
+<li><p>使用HTML模版插件，你就摆脱了为HTML新文件重新编写头部和正文标签的苦恼；</p>
+</li>
+<li><p>你只需在空文件中输入html，并按Tab键，即可生成干净的文档结构</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HTML Boilerplate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>示意图</p>
+<p><img src="https://yuanmin650304.github.io/2020/10/01/VS%20Code/13.HTML%20Boilerplate/" alt="示意图"></p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#107;&#x2e;&#99;&#x6f;&#109;">&#121;&#117;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#107;&#x2e;&#99;&#x6f;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/13.%20HTML%20Boilerplate/" data-id="ckitp9rj60061nhiifqg83o0m" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/14. Icon Fonts" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/14.%20Icon%20Fonts/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/14.%20Icon%20Fonts/">14. Icon Fonts</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Icon-Fonts"><a href="#1-Icon-Fonts" class="headerlink" title="1. Icon Fonts"></a>1. Icon Fonts</h4><ul>
+<li><p>能够在项目中添加图标字体;</p>
+</li>
+<li><p>支持超过 20 个热门的图标集;</p>
+</li>
+<li><p>包括了 Font Awesome、Ionicons、Glyphicons 和 Material Design Icons。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Icon Fonts</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/05/0t011J.gif" alt="示意图"></p>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#56;&#56;&#56;&#x38;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#109;">&#121;&#117;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#56;&#56;&#56;&#x38;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/14.%20Icon%20Fonts/" data-id="ckitp9rj70064nhii94up7rwz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/18. TODO 注释" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/18.%20TODO%20%E6%B3%A8%E9%87%8A/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/18.%20TODO%20%E6%B3%A8%E9%87%8A/">18. TODO 注释</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-TODO-Highlight"><a href="#1-TODO-Highlight" class="headerlink" title="1.TODO Highlight"></a>1.TODO Highlight</h4><ul>
+<li><p>在代码中标记出所有的 TODO 注释，以便更容易追踪任何未完成的业务；</p>
+</li>
+<li><p>默认的情况下，它会查找 TODO 和 FIXME 关键字;</p>
+</li>
+<li><p>当然，你也可以添加自定义表达式。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TODO Highlight</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/05/0t0UAK.gif" alt="示意图"></p>
+</li>
+</ul>
+<h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4.联系方式"></a>4.联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#x6d;&#x69;&#110;&#x38;&#56;&#56;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#111;&#x6d;">&#x79;&#117;&#x61;&#x6e;&#x6d;&#x69;&#110;&#x38;&#56;&#56;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/18.%20TODO%20%E6%B3%A8%E9%87%8A/" data-id="ckitp9rj90067nhiicqoz4i6r" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/22. Code Runner" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/22.%20Code%20Runner/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/22.%20Code%20Runner/">22. Code Runner</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/23/VSCode/Tutorial/VS%20Code%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">[VS Code 安装、配置与使用]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4.联系方式"></a>4.联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#110;&#109;&#105;&#110;&#x38;&#x38;&#x38;&#56;&#64;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;">&#x79;&#117;&#97;&#110;&#109;&#105;&#110;&#x38;&#x38;&#x38;&#56;&#64;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/22.%20Code%20Runner/" data-id="ckitp9rja006bnhiifgbl5v9n" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSCode/Tags/2.Compile Hero Plugin" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/VSCode/Tags/2.Compile%20Hero%20Plugin/" class="article-date">
+  <time datetime="2020-10-22T16:00:00.000Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/23/VSCode/Tags/2.Compile%20Hero%20Plugin/">2.Compile Hero Plugin</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-VS-Code-必备插件"><a href="#1-VS-Code-必备插件" class="headerlink" title="1. VS Code 必备插件"></a>1. VS Code 必备插件</h4><ul>
+<li>自动编译：less, sass, scss, typescript, jade, pug and jsx.</li>
+</ul>
+<h4 id="2-安装插件：略"><a href="#2-安装插件：略" class="headerlink" title="2. 安装插件：略"></a>2. 安装插件：略</h4><p><img src="https://s1.ax1x.com/2020/10/24/BVAHtx.png" alt="Compile Hero"></p>
+<ul>
+<li>编辑器右下角底部栏开关 Compile Hero 设置为: On</li>
+</ul>
+<h4 id="3-配置-Settings-json"><a href="#3-配置-Settings-json" class="headerlink" title="3. 配置 Settings.json"></a>3. 配置 Settings.json</h4><ul>
+<li><p>配置输出目录： <code>assert/js/</code></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&quot;compile-hero&quot;: &#123;</span><br><span class="line">  <span class="comment">//1.全局开关，true 为不开启自动编译， 默认 false 为开启自动编译</span></span><br><span class="line">  &quot;disable-compile-files-on-did-save-code&quot;: false,</span><br><span class="line">  &quot;notification-toggle&quot;: false,</span><br><span class="line">  <span class="comment">//2.javascript 输出的目录</span></span><br><span class="line">  &quot;javascript-output-directory&quot;: &quot;../assert/js/&quot;,</span><br><span class="line">  <span class="comment">//3.局部开关，true 为开启 javascript 自动编译，false 为不开启 javascript 自动编译</span></span><br><span class="line">  &quot;javascript-output-toggle&quot;: false,</span><br><span class="line">  &quot;typescript-output-directory&quot;: &quot;../assert/js/&quot;,</span><br><span class="line">  &quot;jtypescript-output-toggle&quot;: true,</span><br><span class="line">  <span class="comment">//4.sass 输出的目录</span></span><br><span class="line">  &quot;sass-output-directory&quot;: &quot;../assert/css/&quot;,</span><br><span class="line">  &quot;less-output-directory&quot;: &quot;../assert/css/&quot;,</span><br><span class="line">  <span class="comment">//5.局部开关，true 为开启 sass 自动编译，false 为不开启 sass 自动编译</span></span><br><span class="line">  &quot;sass-output-toggle&quot;: true,</span><br><span class="line">  &quot;less-output-toggle&quot;: true,</span><br><span class="line">  &quot;ignore&quot;: [&quot;src/test.js&quot;, &quot;*/test.scss&quot;, &quot;**/spec/*&quot;, &quot;**/src/**/*&quot;,&quot;*/less/*&quot;],</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Settings 配置示意图<br><img src="https://s1.ax1x.com/2020/10/24/BVZQ6U.png" alt="Settings"></p>
+</li>
+</ul>
+<h4 id="4-使用"><a href="#4-使用" class="headerlink" title="4. 使用"></a>4. 使用</h4><ul>
+<li><p>底边右下角设置, Compile Hero: On</p>
+<p><img src="https://img-blog.csdnimg.cn/20200829131927150.gif" alt="Compile Hero: On/Off"></p>
+</li>
+<li><p>按快捷键 (ctrl+s) 或者文件列表右键菜单选择 Compile File(s) 命令启动编译，将会在该文件的同级目录 assert/js 或者 assert/css 下生成编译后的文件，助你远离 webpack 和 gulp 等编译工具操作的繁琐；</p>
+</li>
+<li><p>按快捷键 (Ctrl+shift+I) 或者编辑文件选择 Format Document 将会帮你自动格式化文件；</p>
+<p><img src="https://img-blog.csdnimg.cn/20200829132027416.gif" alt="Format Document"></p>
+</li>
+<li><p>支持 less, scss, scss 等文件代码高亮；</p>
+</li>
+<li><p>支持在默认浏览器打开 html 文件；</p>
+</li>
+<li><p>支持编译Jade Pug</p>
+<p><img src="https://img-blog.csdnimg.cn/20200829131927150.gif" alt="Compile Jade"></p>
+</li>
+<li><p>支持压缩 javascript 和 css 文件</p>
+</li>
+<li><p>支持格式化 javascript, json, css, sass, 和 html 等文件；</p>
+</li>
+<li><p>可修改编译后目录和文件的输出位置: 文件列表点击插件 Setting =&gt;</p>
+<p><img src="https://s1.ax1x.com/2020/10/24/BVmwee.png" alt="Setting"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200829131958177.gif" alt="Setting"></p>
+</li>
+</ul>
+<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a href="">[VS Code 安装、配置与使用]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6.联系方式"></a>6.联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#x75;&#116;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#109;">&#x79;&#x75;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#x75;&#116;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/23/VSCode/Tags/2.Compile%20Hero%20Plugin/" data-id="ckitp9rjc006enhiih5l7hyhn" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/11/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/13/">Next &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/11/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/13/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -1394,7 +1406,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">59</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a><span class="tag-list-count">5</span></li></ul>
     </div>
   </div>
 
@@ -1404,7 +1416,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">272</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">262</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 
@@ -1417,23 +1429,23 @@
       <ul>
         
           <li>
+            <a href="/2020/12/18/Vue/Tutorial/%E4%B8%83.%20Vue%20API/">七. Vue API</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/18/Vue/Tags/%E4%B8%83.%20Vue%20API/7.1%20Vue%20%E5%BA%94%E7%94%A8%E9%85%8D%E7%BD%AEAPI/">7.1 Vue 应用配置API</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/18/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/Vue%20Computed%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E4%B8%8EWatch%E7%9B%91%E5%90%AC/">Vue $Getter与$setter方法</a>
+          </li>
+        
+          <li>
             <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/1.%20%E5%AF%B9%E8%B1%A1/5.1.1%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">5.1.1 面向对象的程序设计</a>
           </li>
         
           <li>
             <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/1.%20%E5%AF%B9%E8%B1%A1/5.1.2%20ECMAScript%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95/">5.1.2 ECMAScript类和对象的创建方法</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4%20ECMAScrip%E7%BB%A7%E6%89%BF/">5.4 ECMAScrip继承</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.1%20Prototype%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF_01/">5.4.1 Prototype原型链继承_01</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4.2%20Prototype%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF_02/">5.4.1 Prototype原型链继承_02</a>
           </li>
         
       </ul>
