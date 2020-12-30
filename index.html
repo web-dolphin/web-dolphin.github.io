@@ -94,9 +94,9 @@
 
 
   
-    <article id="post-JavaScript/Tags/五、Javacript 面向对象/Tags/2.原型/5.4 ECMAScript 原型链(二)" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/五、Javacript 面向对象/Tags/2.原型/5.2.2 ECMAScript 原型链(一)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.4%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/" class="article-date">
+    <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.2%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/" class="article-date">
   <time datetime="2020-12-27T16:00:00.000Z" itemprop="datePublished">2020-12-28</time>
 </a>
     
@@ -108,94 +108,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.4%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/">5.4 JavaScript原型与原型链(二)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-原型与原型链扩展"><a href="#1-原型与原型链扩展" class="headerlink" title="1. 原型与原型链扩展"></a>1. 原型与原型链扩展</h2><h3 id="1-构造函数"><a href="#1-构造函数" class="headerlink" title="1. 构造函数"></a>1. 构造函数</h3><ul>
-<li><p>构造函数本质是函数，只是通过<code>new</code>关键调用时，才构成构造函数；</p>
-</li>
-<li><p>通常情况下为了区别普通函数，常常将构造函数的首字母大写；</p>
-</li>
-<li><p>构造函数实例化对象时，同时创建了自己的原型对象： <code>prototype</code>，同时也为其实例对象创建了一个原型对象： <code>__proto__</code>；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">&#123;name,age&#125;</span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person(&#123;<span class="attr">name</span>: <span class="string">&quot;Andy&quot;</span>,<span class="attr">age</span>: <span class="number">12</span>&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(person);</span><br><span class="line"><span class="built_in">console</span>.log(person__proto__);</span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>实例对象的原型对象(<code>__proto__</code>)的引用地址与创建自己构造函数原型对象(<code>prototype</code>)的引用地址相同, 因此;</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Person.prototype === person__proto__);   <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>上述特性表明： </p>
-<ol>
-<li><p>在构造函数原型对象上添加任何属性，其实例对象的原型对象(<code>__proto__</code>)同样可以访问和共享，因为他们原本指向共同的内存；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Person.prototyoe.show = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.show();    <span class="comment">//&#x27;渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span></span><br><span class="line">person.show();              <span class="comment">//&#x27;渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在其实例对象上添加任何属性，其构造函数原型对象(<code>prototype</code>)同样可以访问和共享，因为他们原本指向共同的内存；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">person.__proto__.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;落霞与孤鹜齐飞秋水共长天一色&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.say();         <span class="comment">// &#x27;落霞与孤鹜齐飞秋水共长天一色&#x27;</span></span><br><span class="line">person.say();                   <span class="comment">// &#x27;落霞与孤鹜齐飞秋水共长天一色&#x27;</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-<li><p>构造函数同样存在一个原型对象(<code>__proto__</code>),其引用地址：创建它的构造函数(<code>Function</code>)的原型对象(<code>prototype</code>)</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Function</span>.prototype === Person__proto__);     <span class="comment">//true</span></span><br></pre></td></tr></table></figure></li>
-<li><p>构造函数<code>Person</code>的原型对象(<code>prototype</code>),存在两个属性： </p>
-<ol>
-<li><p><code>constructor</code>: 其指向构造函数<code>Person</code>本身；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Person.prototype.constructor === Person)   <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>__proto__</code>: 其指向了创建构造函数<code>Person</code>的原型对象(<code>prototype</code>)的构造函数： <code>Object</code>的原型对象<code>prototype</code>，也就是说： <code>Object</code>是<code>Person</code>的原型对象(<code>prototype</code>)的构造函数；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Person.prototype.__proto__ === <span class="built_in">Object</span>.prototype)    <span class="comment">//true</span></span><br></pre></td></tr></table></figure></li>
-<li><p>这样，<code>Object.prototype</code> 与 <code>Person.prototype.__proto__</code>;<code>Person.prototype</code> 与 <code>person.__proto__</code>之间构成了一个原型链;</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">&#123;name,age&#125;</span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person(&#123;<span class="attr">name</span>: <span class="string">&quot;Andy&quot;</span>,<span class="attr">age</span>: <span class="number">12</span>&#125;);</span><br><span class="line"></span><br><span class="line">person.__proto__.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;落霞与孤鹜齐飞秋水共长天一色&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.say();                 <span class="comment">//&#x27;落霞与孤鹜齐飞秋水共长天一色&#x27;</span></span><br><span class="line">person.say();                           <span class="comment">//&#x27;落霞与孤鹜齐飞秋水共长天一色&#x27;</span></span><br><span class="line"></span><br><span class="line">Person.prototype.show = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.show();                        <span class="comment">// &#x27;渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span></span><br><span class="line">person.show();                                  <span class="comment">//&#x27;渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.prototype.title = <span class="string">&quot;滕王阁序&quot;</span>; </span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.title);             <span class="comment">// &quot;滕王阁序&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype.__proto__.title);    <span class="comment">// &quot;滕王阁序&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(person.__proto__.__proto__.title);    <span class="comment">// &quot;滕王阁序&quot;</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-<li><p>请打开浏览器开发者工具： 仔细查看：<code>Person.prototype</code>,<code>person.__proto__</code> </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">&#123;name,age&#125;</span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person(&#123;<span class="attr">name</span>: <span class="string">&quot;Andy&quot;</span>,<span class="attr">age</span>: <span class="number">12</span>&#125;);</span><br><span class="line">person.__proto__.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;落霞与孤鹜齐飞秋水共长天一色&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.show = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.prototype.title = <span class="string">&quot;滕王阁序&quot;</span>; </span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person.__proto__);</span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>person.__proto__</code>与<code>Person.prototype</code></p>
-<p><img src="https://s3.ax1x.com/2020/12/31/rX50PO.png" alt="[person.__proto__]"></p>
-</li>
-<li><p><code>Object.prototype</code></p>
-<p><img src="https://s3.ax1x.com/2020/12/31/rXIuyd.png" alt="[Object.prototype]"></p>
-</li>
-</ul>
-<h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">[MDN 原型链]</a></p>
-<p><a href="">[5.2 ECMAScript原型]</a></p>
-<p><a href="">[5.3 JavaScript原型与原型链(一)]</a></p>
-<p>[[继承]]</p>
-<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h2><p>email: <a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
-<p>微信： 15879282850</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.4%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/" data-id="ckjbsp5sd0001ewnqgpe0chvh" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/五、Javacript 面向对象/Tags/2.原型/5.3 ECMAScript 原型链(一)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.3%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/" class="article-date">
-  <time datetime="2020-12-27T16:00:00.000Z" itemprop="datePublished">2020-12-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.3%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/">JavaScript原型与原型链</a>
+      <a class="article-title" href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.2%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/">5.2.2 JavaScript原型与原型链(一)</a>
     </h1>
   
 
@@ -327,13 +240,100 @@
 <p><a href="">[5.2 ECMAScript原型]</a></p>
 <p><a href="">[5.4 JavaScript原型与原型链(二)]</a></p>
 <p>[[继承]]</p>
-<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h2><p>email: <a href="mailto:&#121;&#x75;&#97;&#110;&#109;&#x69;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#111;&#x6d;">&#121;&#x75;&#97;&#110;&#109;&#x69;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h2><p>email: <a href="mailto:&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;">&#121;&#x75;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;</a></p>
 <p>微信： 15879282850</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.3%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/" data-id="ckjbsp5t30003ewnq7hat8iwg" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.2%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/" data-id="ckjbsyoa700023knq4jrn40mh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/五、Javacript 面向对象/Tags/2.原型/5.2.3 ECMAScript 原型链(二)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.3%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/" class="article-date">
+  <time datetime="2020-12-27T16:00:00.000Z" itemprop="datePublished">2020-12-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.3%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/">5.2.3 JavaScript原型与原型链(二)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-原型与原型链扩展"><a href="#1-原型与原型链扩展" class="headerlink" title="1. 原型与原型链扩展"></a>1. 原型与原型链扩展</h2><h3 id="1-构造函数"><a href="#1-构造函数" class="headerlink" title="1. 构造函数"></a>1. 构造函数</h3><ul>
+<li><p>构造函数本质是函数，只是通过<code>new</code>关键调用时，才构成构造函数；</p>
+</li>
+<li><p>通常情况下为了区别普通函数，常常将构造函数的首字母大写；</p>
+</li>
+<li><p>构造函数实例化对象时，同时创建了自己的原型对象： <code>prototype</code>，同时也为其实例对象创建了一个原型对象： <code>__proto__</code>；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">&#123;name,age&#125;</span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person(&#123;<span class="attr">name</span>: <span class="string">&quot;Andy&quot;</span>,<span class="attr">age</span>: <span class="number">12</span>&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(person);</span><br><span class="line"><span class="built_in">console</span>.log(person__proto__);</span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>实例对象的原型对象(<code>__proto__</code>)的引用地址与创建自己构造函数原型对象(<code>prototype</code>)的引用地址相同, 因此;</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Person.prototype === person__proto__);   <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上述特性表明： </p>
+<ol>
+<li><p>在构造函数原型对象上添加任何属性，其实例对象的原型对象(<code>__proto__</code>)同样可以访问和共享，因为他们原本指向共同的内存；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Person.prototyoe.show = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.show();    <span class="comment">//&#x27;渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span></span><br><span class="line">person.show();              <span class="comment">//&#x27;渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在其实例对象上添加任何属性，其构造函数原型对象(<code>prototype</code>)同样可以访问和共享，因为他们原本指向共同的内存；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">person.__proto__.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;落霞与孤鹜齐飞秋水共长天一色&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.say();         <span class="comment">// &#x27;落霞与孤鹜齐飞秋水共长天一色&#x27;</span></span><br><span class="line">person.say();                   <span class="comment">// &#x27;落霞与孤鹜齐飞秋水共长天一色&#x27;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>构造函数同样存在一个原型对象(<code>__proto__</code>),其引用地址：创建它的构造函数(<code>Function</code>)的原型对象(<code>prototype</code>)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Function</span>.prototype === Person__proto__);     <span class="comment">//true</span></span><br></pre></td></tr></table></figure></li>
+<li><p>构造函数<code>Person</code>的原型对象(<code>prototype</code>),存在两个属性： </p>
+<ol>
+<li><p><code>constructor</code>: 其指向构造函数<code>Person</code>本身；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Person.prototype.constructor === Person)   <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>__proto__</code>: 其指向了创建构造函数<code>Person</code>的原型对象(<code>prototype</code>)的构造函数： <code>Object</code>的原型对象<code>prototype</code>，也就是说： <code>Object</code>是<code>Person</code>的原型对象(<code>prototype</code>)的构造函数；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Person.prototype.__proto__ === <span class="built_in">Object</span>.prototype)    <span class="comment">//true</span></span><br></pre></td></tr></table></figure></li>
+<li><p>这样，<code>Object.prototype</code> 与 <code>Person.prototype.__proto__</code>;<code>Person.prototype</code> 与 <code>person.__proto__</code>之间构成了一个原型链;</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">&#123;name,age&#125;</span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person(&#123;<span class="attr">name</span>: <span class="string">&quot;Andy&quot;</span>,<span class="attr">age</span>: <span class="number">12</span>&#125;);</span><br><span class="line"></span><br><span class="line">person.__proto__.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;落霞与孤鹜齐飞秋水共长天一色&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.say();                 <span class="comment">//&#x27;落霞与孤鹜齐飞秋水共长天一色&#x27;</span></span><br><span class="line">person.say();                           <span class="comment">//&#x27;落霞与孤鹜齐飞秋水共长天一色&#x27;</span></span><br><span class="line"></span><br><span class="line">Person.prototype.show = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.show();                        <span class="comment">// &#x27;渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span></span><br><span class="line">person.show();                                  <span class="comment">//&#x27;渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.prototype.title = <span class="string">&quot;滕王阁序&quot;</span>; </span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.title);             <span class="comment">// &quot;滕王阁序&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype.__proto__.title);    <span class="comment">// &quot;滕王阁序&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(person.__proto__.__proto__.title);    <span class="comment">// &quot;滕王阁序&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>请打开浏览器开发者工具： 仔细查看：<code>Person.prototype</code>,<code>person.__proto__</code> </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">&#123;name,age&#125;</span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person(&#123;<span class="attr">name</span>: <span class="string">&quot;Andy&quot;</span>,<span class="attr">age</span>: <span class="number">12</span>&#125;);</span><br><span class="line">person.__proto__.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;落霞与孤鹜齐飞秋水共长天一色&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.show = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;渔舟唱晚 响穷彭蠡之滨 雁阵惊寒 声断衡阳之浦&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.prototype.title = <span class="string">&quot;滕王阁序&quot;</span>; </span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person.__proto__);</span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>person.__proto__</code>与<code>Person.prototype</code></p>
+<p><img src="https://s3.ax1x.com/2020/12/31/rX50PO.png" alt="[person.__proto__]"></p>
+</li>
+<li><p><code>Object.prototype</code></p>
+<p><img src="https://s3.ax1x.com/2020/12/31/rXIuyd.png" alt="[Object.prototype]"></p>
+</li>
+</ul>
+<h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">[MDN 原型链]</a></p>
+<p><a href="">[5.2 ECMAScript原型]</a></p>
+<p><a href="">[5.3 JavaScript原型与原型链(一)]</a></p>
+<p>[[继承]]</p>
+<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h2><p>email: <a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#x6d;">&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#x6d;</a></p>
+<p>微信： 15879282850</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.3%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/" data-id="ckjbsyoa900033knq8jnn9yjr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -1781,11 +1781,11 @@
           </li>
         
           <li>
-            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.4%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/">5.4 JavaScript原型与原型链(二)</a>
+            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.2%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/">5.2.2 JavaScript原型与原型链(一)</a>
           </li>
         
           <li>
-            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.3%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/">JavaScript原型与原型链</a>
+            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.3%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/">5.2.3 JavaScript原型与原型链(二)</a>
           </li>
         
           <li>

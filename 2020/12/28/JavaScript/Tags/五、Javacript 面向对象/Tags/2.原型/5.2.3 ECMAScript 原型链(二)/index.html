@@ -5,19 +5,19 @@
   
 
   
-  <title>5.4 JavaScript原型与原型链(二) | Coding Your Wonderful Life</title>
+  <title>5.2.3 JavaScript原型与原型链(二) | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1. 原型与原型链扩展1. 构造函数 构造函数本质是函数，只是通过new关键调用时，才构成构造函数；  通常情况下为了区别普通函数，常常将构造函数的首字母大写；  构造函数实例化对象时，同时创建了自己的原型对象： prototype，同时也为其实例对象创建了一个原型对象： __proto__； 12345function Person(&amp;#123;name,age&amp;#125;) &amp;#123;&amp;#1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="5.4 JavaScript原型与原型链(二)">
-<meta property="og:url" content="https://weboyster.github.io/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.4%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/index.html">
+<meta property="og:title" content="5.2.3 JavaScript原型与原型链(二)">
+<meta property="og:url" content="https://weboyster.github.io/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.3%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
 <meta property="og:description" content="1. 原型与原型链扩展1. 构造函数 构造函数本质是函数，只是通过new关键调用时，才构成构造函数；  通常情况下为了区别普通函数，常常将构造函数的首字母大写；  构造函数实例化对象时，同时创建了自己的原型对象： prototype，同时也为其实例对象创建了一个原型对象： __proto__； 12345function Person(&amp;#123;name,age&amp;#125;) &amp;#123;&amp;#1">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://s3.ax1x.com/2020/12/31/rX50PO.png">
 <meta property="og:image" content="https://s3.ax1x.com/2020/12/31/rXIuyd.png">
 <meta property="article:published_time" content="2020-12-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-30T19:09:36.830Z">
+<meta property="article:modified_time" content="2020-12-30T19:17:24.882Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
@@ -70,9 +70,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-JavaScript/Tags/五、Javacript 面向对象/Tags/2.原型/5.4 ECMAScript 原型链(二)" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-JavaScript/Tags/五、Javacript 面向对象/Tags/2.原型/5.2.3 ECMAScript 原型链(二)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.4%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/" class="article-date">
+    <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.3%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/" class="article-date">
   <time datetime="2020-12-27T16:00:00.000Z" itemprop="datePublished">2020-12-28</time>
 </a>
     
@@ -84,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      5.4 JavaScript原型与原型链(二)
+      5.2.3 JavaScript原型与原型链(二)
     </h1>
   
 
@@ -139,13 +139,13 @@
 <p><a href="">[5.2 ECMAScript原型]</a></p>
 <p><a href="">[5.3 JavaScript原型与原型链(一)]</a></p>
 <p>[[继承]]</p>
-<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h2><p>email: <a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h2><p>email: <a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#x6d;">&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#x6d;</a></p>
 <p>微信： 15879282850</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.4%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/" data-id="ckjbsp5sd0001ewnqgpe0chvh" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.3%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/" data-id="ckjbsyoa900033knq8jnn9yjr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -156,19 +156,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/12/30/Today's%20Excises/Documents%20for%20Web%20Development/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.2%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          (no title)
+          5.2.2 JavaScript原型与原型链(一)
         
       </div>
     </a>
   
   
-    <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.3%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/12/18/Vue/Tutorial/%E4%B8%83.%20Vue%20API/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">JavaScript原型与原型链</div>
+      <div class="article-nav-title">七. Vue API</div>
     </a>
   
 </nav>
@@ -221,11 +221,11 @@
           </li>
         
           <li>
-            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.4%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/">5.4 JavaScript原型与原型链(二)</a>
+            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.2%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/">5.2.2 JavaScript原型与原型链(一)</a>
           </li>
         
           <li>
-            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.3%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/">JavaScript原型与原型链</a>
+            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.3%20ECMAScript%20%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/">5.2.3 JavaScript原型与原型链(二)</a>
           </li>
         
           <li>
