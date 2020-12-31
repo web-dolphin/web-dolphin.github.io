@@ -7,15 +7,15 @@
   
   <title>5.1.3.3 工厂模式 | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 文档目录2.参考文档[5.1.3 对象的创建] 3.联系方式Email：&amp;#x79;&amp;#x75;&amp;#97;&amp;#110;&amp;#x6d;&amp;#105;&amp;#110;&amp;#56;&amp;#56;&amp;#56;&amp;#x38;&amp;#x40;&amp;#111;&amp;#x75;&amp;#116;&amp;#108;&amp;#x6f;&amp;#111;&amp;#107;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#x6d;">
+  <meta name="description" content="1. 文档目录1. 原始工厂模式 在函数中创建Object实例对象，然后通过实例对象定义属性和方法；  通过return将实例对象返回；  通过对函数传递不同参数，实现定义实例；   123456789101112131415function createPerson(name,age,family)&amp;#123;	const object &#x3D; new Object()	object.name &#x3D;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="5.1.3.3 工厂模式">
 <meta property="og:url" content="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.3%20%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="1. 文档目录2.参考文档[5.1.3 对象的创建] 3.联系方式Email：&amp;#x79;&amp;#x75;&amp;#97;&amp;#110;&amp;#x6d;&amp;#105;&amp;#110;&amp;#56;&amp;#56;&amp;#56;&amp;#x38;&amp;#x40;&amp;#111;&amp;#x75;&amp;#116;&amp;#108;&amp;#x6f;&amp;#111;&amp;#107;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#x6d;">
+<meta property="og:description" content="1. 文档目录1. 原始工厂模式 在函数中创建Object实例对象，然后通过实例对象定义属性和方法；  通过return将实例对象返回；  通过对函数传递不同参数，实现定义实例；   123456789101112131415function createPerson(name,age,family)&amp;#123;	const object &#x3D; new Object()	object.name &#x3D;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-31T09:10:45.613Z">
+<meta property="article:modified_time" content="2020-12-31T09:39:54.103Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
@@ -89,8 +89,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-文档目录"><a href="#1-文档目录" class="headerlink" title="1. 文档目录"></a>1. 文档目录</h2><h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h2><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3%20ECMAScript%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA/">[5.1.3 对象的创建]</a></p>
-<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#110;&#x6d;&#105;&#110;&#56;&#56;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#x75;&#97;&#110;&#x6d;&#105;&#110;&#56;&#56;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+        <h2 id="1-文档目录"><a href="#1-文档目录" class="headerlink" title="1. 文档目录"></a>1. 文档目录</h2><h3 id="1-原始工厂模式"><a href="#1-原始工厂模式" class="headerlink" title="1. 原始工厂模式"></a>1. 原始工厂模式</h3><ul>
+<li><p>在函数中创建Object实例对象，然后通过实例对象定义属性和方法；</p>
+</li>
+<li><p>通过return将实例对象返回；</p>
+</li>
+<li><p>通过对函数传递不同参数，实现定义实例；</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params">name,age,family</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">const</span> object = <span class="keyword">new</span> <span class="built_in">Object</span>()</span><br><span class="line">	object.name = name;</span><br><span class="line">	object.age = age;</span><br><span class="line">	object.family = family;</span><br><span class="line">	object.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		alert(<span class="string">&quot;My name is :&quot;</span> + <span class="built_in">this</span>.name);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> object</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> person1 = createPerson(<span class="string">&quot;Andy&quot;</span>,<span class="number">20</span>,[<span class="string">&quot;Alax&quot;</span>,<span class="string">&quot;Tomas&quot;</span>,<span class="string">&quot;Baiden&quot;</span>]);</span><br><span class="line"><span class="keyword">const</span> person2 = createPerson(<span class="string">&quot;Tomas&quot;</span>,<span class="number">12</span>,[<span class="string">&quot;Alax&quot;</span>,<span class="string">&quot;Andy&quot;</span>,<span class="string">&quot;Baiden&quot;</span>]);</span><br><span class="line"><span class="built_in">console</span>.log(person1 <span class="keyword">instanceof</span> <span class="built_in">Object</span>) 						<span class="comment">// true</span></span><br><span class="line">person1.say()</span><br><span class="line">person1.family</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>instanceof无法判断它是谁的实例；</li>
+<li>只能判断他是对象；</li>
+<li>构造函数都可以判断出是谁的实例；</li>
+</ul>
+<h3 id="2-工厂模式创建对象的改进"><a href="#2-工厂模式创建对象的改进" class="headerlink" title="2. 工厂模式创建对象的改进"></a>2. 工厂模式创建对象的改进</h3><ul>
+<li><p>在上例中，将方法提取出来共享：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">say</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="string">&quot;My name is :&quot;</span> + <span class="built_in">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params">name,age,family</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">const</span> object = <span class="keyword">new</span> <span class="built_in">Object</span>()</span><br><span class="line">	object.name = name;</span><br><span class="line">	object.age = age;</span><br><span class="line">	object.say = say;</span><br><span class="line">	object.family = family;</span><br><span class="line">	<span class="keyword">return</span> object</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> person1 = createPerson(<span class="string">&quot;Andy&quot;</span>,<span class="number">20</span>,[<span class="string">&quot;Alax&quot;</span>,<span class="string">&quot;Tomas&quot;</span>,<span class="string">&quot;Baiden&quot;</span>]);</span><br><span class="line"><span class="keyword">const</span> person2 = createPerson(<span class="string">&quot;Tomas&quot;</span>,<span class="number">12</span>,[<span class="string">&quot;Alax&quot;</span>,<span class="string">&quot;Andy&quot;</span>,<span class="string">&quot;Baiden&quot;</span>]);</span><br><span class="line"><span class="built_in">console</span>.log(person1 <span class="keyword">instanceof</span> <span class="built_in">Object</span>) 						<span class="comment">// true</span></span><br><span class="line">person1.say()</span><br><span class="line">person1.family</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h2><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3%20ECMAScript%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA/">[5.1.3 对象的创建]</a></p>
+<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#110;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#x63;&#111;&#x6d;">&#x79;&#x75;&#97;&#110;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#x63;&#111;&#x6d;</a></p>
 
       
     </div>
@@ -198,7 +218,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2020 Yuan Min<br>
+      &copy; 2021 Yuan Min<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

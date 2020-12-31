@@ -7,15 +7,15 @@
   
   <title>5.1.3.8 原型模式 | Coding Your Wonderful Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 文档目录2.参考文档[5.1.3 对象的创建] 3.联系方式Email：&amp;#121;&amp;#117;&amp;#x61;&amp;#x6e;&amp;#x6d;&amp;#105;&amp;#x6e;&amp;#56;&amp;#56;&amp;#56;&amp;#56;&amp;#64;&amp;#111;&amp;#117;&amp;#x74;&amp;#x6c;&amp;#111;&amp;#111;&amp;#107;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;">
+  <meta name="description" content="1. 文档目录1. prototype原型方式 prototype原型创建对象  原型模式优点：所有对象实例共享它的属性和方法   1234567891011function Person()&amp;#123;&amp;#125;Person.prototype.name &#x3D; &quot;Andy&quot;;Person.prototype.age &#x3D; 20;Person.prototype.family &#x3D;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="5.1.3.8 原型模式">
 <meta property="og:url" content="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.8%20%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Coding Your Wonderful Life">
-<meta property="og:description" content="1. 文档目录2.参考文档[5.1.3 对象的创建] 3.联系方式Email：&amp;#121;&amp;#117;&amp;#x61;&amp;#x6e;&amp;#x6d;&amp;#105;&amp;#x6e;&amp;#56;&amp;#56;&amp;#56;&amp;#56;&amp;#64;&amp;#111;&amp;#117;&amp;#x74;&amp;#x6c;&amp;#111;&amp;#111;&amp;#107;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;">
+<meta property="og:description" content="1. 文档目录1. prototype原型方式 prototype原型创建对象  原型模式优点：所有对象实例共享它的属性和方法   1234567891011function Person()&amp;#123;&amp;#125;Person.prototype.name &#x3D; &quot;Andy&quot;;Person.prototype.age &#x3D; 20;Person.prototype.family &#x3D;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-31T09:13:23.818Z">
+<meta property="article:modified_time" content="2020-12-31T09:47:40.507Z">
 <meta property="article:author" content="Yuan Min">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
@@ -89,8 +89,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-文档目录"><a href="#1-文档目录" class="headerlink" title="1. 文档目录"></a>1. 文档目录</h2><h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h2><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3%20ECMAScript%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA/">[5.1.3 对象的创建]</a></p>
-<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#56;&#56;&#56;&#56;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#56;&#56;&#56;&#56;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#x63;&#x6f;&#x6d;</a></p>
+        <h2 id="1-文档目录"><a href="#1-文档目录" class="headerlink" title="1. 文档目录"></a>1. 文档目录</h2><h3 id="1-prototype原型方式"><a href="#1-prototype原型方式" class="headerlink" title="1. prototype原型方式"></a>1. prototype原型方式</h3><ul>
+<li><p>prototype原型创建对象</p>
+</li>
+<li><p>原型模式优点：所有对象实例共享它的属性和方法</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">Person.prototype.name = <span class="string">&quot;Andy&quot;</span>;</span><br><span class="line">Person.prototype.age = <span class="number">20</span>;</span><br><span class="line">Person.prototype.family = [<span class="string">&quot;Tomas&quot;</span>,<span class="string">&quot;Alax&quot;</span>,<span class="string">&quot;Jhon&quot;</span>];</span><br><span class="line">Person.prototype.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&quot;My name is : &quot;</span> + <span class="built_in">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype);		<span class="comment">//&#123;name: &#x27;Andy&#x27;, age: 20, family: Array(3), say: ƒ, constructor: ƒ&#125;</span></span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person();			</span><br><span class="line">person.say();						<span class="comment">// My name is : Andy</span></span><br><span class="line"><span class="built_in">console</span>.log(person.name);			<span class="comment">// Andy</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>原型模式依然可以定义自己的属性和方法,可以覆盖原型对象上的同名属性</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">Person.prototype.name = <span class="string">&quot;Andy&quot;</span>;</span><br><span class="line">Person.prototype.age = <span class="number">20</span>;</span><br><span class="line">Person.prototype.family = [<span class="string">&quot;Tomas&quot;</span>,<span class="string">&quot;Alax&quot;</span>,<span class="string">&quot;Jhon&quot;</span>];</span><br><span class="line">Person.prototype.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&quot;My name is : &quot;</span> + <span class="built_in">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype);		<span class="comment">//&#123;name: &#x27;Andy&#x27;, age: 20, family: Array(3), say: ƒ, constructor: ƒ&#125;</span></span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person();			</span><br><span class="line">person.say();						<span class="comment">// My name is : Andy</span></span><br><span class="line">person.name = <span class="string">&quot;Tomad&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.name);			<span class="comment">// Tomas</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-prototype原型方式的缺点"><a href="#2-prototype原型方式的缺点" class="headerlink" title="2. prototype原型方式的缺点"></a>2. prototype原型方式的缺点</h3><ul>
+<li><p>首先，这个构造函数没有参数；</p>
+</li>
+<li><p>不能通过给构造函数传递参数来初始化属性的值；</p>
+</li>
+<li><p>现实中对象却很少被多个实例共享属性；</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Car</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">Car.prototype.color = <span class="string">&quot;blue&quot;</span>;</span><br><span class="line">Car.prototype.doors = <span class="number">4</span>;</span><br><span class="line">Car.prototype.mpg = <span class="number">25</span>;</span><br><span class="line">Car.prototype.drivers = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&quot;Mike&quot;</span>,<span class="string">&quot;John&quot;</span>);</span><br><span class="line">Car.prototype.showColor = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="built_in">this</span>.color);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> oCar1 = <span class="keyword">new</span> Car();</span><br><span class="line"><span class="keyword">var</span> oCar2 = <span class="keyword">new</span> Car();</span><br><span class="line"></span><br><span class="line">oCar1.drivers.push(<span class="string">&quot;Bill&quot;</span>);</span><br><span class="line"></span><br><span class="line">alert(oCar1.drivers);	<span class="comment">//输出 &quot;Mike,John,Bill&quot;</span></span><br><span class="line">alert(oCar2.drivers);	<span class="comment">//输出 &quot;Mike,John,Bill&quot;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h2><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3%20ECMAScript%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA/">[5.1.3 对象的创建]</a></p>
+<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#121;&#117;&#97;&#x6e;&#109;&#x69;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#111;&#107;&#46;&#99;&#111;&#109;">&#121;&#117;&#97;&#x6e;&#109;&#x69;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#111;&#107;&#46;&#99;&#111;&#109;</a></p>
 
       
     </div>
@@ -198,7 +219,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2020 Yuan Min<br>
+      &copy; 2021 Yuan Min<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
