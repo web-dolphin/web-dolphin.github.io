@@ -67,9 +67,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-JavaScript/Tags/五、Javacript 面向对象/2.原型/5.2 ECMAScript 原型" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/8.函数/2.8.10 Function构造函数" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2%20ECMAScript%20%E5%8E%9F%E5%9E%8B/" class="article-date">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.10%20Function%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" class="article-date">
   <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
@@ -81,7 +81,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2%20ECMAScript%20%E5%8E%9F%E5%9E%8B/">5.2 ECMAScript 原型</a>
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.10%20Function%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">2.8.10 Function构造函数</a>
     </h1>
   
 
@@ -89,16 +89,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-ECMAScript原型与原型链-一"><a href="#1-ECMAScript原型与原型链-一" class="headerlink" title="1. ECMAScript原型与原型链(一)"></a>1. ECMAScript原型与原型链(一)</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.1%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/">[5.2.1 ECMAScript原型与原型链(一)]</a></p>
-<h4 id="2-ECMAScript原型与原型-二"><a href="#2-ECMAScript原型与原型-二" class="headerlink" title="2. ECMAScript原型与原型(二)"></a>2. ECMAScript原型与原型(二)</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.2%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/">[5.2.2 ECMAScript原型与原型链(二)]</a></p>
-<h4 id="3-ECMAScript原型与原型链-三"><a href="#3-ECMAScript原型与原型链-三" class="headerlink" title="3. ECMAScript原型与原型链(三))"></a>3. ECMAScript原型与原型链(三))</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.2%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/">[5.2.3 ECMAScript原型与原型链(三))]</a></p>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/JavaScript%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2/">[JavaScript 教学大纲]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#x79;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#56;&#x38;&#x38;&#64;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#111;&#109;">&#x79;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#56;&#x38;&#x38;&#64;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#111;&#109;</a></p>
+        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2%20ECMAScript%20%E5%8E%9F%E5%9E%8B/" data-id="ckjce34sz0006vcnq0ex57uac" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.10%20Function%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" data-id="ckjcmsun7001w4cnqcaj98k01" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -110,9 +107,9 @@
 
 
   
-    <article id="post-JavaScript/Tags/五、Javacript 面向对象/2.原型/5.2.1 ECMAScript原型与原型链(一)" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/8.函数/2.8.11 ECMAScript函数声明与函数表达式之间的区别" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2.1%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/" class="article-date">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.11%20ECMAScript%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/" class="article-date">
   <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
@@ -124,7 +121,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2.1%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/">5.2.1 ECMAScript原型与原型链(一)</a>
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.11%20ECMAScript%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/">2.8.11 ECMAScript函数声明与函数表达式之间的区别</a>
     </h1>
   
 
@@ -132,156 +129,338 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-函数声明中的两个属性"><a href="#1-函数声明中的两个属性" class="headerlink" title="1. 函数声明中的两个属性"></a>1. 函数声明中的两个属性</h4><ol>
-<li>JavaScript函数在设计时规定，每一个函数在声明时都存在两个属性</li>
-</ol>
-<ul>
-<li><p><code>constructor</code>属性: 称之为构造器，指向创建该函数的构造函数；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="built_in">console</span>.log(Person.constructor)             <span class="comment">//Function ()&#123;native code&#125;</span></span><br></pre></td></tr></table></figure>
+        <h4 id="1-函数定的两种方式"><a href="#1-函数定的两种方式" class="headerlink" title="1.函数定的两种方式"></a>1.函数定的两种方式</h4><ul>
+<li><p>函数声明</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">funDeclaration</span>(<span class="params"></span>)</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>prototype</code>属性： 称之为原型对象，指向原型链上的另一个对象；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype)              <span class="comment">//原型对象</span></span><br></pre></td></tr></table></figure>
+<li><p>函数表达式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> funExpress = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h4 id="2-原型对象"><a href="#2-原型对象" class="headerlink" title="2. 原型对象"></a>2. 原型对象</h4><ol>
-<li><p>一个函数在声明之后，浏览器会自动按照一定的规则创建一个对象，这个对象就叫做原型对象，这个原型对象就储存在了内存当中；</p>
+<h4 id="2-ECMAScript函数声明"><a href="#2-ECMAScript函数声明" class="headerlink" title="2. ECMAScript函数声明"></a>2. ECMAScript函数声明</h4><ul>
+<li><p>函数声明，不仅具有与var变量声明一样的特性，变量提升机制，而且，函数声明具有对函数引用的赋值；</p>
 </li>
-<li><p>函数的prototype属性称之为：原型对象；</p>
+<li><p>即用函数声明创建的函数，在函数定义时就实现了变量提升和对其引用的赋值；<br>因此，函数的调用提前到函数定义之前，依然能正常运行；</p>
+</li>
+<li><p>例如</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> declaration = funDeclaration(<span class="string">&quot;Declaration&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">funDeclaration</span>(<span class="params">type</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> type === <span class="string">&quot;Declaration&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(declaration)           <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-ECMAScript函数表达式"><a href="#2-ECMAScript函数表达式" class="headerlink" title="2.ECMAScript函数表达式"></a>2.ECMAScript函数表达式</h4><ul>
+<li><p>通过函数表达式定义的函数，不具备函数提升机制，它只是在代码运行时才能将函数的引用赋值给变量；</p>
+</li>
+<li><p>因此，函数的调用提前到函数定义之前运行时，将会报错；</p>
+</li>
+<li><p>调用提升案例</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> express = funExpress(<span class="string">&quot;Express&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> funExpress = <span class="function"><span class="keyword">function</span> (<span class="params">type</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> type === <span class="string">&quot;Express&quot;</span></span><br><span class="line">&#125; </span><br><span class="line"><span class="built_in">console</span>.log(express)        <span class="comment">//Uncaught ReferenceError: Cannot access &#x27;funExpress&#x27; before initialization</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用在表达式后</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> funExpress = <span class="function"><span class="keyword">function</span> (<span class="params">type</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> type === <span class="string">&quot;Express&quot;</span></span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">let</span> express = funExpress(<span class="string">&quot;Express&quot;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(express)        <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.12%20ECMAScript%E5%A0%86%E6%A0%88%E5%86%85%E5%AD%98%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F/">[2.12 ECMAScript堆栈内存、变量与作用域]</a></p>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.11%20ECMAScript%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/" data-id="ckjcmsun8001y4cnq118725vh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/8.函数/2.8 ECMAScript函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8%20ECMAScript%E5%87%BD%E6%95%B0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">2.8 ECMAScript函数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="2-8-1-ECMAScript函数的定义"><a href="#2-8-1-ECMAScript函数的定义" class="headerlink" title="2.8.1 ECMAScript函数的定义"></a>2.8.1 ECMAScript函数的定义</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.1%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89/">[2.8.1 ECMAScript函数的定义]</a></p>
+<h3 id="2-8-2-ECMAScript函数的调用"><a href="#2-8-2-ECMAScript函数的调用" class="headerlink" title="2.8.2 ECMAScript函数的调用"></a>2.8.2 ECMAScript函数的调用</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.2%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8/">[2.8.2 ECMAScript函数的调用]</a></p>
+<h3 id="2-8-3-ECMAScript函数的参数"><a href="#2-8-3-ECMAScript函数的参数" class="headerlink" title="2.8.3 ECMAScript函数的参数"></a>2.8.3 ECMAScript函数的参数</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.3%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0/">[2.8.3 ECMAScript函数的参数]</a></p>
+<h3 id="2-8-4-ECMAScript函数的返回值"><a href="#2-8-4-ECMAScript函数的返回值" class="headerlink" title="2.8.4 ECMAScript函数的返回值"></a>2.8.4 ECMAScript函数的返回值</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.4%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/">[2.8.4 ECMAScript函数的返回值]</a></p>
+<h3 id="2-8-5-ECMAScript闭包"><a href="#2-8-5-ECMAScript闭包" class="headerlink" title="2.8.5 ECMAScript闭包"></a>2.8.5 ECMAScript闭包</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.5%20ECMAScript%E9%97%AD%E5%8C%85/">[2.8.5 ECMAScript闭包]</a></p>
+<h3 id="2-8-6-ECMAScript函数的属性和方法"><a href="#2-8-6-ECMAScript函数的属性和方法" class="headerlink" title="2.8.6 ECMAScript函数的属性和方法"></a>2.8.6 ECMAScript函数的属性和方法</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.6%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/">[2.8.6 ECMAScript函数的属性和方法]</a></p>
+<h3 id="2-8-7-ECMAScript-构造函数"><a href="#2-8-7-ECMAScript-构造函数" class="headerlink" title="2.8.7 ECMAScript 构造函数"></a>2.8.7 ECMAScript 构造函数</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.7%20ECMAScript%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">[2.8.7ECMAScript 构造函数]</a></p>
+<h3 id="2-8-8-ECMAScript-函数式编程"><a href="#2-8-8-ECMAScript-函数式编程" class="headerlink" title="2.8.8 ECMAScript 函数式编程"></a>2.8.8 ECMAScript 函数式编程</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.8%20ECMAScript%20%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/">[2.8.7 ECMAScript 构造函数]</a></p>
+<h3 id="2-8-9-ECMAScript-作为命名空间的函数"><a href="#2-8-9-ECMAScript-作为命名空间的函数" class="headerlink" title="2.8.9 ECMAScript 作为命名空间的函数"></a>2.8.9 ECMAScript 作为命名空间的函数</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.9%20ECMAScript%20%E4%BD%9C%E4%B8%BA%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E7%9A%84%E5%87%BD%E6%95%B0/">[2.8.9 ECMAScript 作为命名空间的函数]</a></p>
+<h3 id="2-8-10-Function构造函数"><a href="#2-8-10-Function构造函数" class="headerlink" title="2.8.10 Function构造函数"></a>2.8.10 Function构造函数</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.10%20Function%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">[2.8.10 Function构造函数]</a></p>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8%20ECMAScript%E5%87%BD%E6%95%B0/" data-id="ckjcmsun900204cnq2le6hyoz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/8.函数/2.8.2 ECMAScript函数的调用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.2%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.2%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8/">2.8.2 ECMAScript函数的调用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-函数调用方式"><a href="#1-函数调用方式" class="headerlink" title="1.函数调用方式"></a>1.函数调用方式</h4><ul>
+<li>作为函数调用</li>
+<li>作为方法调用</li>
+<li>作为构造函数调用</li>
+<li>通过call()和apply()间接调用</li>
+</ul>
+<h4 id="2-函数调用"><a href="#2-函数调用" class="headerlink" title="2. 函数调用"></a>2. 函数调用</h4><ul>
+<li><p>简单调用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fn(&#123;<span class="attr">x</span>:<span class="number">1</span>&#125;);</span><br><span class="line">family([<span class="string">&quot;Andy&quot;</span>,<span class="string">&quot;Toams&quot;</span>,<span class="string">&quot;Jhon&quot;</span>]);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>一个表达式有多个函数表达式组成</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> total = distance(<span class="number">0</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">1</span>) + distance(<span class="number">2</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> probability = factorial(<span class="number">5</span>)/factorial(<span class="number">13</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参数列表是由逗号分隔的零个或多个函数表达式组成</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">&#123;name,age,family&#125;</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;name,age,family&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> name = person(&#123;<span class="attr">name</span>:<span class="string">&quot;Andy&quot;</span>,<span class="attr">age</span>:<span class="number">20</span>,<span class="attr">family</span>:[<span class="string">&quot;Tomas&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Alax&quot;</span>]&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(name)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-方法调用"><a href="#3-方法调用" class="headerlink" title="3. 方法调用"></a>3. 方法调用</h4><ul>
+<li><p>方法的调用表达式本身是一个对象属性访问表达式；</p>
+</li>
+<li><p>方法调用的参数和返回值与普通函数调用完全相同；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> object = &#123;</span><br><span class="line">  name : <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">    age:<span class="number">20</span>,</span><br><span class="line">    say:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;my name is: &quot;</span> + <span class="built_in">this</span>.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">object.say()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方法调用与函数调用的区别： 在与调用上下文。方法调用的属性表达式由两部分组成： 对象和属性名称，因此，法法调用的上下文是调用方法的对象，函数体可以使用关键字this引用该对象；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> calculator = &#123;<span class="comment">//对象直接量</span></span><br><span class="line">  operator1: <span class="number">10</span>,</span><br><span class="line">  operator2: <span class="number">20</span>,</span><br><span class="line">  add: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.result = <span class="built_in">this</span>.operator1 + <span class="built_in">this</span>.operator2;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.result</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> sum = calculator.add()</span><br><span class="line"><span class="built_in">console</span>.log(sum)</span><br><span class="line"><span class="built_in">console</span>.log(calculator.result)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用方括号访问对象属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> calculator = &#123;<span class="comment">//对象直接量</span></span><br><span class="line">  operator1: <span class="number">10</span>,</span><br><span class="line">  operator2: <span class="number">20</span>,</span><br><span class="line">  add: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.result = <span class="built_in">this</span>.operator1 + <span class="built_in">this</span>.operator2;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.result</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> sum = calculator[<span class="string">&quot;add&quot;</span>]()</span><br><span class="line"><span class="built_in">console</span>.log(sum)</span><br><span class="line"><span class="built_in">console</span>.log(calculator[<span class="string">&quot;result&quot;</span>])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方法调用中更复杂的属性访问表达式</p>
+</li>
+<li><p>案例一</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  name: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">  age: <span class="number">20</span>,</span><br><span class="line">  say: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="string">&quot;My name is: &quot;</span> + <span class="built_in">this</span>.name)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> name = person[<span class="string">&quot;name&quot;</span>].toUpperCase()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(name)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>案例二</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span>  &#123;</span><br><span class="line">    name: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">    say: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;My name is:&#x27;</span> + <span class="built_in">this</span>.name)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">fn().say()      <span class="comment">// My name is Andy</span></span><br></pre></td></tr></table></figure></li>
+<li><p>方法和this关键字是面向对象编程的核心，任何函数只要作为方法调用都会传入一个隐式的实参-对象，方法调用的母体就是这个对象；</p>
+</li>
+<li><p>this是一个关键字，不是变量，不允许给this赋值；</p>
+</li>
+<li><p>方法链</p>
+<ul>
+<li>当方法的返回值是一个对象，这个对象就可以继续调用它的方法，这种方法调用序列中每次的调用结果都是另外方法调用表达式的组成部分；</li>
+<li>当方法的调用不需要返回值时，最好直接返回this。如果在设计中的API中一直采用这种方式，使用API就可以进行”链式调用”风格的变成，在这种编程风格中，只要指定一侧要调用的对象即可，余下的方法都可以基于此进行调用；</li>
+<li>不要将方法的”链式调用”，与构造函数的”链式调用”混为一谈；</li>
+<li>对象中的this不受作用域限制，嵌套的函数不会从调用它的函数中继承this；</li>
+<li>如果嵌套函数作为方法调用，其this的值指向调用它的对象；</li>
+<li>如果嵌套函数作为函数调用，其this值<code>不是全局对象</code>(非严格模式下)<code>就是undefined</code>(严格模式下)；</li>
+<li>错误认识： 误认为调用嵌套函数时this指向调用外层函数的上下文；</li>
+<li><code>如果想访问这个外部函数的this值，需要将this值赋值给一个变量,由于这个变量与内部嵌套函数在同一个作用域，通常使用that或者self接受this值；</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;                    <span class="comment">//对象字面量obj</span></span><br><span class="line">  m: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;               <span class="comment">//对象中的方法m</span></span><br><span class="line">    <span class="keyword">let</span> self = <span class="built_in">this</span>;           <span class="comment">//将this赋值给self</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span> === obj)   <span class="comment">//&quot;true&quot;, this就是obj</span></span><br><span class="line">    f()                          <span class="comment">//调用f函数</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>)</span>&#123;                <span class="comment">//定义一个嵌套函数f</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="built_in">this</span> === obj)  <span class="comment">//&quot;false&quot;,this的值是全局函数或者undefined</span></span><br><span class="line">      <span class="built_in">console</span>.log(self === obj)  <span class="comment">//&quot;true&quot;,self指向外部函数的this值</span></span><br><span class="line">    &#125;                     </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.m()                           <span class="comment">//方法调用  </span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-构造函数调用"><a href="#4-构造函数调用" class="headerlink" title="4. 构造函数调用"></a>4. 构造函数调用</h4><ul>
+<li><p>如果函数或者方法调用时带有new关键字，就构成构造函数调用，其函数称为构造函数；</p>
+</li>
+<li><p>构造函数调用和普通函数调用以及方法调用在实参处理，调用上下文和返回值方面都不相同；</p>
+<ol>
+<li>如果构造函数存在形参，调用方法与函数和方法调用相同；</li>
+<li>如果构造函数不存在形参，可以省略圆括号，下例中两种调用方法是等价的；</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> object = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="keyword">let</span> object = <span class="keyword">new</span> <span class="built_in">Object</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>构造函数调用创建一个新的空对象，这个对象继承自构造函数的prototype属性，构造函数试图初始化这个新创建的对象，并将这个实例对象用做其调用上下文，因此构造函数可以使用this关键字来引用这个新创建的对象。</p>
+</li>
+</ul>
+<h4 id="5-间接调用"><a href="#5-间接调用" class="headerlink" title="5. 间接调用"></a>5. 间接调用</h4><ol>
+<li><p>JavaScript对象包含两个方法，都显示地指定调用所需的this值，也就是说，任何函数都可以作为任意对象的方法来调用，哪怕这个函数不是那个对象的方法。两个方法都可以指定调用的实参</p>
+</li>
+<li><p>通过call()调用</p>
 </li>
 </ol>
 <ul>
-<li><p>ECMAScript规定，每一个函数都有一个prototype对象属性，指向原型链上的另一个对象；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype)   </span><br></pre></td></tr></table></figure>
+<li><p>call()方法使用自己的实参列表作为函数的实参。</p>
+</li>
+<li><p>语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> object = &#123;&#125;</span><br><span class="line">fn.call(object)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ol start="3">
-<li>构造函数原型(prototype)</li>
+<li>通过apply()调用</li>
 </ol>
 <ul>
-<li><p>任何函数通过new关键字调用时，这个函数就称之为构造函数；</p>
+<li><p>apply()方法则要求以数组的形式传入参数</p>
 </li>
-<li><p>构造函数同样存在一个prototype对象属性，我们称之为：原型对象；</p>
-</li>
-</ul>
-<ol start="4">
-<li><p>原型对象同样存在一个<code>constructor</code>属性，指向了构造函数本身；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person()</span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype.constructor === Person)      <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h4 id="3-构造函数与实例对象"><a href="#3-构造函数与实例对象" class="headerlink" title="3. 构造函数与实例对象"></a>3. 构造函数与实例对象</h4><ol>
-<li><p>所有函数都是通过Function构造函数实例化生成；</p>
-</li>
-<li><p>Object对象也是Function构造函数实例对象；</p>
-</li>
-<li><p>任何函数内部都存在一个构造器: <code>constructor</code>,实例对象都是通过它创建的；</p>
-</li>
-</ol>
-<ul>
-<li><p>示例</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">consoe.log(<span class="built_in">Object</span>.constructor === <span class="built_in">Function</span>)     <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span> <span class="keyword">instanceof</span> <span class="built_in">Function</span>)         <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="4">
-<li>所有JS内置对象都是<code>Object</code>构造函数的实例对象；</li>
-</ol>
-<ul>
-<li><ul>
-<li>示例</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span>)            <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Date</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span>)            <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span>)          <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">String</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span>)          <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(&#123;&#125; <span class="keyword">instanceof</span> <span class="built_in">Object</span>)              <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span> <span class="keyword">instanceof</span> <span class="built_in">Function</span>)            <span class="comment">//false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Date</span> <span class="keyword">instanceof</span> <span class="built_in">Function</span>)            <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span> <span class="keyword">instanceof</span> <span class="built_in">Function</span>)          <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">String</span> <span class="keyword">instanceof</span> <span class="built_in">Function</span>)          <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(&#123;&#125; <span class="keyword">instanceof</span> <span class="built_in">Function</span>)              <span class="comment">//flase</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="5">
-<li>自定义构造函数都是Object构造函数的实例对象；</li>
-</ol>
-<ul>
-<li><p>示例</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person()</span><br><span class="line"><span class="built_in">console</span>.log(Person <span class="keyword">instanceof</span> <span class="built_in">Object</span>)          <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> Person)                     <span class="comment">//function</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> person)                      <span class="comment">//object</span></span><br></pre></td></tr></table></figure>
+<li><p>语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> object = &#123;&#125;</span><br><span class="line">fn.apply(object)</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h4 id="4-实例对象原型与自定义构造函数原型的关系"><a href="#4-实例对象原型与自定义构造函数原型的关系" class="headerlink" title="4. 实例对象原型与自定义构造函数原型的关系"></a>4. 实例对象原型与自定义构造函数原型的关系</h4><ol>
-<li>每一个实例对象原型(<code>__proto__</code>)与创建它的构造函数原型(<code>prototype</code>)指向同一个属性</li>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.12Call()%E6%96%B9%E6%B3%95%E4%B8%8EApply()%E6%96%B9%E6%B3%95/">[2.8.12Call()方法与Apply()方法]</a></p>
+<h4 id="6-参考文档"><a href="#6-参考文档" class="headerlink" title="6. 参考文档"></a>6. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="7-联系方式"><a href="#7-联系方式" class="headerlink" title="7. 联系方式"></a>7. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.2%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8/" data-id="ckjcmsuna00224cnqb2ts89ti" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/8.函数/2.8.3 ECMAScript函数的参数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.3%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.3%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0/">2.8.3 ECMAScript函数的参数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-形参"><a href="#1-形参" class="headerlink" title="1.形参"></a>1.形参</h3><h4 id="1-1-形参类型"><a href="#1-1-形参类型" class="headerlink" title="1.1 形参类型"></a>1.1 形参类型</h4><ol>
+<li>函数定义时并没有对形参类型进行指定，也没有对实参类型进行检查，因此，参数的类型可以是任意值；</li>
+<li>函数定义时并没有对形参数量进行指定，当是实参数量与形参数量不匹配时，如何显式测试实参类型以避免非法实参传入函数：</li>
 </ol>
 <ul>
-<li><p>这就是为什么由同一个自定义构造函数创建的不同实例对象能够继承自定义构造函数的prototype属性和方法；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> Person()</span><br><span class="line"><span class="built_in">console</span>.log(p.__proto__ === Person.prototype)       <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<li><p>当函数调用时传入的实参数量少于形参数量时，剩余的形参将被设置为undefined;</p>
 </li>
-<li><p>案例</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Point</span>(<span class="params">x,y</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.x = x,</span><br><span class="line">  <span class="built_in">this</span>.y = y</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> Point(<span class="number">2</span>,<span class="number">2</span>);</span><br><span class="line">Point.prototype.r = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.sqrt(<span class="built_in">this</span>.x * <span class="built_in">this</span>.x + <span class="built_in">this</span>.y * <span class="built_in">this</span>.y);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(p.r()) </span><br></pre></td></tr></table></figure>
+<li><p>函数调用时形参是否可选以及是否可省略，应当给省略的参数赋值一个合理的默认值，以保持较好的适应性；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> o = &#123;</span><br><span class="line">  name: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">  age: <span class="number">20</span>,</span><br><span class="line">  say: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;Hello Function!&quot;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">o.gender = <span class="string">&quot;male&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPropertyNames</span>(<span class="params">o,<span class="comment">/*optional*/</span>a</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// if(a === undefined) a = []          //如果未定义，则使用新数组</span></span><br><span class="line">  a = a || []                            <span class="comment">//等同于上句代码</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> property <span class="keyword">in</span> o) a.push(property);</span><br><span class="line">  <span class="built_in">console</span>.log(a)</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> a = getPropertyNames(o);         <span class="comment">//将o的属性存储到一个新的数组</span></span><br><span class="line">getPropertyNames(o.gender,a)         <span class="comment">//将p的属性追加至数组a中</span></span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<ol start="2">
-<li>实例对象原型(proto)</li>
-</ol>
-<ul>
-<li><p>通过new关键字调用的构造函数所创建的实例对象，也存在一个原型，我们不妨称之为实例对象原型(proto)</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person()</span><br><span class="line"><span class="built_in">console</span>.log(person.constructor === Person)                  <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(person.__proto__ === Person.prototype)          <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<li><p>第一个实参是真值就返回第一个实参，否则就返回第二个实参，如果省略了第二个实参(null or undefined)就返回空数组，并赋值给a;</p>
+</li>
+<li><p>需要敬爱嗯可选实参放在参数列表的末尾，因为，当其他程序员调用你的程序时，时没有办法省略第一个实参，而传入第二个实参的；</p>
+</li>
+<li><p>同样需要注意在函数定义时，使用注释<code>/*optional*/</code>强调形参是可选的；</p>
 </li>
 </ul>
 <ol start="3">
-<li>实例对象的<code>constructor</code>属性指向自定义构造函数本身</li>
+<li>实参对象实现参数传递</li>
+</ol>
+<h4 id="1-2-Arguments参数"><a href="#1-2-Arguments参数" class="headerlink" title="1.2 Arguments参数"></a>1.2 Arguments参数</h4><ol>
+<li><p>在函数体内，标识符arguments指向实参对象的引用，实参对象是一个类数组对象；</p>
+</li>
+<li><p>通过数字下标就能访问传入函数的实参值-arguments[i]；</p>
+</li>
+<li><p>arguments同样包含也个length属性，用以标识其所包含元素的个数；</p>
+</li>
+<li><p>实参对象允许函数可以操作任意数量的实参；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">max</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> max = <span class="built_in">Number</span>.NEGATIVE_INFINITY;</span><br><span class="line">  <span class="comment">// 遍历实参，查找并记录最大值</span></span><br><span class="line">  <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i = <span class="number">0</span>; i&lt; <span class="built_in">arguments</span>.length; i++</span>)</span> &#123;</span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params"><span class="built_in">arguments</span>[i] &gt; max</span>)</span> &#123;</span><br><span class="line">      max = <span class="built_in">arguments</span>[i] </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> max</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> largest = max(<span class="number">20</span>,<span class="number">10</span>,<span class="number">200</span>,<span class="number">300</span>,<span class="number">1000</span>)</span><br><span class="line"><span class="built_in">console</span>.log(largest)</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <ul>
-<li><p>实例对象是自定义构造函数实例化；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> <span class="function"><span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="built_in">console</span>.log(p.constructor === Person)       <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<li><p>案例二： 求任意数值和</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSum</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> sum = <span class="number">0</span>;</span><br><span class="line">  <span class="comment">// 遍历实参，查找并记录最大值</span></span><br><span class="line">  <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i = <span class="number">0</span>; i&lt; <span class="built_in">arguments</span>.length; i++</span>)</span> &#123;</span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params"><span class="keyword">typeof</span> <span class="built_in">arguments</span>[i] === <span class="string">&quot;number&quot;</span></span>)</span>&#123;</span><br><span class="line">      sum += <span class="built_in">arguments</span>[i]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> sum</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = getSum(<span class="number">20</span>,<span class="number">10</span>,<span class="number">5</span>,<span class="number">15</span>,<span class="string">&#x27;Andy&#x27;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(result)</span><br></pre></td></tr></table></figure></li>
+<li><p>arguments实参对象，可以是任何类型的参数</p>
 </li>
-</ul>
-<ol start="4">
-<li>自定义构造函数的原型(<code>prototype</code>)存在一个属性<code>constructor</code>指向<code>Function</code>函数</li>
-</ol>
-<ul>
-<li><p>揭示自定义构造函数是Function构造函数实例对象</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> <span class="function"><span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="built_in">console</span>.log(Persin.constructor === <span class="built_in">Function</span>)       <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="5">
-<li>Object构造函数也存在一个<code>constructor</code>,同样指向了<code>Function</code>函数</li>
-</ol>
-<ul>
-<li><p>揭示Object对象是Function构造函数实例对象</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.constructor === <span class="built_in">Function</span>)       <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="6">
-<li>结论: Object构造函数和自定义构造函数都是由Function函数的实例对象</li>
-</ol>
-<ul>
-<li><p>自定义构造函数的原型(<code>prototype</code>)的<code>constructor</code>属性 与 Object构造函数的<code>constructor</code>属性,指向了相同的<code>Function</code>函数;</p>
-</li>
-<li><p>Object对象的构造器与自定义构造函数的构造器都指向了Function</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(person.constructor === Person)                     <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.constructor === Person.constructor);        <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.constructor === <span class="built_in">Function</span>)                   <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Function函数通过<code>constructor</code>构造器创建了函数、Object对象和自定义构造函数，自定义构造函数通过构造器<code>constructor</code>创建了实例对象；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.constructor === <span class="built_in">Function</span>);        <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log([].constructor);                    <span class="comment">//function Array()&#123;&#125; </span></span><br><span class="line"><span class="built_in">console</span>.log(&#123;&#125;.constructor);                     <span class="comment">//function Object()&#123;&#125;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>实例对象由自定义构造函数的<code>constructor</code>构造器创建；</p>
-</li>
-<li><p>示例</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(person.constructor === Person)                     <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(p.constructor.constructor === <span class="built_in">Function</span>);           <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<li><p>对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getObject</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i = <span class="number">0</span>; i&lt; <span class="built_in">arguments</span>.length; i++</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">arguments</span>[i])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">getObject(&#123;<span class="attr">name</span>: <span class="string">&quot;andy&quot;</span>,<span class="attr">age</span>: <span class="number">20</span>&#125;)</span><br></pre></td></tr></table></figure></li>
+<li><p>数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getArray</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i = <span class="number">0</span>; i&lt; <span class="built_in">arguments</span>.length; i++</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">arguments</span>[i])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">getArray([<span class="string">&quot;Hello&quot;</span>,<span class="string">&quot;World&quot;</span>,<span class="number">12</span>,<span class="literal">null</span>,<span class="literal">undefined</span>,&#123;<span class="attr">name</span>:<span class="string">&#x27;Andy&#x27;</span>,<span class="attr">age</span>: <span class="number">20</span>&#125;])</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h4 id="5-函数与对象的关系"><a href="#5-函数与对象的关系" class="headerlink" title="5. 函数与对象的关系"></a>5. 函数与对象的关系</h4><ul>
-<li><p>函数是对象构造的，对象也是函数构造的，俩者即是函数也是对象；</p>
+<h3 id="2-实参"><a href="#2-实参" class="headerlink" title="2.实参"></a>2.实参</h3><ol>
+<li><p>数字类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">num</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(num)</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="number">12</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>字符串类型</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(str)</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="string">&quot;Hello JavaScript!&quot;</span>)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>这是为什么构造函数它是一个函数却返回一个对象，俩者是互相继承的关系</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Function</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span>)           <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span> <span class="keyword">instanceof</span> <span class="built_in">Function</span>)           <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<li><p>布尔类型</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">isTrue</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(isTrue)</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="literal">false</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>null类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">nul</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(nul)</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="literal">null</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>undefined类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">under</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(under)</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="literal">undefined</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(arr)</span><br><span class="line">&#125;</span><br><span class="line">fn([<span class="string">&quot;Andy&quot;</span>,<span class="string">&quot;Tomas&quot;</span>,<span class="string">&quot;Jhon&quot;</span>])</span><br></pre></td></tr></table></figure></li>
+<li><p>对象</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> object = &#123;</span><br><span class="line">  name: <span class="string">&quot;Bear&quot;</span>,</span><br><span class="line">  location: <span class="string">&quot;Arctic&quot;</span>,</span><br><span class="line">  eat: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">object</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(object)</span><br><span class="line">&#125;</span><br><span class="line">fn(object)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">callback</span>)</span>&#123;</span><br><span class="line">  <span class="comment">//调用funct</span></span><br><span class="line">  <span class="keyword">let</span> result = funct(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(result)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//定义函数funct</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">funct</span>(<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line">fn()</span><br></pre></td></tr></table></figure>
 
 </li>
-</ul>
-<h3 id="6-参考文档"><a href="#6-参考文档" class="headerlink" title="6.参考文档"></a>6.参考文档</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">[MDN 原型链]</a></p>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.2%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/">[5.2.2 ECMAScript原型与原型链(二)]</a></p>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.3%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%89)/">[5.2.3 ECMAScript原型与原型链(三)]</a></p>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4%20ECMAScrip%E7%BB%A7%E6%89%BF/">[5.4 ECMAScript继承]</a></p>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2%20ECMAScript%20%E5%8E%9F%E5%9E%8B/">[5.2 ECMAScript 原型]</a></p>
-<h3 id="7-联系方式"><a href="#7-联系方式" class="headerlink" title="7.联系方式"></a>7.联系方式</h3><p>Email：<a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#x69;&#x6e;&#x38;&#56;&#56;&#x38;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#99;&#111;&#109;">&#121;&#x75;&#97;&#x6e;&#109;&#x69;&#x6e;&#x38;&#56;&#56;&#x38;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#99;&#111;&#109;</a></p>
+</ol>
+<h3 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h3 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2.1%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/" data-id="ckjce34t10008vcnq9o684p4h" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.3%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0/" data-id="ckjcmsunb00244cnq7hzkgarn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -293,9 +472,9 @@
 
 
   
-    <article id="post-JavaScript/Tags/五、Javacript 面向对象/3.类和模块/5.3 ECMAScript类和模块" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/8.函数/2.8.12Call()方法与Apply()方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.%E7%B1%BB%E5%92%8C%E6%A8%A1%E5%9D%97/5.3%20ECMAScript%E7%B1%BB%E5%92%8C%E6%A8%A1%E5%9D%97/" class="article-date">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.12Call()%E6%96%B9%E6%B3%95%E4%B8%8EApply()%E6%96%B9%E6%B3%95/" class="article-date">
   <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
@@ -307,7 +486,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.%E7%B1%BB%E5%92%8C%E6%A8%A1%E5%9D%97/5.3%20ECMAScript%E7%B1%BB%E5%92%8C%E6%A8%A1%E5%9D%97/">5.3 ECMAScript类和模块</a>
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.12Call()%E6%96%B9%E6%B3%95%E4%B8%8EApply()%E6%96%B9%E6%B3%95/">2.8.12Call()方法与Apply()方法</a>
     </h1>
   
 
@@ -315,234 +494,366 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h3><h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">[五、Javacript 面向对象]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h3><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.%E7%B1%BB%E5%92%8C%E6%A8%A1%E5%9D%97/5.3%20ECMAScript%E7%B1%BB%E5%92%8C%E6%A8%A1%E5%9D%97/" data-id="ckjce34td000evcnq4pp59oi6" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/五、Javacript 面向对象/1. 对象/5.1.3.1 内置构造函数创建对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.1%20%E5%86%85%E7%BD%AE%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.1%20%E5%86%85%E7%BD%AE%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/">5.1.3.1 内置构造函数创建对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-文档目录"><a href="#1-文档目录" class="headerlink" title="1. 文档目录"></a>1. 文档目录</h2><h3 id="1-Object"><a href="#1-Object" class="headerlink" title="1. Object"></a>1. Object</h3><ul>
-<li><p>原始方式创建对象，属性和方法可以在对象创建后动态定义；</p>
-</li>
-<li><p>new Object()等同于对象字面量{}；</p>
-</li>
-<li><p>通过new关键字，创建实例化Object对象；</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">person.name = <span class="string">&quot;Andy&quot;</span>;</span><br><span class="line">person.age = <span class="number">20</span>;</span><br><span class="line">person.family = [<span class="string">&quot;Alax&quot;</span>,<span class="string">&quot;Tomas&quot;</span>,<span class="string">&quot;Baiden&quot;</span>];</span><br><span class="line">person.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="string">&quot;My name is :&quot;</span> + <span class="built_in">this</span>.name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>当Object实例化对象没有参数时，可以省略括号；</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> object = <span class="keyword">new</span> <span class="built_in">Object</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用同一接口创建多个对象时，会产生大量重复代码;</p>
-</li>
-</ul>
-<h3 id="2-Function"><a href="#2-Function" class="headerlink" title="2. Function"></a>2. Function</h3><ul>
-<li><p>任何函数都是由内置<code>Function</code>构造函数创建的；</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(fn.__proto__ === <span class="built_in">Function</span>.prototype);   <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.10%20Functions%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.10 Functions内置对象]</a></p>
-</li>
-</ul>
-<h3 id="3-Array"><a href="#3-Array" class="headerlink" title="3. Array"></a>3. Array</h3><ul>
-<li><p>参考文档： <a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/7.%E6%95%B0%E7%BB%84/2.7%20ECMAScript%E6%95%B0%E7%BB%84/">[2.7 ECMAScript数组]</a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = <span class="keyword">new</span> <span class="built_in">Array</span></span><br><span class="line"><span class="built_in">console</span>.log(array.__proto__ === <span class="built_in">Array</span>.prototype);               <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.prototype.__proto__ === <span class="built_in">Object</span>.prototype);    <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.__proto__);                        <span class="comment">//null</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.__proto__ === <span class="built_in">Function</span>.prototype);           <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="4-String"><a href="#4-String" class="headerlink" title="4. String"></a>4. String</h3><ul>
-<li>同 3. Array</li>
-<li>参考文档： <a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.2%20String%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.2 String内置对象]</a></li>
-</ul>
-<h3 id="5-Boolean"><a href="#5-Boolean" class="headerlink" title="5. Boolean"></a>5. Boolean</h3><ul>
-<li>同 3. Array</li>
-<li>参考文档： <a href="">[2.11.3 Boolean内置对象]</a></li>
-</ul>
-<h3 id="6-Number"><a href="#6-Number" class="headerlink" title="6. Number"></a>6. Number</h3><ul>
-<li>同 3. Array</li>
-</ul>
-<p><a href="">[2.11.5 Number内置对象]</a></p>
-<h3 id="7-Date"><a href="#7-Date" class="headerlink" title="7. Date"></a>7. Date</h3><ul>
-<li>同 3. Array</li>
-<li>参考文档： <a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.8%20Date%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.8 Date内置对象]</a></li>
-</ul>
-<h3 id="8-RegExp"><a href="#8-RegExp" class="headerlink" title="8. RegExp"></a>8. RegExp</h3><ul>
-<li>同 3. Array</li>
-<li>参考文档： <a href="">[2.11.7 RegExp内置对象]</a></li>
-</ul>
-<h3 id="9-Error"><a href="#9-Error" class="headerlink" title="9. Error"></a>9. Error</h3><ul>
-<li>同 3. Array</li>
-</ul>
-<h3 id="10-EvalError"><a href="#10-EvalError" class="headerlink" title="10. EvalError"></a>10. EvalError</h3><ul>
-<li>同 3. Array</li>
-</ul>
-<h3 id="11-RangeError"><a href="#11-RangeError" class="headerlink" title="11. RangeError"></a>11. RangeError</h3><ul>
-<li>同 3. Array</li>
-</ul>
-<h3 id="12-ReferenceError"><a href="#12-ReferenceError" class="headerlink" title="12. ReferenceError"></a>12. ReferenceError</h3><ul>
-<li>同 3. Array</li>
-</ul>
-<h3 id="13-SyntaxError"><a href="#13-SyntaxError" class="headerlink" title="13. SyntaxError"></a>13. SyntaxError</h3><ul>
-<li>同 3. Array</li>
-</ul>
-<h3 id="14-TypeError"><a href="#14-TypeError" class="headerlink" title="14. TypeError"></a>14. TypeError</h3><ul>
-<li>同 3. Array</li>
-</ul>
-<h3 id="15-URIError"><a href="#15-URIError" class="headerlink" title="15. URIError"></a>15. URIError</h3><ul>
-<li>同 3. Array</li>
-</ul>
-<h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h2><p><a href="">[5.1.3 对象的创建]</a></p>
-<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#x79;&#117;&#97;&#x6e;&#109;&#105;&#110;&#56;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#111;&#109;">&#x79;&#117;&#97;&#x6e;&#109;&#105;&#110;&#56;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.1%20%E5%86%85%E7%BD%AE%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/" data-id="ckjci5eih000180nq308m2x0a" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/五、Javacript 面向对象/1. 对象/5.1.3 ECMAScript 对象的创建" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3%20ECMAScript%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3%20ECMAScript%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA/">5.1.3 ECMAScript 对象的创建</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-文档目录"><a href="#1-文档目录" class="headerlink" title="1. 文档目录"></a>1. 文档目录</h2><h3 id="1-内置构造函数创建对象"><a href="#1-内置构造函数创建对象" class="headerlink" title="1. 内置构造函数创建对象"></a>1. 内置构造函数创建对象</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.1%20%E5%86%85%E7%BD%AE%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/">[5.1.3.1 内置构造函数创建对象]</a></p>
-<h3 id="2-字面量创建对象"><a href="#2-字面量创建对象" class="headerlink" title="2. 字面量创建对象"></a>2. 字面量创建对象</h3><p><a href="">[5.1.3.2 字面量创建对象]</a></p>
-<h3 id="3-工厂模式"><a href="#3-工厂模式" class="headerlink" title="3. 工厂模式"></a>3. 工厂模式</h3><p><a href="">[5.1.3.3 工厂模式]</a></p>
-<h3 id="4-构造函数模式"><a href="#4-构造函数模式" class="headerlink" title="4. 构造函数模式"></a>4. 构造函数模式</h3><p><a href="">[5.1.3.4 构造函数模式]</a></p>
-<h3 id="5-寄生构造函数模式"><a href="#5-寄生构造函数模式" class="headerlink" title="5. 寄生构造函数模式"></a>5. 寄生构造函数模式</h3><p><a href="">[5.1.3.5 寄生构造函数模式]</a></p>
-<h3 id="6-稳妥构造函数模式"><a href="#6-稳妥构造函数模式" class="headerlink" title="6. 稳妥构造函数模式"></a>6. 稳妥构造函数模式</h3><p><a href="">[5.1.3.6 稳妥构造函数模式]</a></p>
-<h3 id="7-组合使用构造函数模式和原型模式"><a href="#7-组合使用构造函数模式和原型模式" class="headerlink" title="7. 组合使用构造函数模式和原型模式"></a>7. 组合使用构造函数模式和原型模式</h3><p><a href="">[5.1.3.7 组合使用构造函数模式和原型模式]</a></p>
-<h3 id="8-原型模式"><a href="#8-原型模式" class="headerlink" title="8. 原型模式"></a>8. 原型模式</h3><p><a href="">[5.1.3.8 原型模式]</a></p>
-<h3 id="9-动态原型模式"><a href="#9-动态原型模式" class="headerlink" title="9. 动态原型模式"></a>9. 动态原型模式</h3><p><a href="">[5.1.3.9 动态原型模式]</a></p>
-<h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h2><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">[五、Javacript 面向对象]</a></p>
-<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#110;&#x38;&#56;&#x38;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#x6f;&#x6f;&#107;&#x2e;&#99;&#x6f;&#109;">&#121;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#110;&#x38;&#56;&#x38;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#x6f;&#x6f;&#107;&#x2e;&#99;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3%20ECMAScript%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA/" data-id="ckjcm49s80000d0nqean95vcn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/Tags/11.内置对象/2.11.10 Function内置对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.10%20Function%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.10%20Function%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11.10 Function内置对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-Function对象"><a href="#1-Function对象" class="headerlink" title="1. Function对象"></a>1. Function对象</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><ul>
-<li><p>创建String对象的语法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 2.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[[]]()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 3.Array对象方法</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1. concate()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="2">
-<li><p>join()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">3. pop()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>push()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">5. shift()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>unshift()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">7. slice()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>splice()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">9. sort()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
-<li><p>toSource()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">11. toString()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
-<li><p>toLocalString()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">13. valueOf()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-
-</li>
+        <h4 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h4><ol>
+<li>JavaScript对象包含两个方法，都显示地指定调用所需的this值，也就是说，任何函数都可以作为任意对象的方法来调用，哪怕这个函数不是那个对象的方法。两个方法都可以指定调用的实参；</li>
+<li>如果一个函数不是 JavaScript 对象的方法，那么它就是全局对象的函数</li>
 </ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#97;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;">&#121;&#117;&#97;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#x38;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<h4 id="2-Call-方法"><a href="#2-Call-方法" class="headerlink" title="2.Call()方法"></a>2.Call()方法</h4><ul>
+<li><p>案例一： 全局函数作为对象person的方法调用(注意this指向)</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;My name is: &quot;</span> + <span class="built_in">this</span>.name + <span class="string">&quot;, and my age is: &quot;</span> + <span class="built_in">this</span>.age + <span class="string">&quot;years old!&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  name: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">  age: <span class="number">20</span></span><br><span class="line">&#125;</span><br><span class="line">fn.call(person);        <span class="comment">// my name is: Andy; my age is: 20</span></span><br></pre></td></tr></table></figure></li>
+<li><p>案例二： 一个对象的方法作为另一个对象的方法调用(注意this指向)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  firstName: <span class="string">&quot;Alax&quot;</span>,</span><br><span class="line">  lastName: <span class="string">&quot;Geo&quot;</span>,</span><br><span class="line">  getFullName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.firstName  + <span class="string">&quot; &quot;</span> + <span class="built_in">this</span>.lastName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> person1 = &#123;</span><br><span class="line">  firstName: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">  lastName: <span class="string">&quot;Lee&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> name = person.getFullName()</span><br><span class="line"><span class="built_in">console</span>.log(name)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> name1 = person.getFullName.call(person1)</span><br><span class="line"><span class="built_in">console</span>.log(name1)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Call()方法分别接收指定的实参；</p>
+</li>
+<li><p>本案例中getFullName方法传递了形参，person调用该方法时会出现问题，因为没有this指向person，因此，city和country为undefined；</p>
+</li>
+<li><p>而person1调用person方法时，传递了参数”Seattle”和”Unite State”;</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  firstName: <span class="string">&quot;Alax&quot;</span>,</span><br><span class="line">  lastName: <span class="string">&quot;Geo&quot;</span>,</span><br><span class="line">  city: <span class="string">&quot;Shanghai&quot;</span>,</span><br><span class="line">  country: <span class="string">&quot;China&quot;</span>,</span><br><span class="line">  getFullName: <span class="function"><span class="keyword">function</span>(<span class="params">city,country</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.firstName  + <span class="string">&quot; &quot;</span> + <span class="built_in">this</span>.lastName + <span class="string">&quot;,&quot;</span> + city + <span class="string">&quot;,&quot;</span> + country;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> person1 = &#123;</span><br><span class="line">  firstName: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">  lastName: <span class="string">&quot;Lee&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> name = person.getFullName()</span><br><span class="line"><span class="built_in">console</span>.log(name)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> name1 = person.getFullName.call(person1,<span class="string">&quot;Seattl&quot;</span>,<span class="string">&quot;Unite State&quot;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(name1)</span><br></pre></td></tr></table></figure>
+<h4 id="3-Apply-方法"><a href="#3-Apply-方法" class="headerlink" title="3.Apply()方法"></a>3.Apply()方法</h4></li>
+<li><p>本质上Apply()方法与Call()方法并没有什么区别，只是接收的参数为数组；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  firstName: <span class="string">&quot;Alax&quot;</span>,</span><br><span class="line">  lastName: <span class="string">&quot;Geo&quot;</span>,</span><br><span class="line">  city: <span class="string">&quot;Shanghai&quot;</span>,</span><br><span class="line">  country: <span class="string">&quot;China&quot;</span>,</span><br><span class="line">  getFullName: <span class="function"><span class="keyword">function</span>(<span class="params">city,country</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.firstName  + <span class="string">&quot; &quot;</span> + <span class="built_in">this</span>.lastName + <span class="string">&quot;,&quot;</span> + city + <span class="string">&quot;,&quot;</span> + country;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> person1 = &#123;</span><br><span class="line">  firstName: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">  lastName: <span class="string">&quot;Lee&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> name = person.getFullName.apply(person1,[<span class="string">&quot;Seattl&quot;</span>,<span class="string">&quot;Unite State&quot;</span>])</span><br><span class="line"><span class="built_in">console</span>.log(name)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.10%20Function%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckjcmfk090000ssnqee2cb2qm" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.12Call()%E6%96%B9%E6%B3%95%E4%B8%8EApply()%E6%96%B9%E6%B3%95/" data-id="ckjcmsunc00264cnq4y2m1426" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/8.函数/2.8.5 ECMAScript闭包" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.5%20ECMAScript%E9%97%AD%E5%8C%85/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.5%20ECMAScript%E9%97%AD%E5%8C%85/">2.8.5 ECMAScript闭包</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.5%20ECMAScript%E9%97%AD%E5%8C%85/" data-id="ckjcmsund00284cnqemvifpdj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/8.函数/2.8.4 ECMAScript函数的返回值" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.4%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.4%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/">2.8.4 ECMAScript函数的返回值</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-返回值类型"><a href="#1-返回值类型" class="headerlink" title="1.返回值类型"></a>1.返回值类型</h4><ul>
+<li><p>函数返回值可以是任何类型</p>
+</li>
+<li><p>函数作为返回值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> object = &#123;</span><br><span class="line">    a: <span class="string">&quot;string&quot;</span>,</span><br><span class="line">    b: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</span><br><span class="line">    c: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">getObject</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    object.d = <span class="string">&#x27;Hello World!&#x27;</span></span><br><span class="line">    <span class="built_in">console</span>.log(object)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">fn()()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对象作为返回值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> object = &#123;</span><br><span class="line">    a: <span class="string">&quot;string&quot;</span>,</span><br><span class="line">    b: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</span><br><span class="line">    c: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> object</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = fn()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(result)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.4%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/" data-id="ckjcmsune002a4cnqb4bxfi7l" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/8.函数/2.8.6 ECMAScript函数的属性和方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.6%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.6%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/">2.8.6 ECMAScript函数的属性和方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.6%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/" data-id="ckjcmsung002c4cnqg0vn5x3a" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/8.函数/2.8.8 ECMAScript 函数式编程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.8%20ECMAScript%20%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.8%20ECMAScript%20%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/">2.8.8 ECMAScript 函数式编程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.8%20ECMAScript%20%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/" data-id="ckjcmsunh002e4cnqcp2d7bwr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/8.函数/2.8.7 ECMAScript 构造函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.7%20ECMAScript%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.7%20ECMAScript%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">2.8.7 ECMAScript 构造函数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.7%20ECMAScript%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" data-id="ckjcmsuni002g4cnqd53beg71" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/8.函数/2.8.9 ECMAScript 作为命名空间的函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.9%20ECMAScript%20%E4%BD%9C%E4%B8%BA%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E7%9A%84%E5%87%BD%E6%95%B0/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.9%20ECMAScript%20%E4%BD%9C%E4%B8%BA%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E7%9A%84%E5%87%BD%E6%95%B0/">2.8.9 ECMAScript 作为命名空间的函数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.9%20ECMAScript%20%E4%BD%9C%E4%B8%BA%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E7%9A%84%E5%87%BD%E6%95%B0/" data-id="ckjcmsunj002i4cnqfy9p1gse" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/2.数据类型/基本类型/2.2 ECMA基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/2.2%20ECMA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/2.2%20ECMA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">2.2.1 ECMAScript基本数据类型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/2.2%20ECMA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-id="ckjcmsunn002l4cnqcuun4whb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/2.数据类型/引用类型/2.2  ECMA引用数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/2.2%20%20ECMA%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/2.2%20%20ECMA%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">2.2.2ECMAScript引用数据类型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/2.2%20%20ECMA%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-id="ckjcmsuno002m4cnq0l51ejo9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -1063,507 +1374,6 @@
 
 
   
-    <article id="post-Git/Remote Repostories/3.Git 远程仓库管理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Remote%20Repostories/3.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Remote%20Repostories/3.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">3.Git 远程仓库管理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Github-SSH-仓库地址"><a href="#1-Github-SSH-仓库地址" class="headerlink" title="1. Github SSH 仓库地址"></a>1. Github SSH 仓库地址</h4><ul>
-<li><p>地址组成</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git@github.com:web-oyster/html-elements.git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#109;">&#103;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#109;</a>： git 网址</p>
-</li>
-<li><p>web-oyster： github 账号</p>
-</li>
-<li><p>html-elements： github 远程仓库名</p>
-</li>
-</ul>
-<h4 id="2-创建远程仓库关联"><a href="#2-创建远程仓库关联" class="headerlink" title="2. 创建远程仓库关联"></a>2. 创建远程仓库关联</h4><ul>
-<li><p>git 初始化本地仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建远程仓库</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[2.快速创建 Github 远程仓库]</a></p>
-<ul>
-<li><p>第一次提交：关联远程仓库地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:&lt;github账号&gt;/&lt;github远程仓库名&gt;.git</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>第二次提交</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>参考文档</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[2.快速创建 Github 远程仓库]</a></p>
-<h4 id="3-参考文当"><a href="#3-参考文当" class="headerlink" title="3.参考文当"></a>3.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#97;&#x6e;&#109;&#105;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#111;&#117;&#116;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#111;&#109;">&#121;&#117;&#97;&#x6e;&#109;&#105;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#111;&#117;&#116;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Remote%20Repostories/3.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/" data-id="ckitp9rgs002enhii1pite5bw" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git/Tutorial/Git教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Git/">Git</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">Git教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Git-创建与管理本地仓库"><a href="#1-Git-创建与管理本地仓库" class="headerlink" title="1. Git 创建与管理本地仓库"></a>1. Git 创建与管理本地仓库</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">[1. Git 创建与管理本地仓库]</a></p>
-<h4 id="2-快速创建-Github-远程仓库"><a href="#2-快速创建-Github-远程仓库" class="headerlink" title="2.快速创建 Github 远程仓库"></a>2.快速创建 Github 远程仓库</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[2.快速创建 Github 远程仓库]</a></p>
-<h4 id="3-Git-远程仓库管理"><a href="#3-Git-远程仓库管理" class="headerlink" title="3.Git 远程仓库管理"></a>3.Git 远程仓库管理</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Remote%20Repostories/3.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">[3.Git 远程仓库管理]</a></p>
-<h4 id="4-Git-command-操作命令"><a href="#4-Git-command-操作命令" class="headerlink" title="4.Git command 操作命令"></a>4.Git command 操作命令</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Local%20Repostories/4.Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/">[4.Git command 操作命令]</a></p>
-<h4 id="5-Git日志与回退版本号"><a href="#5-Git日志与回退版本号" class="headerlink" title="5.Git日志与回退版本号"></a>5.Git日志与回退版本号</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Local%20Repostories/5.Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/">[5.Git日志与回退版本号]</a></p>
-<h4 id="6-Git本地仓库设置签名"><a href="#6-Git本地仓库设置签名" class="headerlink" title="6.Git本地仓库设置签名"></a>6.Git本地仓库设置签名</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Local%20Repostories/6.Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/">[6.Git本地仓库设置签名]</a></p>
-<h4 id="7-Git常用命令"><a href="#7-Git常用命令" class="headerlink" title="7. Git常用命令"></a>7. Git常用命令</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/1970/01/01/Git/Remote%20Repostories/4.%20Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">[7. Git常用命令]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#64;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#109;">&#x79;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#64;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/" data-id="ckitp9rgx002knhiigmumdkr7" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Java/Tutorial/Java基础教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Java/Tutorial/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Java/Tutorial/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/">1.Java教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a href="">[1.]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Java/Tutorial/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" data-id="ckitp9rh5002wnhii1xk2evtc" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Linux/Tutorial/Ubuntu系统及应用软件安装与配置" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Ubuntu/">Ubuntu</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">2.Ubuntu系统及应用软件安装与配置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Ubuntu20-04系统安装"><a href="#1-Ubuntu20-04系统安装" class="headerlink" title="1. Ubuntu20.04系统安装"></a>1. Ubuntu20.04系统安装</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Linux/Ubuntu/1.Ubuntu20.04%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/">[1. Ubuntu20.04系统安装]</a></p>
-<h4 id="2-Ubuntu20-04配置国内镜像源"><a href="#2-Ubuntu20-04配置国内镜像源" class="headerlink" title="2. Ubuntu20.04配置国内镜像源"></a>2. Ubuntu20.04配置国内镜像源</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Linux/Ubuntu/2.Ubuntu20.04%E9%85%8D%E7%BD%AE%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E6%BA%90/">[2. Ubuntu20.04配置国内镜像源]</a></p>
-<h4 id="3-Ubuntu20-04-安装与配置-Node"><a href="#3-Ubuntu20-04-安装与配置-Node" class="headerlink" title="3. Ubuntu20.04 安装与配置 Node"></a>3. Ubuntu20.04 安装与配置 Node</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Linux/Ubuntu/3.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/">[3.Ubuntu20.04 安装与配置 Node]</a></p>
-<h4 id="4-Ubuntu20-04-安装与配置-Nvm"><a href="#4-Ubuntu20-04-安装与配置-Nvm" class="headerlink" title="4.Ubuntu20.04 安装与配置 Nvm"></a>4.Ubuntu20.04 安装与配置 Nvm</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Linux/Ubuntu/4.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/">[4.Ubuntu20.04 安装与配置 Nvm]</a></p>
-<h4 id="5-Ubuntu20-04安装第三方软件"><a href="#5-Ubuntu20-04安装第三方软件" class="headerlink" title="5.Ubuntu20.04安装第三方软件"></a>5.Ubuntu20.04安装第三方软件</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Linux/Ubuntu/5.Ubuntu20.04%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BD%AF%E4%BB%B6/">[5.Ubuntu20.04安装第三方软件]</a></p>
-<h4 id="6-Ubuntu20-04安装MongoDB"><a href="#6-Ubuntu20-04安装MongoDB" class="headerlink" title="6.Ubuntu20.04安装MongoDB"></a>6.Ubuntu20.04安装MongoDB</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Linux/Ubuntu/6.Ubuntu20.04%E5%AE%89%E8%A3%85MongoDB/">[6.Ubuntu20.04安装MongoDB]</a></p>
-<h4 id="7-Ubuntu20-04安装VS-Code"><a href="#7-Ubuntu20-04安装VS-Code" class="headerlink" title="7.Ubuntu20.04安装VS Code"></a>7.Ubuntu20.04安装VS Code</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/Linux/Ubuntu/7.Ubuntu20.04%E5%AE%89%E8%A3%85VS%20Code/">[7.Ubuntu20.04安装VS Code]</a></p>
-<h4 id="8-Ubuntu20-04安装与配置WPS"><a href="#8-Ubuntu20-04安装与配置WPS" class="headerlink" title="8.Ubuntu20.04安装与配置WPS"></a>8.Ubuntu20.04安装与配置WPS</h4><p><a href="https://weboyster.github.io/2020/10/23/Linux/Ubuntu/8.Ubuntu20.04%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AEWPS/">[8.Ubuntu20.04安装与配置WPS]</a></p>
-<h4 id="9-Ubuntu20-04安装Google-Chrome"><a href="#9-Ubuntu20-04安装Google-Chrome" class="headerlink" title="9.Ubuntu20.04安装Google Chrome"></a>9.Ubuntu20.04安装Google Chrome</h4><p><a href="https://weboyster.github.io/2020/10/23/Linux/Ubuntu/9.Ubuntu20.04%E5%AE%89%E8%A3%85Google%20Chrome/">[9.Ubuntu20.04安装Google Chrome]</a></p>
-<h4 id="10-Ubuntu20-04清除缓存"><a href="#10-Ubuntu20-04清除缓存" class="headerlink" title="10.Ubuntu20.04清除缓存"></a>10.Ubuntu20.04清除缓存</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/23/Linux/Ubuntu/10.Ubuntu20.04%E6%B8%85%E9%99%A4%E7%B3%BB%E7%BB%9F%E7%BC%93%E5%AD%98/">[10.Ubuntu20.04清除缓存]</a></p>
-<h4 id="11-Ubuntu20-04安装TypeScript"><a href="#11-Ubuntu20-04安装TypeScript" class="headerlink" title="11.Ubuntu20.04安装TypeScript"></a>11.Ubuntu20.04安装TypeScript</h4><p><a href="https://weboyster.github.io/2020/10/23/Linux/Ubuntu/11.Ubuntu%E5%AE%89%E8%A3%85TypeScript/">[11.Ubuntu20.04安装TypeScript]</a></p>
-<h4 id="12-Ubuntu20-04安装Tweaks桌面美化工具"><a href="#12-Ubuntu20-04安装Tweaks桌面美化工具" class="headerlink" title="12. Ubuntu20.04安装Tweaks桌面美化工具"></a>12. Ubuntu20.04安装Tweaks桌面美化工具</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Linux/Ubuntu/12.Ububtu20.04%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/">[12. Ubuntu20.04安装Tweaks桌面美化工具]</a></p>
-<h4 id="13-Ububtu20-04-Windows双系统时间同步"><a href="#13-Ububtu20-04-Windows双系统时间同步" class="headerlink" title="13.Ububtu20.04 Windows双系统时间同步"></a>13.Ububtu20.04 Windows双系统时间同步</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/Linux/Ubuntu/13.Ububtu20.04%20Windows%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/">[13.Ububtu20.04 Windows双系统时间同步]</a></p>
-<h4 id="14-Ubuntu20-04-tar-xz-包方式安装-Node"><a href="#14-Ubuntu20-04-tar-xz-包方式安装-Node" class="headerlink" title="14.Ubuntu20.04 tar.xz 包方式安装 Node"></a>14.Ubuntu20.04 tar.xz 包方式安装 Node</h4><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/50fb7228238b">[14. Ubuntu20.04 tar.xz 包方式安装 Node]</a></p>
-<h4 id="15-Ubuntu20-04安装Deepin-wine-for-ubuntu"><a href="#15-Ubuntu20-04安装Deepin-wine-for-ubuntu" class="headerlink" title="15. Ubuntu20.04安装Deepin-wine-for-ubuntu"></a>15. Ubuntu20.04安装Deepin-wine-for-ubuntu</h4><p><a target="_blank" rel="noopener" href="https://github.com/seniusen/deepin-wine-ubuntu">[15. Ubuntu20.04安装Deepin-wine-for-ubuntu]</a></p>
-<h4 id="6-参考文档"><a href="#6-参考文档" class="headerlink" title="6. 参考文档"></a>6. 参考文档</h4><p><a href="https://weboyster.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E6%95%99%E7%A8%8B/">[1.Ubuntu 教程]</a></p>
-<h4 id="7-联系方式"><a href="#7-联系方式" class="headerlink" title="7. 联系方式"></a>7. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" data-id="ckitp9rhf003gnhiifglyh0je" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Linux/Ubuntu/3.Ubuntu安装与配置Node" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Linux/Ubuntu/3.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Linux/Ubuntu/3.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/">3.Ubuntu20.04 安装与配置Node</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h4><ul>
-<li><p>系统追加 PPA</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install curl</span><br><span class="line">curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装开发工具</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gcc g++ make</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装 Node</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nodejs</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试安装版本: 关闭终端，重启终端</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-修改镜像源"><a href="#2-修改镜像源" class="headerlink" title="2. 修改镜像源"></a>2. 修改镜像源</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org\</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm info underscore</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>npm 配置镜像源</p>
-<p><img src="https://s1.ax1x.com/2020/10/24/BZCbT0.png" alt="npm配置镜像源"></p>
-</li>
-<li><p>参考文档</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">[NPM 镜像源配置]</a></p>
-<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
-<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email：<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#109;&#105;&#110;&#x38;&#56;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;">&#x79;&#117;&#x61;&#x6e;&#109;&#105;&#110;&#x38;&#56;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Ubuntu/3.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENode/" data-id="ckitp9rhp003ynhiia8tn8rjy" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Linux/Ubuntu/4.Ubuntu安装与配置Nvm" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Linux/Ubuntu/4.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Linux/Ubuntu/4.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/">4.Ubuntu20.04 安装与配置 Nvm</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Nvm简介"><a href="#1-Nvm简介" class="headerlink" title="1.Nvm简介"></a>1.Nvm简介</h4><ul>
-<li>Node 的一种版本管理器，它可以管理多版本 Node 以及 npm</li>
-</ul>
-<h4 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h4><ul>
-<li><p>下载</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/creationix/nvm">[nvm 的仓库地址]</a></p>
-<p><img src="https://s1.ax1x.com/2020/10/24/BVoBHs.png" alt="nvm github repository"></p>
-</li>
-<li><p>克隆</p>
-<p>终端 Home 目录执行如下命令，克隆 nvm：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/opt</span><br><span class="line">sudo git <span class="built_in">clone</span> https://github.com/creationix/nvm .nvm</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>克隆示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/24/BVT5QS.png" alt="nvm clone"></p>
-</li>
-<li><p>安装 nvm</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> nvm</span><br><span class="line">bash install.sh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/24/BV7kJx.png" alt="install nvm"></p>
-</li>
-<li><p>测试安装版本: 关闭终端，重启终端</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm -v</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="3-使用"><a href="#3-使用" class="headerlink" title="3. 使用"></a>3. 使用</h4><ul>
-<li><p>查看 Node 远程仓库版本号: 耐心等待</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm ls-remote</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="2">
-<li>安装 Node</li>
-</ol>
-<ul>
-<li><p>安装 Node 14.14.0</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvm install 14.14.0</span><br><span class="line">nvm install 13.0.0</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="3">
-<li>查看 Node 版本号</li>
-</ol>
-<ul>
-<li><p>查看本地安装不同版本 Node</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm list</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看当前使用版本号</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm current</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="4">
-<li>使用 Node</li>
-</ol>
-<ul>
-<li><p>不同版本 Node 切换</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 14.14.0</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="5">
-<li>卸载 Node</li>
-</ol>
-<ul>
-<li><p>卸载不需要版本的 Node</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm uninstall node-version</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>下载当前版本 Node</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvm deactivate</span><br><span class="line">nvm uninstall node_version</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="6">
-<li>切换使用的 Node</li>
-</ol>
-<ul>
-<li><p>选择使用的版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 14.14.0</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="4-npm-配置镜像源"><a href="#4-npm-配置镜像源" class="headerlink" title="4. npm 配置镜像源"></a>4. npm 配置镜像源</h4><ul>
-<li><p>npm 配置镜像源<br><img src="https://s1.ax1x.com/2020/10/24/BZCbT0.png" alt="npm配置镜像源"></p>
-</li>
-<li><p>参考文档</p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E9%95%9C%E5%83%8F%E6%BA%90%E9%85%8D%E7%BD%AE/">[NPM 镜像源配置]</a></p>
-<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5. 参考文档"></a>5. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
-<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Node/Npm/NPM%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/">[NPM 包管理器]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email：<a href="mailto:&#121;&#117;&#x61;&#110;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;">&#121;&#117;&#x61;&#110;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Ubuntu/4.Ubuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AENvm/" data-id="ckitp9rhw0045nhiigoru1z7h" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Linux/Tutorial/Ubuntu教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Linux/Tutorial/Ubuntu%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Ubuntu/">Ubuntu</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Linux/Tutorial/Ubuntu%E6%95%99%E7%A8%8B/">1.Ubuntu教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/Linux/Ubuntu/1.Ubuntu20.04%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/">[1.Ubuntu20.04系统安装]</a></p>
-<h4 id="2-Ubuntu-系统及应用软件安装与配置"><a href="#2-Ubuntu-系统及应用软件安装与配置" class="headerlink" title="2. Ubuntu 系统及应用软件安装与配置"></a>2. Ubuntu 系统及应用软件安装与配置</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/24/Linux/Linux/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%8A%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">[2.Ubuntu 系统及应用软件安装与配置]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Linux/Tutorial/Ubuntu%E6%95%99%E7%A8%8B/" data-id="ckitp9ri5004onhii53pj8pqy" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tutorial/一、Node教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2020-10-23T16:00:00.000Z" itemprop="datePublished">2020-10-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Node/">Node</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/">一、Node教程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="二、-NPM-包管理器教程"><a href="#二、-NPM-包管理器教程" class="headerlink" title="二、 NPM 包管理器教程"></a>二、 NPM 包管理器教程</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%BA%8C%E3%80%81NPM%E5%8C%85%E7%AE%A1%E7%90%86%E6%95%99%E7%A8%8B/">[二、NPM 包管理器]</a></p>
-<h4 id="三、Express教程"><a href="#三、Express教程" class="headerlink" title="三、Express教程"></a>三、Express教程</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h4 id="四、Koa教程"><a href="#四、Koa教程" class="headerlink" title="四、Koa教程"></a>四、Koa教程</h4><p><a href="">[四、Koa教程]</a></p>
-<h4 id="五、Nest教程"><a href="#五、Nest教程" class="headerlink" title="五、Nest教程"></a>五、Nest教程</h4><p><a href="">[五、Nest教程]</a></p>
-<h4 id="六、Node-Server教程"><a href="#六、Node-Server教程" class="headerlink" title="六、Node Server教程"></a>六、Node Server教程</h4><p><a href="">[六、Node Server教程]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p>Email：<a href="mailto:&#x79;&#117;&#97;&#110;&#109;&#x69;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#107;&#x2e;&#99;&#111;&#109;">&#x79;&#117;&#97;&#110;&#109;&#x69;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#107;&#x2e;&#99;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/24/Node/Tutorial/%E4%B8%80%E3%80%81Node%E6%95%99%E7%A8%8B/" data-id="ckitp9ri9004unhiifw4sey5x" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -1589,7 +1399,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">64</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a><span class="tag-list-count">5</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a><span class="tag-list-count">5</span></li></ul>
     </div>
   </div>
 
@@ -1599,7 +1409,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">265</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">272</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 
@@ -1610,6 +1420,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/12/31/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.2%20%E5%AD%97%E9%9D%A2%E9%87%8F%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2020/12/30/Today's%20Excises/Documents%20for%20Web%20Development/">(no title)</a>
@@ -1625,10 +1439,6 @@
         
           <li>
             <a href="/2020/12/18/Vue/Tutorial/%E4%B8%83.%20Vue%20API/">七. Vue API</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/18/Vue/Tags/%E4%B8%83.%20Vue%20API/7.1%20Vue%20%E5%BA%94%E7%94%A8%E9%85%8D%E7%BD%AEAPI/">7.1 Vue 应用配置API</a>
           </li>
         
       </ul>

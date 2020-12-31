@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>2.8.2 ECMAScript函数的调用 | Coding Your Wonderful Life</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.函数调用方式 作为函数调用 作为方法调用 作为构造函数调用 通过call()和apply()间接调用  2. 函数调用 简单调用 12fn(&amp;#123;x:1&amp;#125;);family([&quot;Andy&quot;,&quot;Toams&quot;,&quot;Jhon&quot;]);  一个表达式有多个函数表达式组成 123let total &#x3D; distance(0,0,2,1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2.8.2 ECMAScript函数的调用">
+<meta property="og:url" content="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.2%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8/index.html">
+<meta property="og:site_name" content="Coding Your Wonderful Life">
+<meta property="og:description" content="1.函数调用方式 作为函数调用 作为方法调用 作为构造函数调用 通过call()和apply()间接调用  2. 函数调用 简单调用 12fn(&amp;#123;x:1&amp;#125;);family([&quot;Andy&quot;,&quot;Toams&quot;,&quot;Jhon&quot;]);  一个表达式有多个函数表达式组成 123let total &#x3D; distance(0,0,2,1">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-11-13T04:11:47.824Z">
+<meta property="article:author" content="Yuan Min">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Coding Your Wonderful Life" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Coding Your Wonderful Life</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://weboyster.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/8.函数/2.8.2 ECMAScript函数的调用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.2%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2.8.2 ECMAScript函数的调用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-函数调用方式"><a href="#1-函数调用方式" class="headerlink" title="1.函数调用方式"></a>1.函数调用方式</h4><ul>
+<li>作为函数调用</li>
+<li>作为方法调用</li>
+<li>作为构造函数调用</li>
+<li>通过call()和apply()间接调用</li>
+</ul>
+<h4 id="2-函数调用"><a href="#2-函数调用" class="headerlink" title="2. 函数调用"></a>2. 函数调用</h4><ul>
+<li><p>简单调用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fn(&#123;<span class="attr">x</span>:<span class="number">1</span>&#125;);</span><br><span class="line">family([<span class="string">&quot;Andy&quot;</span>,<span class="string">&quot;Toams&quot;</span>,<span class="string">&quot;Jhon&quot;</span>]);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>一个表达式有多个函数表达式组成</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> total = distance(<span class="number">0</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">1</span>) + distance(<span class="number">2</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> probability = factorial(<span class="number">5</span>)/factorial(<span class="number">13</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参数列表是由逗号分隔的零个或多个函数表达式组成</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">&#123;name,age,family&#125;</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;name,age,family&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> name = person(&#123;<span class="attr">name</span>:<span class="string">&quot;Andy&quot;</span>,<span class="attr">age</span>:<span class="number">20</span>,<span class="attr">family</span>:[<span class="string">&quot;Tomas&quot;</span>,<span class="string">&quot;Jhon&quot;</span>,<span class="string">&quot;Alax&quot;</span>]&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(name)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-方法调用"><a href="#3-方法调用" class="headerlink" title="3. 方法调用"></a>3. 方法调用</h4><ul>
+<li><p>方法的调用表达式本身是一个对象属性访问表达式；</p>
+</li>
+<li><p>方法调用的参数和返回值与普通函数调用完全相同；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> object = &#123;</span><br><span class="line">  name : <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">    age:<span class="number">20</span>,</span><br><span class="line">    say:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;my name is: &quot;</span> + <span class="built_in">this</span>.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">object.say()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方法调用与函数调用的区别： 在与调用上下文。方法调用的属性表达式由两部分组成： 对象和属性名称，因此，法法调用的上下文是调用方法的对象，函数体可以使用关键字this引用该对象；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> calculator = &#123;<span class="comment">//对象直接量</span></span><br><span class="line">  operator1: <span class="number">10</span>,</span><br><span class="line">  operator2: <span class="number">20</span>,</span><br><span class="line">  add: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.result = <span class="built_in">this</span>.operator1 + <span class="built_in">this</span>.operator2;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.result</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> sum = calculator.add()</span><br><span class="line"><span class="built_in">console</span>.log(sum)</span><br><span class="line"><span class="built_in">console</span>.log(calculator.result)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用方括号访问对象属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> calculator = &#123;<span class="comment">//对象直接量</span></span><br><span class="line">  operator1: <span class="number">10</span>,</span><br><span class="line">  operator2: <span class="number">20</span>,</span><br><span class="line">  add: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.result = <span class="built_in">this</span>.operator1 + <span class="built_in">this</span>.operator2;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.result</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> sum = calculator[<span class="string">&quot;add&quot;</span>]()</span><br><span class="line"><span class="built_in">console</span>.log(sum)</span><br><span class="line"><span class="built_in">console</span>.log(calculator[<span class="string">&quot;result&quot;</span>])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方法调用中更复杂的属性访问表达式</p>
+</li>
+<li><p>案例一</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  name: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">  age: <span class="number">20</span>,</span><br><span class="line">  say: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="string">&quot;My name is: &quot;</span> + <span class="built_in">this</span>.name)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> name = person[<span class="string">&quot;name&quot;</span>].toUpperCase()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(name)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>案例二</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span>  &#123;</span><br><span class="line">    name: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">    say: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;My name is:&#x27;</span> + <span class="built_in">this</span>.name)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">fn().say()      <span class="comment">// My name is Andy</span></span><br></pre></td></tr></table></figure></li>
+<li><p>方法和this关键字是面向对象编程的核心，任何函数只要作为方法调用都会传入一个隐式的实参-对象，方法调用的母体就是这个对象；</p>
+</li>
+<li><p>this是一个关键字，不是变量，不允许给this赋值；</p>
+</li>
+<li><p>方法链</p>
+<ul>
+<li>当方法的返回值是一个对象，这个对象就可以继续调用它的方法，这种方法调用序列中每次的调用结果都是另外方法调用表达式的组成部分；</li>
+<li>当方法的调用不需要返回值时，最好直接返回this。如果在设计中的API中一直采用这种方式，使用API就可以进行”链式调用”风格的变成，在这种编程风格中，只要指定一侧要调用的对象即可，余下的方法都可以基于此进行调用；</li>
+<li>不要将方法的”链式调用”，与构造函数的”链式调用”混为一谈；</li>
+<li>对象中的this不受作用域限制，嵌套的函数不会从调用它的函数中继承this；</li>
+<li>如果嵌套函数作为方法调用，其this的值指向调用它的对象；</li>
+<li>如果嵌套函数作为函数调用，其this值<code>不是全局对象</code>(非严格模式下)<code>就是undefined</code>(严格模式下)；</li>
+<li>错误认识： 误认为调用嵌套函数时this指向调用外层函数的上下文；</li>
+<li><code>如果想访问这个外部函数的this值，需要将this值赋值给一个变量,由于这个变量与内部嵌套函数在同一个作用域，通常使用that或者self接受this值；</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;                    <span class="comment">//对象字面量obj</span></span><br><span class="line">  m: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;               <span class="comment">//对象中的方法m</span></span><br><span class="line">    <span class="keyword">let</span> self = <span class="built_in">this</span>;           <span class="comment">//将this赋值给self</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span> === obj)   <span class="comment">//&quot;true&quot;, this就是obj</span></span><br><span class="line">    f()                          <span class="comment">//调用f函数</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>)</span>&#123;                <span class="comment">//定义一个嵌套函数f</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="built_in">this</span> === obj)  <span class="comment">//&quot;false&quot;,this的值是全局函数或者undefined</span></span><br><span class="line">      <span class="built_in">console</span>.log(self === obj)  <span class="comment">//&quot;true&quot;,self指向外部函数的this值</span></span><br><span class="line">    &#125;                     </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.m()                           <span class="comment">//方法调用  </span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="4-构造函数调用"><a href="#4-构造函数调用" class="headerlink" title="4. 构造函数调用"></a>4. 构造函数调用</h4><ul>
+<li><p>如果函数或者方法调用时带有new关键字，就构成构造函数调用，其函数称为构造函数；</p>
+</li>
+<li><p>构造函数调用和普通函数调用以及方法调用在实参处理，调用上下文和返回值方面都不相同；</p>
+<ol>
+<li>如果构造函数存在形参，调用方法与函数和方法调用相同；</li>
+<li>如果构造函数不存在形参，可以省略圆括号，下例中两种调用方法是等价的；</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> object = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="keyword">let</span> object = <span class="keyword">new</span> <span class="built_in">Object</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>构造函数调用创建一个新的空对象，这个对象继承自构造函数的prototype属性，构造函数试图初始化这个新创建的对象，并将这个实例对象用做其调用上下文，因此构造函数可以使用this关键字来引用这个新创建的对象。</p>
+</li>
+</ul>
+<h4 id="5-间接调用"><a href="#5-间接调用" class="headerlink" title="5. 间接调用"></a>5. 间接调用</h4><ol>
+<li><p>JavaScript对象包含两个方法，都显示地指定调用所需的this值，也就是说，任何函数都可以作为任意对象的方法来调用，哪怕这个函数不是那个对象的方法。两个方法都可以指定调用的实参</p>
+</li>
+<li><p>通过call()调用</p>
+</li>
+</ol>
+<ul>
+<li><p>call()方法使用自己的实参列表作为函数的实参。</p>
+</li>
+<li><p>语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> object = &#123;&#125;</span><br><span class="line">fn.call(object)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="3">
+<li>通过apply()调用</li>
+</ol>
+<ul>
+<li><p>apply()方法则要求以数组的形式传入参数</p>
+</li>
+<li><p>语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> object = &#123;&#125;</span><br><span class="line">fn.apply(object)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/8.%E5%87%BD%E6%95%B0/2.8.12Call()%E6%96%B9%E6%B3%95%E4%B8%8EApply()%E6%96%B9%E6%B3%95/">[2.8.12Call()方法与Apply()方法]</a></p>
+<h4 id="6-参考文档"><a href="#6-参考文档" class="headerlink" title="6. 参考文档"></a>6. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="7-联系方式"><a href="#7-联系方式" class="headerlink" title="7. 联系方式"></a>7. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.2%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8/" data-id="ckjcmsuna00224cnqb2ts89ti" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8%20ECMAScript%E5%87%BD%E6%95%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2.8 ECMAScript函数
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.3%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2.8.3 ECMAScript函数的参数</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DataBase/">DataBase</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Full-Stack-Development/">Full Stack Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Github/">Github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Today-s-Excises/">Today's Excises</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS-Code/">VS Code</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">71</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a><span class="tag-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">272</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/31/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.2%20%E5%AD%97%E9%9D%A2%E9%87%8F%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/30/Today's%20Excises/Documents%20for%20Web%20Development/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2.2%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/">5.2.2 ECMAScript原型与原型链(二)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2.3%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%89)/">5.2.3 ECMAScript原型与原型链(三)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/18/Vue/Tutorial/%E4%B8%83.%20Vue%20API/">七. Vue API</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Yuan Min<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
