@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>7.1 ES6常用语法 | Coding Your Wonderful Life</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1. ES6常用语法1. 模板字符串 模板字符串的基本用法 1var s1 &#x3D; &#96;abc&#96;;  模板字符串的优势： 12var obj &#x3D; &amp;#123; name: &amp;#x27;&amp;#x27;, age: 5 &amp;#125;;var s1 &#x3D; &amp;#x27;我叫：&amp;#x27; + obj.name + &amp;#x27;，今年：&amp;#x27; + obj.age + &amp;#x27;岁。&amp;#x27;;    2.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="7.1 ES6常用语法">
+<meta property="og:url" content="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%83%E3%80%81ES6%E6%95%99%E7%A8%8B/Tags/ES6/index.html">
+<meta property="og:site_name" content="Coding Your Wonderful Life">
+<meta property="og:description" content="1. ES6常用语法1. 模板字符串 模板字符串的基本用法 1var s1 &#x3D; &#96;abc&#96;;  模板字符串的优势： 12var obj &#x3D; &amp;#123; name: &amp;#x27;&amp;#x27;, age: 5 &amp;#125;;var s1 &#x3D; &amp;#x27;我叫：&amp;#x27; + obj.name + &amp;#x27;，今年：&amp;#x27; + obj.age + &amp;#x27;岁。&amp;#x27;;    2.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-12-20T11:20:54.511Z">
+<meta property="article:author" content="Yuan Min">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Coding Your Wonderful Life" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Coding Your Wonderful Life</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://weboyster.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JavaScript/Tags/七、ES6教程/Tags/ES6" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%B8%83%E3%80%81ES6%E6%95%99%E7%A8%8B/Tags/ES6/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      7.1 ES6常用语法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-ES6常用语法"><a href="#1-ES6常用语法" class="headerlink" title="1. ES6常用语法"></a>1. ES6常用语法</h3><h4 id="1-模板字符串"><a href="#1-模板字符串" class="headerlink" title="1. 模板字符串"></a>1. 模板字符串</h4><ul>
+<li><p>模板字符串的基本用法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1 = <span class="string">`abc`</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>模板字符串的优势：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;&#x27;</span>, <span class="attr">age</span>: <span class="number">5</span> &#125;;</span><br><span class="line"><span class="keyword">var</span> s1 = <span class="string">&#x27;我叫：&#x27;</span> + obj.name + <span class="string">&#x27;，今年：&#x27;</span> + obj.age + <span class="string">&#x27;岁。&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-解构赋值"><a href="#2-解构赋值" class="headerlink" title="2. 解构赋值"></a>2. 解构赋值</h4><ul>
+<li><p>对象的解构赋值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;张三&#x27;</span>, <span class="attr">age</span>: <span class="number">18</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> &#123; name, age &#125; = obj;</span><br><span class="line"><span class="comment">//生成2个变量，</span></span><br><span class="line"><span class="comment">//  name值来自于obj.name、</span></span><br><span class="line"><span class="comment">//  age值来自于obj.age</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> &#123; <span class="attr">name</span>: title &#125; = obj;</span><br><span class="line"><span class="comment">//生成一个变量：title，值来自于obj.name</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>函数参数的解构赋值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(obj.age);</span><br><span class="line">  <span class="built_in">console</span>.log(obj.height);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params">&#123; age, height &#125;</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(age);</span><br><span class="line">  <span class="built_in">console</span>.log(height);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f1(&#123; <span class="attr">age</span>: <span class="number">5</span>, <span class="attr">height</span>: <span class="number">180</span> &#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>补充：属性的简写</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">var</span> c = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> b = &#123; a, c &#125;;</span><br><span class="line"><span class="comment">//b对象有一个a属性，a属性的值，来自于a变量  ，</span></span><br><span class="line"><span class="comment">//还有一个c属性，c属性的值来自于c变量</span></span><br><span class="line"><span class="built_in">console</span>.log(b);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-函数的扩展"><a href="#3-函数的扩展" class="headerlink" title="3. 函数的扩展"></a>3. 函数的扩展</h4><h4 id="4-rest-参数"><a href="#4-rest-参数" class="headerlink" title="4. rest 参数"></a>4. rest 参数</h4><ul>
+<li><p>使用背景：es6 的</p>
+</li>
+<li><p>优点：arguments 是伪数组，而 rest 参数是真数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">...args</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(args); <span class="comment">//数组：[1,2,3,4,5]</span></span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="5-箭头函数"><a href="#5-箭头函数" class="headerlink" title="5. 箭头函数"></a>5. 箭头函数</h4><ul>
+<li><p>场景：用于替换匿名函数</p>
+</li>
+<li><p>基本用法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匿名函数</span></span><br><span class="line">div.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;你好&#x27;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//箭头函数</span></span><br><span class="line">div.onclick = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;你好&#x27;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有一个参数的箭头函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fn = <span class="function">(<span class="params">a</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;abc&#x27;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//等价于：</span></span><br><span class="line"><span class="keyword">var</span> fn = <span class="function">(<span class="params">a</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;abc&#x27;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有 2 个及更多参数的箭头函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f = <span class="function">(<span class="params">a, b, c</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;abc&#x27;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>箭头函数和普通匿名函数有哪些不同？</p>
+<ul>
+<li>函数体内的 this 对象，就是定义时所在的对象，而不是使用时所在的对象。</li>
+<li>不可以当作构造函数，也就是说，不可以使用 new 命令，否则会抛出一个错误。</li>
+<li>不可以使用 arguments 对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。</li>
+<li>（不常用）不可以使用 yield 命令，因此箭头函数不能用作 Generator 函数。<ul>
+<li>generator 函数现在经常用 async 替代</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-对象的扩展"><a href="#6-对象的扩展" class="headerlink" title="6. 对象的扩展"></a>6. 对象的扩展</h4><ul>
+<li><p>Object.assign：实现拷贝继承</p>
+</li>
+<li><p>对象扩展运算符</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj1 = &#123; <span class="attr">age</span>: <span class="number">5</span>, <span class="attr">gender</span>: <span class="string">&#x27;男&#x27;</span> &#125;;</span><br><span class="line"><span class="keyword">var</span> obj2 = &#123; ...obj1 &#125;;</span><br><span class="line"><span class="keyword">var</span> obj3 = &#123; ...obj1, <span class="attr">age</span>: <span class="number">10</span> &#125;;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="7-Promise"><a href="#7-Promise" class="headerlink" title="7. Promise"></a>7. Promise</h4><ol>
+<li>为什么要有 promise：解决（回调地狱）的问题</li>
+</ol>
+<ul>
+<li><p>回调地狱：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$.get(<span class="string">&#x27;/getUser&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">  $.get(<span class="string">&#x27;/getUserDetail&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $.get(<span class="string">&#x27;/getCart&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      $.get(<span class="string">&#x27;/getBooks&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">//...</span></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//node开发：读取文件；开个服务器、接收一个请求、请求路径、访问数据库</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Promise 函数基本用法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> promise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">//b 把需要执行的异步操作放在这里</span></span><br><span class="line">  $.get(<span class="string">&#x27;/getUser&#x27;</span>, <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">//获取数据的异步操作已经执行完毕了，等待下一步的执行，通过执行resolve函数，告诉外界你可以执行下一步操作了</span></span><br><span class="line">    <span class="comment">//c、</span></span><br><span class="line">    resolve(res);</span><br><span class="line">    <span class="comment">//而执行的下一步操作，其实就是写在then的回调函数中的</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//a、</span></span><br><span class="line">promise.then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">//d、执行后续的操作</span></span><br><span class="line">  <span class="built_in">console</span>.log(res);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Promise 函数实现多层回调</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  $.get(<span class="string">&#x27;/getUser&#x27;</span>, <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    resolve(res);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;)</span><br><span class="line">  .then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">//用户基本信息</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">      $.get(<span class="string">&#x27;/getUserDetail&#x27;</span>, <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        resolve(res);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">//用户详情</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">      $.get(<span class="string">&#x27;/getCart&#x27;</span>, <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        resolve(res);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">//购物车信息</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="2">
+<li>Promise 函数错误处理</li>
+</ol>
+<ul>
+<li><p>第一种方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  $.ajax(&#123;</span><br><span class="line">    url: <span class="string">&#x27;/getUser&#x27;</span>,</span><br><span class="line">    type: <span class="string">&#x27;GET&#x27;</span>,</span><br><span class="line">    success: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">      resolve(res);</span><br><span class="line">    &#125;,</span><br><span class="line">    error: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">      reject(res);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;).then(</span><br><span class="line">  (resSuccess) =&gt; &#123;</span><br><span class="line">    <span class="comment">//成功的返回值</span></span><br><span class="line">  &#125;,</span><br><span class="line">  (resError) =&gt; &#123;</span><br><span class="line">    <span class="comment">//失败的返回值</span></span><br><span class="line">  &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第二种方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  $.ajax(&#123;</span><br><span class="line">    url: <span class="string">&#x27;/getUser&#x27;</span>,</span><br><span class="line">    type: <span class="string">&#x27;GET&#x27;</span>,</span><br><span class="line">    success: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">      resolve(res);</span><br><span class="line">    &#125;,</span><br><span class="line">    error: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">      reject(res);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;)</span><br><span class="line">  .then(<span class="function">(<span class="params">resSuccess</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">//成功的返回值</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function">(<span class="params">resError</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">//失败的返回值</span></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="8-async"><a href="#8-async" class="headerlink" title="8. async"></a>8. async</h4><ul>
+<li><p>async 其实是一个 promise 的语法糖</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">get</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;开始执行&#x27;</span>);</span><br><span class="line">  <span class="keyword">var</span> res = <span class="keyword">await</span> timer();</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;执行结束：&#x27;</span>, res);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">timer</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      resolve(<span class="string">&#x27;你好&#x27;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">get();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>await 可以执行异步操作，但是 await 必须在 async 函数内执行</p>
+</li>
+<li><p>await 操作可以有返回值，这个返回值表示 promise 操作成功的返回值</p>
+</li>
+<li><p>如果 await 里面执行的异步操作发生了 reject，或者发生了错误，那么只能使用 try…catch 语法来进行错误处理</p>
+</li>
+</ul>
+<h4 id="9-class"><a href="#9-class" class="headerlink" title="9. class"></a>9. class</h4><ol>
+<li>定义一个类</li>
+</ol>
+<ul>
+<li><p>定义一个Person类</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">name</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//相当于：</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.name = name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="2">
+<li>添加实例方法</li>
+</ol>
+<ul>
+<li><p>实例方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">name, age</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">    <span class="built_in">this</span>.age = age;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//定义方法</span></span><br><span class="line">  <span class="function"><span class="title">say</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;大家好，我叫：&#x27;</span> + <span class="built_in">this</span>.name + <span class="string">&#x27;，今年：&#x27;</span> + <span class="built_in">this</span>.age + <span class="string">&#x27;岁&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="title">travel</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;坐着飞机去巴厘岛&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="3">
+<li>添加静态方法</li>
+</ol>
+<ul>
+<li><p>静态成员：静态属性、静态方法</p>
+</li>
+<li><p>静态属性：通过类本身来访问：Person.maxAge</p>
+</li>
+<li><p>静态方法：通过类本身来访问的一个方法：Person.born();</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span> &#123;&#125;</span><br><span class="line">  <span class="comment">//这就是一个静态方法了</span></span><br><span class="line">  <span class="keyword">static</span> <span class="function"><span class="title">born</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;小呆萌出生了&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//访问静态方法</span></span><br><span class="line">Animal.born();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="4">
+<li>类的继承</li>
+</ol>
+<ul>
+<li><p>class类的继承是对象继承，归根到底是原型对象继承</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//父类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">name</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//Student类继承自Person类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">extends</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  <span class="comment">//构造方法</span></span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">name, grade</span>)</span> &#123;</span><br><span class="line">    <span class="comment">//规定：必须调用父类构造方法，如果不调用就会报错</span></span><br><span class="line">    <span class="built_in">super</span>(name);</span><br><span class="line">    <span class="comment">//调用父类构造方法，从而给子类的实例添加了name属性</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>.grade = grade;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>map函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>].map(<span class="function"><span class="keyword">function</span> (<span class="params">value, index</span>) </span>&#123;&#125;)</span><br><span class="line"></span><br><span class="line">[(<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>)].map(<span class="function">(<span class="params">value, index</span>) =&gt;</span> &#123;&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//以前变量和字符串拼接，现在用模板字符串</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="10-es6-的新语法"><a href="#10-es6-的新语法" class="headerlink" title="10. es6 的新语法"></a>10. es6 的新语法</h4><ul>
+<li>个人建议：不要去试想着一下子全部把之前的代码习惯变成 es6 的方式</li>
+<li>而是今年学会了模板字符串，把今天项目用到的所有字符串拼接都换成模板字符串</li>
+<li>过了几天学会了箭头函数，把当天项目里面的所有用到的匿名函数都换成箭头函数</li>
+</ul>
+<h2 id="预习作业：通过-MDN-学习-Object-defineProperty-的用法"><a href="#预习作业：通过-MDN-学习-Object-defineProperty-的用法" class="headerlink" title="预习作业：通过 MDN 学习 Object.defineProperty()的用法"></a>预习作业：通过 MDN 学习 Object.defineProperty()的用法</h2><h2 id="module-–-gt-放到后面的模块化课程中讲解"><a href="#module-–-gt-放到后面的模块化课程中讲解" class="headerlink" title="module –&gt;放到后面的模块化课程中讲解"></a>module –&gt;放到后面的模块化课程中讲解</h2><h4 id="11-基本用法"><a href="#11-基本用法" class="headerlink" title="11. 基本用法"></a>11. 基本用法</h4><ul>
+<li><p>导出模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//common.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123; <span class="attr">name</span>: <span class="string">&#x27;abc&#x27;</span> &#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//b.js</span></span><br><span class="line"><span class="keyword">import</span> common <span class="keyword">from</span> <span class="string">&#x27;common.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(common.name); <span class="comment">//&quot;abc&quot;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="12-模块有多个导出"><a href="#12-模块有多个导出" class="headerlink" title="12. 模块有多个导出"></a>12. 模块有多个导出</h4><ul>
+<li><p>person.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> jim = &#123; <span class="attr">country</span>: <span class="string">&#x27;France&#x27;</span> &#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> tony = &#123; <span class="attr">color</span>: <span class="string">&#x27;gray&#x27;</span> &#125;;</span><br><span class="line"><span class="comment">//默认的导出</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123; <span class="attr">name</span>: <span class="string">&#x27;abc&#x27;</span> &#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>index.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> person, &#123; jim, tony &#125; <span class="keyword">from</span> <span class="string">&#x27;person.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//person：&#123; name:&quot;abc&quot; &#125;</span></span><br><span class="line"><span class="comment">//jim：&#123; country :&quot;France&quot; &#125;</span></span><br><span class="line"><span class="comment">//tony：&#123; color:&quot;gray&quot; &#125;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="13-模块导入导出取别名"><a href="#13-模块导入导出取别名" class="headerlink" title="13. 模块导入导出取别名"></a>13. 模块导入导出取别名</h4><ul>
+<li><p>导出</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//person.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> tony = &#123; <span class="attr">color</span>: <span class="string">&#x27;gray&#x27;</span> &#125;;</span><br><span class="line"><span class="keyword">export</span> &#123; tony <span class="keyword">as</span> Tony &#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//index.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; Tony &#125; <span class="keyword">from</span> <span class="string">&#x27;person.js&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Tony <span class="keyword">as</span> man &#125; <span class="keyword">from</span> <span class="string">&#x27;person.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(man); <span class="comment">//&#123; color:&quot;gray&quot; &#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%83%E3%80%81ES6%E6%95%99%E7%A8%8B/Tags/ES6/" data-id="ckjf5je7200e8sx8beq295fok" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/28/HTML/HTML%20Tags/%E4%BA%8C%E3%80%81HTML%E5%85%83%E7%B4%A0/2.9%20%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2.9 HTML表单元素
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1%20ECMAScript%E5%AF%B9%E8%B1%A1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">5.1 ECMAScript 对象</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DataBase/">DataBase</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Full-Stack-Development/">Full Stack Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Github/">Github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Today-s-Excises/">Today's Excises</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS-Code/">VS Code</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">72</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a><span class="tag-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">273</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2.2%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/">5.2.2 ECMAScript原型与原型链(二)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2.3%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%89)/">5.2.3 ECMAScript原型与原型链(三)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/18/Vue/Tutorial/%E4%B8%83.%20Vue%20API/">七. Vue API</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/18/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/Vue%20Computed%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E4%B8%8EWatch%E7%9B%91%E5%90%AC/">Vue $Getter与$setter方法</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/18/Vue/Tags/%E4%B8%83.%20Vue%20API/7.1%20Vue%20%E5%BA%94%E7%94%A8%E9%85%8D%E7%BD%AEAPI/">7.1 Vue 应用配置API</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Yuan Min<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

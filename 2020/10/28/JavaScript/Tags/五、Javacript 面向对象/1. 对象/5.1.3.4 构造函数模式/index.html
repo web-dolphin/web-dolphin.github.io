@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>5.1.3.4 构造函数模式 | Coding Your Wonderful Life</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1. 文档目录1. 基本模型 自定义构造函数: 任何函数通过new关键字，都能创建一个自定义构造函数；  习惯上将自定义构造函数名首字母大写，以区分普通函数；   12345function Person(name,age)&amp;#123;	this.name &#x3D; name;	this.age &#x3D; age;&amp;#125;const person &#x3D; new Person(&quot;Andy&quot;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5.1.3.4 构造函数模式">
+<meta property="og:url" content="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.4%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%A8%A1%E5%BC%8F/index.html">
+<meta property="og:site_name" content="Coding Your Wonderful Life">
+<meta property="og:description" content="1. 文档目录1. 基本模型 自定义构造函数: 任何函数通过new关键字，都能创建一个自定义构造函数；  习惯上将自定义构造函数名首字母大写，以区分普通函数；   12345function Person(name,age)&amp;#123;	this.name &#x3D; name;	this.age &#x3D; age;&amp;#125;const person &#x3D; new Person(&quot;Andy&quot;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-12-31T09:44:38.130Z">
+<meta property="article:author" content="Yuan Min">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Coding Your Wonderful Life" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Coding Your Wonderful Life</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://weboyster.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JavaScript/Tags/五、Javacript 面向对象/1. 对象/5.1.3.4 构造函数模式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.4%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      5.1.3.4 构造函数模式
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-文档目录"><a href="#1-文档目录" class="headerlink" title="1. 文档目录"></a>1. 文档目录</h2><h3 id="1-基本模型"><a href="#1-基本模型" class="headerlink" title="1. 基本模型"></a>1. 基本模型</h3><ul>
+<li><p>自定义构造函数: 任何函数通过new关键字，都能创建一个自定义构造函数；</p>
+</li>
+<li><p>习惯上将自定义构造函数名首字母大写，以区分普通函数；</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">this</span>.name = name;</span><br><span class="line">	<span class="built_in">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person(<span class="string">&quot;Andy&quot;</span>,<span class="number">18</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>说明:person就是根据【Person构造函数】创建出来的实例对象；</p>
+</li>
+</ul>
+<h3 id="2-构造函数的概念"><a href="#2-构造函数的概念" class="headerlink" title="2. 构造函数的概念"></a>2. 构造函数的概念</h3><ul>
+<li><p>普通函数</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">CreateFunction</span>(<span class="params"></span>)</span>&#123; &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>任何函数都可以定义为构造函数；</p>
+</li>
+<li><p>函数通过new方式进行调用，这种函数的调用方式称之为：构造函数的调用；</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">CreateFunction</span>(<span class="params"></span>)</span>&#123; &#125;</span><br><span class="line"><span class="keyword">new</span> CreateFunction()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="3-构造函数的执行过程"><a href="#3-构造函数的执行过程" class="headerlink" title="3. 构造函数的执行过程"></a>3. 构造函数的执行过程</h3><ul>
+<li><p>创建Person构造函数的实例</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="built_in">console</span>.log(person.constructor)         	<span class="comment">// constructor属性返回创建此对象的数组或函数的引用</span></span><br><span class="line"><span class="built_in">console</span>.log(person <span class="keyword">instanceof</span> <span class="built_in">Object</span>)  		<span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(person <span class="keyword">instanceof</span> Person)  		<span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>this指向实例对象</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">say</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;My name is :&quot;</span> + <span class="built_in">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age,family</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.name = name,</span><br><span class="line">  <span class="built_in">this</span>.age = age,</span><br><span class="line">  <span class="built_in">this</span>.family = family,</span><br><span class="line">  <span class="built_in">this</span>.say = say</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> person = <span class="keyword">new</span> Person(<span class="string">&quot;Andy&quot;</span>,<span class="number">20</span>,[<span class="string">&quot;Tomas&quot;</span>,<span class="string">&quot;Alax&quot;</span>]);</span><br><span class="line"><span class="keyword">let</span> hello = person.say()	</span><br><span class="line"><span class="built_in">console</span>.log(hello)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="4-对比工厂模式："><a href="#4-对比工厂模式：" class="headerlink" title="4. 对比工厂模式："></a>4. 对比工厂模式：</h3><ul>
+<li>没有显式地创建对象；</li>
+<li>直接将属性和方法赋给this对象；</li>
+<li>没有 return 语句；</li>
+<li>构造函数无返回值时，默认会返回新对象实例；</li>
+<li>构造函数未尾添加return语句，可以重写调用构造函数时返回的值；</li>
+</ul>
+<h3 id="5-调用构造函数步骤"><a href="#5-调用构造函数步骤" class="headerlink" title="5. 调用构造函数步骤"></a>5. 调用构造函数步骤</h3><ul>
+<li>创建一个新对象；</li>
+<li>将构造函数的作用域赋给新对象（将this指向这个新对象）；</li>
+<li>为新对象添加属性；</li>
+<li>返回新对象；</li>
+</ul>
+<h3 id="6-构造函数的分析"><a href="#6-构造函数的分析" class="headerlink" title="6. 构造函数的分析"></a>6. 构造函数的分析</h3><ul>
+<li><p>实例对象person既是Object的实例，同时，又是Person的实例；</p>
+</li>
+<li><p>constructor属性，返回构造函数的引用；</p>
+</li>
+<li><p>构造函数的缺陷：每个实例都包含不同的Function实例，从而是代码产生了冗余；</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	object.name = name;</span><br><span class="line">	object.age = age;</span><br><span class="line">	object.say = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">&quot;My name is : &quot;</span> + <span class="built_in">this</span>.name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="built_in">console</span>.log(person.constructor)         	<span class="comment">// constructor属性返回创建此对象的数组或函数的引用</span></span><br><span class="line"><span class="built_in">console</span>.log(person <span class="keyword">instanceof</span> <span class="built_in">Object</span>)  		<span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(person <span class="keyword">instanceof</span> Person)  		<span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h2><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3%20ECMAScript%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA/">[5.1.3 对象的创建]</a></p>
+<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#109;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#x75;&#x61;&#x6e;&#109;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.4%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%A8%A1%E5%BC%8F/" data-id="ckjf5je8100eusx8b7y72eyk6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.3%20%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          5.1.3.3 工厂模式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.5%20%E5%AF%84%E7%94%9F%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">5.1.3.5 寄生构造函数模式</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DataBase/">DataBase</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Full-Stack-Development/">Full Stack Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Github/">Github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Today-s-Excises/">Today's Excises</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS-Code/">VS Code</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">72</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a><span class="tag-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">273</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2.2%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/">5.2.2 ECMAScript原型与原型链(二)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2.3%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%89)/">5.2.3 ECMAScript原型与原型链(三)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/18/Vue/Tutorial/%E4%B8%83.%20Vue%20API/">七. Vue API</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/18/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/Vue%20Computed%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E4%B8%8EWatch%E7%9B%91%E5%90%AC/">Vue $Getter与$setter方法</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/18/Vue/Tags/%E4%B8%83.%20Vue%20API/7.1%20Vue%20%E5%BA%94%E7%94%A8%E9%85%8D%E7%BD%AEAPI/">7.1 Vue 应用配置API</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Yuan Min<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

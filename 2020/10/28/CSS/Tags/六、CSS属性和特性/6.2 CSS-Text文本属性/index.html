@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>6.2 CSS-Text文本属性 | Coding Your Wonderful Life</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1. CSS-Text文本属性汇总表 汇总表    属性 描述 CSS    color 设置文本的颜色。 1   direction 规定文本的方向 &#x2F; 书写方向。 2   letter-spacing 设置字符间距。 1   line-height 设置行高。 1   text-align 规定文本的水平对齐方式。 1   text-decoration 规定添加到文本的装饰效果。 1   t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="6.2 CSS-Text文本属性">
+<meta property="og:url" content="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.2%20CSS-Text%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/index.html">
+<meta property="og:site_name" content="Coding Your Wonderful Life">
+<meta property="og:description" content="1. CSS-Text文本属性汇总表 汇总表    属性 描述 CSS    color 设置文本的颜色。 1   direction 规定文本的方向 &#x2F; 书写方向。 2   letter-spacing 设置字符间距。 1   line-height 设置行高。 1   text-align 规定文本的水平对齐方式。 1   text-decoration 规定添加到文本的装饰效果。 1   t">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-11-22T10:08:45.046Z">
+<meta property="article:author" content="Yuan Min">
+<meta property="article:tag" content="CSS">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Coding Your Wonderful Life" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Coding Your Wonderful Life</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://weboyster.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CSS/Tags/六、CSS属性和特性/6.2 CSS-Text文本属性" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.2%20CSS-Text%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      6.2 CSS-Text文本属性
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-CSS-Text文本属性汇总表"><a href="#1-CSS-Text文本属性汇总表" class="headerlink" title="1. CSS-Text文本属性汇总表"></a>1. CSS-Text文本属性汇总表</h4><ul>
+<li><p>汇总表</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color</td>
+<td>设置文本的颜色。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>规定文本的方向 / 书写方向。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>letter-spacing</td>
+<td>设置字符间距。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>设置行高。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>规定文本的水平对齐方式。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>text-decoration</td>
+<td>规定添加到文本的装饰效果。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>text-indent</td>
+<td>规定文本块首行的缩进。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>text-shadow</td>
+<td>规定添加到文本的阴影效果。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>text-transform</td>
+<td>控制文本的大小写。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>unicode-bidi</td>
+<td>设置文本方向。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>white-space</td>
+<td>规定如何处理元素中的空白。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>world-spacing</td>
+<td>设置单词间距。</td>
+<td>1</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="2-color属性"><a href="#2-color属性" class="headerlink" title="2. color属性"></a>2. color属性</h4><p>color 属性规定文本的颜色。</p>
+<p>这个属性设置了一个元素的前景色（在 HTML 表现中，就是元素文本的颜色）；光栅图像不受 color 影响。这个颜色还会应用到元素的所有边框，除非被 border-color 或另外某个边框颜色属性覆盖。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>not specified</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.color=”#FF0000”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color_name</td>
+<td>规定颜色值为颜色名称的颜色（比如 red）。</td>
+</tr>
+<tr>
+<td>hex_number</td>
+<td>规定颜色值为十六进制值的颜色（比如 #ff0000）。</td>
+</tr>
+<tr>
+<td>rgb_number</td>
+<td>规定颜色值为 rgb 代码的颜色（比如 rgb(255,0,0)）。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承颜色。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 color 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="3-direction属性"><a href="#3-direction属性" class="headerlink" title="3.direction属性"></a>3.direction属性</h4><p>direction 属性规定文本的方向 / 书写方向。该属性指定了块的基本书写方向，以及针对 Unicode 双向算法的嵌入和覆盖方向。不支持双向文本的用户代理可以忽略这个属性。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>ltr</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS2</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.direction=”rtl”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ltr</td>
+<td>默认。文本方向从左到右。</td>
+</tr>
+<tr>
+<td>rtl</td>
+<td>文本方向从右到左。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 direction 属性的值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 direction 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="4-letter-spacing属性"><a href="#4-letter-spacing属性" class="headerlink" title="4.letter-spacing属性"></a>4.letter-spacing属性</h4><p>letter-spacing 属性增加或减少字符间的空白（字符间距）。</p>
+<p>该属性定义了在文本字符框之间插入多少空间。由于字符字形通常比其字符框要窄，指定长度值时，会调整字母之间通常的间隔。因此，normal 就相当于值为 0。允许使用负值，这会让字母之间挤得更紧。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>normal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.letterSpacing=”3px”</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<ul>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>normal</td>
+<td>默认。规定字符间没有额外的空间。</td>
+</tr>
+<tr>
+<td>length</td>
+<td>定义字符间的固定空间（允许使用负值）。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 letter-spacing 属性的值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 letter-spacing 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
+<h4 id="5-line-height属性"><a href="#5-line-height属性" class="headerlink" title="5. line-height属性"></a>5. line-height属性</h4><p>line-height 属性设置行间的距离（行高）。不允许使用负值。</p>
+<p>该属性会影响行框的布局。在应用到一个块级元素时，它定义了该元素中基线之间的最小距离而不是最大距离。</p>
+<p>line-height 与 font-size 的计算值之差（在 CSS 中成为“行间距”）分为两半，分别加到一个文本行内容的顶部和底部。可以包含这些内容的最小框就是行框。</p>
+<p>原始数字值指定了一个缩放因子，后代元素会继承这个缩放因子而不是计算值。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>normal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.lineHeight=”2”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>normal</td>
+<td>默认。设置合理的行间距。</td>
+</tr>
+<tr>
+<td>number</td>
+<td>设置数字，此数字会与当前的字体尺寸相乘来设置行间距。</td>
+</tr>
+<tr>
+<td>length</td>
+<td>设置固定的行间距。</td>
+</tr>
+<tr>
+<td>%</td>
+<td>基于当前字体尺寸的百分比行间距。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 line-height 属性的值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 line-height 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="6-text-align属性"><a href="#6-text-align属性" class="headerlink" title="6. text-align属性"></a>6. text-align属性</h4><p>text-align 属性规定元素中的文本的水平对齐方式。</p>
+<p>该属性通过指定行框与哪个点对齐，从而设置块级元素内文本的水平对齐方式。通过允许用户代理调整行内容中字母和字之间的间隔，可以支持值 justify；不同用户代理可能会得到不同的结果。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>如果direction属性是ltr，则默认值是left；如果direction是rtl，则为right。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.textAlign=”right”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>把文本排列到左边。默认值：由浏览器决定。</td>
+</tr>
+<tr>
+<td>right</td>
+<td>把文本排列到右边。</td>
+</tr>
+<tr>
+<td>center</td>
+<td>把文本排列到中间。</td>
+</tr>
+<tr>
+<td>justify</td>
+<td>实现两端对齐文本效果。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 text-align 属性的值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 text-align 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="7-text-decoration属性"><a href="#7-text-decoration属性" class="headerlink" title="7. text-decoration属性"></a>7. text-decoration属性</h4><p>text-decoration 属性规定添加到文本的修饰。修饰的颜色由 “color” 属性设置。</p>
+<p>这个属性允许对文本设置某种效果，如加下划线。如果后代元素没有自己的装饰，祖先元素上设置的装饰会“延伸”到后代元素中。不要求用户代理支持 blink。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>none</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>no</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>版本：</th>
+<th>CSS1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JavaScript语法：</td>
+<td>object.style.textDecoration=”overline”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>none</td>
+<td>默认。定义标准的文本。</td>
+</tr>
+<tr>
+<td>underline</td>
+<td>定义文本下的一条线。</td>
+</tr>
+<tr>
+<td>overline</td>
+<td>定义文本上的一条线。</td>
+</tr>
+<tr>
+<td>line-through</td>
+<td>定义穿过文本下的一条线。</td>
+</tr>
+<tr>
+<td>blink</td>
+<td>定义闪烁的文本。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 text-decoration 属性的值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有主流浏览器都支持 text-decoration 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。IE、Chrome 或 Safari 不支持 “blink” 属性值。</p>
+<h4 id="8-text-indent属性"><a href="#8-text-indent属性" class="headerlink" title="8. text-indent属性"></a>8. text-indent属性</h4><p>text-indent 属性规定文本块中首行文本的缩进。允许使用负值。如果使用负值，那么首行会被缩进到左边。在 CSS 2.1 之前，text-indent 总是继承计算值，而不是声明值。</p>
+<p>用于定义块级元素中第一个内容行的缩进。这最常用于建立一个“标签页”效果。允许指定负值，这会产生一种“悬挂缩进”的效果。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>not specified</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.textIndent=”50px”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>length</td>
+<td>定义固定的缩进。默认值：0。</td>
+</tr>
+<tr>
+<td>%</td>
+<td>定义基于父元素宽度的百分比的缩进。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 text-indent 属性的值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 text-indent 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="9-text-transform属性"><a href="#9-text-transform属性" class="headerlink" title="9. text-transform属性"></a>9. text-transform属性</h4><p>text-transform 属性控制文本的大小写。</p>
+<p>这个属性会改变元素中的字母大小写，而不论源文档中文本的大小写。如果值为 capitalize，则要对某些字母大写，但是并没有明确定义如何确定哪些字母要大写，这取决于用户代理如何识别出各个“词”。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>none</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.textTransform=”uppercase”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="10-参考文档"><a href="#10-参考文档" class="headerlink" title="10.参考文档"></a>10.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
+<h4 id="11-联系方式"><a href="#11-联系方式" class="headerlink" title="11. 联系方式"></a>11. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;">&#121;&#x75;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.2%20CSS-Text%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/" data-id="ckjf5je4k0093sx8b1svngp4x" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.16%20Calc%E5%87%BD%E6%95%B0%E4%B8%8EVar%E5%8F%98%E9%87%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          6.16 Calc函数与Var变量
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.20%20CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7%E6%A1%88%E4%BE%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">6.20 CSS属性和特性案例</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DataBase/">DataBase</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Full-Stack-Development/">Full Stack Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Github/">Github</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Node/">Node</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Today-s-Excises/">Today's Excises</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TypeScript/">TypeScript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ubuntu/">Ubuntu</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/VS-Code/">VS Code</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a><span class="tag-list-count">42</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">32</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">72</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/" rel="tag">Node</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/" rel="tag">Programming</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Todat-s-Excises/" rel="tag">Todat's Excises</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VS-Code/" rel="tag">VS Code</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a><span class="tag-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">273</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">January 1970</a><span class="archive-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2.2%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/">5.2.2 ECMAScript原型与原型链(二)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2.3%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%89)/">5.2.3 ECMAScript原型与原型链(三)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/18/Vue/Tutorial/%E4%B8%83.%20Vue%20API/">七. Vue API</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/18/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/Vue%20Computed%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E4%B8%8EWatch%E7%9B%91%E5%90%AC/">Vue $Getter与$setter方法</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/18/Vue/Tags/%E4%B8%83.%20Vue%20API/7.1%20Vue%20%E5%BA%94%E7%94%A8%E9%85%8D%E7%BD%AEAPI/">7.1 Vue 应用配置API</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Yuan Min<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
