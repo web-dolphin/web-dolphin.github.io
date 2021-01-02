@@ -67,6 +67,541 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-CSS/Tags/六、CSS属性和特性/6.2 CSS-Text文本属性" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.2%20CSS-Text%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.2%20CSS-Text%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/">6.2 CSS-Text文本属性</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-CSS-Text文本属性汇总表"><a href="#1-CSS-Text文本属性汇总表" class="headerlink" title="1. CSS-Text文本属性汇总表"></a>1. CSS-Text文本属性汇总表</h4><ul>
+<li><p>汇总表</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color</td>
+<td>设置文本的颜色。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>规定文本的方向 / 书写方向。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>letter-spacing</td>
+<td>设置字符间距。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>设置行高。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>规定文本的水平对齐方式。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>text-decoration</td>
+<td>规定添加到文本的装饰效果。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>text-indent</td>
+<td>规定文本块首行的缩进。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>text-shadow</td>
+<td>规定添加到文本的阴影效果。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>text-transform</td>
+<td>控制文本的大小写。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>unicode-bidi</td>
+<td>设置文本方向。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>white-space</td>
+<td>规定如何处理元素中的空白。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>world-spacing</td>
+<td>设置单词间距。</td>
+<td>1</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="2-color属性"><a href="#2-color属性" class="headerlink" title="2. color属性"></a>2. color属性</h4><p>color 属性规定文本的颜色。</p>
+<p>这个属性设置了一个元素的前景色（在 HTML 表现中，就是元素文本的颜色）；光栅图像不受 color 影响。这个颜色还会应用到元素的所有边框，除非被 border-color 或另外某个边框颜色属性覆盖。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>not specified</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.color=”#FF0000”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color_name</td>
+<td>规定颜色值为颜色名称的颜色（比如 red）。</td>
+</tr>
+<tr>
+<td>hex_number</td>
+<td>规定颜色值为十六进制值的颜色（比如 #ff0000）。</td>
+</tr>
+<tr>
+<td>rgb_number</td>
+<td>规定颜色值为 rgb 代码的颜色（比如 rgb(255,0,0)）。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承颜色。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 color 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="3-direction属性"><a href="#3-direction属性" class="headerlink" title="3.direction属性"></a>3.direction属性</h4><p>direction 属性规定文本的方向 / 书写方向。该属性指定了块的基本书写方向，以及针对 Unicode 双向算法的嵌入和覆盖方向。不支持双向文本的用户代理可以忽略这个属性。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>ltr</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS2</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.direction=”rtl”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ltr</td>
+<td>默认。文本方向从左到右。</td>
+</tr>
+<tr>
+<td>rtl</td>
+<td>文本方向从右到左。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 direction 属性的值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 direction 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="4-letter-spacing属性"><a href="#4-letter-spacing属性" class="headerlink" title="4.letter-spacing属性"></a>4.letter-spacing属性</h4><p>letter-spacing 属性增加或减少字符间的空白（字符间距）。</p>
+<p>该属性定义了在文本字符框之间插入多少空间。由于字符字形通常比其字符框要窄，指定长度值时，会调整字母之间通常的间隔。因此，normal 就相当于值为 0。允许使用负值，这会让字母之间挤得更紧。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>normal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.letterSpacing=”3px”</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<ul>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>normal</td>
+<td>默认。规定字符间没有额外的空间。</td>
+</tr>
+<tr>
+<td>length</td>
+<td>定义字符间的固定空间（允许使用负值）。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 letter-spacing 属性的值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 letter-spacing 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。</p>
+<h4 id="5-line-height属性"><a href="#5-line-height属性" class="headerlink" title="5. line-height属性"></a>5. line-height属性</h4><p>line-height 属性设置行间的距离（行高）。不允许使用负值。</p>
+<p>该属性会影响行框的布局。在应用到一个块级元素时，它定义了该元素中基线之间的最小距离而不是最大距离。</p>
+<p>line-height 与 font-size 的计算值之差（在 CSS 中成为“行间距”）分为两半，分别加到一个文本行内容的顶部和底部。可以包含这些内容的最小框就是行框。</p>
+<p>原始数字值指定了一个缩放因子，后代元素会继承这个缩放因子而不是计算值。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>normal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.lineHeight=”2”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>normal</td>
+<td>默认。设置合理的行间距。</td>
+</tr>
+<tr>
+<td>number</td>
+<td>设置数字，此数字会与当前的字体尺寸相乘来设置行间距。</td>
+</tr>
+<tr>
+<td>length</td>
+<td>设置固定的行间距。</td>
+</tr>
+<tr>
+<td>%</td>
+<td>基于当前字体尺寸的百分比行间距。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 line-height 属性的值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 line-height 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="6-text-align属性"><a href="#6-text-align属性" class="headerlink" title="6. text-align属性"></a>6. text-align属性</h4><p>text-align 属性规定元素中的文本的水平对齐方式。</p>
+<p>该属性通过指定行框与哪个点对齐，从而设置块级元素内文本的水平对齐方式。通过允许用户代理调整行内容中字母和字之间的间隔，可以支持值 justify；不同用户代理可能会得到不同的结果。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>如果direction属性是ltr，则默认值是left；如果direction是rtl，则为right。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.textAlign=”right”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>把文本排列到左边。默认值：由浏览器决定。</td>
+</tr>
+<tr>
+<td>right</td>
+<td>把文本排列到右边。</td>
+</tr>
+<tr>
+<td>center</td>
+<td>把文本排列到中间。</td>
+</tr>
+<tr>
+<td>justify</td>
+<td>实现两端对齐文本效果。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 text-align 属性的值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 text-align 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="7-text-decoration属性"><a href="#7-text-decoration属性" class="headerlink" title="7. text-decoration属性"></a>7. text-decoration属性</h4><p>text-decoration 属性规定添加到文本的修饰。修饰的颜色由 “color” 属性设置。</p>
+<p>这个属性允许对文本设置某种效果，如加下划线。如果后代元素没有自己的装饰，祖先元素上设置的装饰会“延伸”到后代元素中。不要求用户代理支持 blink。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>none</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>no</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>版本：</th>
+<th>CSS1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JavaScript语法：</td>
+<td>object.style.textDecoration=”overline”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>none</td>
+<td>默认。定义标准的文本。</td>
+</tr>
+<tr>
+<td>underline</td>
+<td>定义文本下的一条线。</td>
+</tr>
+<tr>
+<td>overline</td>
+<td>定义文本上的一条线。</td>
+</tr>
+<tr>
+<td>line-through</td>
+<td>定义穿过文本下的一条线。</td>
+</tr>
+<tr>
+<td>blink</td>
+<td>定义闪烁的文本。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 text-decoration 属性的值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有主流浏览器都支持 text-decoration 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值”inherit”。IE、Chrome 或 Safari 不支持 “blink” 属性值。</p>
+<h4 id="8-text-indent属性"><a href="#8-text-indent属性" class="headerlink" title="8. text-indent属性"></a>8. text-indent属性</h4><p>text-indent 属性规定文本块中首行文本的缩进。允许使用负值。如果使用负值，那么首行会被缩进到左边。在 CSS 2.1 之前，text-indent 总是继承计算值，而不是声明值。</p>
+<p>用于定义块级元素中第一个内容行的缩进。这最常用于建立一个“标签页”效果。允许指定负值，这会产生一种“悬挂缩进”的效果。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>not specified</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.textIndent=”50px”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>length</td>
+<td>定义固定的缩进。默认值：0。</td>
+</tr>
+<tr>
+<td>%</td>
+<td>定义基于父元素宽度的百分比的缩进。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 text-indent 属性的值。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>所有浏览器都支持 text-indent 属性。任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。</p>
+<h4 id="9-text-transform属性"><a href="#9-text-transform属性" class="headerlink" title="9. text-transform属性"></a>9. text-transform属性</h4><p>text-transform 属性控制文本的大小写。</p>
+<p>这个属性会改变元素中的字母大小写，而不论源文档中文本的大小写。如果值为 capitalize，则要对某些字母大写，但是并没有明确定义如何确定哪些字母要大写，这取决于用户代理如何识别出各个“词”。</p>
+<ul>
+<li><p>默认值：</p>
+<table>
+<thead>
+<tr>
+<th>默认值：</th>
+<th>none</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承性：</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>版本：</td>
+<td>CSS1</td>
+</tr>
+<tr>
+<td>JavaScript语法：</td>
+<td>object.style.textTransform=”uppercase”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>可能的值：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="10-参考文档"><a href="#10-参考文档" class="headerlink" title="10.参考文档"></a>10.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
+<h4 id="11-联系方式"><a href="#11-联系方式" class="headerlink" title="11. 联系方式"></a>11. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#111;&#x6d;">&#121;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.2%20CSS-Text%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7/" data-id="ckjf755az009b2e8b7divha7u" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-CSS/Tags/六、CSS属性和特性/6.20 CSS属性和特性案例" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.20%20CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7%E6%A1%88%E4%BE%8B/" class="article-date">
@@ -92,12 +627,12 @@
         <h4 id="1-wave-effective"><a href="#1-wave-effective" class="headerlink" title="1. wave_effective"></a>1. wave_effective</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/calc_var/tree/main/assert/wave_effective">[源码]</a></p>
 <h4 id="2-word-special-effection"><a href="#2-word-special-effection" class="headerlink" title="2. word_special_effection"></a>2. word_special_effection</h4><p><a target="_blank" rel="noopener" href="https://github.com/web-dolphin/calc_var/tree/main/assert/word_special_effection">[源码]</a></p>
 <h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS 属性和特性]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#x6e;&#109;&#x69;&#110;&#56;&#56;&#x38;&#x38;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#117;&#97;&#x6e;&#109;&#x69;&#110;&#56;&#56;&#x38;&#x38;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#110;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#56;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#111;&#109;">&#x79;&#x75;&#97;&#110;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#56;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.20%20CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7%E6%A1%88%E4%BE%8B/" data-id="ckjf5je4k0095sx8b9n85g6wm" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.20%20CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7%E6%A1%88%E4%BE%8B/" data-id="ckjf755b0009d2e8b0v668yeb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -185,90 +720,12 @@
 </li>
 </ul>
 <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#109;">&#x79;&#117;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#109;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#109;">&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#56;&#56;&#56;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.3%20CSS-Font%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7/" data-id="ckjf5je4m0097sx8b4l3a7lum" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/六、CSS属性和特性/6.5 CSS-Margin外边距属性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.5%20CSS-Margin%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%B1%9E%E6%80%A7/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.5%20CSS-Margin%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%B1%9E%E6%80%A7/">6.5 CSS-Margin外边距属性</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-CSS-Margin外边距属性汇总"><a href="#1-CSS-Margin外边距属性汇总" class="headerlink" title="1. CSS Margin外边距属性汇总"></a>1. CSS Margin外边距属性汇总</h4><ul>
-<li><p>汇总表</p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-<th>CSS</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>margin</td>
-<td>简写属性。在一个声明中设置所有外边距属性。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>margin-bottom</td>
-<td>设置元素的下外边距。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>margin-left</td>
-<td>设置元素的左外边距。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>margin-right</td>
-<td>设置元素的右外边距。</td>
-<td>1</td>
-</tr>
-<tr>
-<td>margin-top</td>
-<td>设置元素的上外边距。</td>
-<td>1</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#111;&#x6d;">&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.5%20CSS-Margin%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%B1%9E%E6%80%A7/" data-id="ckjf5je4o0099sx8beb112uw3" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.3%20CSS-Font%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7/" data-id="ckjf755b2009f2e8b67tg5lrx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -436,12 +893,90 @@
 </li>
 </ul>
 <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#110;&#109;&#105;&#110;&#56;&#x38;&#56;&#56;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#111;&#x6d;">&#x79;&#117;&#97;&#110;&#109;&#105;&#110;&#56;&#x38;&#56;&#56;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#109;&#x69;&#x6e;&#x38;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#111;&#x6d;">&#x79;&#x75;&#97;&#x6e;&#109;&#x69;&#x6e;&#x38;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#111;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.4%20CSS-Border-Outline%E8%BE%B9%E6%A1%86%E5%92%8C%E8%BD%AE%E5%BB%93%E5%B1%9E%E6%80%A7/" data-id="ckjf5je4q009bsx8b66uibq3c" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.4%20CSS-Border-Outline%E8%BE%B9%E6%A1%86%E5%92%8C%E8%BD%AE%E5%BB%93%E5%B1%9E%E6%80%A7/" data-id="ckjf755b6009h2e8b4sn75ctl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS/Tags/六、CSS属性和特性/6.5 CSS-Margin外边距属性" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.5%20CSS-Margin%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%B1%9E%E6%80%A7/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.5%20CSS-Margin%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%B1%9E%E6%80%A7/">6.5 CSS-Margin外边距属性</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-CSS-Margin外边距属性汇总"><a href="#1-CSS-Margin外边距属性汇总" class="headerlink" title="1. CSS Margin外边距属性汇总"></a>1. CSS Margin外边距属性汇总</h4><ul>
+<li><p>汇总表</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>margin</td>
+<td>简写属性。在一个声明中设置所有外边距属性。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>margin-bottom</td>
+<td>设置元素的下外边距。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>margin-left</td>
+<td>设置元素的左外边距。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>margin-right</td>
+<td>设置元素的右外边距。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>margin-top</td>
+<td>设置元素的上外边距。</td>
+<td>1</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#x2e;&#99;&#111;&#x6d;">&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#111;&#107;&#x2e;&#99;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.5%20CSS-Margin%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%B1%9E%E6%80%A7/" data-id="ckjf755b7009j2e8b1gra09dm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -514,12 +1049,12 @@
 </li>
 </ul>
 <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#110;&#x6d;&#x69;&#110;&#x38;&#56;&#x38;&#56;&#64;&#111;&#117;&#116;&#108;&#x6f;&#111;&#107;&#46;&#x63;&#x6f;&#109;">&#x79;&#x75;&#97;&#110;&#x6d;&#x69;&#110;&#x38;&#56;&#x38;&#56;&#64;&#111;&#117;&#116;&#108;&#x6f;&#111;&#107;&#46;&#x63;&#x6f;&#109;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#x38;&#56;&#56;&#x38;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#x79;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#x38;&#56;&#56;&#x38;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.6%20CSS-Padding%E5%86%85%E8%BE%B9%E8%B7%9D%E5%B1%9E%E6%80%A7/" data-id="ckjf5je4r009dsx8bhbqdbiul" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.6%20CSS-Padding%E5%86%85%E8%BE%B9%E8%B7%9D%E5%B1%9E%E6%80%A7/" data-id="ckjf755ba009l2e8b0uj6d02j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -592,12 +1127,12 @@
 </li>
 </ul>
 <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#56;&#56;&#x38;&#56;&#64;&#x6f;&#x75;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#109;">&#x79;&#x75;&#97;&#x6e;&#x6d;&#105;&#110;&#56;&#56;&#x38;&#56;&#64;&#x6f;&#x75;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#109;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#x6d;">&#121;&#x75;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.7%20CSS-List%E5%88%97%E8%A1%A8%E5%B1%9E%E6%80%A7/" data-id="ckjf5je4t009fsx8b9jhp08a9" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.7%20CSS-List%E5%88%97%E8%A1%A8%E5%B1%9E%E6%80%A7/" data-id="ckjf755bd009n2e8bebss8hu3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -665,12 +1200,12 @@
 </li>
 </ul>
 <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#109;&#x69;&#110;&#56;&#56;&#56;&#56;&#x40;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;">&#121;&#x75;&#x61;&#x6e;&#109;&#x69;&#110;&#56;&#56;&#56;&#56;&#x40;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#110;&#109;&#105;&#x6e;&#x38;&#56;&#x38;&#x38;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;">&#x79;&#117;&#97;&#110;&#109;&#105;&#x6e;&#x38;&#56;&#x38;&#x38;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.8%20CSS-Generated-Content%E5%86%85%E5%AE%B9%E7%94%9F%E6%88%90/" data-id="ckjf5je4t009hsx8bgndzboqh" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.8%20CSS-Generated-Content%E5%86%85%E5%AE%B9%E7%94%9F%E6%88%90/" data-id="ckjf755be009p2e8b5oc0e1p9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -753,12 +1288,12 @@
 </li>
 </ul>
 <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AD%E3%80%81CSS%20%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/">[六、CSS属性和特性]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#109;&#105;&#110;&#x38;&#56;&#x38;&#56;&#64;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#111;&#x6d;">&#x79;&#x75;&#97;&#x6e;&#109;&#105;&#110;&#x38;&#56;&#x38;&#56;&#64;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#110;&#109;&#x69;&#110;&#x38;&#56;&#x38;&#x38;&#64;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#99;&#111;&#109;">&#121;&#117;&#x61;&#110;&#109;&#x69;&#110;&#x38;&#56;&#x38;&#x38;&#64;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#99;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.9%20CSS-Dimension%E5%B0%BA%E5%AF%B8%E5%B1%9E%E6%80%A7/" data-id="ckjf5je4u009jsx8bf4xvbhiq" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E5%85%AD%E3%80%81CSS%E5%B1%9E%E6%80%A7%E5%92%8C%E7%89%B9%E6%80%A7/6.9%20CSS-Dimension%E5%B0%BA%E5%AF%B8%E5%B1%9E%E6%80%A7/" data-id="ckjf755bf009r2e8b87uh79hn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -831,12 +1366,12 @@
 </ul>
 <p><code>windows</code> + <code>R</code>输入： services.msc 开启服务；</p>
 <h4 id="4-参考文档"><a href="#4-参考文档" class="headerlink" title="4.参考文档"></a>4.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/DataBase/MongoDB/Tutorial/%E4%B8%80%E3%80%81MongoDB%E6%95%99%E7%A8%8B/">[一、MongoDB教程]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#97;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#64;&#111;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#121;&#117;&#97;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#64;&#111;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#110;&#109;&#105;&#110;&#56;&#56;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#x75;&#97;&#110;&#109;&#105;&#110;&#56;&#56;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.1Windows%E5%AE%89%E8%A3%85MongoDB/" data-id="ckjf5je4y009tsx8b824t35mg" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.1Windows%E5%AE%89%E8%A3%85MongoDB/" data-id="ckjf755bo00a32e8b3gyicen5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a></li></ul>
@@ -899,12 +1434,12 @@
 </li>
 </ul>
 <h4 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3.参考文档"></a>3.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/DataBase/MongoDB/Tutorial/%E4%B8%80%E3%80%81MongoDB%E6%95%99%E7%A8%8B/">[一、MongoDB教程]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#110;&#56;&#x38;&#x38;&#x38;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#109;">&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#110;&#56;&#x38;&#x38;&#x38;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#109;</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#110;&#x6d;&#x69;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#111;&#107;&#x2e;&#99;&#111;&#109;">&#x79;&#117;&#97;&#110;&#x6d;&#x69;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#111;&#107;&#x2e;&#99;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.2%20Mongodb%E5%AE%89%E8%A3%85%E4%B8%BA32%E4%BD%8Dwindows%E6%9C%8D%E5%8A%A1/" data-id="ckjf5je4z009vsx8b5gff3280" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.2%20Mongodb%E5%AE%89%E8%A3%85%E4%B8%BA32%E4%BD%8Dwindows%E6%9C%8D%E5%8A%A1/" data-id="ckjf755br00a52e8b2ym875t2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a></li></ul>
@@ -1059,12 +1594,12 @@
 </li>
 </ul>
 <h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/DataBase/MongoDB/Tutorial/%E4%B8%80%E3%80%81MongoDB%E6%95%99%E7%A8%8B/">[一、MongoDB教程]</a></p>
-<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#97;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#x38;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#x6f;&#109;">&#121;&#117;&#97;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#x38;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#x6f;&#109;</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#110;&#109;&#105;&#110;&#56;&#x38;&#x38;&#x38;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#109;">&#121;&#x75;&#x61;&#110;&#109;&#105;&#110;&#56;&#x38;&#x38;&#x38;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.3%20.Mongoose%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%85%B3%E8%81%94%E8%AE%BE%E7%BD%AE/" data-id="ckjf5je50009ysx8b974l3xrz" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.3%20.Mongoose%E5%BB%BA%E6%A8%A1%E4%B8%8E%E5%85%B3%E8%81%94%E8%AE%BE%E7%BD%AE/" data-id="ckjf755bs00a82e8bd3ky5xxo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a></li></ul>
@@ -1199,12 +1734,12 @@
 </li>
 </ul>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/DataBase/MongoDB/Tutorial/%E4%B8%80%E3%80%81MongoDB%E6%95%99%E7%A8%8B/">[一、MongoDB教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#121;&#117;&#97;&#110;&#109;&#105;&#110;&#x38;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#x2e;&#99;&#111;&#109;">&#121;&#117;&#97;&#110;&#109;&#105;&#110;&#x38;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#x2e;&#99;&#111;&#109;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;">&#x79;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.4%20MongoDB%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/" data-id="ckjf5je5100a0sx8b9hlo3ovs" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tags/1.4%20MongoDB%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/" data-id="ckjf755bt00aa2e8b3edh8lvg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DataBase/" rel="tag">DataBase</a></li></ul>
@@ -1263,12 +1798,12 @@
 </ol>
 <p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/DataBase/MongoDB/Tags/1.4%20MongoDB%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/">[1.4 MongoDB常见操作]</a></p>
 <h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/DataBase/Tutorial/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%99%E7%A8%8B/">[数据库教程]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#99;&#111;&#x6d;">&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#99;&#111;&#x6d;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#56;&#56;&#x38;&#x38;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#109;">&#x79;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#56;&#56;&#x38;&#x38;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tutorial/%E4%B8%80%E3%80%81MongoDB%E6%95%99%E7%A8%8B/" data-id="ckjf5je5200a2sx8b3r3dfvzz" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/DataBase/MongoDB/Tutorial/%E4%B8%80%E3%80%81MongoDB%E6%95%99%E7%A8%8B/" data-id="ckjf755bu00ac2e8b9opk6iwc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1332,7 +1867,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/1.JavaScript%E7%AE%80%E5%8F%B2/" data-id="ckjf5je5400a5sx8b2zklcckv" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/1.JavaScript%E7%AE%80%E5%8F%B2/" data-id="ckjf755bw00af2e8b51pqbf73" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -1389,81 +1924,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/" data-id="ckjf5je5a00aasx8bdye40rvn" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%80%E3%80%81JavaScript%E7%AE%80%E4%BB%8B/2.JavaScript%E5%AE%9E%E7%8E%B0/" data-id="ckjf755bx00ah2e8bgr5xaajo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CSS/Tags/九、Flex弹性布局/9.2 Flex基本概念" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.2%20Flex%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.2%20Flex%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">9.2 Flex基本概念</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-容器"><a href="#1-容器" class="headerlink" title="1.容器"></a>1.容器</h4><ul>
-<li>采用 Flex 布局的元素，称为 Flex 容器（flex container），简称<code>容器</code>；</li>
-</ul>
-<h4 id="2-项目"><a href="#2-项目" class="headerlink" title="2.项目"></a>2.项目</h4><ul>
-<li>容器中所有子元素自动成为容器成员，称为 Flex 项目（flex item）</li>
-</ul>
-<h4 id="3-主轴"><a href="#3-主轴" class="headerlink" title="3.主轴"></a>3.主轴</h4><ul>
-<li><p>main axis: flex布局主轴；</p>
-</li>
-<li><p>主轴设置为纵轴</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">flex-direction</span>: <span class="selector-tag">column</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>主轴设置为水平轴</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">flex-direction</span>: <span class="selector-tag">row</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>默认主轴方向为水平方向(从左到右)；</p>
-</li>
-<li><p>主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；</p>
-</li>
-<li><p>项目默认沿主轴排列，单个项目占据的主轴空间叫做main size；</p>
-</li>
-</ul>
-<h4 id="4-交叉轴"><a href="#4-交叉轴" class="headerlink" title="4.交叉轴"></a>4.交叉轴</h4><ul>
-<li><p>主轴确定后，与之垂直的方向称为交叉轴；</p>
-</li>
-<li><p>cross axis: flex布局中交叉轴；</p>
-</li>
-<li><p>默认交叉轴方向为垂直方向(从上到下)；</p>
-</li>
-<li><p>交叉轴的开始位置叫做cross start，结束位置叫做cross end，占据的交叉轴空间叫做cross size；</p>
-</li>
-</ul>
-<h4 id="5-参考文档"><a href="#5-参考文档" class="headerlink" title="5.参考文档"></a>5.参考文档</h4><p><a href="git@github.com:web-oyster/flex_layout.git">[源码]</a></p>
-<p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/CSS/Tutorial/%E4%B9%9D%E3%80%81Flex%20%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">[九、Flex 弹性布局]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email：<a href="mailto:&#121;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#x38;&#x38;&#64;&#111;&#x75;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#x6f;&#x6d;">&#121;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#x38;&#x38;&#64;&#111;&#x75;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/CSS/Tags/%E4%B9%9D%E3%80%81Flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/9.2%20Flex%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" data-id="ckjf5je5c00adsx8bguxw3b55" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
 
     </footer>
   </div>
@@ -1549,12 +2013,12 @@
 </li>
 </ul>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#108;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#x75;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#108;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p>Email：<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#109;&#x69;&#110;&#56;&#56;&#56;&#56;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#x6f;&#x6d;">&#x79;&#117;&#x61;&#x6e;&#109;&#x69;&#110;&#56;&#56;&#56;&#56;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.1%20%20Express%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95/" data-id="ckjf5je5e00agsx8b16f7bnqz" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.1%20%20Express%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95/" data-id="ckjf755bz00ak2e8b7wz94qe8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -1607,12 +2071,12 @@
 </li>
 </ul>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#x61;&#110;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#99;&#111;&#x6d;">&#x79;&#x75;&#x61;&#110;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#99;&#111;&#x6d;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#97;&#x6e;&#109;&#x69;&#110;&#x38;&#56;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#108;&#x6f;&#111;&#107;&#x2e;&#99;&#111;&#109;">&#121;&#117;&#97;&#x6e;&#109;&#x69;&#110;&#x38;&#56;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#108;&#x6f;&#111;&#107;&#x2e;&#99;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.2%20Express%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="ckjf5je5f00aisx8b1jgd38gj" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.2%20Express%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="ckjf755c000am2e8b06t2er93" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -1696,67 +2160,12 @@
 </li>
 </ul>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#x61;&#110;&#109;&#105;&#110;&#56;&#x38;&#x38;&#x38;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;">&#121;&#117;&#x61;&#110;&#109;&#105;&#110;&#56;&#x38;&#x38;&#x38;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#x6f;&#109;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#109;">&#x79;&#x75;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.3%20Express%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E8%B7%AF%E7%94%B1/" data-id="ckjf5je5g00aksx8b5rfz8g8l" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tags/Express/3.5 配置mongoose链接" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/Node/Tags/Express/3.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/Node/Tags/Express/3.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/">3.5 配置Mongoose链接</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-项目分析"><a href="#1-项目分析" class="headerlink" title="1.项目分析"></a>1.项目分析</h3><h4 id="1-入口文件引入connect-js文件"><a href="#1-入口文件引入connect-js文件" class="headerlink" title="1. 入口文件引入connect.js文件"></a>1. 入口文件引入connect.js文件</h4><ul>
-<li><p>app.js</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> connect = <span class="built_in">require</span>(<span class="string">&#x27;./config/connect&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="2-链接MongooDB数据库"><a href="#2-链接MongooDB数据库" class="headerlink" title="2. 链接MongooDB数据库"></a>2. 链接MongooDB数据库</h4><ol>
-<li>Config目录</li>
-</ol>
-<ul>
-<li><p>connect.js文件</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.import mongoose module</span></span><br><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.connect to mongoDB</span></span><br><span class="line">mongoose.connect(</span><br><span class="line">  <span class="string">&#x27;mongodb://localhost:27017/blog&#x27;</span>,</span><br><span class="line">  &#123;</span><br><span class="line">    useUnifiedTopology:<span class="literal">true</span>,</span><br><span class="line">    useNewUrlParser:<span class="literal">true</span>,</span><br><span class="line">    useCreateIndex: <span class="literal">true</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function">()=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;Success connecting to MongoDB!&#x27;</span>)&#125;)</span><br><span class="line">  .catch(<span class="function">()=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;Failed to connect MongoDB!&#x27;</span>)&#125;)</span><br><span class="line">  <span class="comment">// or</span></span><br><span class="line">  cont db = mongoose.connection</span><br><span class="line">  db.on(<span class="string">&#x27;error&#x27;</span>,<span class="built_in">console</span>.error.bind(<span class="built_in">console</span>,<span class="string">&#x27;connection error:&#x27;</span>))</span><br><span class="line">  db.once(<span class="string">&#x27;open&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;Datebase is Ok!&#x27;</span>)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#x74;&#108;&#111;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/" data-id="ckjf5je5h00amsx8bbrd0465u" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.3%20Express%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9D%97%E5%8C%96%E8%B7%AF%E7%94%B1/" data-id="ckjf755c100ap2e8b6myi49ng" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -1815,12 +2224,67 @@
 </li>
 </ul>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#110;&#109;&#x69;&#110;&#56;&#56;&#x38;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#x75;&#97;&#110;&#109;&#x69;&#110;&#56;&#56;&#x38;&#56;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#x38;&#56;&#x38;&#64;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;">&#121;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#56;&#x38;&#56;&#x38;&#64;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.4%20%20Express%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/" data-id="ckjf5je5i00aosx8b5f67a171" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.4%20%20Express%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/" data-id="ckjf755c200aq2e8bbwongo83" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Tags/Express/3.5 配置mongoose链接" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/Node/Tags/Express/3.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/Node/Tags/Express/3.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/">3.5 配置Mongoose链接</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-项目分析"><a href="#1-项目分析" class="headerlink" title="1.项目分析"></a>1.项目分析</h3><h4 id="1-入口文件引入connect-js文件"><a href="#1-入口文件引入connect-js文件" class="headerlink" title="1. 入口文件引入connect.js文件"></a>1. 入口文件引入connect.js文件</h4><ul>
+<li><p>app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> connect = <span class="built_in">require</span>(<span class="string">&#x27;./config/connect&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-链接MongooDB数据库"><a href="#2-链接MongooDB数据库" class="headerlink" title="2. 链接MongooDB数据库"></a>2. 链接MongooDB数据库</h4><ol>
+<li>Config目录</li>
+</ol>
+<ul>
+<li><p>connect.js文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.import mongoose module</span></span><br><span class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.connect to mongoDB</span></span><br><span class="line">mongoose.connect(</span><br><span class="line">  <span class="string">&#x27;mongodb://localhost:27017/blog&#x27;</span>,</span><br><span class="line">  &#123;</span><br><span class="line">    useUnifiedTopology:<span class="literal">true</span>,</span><br><span class="line">    useNewUrlParser:<span class="literal">true</span>,</span><br><span class="line">    useCreateIndex: <span class="literal">true</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function">()=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;Success connecting to MongoDB!&#x27;</span>)&#125;)</span><br><span class="line">  .catch(<span class="function">()=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;Failed to connect MongoDB!&#x27;</span>)&#125;)</span><br><span class="line">  <span class="comment">// or</span></span><br><span class="line">  cont db = mongoose.connection</span><br><span class="line">  db.on(<span class="string">&#x27;error&#x27;</span>,<span class="built_in">console</span>.error.bind(<span class="built_in">console</span>,<span class="string">&#x27;connection error:&#x27;</span>))</span><br><span class="line">  db.once(<span class="string">&#x27;open&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;Datebase is Ok!&#x27;</span>)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E4%B8%89%E3%80%81Expess%20%E6%95%99%E7%A8%8B/">[三、Express教程]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#117;&#97;&#x6e;&#109;&#x69;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#117;&#97;&#x6e;&#109;&#x69;&#x6e;&#x38;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#111;&#x6b;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/Node/Tags/Express/3.5%20%E9%85%8D%E7%BD%AEmongoose%E9%93%BE%E6%8E%A5/" data-id="ckjf755c300as2e8bb8m18yov" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>

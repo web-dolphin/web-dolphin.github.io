@@ -67,9 +67,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Node/Tags/Node Server/6.5 HTTP通信协议与响应处理" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Node/Tags/Node Server/6.6 Node请求参数" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/12/Node/Tags/Node%20Server/6.5%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/" class="article-date">
+    <a href="/2020/10/12/Node/Tags/Node%20Server/6.6%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/" class="article-date">
   <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
 </a>
     
@@ -81,7 +81,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/12/Node/Tags/Node%20Server/6.5%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/">6.5 HTTP通信协议与响应处理</a>
+      <a class="article-title" href="/2020/10/12/Node/Tags/Node%20Server/6.6%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/">6.6 Node请求参数</a>
     </h1>
   
 
@@ -89,91 +89,35 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="1-http通信协议"><a href="#1-http通信协议" class="headerlink" title="1. http通信协议"></a>1. http通信协议</h4><ul>
-<li><p>超文本传输协议(英文：HyperText Transfer Protocol，缩写：HTTP)</p>
+        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="1-请求参数"><a href="#1-请求参数" class="headerlink" title="1. 请求参数"></a>1. 请求参数</h4><ol>
+<li>客户端向服务器端发送请求时，有时需要携带一些客户信息;</li>
+<li>客户信息需要通过请求参数的形式传递到服务器端，比如登录操作</li>
+</ol>
+<h4 id="2-GET请求参数"><a href="#2-GET请求参数" class="headerlink" title="2. GET请求参数"></a>2. GET请求参数</h4><ul>
+<li><p>参数被放置在浏览器地址栏中，例如：<a target="_blank" rel="noopener" href="http://localhost:3000/?name=zhangsan&amp;age=20">http://localhost:3000/?name=zhangsan&amp;age=20</a></p>
 </li>
-<li><p>规定了如何从网站服务器传输超文本到本地浏览器;</p>
-</li>
-<li><p>基于客户端服务器架构工作，是客户端(用户)和服务器端(网站)请求和应答的标准</p>
-</li>
-</ul>
-<h4 id="2-报文"><a href="#2-报文" class="headerlink" title="2. 报文"></a>2. 报文</h4><ul>
-<li><p>在HTTP请求和响应的过程中传递的数据块就叫报文,包括要传送的数据和一些附加信息，并且要遵守规定好的格式</p>
-<p><img src="imgs/%E6%8A%A5%E6%96%87.jpg" alt="报文原理图"></p>
-</li>
-</ul>
-<h4 id="3-请求报文"><a href="#3-请求报文" class="headerlink" title="3. 请求报文"></a>3. 请求报文</h4><ol>
-<li><p>请求方式: Request Method</p>
-<ul>
-<li>GET:   请求数据</li>
-<li>POST:  发送数据</li>
-</ul>
-</li>
-<li><p>请求地址: Request URL</p>
-<ul>
-<li><p>代码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  req.headers  <span class="comment">// 获取请求报文</span></span><br><span class="line">  req.url      <span class="comment">// 获取请求地址</span></span><br><span class="line">  req.method   <span class="comment">// 获取请求方法</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>获取请求信息</p>
-<ul>
-<li>获取请求地址:  req.url</li>
-<li>获取请求方式： req.method</li>
-<li>获取请求信息： req.headers</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = http.createServer()</span><br><span class="line"></span><br><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 1. 获取请求地址: req.url</span></span><br><span class="line">  <span class="built_in">console</span>.log(req.url);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 2. 获取请求方式： req.method</span></span><br><span class="line">  <span class="built_in">console</span>.log(req.method);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 3. 获取请求信息： req.headers</span></span><br><span class="line">  <span class="built_in">console</span>.log(req.headers);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 4. 获取请求信息： req.headers[&#x27;accept&#x27;]</span></span><br><span class="line">  <span class="built_in">console</span>.log(req.headers[<span class="string">&#x27;accept&#x27;</span>])</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> port = process.env.NODE_ENV || <span class="number">3000</span>;</span><br><span class="line">app.listen(port,()= &gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Server listen on port: <span class="subst">$&#123;port&#125;</span>...`</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>获取get请求信息</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(req.query)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取post请求信息</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(req.body)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<li><p>参数获取需要借助系统模块url，url模块用来处理url地址</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="comment">// 导入url系统模块 用于处理url地址</span></span><br><span class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = http.createServer();</span><br><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 将url路径的各个部分解析出来并返回对象</span></span><br><span class="line">        <span class="comment">// true 代表将参数解析为对象格式</span></span><br><span class="line">    <span class="keyword">let</span> &#123;query&#125; = url.parse(req.url, <span class="literal">true</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(query);</span><br><span class="line">&#125;);</span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
+<h4 id="3-POST请求参数"><a href="#3-POST请求参数" class="headerlink" title="3. POST请求参数"></a>3. POST请求参数</h4><ul>
+<li><p>参数被放置在请求体中进行传输;</p>
 </li>
-</ol>
-<h4 id="4-响应报文"><a href="#4-响应报文" class="headerlink" title="4. 响应报文"></a>4. 响应报文</h4><ol>
-<li><p>HTTP状态码</p>
-<ul>
-<li><p>200 请求成功</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">   res.writeHead(<span class="number">200</span>,&#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;text/html;charset=utf8&#x27;</span>&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-<li><p>404 请求的资源没有被找到</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">   res.writeHead(<span class="number">400</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<li><p>获取POST参数需要使用data事件和end事件;</p>
 </li>
-<li><p>500 服务器端错误</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">   res.writeHead(<span class="number">500</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-<li><p>400 客户端请求有语法错误</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">   res.writeHead(<span class="number">404</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<li><p>使用querystring系统模块将参数转换为对象格式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 导入系统模块querystring 用于将HTTP参数转换为对象格式</span></span><br><span class="line"><span class="keyword">const</span> querystring = <span class="built_in">require</span>(<span class="string">&#x27;querystring&#x27;</span>);</span><br><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> postData = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="comment">// 监听参数传输事件</span></span><br><span class="line">    req.on(<span class="string">&#x27;data&#x27;</span>, <span class="function">(<span class="params">chunk</span>) =&gt;</span> postData += chunk;);</span><br><span class="line">    <span class="comment">// 监听参数传输完毕事件</span></span><br><span class="line">    req.on(<span class="string">&#x27;end&#x27;</span>, <span class="function">() =&gt;</span> &#123; </span><br><span class="line">        <span class="built_in">console</span>.log(querystring.parse(postData)); </span><br><span class="line">    &#125;); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
-</li>
-<li><p>内容类型</p>
-<ul>
-<li><p>text/html</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 设置响应报文</span></span><br><span class="line">  res.writeHead(<span class="number">200</span>, &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;text/html; charset=utf8&#x27;</span>&#125;);</span><br><span class="line">  <span class="function"><span class="title">if</span>(<span class="params">req.method === <span class="string">&quot;GET&quot;</span></span>)</span>&#123;</span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">req.url == <span class="string">&#x27;/index&#x27;</span> || req.url == <span class="string">&#x27;/&#x27;</span></span>)</span>&#123;</span><br><span class="line">      res.end(<span class="string">&quot;&lt;h2&gt;Welcom to HTML5!欢迎来到HTML5&lt;/h2&gt;&quot;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="function"><span class="title">if</span>(<span class="params">req.url == <span class="string">&#x27;/css&#x27;</span></span>)</span> &#123;</span><br><span class="line">      res.end(<span class="string">&quot;&lt;h2&gt;Welcom to CSS3!&lt;/h2&gt;&quot;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      res.end(<span class="string">&quot;Not found!&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;<span class="keyword">else</span> <span class="function"><span class="title">if</span>(<span class="params">req.method === <span class="string">&quot;POST&quot;</span></span>)</span>&#123;</span><br><span class="line">    res.end(<span class="string">&quot;Hello World!&quot;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-<li><p>text/css</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 设置响应报文</span></span><br><span class="line">  res.writeHead(<span class="number">200</span>, &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;text/css;charset=utf8&#x27;</span>&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>application/javascript</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 设置响应报文</span></span><br><span class="line">  res.writeHead(<span class="number">200</span>, &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/javascript;charset=utf8&#x27;</span>&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-<li><p>image/jpg</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 设置响应报文</span></span><br><span class="line">  res.writeHead(<span class="number">200</span>, &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;image/jpg;charset=utf8&#x27;</span>&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>application/json</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.on(<span class="string">&#x27;request&#x27;</span>, <span class="keyword">async</span>(req, res) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 设置响应报文</span></span><br><span class="line">  res.writeHead(<span class="number">200</span>, &#123;<span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/json;charset=utf8&#x27;</span>&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3></li>
-</ul>
-</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#46;&#99;&#111;&#109;">&#121;&#x75;&#97;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#x38;&#56;&#64;&#111;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#46;&#99;&#111;&#109;</a></p>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#x79;&#117;&#x61;&#110;&#109;&#105;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#111;&#x6d;">&#x79;&#117;&#x61;&#110;&#109;&#105;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#111;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.5%20HTTP%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E4%B8%8E%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86/" data-id="ckjf5je5y00bpsx8bg9ms1uu7" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.6%20Node%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0/" data-id="ckjf755ck00bv2e8ba00vdevd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -221,60 +165,12 @@
 </li>
 </ol>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#x79;&#117;&#x61;&#110;&#109;&#105;&#110;&#x38;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#107;&#x2e;&#x63;&#111;&#109;">&#x79;&#117;&#x61;&#110;&#109;&#105;&#110;&#x38;&#x38;&#x38;&#56;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#107;&#x2e;&#x63;&#111;&#109;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#117;&#x61;&#110;&#109;&#x69;&#x6e;&#x38;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#x63;&#111;&#109;">&#121;&#117;&#x61;&#110;&#109;&#x69;&#x6e;&#x38;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#x63;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.7%20Node%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/" data-id="ckjf5je5z00brsx8b80x8dp9d" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node/Tags/Node Server/6.9 Node动态资源" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/" class="article-date">
-  <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/">6.9 Node动态资源</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="1-动态资源"><a href="#1-动态资源" class="headerlink" title="1. 动态资源"></a>1. 动态资源</h4><ol>
-<li><p>相同的请求地址不同的响应资源，这种资源就是动态资源</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="http://www.dolphin.com/article?id=1">http://www.dolphin.com/article?id=1</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.dolphin.com/article?id=2">http://www.dolphin.com/article?id=2</a></li>
-</ul>
-</li>
-</ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#117;&#97;&#x6e;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#56;&#64;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#111;&#x6d;">&#121;&#117;&#97;&#x6e;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#56;&#64;&#x6f;&#x75;&#116;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#111;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/" data-id="ckjf5je6100btsx8b78mdgsxz" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.7%20Node%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE/" data-id="ckjf755cl00bx2e8b6rxq4ndv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -318,12 +214,60 @@
 </li>
 </ol>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#x79;&#x75;&#x61;&#110;&#109;&#105;&#x6e;&#56;&#56;&#56;&#56;&#x40;&#111;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#99;&#111;&#109;">&#x79;&#x75;&#x61;&#110;&#109;&#105;&#x6e;&#56;&#56;&#56;&#56;&#x40;&#111;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#99;&#111;&#109;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#x79;&#x75;&#97;&#110;&#109;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#111;&#109;">&#x79;&#x75;&#97;&#110;&#109;&#x69;&#110;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.8Node%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/" data-id="ckjf5je6200bvsx8bdtw10dxd" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.8Node%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/" data-id="ckjf755cm00bz2e8b2msm0uew" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node/Tags/Node Server/6.9 Node动态资源" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/" class="article-date">
+  <time datetime="2020-10-11T16:00:00.000Z" itemprop="datePublished">2020-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/">6.9 Node动态资源</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-教程"><a href="#1-教程" class="headerlink" title="1. 教程"></a>1. 教程</h3><h4 id="1-动态资源"><a href="#1-动态资源" class="headerlink" title="1. 动态资源"></a>1. 动态资源</h4><ol>
+<li><p>相同的请求地址不同的响应资源，这种资源就是动态资源</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.dolphin.com/article?id=1">http://www.dolphin.com/article?id=1</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.dolphin.com/article?id=2">http://www.dolphin.com/article?id=2</a></li>
+</ul>
+</li>
+</ol>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/24/Node/Tutorial/%E5%85%AD%E3%80%81Node%20Server%E6%95%99%E7%A8%8B/">[六、Node Server教程]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#x79;&#x75;&#97;&#x6e;&#109;&#x69;&#110;&#56;&#56;&#56;&#x38;&#64;&#111;&#117;&#116;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#109;">&#x79;&#x75;&#97;&#x6e;&#109;&#x69;&#110;&#56;&#56;&#56;&#x38;&#64;&#111;&#117;&#116;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/12/Node/Tags/Node%20Server/6.9%20Node%E5%8A%A8%E6%80%81%E8%B5%84%E6%BA%90/" data-id="ckjf755cn00c12e8bebmhf5gt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/" rel="tag">Node</a></li></ul>
@@ -452,7 +396,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/JavaScript/Tags/%E5%85%AB%E3%80%81Ajax%E6%95%99%E7%A8%8B/Tags/Ajax%E5%9F%BA%E7%A1%80/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%20-%20Git%20JSON%E8%A7%A3%E6%9E%90/" data-id="ckjf5je9s00icsx8b85xicnzg" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/12/JavaScript/Tags/%E5%85%AB%E3%80%81Ajax%E6%95%99%E7%A8%8B/Tags/Ajax%E5%9F%BA%E7%A1%80/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%20-%20Git%20JSON%E8%A7%A3%E6%9E%90/" data-id="ckjf755g700ik2e8b7nuf6jmo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a></li></ul>
@@ -545,7 +489,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/12/JavaScript/Tags/%E5%85%AB%E3%80%81Ajax%E6%95%99%E7%A8%8B/Tags/Ajax%E5%9F%BA%E7%A1%80/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%80%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/" data-id="ckjf5je9t00iesx8b7sa7cf87" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/12/JavaScript/Tags/%E5%85%AB%E3%80%81Ajax%E6%95%99%E7%A8%8B/Tags/Ajax%E5%9F%BA%E7%A1%80/Ajax%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B%E4%B9%8B%E4%B8%80%20-%20%E5%9F%BA%E7%A1%80%E4%BB%A3%E7%A0%81/" data-id="ckjf755g800il2e8bbekcbx11" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/" rel="tag">Ajax</a></li></ul>
@@ -574,7 +518,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Today's%20Excises/Documents%20for%20Web%20Development/" data-id="ckjf5jdzn000psx8b6u667ark" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/Today's%20Excises/Documents%20for%20Web%20Development/" data-id="ckjf75562000r2e8bg6do0k3p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -881,13 +825,13 @@
 </li>
 </ul>
 <h3 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h3 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h3><p>email: <a href="mailto:&#121;&#x75;&#97;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#x40;&#x31;&#x36;&#x33;&#x2e;&#x63;&#111;&#109;">&#121;&#x75;&#97;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#x40;&#x31;&#x36;&#x33;&#x2e;&#x63;&#111;&#109;</a></p>
+<h3 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h3><p>email: <a href="mailto:&#x79;&#x75;&#x61;&#x6e;&#109;&#x69;&#x6e;&#x38;&#x38;&#56;&#56;&#64;&#x31;&#x36;&#x33;&#x2e;&#x63;&#111;&#109;">&#x79;&#x75;&#x61;&#x6e;&#109;&#x69;&#x6e;&#x38;&#x38;&#56;&#56;&#64;&#x31;&#x36;&#x33;&#x2e;&#x63;&#111;&#109;</a></p>
 <p>微信： 15879282850</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Git/Remote%20Repostories/4.%20Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-id="ckjf5je0r002gsx8bco8ggf5s" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/Git/Remote%20Repostories/4.%20Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-id="ckjf7558a004h2e8bdtwcgvmq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
@@ -1103,12 +1047,12 @@
 <p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/11/03/CSS/Tags/%E5%8D%81%E5%9B%9B%E3%80%81BFC/14.1%20BFC%E5%B8%83%E5%B1%80/">[BFC]</a></p>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/11/03/CSS/Tags/%E5%8D%81%E5%9B%9B%E3%80%81BFC/14.1%20BFC%E5%B8%83%E5%B1%80/">[BFC]</a></p>
 <p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E4%B8%89%E3%80%81%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">[三、盒子模型]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#x79;&#x75;&#x61;&#x6e;&#109;&#105;&#110;&#56;&#56;&#56;&#x38;&#64;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#111;&#x6d;">&#x79;&#x75;&#x61;&#x6e;&#109;&#105;&#110;&#56;&#56;&#56;&#x38;&#64;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#111;&#x6d;</a><br>微信： 15879282859</p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>email: <a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;">&#121;&#x75;&#97;&#x6e;&#109;&#x69;&#110;&#56;&#x38;&#x38;&#x38;&#x40;&#x6f;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;</a><br>微信： 15879282859</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/CSS/Tags/%E4%B8%89%E3%80%81%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/3.2%20%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E8%AF%A6%E8%A7%A3/" data-id="ckjf5je3x007usx8b72jfch4m" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/CSS/Tags/%E4%B8%89%E3%80%81%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/3.2%20%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E8%AF%A6%E8%A7%A3/" data-id="ckjf755a0007l2e8b3oaqe8pl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -1259,12 +1203,12 @@
 </li>
 </ul>
 <h3 id="3-参考文档"><a href="#3-参考文档" class="headerlink" title="3. 参考文档"></a>3. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/CSS/Tutorial/%E5%85%AB%E3%80%81CSS%E5%B8%83%E5%B1%80/">[八、CSS 布局]</a></p>
-<h3 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h3><p>email: <a href="mailto:&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#56;&#64;&#111;&#x75;&#116;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#109;">&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#56;&#64;&#111;&#x75;&#116;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#111;&#109;</a><br>微信： 15879282859</p>
+<h3 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h3><p>email: <a href="mailto:&#121;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#x38;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#46;&#99;&#111;&#109;">&#121;&#117;&#97;&#x6e;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#x38;&#64;&#x6f;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#46;&#99;&#111;&#109;</a><br>微信： 15879282859</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/CSS/Tags/%E5%85%AB%E3%80%818.1%20CSS3%20%E5%B8%83%E5%B1%80/8.2%20Position%E5%AE%9A%E4%BD%8D%E5%B8%83%E5%B1%80/" data-id="ckjf5je47008jsx8b0kmshcbu" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/CSS/Tags/%E5%85%AB%E3%80%818.1%20CSS3%20%E5%B8%83%E5%B1%80/8.2%20Position%E5%AE%9A%E4%BD%8D%E5%B8%83%E5%B1%80/" data-id="ckjf755am008r2e8bc4qg6wp6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
@@ -1318,7 +1262,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Express/Express%20Server%20%E6%A8%A1%E6%9D%BF/" data-id="ckjf5je5p00b5sx8b6sim0foj" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Express/Express%20Server%20%E6%A8%A1%E6%9D%BF/" data-id="ckjf755c800b32e8b32sm5sos" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1472,7 +1416,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Express/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/" data-id="ckjf5je9z00ilsx8bbncp0pg5" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/1970/01/01/Node/Tags/Express/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/" data-id="ckjf755gj00iu2e8bgdgxesvu" class="article-share-link">Share</a>
       
       
     </footer>

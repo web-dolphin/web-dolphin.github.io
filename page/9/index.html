@@ -142,12 +142,12 @@
 </li>
 </ul>
 <h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h2><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3%20ECMAScript%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA/">[5.1.3 对象的创建]</a></p>
-<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#109;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#x75;&#x61;&#x6e;&#109;&#105;&#110;&#x38;&#56;&#x38;&#56;&#x40;&#111;&#x75;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#121;&#117;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#121;&#117;&#97;&#x6e;&#x6d;&#x69;&#x6e;&#x38;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#116;&#108;&#111;&#111;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.4%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%A8%A1%E5%BC%8F/" data-id="ckjf5je8100eusx8b7y72eyk6" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.4%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%A8%A1%E5%BC%8F/" data-id="ckjf755e900ev2e8b3lp37olo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -195,12 +195,12 @@
 <p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.4%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%A8%A1%E5%BC%8F/">[5.1.3.4 构造函数模式]</a></p>
 <pre><code><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SpecialArray</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">const</span> array = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">  array.push.apply(array,<span class="built_in">arguments</span>);</span><br><span class="line">  array.toPipedString = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.join(<span class="string">&#x27;|&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> array</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> color = <span class="keyword">new</span> SpecialArray(<span class="string">&#x27;Red&#x27;</span>,<span class="string">&quot;Yellow&quot;</span>,<span class="string">&quot;Blue&quot;</span>,<span class="string">&quot;Green&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(color.toPipedString())</span><br></pre></td></tr></table></figure></code></pre>
 <h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h2><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3%20ECMAScript%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA/">[5.1.3 对象的创建]</a></p>
-<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#56;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#x75;&#97;&#x6e;&#x6d;&#x69;&#110;&#x38;&#56;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#111;&#x6f;&#107;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#110;&#x38;&#56;&#56;&#56;&#x40;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#110;&#x38;&#56;&#56;&#56;&#x40;&#x6f;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.5%20%E5%AF%84%E7%94%9F%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%A8%A1%E5%BC%8F/" data-id="ckjf5je8200ewsx8b1fsn318x" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.5%20%E5%AF%84%E7%94%9F%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%A8%A1%E5%BC%8F/" data-id="ckjf755ea00ex2e8b3qq98mf6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -257,12 +257,12 @@
 </li>
 </ul>
 <h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h2><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3%20ECMAScript%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA/">[5.1.3 对象的创建]</a></p>
-<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#x38;&#x38;&#x38;&#x38;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#107;&#46;&#99;&#111;&#109;">&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#x38;&#x38;&#x38;&#x38;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#107;&#46;&#99;&#111;&#109;</a></p>
+<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#121;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#111;&#x6d;">&#121;&#x75;&#97;&#x6e;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#117;&#116;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#111;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.6%20%E7%A8%B3%E5%A6%A5%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%A8%A1%E5%BC%8F/" data-id="ckjf5je8400eysx8b2s983btc" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.6%20%E7%A8%B3%E5%A6%A5%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%A8%A1%E5%BC%8F/" data-id="ckjf755eb00ez2e8b5s2c623g" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -305,12 +305,12 @@
 </li>
 </ul>
 <h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h2><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3%20ECMAScript%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA/">[5.1.3 对象的创建]</a></p>
-<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#99;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#56;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#99;&#x6f;&#x6d;</a></p>
+<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#x79;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#109;">&#x79;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.7%20%E7%BB%84%E5%90%88%E4%BD%BF%E7%94%A8%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%A8%A1%E5%BC%8F%E5%92%8C%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" data-id="ckjf5je8500f0sx8bhly07nb5" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.7%20%E7%BB%84%E5%90%88%E4%BD%BF%E7%94%A8%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%A8%A1%E5%BC%8F%E5%92%8C%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" data-id="ckjf755ec00f12e8b1u6z15vg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -366,12 +366,12 @@
 </li>
 </ul>
 <h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h2><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3%20ECMAScript%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA/">[5.1.3 对象的创建]</a></p>
-<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#121;&#x75;&#97;&#110;&#109;&#x69;&#110;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#46;&#x63;&#111;&#109;">&#121;&#x75;&#97;&#110;&#109;&#x69;&#110;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#107;&#46;&#x63;&#111;&#109;</a></p>
+<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#x79;&#x75;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#56;&#x40;&#111;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#109;">&#x79;&#x75;&#x61;&#x6e;&#x6d;&#105;&#110;&#x38;&#56;&#56;&#56;&#x40;&#111;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.8%20%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" data-id="ckjf5je8600f2sx8b8wwd66wx" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.8%20%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" data-id="ckjf755ec00f32e8bg85oehwf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -414,12 +414,12 @@
 </li>
 </ul>
 <h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2.参考文档"></a>2.参考文档</h2><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3%20ECMAScript%20%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA/">[5.1.3 对象的创建]</a></p>
-<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#110;&#56;&#x38;&#56;&#56;&#64;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;">&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#110;&#56;&#x38;&#56;&#56;&#64;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;</a></p>
+<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3.联系方式"></a>3.联系方式</h2><p>Email：<a href="mailto:&#121;&#117;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#56;&#56;&#56;&#64;&#111;&#x75;&#116;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;">&#121;&#117;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#56;&#56;&#56;&#64;&#111;&#x75;&#116;&#x6c;&#x6f;&#111;&#x6b;&#46;&#x63;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.9%20%E5%8A%A8%E6%80%81%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" data-id="ckjf5je8900f4sx8bhqy09ema" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.%20%E5%AF%B9%E8%B1%A1/5.1.3.9%20%E5%8A%A8%E6%80%81%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" data-id="ckjf755ee00f52e8b8vxudi9q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -457,12 +457,12 @@
 <h4 id="2-ECMAScript原型与原型-二"><a href="#2-ECMAScript原型与原型-二" class="headerlink" title="2. ECMAScript原型与原型(二)"></a>2. ECMAScript原型与原型(二)</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.2%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/">[5.2.2 ECMAScript原型与原型链(二)]</a></p>
 <h4 id="3-ECMAScript原型与原型链-三"><a href="#3-ECMAScript原型与原型链-三" class="headerlink" title="3. ECMAScript原型与原型链(三))"></a>3. ECMAScript原型与原型链(三))</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.2%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%BA%8C)/">[5.2.3 ECMAScript原型与原型链(三))]</a></p>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/JavaScript%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2/">[JavaScript 教学大纲]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#121;&#117;&#x61;&#110;&#109;&#105;&#110;&#56;&#56;&#x38;&#x38;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#x63;&#111;&#109;">&#121;&#117;&#x61;&#110;&#109;&#105;&#110;&#56;&#56;&#x38;&#x38;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#x63;&#111;&#109;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#110;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#109;">&#x79;&#x75;&#97;&#110;&#109;&#105;&#x6e;&#56;&#56;&#x38;&#x38;&#x40;&#111;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2%20ECMAScript%20%E5%8E%9F%E5%9E%8B/" data-id="ckjf5je8b00f6sx8bhznl3gd7" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2%20ECMAScript%20%E5%8E%9F%E5%9E%8B/" data-id="ckjf755ef00f72e8b2v0918qx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -640,12 +640,12 @@
 <p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/12/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2.3%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%89)/">[5.2.3 ECMAScript原型与原型链(三)]</a></p>
 <p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/11/11/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/4.%E7%BB%A7%E6%89%BF/5.4%20ECMAScrip%E7%BB%A7%E6%89%BF/">[5.4 ECMAScript继承]</a></p>
 <p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/Tags/2.%E5%8E%9F%E5%9E%8B/5.2%20ECMAScript%20%E5%8E%9F%E5%9E%8B/">[5.2 ECMAScript 原型]</a></p>
-<h3 id="7-联系方式"><a href="#7-联系方式" class="headerlink" title="7.联系方式"></a>7.联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#97;&#x6e;&#109;&#105;&#110;&#x38;&#56;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#111;&#109;">&#121;&#117;&#97;&#x6e;&#109;&#105;&#110;&#x38;&#56;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#x2e;&#x63;&#111;&#109;</a></p>
+<h3 id="7-联系方式"><a href="#7-联系方式" class="headerlink" title="7.联系方式"></a>7.联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#108;&#x6f;&#111;&#107;&#46;&#99;&#111;&#x6d;">&#x79;&#x75;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#108;&#x6f;&#111;&#107;&#46;&#99;&#111;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2.1%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/" data-id="ckjf5je8c00f8sx8b0qr8d4ab" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.%E5%8E%9F%E5%9E%8B/5.2.1%20ECMAScript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE(%E4%B8%80)/" data-id="ckjf755eg00f92e8b3854bmda" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -685,7 +685,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.%E7%B1%BB%E5%92%8C%E6%A8%A1%E5%9D%97/5.3%20ECMAScript%E7%B1%BB%E5%92%8C%E6%A8%A1%E5%9D%97/" data-id="ckjf5je8f00fesx8bhrenfgta" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%94%E3%80%81Javacript%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.%E7%B1%BB%E5%92%8C%E6%A8%A1%E5%9D%97/5.3%20ECMAScript%E7%B1%BB%E5%92%8C%E6%A8%A1%E5%9D%97/" data-id="ckjf755ek00ff2e8ba8peeen8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -1200,7 +1200,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E5%9B%9B%E3%80%81HTML5%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9/Canvas/4.1Canvas%E7%94%BB%E5%B8%83/" data-id="ckjf5je8q00fwsx8b2rpjgfoz" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E5%9B%9B%E3%80%81HTML5%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9/Canvas/4.1Canvas%E7%94%BB%E5%B8%83/" data-id="ckjf755es00fx2e8bahbq4tik" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
@@ -1240,50 +1240,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E5%9B%9B%E3%80%81HTML5%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9/SVG/4.3%20SVG/" data-id="ckjf5je8r00fysx8b5owl7uul" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/HTML/HTML%20Tags/%E5%9B%9B%E3%80%81HTML5%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9/SVG/4.3%20SVG/" data-id="ckjf755et00fz2e8bg88a6ur8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/三、客户端JavaScript/BOM/Tutorial/BOM" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%B8%89%E3%80%81%E5%AE%A2%E6%88%B7%E7%AB%AFJavaScript/BOM/Tutorial/BOM/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%B8%89%E3%80%81%E5%AE%A2%E6%88%B7%E7%AB%AFJavaScript/BOM/Tutorial/BOM/">3.2 BOM</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%B8%89%E3%80%81%E5%AE%A2%E6%88%B7%E7%AB%AF%20JavaScript/">[三、客户端 JavaScript]</a></p>
-<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%89%E3%80%81%E5%AE%A2%E6%88%B7%E7%AB%AFJavaScript/BOM/Tutorial/BOM/" data-id="ckjf5je8s00g0sx8bfd2jag7o" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
 
     </footer>
   </div>
@@ -1320,7 +1280,47 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%89%E3%80%81%E5%AE%A2%E6%88%B7%E7%AB%AFJavaScript/DOM/Tutorial/DOM/" data-id="ckjf5je8s00g2sx8bhne04kvq" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%89%E3%80%81%E5%AE%A2%E6%88%B7%E7%AB%AFJavaScript/DOM/Tutorial/DOM/" data-id="ckjf755eu00g12e8b7xmrh6ij" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/三、客户端JavaScript/BOM/Tutorial/BOM" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%B8%89%E3%80%81%E5%AE%A2%E6%88%B7%E7%AB%AFJavaScript/BOM/Tutorial/BOM/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%B8%89%E3%80%81%E5%AE%A2%E6%88%B7%E7%AB%AFJavaScript/BOM/Tutorial/BOM/">3.2 BOM</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-参考文档"><a href="#1-参考文档" class="headerlink" title="1.参考文档"></a>1.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tutorial/%E4%B8%89%E3%80%81%E5%AE%A2%E6%88%B7%E7%AB%AF%20JavaScript/">[三、客户端 JavaScript]</a></p>
+<h4 id="2-联系方式"><a href="#2-联系方式" class="headerlink" title="2. 联系方式"></a>2. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%B8%89%E3%80%81%E5%AE%A2%E6%88%B7%E7%AB%AFJavaScript/BOM/Tutorial/BOM/" data-id="ckjf755eu00g32e8b0jp80nir" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -1360,7 +1360,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/1.%E8%AF%8D%E6%B3%95%E7%BB%93%E6%9E%84/2.1ECMAScript%E8%AF%8D%E6%B3%95%E7%BB%93%E6%9E%84/" data-id="ckjf5je8t00g4sx8bfxf5ged2" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/1.%E8%AF%8D%E6%B3%95%E7%BB%93%E6%9E%84/2.1ECMAScript%E8%AF%8D%E6%B3%95%E7%BB%93%E6%9E%84/" data-id="ckjf755ev00g52e8bc1hre0iz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -1400,57 +1400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/10.%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/2.10%20ECMAScript%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/" data-id="ckjf5je8u00g6sx8bhojq04l4" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/11.内置对象/2.11 ECMAScript内置对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11%20ECMAScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11%20ECMAScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11 ECMAScript内置对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-目录"><a href="#1-目录" class="headerlink" title="1. 目录"></a>1. 目录</h3><h4 id="1-Array内置对象"><a href="#1-Array内置对象" class="headerlink" title="1.Array内置对象"></a>1.Array内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.1%20Array%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.1 Array内置对象]</a></p>
-<h4 id="2-String内置对象"><a href="#2-String内置对象" class="headerlink" title="2.String内置对象"></a>2.String内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.2%20String%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.2 String内置对象]</a></p>
-<h4 id="3-Boolean内置对象"><a href="#3-Boolean内置对象" class="headerlink" title="3.Boolean内置对象"></a>3.Boolean内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.3%20Boolean%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.3 Boolean内置对象]</a></p>
-<h4 id="4-Math内置对象"><a href="#4-Math内置对象" class="headerlink" title="4.Math内置对象"></a>4.Math内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.4%20Math%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.4 Math内置对象]</a></p>
-<h4 id="5-Number内置对象"><a href="#5-Number内置对象" class="headerlink" title="5.Number内置对象"></a>5.Number内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.5%20Number%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.5 Number内置对象]</a></p>
-<h4 id="6-Events内置对象"><a href="#6-Events内置对象" class="headerlink" title="6.Events内置对象"></a>6.Events内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.6%20Events%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.6 Events内置对象]</a></p>
-<h4 id="7-RegExp内置对象"><a href="#7-RegExp内置对象" class="headerlink" title="7.RegExp内置对象"></a>7.RegExp内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.7%20RegExp%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.7 RegExp内置对象]</a></p>
-<h4 id="8-Date内置对象"><a href="#8-Date内置对象" class="headerlink" title="8. Date内置对象"></a>8. Date内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.8%20Date%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.8 Date内置对象]</a></p>
-<h4 id="9-Object内置对象"><a href="#9-Object内置对象" class="headerlink" title="9. Object内置对象"></a>9. Object内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.9%20Object%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.9 Object内置对象]</a></p>
-<h4 id="10-Functions内置对象"><a href="#10-Functions内置对象" class="headerlink" title="10. Functions内置对象"></a>10. Functions内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.10%20Functions%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.10 Functions内置对象]</a></p>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#x6c;&#111;&#x6f;&#107;&#46;&#99;&#x6f;&#109;">&#121;&#117;&#x61;&#x6e;&#109;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#x75;&#x74;&#x6c;&#111;&#x6f;&#107;&#46;&#99;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11%20ECMAScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckjf5je8v00g8sx8b2f47grd4" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/10.%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/2.10%20ECMAScript%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0/" data-id="ckjf755ew00g72e8b18ubahs5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -1669,12 +1619,62 @@
 </li>
 </ul>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11%20ECMAScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11 ECMAScript内置对象]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#x38;&#x38;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#109;">&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#x38;&#x38;&#x38;&#x40;&#111;&#117;&#116;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#109;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#107;&#46;&#99;&#x6f;&#x6d;">&#x79;&#117;&#x61;&#110;&#x6d;&#x69;&#110;&#56;&#56;&#56;&#56;&#x40;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#107;&#46;&#99;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.1%20Array%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckjf5je8w00gasx8bd1jxabmh" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.1%20Array%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckjf755ex00g92e8bevbxgsab" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/11.内置对象/2.11 ECMAScript内置对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11%20ECMAScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11%20ECMAScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11 ECMAScript内置对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-目录"><a href="#1-目录" class="headerlink" title="1. 目录"></a>1. 目录</h3><h4 id="1-Array内置对象"><a href="#1-Array内置对象" class="headerlink" title="1.Array内置对象"></a>1.Array内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.1%20Array%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.1 Array内置对象]</a></p>
+<h4 id="2-String内置对象"><a href="#2-String内置对象" class="headerlink" title="2.String内置对象"></a>2.String内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.2%20String%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.2 String内置对象]</a></p>
+<h4 id="3-Boolean内置对象"><a href="#3-Boolean内置对象" class="headerlink" title="3.Boolean内置对象"></a>3.Boolean内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.3%20Boolean%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.3 Boolean内置对象]</a></p>
+<h4 id="4-Math内置对象"><a href="#4-Math内置对象" class="headerlink" title="4.Math内置对象"></a>4.Math内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.4%20Math%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.4 Math内置对象]</a></p>
+<h4 id="5-Number内置对象"><a href="#5-Number内置对象" class="headerlink" title="5.Number内置对象"></a>5.Number内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.5%20Number%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.5 Number内置对象]</a></p>
+<h4 id="6-Events内置对象"><a href="#6-Events内置对象" class="headerlink" title="6.Events内置对象"></a>6.Events内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.6%20Events%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.6 Events内置对象]</a></p>
+<h4 id="7-RegExp内置对象"><a href="#7-RegExp内置对象" class="headerlink" title="7.RegExp内置对象"></a>7.RegExp内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.7%20RegExp%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.7 RegExp内置对象]</a></p>
+<h4 id="8-Date内置对象"><a href="#8-Date内置对象" class="headerlink" title="8. Date内置对象"></a>8. Date内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.8%20Date%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.8 Date内置对象]</a></p>
+<h4 id="9-Object内置对象"><a href="#9-Object内置对象" class="headerlink" title="9. Object内置对象"></a>9. Object内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.9%20Object%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.9 Object内置对象]</a></p>
+<h4 id="10-Functions内置对象"><a href="#10-Functions内置对象" class="headerlink" title="10. Functions内置对象"></a>10. Functions内置对象</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tags/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.10%20Functions%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">[2.11.10 Functions内置对象]</a></p>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#111;&#109;">&#x79;&#x75;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#107;&#x2e;&#x63;&#111;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11%20ECMAScript%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckjf755ez00gb2e8bc12s93jx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -1733,12 +1733,12 @@
 </li>
 </ol>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#x75;&#97;&#110;&#109;&#x69;&#110;&#x38;&#x38;&#56;&#x38;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#x2e;&#99;&#x6f;&#109;">&#121;&#x75;&#97;&#110;&#109;&#x69;&#110;&#x38;&#x38;&#56;&#x38;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#x2e;&#99;&#x6f;&#109;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#117;&#x61;&#110;&#109;&#x69;&#110;&#56;&#56;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#107;&#46;&#99;&#x6f;&#109;">&#121;&#117;&#x61;&#110;&#109;&#x69;&#110;&#56;&#56;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#107;&#46;&#99;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.10%20Function%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckjf5je8w00gcsx8b5bbe3adx" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.10%20Function%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckjf755ez00gd2e8b97fw6r9f" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -1798,12 +1798,12 @@
 </li>
 </ol>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#64;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#x6d;">&#121;&#x75;&#x61;&#x6e;&#109;&#105;&#x6e;&#56;&#x38;&#x38;&#56;&#64;&#111;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#x6d;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#97;&#110;&#x6d;&#105;&#x6e;&#x38;&#56;&#x38;&#x38;&#64;&#x6f;&#x75;&#x74;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#x75;&#97;&#110;&#x6d;&#105;&#x6e;&#x38;&#56;&#x38;&#x38;&#64;&#x6f;&#x75;&#x74;&#x6c;&#111;&#111;&#107;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.2%20String%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckjf5je8x00gesx8b4axlbdlx" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.2%20String%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckjf755f000gf2e8b8wty7z2v" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -1815,9 +1815,9 @@
 
 
   
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/11.内置对象/2.11.5 Number内置对象" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/11.内置对象/2.11.3 Boolean内置对象" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.5%20Number%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.3%20Boolean%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
   <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
@@ -1829,7 +1829,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.5%20Number%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11.5 Number内置对象</a>
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.3%20Boolean%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11.3 Boolean内置对象</a>
     </h1>
   
 
@@ -1837,7 +1837,71 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-Number对象"><a href="#1-Number对象" class="headerlink" title="1. Number对象"></a>1. Number对象</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><ul>
+        <h3 id="1-Boolean对象"><a href="#1-Boolean对象" class="headerlink" title="1. Boolean对象"></a>1. Boolean对象</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><ul>
+<li><p>创建String对象的语法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 2.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[[]]()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 3.Array对象方法</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1. concate()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="2">
+<li><p>join()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">3. pop()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>push()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">5. shift()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>unshift()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">7. slice()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>splice()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">9. sort()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
+<li><p>toSource()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">11. toString()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
+<li><p>toLocalString()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">13. valueOf()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#x61;&#110;&#109;&#x69;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#111;&#x6d;">&#x79;&#x75;&#x61;&#110;&#109;&#x69;&#x6e;&#56;&#x38;&#x38;&#56;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#111;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.3%20Boolean%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckjf755f100gh2e8b6fwa5igr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/11.内置对象/2.11.4 Math内置对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.4%20Math%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.4%20Math%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11.4 Math内置对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-Math对象"><a href="#1-Math对象" class="headerlink" title="1. Math对象"></a>1. Math对象</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><ul>
 <li><p>创建String对象的语法</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 2.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[[]]()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 3.Array对象方法</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1. concate()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
 </li>
@@ -1862,76 +1926,12 @@
 </li>
 </ol>
 <h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#110;&#x38;&#56;&#x38;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#x6d;">&#x79;&#x75;&#x61;&#x6e;&#x6d;&#x69;&#110;&#x38;&#56;&#x38;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#x6d;</a></p>
+<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#121;&#x75;&#97;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#111;&#109;">&#121;&#x75;&#97;&#110;&#x6d;&#x69;&#x6e;&#56;&#x38;&#56;&#x38;&#x40;&#111;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#111;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.5%20Number%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckjf5je8y00ggsx8b61qr2r1m" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/11.内置对象/2.11.6 Events内置对象" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.6%20Events%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.6%20Events%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/">2.11.6 Events内置对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-Events内置对象"><a href="#1-Events内置对象" class="headerlink" title="1. Events内置对象"></a>1. Events内置对象</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><ul>
-<li><p>创建String对象的语法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">#### 2.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[[]]()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#### 3.Array对象方法</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1. concate()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="2">
-<li><p>join()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">3. pop()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>push()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">5. shift()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>unshift()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">7. slice()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>splice()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">9. sort()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
-<li><p>toSource()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">11. toString()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure></li>
-<li><p>toLocalString()</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">13. valueOf()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  `</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h3><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email：<a href="mailto:&#x79;&#x75;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#56;&#56;&#x38;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#107;&#46;&#99;&#x6f;&#109;">&#x79;&#x75;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#56;&#56;&#x38;&#x40;&#x6f;&#x75;&#x74;&#108;&#111;&#111;&#107;&#46;&#99;&#x6f;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.6%20Events%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckjf5je8z00gisx8b44205kki" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/11.%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/2.11.4%20Math%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/" data-id="ckjf755f200gj2e8bfl46bnkq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
