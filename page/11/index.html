@@ -67,6 +67,68 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/8.函数/2.8.12Call()方法与Apply()方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.12Call()%E6%96%B9%E6%B3%95%E4%B8%8EApply()%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.12Call()%E6%96%B9%E6%B3%95%E4%B8%8EApply()%E6%96%B9%E6%B3%95/">2.8.12Call()方法与Apply()方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h4><ol>
+<li>JavaScript对象包含两个方法，都显示地指定调用所需的this值，也就是说，任何函数都可以作为任意对象的方法来调用，哪怕这个函数不是那个对象的方法。两个方法都可以指定调用的实参；</li>
+<li>如果一个函数不是 JavaScript 对象的方法，那么它就是全局对象的函数</li>
+</ol>
+<h4 id="2-Call-方法"><a href="#2-Call-方法" class="headerlink" title="2.Call()方法"></a>2.Call()方法</h4><ul>
+<li><p>案例一： 全局函数作为对象person的方法调用(注意this指向)</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;My name is: &quot;</span> + <span class="built_in">this</span>.name + <span class="string">&quot;, and my age is: &quot;</span> + <span class="built_in">this</span>.age + <span class="string">&quot;years old!&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  name: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">  age: <span class="number">20</span></span><br><span class="line">&#125;</span><br><span class="line">fn.call(person);        <span class="comment">// my name is: Andy; my age is: 20</span></span><br></pre></td></tr></table></figure></li>
+<li><p>案例二： 一个对象的方法作为另一个对象的方法调用(注意this指向)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  firstName: <span class="string">&quot;Alax&quot;</span>,</span><br><span class="line">  lastName: <span class="string">&quot;Geo&quot;</span>,</span><br><span class="line">  getFullName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.firstName  + <span class="string">&quot; &quot;</span> + <span class="built_in">this</span>.lastName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> person1 = &#123;</span><br><span class="line">  firstName: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">  lastName: <span class="string">&quot;Lee&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> name = person.getFullName()</span><br><span class="line"><span class="built_in">console</span>.log(name)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> name1 = person.getFullName.call(person1)</span><br><span class="line"><span class="built_in">console</span>.log(name1)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Call()方法分别接收指定的实参；</p>
+</li>
+<li><p>本案例中getFullName方法传递了形参，person调用该方法时会出现问题，因为没有this指向person，因此，city和country为undefined；</p>
+</li>
+<li><p>而person1调用person方法时，传递了参数”Seattle”和”Unite State”;</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  firstName: <span class="string">&quot;Alax&quot;</span>,</span><br><span class="line">  lastName: <span class="string">&quot;Geo&quot;</span>,</span><br><span class="line">  city: <span class="string">&quot;Shanghai&quot;</span>,</span><br><span class="line">  country: <span class="string">&quot;China&quot;</span>,</span><br><span class="line">  getFullName: <span class="function"><span class="keyword">function</span>(<span class="params">city,country</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.firstName  + <span class="string">&quot; &quot;</span> + <span class="built_in">this</span>.lastName + <span class="string">&quot;,&quot;</span> + city + <span class="string">&quot;,&quot;</span> + country;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> person1 = &#123;</span><br><span class="line">  firstName: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">  lastName: <span class="string">&quot;Lee&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> name = person.getFullName()</span><br><span class="line"><span class="built_in">console</span>.log(name)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> name1 = person.getFullName.call(person1,<span class="string">&quot;Seattl&quot;</span>,<span class="string">&quot;Unite State&quot;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(name1)</span><br></pre></td></tr></table></figure>
+<h4 id="3-Apply-方法"><a href="#3-Apply-方法" class="headerlink" title="3.Apply()方法"></a>3.Apply()方法</h4></li>
+<li><p>本质上Apply()方法与Call()方法并没有什么区别，只是接收的参数为数组；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  firstName: <span class="string">&quot;Alax&quot;</span>,</span><br><span class="line">  lastName: <span class="string">&quot;Geo&quot;</span>,</span><br><span class="line">  city: <span class="string">&quot;Shanghai&quot;</span>,</span><br><span class="line">  country: <span class="string">&quot;China&quot;</span>,</span><br><span class="line">  getFullName: <span class="function"><span class="keyword">function</span>(<span class="params">city,country</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.firstName  + <span class="string">&quot; &quot;</span> + <span class="built_in">this</span>.lastName + <span class="string">&quot;,&quot;</span> + city + <span class="string">&quot;,&quot;</span> + country;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> person1 = &#123;</span><br><span class="line">  firstName: <span class="string">&quot;Andy&quot;</span>,</span><br><span class="line">  lastName: <span class="string">&quot;Lee&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> name = person.getFullName.apply(person1,[<span class="string">&quot;Seattl&quot;</span>,<span class="string">&quot;Unite State&quot;</span>])</span><br><span class="line"><span class="built_in">console</span>.log(name)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="7-参考文档"><a href="#7-参考文档" class="headerlink" title="7.参考文档"></a>7.参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/Tutorial/2.8%20ECMAScript%E5%87%BD%E6%95%B0/">[2.8 ECMAScript函数]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.12Call()%E6%96%B9%E6%B3%95%E4%B8%8EApply()%E6%96%B9%E6%B3%95/" data-id="ckjgowlui00hqmb8bf4ksgv40" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/8.函数/2.8.2 ECMAScript函数的调用" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.2%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8/" class="article-date">
@@ -189,7 +251,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.2%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8/" data-id="ckjf82zf800hu168b8bscb37f" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.2%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8/" data-id="ckjgowluk00hsmb8b6hq3g0pf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -297,7 +359,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.3%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0/" data-id="ckjf82zfa00hw168b7l0k000u" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.3%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0/" data-id="ckjgowlul00humb8bgsyqg07a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -348,7 +410,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.4%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/" data-id="ckjf82zfb00hy168beawc77ew" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.4%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC/" data-id="ckjgowlun00hwmb8bddp2dsmy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -388,7 +450,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.5%20ECMAScript%E9%97%AD%E5%8C%85/" data-id="ckjf82zfc00i0168b2xnp4ooy" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.5%20ECMAScript%E9%97%AD%E5%8C%85/" data-id="ckjgowluo00hymb8bejxx3dir" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -428,7 +490,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.6%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/" data-id="ckjf82zfe00i2168bbx7p4u5d" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.6%20ECMAScript%E5%87%BD%E6%95%B0%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/" data-id="ckjgowluq00i0mb8b0gs0ctrr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -468,7 +530,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.7%20ECMAScript%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" data-id="ckjf82zff00i4168bb5wgem08" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.7%20ECMAScript%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" data-id="ckjgowlus00i2mb8b50479quz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -508,7 +570,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.8%20ECMAScript%20%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/" data-id="ckjf82zfg00i6168bf1zugzfn" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.8%20ECMAScript%20%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/" data-id="ckjgowlut00i4mb8b78rj54sf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -548,7 +610,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.9%20ECMAScript%20%E4%BD%9C%E4%B8%BA%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E7%9A%84%E5%87%BD%E6%95%B0/" data-id="ckjf82zfi00i8168bb67d607u" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/8.%E5%87%BD%E6%95%B0/2.8.9%20ECMAScript%20%E4%BD%9C%E4%B8%BA%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E7%9A%84%E5%87%BD%E6%95%B0/" data-id="ckjgowlut00i6mb8b2q6g46t6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -589,7 +651,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/9.%E5%AF%B9%E8%B1%A1/2.9%20ECMAScript%E5%AF%B9%E8%B1%A1/" data-id="ckjf82zfj00ia168b1vxnayc0" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/9.%E5%AF%B9%E8%B1%A1/2.9%20ECMAScript%E5%AF%B9%E8%B1%A1/" data-id="ckjgowluu00i8mb8bc7zl1qw0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -629,7 +691,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/9.%E5%AF%B9%E8%B1%A1/2.9.2JS%E5%87%BD%E6%95%B0%E4%B8%ADthis%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/" data-id="ckjf82zfk00ic168b3oegdnpi" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/9.%E5%AF%B9%E8%B1%A1/2.9.2JS%E5%87%BD%E6%95%B0%E4%B8%ADthis%E6%8C%87%E5%90%91%E9%97%AE%E9%A2%98/" data-id="ckjgowlux00iamb8bhtru8bqv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -677,49 +739,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E5%85%AB%E3%80%81Ajax%E6%95%99%E7%A8%8B/Tags/Ajax-Github%E6%BA%90%E7%A0%81/Ajax-Github%E4%BB%93%E5%BA%93%E9%A1%B9%E7%9B%AE%E6%B8%85%E5%8D%95/" data-id="ckjf82zfl00ie168b7gw9b2ji" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E5%85%AB%E3%80%81Ajax%E6%95%99%E7%A8%8B/Tags/Ajax-Github%E6%BA%90%E7%A0%81/Ajax-Github%E4%BB%93%E5%BA%93%E9%A1%B9%E7%9B%AE%E6%B8%85%E5%8D%95/" data-id="ckjgowluz00icmb8bfoqpetcg" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/2.数据类型/基本类型/2.2 ECMA基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/2.2%20ECMA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="article-date">
-  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/2.2%20ECMA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">2.2.1 ECMAScript基本数据类型</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
-<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/2.2%20ECMA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-id="ckjf82zfq00il168bagyfgau4" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
-
     </footer>
   </div>
   
@@ -755,7 +777,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/2.2%20%20ECMA%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-id="ckjf82zfr00im168bajvgfw8y" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/2.2%20%20ECMA%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-id="ckjgowlv500ikmb8bf89y0vvr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
@@ -767,16 +789,12 @@
 
 
   
-    <article id="post-JavaScript/Tutorial/九、正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JavaScript/Tags/二、JavaScript语言核心/ECMAScript/2.数据类型/基本类型/2.2 ECMA基本数据类型" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/10/28/JavaScript/Tutorial/%E4%B9%9D%E3%80%81%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
+    <a href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/2.2%20ECMA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="article-date">
   <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -785,7 +803,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/28/JavaScript/Tutorial/%E4%B9%9D%E3%80%81%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">九、正则表达式</a>
+      <a class="article-title" href="/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/2.2%20ECMA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">2.2.1 ECMAScript基本数据类型</a>
     </h1>
   
 
@@ -793,17 +811,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-文档目录"><a href="#1-文档目录" class="headerlink" title="1. 文档目录"></a>1. 文档目录</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><p><a href="">[]</a></p>
-<h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3><p><a href="">[]</a></p>
-<h2 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h2><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/JavaScript%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2/">[JavaScript 教学大纲]</a></p>
-<h2 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h2><p>Email: <a href="mailto:&#121;&#117;&#x61;&#x6e;&#109;&#105;&#110;&#x38;&#56;&#56;&#56;&#64;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#109;&#105;&#110;&#x38;&#56;&#56;&#56;&#64;&#111;&#117;&#x74;&#x6c;&#x6f;&#111;&#107;&#46;&#x63;&#x6f;&#x6d;</a></p>
+        <h4 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h4><h4 id="2-参考文档"><a href="#2-参考文档" class="headerlink" title="2. 参考文档"></a>2. 参考文档</h4><p><a target="_blank" rel="noopener" href="https://web-oyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%BA%8C%E3%80%81JavaScript%20%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/">[二、JavaScript 语言核心]</a></p>
+<h4 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h4><p><a href="yuanmin8888@outlook.com">[Email]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tutorial/%E4%B9%9D%E3%80%81%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" data-id="ckjgou7850000fr8b7zaogluy" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/28/JavaScript/Tags/%E4%BA%8C%E3%80%81JavaScript%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/ECMAScript/2.%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/2.2%20ECMA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-id="ckjgowlv800iomb8bdbe0b43h" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
     </footer>
   </div>
   
@@ -857,7 +875,226 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Full%20Stack/Tutorial/1.0-Full%20Stack%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E6%9C%80%E6%96%B0%E6%95%99%E7%A8%8B/" data-id="ckjf82z61001t168be7f7fe8u" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/25/Full%20Stack/Tutorial/1.0-Full%20Stack%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E6%9C%80%E6%96%B0%E6%95%99%E7%A8%8B/" data-id="ckjgowljq001tmb8b55ycapgo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Git/Remote Repostories/2.快速创建 Github 远程仓库" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" class="article-date">
+  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">2.快速创建 Github 远程仓库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Github-服务器注册账号"><a href="#1-Github-服务器注册账号" class="headerlink" title="1. Github 服务器注册账号"></a>1. Github 服务器注册账号</h4><ul>
+<li>注册用户名</li>
+</ul>
+<h4 id="2-创建远程仓库"><a href="#2-创建远程仓库" class="headerlink" title="2. 创建远程仓库"></a>2. 创建远程仓库</h4><ul>
+<li><p>方法一：左边栏 <code>Repositories</code>新建仓库</p>
+</li>
+<li><p>方法二：右上角 <code>+</code>新建仓库</p>
+</li>
+<li><p>创建仓库示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/25/BeuSED.png" alt="创建仓库示意图"></p>
+</li>
+</ul>
+<h4 id="3-创建本地库"><a href="#3-创建本地库" class="headerlink" title="3. 创建本地库"></a>3. 创建本地库</h4><ul>
+<li><p>方法一： 克隆远程仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:github_account/repository.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>克隆示意图</p>
+<p><img src="https://s1.ax1x.com/2020/10/25/BenxHO.png" alt="克隆"></p>
+</li>
+<li><p>方法二： 直接创建本地库</p>
+</li>
+</ul>
+<h4 id="4-建立本地仓库与远程仓库关联"><a href="#4-建立本地仓库与远程仓库关联" class="headerlink" title="4. 建立本地仓库与远程仓库关联"></a>4. 建立本地仓库与远程仓库关联</h4><ol>
+<li> 创建公钥</li>
+</ol>
+<ul>
+<li><p>git 通过如下命令：</p>
+<ol>
+<li>生成<code>.ssh</code>目录;</li>
+<li>创建一对密钥： <code>id_rsa</code>(私钥)和<code>id_rsa.pub</code>(公钥)</li>
+<li>其中 windows 系统在： C：盘的<code>administration</code>目录</li>
+<li>Ubuntu 系统存放在<code>Home</code>目录</li>
+<li>编辑器打开公钥，将其复制到 Github 的<code>SSH and GPG keys</code></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &lt;Github注册邮箱&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参考文档: </p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Remote%20Repostories/3.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">[3.Git 远程仓库管理]</a></p>
+<h4 id="5-Git-拉取与推送文件"><a href="#5-Git-拉取与推送文件" class="headerlink" title="5. Git 拉取与推送文件"></a>5. Git 拉取与推送文件</h4><ul>
+<li>详见参考文档： </li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Remote%20Repostories/3.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">[3.Git 远程仓库管理]</a></p>
+<h4 id="6-Git-命令"><a href="#6-Git-命令" class="headerlink" title="6. Git 命令"></a>6. Git 命令</h4><h5 id="1-create-a-new-repository-on-the-command-line"><a href="#1-create-a-new-repository-on-the-command-line" class="headerlink" title="1. create a new repository on the command line"></a>1. create a new repository on the command line</h5><ul>
+<li>git init</li>
+<li>git add README.md</li>
+<li>git commit -m “first commit”</li>
+<li>git branch -M main</li>
+<li>git remote add origin <a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">&#x67;&#105;&#116;&#64;&#103;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a>:web-oyster/blog_for_web-master.git</li>
+<li>注释： web-oyster 是 github 用户名,blog_for_web-master 是远程仓库名</li>
+<li>git push -u origin main</li>
+</ul>
+<h5 id="2-push-an-existing-repository-from-the-command-line"><a href="#2-push-an-existing-repository-from-the-command-line" class="headerlink" title="2. push an existing repository from the command line"></a>2. push an existing repository from the command line</h5><ul>
+<li>git remote add origin <a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#111;&#x6d;">&#103;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#111;&#x6d;</a>:web-oyster/blog_for_web-master.git</li>
+<li>git branch -M main</li>
+<li>git push -u origin main</li>
+</ul>
+<h4 id="7-参考文当"><a href="#7-参考文当" class="headerlink" title="7.参考文当"></a>7.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
+<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#x75;&#116;&#108;&#111;&#111;&#107;&#x2e;&#99;&#111;&#109;">&#x79;&#117;&#x61;&#110;&#109;&#105;&#x6e;&#x38;&#x38;&#56;&#56;&#x40;&#x6f;&#x75;&#116;&#108;&#111;&#111;&#107;&#x2e;&#99;&#111;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" data-id="ckjgowljr001wmb8b6p6949mu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Git/Remote Repostories/3.Git 远程仓库管理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/25/Git/Remote%20Repostories/3.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/" class="article-date">
+  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/25/Git/Remote%20Repostories/3.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">3.Git 远程仓库管理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Github-SSH-仓库地址"><a href="#1-Github-SSH-仓库地址" class="headerlink" title="1. Github SSH 仓库地址"></a>1. Github SSH 仓库地址</h4><ul>
+<li><p>地址组成</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git@github.com:web-oyster/html-elements.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#105;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#111;&#x6d;">&#103;&#x69;&#116;&#64;&#103;&#105;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#111;&#x6d;</a>： git 网址</p>
+</li>
+<li><p>web-oyster： github 账号</p>
+</li>
+<li><p>html-elements： github 远程仓库名</p>
+</li>
+</ul>
+<h4 id="2-创建远程仓库关联"><a href="#2-创建远程仓库关联" class="headerlink" title="2. 创建远程仓库关联"></a>2. 创建远程仓库关联</h4><ul>
+<li><p>git 初始化本地仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建远程仓库</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[2.快速创建 Github 远程仓库]</a></p>
+<ul>
+<li><p>第一次提交：关联远程仓库地址</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:&lt;github账号&gt;/&lt;github远程仓库名&gt;.git</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第二次提交</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参考文档</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[2.快速创建 Github 远程仓库]</a></p>
+<h4 id="3-参考文当"><a href="#3-参考文当" class="headerlink" title="3.参考文当"></a>3.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#x75;&#97;&#110;&#x6d;&#x69;&#110;&#56;&#x38;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#x75;&#97;&#110;&#x6d;&#x69;&#110;&#56;&#x38;&#56;&#56;&#x40;&#111;&#117;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Remote%20Repostories/3.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/" data-id="ckjgowljt001ymb8b9ow48ah2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Git/Tutorial/Git教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Git/">Git</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">Git教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Git-创建与管理本地仓库"><a href="#1-Git-创建与管理本地仓库" class="headerlink" title="1. Git 创建与管理本地仓库"></a>1. Git 创建与管理本地仓库</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">[1. Git 创建与管理本地仓库]</a></p>
+<h4 id="2-快速创建-Github-远程仓库"><a href="#2-快速创建-Github-远程仓库" class="headerlink" title="2.快速创建 Github 远程仓库"></a>2.快速创建 Github 远程仓库</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">[2.快速创建 Github 远程仓库]</a></p>
+<h4 id="3-Git-远程仓库管理"><a href="#3-Git-远程仓库管理" class="headerlink" title="3.Git 远程仓库管理"></a>3.Git 远程仓库管理</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Remote%20Repostories/3.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">[3.Git 远程仓库管理]</a></p>
+<h4 id="4-Git-command-操作命令"><a href="#4-Git-command-操作命令" class="headerlink" title="4.Git command 操作命令"></a>4.Git command 操作命令</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Local%20Repostories/4.Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/">[4.Git command 操作命令]</a></p>
+<h4 id="5-Git日志与回退版本号"><a href="#5-Git日志与回退版本号" class="headerlink" title="5.Git日志与回退版本号"></a>5.Git日志与回退版本号</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Local%20Repostories/5.Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/">[5.Git日志与回退版本号]</a></p>
+<h4 id="6-Git本地仓库设置签名"><a href="#6-Git本地仓库设置签名" class="headerlink" title="6.Git本地仓库设置签名"></a>6.Git本地仓库设置签名</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Local%20Repostories/6.Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/">[6.Git本地仓库设置签名]</a></p>
+<h4 id="7-Git常用命令"><a href="#7-Git常用命令" class="headerlink" title="7. Git常用命令"></a>7. Git常用命令</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/1970/01/01/Git/Remote%20Repostories/4.%20Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">[7. Git常用命令]</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#x2e;&#99;&#x6f;&#109;">&#121;&#x75;&#x61;&#x6e;&#x6d;&#105;&#x6e;&#x38;&#x38;&#56;&#x38;&#64;&#111;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#x2e;&#99;&#x6f;&#109;</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/" data-id="ckjgowljz0024mb8bh9yc4eup" class="article-share-link">Share</a>
       
       
     </footer>
@@ -926,12 +1163,12 @@
 </li>
 </ol>
 <h4 id="3-参考文当"><a href="#3-参考文当" class="headerlink" title="3.参考文当"></a>3.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email:<a href="mailto:&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#x6d;">&#x79;&#117;&#x61;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#x6d;</a></p>
+<h4 id="4-联系方式"><a href="#4-联系方式" class="headerlink" title="4. 联系方式"></a>4. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#x2e;&#99;&#x6f;&#109;">&#121;&#x75;&#97;&#110;&#x6d;&#105;&#x6e;&#56;&#56;&#x38;&#56;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#x2e;&#99;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" data-id="ckjf82z63001w168b5d4r4kz4" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/1.%20Git%20%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%AE%A1%E7%90%86%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" data-id="ckjgowlk10026mb8b965zfl67" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
@@ -1000,12 +1237,12 @@
 <h4 id="4-Git-删除更改退回到修改前的状态"><a href="#4-Git-删除更改退回到修改前的状态" class="headerlink" title="4. Git 删除更改退回到修改前的状态"></a>4. Git 删除更改退回到修改前的状态</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &lt;filename&gt;</span><br></pre></td></tr></table></figure>
 
 <h4 id="5-参考文当"><a href="#5-参考文当" class="headerlink" title="5.参考文当"></a>5.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#97;&#110;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;">&#121;&#117;&#97;&#110;&#x6d;&#x69;&#x6e;&#x38;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#116;&#x6c;&#111;&#x6f;&#x6b;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#56;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#121;&#117;&#x61;&#x6e;&#x6d;&#x69;&#x6e;&#56;&#56;&#56;&#x38;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/4.Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" data-id="ckjf82z64001y168b7gr4b77d" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/4.Git%20command%20%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" data-id="ckjgowlk4002bmb8b48n33ykw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
@@ -1091,224 +1328,12 @@
 </li>
 </ul>
 <h4 id="4-参考文当"><a href="#4-参考文当" class="headerlink" title="4. 参考文当"></a>4. 参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#x61;&#x6e;&#109;&#105;&#110;&#x38;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#117;&#x61;&#x6e;&#109;&#105;&#110;&#x38;&#x38;&#56;&#56;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<h4 id="5-联系方式"><a href="#5-联系方式" class="headerlink" title="5. 联系方式"></a>5. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#97;&#110;&#109;&#105;&#110;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#109;">&#121;&#117;&#97;&#110;&#109;&#105;&#110;&#x38;&#x38;&#56;&#x38;&#x40;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#x6b;&#x2e;&#99;&#x6f;&#109;</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/5.Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/" data-id="ckjf82z650021168bde9sd5jn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git/Local Repostories/6.Git本地仓库设置签名" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Local%20Repostories/6.Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/6.Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/">6.Git本地仓库设置签名</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Git-本地仓库签名的作用"><a href="#1-Git-本地仓库签名的作用" class="headerlink" title="1.Git 本地仓库签名的作用"></a>1.Git 本地仓库签名的作用</h4><ul>
-<li>区分不同开发人员的身份和权限</li>
-</ul>
-<h4 id="2-Git-地仓库签名与-Github-账号的关系"><a href="#2-Git-地仓库签名与-Github-账号的关系" class="headerlink" title="2.Git 地仓库签名与 Github 账号的关系"></a>2.Git 地仓库签名与 Github 账号的关系</h4><ul>
-<li>本地仓库签名与 Github 远程仓库登陆账号、密码没有任何关系</li>
-</ul>
-<h4 id="3-签名格式"><a href="#3-签名格式" class="headerlink" title="3.签名格式"></a>3.签名格式</h4><ul>
-<li>user.name: 任意姓名就可</li>
-<li>user.email: 任意邮箱地址就可</li>
-</ul>
-<h4 id="4-设置签名"><a href="#4-设置签名" class="headerlink" title="4.设置签名"></a>4.设置签名</h4><ul>
-<li><p>项目(仓库)级别签名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name andy</span><br><span class="line">git config user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>系统级别签名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name andy</span><br><span class="line">git config --global user.email andy@gmail.com</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>签名优先级别： 项目(仓库)级别签名优先于系统级别签名</p>
-</li>
-<li><p>查看项目签名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat .git/config</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s1.ax1x.com/2020/10/30/BYTfRP.png" alt="[查看项目签名]"></p>
-</li>
-<li><p>查看系统签名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ～/.gitconfig</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s1.ax1x.com/2020/10/30/BYTVbQ.png" alt="[查看系统签名]"></p>
-</li>
-</ul>
-<h4 id="5-参考文当"><a href="#5-参考文当" class="headerlink" title="5.参考文当"></a>5.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="6-联系方式"><a href="#6-联系方式" class="headerlink" title="6. 联系方式"></a>6. 联系方式</h4><p>Email:<a href="mailto:&#121;&#x75;&#97;&#110;&#109;&#105;&#x6e;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#108;&#111;&#x6f;&#107;&#46;&#99;&#111;&#109;">&#121;&#x75;&#97;&#110;&#109;&#105;&#x6e;&#x38;&#x38;&#x38;&#56;&#x40;&#111;&#117;&#x74;&#108;&#111;&#x6f;&#107;&#46;&#99;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/6.Git%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D/" data-id="ckjf82z690024168b0pm26c9l" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git/Local Repostories/7. Git常用命令" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Local%20Repostories/7.%20Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Local%20Repostories/7.%20Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">7. Git常用命令</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1. 常用命令"></a>1. 常用命令</h3><h4 id="1-Git常用命令及方法大全"><a href="#1-Git常用命令及方法大全" class="headerlink" title="1.Git常用命令及方法大全"></a>1.Git常用命令及方法大全</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/web_csdn_share/article/details/79243308">[1.Git常用命令及方法大全]</a></p>
-<h3 id="2-参考文当"><a href="#2-参考文当" class="headerlink" title="2.参考文当"></a>2.参考文当</h3><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h3 id="3-联系方式"><a href="#3-联系方式" class="headerlink" title="3. 联系方式"></a>3. 联系方式</h3><p>Email:<a href="mailto:&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#56;&#56;&#x38;&#56;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#x75;&#x61;&#110;&#109;&#105;&#110;&#56;&#56;&#x38;&#56;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/7.%20Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-id="ckjf82z6a0026168b519bfmk6" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git/Remote Repostories/2.快速创建 Github 远程仓库" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" class="article-date">
-  <time datetime="2020-10-24T16:00:00.000Z" itemprop="datePublished">2020-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">2.快速创建 Github 远程仓库</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-Github-服务器注册账号"><a href="#1-Github-服务器注册账号" class="headerlink" title="1. Github 服务器注册账号"></a>1. Github 服务器注册账号</h4><ul>
-<li>注册用户名</li>
-</ul>
-<h4 id="2-创建远程仓库"><a href="#2-创建远程仓库" class="headerlink" title="2. 创建远程仓库"></a>2. 创建远程仓库</h4><ul>
-<li><p>方法一：左边栏 <code>Repositories</code>新建仓库</p>
-</li>
-<li><p>方法二：右上角 <code>+</code>新建仓库</p>
-</li>
-<li><p>创建仓库示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/25/BeuSED.png" alt="创建仓库示意图"></p>
-</li>
-</ul>
-<h4 id="3-创建本地库"><a href="#3-创建本地库" class="headerlink" title="3. 创建本地库"></a>3. 创建本地库</h4><ul>
-<li><p>方法一： 克隆远程仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:github_account/repository.git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>克隆示意图</p>
-<p><img src="https://s1.ax1x.com/2020/10/25/BenxHO.png" alt="克隆"></p>
-</li>
-<li><p>方法二： 直接创建本地库</p>
-</li>
-</ul>
-<h4 id="4-建立本地仓库与远程仓库关联"><a href="#4-建立本地仓库与远程仓库关联" class="headerlink" title="4. 建立本地仓库与远程仓库关联"></a>4. 建立本地仓库与远程仓库关联</h4><ol>
-<li> 创建公钥</li>
-</ol>
-<ul>
-<li><p>git 通过如下命令：</p>
-<ol>
-<li>生成<code>.ssh</code>目录;</li>
-<li>创建一对密钥： <code>id_rsa</code>(私钥)和<code>id_rsa.pub</code>(公钥)</li>
-<li>其中 windows 系统在： C：盘的<code>administration</code>目录</li>
-<li>Ubuntu 系统存放在<code>Home</code>目录</li>
-<li>编辑器打开公钥，将其复制到 Github 的<code>SSH and GPG keys</code></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &lt;Github注册邮箱&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>参考文档: </p>
-</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Remote%20Repostories/3.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">[3.Git 远程仓库管理]</a></p>
-<h4 id="5-Git-拉取与推送文件"><a href="#5-Git-拉取与推送文件" class="headerlink" title="5. Git 拉取与推送文件"></a>5. Git 拉取与推送文件</h4><ul>
-<li>详见参考文档： </li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Remote%20Repostories/3.Git%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86/">[3.Git 远程仓库管理]</a></p>
-<h4 id="6-Git-命令"><a href="#6-Git-命令" class="headerlink" title="6. Git 命令"></a>6. Git 命令</h4><h5 id="1-create-a-new-repository-on-the-command-line"><a href="#1-create-a-new-repository-on-the-command-line" class="headerlink" title="1. create a new repository on the command line"></a>1. create a new repository on the command line</h5><ul>
-<li>git init</li>
-<li>git add README.md</li>
-<li>git commit -m “first commit”</li>
-<li>git branch -M main</li>
-<li>git remote add origin <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#111;&#x6d;">&#103;&#105;&#116;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#111;&#x6d;</a>:web-oyster/blog_for_web-master.git</li>
-<li>注释： web-oyster 是 github 用户名,blog_for_web-master 是远程仓库名</li>
-<li>git push -u origin main</li>
-</ul>
-<h5 id="2-push-an-existing-repository-from-the-command-line"><a href="#2-push-an-existing-repository-from-the-command-line" class="headerlink" title="2. push an existing repository from the command line"></a>2. push an existing repository from the command line</h5><ul>
-<li>git remote add origin <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#105;&#116;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#105;&#x74;&#64;&#x67;&#105;&#116;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;</a>:web-oyster/blog_for_web-master.git</li>
-<li>git branch -M main</li>
-<li>git push -u origin main</li>
-</ul>
-<h4 id="7-参考文当"><a href="#7-参考文当" class="headerlink" title="7.参考文当"></a>7.参考文当</h4><p><a target="_blank" rel="noopener" href="https://web-dolphin.github.io/2020/10/25/Git/Tutorial/Git%E6%95%99%E7%A8%8B/">[Git 教程]</a></p>
-<h4 id="8-联系方式"><a href="#8-联系方式" class="headerlink" title="8. 联系方式"></a>8. 联系方式</h4><p>Email:<a href="mailto:&#121;&#117;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#99;&#111;&#109;">&#121;&#117;&#97;&#110;&#x6d;&#105;&#110;&#x38;&#x38;&#56;&#56;&#x40;&#111;&#x75;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#99;&#111;&#109;</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://weboyster.github.io/2020/10/25/Git/Remote%20Repostories/2.%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%20Github%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" data-id="ckjf82z6c002a168bdnktenr6" class="article-share-link">Share</a>
+      <a data-url="https://weboyster.github.io/2020/10/25/Git/Local%20Repostories/5.Git%E6%97%A5%E5%BF%97%E4%B8%8E%E5%9B%9E%E9%80%80%E7%89%88%E6%9C%AC%E5%8F%B7/" data-id="ckjgowlk6002dmb8bag8tehuh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
@@ -1380,11 +1405,11 @@
           </li>
         
           <li>
-            <a href="/2020/12/18/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/Vue%20Computed%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E4%B8%8EWatch%E7%9B%91%E5%90%AC/">Vue $Getter与$setter方法</a>
+            <a href="/2020/12/18/Vue/Tags/%E4%B8%83.%20Vue%20API/7.1%20Vue%20%E5%BA%94%E7%94%A8%E9%85%8D%E7%BD%AEAPI/">7.1 Vue 应用配置API</a>
           </li>
         
           <li>
-            <a href="/2020/12/18/Vue/Tags/%E4%B8%83.%20Vue%20API/7.1%20Vue%20%E5%BA%94%E7%94%A8%E9%85%8D%E7%BD%AEAPI/">7.1 Vue 应用配置API</a>
+            <a href="/2020/12/18/Vue/Tags/%E4%B8%80%E3%80%81Vue%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/Vue%20Computed%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E4%B8%8EWatch%E7%9B%91%E5%90%AC/">Vue $Getter与$setter方法</a>
           </li>
         
       </ul>
